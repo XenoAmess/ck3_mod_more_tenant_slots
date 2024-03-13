@@ -1,6 +1,6 @@
 # ck3 mod more_tenant_slots
 
-### **More Tenets Slots(XA)** folder: 
+### **more_tenets_slots_xa_dev** folder: 
 
 This mod adds more tenant slots to the game.
 
@@ -12,7 +12,7 @@ original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2904268802
 
 this mod: https://steamcommunity.com/sharedfiles/filedetails/?id=3182367229
 
-###  **PoD + MTS(XA) – Patch(XA)** folder: 
+###  **pod_mts_xa_patch_xa_dev** folder:
 
 It is the compatible patch for MTS to the Princes of Darkness mod. 
 
