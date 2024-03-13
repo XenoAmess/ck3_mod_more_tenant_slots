@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ rule_customizable_ethics_game_rule:0 "#X Religion:#! Customizable Ethics"
+ setting_customizable_ethics_disabled:0 "Disabled"
+ setting_customizable_ethics_disabled_desc:0 "This is just a ‚Dummy‘-Rule to indicate, that ‚Customizable Ethics‘ will not be used."

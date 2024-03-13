@@ -1,0 +1,7 @@
+﻿customizable_ethics_game_rule = {
+	default = customizable_ethics_disabled
+
+	customizable_ethics_disabled = {
+		flag = customizable_ethics_disabled
+	}
+}

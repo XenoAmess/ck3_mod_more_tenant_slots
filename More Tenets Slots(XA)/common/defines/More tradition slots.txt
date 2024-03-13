@@ -1,0 +1,3 @@
+﻿NCulture = {
+	DEFAULT_MAX_TRADITIONS = 10000
+}
