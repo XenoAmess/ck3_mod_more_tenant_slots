@@ -334,6 +334,108 @@ window = {
 									}
 								}
 
+								#CfV
+								vbox = {
+									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'splat' ).GetGrouping)]"
+									layoutpolicy_horizontal = expanding
+									spacing = 10
+
+									text_label_left = {
+										layoutpolicy_horizontal = expanding
+										text = "FAITH_DOCTRINES_SPLATS"
+										default_format = "#low"
+									}
+
+									fixedgridbox = {
+										name = "doctrines_grid_splat"
+										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'splat' ).GetGrouping]"
+										flipdirection = yes
+										addcolumn = 270
+										addrow = 65
+										datamodel_wrap = 2
+
+										item = {
+											widget_doctrine_selection_item = {}
+										}
+									}
+								}
+
+								vbox = {
+									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'shifter' ).GetGrouping)]"
+									layoutpolicy_horizontal = expanding
+									spacing = 10
+
+									text_label_left = {
+										layoutpolicy_horizontal = expanding
+										text = "FAITH_DOCTRINES_SHIFTERS"
+										default_format = "#low"
+									}
+
+									fixedgridbox = {
+										name = "doctrines_grid_clan"
+										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'shifter' ).GetGrouping]"
+										flipdirection = yes
+										addcolumn = 270
+										addrow = 65
+										datamodel_wrap = 2
+
+										item = {
+											widget_doctrine_selection_item = {}
+										}
+									}
+								}
+
+								vbox = {
+									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'clan' ).GetGrouping)]"
+									layoutpolicy_horizontal = expanding
+									spacing = 10
+
+									text_label_left = {
+										layoutpolicy_horizontal = expanding
+										text = "FAITH_DOCTRINES_CLANS"
+										default_format = "#low"
+									}
+
+									fixedgridbox = {
+										name = "doctrines_grid_clan"
+										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'clan' ).GetGrouping]"
+										flipdirection = yes
+										addcolumn = 270
+										addrow = 65
+										datamodel_wrap = 2
+
+										item = {
+											widget_doctrine_selection_item = {}
+										}
+									}
+								}
+
+								vbox = {
+									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'vampire' ).GetGrouping)]"
+									layoutpolicy_horizontal = expanding
+									spacing = 10
+
+									text_label_left = {
+										layoutpolicy_horizontal = expanding
+										text = "FAITH_DOCTRINES_VAMPIRIC"
+										default_format = "#low"
+									}
+
+									fixedgridbox = {
+										name = "doctrines_grid_vampiric"
+										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'vampire' ).GetGrouping]"
+										flipdirection = yes
+										addcolumn = 270
+										addrow = 65
+										datamodel_wrap = 2
+
+										item = {
+											widget_doctrine_selection_item = {}
+										}
+									}
+								}
+								#End CfV
+
 								vbox = {
 									layoutpolicy_horizontal = expanding
 									spacing = 10
