@@ -182,9 +182,8 @@ window = {
 					vbox = {
 						name = "tenets"
 						layoutpolicy_horizontal = expanding
-						### Beginn code by Karax
-						layoutpolicy_vertical = expanding
-						spacing = 5
+						layoutpolicy_vertical = expanding						
+						spacing = 15
 						### End code by Karax
 
 						text_label_center = {
@@ -201,6 +200,8 @@ window = {
 						scrollbox = {
 							layoutpolicy_vertical = expanding
 							layoutpolicy_horizontal = expanding							
+							#margin_top = 15
+							#spacing = 10
 						
 							blockoverride "scrollbox_content"
 							{	
@@ -244,7 +245,6 @@ window = {
 											onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) )]"
 										}
 									}
-								### Beginn code added by Karax
 								}
 							}
 							### End code added by Karax
@@ -494,6 +494,7 @@ window = {
 							vbox = {
 								name = "sins"
 								spacing = 3
+								layoutpolicy_vertical = expanding
 
 								hbox = {
 									spacing = 5
@@ -507,9 +508,11 @@ window = {
 									}
 								}
 
-								hbox = {
+								dynamicgridbox = {
 									name = "virtues_grid"
 									datamodel = "[FaithCreationWindow.GetSins]"
+									flipdirection = yes
+									datamodel_wrap = 8
 
 									item = {
 										icon = {
@@ -550,11 +553,13 @@ window = {
 										text = "FAITH_WINDOW_VIRTUES"
 										align = nobaseline
 									}
-								}
+								}								
 
-								hbox = {
+								dynamicgridbox = {
 									name = "virtues_grid"
 									datamodel = "[FaithCreationWindow.GetVirtues]"
+									flipdirection = yes
+									datamodel_wrap = 8
 
 									item = {
 										icon = {

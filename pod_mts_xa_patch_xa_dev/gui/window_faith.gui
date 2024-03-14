@@ -43,6 +43,9 @@ window = {
 
 	### INSIDE WINDOW
 	vbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
 		using = Window_Margins_Sidebar
 
 		### Header
@@ -91,13 +94,15 @@ window = {
 
 			blockoverride "illustration_texture"
 			{
-				texture = "[Illustration.GetTextureForFaith( FaithWindow.GetFaith )]"
+				texture = "[Illustration.GetTexture( FaithWindow.GetFaith.MakeScope )]"
 				spriteType = stretched
 				fittype = centercrop
 				alpha = 0.35
 			}
 
 			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
 				datacontext = "[FaithWindow.GetFaith]"
 
 				watch_window_button = {
@@ -272,7 +277,7 @@ window = {
 			### Core Tenets
 			vbox = {
 				layoutpolicy_horizontal = expanding
-				spacing = 8
+				spacing = 15
 				#margin_top = 15
 				margin = { 8 16 }
 				margin_bottom = 11
@@ -286,6 +291,9 @@ window = {
 					layoutpolicy_horizontal = expanding
 					size = { 200 250 }
 					
+					#margin_top = 5
+					#spacing = 10
+
 					blockoverride "scrollbox_content"
 					{
 						
@@ -329,6 +337,7 @@ window = {
 				name = "doctrines"
 				layoutpolicy_horizontal = expanding
 				layoutpolicy_vertical = expanding
+				#margin_top = 10
 
 				scrollbox = {
 					layoutpolicy_horizontal = expanding
@@ -338,6 +347,7 @@ window = {
 					blockoverride "scrollbox_content"
 					{
 						spacing = 16
+						#margin_top = 20
 
 						state = {
 							name = "faith_view_refresh"
@@ -382,7 +392,7 @@ window = {
 								# widget = {
 								# 	size = { 250 40 }
 
-								# 	vbox = {
+								 	vbox = {
 										dynamicgridbox = {
 											name = "virtues_grid"
 											datamodel = "[FaithWindow.GetSins]"
@@ -410,7 +420,7 @@ window = {
 										}
 								# Code not used by Karax
 								# 	}
-								# }
+								}
 
 								expand = {}
 							}
@@ -443,7 +453,7 @@ window = {
 								# widget = {
 								# 	size = { 250 40 }
 
-								# 	vbox = {
+								 	vbox = {
 										dynamicgridbox = {
 											name = "virtues_grid"
 											datamodel = "[FaithWindow.GetVirtues]"
@@ -471,7 +481,7 @@ window = {
 										}
 								# Code not used by Karax
 								# 	}
-								# }
+								}
 
 								expand = {}
 							}
@@ -522,6 +532,7 @@ window = {
 											text_single = {
 												name = "doctrine_name"
 												align = center
+												#raw_text = "Bingo Bongo Tongo gyngo"
 												text = "[FaithDoctrine.GetNameNoTooltip( GuiFaithDoctrineItem.GetFaith )]"
 												default_format = "#high"
 												multiline = yes
@@ -749,7 +760,7 @@ window = {
 											using = Background_Area
 										}
 
-										
+
 									}
 
 								}
@@ -767,6 +778,7 @@ window = {
 			vbox = {
 				name = "religious_head"
 				layoutpolicy_horizontal = expanding
+				#margin_top = { 0 10 }
 
 				state = {
 					name = "faith_view_refresh"
@@ -945,7 +957,7 @@ window = {
 			}
 
 			hbox = {
-				#spacing = 10
+				spacing = 10
 				margin_bottom = 8
 				margin_top = 8
 				layoutpolicy_horizontal = expanding
@@ -957,7 +969,7 @@ window = {
 					minimumsize = { 240 0 }
 					visible = "[NotEqualTo_uint32( Faith.GetID, GetPlayer.GetFaith.GetID )]"
 					text = "FAITH_CONVERSION_CONVERT"
-					onclick = "[OpenFaithConversionWindow( Faith.GetID )]"
+					onclick = "[ToggleGameViewData( 'faith_conversion', Faith.GetID )]"
 
 					using = tooltip_nw
 				}
@@ -967,7 +979,7 @@ window = {
 					minimumsize = { 240 0 }
 					visible = "[And( ObjectsEqual(Faith.Self, GetPlayer.GetFaith ), GetVariableSystem.HasValue( 'faith_view_tabs', 'beliefs' ))]"
 					text = "CREATE_REFORM_FAITH_TEXT"
-					onclick = "[OpenFaithCreationWindow( Faith.GetID )]"
+					onclick = "[OpenGameViewData( 'faith_creation', Faith.GetID )]"
 					tooltip = "CREATE_REFORM_FAITH_TOOLTIP"
 
 					using = tooltip_nw
@@ -1023,7 +1035,7 @@ window = {
 			background = {
 				alpha = 0.5
 				fittype = end
-				texture = "[Illustration.GetTextureForFaith( FaithWindow.GetFaith )]"
+				texture = "[Illustration.GetTexture( FaithWindow.GetFaith.MakeScope )]"
 
 				modify_texture = {
 					mirror = vertical
@@ -1383,11 +1395,11 @@ window = {
 				vbox = {
 					datamodel = "[ReligionWindow.GetFaiths]"
 					layoutpolicy_horizontal = expanding
-					datacontext = "[GetScriptedGui('POD_hide_vanilla_religions')]" #CfV
 
 					item = {
 						button_standard_hover = {
-							visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Faith.GetReligion.MakeScope).End)]" #CfV
+							#CfV
+							visible = "[And( And(GetScriptedGui('POD_hide_vanilla_religions').IsShown(GuiScope.SetRoot(Faith.GetReligion.MakeScope).End), GetScriptedGui('POD_hide_modern_faiths').IsShown(GuiScope.SetRoot(Faith.MakeScope).End)), Or( ReligionWindow.ShowOnlyReligionFaiths, GetScriptedGui('POD_hide_invalid_faiths').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('new_faith',Faith.MakeScope).End) ) )]"
 							name = "show_faith_info"
 							layoutpolicy_horizontal = expanding
 							size = { 0 80 }
@@ -1398,7 +1410,7 @@ window = {
 
 							state = {
 								name = _mouse_click
-								on_finish = "[DefaultOnFaithClick(Faith.GetID)]"
+								on_finish = "[OpenGameViewData( 'faith', Faith.GetID )]"
 							}
 
 							background = {
@@ -1407,7 +1419,7 @@ window = {
 							}
 
 							divider_light = {
-								alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5'))]"
+								alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5')]"
 								size = { 100% 3 }
 								parentanchor = bottom
 								position = { 0 1 }
@@ -1415,7 +1427,7 @@ window = {
 
 							hbox = {
 								margin = { 10 5 }
-								alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5'))]"
+								alpha = "[Select_float(GreaterThan_int32(Faith.GetNumberOfCountiesOfFaith,'(int32)0'), '(float)1.0','(float)0.5')]"
 
 								icon = {
 									name = "faith_icon"
