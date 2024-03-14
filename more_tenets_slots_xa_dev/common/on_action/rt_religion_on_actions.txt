@@ -1,0 +1,13 @@
+﻿#On actions related to religion
+
+# Code on-action: character creates a faith
+# Root is the creator
+# scope:old_faith is the faith they used to have
+on_faith_created = {
+	
+	events = {
+
+		faith_creation_clean.001 #clean empty doctrines
+	}
+}
+

@@ -1,12 +1,3 @@
-# vgl. game > gui > window_faith.gui
-
-## Modified Version of the 'window_faith.gui' from vanilla game version 1.8.1 for
-## 'More Tenets Slots + Customizable Ethics' and 'More Tenets Slots'
-#  Incorporates Global Values from "More Religious Doctrines", "More Immersive Doctrines" and "Polytheism Reborn"
-#  Code for ### INSIDE WINDOW > ### Core Tenets by Karax
-#  Code for ### INSIDE WINDOW > ### Doctrines > hbox "sins_and_virtues" by Karax and Lucky Lenny
-#  Code for ### INSIDE WINDOW > ### Doctrines > vbox "FAITH_DOCTRINES_BELIEF" and vbox "FAITH_DOCTRINES_PRACTICES" by Lucky Lenny
-
 ######################################################
 ################### FAITH WINDOW #####################
 ######################################################
@@ -43,6 +34,9 @@ window = {
 
 	### INSIDE WINDOW
 	vbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
 		using = Window_Margins_Sidebar
 
 		### Header
@@ -98,6 +92,8 @@ window = {
 			}
 
 			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
 				datacontext = "[FaithWindow.GetFaith]"
 
 				watch_window_button = {
@@ -268,11 +264,10 @@ window = {
 				alpha = 0
 			}
 
-			### Beginn code from 'More Religion Tenets Slots' mod by Karax
 			### Core Tenets
 			vbox = {
 				layoutpolicy_horizontal = expanding
-				spacing = 8
+				spacing = 15
 				#margin_top = 15
 				margin = { 8 16 }
 				margin_bottom = 11
@@ -285,6 +280,9 @@ window = {
 					layoutpolicy_vertical = expanding
 					layoutpolicy_horizontal = expanding
 					size = { 200 250 }
+					
+					#margin_top = 5
+					#spacing = 10
 					
 					blockoverride "scrollbox_content"
 					{
@@ -322,13 +320,13 @@ window = {
 					}
 				}
 			}
-			### End code from 'More Religion Tenets Slots' mod by Karax
 
 			### Doctrines
 			vbox = {
 				name = "doctrines"
 				layoutpolicy_horizontal = expanding
 				layoutpolicy_vertical = expanding
+				#margin_top = 10
 
 				scrollbox = {
 					layoutpolicy_horizontal = expanding
@@ -338,6 +336,7 @@ window = {
 					blockoverride "scrollbox_content"
 					{
 						spacing = 16
+						#margin_top = 20
 
 						state = {
 							name = "faith_view_refresh"
@@ -378,39 +377,33 @@ window = {
 									}
 								}
 
-								# Code not used by Karax
-								# widget = {
-								# 	size = { 250 40 }
+								vbox = {
+									dynamicgridbox = {
+										name = "virtues_grid"
+										datamodel = "[FaithWindow.GetSins]"
+										flipdirection = yes
+										datamodel_wrap = 6
 
-								# 	vbox = {
-										dynamicgridbox = {
-											name = "sins_grid"
-											datamodel = "[FaithWindow.GetSins]"
-											flipdirection = yes
-											datamodel_wrap = 6
+										item = {
+											icon = {
+												datacontext = "[GuiVirtueOrSinItem.GetTrait]"
+												size = { 40 40 }
+												alwaystransparent = yes
+												texture = "[Trait.GetIcon( GetPlayer )]"
 
-											item = {
-												icon = {
-													datacontext = "[GuiVirtueOrSinItem.GetTrait]"
-													size = { 40 40 }
-													alwaystransparent = yes
-													texture = "[Trait.GetIcon( GetPlayer )]"
+												tooltipwidget = {
+													using = faith_window_trait_tooltip
+												}
 
-													tooltipwidget = {
-														using = faith_window_trait_tooltip
-													}
-
-													block "tooltip_placement"
-													{
-														using = tooltip_ne
-														tooltip_offset = { 0 20 }
-													}
+												block "tooltip_placement"
+												{
+													using = tooltip_ne
+													tooltip_offset = { 0 20 }
 												}
 											}
 										}
-								# Code not used by Karax
-								# 	}
-								# }
+									}
+								}
 
 								expand = {}
 							}
@@ -439,39 +432,33 @@ window = {
 									}
 								}
 
-								# Code not used by Karax
-								# widget = {
-								# 	size = { 250 40 }
+								vbox = {
+									dynamicgridbox = {
+										name = "virtues_grid"
+										datamodel = "[FaithWindow.GetVirtues]"
+										flipdirection = yes
+										datamodel_wrap = 6
 
-								# 	vbox = {
-										dynamicgridbox = {
-											name = "virtues_grid"
-											datamodel = "[FaithWindow.GetVirtues]"
-											flipdirection = yes
-											datamodel_wrap = 6
+										item = {
+											icon = {
+												datacontext = "[GuiVirtueOrSinItem.GetTrait]"
+												size = { 40 40 }
+												alwaystransparent = yes
+												texture = "[Trait.GetIcon( GetPlayer )]"
 
-											item = {
-												icon = {
-													datacontext = "[GuiVirtueOrSinItem.GetTrait]"
-													size = { 40 40 }
-													alwaystransparent = yes
-													texture = "[Trait.GetIcon( GetPlayer )]"
+												tooltipwidget = {
+													using = faith_window_trait_tooltip
+												}
 
-													tooltipwidget = {
-														using = faith_window_trait_tooltip
-													}
-
-													block "tooltip_placement"
-													{
-														using = tooltip_ne
-														tooltip_offset = { 0 20 }
-													}
+												block "tooltip_placement"
+												{
+													using = tooltip_ne
+													tooltip_offset = { 0 20 }
 												}
 											}
 										}
-								# Code not used by Karax
-								# 	}
-								# }
+									}
+								}
 
 								expand = {}
 							}
@@ -522,6 +509,7 @@ window = {
 											text_single = {
 												name = "doctrine_name"
 												align = center
+												#raw_text = "Bingo Bongo Tongo gyngo"
 												text = "[FaithDoctrine.GetNameNoTooltip( GuiFaithDoctrineItem.GetFaith )]"
 												default_format = "#high"
 												multiline = yes
@@ -534,57 +522,6 @@ window = {
 								}
 							}
 						}
-
-						### Beginn code added by Lucky Lenny
-						##  This vbox is needed by "Polytheism Reborn", "More Religious Doctrines" and "More Immersive Doctrines"
-						# Beginn More doctrines mod 
-						vbox = {
-							name = "more_doctrines_faith"
-							# 'visible' trigger added by Lucky Lenny
-							visible = "[Or( Or( GetGlobalVariable('MRD_is_loaded').IsSet, GetGlobalVariable('MID_is_loaded').IsSet ), And( GetGlobalVariable('PR_is_loaded').IsSet, GetGlobalVariable('more_doctrines_is_active').IsSet ) )]"
-							layoutpolicy_horizontal = expanding
-							layoutpolicy_vertical = expanding
-							margin_top = 10
-
-								text_label_center = {
-									layoutpolicy_horizontal = expanding
-									text = "FAITH_DOCTRINES_BELIEF"
-									default_format = "#low"
-								}
-
-								fixedgridbox = {
-									datamodel = "[FaithWindow.GetGroupingHelper( 'belief' ).GetGrouping]"
-									flipdirection = yes
-									addcolumn = 225
-									addrow = 67
-									datamodel_wrap = 2
-
-									item = {
-										widget_doctrine_item = {}
-									}
-								}
-
-								text_label_center = {
-									layoutpolicy_horizontal = expanding
-									text = "FAITH_DOCTRINES_PRACTICES"
-									default_format = "#low"
-								}
-
-								fixedgridbox = {
-									datamodel = "[FaithWindow.GetGroupingHelper( 'practices' ).GetGrouping]"
-									flipdirection = yes
-									addcolumn = 225
-									addrow = 67
-									datamodel_wrap = 2
-
-									item = {
-										widget_doctrine_item = {}
-									}
-								}
-							# }
-						}
-						# End More doctrines mod 
-						### End code added by Lucky Lenny
 
 						vbox = {
 							layoutpolicy_horizontal = expanding
@@ -609,27 +546,6 @@ window = {
 								}
 							}
 						}
-
-						### Beginn code added by Lucky Lenny
-						##  The vbox is needed by "Polytheism Reborn"
-						vbox= {
-							margin_top = -85
-							margin_left = 235
-
-							fixedgridbox = {
-								visible = "[GetGlobalVariable('more_doctrines_is_active').IsSet]"
-								datamodel = "[FaithWindow.GetGroupingHelper( 'marriage_md' ).GetGrouping]"
-								flipdirection = yes
-								addcolumn = 230
-								addrow = 65
-								datamodel_wrap = 1
-
-								item = {
-									widget_doctrine_item = {}
-								}
-							}
-						}
-						### End code added by Lucky Lenny
 
 						vbox = {
 							layoutpolicy_horizontal = expanding
@@ -679,128 +595,6 @@ window = {
 							}
 						}
 
-						### Beginn code added by Lucky Lenny
-						##  The vbox is needed by "Polytheism Reborn"
-						vbox= {
-							margin_top = -10
-
-							fixedgridbox = {
-								visible = "[GetGlobalVariable('more_doctrines_is_active').IsSet]"
-								datamodel = "[FaithWindow.GetGroupingHelper( 'clergy_md' ).GetGrouping]"
-								flipdirection = yes
-								addcolumn = 230
-								addrow = 65
-								datamodel_wrap = 2
-
-								item = {
-									widget_doctrine_item = {}
-								}
-							}
-						}
-						### End code added by Lucky Lenny
-
-						#CfV
-						vbox = {
-							visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'splat' ).GetGrouping)]"
-							layoutpolicy_horizontal = expanding
-							spacing = 12
-							margin_bottom = -10
-
-							text_label_center = {
-								layoutpolicy_horizontal = expanding
-								text = "FAITH_DOCTRINES_SPLATS"
-								default_format = "#low"
-							}
-
-							fixedgridbox = {
-								datamodel = "[FaithWindow.GetGroupingHelper( 'splat' ).GetGrouping]"
-								flipdirection = yes
-								addcolumn = 225
-								addrow = 67
-								datamodel_wrap = 2
-
-								item = {
-									widget_doctrine_item = {}
-								}
-							}
-						}
-						
-						vbox = {
-							visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'shifter' ).GetGrouping)]"
-							layoutpolicy_horizontal = expanding
-							spacing = 12
-							margin_bottom = -10
-
-							text_label_center = {
-								layoutpolicy_horizontal = expanding
-								text = "FAITH_DOCTRINES_SHIFTERS"
-								default_format = "#low"
-							}
-
-							fixedgridbox = {
-								datamodel = "[FaithWindow.GetGroupingHelper( 'shifter' ).GetGrouping]"
-								flipdirection = yes
-								addcolumn = 225
-								addrow = 67
-								datamodel_wrap = 2
-
-								item = {
-									widget_doctrine_item = {}
-								}
-							}
-						}
-						
-						vbox = {
-							visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'clan' ).GetGrouping)]"
-							layoutpolicy_horizontal = expanding
-							spacing = 12
-							margin_bottom = -10
-
-							text_label_center = {
-								layoutpolicy_horizontal = expanding
-								text = "FAITH_DOCTRINES_CLANS"
-								default_format = "#low"
-							}
-
-							fixedgridbox = {
-								datamodel = "[FaithWindow.GetGroupingHelper( 'clan' ).GetGrouping]"
-								flipdirection = yes
-								addcolumn = 225
-								addrow = 67
-								datamodel_wrap = 2
-
-								item = {
-									widget_doctrine_item = {}
-								}
-							}
-						}
-
-						vbox = {
-							visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'vampire' ).GetGrouping)]"
-							layoutpolicy_horizontal = expanding
-							spacing = 12
-							margin_bottom = -10
-
-							text_label_center = {
-								layoutpolicy_horizontal = expanding
-								text = "FAITH_DOCTRINES_VAMPIRIC"
-								default_format = "#low"
-							}
-
-							fixedgridbox = {
-								datamodel = "[FaithWindow.GetGroupingHelper( 'vampire' ).GetGrouping]"
-								flipdirection = yes
-								addcolumn = 225
-								addrow = 67
-								datamodel_wrap = 2
-
-								item = {
-									widget_doctrine_item = {}
-								}
-							}
-						}
-						#CfV
-
 						vbox = {
 							visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'special' ).GetGrouping)]"
 							layoutpolicy_horizontal = expanding
@@ -824,7 +618,7 @@ window = {
 									text_single = {
 										layoutpolicy_horizontal = expanding
 
-										
+
 										margin = { 17 0 }
 										margin_top = 12
 										margin_bottom = 13
@@ -843,7 +637,7 @@ window = {
 											using = Background_Area
 										}
 
-										
+
 									}
 
 								}
@@ -861,6 +655,7 @@ window = {
 			vbox = {
 				name = "religious_head"
 				layoutpolicy_horizontal = expanding
+				#margin_top = { 0 10 }
 
 				state = {
 					name = "faith_view_refresh"
@@ -1039,7 +834,7 @@ window = {
 			}
 
 			hbox = {
-				#spacing = 10
+				spacing = 10
 				margin_bottom = 8
 				margin_top = 8
 				layoutpolicy_horizontal = expanding
@@ -1430,42 +1225,6 @@ window = {
 				using = tooltip_ne
 			}
 		}
-
-		# CfV
-		hbox = {
-			visible = "[Not(ReligionWindow.ShowOnlyReligionFaiths)]"
-			layoutpolicy_horizontal = expanding
-			margin = { 15 0 }
-			margin_bottom = 5
-			spacing = 5
-
-			button_radio_label = {
-				onclick = "[GetScriptedGui('POD_hide_invalid_faiths_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-
-				blockoverride "text"
-				{
-					text = "POD_show_only_valid_faiths"
-				}
-				blockoverride "radio"
-				{
-					frame = "[BoolTo1And2( GetScriptedGui('POD_hide_invalid_faiths_button').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End) )]"
-				}
-			}
-
-			button_radio_label = {
-				onclick = "[GetScriptedGui('POD_show_invalid_faiths_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-
-				blockoverride "text"
-				{
-					text = "POD_show_all_faiths"
-				}
-				blockoverride "radio"
-				{
-					frame = "[BoolTo1And2( GetScriptedGui('POD_show_invalid_faiths_button').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End) )]"
-				}
-			}
-		}
-		# CfV end
 
 		scrollbox = {
 			name = "faiths_scroll_area"

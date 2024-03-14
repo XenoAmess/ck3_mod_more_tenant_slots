@@ -1,14 +1,3 @@
-# vgl. game > gui > window_faith_creation.gui
-
-## Modified Version of the 'window_faith.gui' from vanilla game version 1.8.1
-## for 'More Tenets Slots + Customizable Ethics', 'More Tenets Slots' and 'Customizable Sins And Virtues'
-#  Incorporates Global Values from "More Religious Doctrines", "More Immersive Doctrines" and "Polytheism Reborn"
-#  Code for widget 'left_side' > vbox 'tenets' by Karax
-#  Code for widget 'left_side' > hbox "footer_area" > hbox "sins_and_virtues", vboxes "sins" and "virtues" by Karax and Lucky Lenny
-#  Code for types "FaithCreation" > type widget_doctrine_selection_item_small by Karax
-#  Code for 'Virtues & Sins' group from 'Elder Kings 2', added and ajusted by Lucky Lenny
-#  Use with kindly permission by the developer team of 'Elder Kings 2'
-
 ######################################################
 ################## FAITH CREATION ####################
 ######################################################
@@ -120,22 +109,22 @@ window = {
 						hbox = {
 							visible = "[GetPlayer.GetFaith.IsUnreformed]"
 							layoutpolicy_horizontal = expanding
-							
+
 							icon = {
 									visible = "[GetPlayer.GetFaith.IsUnreformed]"
 									name = "faith_icon"
 									size = { 45 45 }
 									texture = "[FaithCreationWindow.GetFaithIcon]"
 								}
-								
-								text_single = {
-									name = "faith_name_static"
-									visible = "[GetPlayer.GetFaith.IsUnreformed]"
-									text = "FAITH_WINDOW_FAITH_NAME"
-									default_format = "#high"
-									using = Font_Size_Big
-								}
+
+							text_single = {
+								name = "faith_name_static"
+								visible = "[GetPlayer.GetFaith.IsUnreformed]"
+								text = "FAITH_WINDOW_FAITH_NAME"
+								default_format = "#high"
+								using = Font_Size_Big
 							}
+						}
 
 						button_standard = {
 							name = "faith_name"
@@ -154,7 +143,7 @@ window = {
 								using = Font_Size_Big
 								align = center|nobaseline
 							}
-							
+
 							button_replace = {
 								name = "reset"
 								parentanchor = right|vcenter
@@ -162,7 +151,7 @@ window = {
 								size = { 40 40 }
 							}
 						}
-						
+
 						map_color_button = {
 							tooltip = "CREATE_FAITH_SELECT_COLOR"
 							blockoverride "mcb_click"
@@ -173,7 +162,7 @@ window = {
 							{
 								tintcolor = "[FaithCreationWindow.GetColor]"
 							}
-						}		
+						}
 					}
 
 					divider = {
@@ -183,20 +172,13 @@ window = {
 					vbox = {
 						name = "tenets"
 						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = expanding
+						layoutpolicy_vertical = expanding						
 						spacing = 5
 
 						text_label_center = {
 							text = "[core_tenets|E]"
 						}
 
-						### Code not used by Karax
-						# hbox = {
-						# 	name = "tenets_grid"
-						# 	datamodel = "[FaithCreationWindow.GetGroupingHelper( 'core_tenets' ).GetGrouping]"
-						# 	spacing = 45
-
-						### Beginn code from 'More Religion Tenets Slots' mod by Karax
 						scrollbox = {
 							layoutpolicy_vertical = expanding
 							layoutpolicy_horizontal = expanding							
@@ -216,16 +198,18 @@ window = {
 									setitemsizefromcell = yes
 									datamodel_wrap = 5
 									maxhorizontalslots = -1
-									maxverticalslots = 100
+									maxverticalslots = 10
 									layoutpolicy_vertical = expanding
 									layoutpolicy_horizontal = expanding
-									### End code from 'More Religion Tenets Slots' mod by Karax
 
 									item = {
 										button_group = {
 											datacontext = "[GuiFaithCreationDoctrineItem.GetGuiFaithDoctrineItem]"
 											datacontext = "[GuiFaithDoctrineItem.GetDoctrine]"
 											datacontext = "[GuiFaithDoctrineItem.GetFaith]"
+													 
+							  
+		  
 
 											icon = {
 												size = { 130 160 }
@@ -245,10 +229,8 @@ window = {
 											onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) )]"
 										}
 									}
-								### Beginn code added by Karax
 								}
 							}
-							### End code added by Karax
 						}
 					}
 
@@ -302,63 +284,6 @@ window = {
 									}
 								}
 
-								### Beginn code added by Lucky Lenny
-								##  The two vboxes are needed by "Polytheism Reborn", "More Religious Doctrines" and "More Immersive Doctrines"
-								# Beginn More doctrines mod 
-								vbox = {
-									name = "more_doctrines_belief"
-									visible = "[Or( Or( GetGlobalVariable('MRD_is_loaded').IsSet, GetGlobalVariable('MID_is_loaded').IsSet ), And( GetGlobalVariable('PR_is_loaded').IsSet, GetGlobalVariable('more_doctrines_is_active').IsSet ) )]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_BELIEF"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_belief"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'belief' ).GetGrouping]"
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-
-								vbox = {
-									name = "more_doctrines_practices"
-									visible = "[Or( Or( GetGlobalVariable('MRD_is_loaded').IsSet, GetGlobalVariable('MID_is_loaded').IsSet ), And( GetGlobalVariable('PR_is_loaded').IsSet, GetGlobalVariable('more_doctrines_is_active').IsSet ) )]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_PRACTICES"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_practices"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'practices' ).GetGrouping]"
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-								# End More doctrines mod 
-								### End code added by Lucky Lenny
-
 								vbox = {
 									layoutpolicy_horizontal = expanding
 									spacing = 10
@@ -382,24 +307,6 @@ window = {
 										}
 									}
 
-									### Beginn code added by Lucky Lenny
-									##  The vbox is needed by "Polytheism Reborn"
-									vbox= {
-										margin_top = -85
-										margin_left = 270
-										fixedgridbox = {
-											visible = "[GetGlobalVariable('more_doctrines_is_active').IsSet]"
-											datamodel = "[FaithCreationWindow.GetGroupingHelper( 'marriage_md' ).GetGrouping]"
-											flipdirection = yes
-											addcolumn = 270
-											addrow = 65
-											datamodel_wrap = 1
-											item = {
-												widget_doctrine_selection_item = {}
-											}
-										}
-									}
-									### End code added by Lucky Lenny
 								}
 
 								vbox = {
@@ -426,108 +333,6 @@ window = {
 										}
 									}
 								}
-								#CfV
-								vbox = {
-									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'splat' ).GetGrouping)]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_SPLATS"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_splat"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'splat' ).GetGrouping]"
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-								
-								vbox = {
-									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'shifter' ).GetGrouping)]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_SHIFTERS"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_clan"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'shifter' ).GetGrouping]"
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-								
-								vbox = {
-									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'clan' ).GetGrouping)]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_CLANS"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_clan"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'clan' ).GetGrouping]"
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-
-								vbox = {
-									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'vampire' ).GetGrouping)]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_VAMPIRIC"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_vampiric"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'vampire' ).GetGrouping]"
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-								#End CfV
-
 
 								vbox = {
 									layoutpolicy_horizontal = expanding
@@ -552,134 +357,7 @@ window = {
 											widget_doctrine_selection_item = {}
 										}
 									}
-
-									### Beginn code added by Lucky Lenny
-									##  The vbox is needed by "Polytheism Reborn"
-									vbox= {
-										margin_top = -10
-										fixedgridbox = {
-											visible = "[GetGlobalVariable('more_doctrines_is_active').IsSet]"
-											datamodel = "[FaithCreationWindow.GetGroupingHelper( 'clergy_md' ).GetGrouping]"
-											flipdirection = yes
-											addcolumn = 270
-											addrow = 65
-											datamodel_wrap = 2
-											item = {
-												widget_doctrine_selection_item = {}
-											}
-										}
-									}
-									### End code added by Lucky Lenny
 								}
-								
-								### Beginn code for 'Virtues & Sins' group from 'Elder Kings 2'
-								### Added and ajusted by Lucky Lenny
-								vbox = {
-									datacontext = "[AccessGameRules]"
-									datacontext = "[JominiGameRules.AccessNamedGameRule( 'customizable_ethics_game_rule' )]"
-									datacontext = "[GuiGameRule.GetRule]"
-									datacontext = "[GuiGameRule.GetSetting]"
-									visible = "[And( GetGlobalVariable('MTS_CE_is_loaded').IsSet, GameRuleSetting.HasFlag('limited_customizable_ethics_enabled') )]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_LTD_VIRTUES_SINS"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_ltd_virtues_sins"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'ltd_virtues_sins' ).GetGrouping]"
-
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-								### End code for 'Virtues & Sins' group from 'Elder Kings 2'
-							
-								### Beginn code from 'Religion customizable sins and virtues' mod by Karax
-								vbox = {
-									datacontext = "[AccessGameRules]"
-									datacontext = "[JominiGameRules.AccessNamedGameRule( 'customizable_ethics_game_rule' )]"
-									datacontext = "[GuiGameRule.GetRule]"
-									datacontext = "[GuiGameRule.GetSetting]"
-									# 'visible' trigger added by Lucky Lenny
-									visible = "[Or( GetGlobalVariable('CSV_is_loaded').IsSet, And(  GetGlobalVariable('MTS_CE_is_loaded').IsSet, GameRuleSetting.HasFlag('customizable_ethics_enabled') ) )]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										### Code not used by Lucky Lenny
-										# spacing = 10
-										layoutpolicy_horizontal = expanding										
-										text = "FAITH_WINDOW_SINS"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_unl_sins"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'ethics_unl_sins' ).GetGrouping]"
-
-										flipdirection = yes
-										### Changed from 150 to 160 by Lucky Lenny
-										addcolumn = 160
-										addrow = 65
-
-										datamodel_wrap = 4
-										maxhorizontalslots = -1
-										maxverticalslots = 100
-
-										item = {
-											widget_doctrine_selection_item_small = {}
-										}
-									}
-								}
-
-								vbox = {
-									datacontext = "[AccessGameRules]"
-									datacontext = "[JominiGameRules.AccessNamedGameRule( 'customizable_ethics_game_rule' )]"
-									datacontext = "[GuiGameRule.GetRule]"
-									datacontext = "[GuiGameRule.GetSetting]"
-									# 'visible' trigger added by Lucky Lenny
-									visible = "[Or( GetGlobalVariable('CSV_is_loaded').IsSet, And(  GetGlobalVariable('MTS_CE_is_loaded').IsSet, GameRuleSetting.HasFlag( 'customizable_ethics_enabled')) )]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										### Code not used by Lucky Lenny
-										# spacing = 10
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_WINDOW_VIRTUES"
-										default_format = "#low"
-									}
-									
-									fixedgridbox = {
-										name = "doctrines_grid_unl_virtues"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'ethics_unl_virtues' ).GetGrouping]"
-
-										flipdirection = yes
-										### Changed from 150 to 160 by Lucky Lenny
-										addcolumn = 160
-										addrow = 65										
-
-										datamodel_wrap = 4
-										maxhorizontalslots = -1
-										maxverticalslots = 100
-
-										item = {
-											widget_doctrine_selection_item_small = {}
-										}
-									}
-								}
-								### End code from 'Religion customizable sins and virtues' mod by Karax
 							}
 						}
 					}
@@ -697,13 +375,9 @@ window = {
 							vbox = {
 								name = "sins"
 								spacing = 3
-								### Beginn code by Lucky Lenny
-								layoutpolicy_vertical = expanding
-								### End code by Lucky Lenny
 
 								hbox = {
 									spacing = 5
-
 									icon = {
 										texture = "gfx/interface/icons/traits/sin_big.dds"
 									}
@@ -714,17 +388,9 @@ window = {
 									}
 								}
 
-								### Code not used by Lucky Lenny
-								# hbox = {
-								### Beginn code by Lucky Lenny
-								dynamicgridbox = {
-								### End code by Lucky Lenny
-									name = "sins_grid"
+								hbox = {
+									name = "virtues_grid"
 									datamodel = "[FaithCreationWindow.GetSins]"
-									### Beginn code by Karax
-									flipdirection = yes
-									datamodel_wrap = 8 # Changed wrap from 6 to 8, Lucky Lenny
-									### End code by Karax
 
 									item = {
 										icon = {
@@ -745,10 +411,6 @@ window = {
 										}
 									}
 								}
-
-								### Beginn code by Lucky Lenny
-								expand = {}
-								### End code by Lucky Lenny
 							}
 
 							divider_light = {
@@ -758,13 +420,9 @@ window = {
 							vbox = {
 								name = "virtues"
 								spacing = 3
-								### Beginn code by Lucky Lenny
-								layoutpolicy_vertical = expanding
-								### End code by Lucky Lenny
 
 								hbox = {
 									spacing = 5
-
 									icon = {
 										texture = "gfx/interface/icons/traits/virtue_big.dds"
 									}
@@ -775,17 +433,9 @@ window = {
 									}
 								}
 
-								### Code not used by Lucky Lenny
-								# hbox = {
-								### Beginn code by Lucky Lenny
-								dynamicgridbox = {
-								### End code by Lucky Lenny
+								hbox = {
 									name = "virtues_grid"
 									datamodel = "[FaithCreationWindow.GetVirtues]"
-									### Beginn code by Karax
-									flipdirection = yes
-									datamodel_wrap = 8 # Changed wrap from 6 to 8, Lucky Lenny
-									### End code by Karax
 
 									item = {
 										icon = {
@@ -806,10 +456,6 @@ window = {
 										}
 									}
 								}
-
-								### Beginn code by Lucky Lenny
-								expand = {}
-								### End code by Lucky Lenny
 							}
 						}
 					}
@@ -856,7 +502,7 @@ window = {
 						layoutpolicy_horizontal = expanding
 						spacing = 20
 						margin = { 30 0 }
-						
+
 						vbox = {
 							layoutpolicy_horizontal = expanding
 							spacing = 10
@@ -972,7 +618,7 @@ window = {
 							name = "theocracy_info"
 							layoutpolicy_horizontal = expanding
 							layoutpolicy_vertical = expanding
-							visible = "[Not( ObjectsEqual( GetPlayer.GetFaith.HasParameterByKey( 'lay_clergy' ), FaithCreationWindow.HasParameter( 'lay_clergy' ) ) ) )]"
+							visible = "[Not( ObjectsEqual( GetPlayer.GetFaith.HasParameterByKey( 'lay_clergy' ), FaithCreationWindow.HasParameter( 'lay_clergy' ) ) )]"
 
 							text_label_left = {
 								layoutpolicy_horizontal = expanding
@@ -1116,9 +762,9 @@ window = {
 								using = Status_Bad
 							}
 						}
-					}	
-					
-					spacer = { size = {0 10}}					
+					}
+
+					spacer = { size = {0 10}}
 
 					text_multi = {
 						align = center
@@ -1195,11 +841,11 @@ window = {
 								text = "FAITH_CREATION_NAMING_NAME"
 							}
 
-							blockoverride "editbox_properties" 
+							blockoverride "editbox_properties"
 							{
 								name = "faith_name_edit"
-							    ontextedited = "[FaithCreationWindow.OnEditName]"
-							    maxcharacters = 30
+								ontextedited = "[FaithCreationWindow.OnEditName]"
+								maxcharacters = 30
 							}
 						}
 
@@ -1213,11 +859,11 @@ window = {
 								text = "FAITH_CREATION_NAMING_ADJECTIVE"
 							}
 
-							blockoverride "editbox_properties" 
+							blockoverride "editbox_properties"
 							{
 								name = "faith_adjective_edit"
-							    ontextedited = "[FaithCreationWindow.OnEditAdjective]"
-							    maxcharacters = 30
+								ontextedited = "[FaithCreationWindow.OnEditAdjective]"
+								maxcharacters = 30
 							}
 
 						}
@@ -1232,11 +878,11 @@ window = {
 								text = "FAITH_CREATION_NAMING_FOLLOWER"
 							}
 
-							blockoverride "editbox_properties" 
+							blockoverride "editbox_properties"
 							{
 								name = "faith_adherent_edit"
-							    ontextedited = "[FaithCreationWindow.OnEditAdherent]"
-							    maxcharacters = 30
+								ontextedited = "[FaithCreationWindow.OnEditAdherent]"
+								maxcharacters = 30
 							}
 						}
 
@@ -1250,11 +896,11 @@ window = {
 								text = "FAITH_CREATION_NAMING_FOLLOWERS"
 							}
 
-							blockoverride "editbox_properties" 
+							blockoverride "editbox_properties"
 							{
 								name = "faith_adherent_plural_edit"
-							    ontextedited = "[FaithCreationWindow.OnEditAdherentPlural]"
-							    maxcharacters = 30
+								ontextedited = "[FaithCreationWindow.OnEditAdherentPlural]"
+								maxcharacters = 30
 							}
 						}
 
@@ -1273,15 +919,15 @@ window = {
 								text = "FAITH_CREATION_NAMING_DESC"
 							}
 
-							blockoverride "editbox_properties" 
+							blockoverride "editbox_properties"
 							{
 								name = "faith_desc_edit"
 								multiline = yes
 								ontextedited = "[FaithCreationWindow.OnEditDescription]"
 								maxcharacters = 240
 							}
-						}							
-						
+						}
+
 
 					}
 
@@ -1666,52 +1312,6 @@ types "FaithCreation"
 			}
 		}
 	}
-	
-	### Beginn code from 'Religion customizable sins and virtues' mod by Karax
-	type widget_doctrine_selection_item_small = button_standard_hover {
-		### Changed from 120 to 148 by Lucky Lenny
-		size = { 148 53 }
-		tooltip = "FAITH_WINDOW_DOCTRINE_CHANGE_TOOLTIP"
-		datacontext = "[GuiFaithCreationDoctrineItem.GetGuiFaithDoctrineItem]"
-		datacontext = "[GuiFaithDoctrineItem.GetDoctrine]"
-		onclick = "[GuiFaithCreationDoctrineItem.GetFaithCreationWindow.GetDoctrineGroupWindow.ShowWindow( GuiFaithCreationDoctrineItem.GetSlotIndex )]"
-		onclick = "[GetVariableSystem.Set( 'faith_creation_right_view', 'doctrine_selection' )]"
-		onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) )]"
-		down = "[And(GetVariableSystem.HasValue( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) ), GetVariableSystem.HasValue( 'faith_creation_right_view', 'doctrine_selection' ))]"
-
-		background = {
-			using = Background_Area
-			margin = { 5 5 }
-		}
-
-		flowcontainer = {
-			name = "faith_list_item"
-			datacontext = "[GuiFaithDoctrineItem.GetDoctrine]"
-			spacing = 5
-			using = tooltip_nw
-			tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP"
-
-			flowcontainer = {
-				direction = vertical
-
-				text_single = {
-					name = "doctrine_group_name"
-					text = "[FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith )]"
-					align = left
-					default_format = "#low"
-				}
-
-				text_single = {
-					name = "faith_name"
-					text = "[FaithDoctrine.GetName( GuiFaithDoctrineItem.GetFaith )]"
-					datacontext = "[GuiFaithDoctrineItem.GetFaith]"
-					layoutpolicy_horizontal = expanding
-					elide = right
-					align = left				}
-			}
-		}
-	}
-	### End code from 'Religion customizable sins and virtues' mod by Karax
 
 	type vassal_conversion_preview = widget {
 		name = "vassal_conversion_preview_list"
