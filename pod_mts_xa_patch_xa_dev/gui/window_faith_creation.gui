@@ -216,7 +216,7 @@ window = {
 									setitemsizefromcell = yes
 									datamodel_wrap = 5
 									maxhorizontalslots = -1
-									maxverticalslots = 10
+									maxverticalslots = 50
 									layoutpolicy_vertical = expanding
 									layoutpolicy_horizontal = expanding
 									### End code from 'More Religion Tenets Slots' mod by Karax
