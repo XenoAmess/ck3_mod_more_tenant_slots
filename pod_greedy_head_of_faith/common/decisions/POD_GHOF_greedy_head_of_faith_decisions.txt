@@ -1,0 +1,34 @@
+become_greedy_head_of_faith_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+	is_shown = {
+		NOT = {
+			has_trait = greedy_head_of_faith
+		}
+		is_head_of_faith = yes
+	}
+	effect = {
+		add_trait = greedy_head_of_faith
+	}
+
+	ai_check_interval = 0
+}
+
+remove_greedy_head_of_faith_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+	is_shown = {
+		has_trait = greedy_head_of_faith
+	}
+	effect = {
+		remove_trait = greedy_head_of_faith
+	}
+
+	ai_check_interval = 0
+}

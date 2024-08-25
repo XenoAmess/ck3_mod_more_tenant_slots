@@ -1,0 +1,5 @@
+greedy_head_of_faith = {
+	name = trait_greedy_head_of_faith
+	desc = trait_greedy_head_of_faith_desc
+	icon = greedy.dds
+}

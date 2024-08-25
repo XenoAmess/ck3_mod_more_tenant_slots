@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ become_greedy_head_of_faith_decision:0 "成为[GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ become_greedy_head_of_faith_decision_tooltip:0 "成为[GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ become_greedy_head_of_faith_decision_desc:0 "要成为[GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]吗？"
+ become_greedy_head_of_faith_decision_confirm:0 "是的。"
+ remove_greedy_head_of_faith_decision:0 "放弃[GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ remove_greedy_head_of_faith_decision_tooltip:0 "放弃[GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ remove_greedy_head_of_faith_decision_desc:0 "也许终于到了放弃[GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]的时候了？"
+ remove_greedy_head_of_faith_decision_confirm:0 "是的，我已准备好了。"

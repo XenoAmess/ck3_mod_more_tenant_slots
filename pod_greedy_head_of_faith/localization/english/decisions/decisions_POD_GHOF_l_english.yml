@@ -1,0 +1,9 @@
+﻿l_english:
+ become_greedy_head_of_faith_decision:0 "Become [GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ become_greedy_head_of_faith_decision_tooltip:0 "Become [GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ become_greedy_head_of_faith_decision_desc:0 "Wanna become [GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]?"
+ become_greedy_head_of_faith_decision_confirm:0 "Yeah."
+ remove_greedy_head_of_faith_decision:0 "Quit [GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ remove_greedy_head_of_faith_decision_tooltip:0 "Quit [GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]"
+ remove_greedy_head_of_faith_decision_desc:0 "Time for not being [GetTrait('greedy_head_of_faith').GetName( GetNullCharacter )]?"
+ remove_greedy_head_of_faith_decision_confirm:0 "Yeah."
