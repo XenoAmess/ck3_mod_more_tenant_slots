@@ -6,8 +6,8 @@
 on_faith_created = {
 	
 	events = {
-
-		faith_creation_clean.001 #clean empty doctrines
+		# clean empty doctrines
+		faith_creation_clean.001
 	}
 }
 
