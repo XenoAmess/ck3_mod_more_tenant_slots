@@ -1,6 +1,8 @@
 version="0.0.3"
 tags={
 	"Religion"
+	"Gameplay"
+	"Balance"
 }
 name="PoD_MTS(XA)"
 supported_version="1.14.2.2"
