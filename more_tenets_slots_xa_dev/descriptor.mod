@@ -1,8 +1,8 @@
-version="0.0.7"
+version="7"
 tags={
-	"Religion"
-	"Gameplay"
-	"Balance"
+"Religion"
+"Gameplay"
+"Balance"
 }
 name="More Tenets Slots(XA)"
 supported_version="1.16.0.2"
