@@ -53,7 +53,7 @@
 	doctrine = doctrine_banemummy_evil
 		
 	traits = {
-		virtues = { brave vengeful just }
+		virtues = { brave vengeful just supehunter shih }
 		sins = { craven arbitrary shy }
 	}		
 
