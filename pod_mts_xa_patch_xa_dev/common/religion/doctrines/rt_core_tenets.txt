@@ -2177,7 +2177,7 @@ doctrine_core_tenets = {
 			custom_description = {
 				text = incompatible_tenet_sacred_shadows_trigger
 				NOT = {
-					has_doctrine = tenet_sacred_shadows
+					doctrine:tenet_sacred_shadows = { is_in_list = selected_doctrines }
 				}
 			}
 		}
@@ -3951,7 +3951,7 @@ doctrine_core_tenets = {
 		}
 
 		traits = {
-			virtues = { gluttonous = { scale = 2 weight = 2 } }
+			virtues = { gluttonous = 2 }
 			sins = { temperate = { scale = 2 weight = 2 } }
 		}
 
@@ -4866,6 +4866,7 @@ doctrine_core_tenets = {
 		traits = {
 			virtues = {
 				sadistic
+				flagellant
 			}
 			sins = {
 				compassionate
@@ -7099,6 +7100,7 @@ doctrine_core_tenets = {
 		}
 
 		character_modifier = {
+			provisions_capacity_mult = 0.3
 		}
 	}
 
@@ -8266,7 +8268,7 @@ doctrine_core_tenets = {
 		}
 
 		is_shown = {
-			religion_tag = gaia_religion
+			has_doctrine = tenet_eyes_of_gaia
 		}
 
 		parameters = {
@@ -8281,6 +8283,42 @@ doctrine_core_tenets = {
 		traits = {
 			virtues = { arrogant = 2 shy = 1 }
 			sins = { humble = 2 }
+		}
+
+	}
+
+	tenet_kind_warriors = {
+		icon = core_tenet_pacifism
+
+		piety_cost = {
+			value = faith_tenet_cost_massive
+
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_kind_warriors }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+
+		is_shown = {
+			has_doctrine = tenet_kind_warriors
+		}
+
+		parameters = {
+			believes_in_harmony_with_nature_invisible = yes
+			pacifist_opinion_active = yes
+			piety_from_long_peace = 1
+			raiding_forbidden = yes
+		}
+
+		character_modifier = {
+			men_at_arms_maintenance = -0.25
+			men_at_arms_recruitment_cost = -0.25
+		}
+
+		traits = {
+			virtues = { patient = 1 stubborn = 1 calm = 1 reclusive = 1 }
+			sins = { impatient = 1 fickle = 1 wrathful = 1 }
 		}
 
 	}
