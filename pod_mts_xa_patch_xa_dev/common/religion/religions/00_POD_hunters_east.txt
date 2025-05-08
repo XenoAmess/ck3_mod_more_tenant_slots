@@ -342,6 +342,13 @@
             #ReligiousHeadName =  corrupted_hunters_faith_religious_head_title
             #ReligiousHeadTitleName = corrupted_hunters_faith_religious_head_title_name
 
+            #Added by submod
+            doctrine = tenet_sacred_childbirth
+            doctrine = doctrine_funeral_bewailment
+            doctrine = special_doctrine_vices_lust
+            doctrine = special_doctrine_jizya
+            doctrine = special_doctrine_naked_priests
+
         }
 
 	}
