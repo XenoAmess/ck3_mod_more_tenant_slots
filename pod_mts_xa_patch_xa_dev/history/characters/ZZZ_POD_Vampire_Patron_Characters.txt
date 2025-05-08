@@ -78,7 +78,7 @@
             add_character_flag = {
                 flag = POD_portrait_pure_white_hair_flag
             }
-            add_perk = draught_of_phoenix_blood_perk
+            add_perk = ashes_of_the_phoenix_perk
             #add_character_flag = {
             #    flag = POD_dde_abbasid_war_royalty_flag
             #}
