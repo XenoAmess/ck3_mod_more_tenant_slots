@@ -1,12 +1,3 @@
-# vgl. game > gui > window_faith_creation.gui
-
-## Modified Version of the 'window_faith.gui' from vanilla game version 1.8.1
-## for 'Princes of Darkness' Total Conversion Mod
-#  Without Code for 'Customizable Ethics' features
-#  Without Code and Global Values from 'More Religious Doctrines', 'More Immersive Doctrines' and 'Polytheism Reborn'
-#  Code for widget 'left_side' > vbox "tenets" by Karax
-#  Code for widget 'left_side' > hbox "footer_area" > hbox "sins_and_virtues", vboxes "sins" and "virtues" by Karax and Lucky Lenny
-
 ######################################################
 ################## FAITH CREATION ####################
 ######################################################
@@ -182,7 +173,7 @@ window = {
 					vbox = {
 						name = "tenets"
 						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = expanding						
+						layoutpolicy_vertical = expanding
 						spacing = 15
 						### End code by Karax
 
@@ -199,13 +190,13 @@ window = {
 						### Beginn code from 'More Religion Tenets Slots' mod by Karax
 						scrollbox = {
 							layoutpolicy_vertical = expanding
-							layoutpolicy_horizontal = expanding							
+							layoutpolicy_horizontal = expanding
 							#margin_top = 15
 							#spacing = 10
-						
+
 							blockoverride "scrollbox_content"
-							{	
-								
+							{
+
 								fixedgridbox = {
 
 									name = "tenets_grid"
@@ -375,46 +366,21 @@ window = {
 										}
 									}
 								}
-								
+
 								vbox = {
-									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'shifter' ).GetGrouping)]"
+									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'subsplat' ).GetGrouping)]"
 									layoutpolicy_horizontal = expanding
 									spacing = 10
 
 									text_label_left = {
 										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_SHIFTERS"
+										text = "FAITH_DOCTRINES_SUBSPLATS"
 										default_format = "#low"
 									}
 
 									fixedgridbox = {
-										name = "doctrines_grid_clan"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'shifter' ).GetGrouping]"
-										flipdirection = yes
-										addcolumn = 270
-										addrow = 65
-										datamodel_wrap = 2
-
-										item = {
-											widget_doctrine_selection_item = {}
-										}
-									}
-								}
-								
-								vbox = {
-									visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'clan' ).GetGrouping)]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_DOCTRINES_CLANS"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_clan"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'clan' ).GetGrouping]"
+										name = "doctrines_grid_subsplat"
+										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'subsplat' ).GetGrouping]"
 										flipdirection = yes
 										addcolumn = 270
 										addrow = 65
@@ -509,7 +475,7 @@ window = {
 								}
 
 								dynamicgridbox = {
-									name = "virtues_grid"
+									name = "sins_grid"
 									datamodel = "[FaithCreationWindow.GetSins]"
 									flipdirection = yes
 									datamodel_wrap = 8

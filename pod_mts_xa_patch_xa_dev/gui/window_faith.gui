@@ -1,11 +1,3 @@
-# vgl. game > gui > window_faith.gui
-
-## Modified Version of the 'window_faith.gui' from vanilla game version 1.8.1
-## for 'Princes of Darkness' Total Conversion Mod
-#  Without Code and Global Values from "More Religious Doctrines", "More Immersive Doctrines" and "Polytheism Reborn"
-#  Code for ### INSIDE WINDOW > ### Core Tenets by Karax
-#  Code for ### INSIDE WINDOW > ### Doctrines > hbox "sins_and_virtues" by Karax and Lucky Lenny
-
 ######################################################
 ################### FAITH WINDOW #####################
 ######################################################
@@ -16,7 +8,7 @@ window = {
 	datacontext = "[FaithWindow.GetFaith]"
 	datacontext = "[GetVariableSystem]"
 	movable = no
-	layer = windows_layer
+	layer = middle
 
 	using = Window_Size_Sidebar
 	using = Window_Background_Sidebar
@@ -43,13 +35,10 @@ window = {
 
 	### INSIDE WINDOW
 	vbox = {
-		layoutpolicy_horizontal = expanding
-		layoutpolicy_vertical = expanding
-
 		using = Window_Margins_Sidebar
 
 		### Header
-		header_with_picture = {
+		widget_header_with_picture = {
 			name = "header"
 			datacontext = "[GetIllustration( 'religion_interior' )]"
 			size = { 0 130 }
@@ -290,13 +279,13 @@ window = {
 					layoutpolicy_vertical = expanding
 					layoutpolicy_horizontal = expanding
 					size = { 200 250 }
-					
+
 					#margin_top = 5
 					#spacing = 10
 
 					blockoverride "scrollbox_content"
 					{
-						
+
 						fixedgridbox = {
 							name = "doctrines_grid_core_tenets"
 							datamodel = "[FaithWindow.GetGroupingHelper( 'core_tenets' ).GetGrouping]"
@@ -388,38 +377,32 @@ window = {
 									}
 								}
 
-								# Code not used by Karax
-								# widget = {
-								# 	size = { 250 40 }
+								vbox = {
+									dynamicgridbox = {
+										name = "virtues_grid"
+										datamodel = "[FaithWindow.GetSins]"
+										flipdirection = yes
+										datamodel_wrap = 6
 
-								 	vbox = {
-										dynamicgridbox = {
-											name = "virtues_grid"
-											datamodel = "[FaithWindow.GetSins]"
-											flipdirection = yes
-											datamodel_wrap = 6
+										item = {
+											icon = {
+												datacontext = "[GuiVirtueOrSinItem.GetTrait]"
+												size = { 40 40 }
+												alwaystransparent = yes
+												texture = "[Trait.GetIcon( GetPlayer )]"
 
-											item = {
-												icon = {
-													datacontext = "[GuiVirtueOrSinItem.GetTrait]"
-													size = { 40 40 }
-													alwaystransparent = yes
-													texture = "[Trait.GetIcon( GetPlayer )]"
+												tooltipwidget = {
+													using = faith_window_trait_tooltip
+												}
 
-													tooltipwidget = {
-														using = faith_window_trait_tooltip
-													}
-
-													block "tooltip_placement"
-													{
-														using = tooltip_ne
-														tooltip_offset = { 0 20 }
-													}
+												block "tooltip_placement"
+												{
+													using = tooltip_ne
+													tooltip_offset = { 0 20 }
 												}
 											}
 										}
-								# Code not used by Karax
-								# 	}
+									}
 								}
 
 								expand = {}
@@ -449,38 +432,32 @@ window = {
 									}
 								}
 
-								# Code not used by Karax
-								# widget = {
-								# 	size = { 250 40 }
+								vbox = {
+									dynamicgridbox = {
+										name = "virtues_grid"
+										datamodel = "[FaithWindow.GetVirtues]"
+										flipdirection = yes
+										datamodel_wrap = 6
 
-								 	vbox = {
-										dynamicgridbox = {
-											name = "virtues_grid"
-											datamodel = "[FaithWindow.GetVirtues]"
-											flipdirection = yes
-											datamodel_wrap = 6
+										item = {
+											icon = {
+												datacontext = "[GuiVirtueOrSinItem.GetTrait]"
+												size = { 40 40 }
+												alwaystransparent = yes
+												texture = "[Trait.GetIcon( GetPlayer )]"
 
-											item = {
-												icon = {
-													datacontext = "[GuiVirtueOrSinItem.GetTrait]"
-													size = { 40 40 }
-													alwaystransparent = yes
-													texture = "[Trait.GetIcon( GetPlayer )]"
+												tooltipwidget = {
+													using = faith_window_trait_tooltip
+												}
 
-													tooltipwidget = {
-														using = faith_window_trait_tooltip
-													}
-
-													block "tooltip_placement"
-													{
-														using = tooltip_ne
-														tooltip_offset = { 0 20 }
-													}
+												block "tooltip_placement"
+												{
+													using = tooltip_ne
+													tooltip_offset = { 0 20 }
 												}
 											}
 										}
-								# Code not used by Karax
-								# 	}
+									}
 								}
 
 								expand = {}
@@ -642,7 +619,7 @@ window = {
 								}
 							}
 						}
-						
+
 						vbox = {
 							visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'shifter' ).GetGrouping)]"
 							layoutpolicy_horizontal = expanding
@@ -667,7 +644,7 @@ window = {
 								}
 							}
 						}
-						
+
 						vbox = {
 							visible = "[DataModelHasItems(FaithWindow.GetGroupingHelper( 'clan' ).GetGrouping)]"
 							layoutpolicy_horizontal = expanding
@@ -741,7 +718,7 @@ window = {
 									text_single = {
 										layoutpolicy_horizontal = expanding
 
-										
+
 										margin = { 17 0 }
 										margin_top = 12
 										margin_bottom = 13
@@ -853,8 +830,43 @@ window = {
 								expand = {}
 							}
 
-							expand = {}
+							hbox = {
+								layoutpolicy_horizontal = expanding
 
+								button_round = {
+									datacontext = "[Faith.GetReligiousHead]"
+									visible = "[Faith.GetReligiousHead.IsValid]"
+
+									tooltip = "HOF_INTERACTIONS_BUTTON_TOOLTIP"
+									tooltip_visible = "[Not(IsInteractionMenuOpenForCharacterWithFilter(Character.Self, 'interaction_category_religion'))]"
+
+									onclick = "[ToggleFilteredCharacterInteractionMenu(Character.Self, 'interaction_category_religion')]"
+
+									button_icon = {
+										alwaystransparent = yes
+										parentanchor = center
+										size = { 30 30 }
+										texture = "gfx/interface/icons/flat_icons/character_interactions.dds"
+									}
+
+									text_single = {
+										parentanchor = bottom|hcenter
+										position = { 0 3 }
+										text = "[GetNumberOfValidInteractionsWithFilter(Character.Self, 'interaction_category_religion')]"
+										default_format = "#glow_color:{0.1,0.1,0.1,1.0}"
+
+										background = {
+											margin = { 5 0 }
+											margin_top = -5
+											using = Background_Area_Dark
+										}
+									}
+								}
+
+								expand = {}
+							}
+
+							expand = {}
 						}
 					}
 
@@ -930,7 +942,6 @@ window = {
 							layoutpolicy_horizontal = expanding
 							datacontext = "[Faith.GetReligiousHeadTitle]"
 							visible = "[Title.IsValid]"
-							margin_left = -5
 							spacing = 5
 
 							coa_title_tiny_crown = {
@@ -1111,7 +1122,7 @@ window = {
 
 									hbox = {
 										layoutpolicy_horizontal = expanding
-										spacing = 5
+										spacing = 10
 
 										coa_title_tiny = {}
 
@@ -1119,22 +1130,28 @@ window = {
 											name = "name_notheld"
 											visible = "[Not( GuiHolySiteItem.IsHeldByFaith )]"
 											layoutpolicy_horizontal = expanding
+
 											text = "[HolySite.GetName]"
 											align = nobaseline
+											autoresize = no
 											default_format = "#low"
 											using = Font_Size_Big
-											autoresize = no
+
+											margin_bottom = 5
 										}
 
 										text_single = {
 											name = "name_held"
 											visible = "[GuiHolySiteItem.IsHeldByFaith]"
 											layoutpolicy_horizontal = expanding
+
 											text = "[HolySite.GetName]"
 											align = nobaseline
+											autoresize = no
 											default_format = "#high"
 											using = Font_Size_Big
-											autoresize = no
+
+											margin_bottom = 5
 
 										}
 
@@ -1180,7 +1197,7 @@ window = {
 								vbox = {
 									layoutpolicy_horizontal = expanding
 									layoutpolicy_vertical = expanding
-									margin_top = 15
+									margin_top = 10
 
 									hbox = {
 										layoutpolicy_horizontal = expanding
@@ -1447,7 +1464,7 @@ window = {
 										text_single = {
 											name = "faith_name"
 											align = left|nobaseline
-											text = "[Faith.GetNameNoTooltip]"
+											text = "FAITH_COOLTIP_GETNAME"
 											using = Font_Size_Medium
 											default_format = "#high"
 											max_width = 240
