@@ -94,8 +94,8 @@
                 #remove_doctrine = special_doctrine_ignorance
                 remove_doctrine = special_doctrine_against_to_yomi_wan_hostility
                 remove_doctrine = wyrm_tainted_doctrine
-                set_religious_head_title =
             }
+            add_perk = rebirthing_perk
         }
 	}
 
@@ -120,7 +120,7 @@
             add_piety_level = 1
         }
 	}
-	
+
 	3000.1.1 = {
 		death = {
 			death_reason = death_disappearance 
