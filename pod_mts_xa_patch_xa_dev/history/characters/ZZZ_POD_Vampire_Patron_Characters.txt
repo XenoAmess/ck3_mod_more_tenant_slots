@@ -107,7 +107,20 @@
                 add_doctrine = special_doctrine_vices_lust
                 add_doctrine = special_doctrine_jizya
                 add_doctrine = special_doctrine_naked_priests
-                set_religious_head_title = c_urgun
+            }
+        }
+        effect = {
+            title:c_urgun = {
+                change_title_holder_include_vassals = {
+                    holder = 560229
+                    change = scope:change
+                    take_baronies = yes
+                    government_base = inquisition_government
+                }
+            }
+            change_government = inquisition_government
+            faith:corrupted_hunters_faith = {
+                set_religious_head_title = title:c_urgun
             }
         }
     }
@@ -131,6 +144,40 @@
         effect = {
             add_prestige_level = 1
             add_piety_level = 1
+        }
+	}
+
+    1229.1.1 = {
+        effect = {
+            title:c_urgun = {
+                change_title_holder_include_vassals = {
+                    holder = 560229
+                    change = scope:change
+                    take_baronies = yes
+                    government_base = inquisition_government
+                }
+            }
+            change_government = inquisition_government
+            faith:corrupted_hunters_faith = {
+                set_religious_head_title = title:c_urgun
+            }
+        }
+    }
+
+	1374.1.1 = {
+        effect = {
+            title:c_urgun = {
+                change_title_holder_include_vassals = {
+                    holder = 560229
+                    change = scope:change
+                    take_baronies = yes
+                    government_base = inquisition_government
+                }
+            }
+            change_government = inquisition_government
+            faith:corrupted_hunters_faith = {
+                set_religious_head_title = title:c_urgun
+            }
         }
 	}
 
