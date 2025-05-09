@@ -97,10 +97,10 @@
 
     1000.1.2 = {
         effect = {
-            add_perk = ashes_of_the_phoenix_perk
-            add_trait = "shih"
-            add_trait = "laham"
             #add_trait = "nephilim"
+            add_trait = "laham"
+            add_trait = "shih"
+            add_perk = ashes_of_the_phoenix_perk
             faith:corrupted_hunters_faith = {
                 add_doctrine = tenet_sacred_childbirth
                 add_doctrine = doctrine_funeral_bewailment
@@ -156,7 +156,7 @@
 
     1230.1.12 = {
         effect = {
-            get_title = title:c_urgun
+            get_title = title:c_kataka
         }
         effect = {
             change_government = infernal_court_government
@@ -169,14 +169,14 @@
         }
         effect = {
             faith:corrupted_hunters_faith = {
-                set_religious_head_title = title:c_urgun
+                set_religious_head_title = title:c_kataka
             }
         }
     }
 
 	1375.1.4 = {
         effect = {
-            get_title = title:c_urgun
+            get_title = title:c_kataka
         }
         effect = {
             change_government = infernal_court_government
@@ -189,7 +189,7 @@
         }
         effect = {
             faith:corrupted_hunters_faith = {
-                set_religious_head_title = title:c_urgun
+                set_religious_head_title = title:c_kataka
             }
         }
 	}
