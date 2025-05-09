@@ -103,6 +103,11 @@
             add_perk = ashes_of_the_phoenix_perk
             faith:corrupted_hunters_faith = {
                 add_doctrine = tenet_sacred_childbirth
+                add_doctrine = tenet_carnal_desire
+                #add_doctrine = tenet_honor_and_bravery
+                add_doctrine = tenet_unrelenting_faith
+                add_doctrine = tenet_exaltation_of_pain
+                add_doctrine = tenet_pursuit_of_power
                 add_doctrine = doctrine_funeral_bewailment
                 add_doctrine = special_doctrine_vices_lust
                 add_doctrine = special_doctrine_jizya
@@ -154,7 +159,7 @@
         }
 	}
 
-    1230.1.12 = {
+    1230.1.11 = {
         effect = {
             get_title = title:c_kataka
         }
