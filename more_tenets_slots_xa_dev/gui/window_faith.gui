@@ -34,9 +34,6 @@ window = {
 
 	### INSIDE WINDOW
 	vbox = {
-		layoutpolicy_horizontal = expanding
-		layoutpolicy_vertical = expanding
-
 		using = Window_Margins_Sidebar
 
 		### Header
