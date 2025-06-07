@@ -179,7 +179,7 @@
         }
     }
 
-	1375.1.4 = {
+	1231.1.1 = {
         effect = {
             get_title = title:c_kataka
         }
@@ -198,6 +198,29 @@
             }
         }
 	}
+
+    # 1231.1.2 = {
+    #     effect = {
+    #         add_trait = strategist
+    #         add_trait = overseer
+    #         add_trait = gallant
+    #         add_trait = architect
+    #         # add_trait = administrator
+    #         add_trait = torturer
+    #     }
+    #     effect = {
+    #         add_trait = pilgrim
+    #         add_trait_xp = {
+    #             trait = pilgrim
+    #             value = 100000
+    #         }
+    #         # add_trait = crusader_king
+    #         add_trait = faith_warrior
+    #         add_trait = adventurer
+    #         add_trait = blademaster
+    #         add_trait = mystic
+    #     }
+    # }
 
 	3000.1.1 = {
 		death = {
