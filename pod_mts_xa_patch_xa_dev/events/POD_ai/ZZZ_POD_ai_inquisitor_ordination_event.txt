@@ -1,0 +1,179 @@
+﻿namespace = POD_ai_inquisitor_ordination
+
+# Hunter order spawn child
+POD_ai_inquisitor_ordination.1 = {
+	type = character_event
+	hidden = yes
+
+    trigger = {
+		is_playable_character = yes
+		has_trait = supehunter
+		age > 20
+		trigger_if = {
+			limit = { highest_held_title_tier >= tier_county }
+			OR = {
+				AND = {
+					dynasty = dynasty:11010092
+					any_child = { is_alive = yes count < 8 }
+				}
+				any_child = { is_alive = yes count < 2 }
+			}
+		}
+		trigger_else = {
+			OR = {
+				AND = {
+					dynasty = dynasty:11010092
+					any_child = { is_alive = yes count < 2 }
+				}
+				any_child = { is_alive = yes count < 1 }
+			}
+		}
+		has_lay_order_dynasty_trigger = no
+		is_imprisoned = no
+		is_ai = yes
+    }
+
+    immediate = {
+		save_scope_as = masterhunter
+		scope:masterhunter = {
+			POD_ai_inquisitor_ordination_effect = yes
+			if = {
+				limit = {
+					OR = {
+						dynasty = dynasty:11010092
+						dynasty = dynasty:11010093
+					}
+				}
+				dynasty = dynasty:11010092
+			}
+		}
+		scope:created_apprenticehunter = {
+			random = {
+				chance = 1
+				add_trait = truefaith
+			}
+			POD_endowments_reward_large_effect = yes
+			if = {
+				limit = {
+					scope:masterhunter = {
+					has_trait = order_member
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = { has_dynasty_perk = meritocracy_legacy_1 }
+					}
+				meritocracy_1_effect = yes
+			}
+		
+		if = {
+				limit = {
+					scope:masterhunter = {
+					has_trait = order_member
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = { has_dynasty_perk = meritocracy_legacy_2 }
+					is_female = no
+					}
+				meritocracy_2_effect_a = yes
+			}
+		
+		if = {
+				limit = {
+					scope:masterhunter = {
+					has_trait = order_member
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = { has_dynasty_perk = meritocracy_legacy_2 }
+					is_female = yes
+					}
+				meritocracy_2_effect_b = yes
+			}
+		
+		if = {
+				limit = {
+					scope:masterhunter = {
+					has_trait = order_member
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = { has_dynasty_perk = meritocracy_legacy_3 }
+					}
+				meritocracy_3_effect = yes
+			}
+		
+		if = {
+				limit = {
+					scope:masterhunter = {
+					has_trait = order_member
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = { has_dynasty_perk = meritocracy_legacy_4 }
+					}
+				meritocracy_4_effect = yes
+			}
+			
+		if = {
+				limit = {
+					scope:masterhunter = {
+					has_trait = order_member
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = { has_dynasty_perk = meritocracy_legacy_5 }
+					}
+				meritocracy_5_effect = yes
+			}
+			if = {
+				limit = {
+					scope:masterhunter = {
+						OR = {
+					dynasty = dynasty:13000001
+					dynasty = dynasty:13000011
+						}
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = {
+					has_dynasty_perk = unity_legacy_4
+						}
+					}
+				add_learning_skill = 2
+				add_martial_skill = 2
+			}
+			if = {
+				limit = {
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = { has_dynasty_perk = unity_legacy_4 }
+					scope:masterhunter = {
+						OR = {
+							dynasty = dynasty:13000002
+							dynasty = dynasty:13000006
+							dynasty = dynasty:13000008
+							}
+						}
+					}
+				add_martial_skill = 2
+				add_prowess_skill = 5
+			}
+			if = {
+				limit = {
+					scope:masterhunter = {
+					dynasty = dynasty:13000003
+					}
+					exists = scope:masterhunter.dynasty
+					scope:masterhunter.dynasty = {
+					has_dynasty_perk = unity_legacy_4
+						}
+					}
+				add_stewardship_skill = 2
+				add_learning_skill = 2
+			}
+			if = {
+				limit = {
+					scope:masterhunter = {
+						dynasty = dynasty:11010092
+					}
+				}
+				add_trait = witch
+				add_trait = "lustful"
+				add_trait = deviant
+			}
+		}
+	}
+}
