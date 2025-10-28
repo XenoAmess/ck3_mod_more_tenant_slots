@@ -5,5 +5,5 @@ tags={
 	"Balance"
 }
 name="POD MTS(XA)"
-supported_version="1.17.1"
+supported_version="1.18.0"
 remote_file_id="3182385109"
