@@ -79,6 +79,7 @@
         effect = {
             #add_trait = "nephilim"
             #add_trait = "laham"
+            add_character_modifier = budding_godhood_modifier
             add_trait = "shih"
             add_perk = ashes_of_the_phoenix_perk
             faith:corrupted_hunters_faith = {
