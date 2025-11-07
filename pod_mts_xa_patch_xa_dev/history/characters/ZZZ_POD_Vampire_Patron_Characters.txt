@@ -78,9 +78,9 @@
     1000.1.2 = {
         effect = {
             #add_trait = "nephilim"
-            #add_trait = "laham"
+            # add_trait = "laham"
             add_character_modifier = budding_godhood_modifier
-            add_trait = "shih"
+            # add_trait = "shih"
             add_perk = ashes_of_the_phoenix_perk
             faith:corrupted_hunters_faith = {
                 add_doctrine = tenet_sacred_childbirth
@@ -94,14 +94,65 @@
                 add_doctrine = special_doctrine_jizya
                 add_doctrine = special_doctrine_naked_priests
                 add_doctrine = doctrine_enlightenment_virtues_conscience_and_selfcontrol
+                add_doctrine = doctrine_polytheist
             }
         }
     }
-
-    1000.1.3 = {
+    1000.1.5 = {
         effect = {
             get_title = title:c_urgun
         }
+        effect = {
+            get_title = title:b_shakin
+        }
+        effect = {
+            get_title = title:b_khost
+        }
+    }
+
+    1000.1.6 = {
+        # effect = {
+        #     faith:corrupted_hunters_faith = {
+        #         set_religious_head_title = title:c_urgun
+        #     }
+        # }
+        effect = {
+            # character:st_amand_1 = {
+            #     save_scope_as = leader
+            # }
+            character:560229 = {
+                save_scope_as = founder
+            }
+            title:b_shakin = {
+                save_scope_as = barony
+            }
+            create_character = {
+                template = holy_order_leader_character
+                location = scope:barony.title_province
+                save_scope_as = leader
+            }
+            create_holy_order = {
+                leader = scope:leader
+                capital = scope:barony
+                save_scope_as = new_holy_order
+            }
+            scope:new_holy_order ?= {
+                faith:corrupted_hunters_faith = {
+                    set_religious_head_title = scope:new_holy_order.title
+                }
+            }
+            scope:new_holy_order ?= {
+                scope:new_holy_order.title.holder = {
+                    change_government = celestial_government
+                }
+            }
+            scope:new_holy_order ?= {
+                scope:new_holy_order.title = {
+                    tier = tier_empire
+                }
+            }
+        }
+
         effect = {
             change_government = infernal_court_government
         }
@@ -112,9 +163,7 @@
             change_government = cell_government
         }
         effect = {
-            faith:corrupted_hunters_faith = {
-                set_religious_head_title = title:c_urgun
-            }
+            change_government = mandala_government
         }
     }
 
