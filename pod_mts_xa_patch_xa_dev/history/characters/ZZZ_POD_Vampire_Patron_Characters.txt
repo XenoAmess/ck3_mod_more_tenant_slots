@@ -77,9 +77,13 @@
 
     1000.1.2 = {
         effect = {
+            add_character_modifier = budding_godhood_modifier
+            # set_variable = {
+            #     name = appointment_trait_override
+            #     value = trait:education_martial_1
+            # }
             #add_trait = "nephilim"
             # add_trait = "laham"
-            add_character_modifier = budding_godhood_modifier
             # add_trait = "shih"
             add_perk = ashes_of_the_phoenix_perk
             faith:corrupted_hunters_faith = {
@@ -94,8 +98,10 @@
                 add_doctrine = special_doctrine_jizya
                 add_doctrine = special_doctrine_naked_priests
                 add_doctrine = doctrine_enlightenment_virtues_conscience_and_selfcontrol
-                add_doctrine = doctrine_polytheist
+                # add_doctrine = doctrine_polytheist
+                add_doctrine = doctrine_monotheist
             }
+            set_culture = culture:rajput
         }
     }
     1000.1.5 = {
@@ -143,14 +149,39 @@
             }
             scope:new_holy_order ?= {
                 scope:new_holy_order.title.holder = {
+                    change_government = cell_government
+                }
+            }
+            scope:new_holy_order ?= {
+                scope:new_holy_order.title.holder = {
+                    change_government = mandala_government
+                }
+            }
+            scope:new_holy_order ?= {
+                scope:new_holy_order.title.holder = {
                     change_government = celestial_government
                 }
             }
             scope:new_holy_order ?= {
-                scope:new_holy_order.title = {
-                    tier = tier_empire
+                scope:new_holy_order.title.holder = {
+                    add_trait = shih
+                    remove_trait = order_member
+                    # set_variable = {
+                    #     name = appointment_trait_override
+                    #     value = trait:education_martial_1
+                    # }
                 }
             }
+            # scope:new_holy_order ?= {
+            #     scope:new_holy_order.title = {
+            #         tier = tier_empire
+            #     }
+            # }
+            # scope:new_holy_order ?= {
+            #     title:b_khost = {
+            #         lease_out_to = scope:new_holy_order
+            #     }
+            # }
         }
 
         effect = {
@@ -162,8 +193,11 @@
         effect = {
             change_government = cell_government
         }
+        # effect = {
+        #     change_government = mandala_government
+        # }
         effect = {
-            change_government = mandala_government
+            change_government = celestial_government
         }
     }
 
