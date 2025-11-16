@@ -159,7 +159,7 @@
             }
             scope:new_holy_order ?= {
                 scope:new_holy_order.title.holder = {
-                    change_government = celestial_government
+                    change_government = steppe_admin_government
                 }
             }
             scope:new_holy_order ?= {
@@ -197,7 +197,7 @@
         #     change_government = mandala_government
         # }
         effect = {
-            change_government = celestial_government
+            change_government = steppe_admin_government
         }
     }
 
