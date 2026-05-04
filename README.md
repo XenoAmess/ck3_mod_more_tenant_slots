@@ -6,11 +6,17 @@ This mod adds more tenant slots to the game.
 
 It is modified from modified original mod.
 
-source codes: https://github.com/XenoAmess/ck3_mod_more_tenant_slots
+Source codes: https://github.com/XenoAmess/ck3_mod_more_tenant_slots
 
-original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2904268802
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2904268802
 
-this mod: https://steamcommunity.com/sharedfiles/filedetails/?id=3182367229
+This mod: https://steamcommunity.com/sharedfiles/filedetails/?id=3182367229
+
+Special thanks to https://steamcommunity.com/sharedfiles/filedetails/?id=2904268802 and its author Holger
+
+This version is different as we expand the number ot max tenets from 20 to 100
+
+We also do DEFAULT_MAX_TRADITIONS = 10000 to enlarge the tradition slots.
 
 ###  **pod_mts_xa_patch_xa_dev** folder:
 
