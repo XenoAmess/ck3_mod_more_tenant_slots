@@ -1,46 +1,27 @@
-﻿# vgl. game > common > religion > doctrines > 00_core_tenets.txt
+﻿#############################
+# Empty Tenets		 		#
+#############################
 
-# This Code 'just' consists of the empty core tenets ('blank slots') by karax and and the 
-# core tenets from the 'Princes of Darkness' mod, version 1.7.2.1.
-# The development and maintenance of this tenets is done by the authors of PoD. This file
-# just contains a copy.
+tenet_zz_empty_1 = {
+    icon = core_tenet_empty
+    piety_cost = {
+        value = 0
+    }
 
+    is_shown = {
+        always = yes
+    }
 
-doctrine_core_tenets = {
-	group = "core_tenets"
-	# Reduced from 23 to 20 by Lucky Lenny
-	number_of_picks = 100    # 23
+    can_pick = {
+        always = yes
+    }
+}
 
-	######################################################################################
-	#  Empty Tenets 																	 #
-	#  (Adoption out of 'rt_core_tenets.txt' from the 'More Religion Tenets Slots' mod.	 #
-	#   Has to be placed on top of all tenets!)											 #
-	######################################################################################
-
-	tenet_zz_empty_1 = {
-		icon = core_tenet_empty
-		piety_cost = {
-			value = 0
-		}
-
-		is_shown = {
-			always = yes
-		}
-
-		can_pick = {
-			always = yes
-		}
-
-		character_modifier = {
-		}
-	}
-
-
-	tenet_zz_empty_2 = {
-		icon = core_tenet_empty
-		piety_cost = {
-			value = 0
-		}
+tenet_zz_empty_2 = {
+    icon = core_tenet_empty
+    piety_cost = {
+        value = 0
+    }
 
 		is_shown = {
 			always = yes
@@ -8456,48 +8437,3 @@ doctrine_core_tenets = {
 			virtues = { lifestyle_hunter }
 		}
 	}
-}
-
-#############################
-# Empty Template Tenet 		#
-#############################
-
-#tenets = {
-#	is_shown = {
-#		always = no
-#	}
-#	can_pick = {
-#		always = yes
-#	}
-
-#	piety_cost = {
-#		if = {
-#			limit = {
-#				always = no
-#			}
-#			value = faith_tenet_cost_low
-#		}
-#		else = {
-#			value = faith_tenet_cost_massive
-#		}
-
-#		# Multiplier for keeping same tenet
-#		if = {
-#			limit = { has_doctrine = tenets }
-#			multiply = faith_unchanged_doctrine_cost_mult
-#		}
-#	}
-
-#	parameters = {
-#		tenets_active = yes
-#	}
-
-#	character_modifier = {
-
-#	}
-
-#	traits = {
-#		virtues = { brave = 2}
-#		sins = { craven = 2}
-#	}
-#}
