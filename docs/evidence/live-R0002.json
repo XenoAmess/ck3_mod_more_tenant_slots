@@ -1,0 +1,19 @@
+{
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0002",
+  "source_commit": "1bb758afb15c4d291fa2ad8f8aa2a1c0ad980514",
+  "result": "PARTIAL",
+  "native_error_log_bytes": 0,
+  "passed": [
+    "startup and 1066 world generation",
+    "Insular and Adamite faith cards render",
+    "native empty tenet and fourth-slot selector",
+    "fourth Asceticism selection updates native cost 0 to 375 and divergence 37 to 57",
+    "native puppet restriction retained",
+    "Adamite create view accepts naming and does not report unfilled tenet slots"
+  ],
+  "not_verified": [
+    "native creation completed",
+    "save and cold reload"
+  ],
+  "end_reason": "1800-second runner timeout; WM_CLOSE followed by termination after 30 seconds; no save produced. R0003 repeats with 10800-second deadline."
+}

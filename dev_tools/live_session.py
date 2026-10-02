@@ -31,6 +31,9 @@ def main() -> int:
     parser.add_argument("--bus-cli", type=Path, required=True)
     parser.add_argument("--screen-task", required=True)
     parser.add_argument("--run-id", required=True)
+    parser.add_argument("--timeout-seconds", type=int, default=10800)
+    parser.add_argument("--language", choices=("english", "simp_chinese"), default="english")
+    parser.add_argument("--load-save", type=Path, help="copy an external acceptance save into this cell")
     args = parser.parse_args()
     framework_tools(args.framework)
     sys.path.insert(0, str(args.framework / "ck3_autonomous_player/src"))
@@ -44,6 +47,10 @@ def main() -> int:
     args.attempt.mkdir(parents=True, exist_ok=False)
     userdir = args.attempt.resolve() / "userdir"
     userdir.mkdir()
+    if args.load_save:
+        saves = userdir / "save games"
+        saves.mkdir()
+        shutil.copy2(args.load_save, saves / args.load_save.name)
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     built = build(args.framework, userdir / "production", revision)
     (userdir / "mod").mkdir()
@@ -55,7 +62,7 @@ def main() -> int:
         {"enabled_mods": ["mod/mts.mod"], "disabled_dlcs": []}), encoding="utf-8")
     settings = (args.warm_userdir / "pdx_settings.txt").read_text(encoding="utf-8-sig")
     settings = re.sub(r'("language"\s*=\s*{\s*version=\d+\s*value=)"[^"\n]+"',
-                      r'\1"l_english"', settings)
+                      r'\1"l_' + args.language + '"', settings)
     (userdir / "pdx_settings.txt").write_text(settings, encoding="utf-8", newline="\n")
     for filename in ("shadercache", "shadercache.cache", "cache", "pops_gdpr.dat"):
         source = args.warm_userdir / filename
@@ -103,7 +110,7 @@ def main() -> int:
         receipt.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
         print(json.dumps({"pid": process.pid, "userdir": str(userdir),
                           "run_id": args.run_id}), flush=True)
-        deadline = time.monotonic() + 1800
+        deadline = time.monotonic() + args.timeout_seconds
         heartbeat = time.monotonic()
         try:
             while process.poll() is None and not stop.wait(1):
