@@ -19,7 +19,7 @@ WORKSHOP_ID = "3182367229"
 RELEASE_FILES = (
     "descriptor.mod", "thumbnail.png",
     "common/defines/More tradition slots.txt",
-    "common/script_values/mts_core_tenets_cap.txt",
+    "common/script_values/zz_mts_core_tenets_cap.txt",
     "gui/window_faith.gui", "gui/window_rite_creation.gui",
     "localization/english/religion/MTS_religion_confucianism_l_english.yml",
     "localization/simp_chinese/religion/MTS_religion_confucianism_l_simp_chinese.yml",
@@ -60,6 +60,18 @@ def validate(framework: Path, game: Path) -> dict:
             raise ValueError("native cap contract differs")
     if not re.search(r"pam_faith_core_tenets_cap_value\s*=\s*{\s*value\s*=\s*100\s*}", values):
         raise ValueError("council cap differs from native cap")
+    # Script-value IDs are merged across filenames; the native pam_values.txt
+    # otherwise wins over the old mts_ filename. This guards our reviewed
+    # single-mod cell; effective values still require native runtime readback.
+    cap_id = "pam_faith_core_tenets_cap_value"
+    native_cap_files = sorted(
+        p.name for p in (game / "game/common/script_values").glob("*.txt")
+        if re.search(r"(?m)^" + cap_id + r"\s*=", masked(p.read_text(encoding="utf-8-sig")))
+    )
+    if native_cap_files != ["pam_values.txt"]:
+        raise ValueError(f"native cap definition owners changed: {native_cap_files}")
+    if Path(RELEASE_FILES[3]).name <= native_cap_files[-1]:
+        raise ValueError("product script-value override must load after native definition")
     for language in ("english", "simp_chinese"):
         path = MOD / f"localization/{language}/religion/MTS_religion_confucianism_l_{language}.yml"
         content = path.read_text(encoding="utf-8-sig")
@@ -70,7 +82,8 @@ def validate(framework: Path, game: Path) -> dict:
                 raise ValueError(f"missing Shang Confucian localization: {language} {suffix}")
     return {"status": "static-ready", "native_projection": projection,
             "checks": ["exact-native-inputs", "reversible-native-gui", "native-controls-preserved",
-                       "native-and-council-cap-100", "traditions-cap-10000", "BOM-and-braces",
+                       "native-and-council-cap-100", "script-value-override-order",
+                       "traditions-cap-10000", "BOM-and-braces",
                        "no-retired-dependencies", "localization-structure", "release-allowlist"],
             "release_file_count": len(RELEASE_FILES), "live_verified": False}
 

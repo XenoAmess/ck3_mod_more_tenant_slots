@@ -7,7 +7,7 @@
       "changes": 2
     },
     "gui/window_rite_creation.gui": {
-      "sha256": "767df524ceb612242e0317aaee43a1addf855b2a6b1a098d087dfe6c1b080f5b",
+      "sha256": "1a24954429157c89103ca95bf028e5c8ac3f5a13a40e555d5cb16cb7db4023d8",
       "native_recovery": "PASS",
       "changes": 1
     }
@@ -17,6 +17,7 @@
     "reversible-native-gui",
     "native-controls-preserved",
     "native-and-council-cap-100",
+    "script-value-override-order",
     "traditions-cap-10000",
     "BOM-and-braces",
     "no-retired-dependencies",
@@ -30,7 +31,7 @@
       "format_version": 2,
       "mod_version": "10",
       "git_tag": null,
-      "git_sha": "1fbc380c58ffa72283d040ac4f7821cb7c8451cd",
+      "git_sha": "539d00f5a80f6a83370966d2ec0b714d3a93f5df",
       "workshop_item_id": "3182367229",
       "files": [
         {
@@ -39,7 +40,7 @@
           "sha256": "72b1099f231e7952c648275f2b5386b50d4fb7ff2530f4be783ab7755d66ef56"
         },
         {
-          "path": "common/script_values/mts_core_tenets_cap.txt",
+          "path": "common/script_values/zz_mts_core_tenets_cap.txt",
           "size": 134,
           "sha256": "acd95b47fff9f740ee31ed94ce040d910e0da6da2bbea7abd326ef95e0a58687"
         },
@@ -55,8 +56,8 @@
         },
         {
           "path": "gui/window_rite_creation.gui",
-          "size": 43797,
-          "sha256": "767df524ceb612242e0317aaee43a1addf855b2a6b1a098d087dfe6c1b080f5b"
+          "size": 43790,
+          "sha256": "1a24954429157c89103ca95bf028e5c8ac3f5a13a40e555d5cb16cb7db4023d8"
         },
         {
           "path": "localization/english/religion/MTS_religion_confucianism_l_english.yml",
@@ -75,7 +76,7 @@
         }
       ]
     },
-    "zip_sha256": "7d0ea54352da99b4a580b33b9c1387fe3be4e42f17c4843d314ec9cf2c562f65"
+    "zip_sha256": "4da58c7ae5606dc8797398cd06ec66e395d999e4eabb56cfb4d353a1286a86be"
   },
   "input_contract": {
     "version": "1.20.0.3",
@@ -112,6 +113,5 @@
       }
     }
   },
-  "framework_commit": "36a2252379335d6203ade7bf7fe0f73a6a0f7839",
-  "output": "C:\\workspace\\ck3_mod_more_tenant_slots\\dist\\1.20.0.3-v10-first"
+  "framework_commit": "e42b870aaf6e670e310f35a05ec5830de4f0bb02"
 }

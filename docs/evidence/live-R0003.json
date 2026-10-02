@@ -1,0 +1,38 @@
+{
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0003",
+  "source_commit": "1db3856851f1d5c42c44d73f611a936c38131679",
+  "result": "RED",
+  "native_readback": {
+    "FAITH_CORE_TENETS_CAP": 100,
+    "pam_faith_core_tenets_cap_value": 3
+  },
+  "cause": "mts_ script-value filename loads before native pam_values.txt; source-only cap assertion missed the override order",
+  "passed": [
+    "English native startup and world",
+    "four real core tenets selected and branch created with remaining empty slots",
+    "native cost 5775 deducted from piety 100150 to 94375",
+    "created dynamic_rite_151 has four real core IDs; no placeholder",
+    "native UI exit saved autosave_exit.ck3; owned process exited with code 0"
+  ],
+  "not_passed": [
+    "100-slot effective mirror and creation grid",
+    "cold reload",
+    "Chinese UI",
+    "culture beyond default cap"
+  ],
+  "fixture_errors": [
+    "outer braces are invalid in effect console command; corrected",
+    "save console failed final copy; native UI exit autosave succeeded"
+  ],
+  "save": {
+    "path": "artifacts/bf-202609141645-5434332d4d--more-tenets-slots--R0003/userdir/save games/autosave_exit.ck3",
+    "bytes": 91012326,
+    "sha256": "c0023fb8df918abb773b4a9a7d102ad30704654185acc5056b29bb6f1090c358"
+  },
+  "core_tenets": [
+    "tenet_philanthropia",
+    "tenet_communal_identity",
+    "tenet_sanctity_of_nature",
+    "tenet_natural_primitivism"
+  ]
+}
