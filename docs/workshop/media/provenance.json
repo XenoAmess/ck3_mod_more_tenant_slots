@@ -1,10 +1,24 @@
 {
-  "schema": 1,
+  "schema": 2,
   "purpose": "Real CK3 1.20.0.3 GUI screenshots and separate promotional concept thumbnail",
   "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0011",
   "fixture": "R9 autosave_exit.ck3 imported unchanged; remove_character_flag=has_created_a_faith solely for reversible photo setup, debug_mode OFF; no Create Rite confirmation applied",
   "gameplay_source": "Mechanic files identical to R9/R10; only thumbnail replaced before this media run",
   "screenshots": [
+    {
+      "path": "docs/workshop/media/01-rite-creation.jpg",
+      "size": 458079,
+      "sha256": "c97fb4cc4b9b4b79183f9b33df303f3576b8cdd4161f7a9f94ca8c19d67cd940",
+      "width": 1920,
+      "height": 1080,
+      "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0012",
+      "language": "simp_chinese",
+      "source_artifact": "artifacts/bf-202609141645-5434332d4d--more-tenets-slots--R0012/r12-create-ready.png",
+      "source_sha256": "3cc8218f357631060dedb46f0c5db6e42c5b71615cc305b31f0606ff574149cd",
+      "processing": "JPEG quality=90, optimize=true, subsampling=0; no crop, overlays or pixel retouch",
+      "archived_original": "docs/workshop/media/source/01-rite-creation.png",
+      "caption": "Native CK3 1.20 Rite creation GUI: three compatible real tenets, empty remaining slots, native fee 5400 and enabled Create Rite; screenshot is a draft before the later four-tenet confirmation."
+    },
     {
       "path": "docs/workshop/media/02-tenet-selector.jpg",
       "size": 510841,
@@ -36,5 +50,10 @@
     "height": 640,
     "original": "docs/workshop/media/thumbnail-concept-original.png",
     "method": "built-in imagegen; promotional concept artwork, not a gameplay screenshot; RGB/Lanczos resize from 1254x1254 to 640x640, PNG optimize=true"
-  }
+  },
+  "media_order": [
+    "docs/workshop/media/01-rite-creation.jpg",
+    "docs/workshop/media/02-tenet-selector.jpg",
+    "docs/workshop/media/03-two-tenet-rite.jpg"
+  ]
 }
