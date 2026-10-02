@@ -1,0 +1,31 @@
+{
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0004",
+  "source_commit": "bfbc86958d7622a55435e522d1c0574c2d7d27d6",
+  "result": "RED",
+  "native_readback": {
+    "FAITH_CORE_TENETS_CAP": 100,
+    "pam_faith_core_tenets_cap_value": 100,
+    "DEFAULT_MAX_TRADITIONS": 10000,
+    "actual_draft_slot_count": 100
+  },
+  "passed": [
+    "Chinese cold load of R0003 native UI autosave",
+    "existing four real core tenets retained",
+    "native selection of fourth fifth sixth tenets; cost 5400 to 6900, divergence 0 to 48",
+    "selected tenets excluded from other-slot choices",
+    "communion requirement for religious head retained",
+    "dragging native vertical scrollbar reaches final single-card row"
+  ],
+  "failed": [
+    "Clicking slot 99 triggers native access violation at ShowWindow 0x14f19e7; not live-ready"
+  ],
+  "cause_hypothesis": "ShowWindowSortList follows doctrine slot model window+790, not tenet model window+778; index 99 accesses invalid doctrine item. Requires native binding verification.",
+  "fixture_errors": [
+    "console debug_log cannot resolve window-local RiteCreationWindow context; native console query removed"
+  ],
+  "crash": {
+    "path": "artifacts/bf-202609141645-5434332d4d--more-tenets-slots--R0004/userdir/crashes/ck3_20261002_193813/exception.txt",
+    "sha256": "7c8ad652074fbb39c4ade9fd3c78f787ee6061ae171e8a202d763847eb9d6d1e"
+  },
+  "raw_artifacts_root": "artifacts/bf-202609141645-5434332d4d--more-tenets-slots--R0004"
+}
