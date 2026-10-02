@@ -1,0 +1,40 @@
+{
+  "schema": "mts.native-cold-reload.v2",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0010",
+  "source_commit": "a90b16ca9957cb6ebe5607744519c1cb37ea8d07",
+  "language": "simp_chinese",
+  "cold_reload": "PASS",
+  "loaded_save_sha256": "ffe56ee19944db8a1e89c30a85e0e9c9be5156b3a9d2a923248a7709f312dee3",
+  "current_rite_id": 152,
+  "actor": 33339,
+  "piety": 84700,
+  "display_divergence": 0,
+  "core_tenets": [
+    "tenet_communal_identity",
+    "tenet_sanctity_of_nature"
+  ],
+  "hidden_doctrine_count": 100,
+  "all_doctrine_count": 128,
+  "tenet_placeholders": 0,
+  "native_save_after_reload": "PASS",
+  "native_exit_code": 0,
+  "error_log_bytes": 17415,
+  "error_count": 58,
+  "error_locations": [
+    "gfx/court_scene/scene_cultures/00_default_cultures.txt"
+  ],
+  "product_loading_errors": 0,
+  "error_classification": "Native court scene evaluates invalid character 4294967295 during cold load; unmodified native source, no independent vanilla A/B; no observed effect on accepted rite paths; not a wholly clean log.",
+  "final_save": {
+    "bytes": 91133853,
+    "sha256": "224b127166d74a3d8b30f36a2915e166ea7d9397fcbe4b0d03932202128a0d52"
+  },
+  "screenshots": {
+    "r10-main.png": "c33cfadf8b2e53532bca1f7263f6c917dc093ffdf737146c3f1902ebb38afcee",
+    "r10-loaded.png": "75c0137a3052e55a1c66a08cca625921449c5837c9d24b15135309d9bc70c21b",
+    "r10-character.png": "39dec964ff8981c249e93661678ec526116a89f183d18046eeb3a28809aa1716",
+    "r10-faith.png": "6621a3384717bb143cec288bccde0be917a81266e7983d43137cc60a2b958329",
+    "r10-exit-confirm.png": "a9953c22a801dfd94b44c61dca1b4e5b718819ef87ceb3d96af6bc3911239e22"
+  },
+  "loaded_product_tree_equal_R0009": true
+}
