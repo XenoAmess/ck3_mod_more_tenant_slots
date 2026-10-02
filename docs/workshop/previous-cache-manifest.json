@@ -1,0 +1,73 @@
+{
+  "anonymous_baseline_time_updated": 1777874459,
+  "acf_cached_time_updated": 1777874459,
+  "acf_manifest": "3241202835495521309",
+  "cached_descriptor": "version=\"1\"\ntags={\n\t\"1.16 'Chamfron'\"\n\t\"Religion\"\n}\nname=\"more_tenets_slots_xa_dev\"\nsupported_version=\"1.19.0.4\"\nremote_file_id=\"3182367229\"",
+  "files": [
+    {
+      "path": "common/defines/More tradition slots.txt",
+      "size": 50,
+      "sha256": "d3ceecc34498000d3954de34d43108ea238e7e6ae0ef51c6b7ced33f49b43bd6"
+    },
+    {
+      "path": "common/on_action/rt_religion_on_actions.txt",
+      "size": 510,
+      "sha256": "1a07c417b15b4182dd7ec9575e0853330ff0c69b2213fc91d34e906b3a1d0e56"
+    },
+    {
+      "path": "common/religion/doctrine_group_types/rt_doctrine_group_types.txt",
+      "size": 4460,
+      "sha256": "487e63be6e10e07966e27223c699da5048899b138181815216468c5d47fc54d9"
+    },
+    {
+      "path": "common/religion/doctrine_types/rt_core_tenets.txt",
+      "size": 138454,
+      "sha256": "95a497d178e720ae8a7765b8405fbfb64f509bd49ed55e52cb1e1760da5953fa"
+    },
+    {
+      "path": "descriptor.mod",
+      "size": 140,
+      "sha256": "e4c9e58c96537712b985baf8c836794e24b87ed841bc9e9a260389fe9ad4808a"
+    },
+    {
+      "path": "events/religion_events/rt_faith_creation_clean_events.txt",
+      "size": 4842,
+      "sha256": "908f68f0e267259df3c394c25771931f065f411d58fb2384b932e631928d0d44"
+    },
+    {
+      "path": "gfx/interface/icons/faith_doctrines/core_tenet_empty.dds",
+      "size": 52128,
+      "sha256": "59e55f92923e2a96f3819ac94483cae0310830c8e7e7104586ad8ba37e124b60"
+    },
+    {
+      "path": "gui/window_faith.gui",
+      "size": 38565,
+      "sha256": "2247071f2a569bc8d41d4e4836735d1d20cb1a1f08b1d39025631d30e41b19d6"
+    },
+    {
+      "path": "gui/window_faith_creation.gui",
+      "size": 36994,
+      "sha256": "4c0f237603a3925a2eccf465fda499910538bdea514a046d291b2701e5e9f74e"
+    },
+    {
+      "path": "localization/english/religion/MTS_religion_confucianism_l_english.yml",
+      "size": 420,
+      "sha256": "97235464d7f4dd05f317fc0d19404ca8fcdc54038dfb0ea71613049b702402df"
+    },
+    {
+      "path": "localization/simp_chinese/religion/MTS_religion_confucianism_l_simp_chinese.yml",
+      "size": 342,
+      "sha256": "4a46547a9527648d15d12b4851895138cb83ab0d9452b15f55602c8191ce5cdb"
+    },
+    {
+      "path": "original_author_said_it_ok.png",
+      "size": 323763,
+      "sha256": "b0c1423c3f6105ecc685bc9d749b717c158f214f8501b6c5f2119e166c9aed15"
+    },
+    {
+      "path": "thumbnail.png",
+      "size": 625402,
+      "sha256": "2d29bf58e0ce482b2abf85a306a9f5f8f0cea8fff632f84769dc4e7376d99f4f"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "purpose": "Real CK3 1.20.0.3 GUI screenshots and separate promotional concept thumbnail",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0011",
+  "fixture": "R9 autosave_exit.ck3 imported unchanged; remove_character_flag=has_created_a_faith solely for reversible photo setup, debug_mode OFF; no Create Rite confirmation applied",
+  "gameplay_source": "Mechanic files identical to R9/R10; only thumbnail replaced before this media run",
+  "screenshots": [
+    {
+      "path": "docs/workshop/media/02-tenet-selector.jpg",
+      "size": 510841,
+      "sha256": "ee547aa422eddf66d4fb079157163b379f259c1a433e93f3e177cc595913c853",
+      "width": 1920,
+      "height": 1080,
+      "source_artifact": "artifacts/bf-202609141645-5434332d4d--more-tenets-slots--R0011/02-tenet-selector.png",
+      "source_sha256": "c0eb253d5b8674f6e67b1a343fbd39702a159f88aeeee481e2287ff1b8ea015b",
+      "processing": "JPEG quality=90, optimize=true, subsampling=0; no crop, overlays or pixel retouch",
+      "archived_original": "docs/workshop/media/source/02-tenet-selector.png"
+    },
+    {
+      "path": "docs/workshop/media/03-two-tenet-rite.jpg",
+      "size": 529406,
+      "sha256": "8bf1978221c06a0501b938601fbdbf79d21371a0628704b6d983bc2cdf187ddb",
+      "width": 1920,
+      "height": 1080,
+      "source_artifact": "artifacts/bf-202609141645-5434332d4d--more-tenets-slots--R0011/03-two-tenet-rite.png",
+      "source_sha256": "9130a6b61c24a6a6997360502ee6d3c177373018260509eda2686a3eef725050",
+      "processing": "JPEG quality=90, optimize=true, subsampling=0; no crop, overlays or pixel retouch",
+      "archived_original": "docs/workshop/media/source/03-two-tenet-rite.png"
+    }
+  ],
+  "thumbnail": {
+    "path": "more_tenets_slots_xa_dev/thumbnail.png",
+    "size": 673309,
+    "sha256": "53fa59a29aa04d18a7ac623dc19223f7d213938ac5a8a692531d5616e2ba0690",
+    "width": 640,
+    "height": 640,
+    "original": "docs/workshop/media/thumbnail-concept-original.png",
+    "method": "built-in imagegen; promotional concept artwork, not a gameplay screenshot; RGB/Lanczos resize from 1254x1254 to 640x640, PNG optimize=true"
+  }
+}
