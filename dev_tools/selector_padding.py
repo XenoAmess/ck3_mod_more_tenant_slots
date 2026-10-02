@@ -13,11 +13,17 @@ HEADER = "# GENERATED FILE - MTS native selector index compatibility\n"
 def generated_files() -> dict[str, str]:
     files = {}
     effects = []
+    localization = []
     for shard in range(10):
         groups, doctrines = [], []
         for slot in range(shard * 10 + 1, shard * 10 + 11):
             group = f"mts_selector_group_{slot:03}"
             doctrine = f"mts_selector_doctrine_{slot:03}"
+            # Native metadata resolves these keys even for invisible doctrines.
+            # Empty text keeps internal selector metadata out of player content.
+            localization.extend((f' {group}_name:0 ""\n',
+                                 f' {doctrine}_name:0 ""\n',
+                                 f' {doctrine}_desc:0 ""\n'))
             groups.append(f"{group} = {{\n\tcategory = not_creatable\n"
                           "\tdivergence = category\n\tdoctrine_lock = none\n"
                           "\tis_available_on_create = { always = yes }\n}\n")
@@ -34,6 +40,7 @@ def generated_files() -> dict[str, str]:
         HEADER + "mts_prepare_selector_rite_effect = {\n" + "".join(effects) + "}\n")
     files["common/scripted_guis/mts_selector.txt"] = HEADER + """mts_prepare_selector_gui = {
     scope = character
+    saved_scopes = { mts_rite }
     effect = {
         if = {
             limit = { is_ai = no exists = scope:mts_rite }
@@ -42,6 +49,9 @@ def generated_files() -> dict[str, str]:
     }
 }
 """
+    for language in ("english", "simp_chinese"):
+        files[f"localization/{language}/religion/mts_selector_l_{language}.yml"] = (
+            f"l_{language}:\n" + HEADER + "".join(localization))
     return files
 
 
