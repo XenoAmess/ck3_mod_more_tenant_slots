@@ -1,0 +1,10 @@
+﻿# GENERATED FILE - MTS native selector index compatibility
+mts_prepare_selector_gui = {
+    scope = character
+    effect = {
+        if = {
+            limit = { is_ai = no exists = scope:mts_rite }
+            scope:mts_rite = { mts_prepare_selector_rite_effect = yes }
+        }
+    }
+}

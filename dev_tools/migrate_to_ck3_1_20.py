@@ -58,8 +58,26 @@ def scroll_grid(native: str, key: str, name: str, height: int,
 def changes(native: str, relative: str) -> list[tuple[str, str]]:
     if relative == "gui/window_rite_creation.gui":
         return [scroll_grid(native, "hbox", "tenets_grid", 300, creation=True)]
-    return [scroll_grid(native, "flowcontainer", "doctrines_grid_core_tenets", 250),
-            scroll_grid(native, "flowcontainer", "doctrines_compact_grid_core_tenets", 130)]
+    patches = [scroll_grid(native, "flowcontainer", "doctrines_grid_core_tenets", 250),
+               scroll_grid(native, "flowcontainer", "doctrines_compact_grid_core_tenets", 130)]
+    # Prepare only the player's selected rite, before the unchanged native open.
+    from ck3_text_projection import named_block
+    opening = "[OpenGameViewData( 'rite_creation', FaithWindow.GetSelectedRite )]"
+    prepare = "[GetScriptedGui('mts_prepare_selector_gui').Execute( " \
+        "GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', " \
+        "FaithWindow.GetSelectedRite.MakeScope ).End )]"
+    for key, name in (("button_standard", "edit_rite"),
+                      ("button_standard", "create_rite"),
+                      ("button_standard_puppet", "create_rite_puppet")):
+        span = named_block(native, key, name)
+        before = native[span.start:span.end]
+        line = re.search(r'(?m)^([ \t]*)onclick = "' + re.escape(opening) + r'"$', before)
+        if line is None:
+            raise ValueError(f"native rite opening action changed: {name}")
+        after = before.replace(line.group(), line.group(1) + 'onclick = "' + prepare +
+                               '"\n' + line.group(), 1)
+        patches.append((before, after))
+    return patches
 
 
 def generate(framework: Path, game: Path, check: bool = False) -> dict:
@@ -77,6 +95,8 @@ def generate(framework: Path, game: Path, check: bool = False) -> dict:
         if hashlib.sha256((game / "game" / relative).read_bytes()).hexdigest() != pin["sha256"]:
             raise ValueError(f"native input changed: {relative}")
     results = {}
+    from selector_padding import generate_padding
+    results["selector_padding"] = generate_padding(MOD, check)
     for relative in ("gui/window_faith.gui", "gui/window_rite_creation.gui"):
         native = (game / "game" / relative).read_text(encoding="utf-8-sig")
         patches = changes(native, relative)

@@ -1,0 +1,70 @@
+﻿# GENERATED FILE - MTS native selector index compatibility
+mts_selector_group_031 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_032 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_033 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_034 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_035 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_036 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_037 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_038 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_039 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}
+
+mts_selector_group_040 = {
+	category = not_creatable
+	divergence = category
+	doctrine_lock = none
+	is_available_on_create = { always = yes }
+}

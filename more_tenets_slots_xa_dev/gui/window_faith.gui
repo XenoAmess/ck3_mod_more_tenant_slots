@@ -1332,6 +1332,7 @@ window = {
 						maximumsize = { @rite_button_width -1 }
 						minimumsize = { 0 @rite_button_height }
 
+						onclick = "[GetScriptedGui('mts_prepare_selector_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', FaithWindow.GetSelectedRite.MakeScope ).End )]"
 						onclick = "[OpenGameViewData( 'rite_creation', FaithWindow.GetSelectedRite )]"
 
 						text = "RITE_CREATION_VIEW_BUTTON_EDIT"
@@ -1376,6 +1377,7 @@ window = {
 						maximumsize = { @rite_button_width -1 }
 						minimumsize = { 0 @rite_button_height }
 
+						onclick = "[GetScriptedGui('mts_prepare_selector_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', FaithWindow.GetSelectedRite.MakeScope ).End )]"
 						onclick = "[OpenGameViewData( 'rite_creation', FaithWindow.GetSelectedRite )]"
 
 						text = "CREATE_REFORM_RITE_BUTTON"
@@ -1391,6 +1393,7 @@ window = {
 						maximumsize = { @rite_button_width -1 }
 						minimumsize = { 280 @rite_button_height }
 
+						onclick = "[GetScriptedGui('mts_prepare_selector_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', FaithWindow.GetSelectedRite.MakeScope ).End )]"
 						onclick = "[OpenGameViewData( 'rite_creation', FaithWindow.GetSelectedRite )]"
 
 						text = "CREATE_REFORM_RITE_BUTTON"

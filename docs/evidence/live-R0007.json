@@ -36,5 +36,10 @@
     "culture-ten-submitted.png": "ac66e4cfd5b688ee7ffea24be3a6c92475855e1dee6cd05be7591193742465b9",
     "culture-ten-started.png": "b36be5b32ec2deb3a700b9cdc6cbff55b2d2147ae7a63453e3ba6259db742ac8",
     "culture-ten-in-progress.png": "67216658f25a72d7bb7f5519a44609628dcfdd59dc101113056b93a05e7719fc"
+  },
+  "native_exit_code": 0,
+  "final_save": {
+    "bytes": 91039621,
+    "sha256": "c4a073f2bad20894de94975938935d6b3f42bc22d28abf09ea6db94b49cd0c42"
   }
 }

@@ -30,6 +30,18 @@
     "common/on_action/religion_on_actions.txt": {
       "sha256": "ef9367ddf5f89c912b895743f8b72441e88af3a5b03a5c1a9eddea0e5681ee2d",
       "normalized_sha256": "0fcd7c3b233fd9465894e8cbb00061cd496552a587e7f041b693d6625a9a662f"
+    },
+    "common/religion/doctrine_group_types/_doctrine_group_types.info": {
+      "sha256": "c7d8e667403b55666cde5efa66983e39f8004a4ae0e1239eea96fc9d5d72b7c3",
+      "normalized_sha256": "45e2d6206cbc3fad35df9f34aaf01336c5260e506181e34c92df955c8253c3d4"
+    },
+    "common/religion/doctrine_types/_doctrine_types.info": {
+      "sha256": "7a8f6f8e78f88f7c83de3c43239a5da2709777e9d56fed4ae031e98b76af2ffc",
+      "normalized_sha256": "5cb20717cdf35645ea94b3f1ccc8a9bedd3809d712193a414aa5a90ed2d6924e"
+    },
+    "common/religion/doctrine_category_types/00_doctrine_category_types.txt": {
+      "sha256": "64eef090e487cb06e058abdc1f877f457494a0ff513d2daac9168002d057ab2b",
+      "normalized_sha256": "711207d7c8a060d5318a2ceca1b68ea9241123b72d4bb56852c14f14f39f6162"
     }
   }
 }

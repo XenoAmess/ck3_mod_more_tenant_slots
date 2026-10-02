@@ -1,0 +1,70 @@
+﻿# GENERATED FILE - MTS native selector index compatibility
+mts_selector_doctrine_051 = {
+	doctrine_group_type = mts_selector_group_051
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_052 = {
+	doctrine_group_type = mts_selector_group_052
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_053 = {
+	doctrine_group_type = mts_selector_group_053
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_054 = {
+	doctrine_group_type = mts_selector_group_054
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_055 = {
+	doctrine_group_type = mts_selector_group_055
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_056 = {
+	doctrine_group_type = mts_selector_group_056
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_057 = {
+	doctrine_group_type = mts_selector_group_057
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_058 = {
+	doctrine_group_type = mts_selector_group_058
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_059 = {
+	doctrine_group_type = mts_selector_group_059
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}
+
+mts_selector_doctrine_060 = {
+	doctrine_group_type = mts_selector_group_060
+	visible = no
+	divergence = 0
+	piety_cost = { value = 0 }
+}

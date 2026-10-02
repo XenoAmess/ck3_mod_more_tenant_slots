@@ -13,6 +13,7 @@ import sys
 import tempfile
 
 from migrate_to_ck3_1_20 import CONTRACT, MOD, ROOT, framework_tools, generate
+from selector_padding import generated_files
 
 PRODUCT = "more_tenets_slots_xa_dev"
 WORKSHOP_ID = "3182367229"
@@ -23,7 +24,7 @@ RELEASE_FILES = (
     "gui/window_faith.gui", "gui/window_rite_creation.gui",
     "localization/english/religion/MTS_religion_confucianism_l_english.yml",
     "localization/simp_chinese/religion/MTS_religion_confucianism_l_simp_chinese.yml",
-)
+) + tuple(sorted(generated_files()))
 DEVELOPMENT_FILES = {"original_author_said_it_ok.png"}
 
 

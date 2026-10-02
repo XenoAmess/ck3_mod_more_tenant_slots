@@ -1,0 +1,403 @@
+﻿# GENERATED FILE - MTS native selector index compatibility
+mts_prepare_selector_rite_effect = {
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_001 } }
+		change_rite_doctrine = mts_selector_doctrine_001
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_002 } }
+		change_rite_doctrine = mts_selector_doctrine_002
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_003 } }
+		change_rite_doctrine = mts_selector_doctrine_003
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_004 } }
+		change_rite_doctrine = mts_selector_doctrine_004
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_005 } }
+		change_rite_doctrine = mts_selector_doctrine_005
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_006 } }
+		change_rite_doctrine = mts_selector_doctrine_006
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_007 } }
+		change_rite_doctrine = mts_selector_doctrine_007
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_008 } }
+		change_rite_doctrine = mts_selector_doctrine_008
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_009 } }
+		change_rite_doctrine = mts_selector_doctrine_009
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_010 } }
+		change_rite_doctrine = mts_selector_doctrine_010
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_011 } }
+		change_rite_doctrine = mts_selector_doctrine_011
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_012 } }
+		change_rite_doctrine = mts_selector_doctrine_012
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_013 } }
+		change_rite_doctrine = mts_selector_doctrine_013
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_014 } }
+		change_rite_doctrine = mts_selector_doctrine_014
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_015 } }
+		change_rite_doctrine = mts_selector_doctrine_015
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_016 } }
+		change_rite_doctrine = mts_selector_doctrine_016
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_017 } }
+		change_rite_doctrine = mts_selector_doctrine_017
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_018 } }
+		change_rite_doctrine = mts_selector_doctrine_018
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_019 } }
+		change_rite_doctrine = mts_selector_doctrine_019
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_020 } }
+		change_rite_doctrine = mts_selector_doctrine_020
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_021 } }
+		change_rite_doctrine = mts_selector_doctrine_021
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_022 } }
+		change_rite_doctrine = mts_selector_doctrine_022
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_023 } }
+		change_rite_doctrine = mts_selector_doctrine_023
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_024 } }
+		change_rite_doctrine = mts_selector_doctrine_024
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_025 } }
+		change_rite_doctrine = mts_selector_doctrine_025
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_026 } }
+		change_rite_doctrine = mts_selector_doctrine_026
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_027 } }
+		change_rite_doctrine = mts_selector_doctrine_027
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_028 } }
+		change_rite_doctrine = mts_selector_doctrine_028
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_029 } }
+		change_rite_doctrine = mts_selector_doctrine_029
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_030 } }
+		change_rite_doctrine = mts_selector_doctrine_030
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_031 } }
+		change_rite_doctrine = mts_selector_doctrine_031
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_032 } }
+		change_rite_doctrine = mts_selector_doctrine_032
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_033 } }
+		change_rite_doctrine = mts_selector_doctrine_033
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_034 } }
+		change_rite_doctrine = mts_selector_doctrine_034
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_035 } }
+		change_rite_doctrine = mts_selector_doctrine_035
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_036 } }
+		change_rite_doctrine = mts_selector_doctrine_036
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_037 } }
+		change_rite_doctrine = mts_selector_doctrine_037
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_038 } }
+		change_rite_doctrine = mts_selector_doctrine_038
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_039 } }
+		change_rite_doctrine = mts_selector_doctrine_039
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_040 } }
+		change_rite_doctrine = mts_selector_doctrine_040
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_041 } }
+		change_rite_doctrine = mts_selector_doctrine_041
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_042 } }
+		change_rite_doctrine = mts_selector_doctrine_042
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_043 } }
+		change_rite_doctrine = mts_selector_doctrine_043
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_044 } }
+		change_rite_doctrine = mts_selector_doctrine_044
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_045 } }
+		change_rite_doctrine = mts_selector_doctrine_045
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_046 } }
+		change_rite_doctrine = mts_selector_doctrine_046
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_047 } }
+		change_rite_doctrine = mts_selector_doctrine_047
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_048 } }
+		change_rite_doctrine = mts_selector_doctrine_048
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_049 } }
+		change_rite_doctrine = mts_selector_doctrine_049
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_050 } }
+		change_rite_doctrine = mts_selector_doctrine_050
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_051 } }
+		change_rite_doctrine = mts_selector_doctrine_051
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_052 } }
+		change_rite_doctrine = mts_selector_doctrine_052
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_053 } }
+		change_rite_doctrine = mts_selector_doctrine_053
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_054 } }
+		change_rite_doctrine = mts_selector_doctrine_054
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_055 } }
+		change_rite_doctrine = mts_selector_doctrine_055
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_056 } }
+		change_rite_doctrine = mts_selector_doctrine_056
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_057 } }
+		change_rite_doctrine = mts_selector_doctrine_057
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_058 } }
+		change_rite_doctrine = mts_selector_doctrine_058
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_059 } }
+		change_rite_doctrine = mts_selector_doctrine_059
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_060 } }
+		change_rite_doctrine = mts_selector_doctrine_060
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_061 } }
+		change_rite_doctrine = mts_selector_doctrine_061
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_062 } }
+		change_rite_doctrine = mts_selector_doctrine_062
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_063 } }
+		change_rite_doctrine = mts_selector_doctrine_063
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_064 } }
+		change_rite_doctrine = mts_selector_doctrine_064
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_065 } }
+		change_rite_doctrine = mts_selector_doctrine_065
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_066 } }
+		change_rite_doctrine = mts_selector_doctrine_066
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_067 } }
+		change_rite_doctrine = mts_selector_doctrine_067
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_068 } }
+		change_rite_doctrine = mts_selector_doctrine_068
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_069 } }
+		change_rite_doctrine = mts_selector_doctrine_069
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_070 } }
+		change_rite_doctrine = mts_selector_doctrine_070
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_071 } }
+		change_rite_doctrine = mts_selector_doctrine_071
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_072 } }
+		change_rite_doctrine = mts_selector_doctrine_072
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_073 } }
+		change_rite_doctrine = mts_selector_doctrine_073
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_074 } }
+		change_rite_doctrine = mts_selector_doctrine_074
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_075 } }
+		change_rite_doctrine = mts_selector_doctrine_075
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_076 } }
+		change_rite_doctrine = mts_selector_doctrine_076
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_077 } }
+		change_rite_doctrine = mts_selector_doctrine_077
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_078 } }
+		change_rite_doctrine = mts_selector_doctrine_078
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_079 } }
+		change_rite_doctrine = mts_selector_doctrine_079
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_080 } }
+		change_rite_doctrine = mts_selector_doctrine_080
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_081 } }
+		change_rite_doctrine = mts_selector_doctrine_081
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_082 } }
+		change_rite_doctrine = mts_selector_doctrine_082
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_083 } }
+		change_rite_doctrine = mts_selector_doctrine_083
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_084 } }
+		change_rite_doctrine = mts_selector_doctrine_084
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_085 } }
+		change_rite_doctrine = mts_selector_doctrine_085
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_086 } }
+		change_rite_doctrine = mts_selector_doctrine_086
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_087 } }
+		change_rite_doctrine = mts_selector_doctrine_087
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_088 } }
+		change_rite_doctrine = mts_selector_doctrine_088
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_089 } }
+		change_rite_doctrine = mts_selector_doctrine_089
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_090 } }
+		change_rite_doctrine = mts_selector_doctrine_090
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_091 } }
+		change_rite_doctrine = mts_selector_doctrine_091
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_092 } }
+		change_rite_doctrine = mts_selector_doctrine_092
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_093 } }
+		change_rite_doctrine = mts_selector_doctrine_093
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_094 } }
+		change_rite_doctrine = mts_selector_doctrine_094
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_095 } }
+		change_rite_doctrine = mts_selector_doctrine_095
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_096 } }
+		change_rite_doctrine = mts_selector_doctrine_096
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_097 } }
+		change_rite_doctrine = mts_selector_doctrine_097
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_098 } }
+		change_rite_doctrine = mts_selector_doctrine_098
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_099 } }
+		change_rite_doctrine = mts_selector_doctrine_099
+	}
+	if = {
+		limit = { NOT = { rite_has_doctrine = mts_selector_doctrine_100 } }
+		change_rite_doctrine = mts_selector_doctrine_100
+	}
+}
