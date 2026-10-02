@@ -1,0 +1,40 @@
+{
+  "schema": "mts.native-cold-culture.v1",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0007",
+  "source_commit": "eb27c6ba47e44b298382e4fd4c337b9d2e505311",
+  "cold_reload": "PASS",
+  "loaded_save_sha256": "c21ea2ab7684c07b1ce76b65636b77afd69576345444133a7a36b5c749956ef8",
+  "current_core_count": 2,
+  "native_debug_lines": [
+    "[21:21:44][D][jomini_effect_impl.cpp:450]: file: effect console command line: 1: MTS_R7_CURRENT_CORE 2",
+    "[21:27:41][D][jomini_effect_impl.cpp:450]: file: effect console command line: 1: MTS_R7_CULTURE_CAP 10000 COUNT 5",
+    "[21:29:14][D][jomini_effect_impl.cpp:450]: file: effect console command line: 1: MTS_R7_TRADITIONS 9"
+  ],
+  "culture_base_cap": 10000,
+  "culture_display_cap": 10001,
+  "fixture_before": 5,
+  "fixture_after": 9,
+  "fixture_added_traditions": [
+    "tradition_xenophilic",
+    "tradition_hard_working",
+    "tradition_loyal_soldiers",
+    "tradition_hunters"
+  ],
+  "fixture_removed_variable": "tradition_cooldown",
+  "native_tenth_tradition": "tradition_astute_diplomats",
+  "native_prestige_cost": 2000,
+  "prestige_before": 101300,
+  "prestige_after": 99300,
+  "tenth_establishment": "PASS",
+  "adoption_13_years_later": "NOT_RUN",
+  "error_log_bytes": 0,
+  "screenshots": {
+    "two-cold-character.png": "041c068ef0d0ff2c60807b8b8c5edb734d4e9f960d3a8e4dd7c97009ca596ab9",
+    "two-cold-faith.png": "8e916468d7314e7bc5d723c0b6941e6fb75f958c3032a2d3b3f6884d45277575",
+    "culture-nine.png": "9d4599629f06f61ae3b58052a6aec1ff6409686fa4d08f9424f404a7db51c8e3",
+    "culture-ten-selected.png": "afc267cdd560158414fabd6f80ff25f8e30d42b16ce688e961947af2d7546afc",
+    "culture-ten-submitted.png": "ac66e4cfd5b688ee7ffea24be3a6c92475855e1dee6cd05be7591193742465b9",
+    "culture-ten-started.png": "b36be5b32ec2deb3a700b9cdc6cbff55b2d2147ae7a63453e3ba6259db742ac8",
+    "culture-ten-in-progress.png": "67216658f25a72d7bb7f5519a44609628dcfdd59dc101113056b93a05e7719fc"
+  }
+}
