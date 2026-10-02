@@ -26,7 +26,7 @@
 
 追加九语言后正式构建为46文件；本地化格式认证见 ../localization-coverage.md。AGENTS.md 已记录后续实机只用简体中文。
 
-现有订阅缓存的外层 ACF `timeupdated=1777874459` 与匿名公开 API 相等，manifest 为 `3241202835495521309`，13 文件内层 descriptor 实际是 version=1 / supported_version=1.19.0.4。缓存已完整备份，摘要见 `previous-cache-manifest.json`；发布 changelog 应引用这一具体缓存身份，并保留尚未进行独立新下载验证的边界。
+发布前订阅缓存的外层 ACF `timeupdated=1777874459` 与匿名公开 API 相等，manifest 为 `3241202835495521309`，13 文件内层 descriptor 实际是 version=1 / supported_version=1.19.0.4。旧缓存已完整备份，摘要见 `previous-cache-manifest.json`；该旧版本未独立重新下载，不能把本地迁移 version=9 当成上一公开版本。发布后的新版缓存另行完成从空目标开始的新下载和 46 文件严格验证。
 
 ## R0012 / R0013 补验及最终素材
 
@@ -35,3 +35,9 @@ R0012 简中创建第 1、2、3、100 槽四个兼容真实信条、中间 96 �
 截图顺序为简中创建窗口、原生选择器、已保存两信条礼仪；素材 commit 为 `5be332f4bf9c4da6652b3977cbc973919861e513`。正文三张图使用该 commit 的 raw URL，封面单独使用新版礼仪卡片概念图。BBCode 和 Notes 冻结指标见 `publication-text-freeze-v10.json`，最终审计见 `bbcode-audit.md`。
 
 本次还富化通用 `workshop_native_download` MCP，以独立进程等待精确 `DownloadItemResult_t` callback 3406，再核验实际缓存；工具不移动/删除缓存，操作方负责精确备份移出旧目标。通用实现归框架，具体发布回执归产品。
+
+## 2026-10-03 完成记录
+
+已从 `da4b579659ebb4de397672b833369e95fdbd03c6` 的 46 文件冻结 staging 更新既有条目，原生结果 `1`；匿名标题/BBCode 及完整 Change Notes entry `1790978434` 精确回读，新封面和三张追加预览 CDN bytes/像素匹配，全新下载 46 文件按正式 manifest 严格 PASS。annotated tag `more-tenets-slots-v10-ck3-1.20.0.3` 已推送指向该源，构建时 manifest 的 `git_tag=null` 不改写。
+
+Steam 已经恢复离线，新鲜画面于 `2026-10-02T22:29:12.069423+00:00` 审阅，窗口位移证明实时像素变化，CK3=0。发布闭环 complete；永久事实、摘要及证据边界见 [publication-v10.md](publication-v10.md)、[publication-v10.json](publication-v10.json)、[release-manifest-v10.json](release-manifest-v10.json) 和 [版本 changelog](../release-changelogs/more-tenets-slots/10.md)。此记录完成当前计划，不改变旧运行的输入或历史 RED。

@@ -1,0 +1,225 @@
+{
+  "schema": "mts.workshop-publication.v1",
+  "product": "more_tenets_slots_xa_dev",
+  "item_id": "3182367229",
+  "app_id": 1158310,
+  "status": "complete",
+  "published_date_asia_shanghai": "2026-10-03",
+  "uploaded_source_commit": "da4b579659ebb4de397672b833369e95fdbd03c6",
+  "release_tag": {
+    "name": "more-tenets-slots-v10-ck3-1.20.0.3",
+    "status": "annotated-pushed",
+    "target_commit": "da4b579659ebb4de397672b833369e95fdbd03c6"
+  },
+  "manifest_git_tag": null,
+  "game": {
+    "version": "1.20.0.3",
+    "name": "Crozier",
+    "steam_build": 25652598,
+    "exe_sha256": "94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6",
+    "post_offline_exe_recheck": {
+      "bytes": 101039736,
+      "sha256": "94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6",
+      "same_as_pinned": true,
+      "authority": "Root read-only filesystem recheck after client restart; no new game launch or test."
+    }
+  },
+  "previous_public_baseline": {
+    "cached_version": "1",
+    "cached_supported_version": "1.19.0.4",
+    "cache_files": 13,
+    "acf_manifest": "3241202835495521309",
+    "matching_acf_and_anonymous_time_updated": 1777874459,
+    "source_commit": null,
+    "tag": null,
+    "authority": "Existing subscribed cache matched the preceding anonymous public upload timestamp; prior content was not newly downloaded independently. Local pre-migration v9 is a separate source baseline."
+  },
+  "upload": {
+    "operation": "update",
+    "operation_id": "mts-v10-20261003-da4b579",
+    "stage": "complete",
+    "steam_result": 1,
+    "submitted_at_utc": "2026-10-02T22:00:32.325876+00:00",
+    "legal_agreement_required": false,
+    "payload_sha256": "ed468d30f2867b3bdb46e1b917f887f62fd649582be1d308af2cafe6a6e47e1a"
+  },
+  "public": {
+    "title": "More Tenets Slots (XA) - CK3 1.20",
+    "visibility": 0,
+    "banned": 0,
+    "tags": [
+      "1.20 'Crozier'",
+      "Religion"
+    ],
+    "time_updated": 1790978434,
+    "hcontent_file": "2486335635832374929",
+    "file_size": 1008047,
+    "text_verification": {
+      "title_exact": true,
+      "description_exact": true,
+      "description_characters": 3241,
+      "description_sha256": "96E7059B85C42B5AB9503D0D3E443A6DC8078CE3B83018253523423088C0299F",
+      "change_notes_exact": true,
+      "changelog_entry_id": "1790978434",
+      "change_notes_characters": 2013,
+      "change_notes_lines": 23,
+      "change_notes_sha256": "009A95736C0A87D7FD4DB4E9BFB592594A6D4E0B60B5556CEC25EA01AA837754",
+      "anonymous": true,
+      "changelog_url": "https://steamcommunity.com/sharedfiles/filedetails/changelog/3182367229?l=english&p=1"
+    },
+    "media_verification": {
+      "additional_previews": [
+        {
+          "index": 0,
+          "source": "docs/workshop/media/01-rite-creation.jpg",
+          "url": "https://images.steamusercontent.com/ugc/14884467143376428478/454A61629D6838BDE6B1B632918B0F5DC789509B/",
+          "http_status": 200,
+          "bytes": 458079,
+          "sha256": "c97fb4cc4b9b4b79183f9b33df303f3576b8cdd4161f7a9f94ca8c19d67cd940",
+          "exact_file_bytes": true,
+          "decoded_pixels_equal": true,
+          "size": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "index": 1,
+          "source": "docs/workshop/media/02-tenet-selector.jpg",
+          "url": "https://images.steamusercontent.com/ugc/11406957942841010730/A8CAF70291EAA850D5A300C9F91C9CDF5FAE22ED/",
+          "http_status": 200,
+          "bytes": 510841,
+          "sha256": "ee547aa422eddf66d4fb079157163b379f259c1a433e93f3e177cc595913c853",
+          "exact_file_bytes": true,
+          "decoded_pixels_equal": true,
+          "size": [
+            1920,
+            1080
+          ]
+        },
+        {
+          "index": 2,
+          "source": "docs/workshop/media/03-two-tenet-rite.jpg",
+          "url": "https://images.steamusercontent.com/ugc/16871842455022831072/0B76A34427A0500C3137A832D7BE8566B00523CB/",
+          "http_status": 200,
+          "bytes": 529406,
+          "sha256": "8bf1978221c06a0501b938601fbdbf79d21371a0628704b6d983bc2cdf187ddb",
+          "exact_file_bytes": true,
+          "decoded_pixels_equal": true,
+          "size": [
+            1920,
+            1080
+          ]
+        }
+      ],
+      "thumbnail": {
+        "url": "https://images.steamusercontent.com/ugc/12409224100181941193/41C7EDC08D3E265EAFA76055CAD30775429D1D0A/",
+        "http_status": 200,
+        "bytes": 673309,
+        "sha256": "53fa59a29aa04d18a7ac623dc19223f7d213938ac5a8a692531d5616e2ba0690",
+        "exact_file_bytes": true,
+        "decoded_pixels_equal": true,
+        "size": [
+          640,
+          640
+        ]
+      },
+      "public_visibility": 0
+    }
+  },
+  "fresh_cache": {
+    "status": "PASS",
+    "file_count": 46,
+    "manifest_sha256": "d79bd36bcee5c081da05a99fe409421f76b49e890d6b8ec194ad700d8f77ca00",
+    "callback": {
+      "app_id": 1158310,
+      "callback_id": 3406,
+      "item_id": "3182367229",
+      "result": 1
+    },
+    "expected_cache_absent_before_start": true,
+    "worker_exit_code": 0,
+    "elapsed_seconds": 14.398,
+    "descriptor_normalization_applied": false
+  },
+  "build": {
+    "file_count": 46,
+    "uncompressed_bytes": 1008047,
+    "manifest_path": "docs/workshop/release-manifest-v10.json",
+    "manifest_bytes": 8775,
+    "manifest_sha256": "d79bd36bcee5c081da05a99fe409421f76b49e890d6b8ec194ad700d8f77ca00",
+    "zip_path": "artifacts/workshop-v10/final-build-frozen/more_tenets_slots_xa_dev.zip",
+    "zip_bytes": 727367,
+    "zip_sha256": "2f27143085b94fa6737d31f8dc836b3ed26c8a1ed8fd690f2c137117b613b621"
+  },
+  "closure": {
+    "steam_offline": {
+      "status": "PASS",
+      "captured_at_utc": "2026-10-02T22:29:12.069423+00:00",
+      "operator_reviewed": true,
+      "observed_text": "离线模式",
+      "observed_clock": "2026/10/3 06:29",
+      "screenshot": "artifacts/workshop-v10/steam-offline-verified.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "screenshot_sha256": "ae469ee6cfa4529bd6dabc46462ced4e1681b479a0be4c51a2e559117b2c264a",
+      "window_x_before": 40,
+      "window_x_after": 80,
+      "pixels_changed": true,
+      "ck3_process_count": 0,
+      "orphan_reporters_closed": 7,
+      "crash_files_bytes_unchanged": true,
+      "route": "Normal Steam Exit, native Cancel on seven orphan CK3 Crash Reporter dialogs (parents dead and crash files byte-preserved), reopen client, Steam menu Enter Offline Mode",
+      "single_root_cause_proven": false,
+      "client_launch_option": "-cef-disable-gpu"
+    },
+    "documentation_delivery": "Permanent report, manifest and changelog are delivered by the master commit containing this record; delivery identity follows Git history.",
+    "release_complete": true
+  },
+  "evidence": [
+    {
+      "path": "artifacts/workshop-v10/native-publish-receipt.json",
+      "sha256": "ee80b45a7f16cd36c73a0c5232eb15cbd7e6fbbd12e9a1643fb138bfe68213cf"
+    },
+    {
+      "path": "artifacts/workshop-v10/native-download-response.json",
+      "sha256": "2a96ec91bd42baa036ca25d7185043ceb358c8b0629e68197a13bb5f351ac7ea"
+    },
+    {
+      "path": "artifacts/workshop-v10/fresh-cache-verification.json",
+      "sha256": "2395d213ffee93421478026ff4af66e99a7e726857694e56103da7df2eb75bbb"
+    },
+    {
+      "path": "artifacts/workshop-v10/public-text-verification.json",
+      "sha256": "03a0a76dd8e89ec7a2309654660d63e2aa799305ada01bad7634387b4888d66b"
+    },
+    {
+      "path": "artifacts/workshop-v10/public-media-verification.json",
+      "sha256": "cb4b5e7fd557e3336b780a7ddb84e3b5ce5d5a51249c2cb0215844e1a2159b24"
+    },
+    {
+      "path": "artifacts/workshop-v10/final-build-frozen-report.json",
+      "sha256": "ef3f2e070e56de20982f2d8a5c50faa3684e9230711d6fea169da9f646efd925"
+    },
+    {
+      "path": "artifacts/workshop-v10/public-item-raw.json",
+      "sha256": "97046fa29d0e9f5aa91c10e8bcf5f2a4f7d161ae5c028c6c6e2aab158cc9402a"
+    },
+    {
+      "path": "artifacts/workshop-v10/steam-offline-verification.json",
+      "sha256": "45ede5211ba3507b8affdea339ded4f0e8144f14809b04c81a3c8eab17646971"
+    },
+    {
+      "path": "artifacts/workshop-v10/orphan-crash-reporters-closed.json",
+      "sha256": "2b08d54baa1f33e9ce84da46f6fddd7dfa1ecb33aacccd210ec624ab628df0bf"
+    }
+  ],
+  "framework_enrichment_commits": [
+    "26c9943e1e60cf377d25ed6b30327986b4c35ffa",
+    "fcc29d14da759493a547f6419af87ca286212906",
+    "90f2a7a596653d57da3910885a4ef22c99c1d95c",
+    "5a2c0a8b77aaa98efcbd71973c9133d6a0f62167"
+  ]
+}

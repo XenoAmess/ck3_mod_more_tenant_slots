@@ -18,7 +18,7 @@ R0004 已确认滚动能到达第 100 槽，但点击时原生消费者用信条
 
 R0008 的第 100 槽选择已通过，但加载日志仍有 300 条缺失本地化和 3 条 scope 声明错误。源码 `3177fd7` 按原版合同增加 `saved_scopes = { mts_rite }`，并生成英文、简中各 300 个空白 BOM 本地化键。R0009 独立新进程加载修正后的最终产品树，最终 `error.log` 为零字节，原生加载修正通过；不覆盖 R0008 的历史 RED。
 
-内层 descriptor 不含 `remote_file_id`，Workshop 身份仍为 `3182367229`；本任务没有发布工坊。作者许可截图保留在源码仓库，正式构建 allowlist 为 32 文件，不包含截图、夹具、报告或机器配置。原有中英文 Shang Confucian 文案保留，新增两份隐藏元数据本地化，不构成完整多语言发布翻译。
+内层 descriptor 不含 `remote_file_id`，Workshop 身份仍为 `3182367229`；迁移阶段没有发布工坊，后续正式发布见 [发布报告](workshop/publication-v10.md)。作者许可截图保留在源码仓库；迁移阶段 allowlist 为 32 文件，不包含截图、夹具、报告或机器配置。该阶段保留中英文 Shang Confucian 文案并新增两份隐藏元数据本地化；后续九语言将正式发布树扩为 46 文件，见增补记录。
 
 ## 已有实机结果
 
@@ -60,7 +60,7 @@ python dev_tools/validate_and_build.py --framework <framework-root> --game <ck3-
 
 最终 [静态回执](evidence/static-final.json) 检查 32 文件、六处可逆投影和双构建通过；它是静态工具结果，仍保留 `status=static-ready`、`live_verified=false`。实机完成结论由独立 [综合收据](evidence/migration-final.json) 记录，不修改工具能力边界。初次 [8 文件静态回执](evidence/static-validation.json) 和候选构建仍作为历史证据保留。原版 tenet 数据库和 on_action 没有产品覆盖。
 
-可交付包为 `artifacts/release-v10-ck3-1.20.0.3/more_tenets_slots_xa_dev.zip`，669,682 字节，SHA-256 `429b0f71f50511635d20d1481795dd69a08a8d0f05420e43a52aebb1b16c668a`。manifest 绑定 `a90b16ca9957cb6ebe5607744519c1cb37ea8d07`，SHA-256 为 `c544384c02f7a14134980f2e7431bab7183cdfe4a5e8aef441c4f1b1193bd9b4`；后续文档提交不改变产品 32 文件。正式树与 R0009/R0010 逐文件相同，构建交付不等于工坊上传。
+迁移阶段历史 32 文件包为 `artifacts/release-v10-ck3-1.20.0.3/more_tenets_slots_xa_dev.zip`，669,682 字节，SHA-256 `429b0f71f50511635d20d1481795dd69a08a8d0f05420e43a52aebb1b16c668a`。manifest 绑定 `a90b16ca9957cb6ebe5607744519c1cb37ea8d07`，SHA-256 为 `c544384c02f7a14134980f2e7431bab7183cdfe4a5e8aef441c4f1b1193bd9b4`；该历史树与 R0009/R0010 逐文件相同，构建交付本身不等于上传。实际工坊发布使用后续九语言/新版封面的 46 文件包，详见 [正式 manifest](workshop/release-manifest-v10.json) 和 [发布报告](workshop/publication-v10.md)。
 
 MCP 路径的本机能力缺口、桌面兜底及只读原生观测按各轮收据记录；没有修改游戏二进制或写入进程内存。
 
@@ -80,7 +80,7 @@ MCP 路径的本机能力缺口、桌面兜底及只读原生观测按各轮收�
 
 [框架通用专题](https://github.com/XenoAmess/ck3_eternal_recurrence/blob/master/docs/external-mod-source-projections.md) 回链产品具体证据；不包含产品源码或私有存档，不构成通用宗教 AI 能力或全部 mod 通过。
 
-POD 两产品没有迁移，原版结果不适用于它们。CK3 1.19 扩槽旧存档未取得独立实证，不承诺跨版本迁移；实机仅覆盖记录的本机 DLC 组合，不代表所有组合。文化检查不证明多年后完成或 10000 项穷举；100 核心槽也不保证有 100 个相互兼容的真实信条。本次没有工坊发布或公开缓存复核。
+POD 两产品没有迁移，原版结果不适用于它们。CK3 1.19 扩槽旧存档未取得独立实证，不承诺跨版本迁移；实机仅覆盖记录的本机 DLC 组合，不代表所有组合。文化检查不证明多年后完成或 10000 项穷举；100 核心槽也不保证有 100 个相互兼容的真实信条。迁移阶段不含发布验收，2026-10-03 的正式工坊发布及公开缓存复核另见 [永久发布记录](workshop/publication-v10.md)。
 
 2026-10-03 勘误：原生提示 Absent 指 doctrine_monasticism_absent（无修道制度），该教条与 Anachoresis 冲突。R0008 的失败不是中间空洞的因果证据；详情见 live-R0011-native-blocker-diagnosis.md。新增九语言静态认证与简中发布复验独立记录，不覆盖历史运行。
 
@@ -91,3 +91,11 @@ POD 两产品没有迁移，原版结果不适用于它们。CK3 1.19 扩槽旧�
 [R0012](live-R0012-sparse-create.md) 在九语言及新版 thumbnail 的 46 文件树上，简中创建第 1、2、3、100 槽放入四个兼容真实信条、96 中间空槽留空的礼仪，原生扣款 5775，退出 0，error.log 0 字节。[R0013](live-R0013-cold-reload.md) 独立加载其原生二进制存档并重新保存，角色仪轨 153、四信条、100 隐藏/28 原版教条、虔诚 78925 和中文名称保持。
 
 新的封面为礼仪卡片概念宣传图；三张原生截图、来源与处理参数见 [素材账本](workshop/media/provenance.json)。发布及公开验收独立按 [发布计划](workshop/publication-plan-v10.md) 执行，入库物料本身不证明已经上传。
+
+## 2026-10-03 正式发布完成
+
+既有工坊 `3182367229` 已更新为 version `10` / CK3 `1.20.0.3`，上传冻结源 `da4b579659ebb4de397672b833369e95fdbd03c6`，annotated tag `more-tenets-slots-v10-ck3-1.20.0.3` 指向该源并已推送。原生提交、匿名 BBCode 和完整 Notes entry `1790978434`、新版封面与三图 CDN、全新 46 文件下载清单均 PASS；Steam 在当次新鲜离线画面审阅后恢复离线，发布闭环 complete。
+
+最终 manifest 的构建时 `git_tag=null` 原样保留，ZIP 727,367 字节/SHA-256 `2f27143085b94fa6737d31f8dc836b3ed26c8a1ed8fd690f2c137117b613b621`。精确信息见 [发布报告](workshop/publication-v10.md)、[紧凑回执](workshop/publication-v10.json)、[永久 manifest](workshop/release-manifest-v10.json) 与 [相对上一公开版本的 changelog](release-changelogs/more-tenets-slots/10.md)。上一公开匹配缓存是 version `1` / CK3 `1.19.0.4`，源 commit/tag 未知；本地迁移 v9 不作为上一公开版本。
+
+发布通用原生附加预览、独立 DownloadItem callback 验收、首轮实证及离线组合恢复经验已富化框架：`26c9943e1e60cf377d25ed6b30327986b4c35ffa`、`fcc29d14da759493a547f6419af87ca286212906`、`90f2a7a596653d57da3910885a4ef22c99c1d95c`、`5a2c0a8b77aaa98efcbd71973c9133d6a0f62167`。具体产品文案、素材、冻结清单及回执仍归本独立项目。
