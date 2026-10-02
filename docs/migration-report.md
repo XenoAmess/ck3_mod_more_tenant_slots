@@ -1,18 +1,42 @@
 # CK3 1.20.0.3 兼容迁移记录
 
-目标 `more_tenets_slots_xa_dev/`，旧版本 `9` / CK3 `1.19.0`，迁移版本 `10` / CK3 `1.20.0.3`。本机 launcher 与 EXE 已实际核对，Steam build `25652598`，EXE SHA-256 `94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6`。输入哈希见 [精确输入合同](../dev_tools/ck3_1_20_0_3_sources.json)。迁移前不兼容，详见 [冻结分析](evidence/compatibility-before.json)。当前状态 `static-ready`，实机尚未验收。
+目标 `more_tenets_slots_xa_dev/`，旧版本 `9` / CK3 `1.19.0`，迁移版本 `10` / CK3 `1.20.0.3`。当前整体状态为 **`pending-final-live`**：32 文件源码及构建静态通过；空槽创建、存读档、文化扩槽和末端选择已有实机证据；最终源码的冷启动与保存回归仍待完成，不称完整兼容或已发布。
+
+本机 launcher 与 EXE 已实际核对，Steam build `25652598`，EXE SHA-256 `94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6`。[精确输入合同](../dev_tools/ck3_1_20_0_3_sources.json) 冻结版本、EXE 和 10 份原版来源。迁移前不兼容，详见 [冻结分析](evidence/compatibility-before.json)；工作范围和门槛见 [迁移计划](migration-plan.md)、[验收计划](acceptance-plan.md)。
 
 ## 分析与修复
 
 旧 mod 定义 170 条教义，其中真实核心教义 73 条、空槽 97 条；新版原生 `tenet_types` 共 97 条，旧 `tenet_monasticism`、`tenet_rite` 已不属于新版核心 tenet 类型。旧完整教义副本无法用于新版的 Rite/TenetType 界面，删除其副本和退役的 `doctrine_core_tenets` 组，直接继承新版所有原生 tenet 定义、费用、互斥和 DLC 条件。
 
-新版 `NReligion.FAITH_CORE_TENETS_CAP` 原生上限为 3，迁移改为 100；`pam_faith_core_tenets_cap_value` 是会议逻辑使用的镜像值，原版注明必须与 define 同步，因此同时改为 100。保留 `NCulture.DEFAULT_MAX_TRADITIONS = 10000`。这不是个人 tenet 上限扩展；实际可选数量仍受当前游戏定义及互斥/DLC 限制，不能声称有 100 条相互兼容的真实 tenet。
+新版 `NReligion.FAITH_CORE_TENETS_CAP` 原生上限为 3，迁移改为 100；会议镜像 `pam_faith_core_tenets_cap_value` 同步改为 100。实机曾发现原版 `pam_values.txt` 覆盖较早加载的产品文件，修正为 `zz_mts_core_tenets_cap.txt`，并静态检查定义所有者及加载顺序。保留 `NCulture.DEFAULT_MAX_TRADITIONS = 10000`。这不是个人 tenet 上限扩展；实际可选数量仍受当前游戏定义及互斥/DLC 限制，不能声称有 100 条相互兼容的真实 tenet。
 
-新版原版 `window_faith_creation.gui` 已移除，改用 `window_rite_creation.gui`。生成器只对新版创建窗口的核心 tenet 网格，以及新版信仰窗口普通/紧凑两网格加入有界滚动容器；保留原生选择、费用、分歧、流行度、信仰/Rite 页签与其他操作。反向移除三处投影后逐字恢复冻结原版。生成 GUI 不得手改；原版的空白格式保留，GUI 的 diff whitespace 检查允许原版 trailing whitespace。
+新版原版 `window_faith_creation.gui` 已移除，改用 `window_rite_creation.gui`。生成器在新版创建窗口核心 tenet 网格，以及信仰窗口普通/紧凑两网格加入有界滚动容器；另在玩家所选仪轨的三个原生创建/编辑入口之前增加 ScriptedGui 准备动作。其余原生控件、选择、费用、分歧、流行度、Puppet 条件、信仰/Rite 页签和打开动作保留。反向移除六处投影后分别恢复冻结原版 SHA。生成 GUI 不得手改，原版的空白格式保留。
 
-旧 `on_faith_created` 的角色 root 与字符事件清理不适用于新版的信仰 root。迁移移除整个旧钩子/清理事件和空槽图标，直接继承全部新版原生创建副作用；不注册空槽 tenet，不运行旧清理。新版是否允许未填满所有上限槽创建，以及100上限的原生渲染/创建行为，须由实机进一步验证。
+旧 `on_faith_created` 的角色 root 与字符事件清理不适用于新版的信仰 root。迁移移除旧钩子/清理事件和空槽图标，继承新版原生创建副作用。R0006/R0007 已证明两个真实信条及尾部 98 个原生空槽可创建、保存和冷重载，因此不注册任何占位信条。
 
-内层 descriptor 不再携带 `remote_file_id`，正式 Workshop 身份仍为 `3182367229`；本任务没有发布工坊。作者许可截图保留在源码仓库，正式构建仅允许8文件，不包含截图、夹具或报告。原有中英文 Shang Confucian 文案保留，未新增多语言发布翻译。
+R0004 已确认滚动能到达第 100 槽，但点击时原生消费者用信条槽号索引较短的教条数组，发生越界崩溃。后续方案为玩家所选仪轨准备 100 个独立隐藏组及教条：`not_creatable` 分类、`visible=no`、费用和分歧为零，没有参数、修正、特质或特殊机制效果，已有条目不重复添加。这些是持久教条元数据，与信条空槽不同；可能留存在源和新仪轨，不称临时占位信条或自动清理对象。方案和风险见 [候选说明](selector-repair-candidate.md)。
+
+R0008 的第 100 槽选择已通过，但加载日志仍有 300 条缺失本地化和 3 条 scope 声明错误。源码 `3177fd7` 已按原版合同增加 `saved_scopes = { mts_rite }`，并生成英文、简中各 300 个空白 BOM 本地化键；此修复仅静态通过，新源码冷启动须单独验收。
+
+内层 descriptor 不含 `remote_file_id`，Workshop 身份仍为 `3182367229`；本任务没有发布工坊。作者许可截图保留在源码仓库，正式构建 allowlist 为 32 文件，不包含截图、夹具、报告或机器配置。原有中英文 Shang Confucian 文案保留，新增两份隐藏元数据本地化，不构成完整多语言发布翻译。
+
+## 已有实机结果
+
+| 运行 | 已证明的结果 | 边界 |
+| --- | --- | --- |
+| [R0006](live-R0006-empty-slots.md) | 100 原生槽，两个真实信条加尾部 98 空槽；替换信条、费用及分歧更新；实际创建、原生保存成功 | 夹具长命令曾产生两条语法错误，不能称整轮日志全绿；当轮未冷重载，也未修复末端选择器 |
+| [R0007](live-R0007-cold-reload-culture.md) | 新进程冷载后仍为两个真实信条；文化基础 cap 10000、界面时代加成后 10001；第 10 项 Astute Diplomats 支付 2000 威望并开始建立 | 仅在隔离夹具解除原版传统冷却；未推进 13 年完成建立，未穷举 10000 项；检查时 error.log 为零字节 |
+| [R0008](live-R0008-selector.md) | 实际 100 信条槽、128 教条条目；末端原生候选打开并选取 Anachoresis，费用 4837→5587，未重现 R0004 越界 | 实际非空下标 `[0,1,99]`，中间空洞被原生 `Absent is not allowed` 拒绝，未创建/保存该草稿；加载仍 RED，修复另验 |
+
+尾部可留空与中间可留空是不同条件。空槽保存通过不能代替末端选择验收，末端选择通过也不能代替创建合法性通过。最终源码仍须确认隐藏教条加载、可见性、费用/分歧及持久结果，并通过正常创建、保存和冷重载；不绕过原生合法性。
+
+### R0009：最终源码回归待填
+
+当前 `NOT-RUN / pending`。主线程正在执行新源码受管回归；待录入冻结源码、当次 Steam 离线证据、加载日志、隐藏性、槽位操作、费用及创建/保存结果。不以 R0008 旧冻结树或静态修正替代本轮证据。
+
+### R0010：新结果冷重载待填
+
+当前 `NOT-RUN / pending`。待独立新进程加载最终源码生成的存档，核对真实信条集合、隐藏教条、角色仪轨、费用/分歧和窗口，记录退出码及日志。必要路径闭环后才改为 `live-verified`。
 
 ## 复现与验收
 
@@ -27,10 +51,24 @@ python dev_tools/validate_and_build.py --framework <framework-root> --game <ck3-
 
 `open_kaishek` 本机 checkout/JAR 不存在，框架适配器返回 `not-applicable / open_kaishek-root-missing`，原件见 [预验回执](evidence/kaishek-before.json)。这是环境缺口，不是宗教语义通过；实机不得省略。
 
-[静态验收回执](evidence/static-validation.json)：9类检查全部通过；3处 GUI 投影反向恢复原版 SHA 通过，正式8文件的两次 manifest 与 ZIP 完全相同。原版 tenet 数据库和 on_action 没有产品覆盖。生成GUI使用保留原版空白的diff检查，其余文件标准diff检查均通过。本机安装完整，当前无CK3进程；下一步为隔离实机。初次构建的commit记录指向生成时已有的计划提交，后续验收构建将绑定实际迁移源码提交。
+初次 [静态回执](evidence/static-validation.json) 对应历史 8 文件树，不是当前最终包。修正后的 32 文件静态收据为 `artifacts/selector-load-fix-20261002T173854Z.json`，独立构建在同名目录，双构建通过，ZIP SHA-256 为 `429b0f71f50511635d20d1481795dd69a08a8d0f05420e43a52aebb1b16c668a`；其 `live_verified=false`，manifest 对应当时生成工作树，不代替最终源码提交绑定的构建。原版 tenet 数据库和 on_action 没有产品覆盖。
+
+MCP 路径的本机能力缺口、桌面兜底及只读原生观测按各轮收据记录；没有修改游戏二进制或写入进程内存。
 
 ## 系统富化与归属
 
-已将通用可逆投影、结构扫描和覆盖迁移方法提交到框架 `36a225237`（7项生产路径测试通过）：[框架方法合同](https://github.com/XenoAmess/ck3_eternal_recurrence/blob/36a225237/docs/external-mod-source-projections.md)。工具没有mod ID、宗教机制或固定机器路径。产品投影布局、cap配置、输入pin、构建allowlist和具体验收证据仅留本独立仓库。当前无需新增通用宗教AI/策略或原生研究矩阵。
+通用方法与能力已按工作包提交到 `ck3_eternal_recurrence`；产品生成条目、布局、cap 配置、输入 pin、发布 allowlist 和具体存档/截图证据留本独立项目：
 
-POD 两产品源码没有迁移，原版结果不适用于它们。跨CK3 1.19→1.20旧存档不能保证兼容；没有取得旧扩槽存档实证前不作存档迁移承诺。
+| 框架提交 | 富化内容 |
+| --- | --- |
+| `36a225237` | 通用可逆投影、结构扫描及原版覆盖迁移方法 |
+| `1da893e5` | 独立产品的规范实机运行标识 |
+| `e42b870a` | GUI 标量/向量反例及受管 owner 租约 CAS 边界 |
+| `6a837a1e` | 原生有效值、镜像值和同名定义加载顺序验证 |
+| `1a440aa96` | producer/consumer 不同数组索引、末端可达与实际选择分别验收 |
+| `27aa5b578` | 编辑框容量及全文读回失败后停止动作、基础与实际文化上限区分 |
+| `e273d3cb` | 隐藏元数据加载合同、GUI saved scope、尾部空槽与中间空洞分别验收 |
+
+[框架通用专题](https://github.com/XenoAmess/ck3_eternal_recurrence/blob/master/docs/external-mod-source-projections.md) 回链产品具体证据；不包含产品源码或私有存档，不构成通用宗教 AI 能力或全部 mod 通过。
+
+POD 两产品没有迁移，原版结果不适用于它们。CK3 1.19 扩槽旧存档未取得独立实证，不承诺跨版本迁移；实机仅覆盖记录的本机 DLC 组合，不代表所有组合。文化检查不证明多年后完成或 10000 项穷举；100 核心槽也不保证有 100 个相互兼容的真实信条。本次没有工坊发布或公开缓存复核。
