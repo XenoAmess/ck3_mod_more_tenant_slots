@@ -1,0 +1,43 @@
+{
+  "schema": "mts.native-sparse-create.v1",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0012",
+  "source_commit": "9189003a2bf556f24a4b70851c4c18ec8f471419",
+  "language": "simp_chinese",
+  "release_file_count": 46,
+  "actor": 33339,
+  "source_rite_id": 152,
+  "native_draft": {
+    "read_only": true,
+    "pid": 19764,
+    "source_commit": "9189003a2bf556f24a4b70851c4c18ec8f471419",
+    "core_slots": 100,
+    "doctrine_items": 128,
+    "nonempty_slot_indices": [
+      0,
+      1,
+      2,
+      99
+    ],
+    "empty_slots": 96,
+    "source_rite_full_id": 152,
+    "actor": 33339
+  },
+  "native_create": "PASS",
+  "native_cost": 5775,
+  "piety_before": 84700,
+  "piety_after": 78925,
+  "native_exit_code": 0,
+  "error_log_bytes": 0,
+  "save_format": "native-binary",
+  "save_bytes": 10941262,
+  "save_sha256": "c4fa0b0fdff065dd1f5367db892f8f23ff47576bce155d8c8288e8a572a08875",
+  "binary_save_melt": "NOT_RUN: no installed Rakaly; R0013 independent native cold load/resave recorded separately",
+  "fixture": "Only remove_character_flag=has_created_a_faith to allow repeat test on imported R0009 isolated save; no writes to piety, doctrines or tenets; native UI selection and confirmation",
+  "screenshots": {
+    "r12-create-ready.png": "3cc8218f357631060dedb46f0c5db6e42c5b71615cc305b31f0606ff574149cd",
+    "r12-four-labour-ready.png": "99a087b7bb54d23f861351ce8d7a020597df0b769f41dee758501734d0189ef9",
+    "r12-create-confirm.png": "c029fd5f274766df5919f3961feaa3c5b70250e50e532da893196ade943932ae",
+    "r12-four-created-clean.png": "9c059d52a02e51fbd6145021875a0f36ea374276579c73e6fd5c9aa63fc56a09",
+    "r12-exit-confirm.png": "02c7164c7dee79695218a5a1203e51f21254412f7c1176b2ba6d0930d343a1ac"
+  }
+}
