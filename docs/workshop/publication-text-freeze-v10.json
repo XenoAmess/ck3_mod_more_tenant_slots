@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "item_id": "3182367229",
+  "media_commit": "5be332f4bf9c4da6652b3977cbc973919861e513",
+  "texts": {
+    "description.bbcode": {
+      "file_bytes": 4044,
+      "file_sha256": "82a89fd848ea57eb5be45c2415a7b91f517d343fc85cffb5822362d09f52d43e",
+      "normalized_characters": 3241,
+      "normalized_lines": 45,
+      "normalized_utf8_bytes": 4043,
+      "normalized_sha256": "96e7059b85c42b5ab9503d0d3e443a6dc8078ce3b83018253523423088c0299f"
+    },
+    "change-notes-v10.txt": {
+      "file_bytes": 2728,
+      "file_sha256": "39c1ecfa0ee2def4c7a01dcb67c27ab4b1a65167200020c5a1b601c06614c162",
+      "normalized_characters": 2013,
+      "normalized_lines": 23,
+      "normalized_utf8_bytes": 2727,
+      "normalized_sha256": "009a95736c0a87d7fd4db4e9bfb592594a6d4e0b60b5556cec25ea01aa837754"
+    }
+  }
+}
