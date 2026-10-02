@@ -1,0 +1,125 @@
+{
+  "schema": "mts.workshop-copy-audit.v1",
+  "audited_at_utc": "2026-10-02T21:35:27.283599+00:00",
+  "item_id": "3182367229",
+  "media_commit": "5be332f4bf9c4da6652b3977cbc973919861e513",
+  "status": "PASS",
+  "publication_verified": false,
+  "text_metrics": {
+    "description.bbcode": {
+      "file_bytes": 4044,
+      "file_sha256": "82a89fd848ea57eb5be45c2415a7b91f517d343fc85cffb5822362d09f52d43e",
+      "normalized_characters": 3241,
+      "normalized_lines": 45,
+      "normalized_utf8_bytes": 4043,
+      "normalized_sha256": "96e7059b85c42b5ab9503d0d3e443a6dc8078ce3b83018253523423088c0299f"
+    },
+    "change-notes-v10.txt": {
+      "file_bytes": 2728,
+      "file_sha256": "39c1ecfa0ee2def4c7a01dcb67c27ab4b1a65167200020c5a1b601c06614c162",
+      "normalized_characters": 2013,
+      "normalized_lines": 23,
+      "normalized_utf8_bytes": 2727,
+      "normalized_sha256": "009a95736c0a87d7fd4db4e9bfb592594a6d4e0b60b5556cec25ea01aa837754"
+    }
+  },
+  "checks": {
+    "bbcode_supported_tags_balanced": true,
+    "description_within_8000_utf8_bytes": true,
+    "text_freeze_exact": true,
+    "upstream_holger_source_and_item_links_retained": true,
+    "nine_locale_format_only_claim_checked_against": "docs/localization-coverage.md",
+    "future_live_language": "simp_chinese",
+    "sparse_create_claim_checked_against": "docs/evidence/live-R0012.json",
+    "r12_nonempty_indices": [
+      0,
+      1,
+      2,
+      99
+    ],
+    "r12_native_cost": 5775,
+    "r12_piety_delta": 5775,
+    "source_claim_receipt_fields_exact": true,
+    "images_preview_review": "Captions match native creation, tenet selector and saved two-tenet rite; historical English screenshots only, no new live-language run",
+    "r13_save_structure_claimed_in_public_copy": false
+  },
+  "images": [
+    {
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/5be332f4bf9c4da6652b3977cbc973919861e513/docs/workshop/media/01-rite-creation.jpg",
+      "http_status": 200,
+      "redirected": false,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "bytes": 458079,
+      "sha256": "c97fb4cc4b9b4b79183f9b33df303f3576b8cdd4161f7a9f94ca8c19d67cd940",
+      "local_and_pinned_blob_exact": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/5be332f4bf9c4da6652b3977cbc973919861e513/docs/workshop/media/02-tenet-selector.jpg",
+      "http_status": 200,
+      "redirected": false,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "bytes": 510841,
+      "sha256": "ee547aa422eddf66d4fb079157163b379f259c1a433e93f3e177cc595913c853",
+      "local_and_pinned_blob_exact": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/5be332f4bf9c4da6652b3977cbc973919861e513/docs/workshop/media/03-two-tenet-rite.jpg",
+      "http_status": 200,
+      "redirected": false,
+      "content_type": "image/jpeg",
+      "access_control_allow_origin": "*",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "format": "JPEG",
+      "bytes": 529406,
+      "sha256": "8bf1978221c06a0501b938601fbdbf79d21371a0628704b6d983bc2cdf187ddb",
+      "local_and_pinned_blob_exact": true
+    }
+  ],
+  "claim_inputs": [
+    {
+      "path": "docs/evidence/live-R0012.json",
+      "sha256": "8a67ce57f03c25320b3e56cc808e869416923c70564886fc4347ccde0fd3d0dd"
+    },
+    {
+      "path": "docs/localization-coverage.md",
+      "sha256": "9c90c3e751a6c3297201f3695a966be3ba5bd6ed6999ec2d39107fe4071ca460"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "97fb796a08f657e0723cb183c04ff694314f0103abda2941a07aba8ff9b4e712"
+    },
+    {
+      "path": "docs/workshop/media/provenance.json",
+      "sha256": "5831fc32a857bf6c5eaecbdc7d8f125c4167d9a9657df4bf2ffc369a9b246786"
+    }
+  ],
+  "scope_note": "Audit status PASS refers to local publication copy and publicly retrievable pinned source images; Steam publication/read-back remains separate.",
+  "r13_follow_up": {
+    "report": "docs/live-R0013-cold-reload.md",
+    "receipt": "docs/evidence/live-R0013-save.json",
+    "receipt_sha256": "1487f38021c5914c73019454a12d49bea919cd32f09f29f761599a3cfe124d87",
+    "source_commit": "f5751e07870578b4105fbc0035cfc7e054870638",
+    "receipt_authority": "offline-save-inspection-only",
+    "receipt_live_verified": false,
+    "four_tenets_saved": true,
+    "actor_current_rite_id": 153,
+    "saved_piety": "78925",
+    "direct_binary_melt_performed": false,
+    "public_text_freeze_changed": false
+  }
+}
