@@ -1,0 +1,491 @@
+{
+  "schema": "mts.native-two-tenet.v1",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0006",
+  "source_commit": "eb27c6ba47e44b298382e4fd4c337b9d2e505311",
+  "fixture_only": {
+    "source_main_rite_removed_tenet": "tenet_natural_primitivism",
+    "remove_has_created_a_faith": true,
+    "does_not_modify_product": true
+  },
+  "game_version": "1.20.0.3",
+  "draft": {
+    "observed_at": "2026-10-02T20:45:14.206957",
+    "exe_sha256": "94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6",
+    "pid": 19188,
+    "read_only": true,
+    "no_function_calls_or_memory_writes": true,
+    "tenet_slot_count": 100,
+    "nonempty_slot_indices": [
+      0,
+      1
+    ],
+    "empty_slot_count": 98,
+    "doctrine_item_count": 28,
+    "rows": [
+      {
+        "slot_index": 0,
+        "empty": false
+      },
+      {
+        "slot_index": 1,
+        "empty": false
+      },
+      {
+        "slot_index": 2,
+        "empty": true
+      },
+      {
+        "slot_index": 3,
+        "empty": true
+      },
+      {
+        "slot_index": 4,
+        "empty": true
+      },
+      {
+        "slot_index": 5,
+        "empty": true
+      },
+      {
+        "slot_index": 6,
+        "empty": true
+      },
+      {
+        "slot_index": 7,
+        "empty": true
+      },
+      {
+        "slot_index": 8,
+        "empty": true
+      },
+      {
+        "slot_index": 9,
+        "empty": true
+      },
+      {
+        "slot_index": 10,
+        "empty": true
+      },
+      {
+        "slot_index": 11,
+        "empty": true
+      },
+      {
+        "slot_index": 12,
+        "empty": true
+      },
+      {
+        "slot_index": 13,
+        "empty": true
+      },
+      {
+        "slot_index": 14,
+        "empty": true
+      },
+      {
+        "slot_index": 15,
+        "empty": true
+      },
+      {
+        "slot_index": 16,
+        "empty": true
+      },
+      {
+        "slot_index": 17,
+        "empty": true
+      },
+      {
+        "slot_index": 18,
+        "empty": true
+      },
+      {
+        "slot_index": 19,
+        "empty": true
+      },
+      {
+        "slot_index": 20,
+        "empty": true
+      },
+      {
+        "slot_index": 21,
+        "empty": true
+      },
+      {
+        "slot_index": 22,
+        "empty": true
+      },
+      {
+        "slot_index": 23,
+        "empty": true
+      },
+      {
+        "slot_index": 24,
+        "empty": true
+      },
+      {
+        "slot_index": 25,
+        "empty": true
+      },
+      {
+        "slot_index": 26,
+        "empty": true
+      },
+      {
+        "slot_index": 27,
+        "empty": true
+      },
+      {
+        "slot_index": 28,
+        "empty": true
+      },
+      {
+        "slot_index": 29,
+        "empty": true
+      },
+      {
+        "slot_index": 30,
+        "empty": true
+      },
+      {
+        "slot_index": 31,
+        "empty": true
+      },
+      {
+        "slot_index": 32,
+        "empty": true
+      },
+      {
+        "slot_index": 33,
+        "empty": true
+      },
+      {
+        "slot_index": 34,
+        "empty": true
+      },
+      {
+        "slot_index": 35,
+        "empty": true
+      },
+      {
+        "slot_index": 36,
+        "empty": true
+      },
+      {
+        "slot_index": 37,
+        "empty": true
+      },
+      {
+        "slot_index": 38,
+        "empty": true
+      },
+      {
+        "slot_index": 39,
+        "empty": true
+      },
+      {
+        "slot_index": 40,
+        "empty": true
+      },
+      {
+        "slot_index": 41,
+        "empty": true
+      },
+      {
+        "slot_index": 42,
+        "empty": true
+      },
+      {
+        "slot_index": 43,
+        "empty": true
+      },
+      {
+        "slot_index": 44,
+        "empty": true
+      },
+      {
+        "slot_index": 45,
+        "empty": true
+      },
+      {
+        "slot_index": 46,
+        "empty": true
+      },
+      {
+        "slot_index": 47,
+        "empty": true
+      },
+      {
+        "slot_index": 48,
+        "empty": true
+      },
+      {
+        "slot_index": 49,
+        "empty": true
+      },
+      {
+        "slot_index": 50,
+        "empty": true
+      },
+      {
+        "slot_index": 51,
+        "empty": true
+      },
+      {
+        "slot_index": 52,
+        "empty": true
+      },
+      {
+        "slot_index": 53,
+        "empty": true
+      },
+      {
+        "slot_index": 54,
+        "empty": true
+      },
+      {
+        "slot_index": 55,
+        "empty": true
+      },
+      {
+        "slot_index": 56,
+        "empty": true
+      },
+      {
+        "slot_index": 57,
+        "empty": true
+      },
+      {
+        "slot_index": 58,
+        "empty": true
+      },
+      {
+        "slot_index": 59,
+        "empty": true
+      },
+      {
+        "slot_index": 60,
+        "empty": true
+      },
+      {
+        "slot_index": 61,
+        "empty": true
+      },
+      {
+        "slot_index": 62,
+        "empty": true
+      },
+      {
+        "slot_index": 63,
+        "empty": true
+      },
+      {
+        "slot_index": 64,
+        "empty": true
+      },
+      {
+        "slot_index": 65,
+        "empty": true
+      },
+      {
+        "slot_index": 66,
+        "empty": true
+      },
+      {
+        "slot_index": 67,
+        "empty": true
+      },
+      {
+        "slot_index": 68,
+        "empty": true
+      },
+      {
+        "slot_index": 69,
+        "empty": true
+      },
+      {
+        "slot_index": 70,
+        "empty": true
+      },
+      {
+        "slot_index": 71,
+        "empty": true
+      },
+      {
+        "slot_index": 72,
+        "empty": true
+      },
+      {
+        "slot_index": 73,
+        "empty": true
+      },
+      {
+        "slot_index": 74,
+        "empty": true
+      },
+      {
+        "slot_index": 75,
+        "empty": true
+      },
+      {
+        "slot_index": 76,
+        "empty": true
+      },
+      {
+        "slot_index": 77,
+        "empty": true
+      },
+      {
+        "slot_index": 78,
+        "empty": true
+      },
+      {
+        "slot_index": 79,
+        "empty": true
+      },
+      {
+        "slot_index": 80,
+        "empty": true
+      },
+      {
+        "slot_index": 81,
+        "empty": true
+      },
+      {
+        "slot_index": 82,
+        "empty": true
+      },
+      {
+        "slot_index": 83,
+        "empty": true
+      },
+      {
+        "slot_index": 84,
+        "empty": true
+      },
+      {
+        "slot_index": 85,
+        "empty": true
+      },
+      {
+        "slot_index": 86,
+        "empty": true
+      },
+      {
+        "slot_index": 87,
+        "empty": true
+      },
+      {
+        "slot_index": 88,
+        "empty": true
+      },
+      {
+        "slot_index": 89,
+        "empty": true
+      },
+      {
+        "slot_index": 90,
+        "empty": true
+      },
+      {
+        "slot_index": 91,
+        "empty": true
+      },
+      {
+        "slot_index": 92,
+        "empty": true
+      },
+      {
+        "slot_index": 93,
+        "empty": true
+      },
+      {
+        "slot_index": 94,
+        "empty": true
+      },
+      {
+        "slot_index": 95,
+        "empty": true
+      },
+      {
+        "slot_index": 96,
+        "empty": true
+      },
+      {
+        "slot_index": 97,
+        "empty": true
+      },
+      {
+        "slot_index": 98,
+        "empty": true
+      },
+      {
+        "slot_index": 99,
+        "empty": true
+      }
+    ]
+  },
+  "creation": "PASS",
+  "native_save": "PASS",
+  "cold_reload": "NOT_RUN",
+  "core_tenets": [
+    "tenet_asceticism",
+    "tenet_sanctity_of_nature"
+  ],
+  "rite_id": 151,
+  "rite_tag": "dynamic_rite_152",
+  "actor_values": [
+    [
+      "rite",
+      "151"
+    ],
+    [
+      "piety",
+      "{"
+    ]
+  ],
+  "doctrines": [
+    "abrahamic_hostility_doctrine",
+    "doctrine_concubines",
+    "doctrine_divorce_allowed",
+    "doctrine_bastardry_none",
+    "doctrine_homosexuality_accepted",
+    "doctrine_deviancy_accepted",
+    "doctrine_adultery_men_accepted",
+    "doctrine_adultery_women_accepted",
+    "doctrine_kinslaying_accepted",
+    "doctrine_witchcraft_accepted",
+    "doctrine_gender_equal",
+    "doctrine_consanguinity_unrestricted",
+    "doctrine_pluralism_righteous",
+    "doctrine_theocracy_lay_clergy",
+    "doctrine_no_head",
+    "doctrine_clerical_function_alms_and_pacification",
+    "doctrine_clerical_gender_either",
+    "doctrine_clerical_marriage_disallowed",
+    "doctrine_clerical_succession_conditional",
+    "doctrine_pilgrimage_encouraged",
+    "doctrine_funeral_stoic",
+    "doctrine_no_anointment",
+    "doctrine_monotheist",
+    "doctrine_scriptural",
+    "doctrine_monasticism_absent",
+    "doctrine_sacraments_central",
+    "special_doctrine_is_christian_faith",
+    "special_doctrine_is_western_christian_faith"
+  ],
+  "native_exit_code": 0,
+  "save": {
+    "path": "userdir/save games/mts_r6_two.ck3",
+    "bytes": 10874559,
+    "sha256": "c21ea2ab7684c07b1ce76b65636b77afd69576345444133a7a36b5c749956ef8"
+  },
+  "screenshots": {
+    "two-ready.png": "9fbd91a606383fcb82568172e023e8bc497f0586fd3938501186aba786771a58",
+    "two-create-confirmation.png": "06627e89ac5492d46e02a6534559540ba0b327269d89ce2c1c30de7f049579ff",
+    "two-created.png": "d4a58d13331b7e45e35b610f1747ba504341d9911b5d64475313b211fb2beec8",
+    "two-save-name-fixed.png": "bb1c69ee14dd53fe937f7140b3b85854a1773e19794e998f6da8f926b01de4b1",
+    "two-saved.png": "ba8ee65586d2e6aaf470f0eba5c0eccb601a0fcff5840504f24c5047ed494f1b"
+  },
+  "known_red": "slot100 native selector crash remains unresolved",
+  "fixture_console_errors": 2
+}
