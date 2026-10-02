@@ -94,3 +94,8 @@ out
 
 #versions-maven-plugin
 *.versionsBackup
+
+# Local CK3 acceptance attempts and reproducible release artifacts
+artifacts/
+dist/
+__pycache__/

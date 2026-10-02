@@ -1,0 +1,4 @@
+﻿# Keep council promotion/replacement logic in sync with NReligion's native cap.
+pam_faith_core_tenets_cap_value = {
+	value = 100
+}

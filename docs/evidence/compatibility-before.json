@@ -1,0 +1,70 @@
+{
+  "target": {
+    "version": "1.20.0.3",
+    "steam_build": "25652598",
+    "exe_sha256": "94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6",
+    "sources": {
+      "gui/window_faith.gui": {
+        "sha256": "67924e58ccba26d95853ac48af35d91a774f5ce6d2e7f32a0a033de3b9d51521",
+        "normalized_sha256": "e8a866ec173d894c38c4cbcb02b6e9f07c7746683690fc40aa3ab9f93cbac17d"
+      },
+      "gui/window_rite_creation.gui": {
+        "sha256": "9476299fdbf0975e41923eac9b192d3fe0b2cd74a4da0d928d0da7974b7ea9f8",
+        "normalized_sha256": "94add6a52deef1fc98d632243340d4d0345c9ef6f139e5747e9e7c46d490dbda"
+      },
+      "common/defines/00_defines.txt": {
+        "sha256": "8e430d77eb6e8767030f34b1c53d5dae84277fb354bd73cc42f93dc500be8982",
+        "normalized_sha256": "3b8aac9cab2b55ea3cb125f89ae1f9f89b5c6c37d8f37583d27a27ce9cbbd33a"
+      },
+      "common/script_values/pam_values.txt": {
+        "sha256": "458d1bd882e8854005e3158339fca343177cff13eac7f83cb5877a8a37171965",
+        "normalized_sha256": "f43bc6e8d88d0264605b827aac26a0ed0cc160feaa3f1419ee7b100d16c74d7f"
+      },
+      "common/religion/tenet_types/_tenet_types.info": {
+        "sha256": "aae8f7a94b0b5ae7a12d29ea6080941fd2e94842ea195905b9a1d8a14f2a9c25",
+        "normalized_sha256": "1ee64e2db54301bd568c0f212a665bca6fca0f251a22b942cc54f19671445bb2"
+      },
+      "common/religion/doctrine_group_types/00_doctrine_group_types.txt": {
+        "sha256": "276100fe6e99ef17805da9992b4e8f38d648315dd8a30238b5fb42d113bd7456",
+        "normalized_sha256": "154953c7963c21c4030ff3c89cca85b59ca7bab25c457876276dee1821bbc907"
+      },
+      "common/on_action/religion_on_actions.txt": {
+        "sha256": "ef9367ddf5f89c912b895743f8b72441e88af3a5b03a5c1a9eddea0e5681ee2d",
+        "normalized_sha256": "0fcd7c3b233fd9465894e8cbb00061cd496552a587e7f041b693d6625a9a662f"
+      }
+    }
+  },
+  "baseline_commit": "a7eacf9",
+  "status": "incompatible",
+  "legacy_doctrine_tenets": 170,
+  "legacy_placeholders": 97,
+  "native_tenets": 97,
+  "legacy_real_tenets_absent_from_native": [
+    "tenet_monasticism",
+    "tenet_rite"
+  ],
+  "legacy_paths_removed_by_vanilla": [
+    "gui/window_faith_creation.gui"
+  ],
+  "findings": [
+    "core tenets are a distinct tenet_types database",
+    "doctrine_core_tenets group no longer exists in vanilla",
+    "on_faith_created root is faith, not character",
+    "native NReligion.FAITH_CORE_TENETS_CAP and council script value must match"
+  ],
+  "legacy_files": {
+    "descriptor.mod": "444aba5d8ae288090d8b7c1abd1807068a6aafeda71eb8744d91cd05ca4594fa",
+    "original_author_said_it_ok.png": "b0c1423c3f6105ecc685bc9d749b717c158f214f8501b6c5f2119e166c9aed15",
+    "thumbnail.png": "2d29bf58e0ce482b2abf85a306a9f5f8f0cea8fff632f84769dc4e7376d99f4f",
+    "gui/window_faith.gui": "c3310c520a74300f3d35cd750521e27bcca72a49afaca439c271d280b356372d",
+    "gui/window_faith_creation.gui": "c6232f4fc53d15b5c33696e013bc1b90da9079ec1d395a9a6118764edca1694e",
+    "localization/simp_chinese/religion/MTS_religion_confucianism_l_simp_chinese.yml": "aeca0df9969d58d3432fa5904e1f5dd2c72716bdfebfdac838501cd3cc112740",
+    "localization/english/religion/MTS_religion_confucianism_l_english.yml": "6a28de27aae847b450173f07e12febf7605eb78c4ac594364089d0f9ab9ba1f2",
+    "gfx/interface/icons/faith_doctrines/core_tenet_empty.dds": "59e55f92923e2a96f3819ac94483cae0310830c8e7e7104586ad8ba37e124b60",
+    "events/religion_events/rt_faith_creation_clean_events.txt": "908f68f0e267259df3c394c25771931f065f411d58fb2384b932e631928d0d44",
+    "common/defines/More tradition slots.txt": "d3ceecc34498000d3954de34d43108ea238e7e6ae0ef51c6b7ced33f49b43bd6",
+    "common/on_action/rt_religion_on_actions.txt": "1a07c417b15b4182dd7ec9575e0853330ff0c69b2213fc91d34e906b3a1d0e56",
+    "common/religion/doctrine_group_types/rt_doctrine_group_types.txt": "1f5710b2dc768b6bd888cd15b4a0e69ae56610ff27d5001adc26c4efee5e63c6",
+    "common/religion/doctrine_types/rt_core_tenets.txt": "8103ba1c02b4c43618d8887ff5657a895a733c80dce21d2892ec7b176881f0be"
+  }
+}

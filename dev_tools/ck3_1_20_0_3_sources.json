@@ -1,0 +1,35 @@
+{
+  "version": "1.20.0.3",
+  "steam_build": "25652598",
+  "exe_sha256": "94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6",
+  "sources": {
+    "gui/window_faith.gui": {
+      "sha256": "67924e58ccba26d95853ac48af35d91a774f5ce6d2e7f32a0a033de3b9d51521",
+      "normalized_sha256": "e8a866ec173d894c38c4cbcb02b6e9f07c7746683690fc40aa3ab9f93cbac17d"
+    },
+    "gui/window_rite_creation.gui": {
+      "sha256": "9476299fdbf0975e41923eac9b192d3fe0b2cd74a4da0d928d0da7974b7ea9f8",
+      "normalized_sha256": "94add6a52deef1fc98d632243340d4d0345c9ef6f139e5747e9e7c46d490dbda"
+    },
+    "common/defines/00_defines.txt": {
+      "sha256": "8e430d77eb6e8767030f34b1c53d5dae84277fb354bd73cc42f93dc500be8982",
+      "normalized_sha256": "3b8aac9cab2b55ea3cb125f89ae1f9f89b5c6c37d8f37583d27a27ce9cbbd33a"
+    },
+    "common/script_values/pam_values.txt": {
+      "sha256": "458d1bd882e8854005e3158339fca343177cff13eac7f83cb5877a8a37171965",
+      "normalized_sha256": "f43bc6e8d88d0264605b827aac26a0ed0cc160feaa3f1419ee7b100d16c74d7f"
+    },
+    "common/religion/tenet_types/_tenet_types.info": {
+      "sha256": "aae8f7a94b0b5ae7a12d29ea6080941fd2e94842ea195905b9a1d8a14f2a9c25",
+      "normalized_sha256": "1ee64e2db54301bd568c0f212a665bca6fca0f251a22b942cc54f19671445bb2"
+    },
+    "common/religion/doctrine_group_types/00_doctrine_group_types.txt": {
+      "sha256": "276100fe6e99ef17805da9992b4e8f38d648315dd8a30238b5fb42d113bd7456",
+      "normalized_sha256": "154953c7963c21c4030ff3c89cca85b59ca7bab25c457876276dee1821bbc907"
+    },
+    "common/on_action/religion_on_actions.txt": {
+      "sha256": "ef9367ddf5f89c912b895743f8b72441e88af3a5b03a5c1a9eddea0e5681ee2d",
+      "normalized_sha256": "0fcd7c3b233fd9465894e8cbb00061cd496552a587e7f041b693d6625a9a662f"
+    }
+  }
+}

@@ -1,3 +1,8 @@
 ﻿NCulture = {
 	DEFAULT_MAX_TRADITIONS = 10000
 }
+
+# CK3 1.20 uses native tenets rather than a doctrine group with empty doctrines.
+NReligion = {
+	FAITH_CORE_TENETS_CAP = 100
+}
