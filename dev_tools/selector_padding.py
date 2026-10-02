@@ -8,6 +8,10 @@ from pathlib import Path
 
 COUNT = 100
 HEADER = "# GENERATED FILE - MTS native selector index compatibility\n"
+# Frozen from CK3 1.20.0.3 launcher/settings-layout.json and game/localization.
+# The launcher language provider owns this list; jomini is an engine directory.
+LANGUAGES = ("english", "french", "german", "japanese", "korean", "polish",
+             "russian", "simp_chinese", "spanish")
 
 
 def generated_files() -> dict[str, str]:
@@ -49,7 +53,7 @@ def generated_files() -> dict[str, str]:
     }
 }
 """
-    for language in ("english", "simp_chinese"):
+    for language in LANGUAGES:
         files[f"localization/{language}/religion/mts_selector_l_{language}.yml"] = (
             f"l_{language}:\n" + HEADER + "".join(localization))
     return files
