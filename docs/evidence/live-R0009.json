@@ -1,0 +1,48 @@
+{
+  "schema": "mts.native-create-save.v2",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0009",
+  "source_commit": "a64a79aeae126d58a1016de1cb9c7c24d4fbe63c",
+  "load_validation": "PASS",
+  "error_log_bytes": 0,
+  "selector_slot100_open_cancel": "PASS",
+  "native_create": "PASS",
+  "native_ui_cost": 4837,
+  "piety_before": 89537,
+  "piety_after": 84700,
+  "native_save": "PASS",
+  "save_sha256": "ffe56ee19944db8a1e89c30a85e0e9c9be5156b3a9d2a923248a7709f312dee3",
+  "save_bytes": 91091546,
+  "new_rite_id": 152,
+  "origin_rite_id": 151,
+  "actor": 33339,
+  "core_tenets": [
+    "tenet_communal_identity",
+    "tenet_sanctity_of_nature"
+  ],
+  "hidden_doctrine_count": 100,
+  "all_doctrine_count": 128,
+  "tenet_placeholders": 0,
+  "native_exit_code": 0,
+  "cold_reload_this_save": "PENDING_R0010",
+  "draft": {
+    "read_only": true,
+    "pid": 1424,
+    "source_commit": "a64a79aeae126d58a1016de1cb9c7c24d4fbe63c",
+    "core_slots": 100,
+    "doctrine_items": 128,
+    "nonempty_slot_indices": [
+      0,
+      1
+    ],
+    "empty_slots": 98,
+    "source_rite_full_id": 151,
+    "actor": 33339
+  },
+  "screenshots": {
+    "r9-faith.png": "9856e088945d9a5a5d9dc8bd89341260397149e3924ce2ab65fb5c001b84e8e7",
+    "r9-slot100-open.png": "15e80afd4e04527940f5f2f088b2acfaf59f7578da022cef125f2185e1a25782",
+    "r9-create-confirm.png": "121b8b0d9392c3b469a3632f34a1beebdcce3a0127941093fa6522e7082af461",
+    "r9-created.png": "0945eaaea52f4cdf12dcfcc32b240c41eedb51164a0993041ffb3c740b6c2448",
+    "r9-exit-confirm.png": "ad649eac5801d55e2da94abc6431243cffec14230b159cd708ce73aa9b758fa6"
+  }
+}
