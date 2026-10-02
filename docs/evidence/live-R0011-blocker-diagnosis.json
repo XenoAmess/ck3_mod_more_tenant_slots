@@ -1,0 +1,87 @@
+{
+  "schema": "mts.r0011.blocker-diagnosis.v1",
+  "utc": "2026-10-02T20:23:08.575042+00:00",
+  "game_version": "1.20.0.3",
+  "exe_sha256": "94b55397abb687a3dcd436805a5d885e6be90fa6c693feb44a9e3bbeeade02a6",
+  "run": "bf-202609141645-5434332d4d--more-tenets-slots--R0011",
+  "access": "PROCESS_QUERY_INFORMATION | PROCESS_VM_READ (0x410)",
+  "game_state_mutation": false,
+  "game_function_calls": false,
+  "source_modified": false,
+  "snapshot_sha256": "78ebaad1a568589c4bb8799c5a03336826e0eb59a91d17473a10a405a9c2d9f7",
+  "stable_double_read": true,
+  "core_slots": 100,
+  "doctrine_items": 128,
+  "nonempty_slots": [
+    0,
+    1,
+    2
+  ],
+  "selected_tenets": [
+    "tenet_communal_identity",
+    "tenet_sanctity_of_nature",
+    "tenet_anachoresis"
+  ],
+  "monasticism_doctrine": "doctrine_monasticism_absent",
+  "doctrine_present_in_ui_and_draft": true,
+  "native_message": "Absent is not allowed",
+  "message_name_key": "doctrine_monasticism_absent_name",
+  "name_english": "Absent",
+  "name_simp_chinese": "不存在",
+  "doctrine_can_pick": {
+    "definition": "common/religion/doctrine_types/20_doctrines.txt:2247",
+    "condition": "NOT = { tenet:tenet_anachoresis = { is_in_list = selected_doctrines } }"
+  },
+  "sources": {
+    "common/religion/doctrine_types/20_doctrines.txt": {
+      "sha256": "ff663a8f6c5233628dbf6774b28412b918338fec823fe0f534c4cd03c8580504"
+    },
+    "common/religion/tenet_types/00_pam_tenets.txt": {
+      "sha256": "5d57cf371aedf4d2266286b8fe30d7f0c90eb8d4079019712c907a4b954ce02a"
+    },
+    "localization/english/religion/religion_l_english.yml": {
+      "sha256": "49fea430b9769b286dd748e13b2b9fc0208605c44337ef1db6dda7bb979d5b76"
+    },
+    "localization/simp_chinese/religion/religion_l_simp_chinese.yml": {
+      "sha256": "1ba3f480f5255d3def8e9c968544daa2f5f4ee4ff40a9e214e60d623cc461d5c"
+    },
+    "localization/english/gui/rite_creation_window_l_english.yml": {
+      "sha256": "aad18249fdad770fccf458365e90e3cd65d720c32b6be4199a03e067a56e49d2"
+    }
+  },
+  "rva_evidence": {
+    "get_creation_blockers": "0x14F5780",
+    "can_create_rite": "0x14F56D0",
+    "final_validator": "0x29A2F60",
+    "name_uniqueness": "0x14F8930",
+    "rite_requirements": "0x29C9760",
+    "doctrine_can_pick_loop": "0x29C9A30",
+    "doctrine_failure_template": "0x29C9A9E",
+    "rebuild_draft": "0x14F8660",
+    "create_confirmation_callback": "0x14F51D0",
+    "create_real_type_filter": "0x14F53C0"
+  },
+  "disassembly_files": {
+    "can-create.txt": "c87427127e3d47b321f61dd55617e2f127aff2e83173b311d264fc2058d6ff6d",
+    "cancreate-blockers.txt": "f8a68c4e71fdaf7a051fcc51536d7167080ac637337ea48290337f981cf6d1c9",
+    "create-action.txt": "5e5f13797e68cc0aa8e2754ce0b79b2cea4c98df1cc8b0631e6d9d6c86444e56",
+    "create-confirmation.txt": "387317fb57932cead136a22094c329c73bf7e198d73a321cd7691ca8ae06e5db",
+    "draft-copy.txt": "d1f41bd913efe877f9d06f6f80d532c5df845fc75f1930fd6e281e895598886e",
+    "faith-requirements.txt": "762431147911547480f7da2f5cd9835ae2d3393b4743a8e651c29a8e0aecec45",
+    "final-validator.txt": "6f802d270415a52d957525aa31b6e2ad0b82bcd42da0399727c89edc8f2ef254",
+    "name-validator.txt": "6997141c7de94774f0d8e7b5083406ffb14cf6fae6c9a03eb7b717338039f9fc",
+    "profile-clone.txt": "77b44bd7410cc0a79feaddcc354a3b1cb4146d4446294e2fc8fedfbccac4d79b",
+    "queue-command.txt": "89f2c731d982824dc1dc2ece52e2f70ac58f7f94aff73997be8f2b9a041e8bd9",
+    "rebuild-draft.txt": "740c4528e35ae7c8dc50cfef64ea1f47e28d3f7144738ef8241f52569bbd42b3",
+    "rite-requirements.txt": "1e920f3560c2a4cbc1035dca968f4dc721202dd10053dffaa2f57e6ca9e25245",
+    "select-tenet.txt": "12a380052c01724802bf177105f5053fe7caeb101f80a4218765add400d53817"
+  },
+  "conclusion": "Absent names a real vanilla monasticism doctrine whose can_pick conflicts with the selected Anachoresis; the prior hole/NULL causality claim is withdrawn.",
+  "gui_bypass_candidate": "withdrawn_before_implementation",
+  "historical_evidence_modified": false,
+  "runtime_followup": "pending compatible-tenet create/debit/save and separate sparse-slot acceptance",
+  "live_verified": false,
+  "ownership": "Specific keys/hashes and product correction remain here; reusable localization-definition-native-key method enriches framework.",
+  "repository_head_at_receipt": "af0a47d174401108336b3087cdc88371ac73c85d",
+  "product_source_revision_reference": "a0075f25e4a9f61b528faf129c1eb67b25840104"
+}
