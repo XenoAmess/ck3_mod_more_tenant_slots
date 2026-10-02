@@ -1,0 +1,23 @@
+Version 10 — CK3 1.20.0.3 (Crozier)
+
+Updated the mod for CK3's new rite and tenet system.
+- Replaced the retired faith creation interface with the new rite creation GUI and added scrolling to its core tenet grid and both faith detail layouts.
+- Kept the 100 core tenet slot limit and synchronized the game's effective limit. Current native tenet definitions, costs, conflicts and DLC conditions are inherited.
+- Removed the old placeholder tenets and obsolete faith-created cleanup. Creating and saving with two real tenets and 98 trailing empty slots now works; an independent Simplified Chinese cold reload retains them.
+- Fixed the crash when opening the selector at later slots, including slot 100, and corrected hidden metadata localization and GUI scope declarations.
+- Kept the culture tradition base limit at 10000. A representative tenth tradition was selected and paid for; full establishment and 10000 traditions were not tested.
+- Refreshed the Workshop description, screenshots and thumbnail for the new rite interface.
+
+Native eligibility still applies. Add tenets consecutively: middle gaps are rejected, and 100 slots do not imply 100 compatible tenets. CK3 1.19 save migration, all DLC combinations and the separate POD patches are not verified by this release.
+
+版本 10 — CK3 1.20.0.3（Crozier）
+
+适配新版礼仪及信条系统。
+- 使用新版礼仪创建 GUI，并为创建窗口及两种信仰详情布局加入信条网格滚动。
+- 保留 100 个核心信条槽位，并同步游戏实际生效上限；继承原生信条定义、费用、互斥和 DLC 条件。
+- 移除旧占位信条及过时的创建后清理。两个真实信条加尾部 98 个空槽可正常创建、保存，简中独立冷重载后仍保持。
+- 修复后续槽位（含第 100 槽）打开选择器时的崩溃，补齐隐藏元数据本地化及 GUI scope 声明。
+- 文化传统基础上限保持 10000，代表性第 10 项传统已选取、支付并开始建立；未验证多年后完成或 10000 项穷举。
+- 更新工坊描述、实机截图及缩略图，展示新版礼仪界面。
+
+原生合法性仍生效。请连续添加信条，中间空洞会被拒绝；100 个槽位不保证有 100 个兼容信条。本次未验证 1.19 旧存档迁移、全部 DLC 组合或独立 POD 补丁。

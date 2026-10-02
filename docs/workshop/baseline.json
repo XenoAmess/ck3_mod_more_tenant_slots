@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "workshop_item_id": "3182367229",
+  "fetched_at_utc": "2026-10-02T19:22:58.169161+00:00",
+  "source": "https://api.steampowered.com/ISteamRemoteStorage/GetPublishedFileDetails/v1/",
+  "anonymous": true,
+  "http_status": 200,
+  "result": 1,
+  "title": "more_tenets_slots_xa_dev",
+  "description": "This mod adds more tenant slots to the game.\r\n\r\nIt is modified from modified original mod.\r\n\r\nSource codes: https://github.com/XenoAmess/ck3_mod_more_tenant_slots\r\n\r\nOriginal mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2904268802\r\n\r\nThis mod: https://steamcommunity.com/sharedfiles/filedetails/?id=3182367229\r\n\r\nSpecial thanks to https://steamcommunity.com/sharedfiles/filedetails/?id=2904268802 and its author Holger\r\n\r\nThis version is different as we expand the number ot max tenets from 20 to 100\r\n\r\nWe also do DEFAULT_MAX_TRADITIONS = 10000 to enlarge the tradition slots.",
+  "description_utf8_bytes": 592,
+  "description_sha256": "3ca1ede9369ee68e73333043bc2fc43c9264e9d0cd2b1524a0812dd0c80880f8",
+  "time_created": 1710362279,
+  "time_updated": 1777874459,
+  "creator_app_id": 1158310,
+  "consumer_app_id": 1158310,
+  "file_size": "1226070",
+  "preview_url": "https://images.steamusercontent.com/ugc/2462978237588524452/7BCF767EAA369F56DC49C748378D9D27DE2CC5AF/",
+  "tags": [
+    {
+      "tag": "1.16 'Chamfron'"
+    },
+    {
+      "tag": "Religion"
+    }
+  ],
+  "visibility": 0,
+  "banned": 0,
+  "ban_reason": "",
+  "version_identity_note": "The public API does not expose the uploaded descriptor version or source commit. The repository pre-migration descriptor was version 9 / CK3 1.19.0; do not treat that as independently proven public package identity."
+}
