@@ -1,0 +1,9 @@
+{
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0001",
+  "source_commit": "ab096d82c6a2b4732df85ea5c515fe2a7c91c1b8",
+  "result": "FAIL",
+  "native_error_log": "[15:02:40][E][pdx_persistent_reader.cpp:216]: Error: \"Malformed token: {, near line: 195\" in file: \"gui/window_rite_creation.gui\" near line: 195\n",
+  "reason": "GUI spacing expects scalar; vector produced malformed token at line 195. Static brace and projection checks do not validate engine property types.",
+  "fix": "Use scalar spacing = 20; regenerate; repeat with a new frozen run.",
+  "runner_failure": "Initial heartbeat lacked screen-owner CAS sequence. Runner finally cleanup and explicit CAS renewal added. Game closed using WM_CLOSE for owned PID 11964; no CK3 process remains."
+}

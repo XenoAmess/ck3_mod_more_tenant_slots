@@ -39,7 +39,7 @@ def scroll_grid(native: str, key: str, name: str, height: int,
         visibility = "\n" + indent + "\t" + match.group().strip()
         body = body[:match.start()] + body[match.end():]
     else:
-        body = body.replace("spacing = 45", "spacing = { 20 25 }", 1)
+        body = body.replace("spacing = 45", "spacing = 20", 1)
         body = body.replace('name = "tenets_grid"',
                             'name = "tenets_grid"\n' + indent + '\twrap_count = 3', 1)
     # Move the unchanged native card data model and controls two levels deeper.

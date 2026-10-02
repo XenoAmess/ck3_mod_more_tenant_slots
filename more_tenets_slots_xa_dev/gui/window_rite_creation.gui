@@ -192,7 +192,7 @@ window = {
 								flowcontainer = {
 									name = "tenets_grid"
 									wrap_count = 3
-									spacing = { 20 25 }
+									spacing = 20
 
 									datamodel = "[RiteCreationWindow.GetTenets]"
 									item = {
