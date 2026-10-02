@@ -1,0 +1,88 @@
+{
+  "schema": "mts.r0013.offline-save-inspection.v1",
+  "status": "PASS",
+  "authority": "offline-save-inspection-only",
+  "live_verified": false,
+  "source": {
+    "bytes": 91143003,
+    "sha256": "3a02cfae5d89af71b8229e09e197a1576eaae02977388ac6c043b5e6de6d001f",
+    "header": "SAV0100",
+    "path": "artifacts/bf-202609141645-5434332d4d--more-tenets-slots--R0013/userdir/save games/autosave_exit.ck3"
+  },
+  "actor_id": 33339,
+  "actor_current_rite_id": 153,
+  "rite": {
+    "id": 153,
+    "faith_id": 28,
+    "founder_id": 33339,
+    "origin_rite_id": 152,
+    "name": "松柏礼仪",
+    "saved_tag": "dynamic_rite_154",
+    "core_tenet_count": 4,
+    "core_tenet_keys": [
+      "tenet_ora_et_labora",
+      "tenet_mortification_of_the_flesh",
+      "tenet_communal_identity",
+      "tenet_sanctity_of_nature"
+    ],
+    "hidden_doctrine_count": 100,
+    "vanilla_doctrine_count": 28,
+    "doctrine_count": 128,
+    "placeholder_tenet_count": 0
+  },
+  "actor_piety_currency": "78925",
+  "source_unchanged": true,
+  "records": {
+    "actor": {
+      "section": "living",
+      "identity": 33339,
+      "bytes": 9657,
+      "sha256": "4afec0772db00782d95b1e9650d063ab5b7627c716cb535b9d4a33dcc82232f3",
+      "line_start": 1607097
+    },
+    "rite": {
+      "section": "rites",
+      "identity": 153,
+      "bytes": 6893,
+      "sha256": "93e3ed9e94deb11a09be55456bd168fe12f24926bcf0a2353e2391079db582ea",
+      "line_start": 4976644
+    }
+  },
+  "parser": {
+    "framework_commit": "a5882a567c0223884df0770494f60648677eab00",
+    "module": "tools/ck3_text_projection.py",
+    "module_sha256": "fb846fd1aacd6a12c48e9308794bc1f2d6a578b5ef7f43b47ec30c0cb19d24ae",
+    "inspection_script_sha256": "f7a29a188fc4bb07af0f452e6226fa70cb59a66f1269357d8b5f017bee133506"
+  },
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0013",
+  "inspected_at_utc": "2026-10-02T21:36:53.019340+00:00",
+  "native_reload_context": {
+    "source_commit": "9189003a2bf556f24a4b70851c4c18ec8f471419",
+    "language": "simp_chinese",
+    "release_file_count": 46,
+    "r12_r13_product_files_equal": true,
+    "binary_input": {
+      "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0012",
+      "bytes": 10941262,
+      "sha256": "c4fa0b0fdff065dd1f5367db892f8f23ff47576bce155d8c8288e8a572a08875",
+      "header": "SAV0103"
+    },
+    "transformation": "Root-controlled native cold load of R0012 binary, then native SaveExit with debug mode ON; this inspector only reads the resulting R0013 native text save.",
+    "direct_binary_melt_performed": false,
+    "core_mutation_during_reload_reported": false,
+    "draft_opened_then_cancelled_reported": true
+  },
+  "run_files": {
+    "session_json_sha256": "98cd0109a3e3e2fb84716e058447393d5b580d2e70da2ccb6f2877b511ee6bbc",
+    "session_status": "process-exited-unverified",
+    "exit_code": 0,
+    "error_log_bytes": 0,
+    "error_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "limitations": [
+    "Offline saved state only; live reload/UI evidence is maintained by the root task.",
+    "The R0012 binary was not decoded offline.",
+    "Current rite identity follows actor.rite and rites/database header, not a new draft or the dynamic tag suffix."
+  ],
+  "ownership": "Product-specific saved keys/counts and receipts remain here; reuse framework structural scanner, and enrich reusable save-format/identity methods separately."
+}
