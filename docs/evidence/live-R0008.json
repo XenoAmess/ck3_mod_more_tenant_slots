@@ -1,0 +1,39 @@
+{
+  "pid": 2096,
+  "core_slots": 100,
+  "doctrine_items": 128,
+  "nonempty_slot_indices": [
+    0,
+    1,
+    99
+  ],
+  "empty_slots": 97,
+  "native_ui_cost_before": 4837,
+  "native_ui_cost_after": 5587,
+  "selected_tenet": "tenet_anachoresis",
+  "native_ui_divergence_after": 20,
+  "validation": "Absent is not allowed for noncontiguous slots",
+  "read_only": true,
+  "schema": "mts.native-selector.v1",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0008",
+  "source_commit": "b7dc3ef0809a795270bdc3c24769ba6a5c575b95",
+  "selector_open": "PASS",
+  "selector_selection": "PASS",
+  "noncontiguous_creation": "FAIL_NATIVE_ABSENT",
+  "load_validation": "RED",
+  "native_exit_code": 0,
+  "error_log_lines": 303,
+  "missing_loc_errors": 300,
+  "undeclared_scope_errors": 3,
+  "create_and_save_this_draft": "NOT_RUN",
+  "screenshots": {
+    "r8-slot100-end.png": "e403ebf32ea940b6b5c6416b520c63c1383ae6da0f3b8b031151fb32c107f119",
+    "r8-slot100-open.png": "33caa5b29c5f670df3bf5f8140ec82da34ee427866e9cc611bed2dcb66a1d55c",
+    "r8-slot100-selected.png": "7dd8d780889b48169c23a0071c5d99d8178c3d4f060213b826eccc113ae2683a",
+    "r8-exit-confirm.png": "af7debfb9f09dd99ae42be1c87016d3af878f3dadacc7e1faf66f6551a3de143"
+  },
+  "final_save": {
+    "bytes": 91083139,
+    "sha256": "ecc186cd5ac4623616521db4eb72edd15a8b4dc5c35ec5a27341096687e18e43"
+  }
+}
