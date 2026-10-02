@@ -1,0 +1,39 @@
+{
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0005",
+  "source_commit": "43765b0ffa53ea84e398e02e64086915be387624",
+  "status": "selector-investigation-not-acceptance",
+  "exit_code": 0,
+  "dump_files": {
+    "data_types_common.txt": {
+      "sha256": "d547666be47e0af877eec947d16057034d9661ced50dbef83167eda9015e1d72",
+      "bytes": 41208
+    },
+    "data_types_gui.txt": {
+      "sha256": "56f3506561e217244ec263796f2e7476f71fe3cecc0817c3f3516838f507c438",
+      "bytes": 91864
+    },
+    "data_types_internalclausewitzgui.txt": {
+      "sha256": "16de17bfa2a0a84936708dc7f0477423f235700971a1efa914b791d35698efa6",
+      "bytes": 264115
+    },
+    "data_types_script.txt": {
+      "sha256": "2865423157c8cb4caabeb2230c22a609453c27a85d6b1261c9b87722b7b21eea",
+      "bytes": 98395
+    },
+    "data_types_uncategorized.txt": {
+      "sha256": "1f29d6829336cadbfbf7e58c5c9a3f5519273a6c7d6f3dfc72c45c98d1ef2dca",
+      "bytes": 2184143
+    }
+  },
+  "reviewed_bindings_sha256": "dff0918c7f82acc820fc8edb14dd6c0b87f8370b816d3dc477ca223cf1a0388d",
+  "conclusions": [
+    "Native registered GUI methods do not export a tenet-specific ShowWindow or slot-index setter",
+    "SelectTenet receives its own bounded TenetItem slot index; ShowWindow indexes the doctrine array",
+    "No product source, engine binary, memory, save, or workshop data changed in this run"
+  ],
+  "limits": [
+    "No creation or campaign gameplay performed",
+    "Dump does not prove arbitrary unregistered internal methods are absent",
+    "No workaround has passed live acceptance"
+  ]
+}
