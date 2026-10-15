@@ -28,3 +28,13 @@ R0017 首次真正启动 CK3；共享 runtime 的宗教 GUI source inventory 已
 Root 保留真实进程句柄并尝试原版菜单退出，已打开退出窗口、取消退出自动保存；最终 Quit 未在原 hold 截止前完成。原运行时于 05:05 触发 managed stop：原 host wait 1，native shutdown 记录 CK3 exit 1、tree gone 和清理完成；Root 旧 retained-handle 收据仍为 signaled false／exit null，不改写为已证明正常退出。keeper 原父进程 wait 0，CAS 5984 已释放。原有资源准入检查真实通过，仅允许下一场继续；正常退出、native0、业务和发布信用均为 false。
 
 用户随后明确要求未来启动／就绪超时最低默认 1800 秒。本产品新局与冷载用例及 adapter 的预算已统一为 1800 秒，五项离线测试通过，包含公共 host 实际 argv 的 1800 秒断言。框架中央下限及 CLI 默认另行提交。R0017 原 400 秒实际记录与原冻结 runtime 保持不变。
+
+## R18 后继：正常退出与产品存档 profile
+
+[R18 实际记录](native-baseline-r18-2026-10-15.md)保留915.936秒就绪、旧角色ID断言失败、普通教义候选和草案替换局部证据，以及900秒hold到期的托管停止。产品后继采用本场动态角色绑定、7200秒hold、10800秒总体上限和900秒退出预留；不重分类R18。
+
+框架 `098854517` 新增原生 `disable_exit_autosave`：读取原版退出确认框实际状态，已经false时不切换，仅true时调用一次原版Toggle并读回false。13个受头文件影响的生产单元真实重编，40项原生检查、45项Python及两种SDK工具入口通过；实际DLL为 `bc1aea14889f29d1df376156d60914de86b936cd0a4a5d52107ec5be82c4579f`。它不证明存档完整性、进程退出或产品通过，仍待本轮实机。Defender WMI登记失败与原构建driver返回1保持RED，独立授权夹具实际wait0另行记录；没有声称已登记成功。
+
+启动前完整预检又发现原normal-exit profile仅接受fixture准备，产品自写旧存档/冷载envelope无法消费。框架 `109e771d1` 提供 `finish_product_profile`，从实际产品文件、选定engine身份和产品inventory生成标准 `ck3-mod-acceptance-prepared-product-v1`，不生成或冒充fixture。两类产品saved_campaign adapter均改为消费该接口。框架13项、主adapter6项、legacy9项离线验证通过；legacy最后一项真实消费48文件候选的公共prepare→完整wrapper静态profile链，在底层game main前停止。旧005 schema RED及首轮诊断路径过长RED保留；短路径后继通过，不放松校验。
+
+具体完整链证据位于本机配置指定的 `cases/mts-lg6-001/full-host-static-preflight/RESULT.actual.json`，SHA-256 `c7ce15bea5c0eb197f12a0baebc6ec832861aaaa01c7f01e98cbce04bd63d059`，54个profile输入。runtime006仅从005窄移植这两个通用准备工具，保留原native、1800秒策略与旧runtime。以上仍为启动前和离线资格，实机与发布尚未完成。

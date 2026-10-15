@@ -8,7 +8,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from ck3_mod_acceptance_prepare import materialize_fixture_profile, materialize_product_profile, pin, write_json
+from ck3_mod_acceptance_prepare import (
+    finish_product_profile, materialize_fixture_profile, materialize_product_profile, pin, write_json,
+)
 
 
 BUDGETS = {'command_timeout': 300, 'readiness_timeout': 1800, 'timeout': 10800,
@@ -143,15 +145,9 @@ def prepare_cold(context):
     settings = Path(profile['profile']) / 'pdx_settings.txt'
     require('value="l_simp_chinese"' in settings.read_text(encoding='utf-8-sig'), 'Cold profile must be simplified Chinese')
     output = Path(context['output'])
-    preparation = output / 'profile-preparation.json'
-    write_json(preparation, {'schema': 'mts-native-cold-preparation-v1', **profile,
-        'origin': inputs['save_origin'], 'original_normal_close': normal,
-        'runtime_status': 'NOT_RUN', 'business_pass': False})
-    startup_evidence = Path(context['state_dir']) / 'preparation.json'
-    write_json(startup_evidence, {'schema': 'ck3-mod-acceptance-profile-startup-evidence-v1',
-        'profile_dir': profile['profile'], 'profile_files': list(profile['files']),
-        'profile_input_sha256': {key: row['sha256'] for key, row in profile['files'].items()},
-        'preparation': pin(preparation), 'runtime_status': 'NOT_RUN'})
+    profile = finish_product_profile(context, profile, provenance={
+        'kind': 'mts-native-cold-reload', 'origin': inputs['save_origin'],
+        'original_normal_close': normal})
     seed = {key: context['saved_campaign'][key] for key in ('save', 'bytes', 'sha256', 'player_id', 'date_raw')}
     seed['product_inventory'] = profile['product_inventory']['path']
     initial = output / 'initial-plan.json'

@@ -38,6 +38,8 @@ class LegacyAdapterTests(unittest.TestCase):
         self.context = {'product': 'more-tenets-slots', 'case': CASE['id'], 'case_spec': CASE,
             'case_contract': CONTRACT, 'run_id': 'offline-legacy-test', 'state_dir': str(self.root / 'state'),
             'output': str(self.output), 'operator_reviewer': '/root', 'saved_campaign': seed,
+            '_selected_engine': (None, {'game_version': 'offline', 'exe_sha256': 'f' * 64,
+                                       'steam_build_id': 'offline'}),
             'case_inputs': {'legacy_inspection': ADAPTER.pin(self.inspection), 'legacy_session': ADAPTER.pin(session)}}
 
     @staticmethod
@@ -69,6 +71,37 @@ class LegacyAdapterTests(unittest.TestCase):
         for flag, expected in (('--readiness-timeout', '1800'), ('--hold-seconds', '7200'), ('--timeout', '10800')):
             self.assertEqual(selected.argv[selected.argv.index(flag) + 1], expected)
 
+    def test_actual_public_prepare_to_selected_host_static_boundary(self):
+        if OPTIONS.full_host_inputs is None:
+            self.skipTest('Explicit machine inputs required for full selected-host static chain')
+        from ck3_mod_acceptance import Selection
+        from ck3_mod_acceptance_host_preflight import dryrun
+        from ck3_mod_acceptance_prepare import write_json
+        output = OPTIONS.full_host_output.resolve()
+        output.mkdir(parents=True, exist_ok=False)
+        inputs = json.loads(OPTIONS.full_host_inputs.read_text(encoding='utf-8-sig'))
+        inputs['state_dir'] = str(output / 'state')
+        inputs_path = output / 'inputs.json'
+        write_json(inputs_path, inputs)
+        products = Path(__file__).with_name('acceptance_products.json')
+        selected = Selection(OPTIONS.runtime, products, 'more-tenets-slots', CASE['id'])
+        prepared = selected.prepare(inputs_path, output / 'prepared')
+        selected = Selection(OPTIONS.runtime, products, 'more-tenets-slots', CASE['id'],
+                             prepared_path=Path(prepared['prepared_case']['path']))
+        argv_path = output / 'static-argv.json'
+        write_json(argv_path, {'schema': 'ck3-unallocated-profile-static-argv-v1',
+            'argv': selected.argv, 'state_dir': str(selected.state_dir), 'launch_authority': False})
+        result = dryrun(OPTIONS.runtime, argv_path, output / 'full-host-static-preflight')
+        self.assertEqual(result['status'], 'PASS')
+        self.assertTrue(result['actual_wrapper_profile_phase_returned'])
+        self.assertFalse(result['underlying_host_main_executed'])
+        self.assertFalse(result['game_started'])
+        self.assertFalse(result['actual_run_profile_modified'])
+        self.assertFalse(result['business_pass'])
+        self.assertEqual(prepared['preparation']['runtime_status'], 'NOT_RUN')
+        write_json(output / 'RESULT.actual.json', {'prepared': prepared, 'full_host_static': result,
+            'runtime_status': 'NOT_RUN', 'business_pass': False})
+
     def test_prepare_unchanged_save_without_resource_fixture_or_strict_origin(self):
         self.formal_inputs()
         before = ADAPTER.pin(self.save)
@@ -86,6 +119,35 @@ class LegacyAdapterTests(unittest.TestCase):
         self.assertTrue((Path(result['profile']['profile']) / 'dlc_load.json').is_file())
         self.assertEqual(json.loads((self.output / 'initial-plan.json').read_text()), {'steps': []})
         self.assertNotIn('save_origin', self.context['case_inputs'])
+
+    def test_standard_preparation_reaches_real_normal_exit_projection(self):
+        from types import SimpleNamespace
+        from ck3_mod_acceptance_normal_exit_profile import project_profile
+        self.formal_inputs()
+        result = ADAPTER.prepare_case(self.context)
+        profile = result['profile']
+        preparation = json.loads(Path(profile['preparation']['path']).read_text(encoding='utf-8-sig'))
+        self.assertEqual(preparation['schema'], 'ck3-mod-acceptance-prepared-product-v1')
+        self.assertEqual(preparation['game_version'], 'offline')
+        self.assertEqual(preparation['exe_sha256'], 'f' * 64)
+        self.assertFalse(preparation['fixture_mounted'])
+        self.assertEqual(preparation['product_inventory'], profile['product_inventory'])
+        self.assertFalse((self.output / 'frontend-fixture-start-policy.json').exists())
+        game = self.root / 'game'
+        dll, injector = self.root / 'bridge.dll', self.root / 'injector.exe'
+        runtime = {'game_dir': str(game), 'paths': {'dll': str(dll), 'injector': str(injector)}}
+        manifest = {'game': {'version': 'offline', 'exe_sha256': 'f' * 64}, 'native': {
+            'dll': {'path_key': 'dll', 'sha256': 'a' * 64},
+            'injector': {'path_key': 'injector', 'sha256': 'b' * 64}}}
+        args = SimpleNamespace(state_dir=Path(self.context['state_dir']), game_dir=game,
+                               bridge_dll=dll, bridge_injector=injector, output=self.root / 'host.json')
+        projected, guard = project_profile(args, runtime, manifest, {}, self.root / 'binding')
+        self.assertEqual(projected['userdir'], profile['profile'])
+        self.assertEqual(projected['game_version'], 'offline')
+        self.assertFalse(guard['launch_authority'])
+        manifest['game']['exe_sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'runtime identities differ'):
+            project_profile(args, runtime, manifest, {}, self.root / 'different-binding')
 
     def test_legacy_input_rejects_wrong_player_or_changed_legacy_pin(self):
         self.context['saved_campaign']['player_id'] = 29829
@@ -194,7 +256,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--framework-root', type=Path, required=True)
     parser.add_argument('--runtime', type=Path, required=True)
+    parser.add_argument('--full-host-inputs', type=Path)
+    parser.add_argument('--full-host-output', type=Path)
     OPTIONS = parser.parse_args()
+    if bool(OPTIONS.full_host_inputs) != bool(OPTIONS.full_host_output):
+        parser.error('--full-host-inputs and --full-host-output must be supplied together')
     sys.path.insert(0, str(OPTIONS.framework_root / 'tools'))
     from ck3_mod_acceptance import Selection
     PRODUCTS = Path(__file__).with_name('acceptance_products.json')

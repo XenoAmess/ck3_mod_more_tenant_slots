@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from ck3_mod_acceptance_prepare import materialize_product_profile, pin, write_json
+from ck3_mod_acceptance_prepare import finish_product_profile, materialize_product_profile, pin, write_json
 from inspect_ck3_save_player_topology import _player_records
 from native_campaign_autoplay import read_plaintext_save
 from lyd_c3_checkpoint_readback.dependencies.bounded_save_parser import (
@@ -94,15 +94,10 @@ def prepare_case(context):
     product_matches(profile, inputs)
     require('value="l_simp_chinese"' in (Path(profile['profile']) / 'pdx_settings.txt').read_text(encoding='utf-8-sig'),
             'Legacy profile must use simplified Chinese')
+    profile = finish_product_profile(context, profile, provenance={
+        'kind': 'unchanged-historical-v10-save-and-exact-formal-product',
+        'legacy_identity': identity, 'strict_cold_origin_credit': False})
     output = Path(context['output'])
-    preparation = output / 'profile-preparation.json'
-    write_json(preparation, {'schema': 'mts-native-legacy-v10-preparation-v1', **profile,
-        'legacy_identity': identity, 'runtime_status': 'NOT_RUN', 'business_pass': False})
-    write_json(Path(context['state_dir']) / 'preparation.json', {
-        'schema': 'ck3-mod-acceptance-profile-startup-evidence-v1',
-        'profile_dir': profile['profile'], 'profile_files': list(profile['files']),
-        'profile_input_sha256': {key: row['sha256'] for key, row in profile['files'].items()},
-        'preparation': pin(preparation), 'runtime_status': 'NOT_RUN'})
     seed = {key: context['saved_campaign'][key] for key in ('save', 'bytes', 'sha256', 'player_id', 'date_raw')}
     seed['product_inventory'] = profile['product_inventory']['path']
     initial = output / 'initial-plan.json'

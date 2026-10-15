@@ -186,6 +186,7 @@ class NativeAdapterTests(unittest.TestCase):
             seed.write_text('"language"={value="l_simp_chinese"}' if index == 0 else '', encoding='utf-8')
             configuration[name] = ADAPTER.pin(seed)
         self.context.update(case='native-cold-reload', case_spec=COLD_CASE,
+            _selected_engine=(None, {'game_version': 'offline', 'exe_sha256': 'f' * 64}),
             saved_campaign={'save': str(saved), 'bytes': saved.stat().st_size, 'sha256': ADAPTER.pin(saved)['sha256'],
                             'player_id': 29829, 'date_raw': 53144328},
             case_inputs={'save_origin': ADAPTER.pin(origin), 'product_dir': str(product),
@@ -194,6 +195,10 @@ class NativeAdapterTests(unittest.TestCase):
         self.assertEqual(result['startup']['mode'], 'saved_campaign')
         self.assertFalse(result['business_pass'])
         self.assertFalse((Path(result['profile']['profile']) / 'mod-content/fixture').exists())
+        startup = ADAPTER.read(Path(self.context['state_dir']) / 'preparation.json')
+        preparation = ADAPTER.read(startup['preparation']['path'])
+        self.assertEqual(preparation['schema'], 'ck3-mod-acceptance-prepared-product-v1')
+        self.assertEqual(preparation['exe_sha256'], 'f' * 64)
 
     def test_missing_result_and_failed_assertions(self):
         self.assertFalse(ADAPTER.verify_case(self.context)['case_contract_qualified'])
