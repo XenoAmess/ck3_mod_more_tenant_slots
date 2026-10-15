@@ -28,7 +28,14 @@ class NativeAdapterTests(unittest.TestCase):
                              'more-tenets-slots', CASE['id'])
         self.assertTrue(callable(selected.load_adapter().prepare_case))
         self.assertIn('--case-read-only-mcp-tool', selected.argv)
-        self.assertEqual(selected.opt_in_read_only_mcp_tools, [ADAPTER.CONTEXT_TOOL])
+        expected = {ADAPTER.CONTEXT_TOOL, *('ck3_query_player_religion_' + name + '_v1' for name in (
+            'reform_context', 'draft_groups', 'draft_doctrine_choices', 'draft_tenet_choices',
+            'doctrines', 'tenets'))}
+        self.assertEqual(set(selected.opt_in_read_only_mcp_tools), expected)
+        routed = [selected.argv[index + 1] for index, argument in enumerate(selected.argv)
+                  if argument == '--case-read-only-mcp-tool']
+        self.assertEqual(routed, selected.opt_in_read_only_mcp_tools)
+        self.assertEqual(len(routed), 7)
 
     def test_shared_profile_prepare_with_resource_only_fixture(self):
         product = self.root / 'formal'
