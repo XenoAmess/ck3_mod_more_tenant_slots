@@ -53,6 +53,21 @@ def generated_files() -> dict[str, str]:
     }
 }
 """
+    internal = "".join(f"\t\tthis = doctrine:mts_selector_doctrine_{slot:03}\n"
+                       for slot in range(1, COUNT + 1))
+    files["common/scripted_triggers/mts_selector.txt"] = HEADER + (
+        "mts_selector_internal_doctrine_trigger = {\n\tOR = {\n" + internal + "\t}\n}\n\n"
+        "mts_selector_only_metadata_update_trigger = {\n"
+        "\tOR = {\n"
+        "\t\tany_in_list = { list = added_doctrines count >= 1 }\n"
+        "\t\tany_in_list = { list = removed_doctrines count >= 1 }\n"
+        "\t}\n"
+        "\tNOT = { any_in_list = { list = added_tenets count >= 1 } }\n"
+        "\tNOT = { any_in_list = { list = removed_tenets count >= 1 } }\n"
+        "\tNOT = {\n\t\tany_in_list = {\n\t\t\tlist = added_doctrines\n"
+        "\t\t\tNOT = { mts_selector_internal_doctrine_trigger = yes }\n\t\t}\n\t}\n"
+        "\tNOT = {\n\t\tany_in_list = {\n\t\t\tlist = removed_doctrines\n"
+        "\t\t\tNOT = { mts_selector_internal_doctrine_trigger = yes }\n\t\t}\n\t}\n}\n")
     for language in LANGUAGES:
         files[f"localization/{language}/religion/mts_selector_l_{language}.yml"] = (
             f"l_{language}:\n" + HEADER + "".join(localization))

@@ -58,6 +58,20 @@ def scroll_grid(native: str, key: str, name: str, height: int,
 def changes(native: str, relative: str) -> list[tuple[str, str]]:
     if relative == "gui/window_rite_creation.gui":
         return [scroll_grid(native, "hbox", "tenets_grid", 300, creation=True)]
+    if relative == "common/on_action/religion_on_actions.txt":
+        from ck3_text_projection import blocks
+        actions = [b for b in blocks(native) if b.key == "on_rite_updated"]
+        if len(actions) != 1:
+            raise ValueError("native rite update hook is ambiguous")
+        action = native[actions[0].start:actions[0].end]
+        effect = next(b for b in blocks(action) if b.key == "effect")
+        before = action[effect.start:effect.end]
+        body = action[effect.opening + 1:effect.end - 1]
+        nested = "\n".join("\t" + line if line else line for line in body.split("\n"))
+        after = ("effect = {\n\t\tif = {\n\t\t\tlimit = {\n"
+                 "\t\t\t\tNOT = { mts_selector_only_metadata_update_trigger = yes }\n"
+                 "\t\t\t}\n" + nested + "}\n\t}")
+        return [(action, action.replace(before, after, 1))]
     patches = [scroll_grid(native, "flowcontainer", "doctrines_grid_core_tenets", 250),
                scroll_grid(native, "flowcontainer", "doctrines_compact_grid_core_tenets", 130)]
     # Prepare only the player's selected rite, before the unchanged native open.
@@ -66,9 +80,10 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
     prepare = "[GetScriptedGui('mts_prepare_selector_gui').Execute( " \
         "GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', " \
         "FaithWindow.GetSelectedRite.MakeScope ).End )]"
-    for key, name in (("button_standard", "edit_rite"),
-                      ("button_standard", "create_rite"),
-                      ("button_standard_puppet", "create_rite_puppet")):
+    # New rites use the native default-draft factory, which fills available
+    # doctrine groups. Editing clones the existing rite, so only that path
+    # needs to prepare compatibility metadata on the source itself.
+    for key, name in (("button_standard", "edit_rite"),):
         span = named_block(native, key, name)
         before = native[span.start:span.end]
         line = re.search(r'(?m)^([ \t]*)onclick = "' + re.escape(opening) + r'"$', before)
@@ -97,7 +112,8 @@ def generate(framework: Path, game: Path, check: bool = False) -> dict:
     results = {}
     from selector_padding import generate_padding
     results["selector_padding"] = generate_padding(MOD, check)
-    for relative in ("gui/window_faith.gui", "gui/window_rite_creation.gui"):
+    for relative in ("gui/window_faith.gui", "gui/window_rite_creation.gui",
+                     "common/on_action/religion_on_actions.txt"):
         native = (game / "game" / relative).read_text(encoding="utf-8-sig")
         patches = changes(native, relative)
         expected = contract["sources"][relative]["normalized_sha256"]
@@ -105,15 +121,21 @@ def generate(framework: Path, game: Path, check: bool = False) -> dict:
         blocks(body)
         if recover(body, expected, patches) != native:
             raise ValueError(f"native recovery differs: {relative}")
+        if relative.startswith("common/on_action/"):
+            action = next(b for b in blocks(body) if b.key == "on_rite_updated")
+            body = body[action.start:action.end] + "\n"
+            output_relative = "common/on_action/zz_mts_selector_on_action.txt"
+        else:
+            output_relative = relative
         content = (HEADER + body).encode("utf-8-sig")
-        target = MOD / relative
+        target = MOD / output_relative
         if check:
             if target.read_bytes() != content:
                 raise ValueError(f"generated output differs: {relative}")
         else:
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(content)
-        results[relative] = {"sha256": hashlib.sha256(content).hexdigest(),
+        results[output_relative] = {"sha256": hashlib.sha256(content).hexdigest(),
                              "native_recovery": "PASS", "changes": len(patches)}
     return results
 

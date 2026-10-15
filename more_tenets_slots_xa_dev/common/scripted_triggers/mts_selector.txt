@@ -1,0 +1,126 @@
+﻿# GENERATED FILE - MTS native selector index compatibility
+mts_selector_internal_doctrine_trigger = {
+	OR = {
+		this = doctrine:mts_selector_doctrine_001
+		this = doctrine:mts_selector_doctrine_002
+		this = doctrine:mts_selector_doctrine_003
+		this = doctrine:mts_selector_doctrine_004
+		this = doctrine:mts_selector_doctrine_005
+		this = doctrine:mts_selector_doctrine_006
+		this = doctrine:mts_selector_doctrine_007
+		this = doctrine:mts_selector_doctrine_008
+		this = doctrine:mts_selector_doctrine_009
+		this = doctrine:mts_selector_doctrine_010
+		this = doctrine:mts_selector_doctrine_011
+		this = doctrine:mts_selector_doctrine_012
+		this = doctrine:mts_selector_doctrine_013
+		this = doctrine:mts_selector_doctrine_014
+		this = doctrine:mts_selector_doctrine_015
+		this = doctrine:mts_selector_doctrine_016
+		this = doctrine:mts_selector_doctrine_017
+		this = doctrine:mts_selector_doctrine_018
+		this = doctrine:mts_selector_doctrine_019
+		this = doctrine:mts_selector_doctrine_020
+		this = doctrine:mts_selector_doctrine_021
+		this = doctrine:mts_selector_doctrine_022
+		this = doctrine:mts_selector_doctrine_023
+		this = doctrine:mts_selector_doctrine_024
+		this = doctrine:mts_selector_doctrine_025
+		this = doctrine:mts_selector_doctrine_026
+		this = doctrine:mts_selector_doctrine_027
+		this = doctrine:mts_selector_doctrine_028
+		this = doctrine:mts_selector_doctrine_029
+		this = doctrine:mts_selector_doctrine_030
+		this = doctrine:mts_selector_doctrine_031
+		this = doctrine:mts_selector_doctrine_032
+		this = doctrine:mts_selector_doctrine_033
+		this = doctrine:mts_selector_doctrine_034
+		this = doctrine:mts_selector_doctrine_035
+		this = doctrine:mts_selector_doctrine_036
+		this = doctrine:mts_selector_doctrine_037
+		this = doctrine:mts_selector_doctrine_038
+		this = doctrine:mts_selector_doctrine_039
+		this = doctrine:mts_selector_doctrine_040
+		this = doctrine:mts_selector_doctrine_041
+		this = doctrine:mts_selector_doctrine_042
+		this = doctrine:mts_selector_doctrine_043
+		this = doctrine:mts_selector_doctrine_044
+		this = doctrine:mts_selector_doctrine_045
+		this = doctrine:mts_selector_doctrine_046
+		this = doctrine:mts_selector_doctrine_047
+		this = doctrine:mts_selector_doctrine_048
+		this = doctrine:mts_selector_doctrine_049
+		this = doctrine:mts_selector_doctrine_050
+		this = doctrine:mts_selector_doctrine_051
+		this = doctrine:mts_selector_doctrine_052
+		this = doctrine:mts_selector_doctrine_053
+		this = doctrine:mts_selector_doctrine_054
+		this = doctrine:mts_selector_doctrine_055
+		this = doctrine:mts_selector_doctrine_056
+		this = doctrine:mts_selector_doctrine_057
+		this = doctrine:mts_selector_doctrine_058
+		this = doctrine:mts_selector_doctrine_059
+		this = doctrine:mts_selector_doctrine_060
+		this = doctrine:mts_selector_doctrine_061
+		this = doctrine:mts_selector_doctrine_062
+		this = doctrine:mts_selector_doctrine_063
+		this = doctrine:mts_selector_doctrine_064
+		this = doctrine:mts_selector_doctrine_065
+		this = doctrine:mts_selector_doctrine_066
+		this = doctrine:mts_selector_doctrine_067
+		this = doctrine:mts_selector_doctrine_068
+		this = doctrine:mts_selector_doctrine_069
+		this = doctrine:mts_selector_doctrine_070
+		this = doctrine:mts_selector_doctrine_071
+		this = doctrine:mts_selector_doctrine_072
+		this = doctrine:mts_selector_doctrine_073
+		this = doctrine:mts_selector_doctrine_074
+		this = doctrine:mts_selector_doctrine_075
+		this = doctrine:mts_selector_doctrine_076
+		this = doctrine:mts_selector_doctrine_077
+		this = doctrine:mts_selector_doctrine_078
+		this = doctrine:mts_selector_doctrine_079
+		this = doctrine:mts_selector_doctrine_080
+		this = doctrine:mts_selector_doctrine_081
+		this = doctrine:mts_selector_doctrine_082
+		this = doctrine:mts_selector_doctrine_083
+		this = doctrine:mts_selector_doctrine_084
+		this = doctrine:mts_selector_doctrine_085
+		this = doctrine:mts_selector_doctrine_086
+		this = doctrine:mts_selector_doctrine_087
+		this = doctrine:mts_selector_doctrine_088
+		this = doctrine:mts_selector_doctrine_089
+		this = doctrine:mts_selector_doctrine_090
+		this = doctrine:mts_selector_doctrine_091
+		this = doctrine:mts_selector_doctrine_092
+		this = doctrine:mts_selector_doctrine_093
+		this = doctrine:mts_selector_doctrine_094
+		this = doctrine:mts_selector_doctrine_095
+		this = doctrine:mts_selector_doctrine_096
+		this = doctrine:mts_selector_doctrine_097
+		this = doctrine:mts_selector_doctrine_098
+		this = doctrine:mts_selector_doctrine_099
+		this = doctrine:mts_selector_doctrine_100
+	}
+}
+
+mts_selector_only_metadata_update_trigger = {
+	OR = {
+		any_in_list = { list = added_doctrines count >= 1 }
+		any_in_list = { list = removed_doctrines count >= 1 }
+	}
+	NOT = { any_in_list = { list = added_tenets count >= 1 } }
+	NOT = { any_in_list = { list = removed_tenets count >= 1 } }
+	NOT = {
+		any_in_list = {
+			list = added_doctrines
+			NOT = { mts_selector_internal_doctrine_trigger = yes }
+		}
+	}
+	NOT = {
+		any_in_list = {
+			list = removed_doctrines
+			NOT = { mts_selector_internal_doctrine_trigger = yes }
+		}
+	}
+}

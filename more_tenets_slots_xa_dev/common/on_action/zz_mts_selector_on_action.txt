@@ -1,0 +1,107 @@
+﻿# GENERATED FILE - CK3 1.20.0.4 native GUI with MTS scrollable tenet grids
+on_rite_updated = {
+	events = {
+	}
+
+	effect = {
+		if = {
+			limit = {
+				NOT = { mts_selector_only_metadata_update_trigger = yes }
+			}
+
+			root = {
+				save_scope_as = rite
+			}
+
+			if = { # slient it for EC since EC has unique evvent to inform
+				limit = {
+					exists = scope:changed_tenets_or_doctrines
+					OR = {
+						NOT = {
+							faith = { has_variable = ecumenical_council_ongoing }
+						}
+						exists = scope:consume_rite_edit_token
+					}
+				}
+
+				# The message icon slot must never be left unset, hence the fall-through to the rite itself
+				if = {
+					limit = { any_in_list = { list = added_tenets count >= 1 } }
+					every_in_list = {
+						list = added_tenets
+						save_scope_as = rite_change_icon
+					}
+				}
+				else_if = {
+					limit = { any_in_list = { list = added_doctrines count >= 1 } }
+					every_in_list = {
+						list = added_doctrines
+						save_scope_as = rite_change_icon
+					}
+				}
+				else_if = {
+					limit = { any_in_list = { list = removed_tenets count >= 1 } }
+					every_in_list = {
+						list = removed_tenets
+						save_scope_as = rite_change_icon
+					}
+				}
+				else_if = {
+					limit = { any_in_list = { list = removed_doctrines count >= 1 } }
+					every_in_list = {
+						list = removed_doctrines
+						save_scope_as = rite_change_icon
+					}
+				}
+				else = {
+					root = { save_scope_as = rite_change_icon }
+				}
+
+				every_player = {
+					limit = {
+						OR = {
+							rite = root
+							AND = {
+								faith = root.faith
+								root.faith.main_rite = root
+							}
+						}
+					}
+					send_interface_message = {
+						type = msg_rite_updated
+						title = msg_rite_updated
+						left_icon = scope:rite_change_icon
+
+						show_as_tooltip = {
+							every_in_list = {
+								list = removed_doctrines
+								root = { remove_rite_doctrine = prev }
+							}
+							every_in_list = {
+								list = added_doctrines
+								root = { add_rite_doctrine = prev }
+							}
+							every_in_list = {
+								list = removed_tenets
+								root = { remove_rite_tenet = prev }
+							}
+							every_in_list = {
+								list = added_tenets
+								root = { add_rite_tenet = prev }
+							}
+						}
+					}
+				}
+			}
+
+			head_of_rite ?= {
+				trigger_event = faith_creation.0004 # Update HoF succession law
+				trigger_event = faith_creation.0001 # Temporal rel head setup
+				trigger_event = faith_creation.0002 # Spiritual rel head setup
+				trigger_event = faith_creation.0011 # Restore Temporal rel head
+				trigger_event = faith_creation.0012 # Restore Spiritual rel head
+				trigger_event = faith_creation.1100 # Destroy HoF title if no longer valid
+			}
+		}
+	}
+}
