@@ -25,8 +25,8 @@
           "budgets": {
             "command_timeout": 300,
             "readiness_timeout": 1800,
-            "timeout": 2100,
-            "hold_seconds": 900,
+            "timeout": 10800,
+            "hold_seconds": 7200,
             "poll_interval": 0.5
           },
           "required_mcp_tools": [
@@ -50,7 +50,7 @@
           ],
           "normal_close": {
             "owner": "shared entry/CaseClient",
-            "reserve_seconds": 90,
+            "reserve_seconds": 900,
             "actual_retained_OS0_and_original_native0_required": true
           },
           "business_contract_applicable": true,
@@ -79,8 +79,8 @@
           "budgets": {
             "command_timeout": 300,
             "readiness_timeout": 1800,
-            "timeout": 2100,
-            "hold_seconds": 900,
+            "timeout": 10800,
+            "hold_seconds": 7200,
             "poll_interval": 0.5
           },
           "required_mcp_tools": [
@@ -104,7 +104,7 @@
           ],
           "normal_close": {
             "owner": "shared entry/CaseClient",
-            "reserve_seconds": 90,
+            "reserve_seconds": 900,
             "actual_retained_OS0_and_original_native0_required": true
           },
           "business_contract_applicable": true,

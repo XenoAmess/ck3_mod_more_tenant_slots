@@ -11,8 +11,9 @@ from pathlib import Path
 from ck3_mod_acceptance_prepare import materialize_fixture_profile, materialize_product_profile, pin, write_json
 
 
-BUDGETS = {'command_timeout': 300, 'readiness_timeout': 1800, 'timeout': 2100,
-           'hold_seconds': 900, 'poll_interval': 0.5}
+BUDGETS = {'command_timeout': 300, 'readiness_timeout': 1800, 'timeout': 10800,
+           'hold_seconds': 7200, 'poll_interval': 0.5}
+QUIT_RESERVE = 900
 CONTEXT_TOOL = 'ck3_query_player_religion_context_v1'
 
 
@@ -183,7 +184,7 @@ def root_phase(context, client, phase, native):
         'actual_native': native, 'instructions': phase['instructions'],
         'action_priority': 'Use available typed MCP first; record actual capability gaps before official UI fallback',
         'no_business_PASS_from_ACK': True, 'no_direct_fixture_setter_for_tested_doctrines': True,
-    }, reserve=90)
+    }, reserve=QUIT_RESERVE)
     validate_response(context, phase, response, client.operator_reviewer)
     client.checkpoint(phase['id'] + '-accepted', response)
     return response
@@ -195,8 +196,31 @@ def validate_response(context, phase, response, reviewer):
     require(response.get('passed') is True and all(response.get('assertions', {}).get(key) is True
             for key in phase['requirements']), 'Reported-bug phase is incomplete or failed')
     require(response.get('evidence'), 'Real GUI/native/save evidence pins required')
+    if not is_cold(context) and phase['id'] == 'mts-doctrines-and-tenets':
+        require(response.get('initial_actor_identity_verified') is True,
+                'Actual Robert name/title must be reviewed; runtime entity IDs are not fixed')
     for row in response['evidence']:
         checked(row)
+
+
+def initial_actor_binding(context, client, frame):
+    """Join this start's semantic bookmark with its actual runtime actor ID."""
+    report = client.read_report()
+    start = report['frontend_fixture_start_submission']
+    result = start['result']
+    selected = result['selected_candidate']
+    actual = report['frontend_fixture_business_context']
+    binding = actual['binding']
+    expected = case_contract(context)['initial_bookmark']
+    require(start.get('acknowledged') is True and result.get('pre_start_identity_proven') is True and
+            all(selected.get(key) == value for key, value in expected.items()) and
+            actual.get('actual_current_actor_bound') is True and actual.get('qualification_observed') is True and
+            binding.get('actor_character_id') == frame['played_character']['character_id'] and
+            binding.get('date_raw') == frame['date_raw'] == selected['selected_bookmark_start_date_raw'],
+            'Actual initial actor differs from this native Robert start and current role binding')
+    return {'selected_bookmark': selected, 'actual_binding': binding,
+            'fixture_target_identity_proven': actual.get('fixture_target_identity_proven'),
+            'semantic_name_and_title_review_required': True}
 
 
 def run_case(context, client):
@@ -204,9 +228,9 @@ def run_case(context, client):
     contract = case_contract(context)
     before = client.snapshot(require_event_free=False)
     origin = cold_origin(context)[0] if is_cold(context) else None
-    initial_actor = origin['player_id'] if origin else contract['initial_actor_id']
-    require(before['played_character']['character_id'] == initial_actor,
-            'Ordinary 1066 Robert initial actor not observed')
+    initial = None if origin else initial_actor_binding(context, client, before)
+    require(not origin or before['played_character']['character_id'] == origin['player_id'],
+            'Cold saved actor differs from actual save origin')
     if origin:
         process = getattr(client, '_process', None)
         require(process and process['pid'] != origin['actual_process']['pid'] and
@@ -222,7 +246,7 @@ def run_case(context, client):
         client.checkpoint('mts-native-context-capability-red', {'run_id': context['run_id'], 'error': repr(error),
             'native_context_pass': False, 'business_pass': False, 'original_process_replay_forbidden': True})
         client.root_checkpoint('mts-native-context-diagnostic', {'actual_snapshot': before, 'error': repr(error),
-            'action': 'Retain actual process and inspect the capability RED; do not mark business/native PASS'}, reserve=90)
+            'action': 'Retain actual process and inspect the capability RED; do not mark business/native PASS'}, reserve=QUIT_RESERVE)
         raise
     for phase in contract['phases']:
         for index, step in enumerate(contract.get('native_observations', [])):
@@ -232,11 +256,13 @@ def run_case(context, client):
                 observations[identifier] = client.execute_plan([{'id': identifier, 'tool': step['tool'],
                     'args': step.get('args', {}), 'fresh_revision': True}], identifier)
         phases[phase['id']] = root_phase(context, client, phase,
-                                         {'observations': observations, 'saved_origin': origin} if origin else observations)
+            {'observations': observations, 'saved_origin': origin} if origin else
+            {'observations': observations, 'initial_actor_binding': initial})
         observations[phase['id']] = observe_context(context, client, 'mts-native-context-after-' + phase['id'])
     facts = {'schema': 'mts-native-reported-bugs-result-v1', 'run_id': context['run_id'],
         'product': context['product'], 'case': context['case'], 'contract': contract,
         'actual_initial_snapshot': before, 'actual_native_observations': observations, 'root_phases': phases,
+        'initial_actor_binding': initial,
         'actual_process': getattr(client, '_process', None), 'case_contract_qualified': True,
         'gui_contract_qualified': True, 'native_credit': 'snapshot and current religion context only; extra queries retain their own actual results',
         'business_contract_applicable': True, 'business_pass': True, 'product_release_pass': False}

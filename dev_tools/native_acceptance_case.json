@@ -2,7 +2,12 @@
   "schema": "mts-native-reported-bugs-v1",
   "product": "more-tenets-slots",
   "case": "native-october-reported-bugs",
-  "initial_actor_id": 29829,
+  "initial_bookmark": {
+    "selected_bookmark_group_key": "bm_group_1066",
+    "selected_bookmark_key": "bm_1066_rags_to_riches",
+    "selected_character_name_key": "bookmark_rags_to_riches_duke_robert",
+    "selected_character_government_key": "feudal_government"
+  },
   "post_start": {
     "government_key": "feudal_government",
     "primary_title_tier_key": "duchy",
@@ -15,7 +20,7 @@
     {
       "id": "mts-doctrines-and-tenets",
       "requirements": ["ordinary_doctrine_candidates", "ordinary_doctrine_replacement", "core_tenet_replacement", "last_slot_selection"],
-      "instructions": "Observe ordinary doctrine candidates, replace one ordinary doctrine and one core tenet through available typed native controls first, verify old choices are removed and the final supported slot remains selectable. If a typed action is unavailable, preserve its real diagnostic before official UI use. Do not set tested doctrines or tenets through a fixture. Save actual before/after evidence."
+      "instructions": "First review the actual Robert Guiscard/Apulia name and title in this process, returning initial_actor_identity_verified=true with its evidence; runtime entity IDs are not stable constants. Observe ordinary doctrine candidates, replace one ordinary doctrine and one core tenet through available typed native controls first, verify old choices are removed and the final supported slot remains selectable. If a typed action is unavailable, preserve its real diagnostic before official UI use. Do not set tested doctrines or tenets through a fixture. Save actual before/after evidence."
     },
     {
       "id": "mts-rites-culture-notifications-save",

@@ -37,6 +37,38 @@ class NativeAdapterTests(unittest.TestCase):
         self.assertEqual(routed, selected.opt_in_read_only_mcp_tools)
         self.assertEqual(len(routed), 7)
         self.assertEqual(selected.argv[selected.argv.index('--readiness-timeout') + 1], '1800')
+        self.assertEqual(selected.argv[selected.argv.index('--hold-seconds') + 1], '7200')
+        self.assertEqual(selected.argv[selected.argv.index('--timeout') + 1], '10800')
+
+    def test_actual_start_identity_uses_runtime_actor_not_old_numeric_id(self):
+        import copy
+        report = self.start_report(31254)
+
+        class Client:
+            def read_report(self):
+                return report
+
+        frame = {'played_character': {'character_id': 31254}, 'date_raw': 53144328}
+        actual = ADAPTER.initial_actor_binding(self.context, Client(), frame)
+        self.assertEqual(actual['actual_binding']['actor_character_id'], 31254)
+        self.assertFalse(actual['fixture_target_identity_proven'])
+        report = copy.deepcopy(report)
+        report['frontend_fixture_business_context']['binding']['actor_character_id'] = 29829
+        with self.assertRaisesRegex(ValueError, 'differs from this native Robert start'):
+            ADAPTER.initial_actor_binding(self.context, Client(), frame)
+        report = self.start_report(31254)
+        report['frontend_fixture_start_submission']['result']['selected_candidate']['selected_character_name_key'] = 'another_character'
+        with self.assertRaisesRegex(ValueError, 'differs from this native Robert start'):
+            ADAPTER.initial_actor_binding(self.context, Client(), frame)
+
+    @staticmethod
+    def start_report(actor):
+        return {'frontend_fixture_start_submission': {'acknowledged': True, 'result': {
+            'pre_start_identity_proven': True, 'selected_candidate': {
+                **CONTRACT['initial_bookmark'], 'selected_bookmark_start_date_raw': 53144328}}},
+            'frontend_fixture_business_context': {'actual_current_actor_bound': True,
+                'qualification_observed': True, 'fixture_target_identity_proven': False,
+                'binding': {'actor_character_id': actor, 'date_raw': 53144328}}}
 
     def test_shared_profile_prepare_with_resource_only_fixture(self):
         product = self.root / 'formal'
@@ -75,6 +107,9 @@ class NativeAdapterTests(unittest.TestCase):
             operator_reviewer = '/root'
             _process = {'pid': 123}
 
+            def read_report(self):
+                return NativeAdapterTests.start_report(29829)
+
             def snapshot(self, **kwargs):
                 return {'played_character': {'character_id': 29829}, 'date_raw': 53144328}
 
@@ -88,7 +123,8 @@ class NativeAdapterTests(unittest.TestCase):
 
             def root_checkpoint(self, name, request, reserve):
                 value = {'run_id': context['run_id'], 'reviewer': '/root', 'passed': True,
-                    'assertions': {key: True for key in request['required_assertions']}, 'evidence': [evidence]}
+                    'assertions': {key: True for key in request['required_assertions']}, 'evidence': [evidence],
+                    'initial_actor_identity_verified': True}
                 if 'save_written' in request['required_assertions']:
                     value['save_origin'] = {'save': ADAPTER.pin(saved), 'player_id': 29829,
                         'date_raw': 53144328, 'rite_id': 1, 'faith_id': 2, 'religion_id': 3,
