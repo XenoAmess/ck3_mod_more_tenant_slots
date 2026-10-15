@@ -4,7 +4,7 @@
   "item_id": "3182367229",
   "app_id": 1158310,
   "machine_id": "bf-202609141645-5434332d4d",
-  "status": "CACHE_LOAD_PENDING",
+  "status": "complete",
   "draft_only": false,
   "published_date_asia_shanghai": "2026-10-16",
   "uploaded_source_commit": "d1c9deee5c0214f9418c8df821a8ac9f3f97d334",
@@ -21,7 +21,7 @@
     "steam_build": 25734779,
     "exe_sha256": "98702f88a547cde2eaf29a85f93b85f68ee4cf8148336a4f7afaeb75319dd518",
     "live_language": "simp_chinese",
-    "authority": "R22 MAIN and R23 independent COLD exact game identity; publication postflight remains pending.",
+    "authority": "Exact game identity recorded in R22 MAIN, R23 COLD and R25 native menu observation. No separate post-publication filesystem EXE recheck is claimed.",
     "post_publication_exe_recheck": null
   },
   "previous_public_baseline": {
@@ -208,25 +208,49 @@
     "authority": "Actual fresh SDK download and strict 48-file match; independent of game menu-load qualification."
   },
   "cache_menu_load": {
-    "status": "CACHE_LOAD_PENDING",
-    "actual_run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0024",
-    "actual_loaded_cache_path": null,
-    "only_selected_product_enabled": null,
-    "language": null,
-    "root_review": null,
-    "retained_os_exit_code": null,
-    "native_process_exit_code": null,
-    "host_returncode": 1,
-    "cleanup_ok": null,
+    "status": "PASS",
+    "actual_run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0025",
+    "actual_cache_profile_path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1158310\\3182367229",
+    "load_evidence_kind": "COMBINED_MANAGED_CACHE_PROFILE_AND_ACTUAL_MAIN_MENU_LOAD",
+    "combined_managed_cache_profile_and_actual_menu_load": true,
+    "independent_engine_vfs_path_readback": "UNKNOWN",
+    "actual_cache_mount_proven_by_independent_vfs": false,
+    "only_selected_product_enabled": true,
+    "language": "simp_chinese",
+    "actual_process": {
+      "pid": 16724,
+      "create_time": 1792092300.8483706,
+      "retained_synchronize_query_handle_acquired": true
+    },
+    "case_contract_qualified": true,
+    "gui_contract_qualified": true,
+    "case_acceptance_pass": true,
+    "qualified_boundary_pass": true,
+    "business_contract_applicable": false,
+    "business_pass": false,
+    "product_release_pass": false,
+    "normal_close_qualified": true,
+    "retained_os_exit_code": 0,
+    "native_process_exit_code": 0,
+    "host_returncode": 0,
+    "original_public_returncode": 0,
+    "cleanup_ok": true,
+    "managed_thread_finished": true,
+    "actual_gui_exit_actions": 1,
+    "titlebar_fallback_dispatched": false,
+    "root_review": {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0025\\case-output\\normal-quit-root-result.json",
+      "bytes": 2645,
+      "sha256": "d7c9f80a7d9f0e9a04a6b0ec8d7b2568aa783e465176a16bcb1e5dd5a0571642"
+    },
     "actual_receipt": {
       "machine_id": "bf-202609141645-5434332d4d",
-      "path": "docs/evidence/native-cache-r24.json",
-      "bytes": 7343,
-      "sha256": "d1ff820f314fee69cad53e05b17abc72ec31668dfd1cd6789c42aae250d351ba"
+      "path": "docs/evidence/native-cache-r25.json",
+      "bytes": 26475,
+      "sha256": "5dbdc745eaf8f902c93053855eea723c77dba8c0a4b7ceb2314b8acab4b4ca33"
     },
-    "scope": "R24 failed before CK3 launch because the selected runtime rejected workshop-cache preparation schema. No menu or normal-exit credit.",
-    "normal_close_qualified": false,
-    "original_public_returncode": 2
+    "scope": "Actual managed cache-only profile plus stable native main menu and normal0; no independent VFS proof or campaign business PASS."
   },
   "prepublication_acceptance": {
     "main": {
@@ -283,13 +307,69 @@
         "sha256": "2e8769f354c30b4ac9170c410f17402451e758c1ca77d486c446b8fe7b588004"
       }
     },
-    "scope": "Recorded 48-file candidate on exact CK3 1.20.0.4 in Simplified Chinese. Final formal build identity must be independently checked.",
+    "scope": "Recorded 48-file candidate on exact CK3 1.20.0.4 in Simplified Chinese; formal-tag/build receipt independently verifies the final formal product bytes are identical.",
     "notification_claim": "Root reviewed four original frames per creation/cold window; no repeating top rite-update notices observed in each bounded window longer than 75 seconds.",
     "native_unknown_ack_preserved": true,
     "all_logs_clean": false
   },
   "closure": {
     "steam_offline": {
+      "status": "PASS",
+      "captured_at_utc": "2026-10-15T19:44:47.133777+00:00",
+      "reviewed_at_utc": "2026-10-15T19:45:34.658550+00:00",
+      "operator_reviewed": true,
+      "observed_text": "离线模式",
+      "observed_clock": "2026/10/16 03:44",
+      "screenshot": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\r0025-final-offline-01\\steam-moved.png",
+      "screenshot_bytes": 1212726,
+      "screenshot_sha256": "942c28522d002b173e34b6e1bb4f36c7d4599b9016eb81ba62fbad7d45de1f73",
+      "freshness_proof": {
+        "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\r0025-final-offline-01\\steam-frame-freshness.json",
+        "bytes": 1218,
+        "sha256": "01862014e1fa6af53648c04bf2a265d9cebea68fe0c1e644f8372bed01fe90d9"
+      },
+      "ck3_process_count": 0,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0025\\root-final-offline-review.json",
+        "bytes": 1296,
+        "sha256": "3d76b2ebd56c718cb31c00064729b1725b25e916e608fd7949596af865446060"
+      },
+      "scope": "Final fresh official offline state after the actual cache run, directly reviewed by Root."
+    },
+    "resource_release": {
+      "cas_sequence": 6365,
+      "at_utc": "2026-10-15T19:46:15.043193+00:00",
+      "resources": [],
+      "keeper_actual_exit_code": 0,
+      "allocator_actual_exit_code": 0,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/native-cache-r25-resource-release.json",
+        "bytes": 1489,
+        "sha256": "e0afe34ae9cc070c4b949943f543c696f7e480f81943af467a84157a64d76fd4"
+      }
+    },
+    "publication_verified": true,
+    "fresh_cache_verified": true,
+    "cache_menu_load_verified": true,
+    "steam_offline_verified": true,
+    "release_complete": true,
+    "documentation_delivery": "Final permanent master package records completed cache run R25 and actual final offline/resource closure, preserving original RED attempts and per-case false business flags.",
+    "latest_cache_attempt_resource_release": {
+      "cas_sequence": 6365,
+      "at_utc": "2026-10-15T19:46:15.043193+00:00",
+      "resources": [],
+      "keeper_actual_exit_code": 0,
+      "allocator_actual_exit_code": 0,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/native-cache-r25-resource-release.json",
+        "bytes": 1489,
+        "sha256": "e0afe34ae9cc070c4b949943f543c696f7e480f81943af467a84157a64d76fd4"
+      }
+    },
+    "steam_offline_after_upload": {
       "status": "PASS",
       "captured_at_utc": "2026-10-15T18:47:21.197981+00:00",
       "operator_reviewed": true,
@@ -313,7 +393,7 @@
       "reviewed_at_utc": "2026-10-15T18:51:26.999169+00:00",
       "scope": "Actual post-upload official offline transition and Root fresh-image review. Final post-cache-load closure still pending."
     },
-    "resource_release": {
+    "resource_release_after_upload": {
       "cas_sequence": 6341,
       "at_utc": "2026-10-15T18:52:41.027084+00:00",
       "resources": [],
@@ -323,23 +403,6 @@
         "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/screen-resource-release.json",
         "bytes": 1447,
         "sha256": "d8dc4ba8cdff693d0699a9f3c426c1854eb5bb62db7bd83c983083cae9d6c825"
-      }
-    },
-    "publication_verified": true,
-    "fresh_cache_verified": true,
-    "cache_menu_load_verified": false,
-    "steam_offline_verified": true,
-    "release_complete": false,
-    "documentation_delivery": "This first permanent master package records completed upload/readback/download/offline milestones and R24 prelaunch RED. Final cache load remains pending.",
-    "latest_cache_attempt_resource_release": {
-      "cas_sequence": 6345,
-      "resources": [],
-      "keeper_actual_exit_code": 0,
-      "actual_receipt": {
-        "machine_id": "bf-202609141645-5434332d4d",
-        "path": "artifacts/bugfix-20261015/native-cache-r24-resource-release.json",
-        "bytes": 1475,
-        "sha256": "c7cb268d1bbd0ecc0a6c07e1369231ecb4e75bf6ce78c61e00616f82d964751d"
       }
     }
   },
@@ -499,6 +562,36 @@
       "path": "docs/evidence/native-cache-r24.json",
       "bytes": 7343,
       "sha256": "d1ff820f314fee69cad53e05b17abc72ec31668dfd1cd6789c42aae250d351ba"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/evidence/native-cache-r25.json",
+      "bytes": 26475,
+      "sha256": "5dbdc745eaf8f902c93053855eea723c77dba8c0a4b7ceb2314b8acab4b4ca33"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/native-cache-r25-resource-release.json",
+      "bytes": 1489,
+      "sha256": "e0afe34ae9cc070c4b949943f543c696f7e480f81943af467a84157a64d76fd4"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0025\\root-final-offline-review.json",
+      "bytes": 1296,
+      "sha256": "3d76b2ebd56c718cb31c00064729b1725b25e916e608fd7949596af865446060"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/allocation-a12-root-observed-rejection.json",
+      "bytes": 1665,
+      "sha256": "4c3c12618b5202821474a36fca09a661a5b6804a9ec80e2c00263925c4b6cad7"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\workshop-cache-profile-20261016-001\\R24-CLOSURE-INPUT.actual.json",
+      "bytes": 4515,
+      "sha256": "1ae69f76465990f24915c04055a99a309a3cc7643447d3c76ef644120e93ba65"
     }
   ],
   "uncovered_scope": [
@@ -511,7 +604,7 @@
   "ownership": "Product-only permanent publication record and version comparison. Generic uploader, downloader, text normalization and managed acceptance remain in ck3_eternal_recurrence. No framework changes or external operations by this task.",
   "published": true,
   "publication_verified": true,
-  "release_complete": false,
+  "release_complete": true,
   "milestone_recorded_at_utc": "2026-10-15T19:03:14.336273+00:00",
   "source_pin_validation": {
     "checked_nested_source_pins": 35,
@@ -534,8 +627,69 @@
       }
     ]
   },
-  "pending": [
-    "Actual managed menu load of the freshly downloaded cache",
-    "Normal close and final resources/offline closure after that cache-load attempt"
-  ]
+  "pending": [],
+  "previous_cache_attempts": [
+    {
+      "status": "CACHE_LOAD_PENDING",
+      "actual_run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0024",
+      "actual_loaded_cache_path": null,
+      "only_selected_product_enabled": null,
+      "language": null,
+      "root_review": null,
+      "retained_os_exit_code": null,
+      "native_process_exit_code": null,
+      "host_returncode": 1,
+      "cleanup_ok": null,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "docs/evidence/native-cache-r24.json",
+        "bytes": 7343,
+        "sha256": "d1ff820f314fee69cad53e05b17abc72ec31668dfd1cd6789c42aae250d351ba"
+      },
+      "scope": "R24 failed before CK3 launch because the selected runtime rejected workshop-cache preparation schema. No menu or normal-exit credit.",
+      "normal_close_qualified": false,
+      "original_public_returncode": 2
+    }
+  ],
+  "completed_at_utc": "2026-10-15T19:46:15.043193+00:00",
+  "completion_recorded_at_utc": "2026-10-15T19:48:55.737927+00:00",
+  "aggregate_release_qualification": {
+    "release_complete": true,
+    "main_eight_facts": {
+      "report": "docs/evidence/native-main-r22.json",
+      "pass": true
+    },
+    "independent_cold": {
+      "report": "docs/evidence/native-cold-r23.json",
+      "pass": true
+    },
+    "publication_and_full_readback": true,
+    "fresh_cache_strict48": true,
+    "actual_cache_menu_and_normal_close": {
+      "report": "docs/evidence/native-cache-r25.json",
+      "pass": true
+    },
+    "final_steam_offline_and_resource_release": true,
+    "cache_case_business_pass": false,
+    "cache_case_product_release_pass": false,
+    "scope": "Product release aggregation from distinct scoped records, not promotion of a menu-only case into campaign business acceptance."
+  },
+  "historical_allocator_rejection": {
+    "attempt": "a12",
+    "status": "BLOCKED",
+    "exit2_evidence_kind": "Retrospective Root observation of original tool return and original helper stdout; not a fabricated original command receipt",
+    "actual_receipt": {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/allocation-a12-root-observed-rejection.json",
+      "bytes": 1665,
+      "sha256": "4c3c12618b5202821474a36fca09a661a5b6804a9ec80e2c00263925c4b6cad7"
+    },
+    "no_run_or_lease_created": true
+  },
+  "final_source_pin_validation": {
+    "r25_nested_checks": 15,
+    "mismatches": [],
+    "cache_case_false_business_flags_preserved": true,
+    "manifest_textfreeze_and_historical_reports_unchanged": true
+  }
 }

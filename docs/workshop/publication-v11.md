@@ -1,6 +1,6 @@
-# More Tenets Slots (XA) v11 正式更新：缓存加载待验收
+# More Tenets Slots (XA) v11 正式更新：发布闭环完成
 
-**v11已于2026-10-16（Asia/Shanghai）更新公开工坊；当前整体状态为 `CACHE_LOAD_PENDING`、`release_complete=false`。** 原生上传、匿名完整文案和Notes回读、实际新缓存48文件严格匹配及发布后的Steam离线恢复均通过。新缓存菜单加载的R24在游戏启动前RED，尚未完成全部发布闭环。
+**v11已于2026-10-16（Asia/Shanghai）更新公开工坊；整体发布闭环完成，`release_complete=true`。** 原生上传、匿名完整文案和Notes、新缓存48文件严格匹配、R25实际缓存菜单加载／正常退出、最终Steam离线及资源闭场均通过。R22业务和R23独立冷载分别提供产品验收；R24启动前RED及其他历史失败原件保持。
 
 本次更新既有 [Workshop 3182367229](https://steamcommunity.com/sharedfiles/filedetails/?id=3182367229)。精确摘要见 [publication-v11.json](publication-v11.json)，与上一公开版本的差异见 [版本11 changelog](../release-changelogs/more-tenets-slots/11.md)。范围仅为 `more_tenets_slots_xa_dev`，不含独立POD产品。
 
@@ -53,7 +53,19 @@ R22创建后87.425699秒、R23冷载后92.327955秒各四张原图经Root直接�
 
 发布后Steam离线恢复已通过：Root直接审阅官方菜单一次切换后的新鲜位移图，实际文字“离线模式”、北京时间2026/10/16 02:47，CK3为空，未重启Steam／ToDesk。图采集于18:47:21Z、Root审阅于18:51:26Z；窗口x40→60并恢复，实际边缘像素变化。原图SHA256 `b31a17df69e318af7d488d220d10e92bcd3f18dfea756c32f968acf7fbded172`。发布keeper原wait0，CAS6341于18:52:41Z释放；该原摘要当时Notes待办，005后续通过另记而不覆盖。
 
-**仍待：实际新缓存菜单加载、该场正常退出及其后最终离线／资源闭场。** 已发布v11与闭环未完成同时成立；后继实际结果以独立工作包补齐，不追改R24原RED。
+第一永久记录包 `9af59fb5a005ce928e339e8edd98057cf2b7db7b` 当时为 `CACHE_LOAD_PENDING`。下述后继R25补齐实际事实，不追改R24原RED或旧记录。
+
+## R25补齐最终缓存与闭场
+
+[R25](../native-cache-r25-2026-10-16.md)使用runtime008和同一native DLL，实际PID16724／create-time1792092300.8483706；readiness274.486020秒，在原1800秒内进入hold。公共case／GUI合同及 `combined_managed_cache_profile_and_actual_menu_load=true`，公共verify原进程exit0、`case_acceptance_pass/qualified_boundary_pass=true`。
+
+本场证明精确缓存的受管单产品profile与实际稳定主菜单组合；**独立引擎VFS路径为UNKNOWN**，低层实际cache mount和产品业务标志仍false。cache case的 `business_contract_applicable/business_pass/product_release_pass=false` 原样保留，不授其宗教业务通过。整体完成由R22八事实、R23独立冷载、公开回读／下载及R25菜单／正常闭场组合成立。
+
+Root只做一次官方主菜单“退出到桌面”映射点击。退出有延迟；拟用标题栏备用在工具调用前因PID已gone的assert中止，没有第二click、实际fallback或process kill。原保留OS0、native `process_exit/code0` 于19:37:47.920579Z结束且完整清理，host GREEN／原wait0、public／keeper／allocator原wait0，normal_close_qualified=true。菜单用例未调用要求地图actor的typed退出provider，不为本场增加该能力资格。
+
+最终Root审阅游戏关闭后的新鲜Steam位移图，明确“离线模式”、北京时间2026/10/16 03:44、CK3为空；原图SHA256 `942c28522d002b173e34b6e1bb4f36c7d4599b9016eb81ba62fbad7d45de1f73`。CAS6365于19:46:15.043193Z释放，resources为空。该最终回执与此前上传后的离线／CAS6341分别保留。
+
+a12使用R23旧前驱被allocator正确BLOCKED／NOT_RUN，未建立R25或租约。其exit2由Root后记观察原工具及helper输出，记录证据层级，不冒称原进程schema。后继a13采用最新R24及真实prelaunch closure bundle才分配R25。完整pins见[R25索引](../evidence/native-cache-r25.json)。最终永久记录不移动发布tag，不修改manifest或文本冻结。
 
 ## 归属与交付
 

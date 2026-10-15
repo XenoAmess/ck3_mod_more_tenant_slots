@@ -88,19 +88,19 @@ R0018 实际就绪耗时约 916 秒，说明新预算确有必要。原 900 秒�
 - [ ] 公共 host/native 资格复用当次受支持版本；业务 adapter 缺口需补齐并实测，不以 plan、ACK 或菜单加载冒充业务通过。
 - [x] 发布前冻结 source commit、版本、staging manifest、ZIP、工坊 BBCode 和完整双语 Change Notes；本轮仅使用正式 staging。
 - [x] 更新既有 Workshop `3182367229`，未新增附加产品。匿名标题、完整正文、兼容tag及完整Notes通过；实际SDK新缓存逐文件匹配正式manifest，菜单加载独立待办。
-- [ ] 恢复 Steam 离线，保存新鲜画面及退出/租约释放结果；更新 README、永久发布报告及 tag。
+- [x] 恢复Steam离线，Root直接审阅最终新鲜位移图；R25原OS/native/host/public/keeper/allocator均0、CAS6365释放，README／永久记录及发布tag已交付。
 
-2026-10-16发布里程碑：[v11已正式更新](workshop/publication-v11.md)，tag `more-tenets-slots-v11-ck3-1.20.0.4` 指向 `d1c9deee5c0214f9418c8df821a8ac9f3f97d334`。48文件正式manifest、原生提交result1、匿名完整正文／Notes、实际SDK新缓存严格匹配和发布后离线恢复均通过。[R24](native-cache-r24-2026-10-16.md)在游戏启动前因通用profile schema拒绝而RED，host1/public2，无native-report，keeper0/CAS6345释放不授normal0。当前 `CACHE_LOAD_PENDING/release_complete=false`，新缓存菜单加载及最终闭场待后继实际验证。
+2026-10-16发布里程碑：[v11已正式更新](workshop/publication-v11.md)，tag `more-tenets-slots-v11-ck3-1.20.0.4` 指向 `d1c9deee5c0214f9418c8df821a8ac9f3f97d334`。48文件正式manifest、原生提交result1、匿名完整正文／Notes、实际SDK新缓存严格匹配和发布后离线恢复均通过。[R24](native-cache-r24-2026-10-16.md)在游戏启动前因通用profile schema拒绝而RED，host1/public2，无native-report，keeper0/CAS6345释放不授normal0。第一永久记录包当时为 `CACHE_LOAD_PENDING/release_complete=false`；后继[R25](native-cache-r25-2026-10-16.md)已取得实际缓存profile＋主菜单组合资格、正常闭场及最终离线／CAS6365，现整体`release_complete=true`。cache business／product_release仍false，原R24不追改。
 
 - [x] 正式源／tag／48文件manifest／ZIP及双语文本冻结，原生更新既有item3182367229，匿名完整Notes唯一条目1792089226精确回读。
 - [x] 实际独立SDK新下载callback3406/result1及worker0，48文件路径／size／SHA严格匹配正式manifest；发布后官方Steam离线新鲜图由Root审阅，publication keeper0/CAS6341释放。
-- [ ] 实际新缓存菜单加载、该场正常退出及其后最终离线／资源闭场；保留R24原启动前RED，不能用下载或资源释放替代。
+- [x] R25实际新缓存菜单加载、该场正常退出及最终离线／资源闭场通过；保留R24启动前RED与a12旧前驱BLOCKED，不将cache用例改成宗教业务通过。独立引擎VFS路径仍UNKNOWN。
 
 ## 验收判定与交付
 
-每项记录 `未排查 / 已复现 / 静态通过 / 实机通过 / 未通过 / 正式发布`，附可复现命令及证据；源码修复不等于实机通过，实机通过不等于已经发布。R22已通过当前48文件候选的新局八事实和正常闭场，包含两个普通组、核心替换、末槽/稀疏创建、默认文化4/6、有限通知及实际保存；R23进一步通过该实际保存的独立新PID冷载、四项恢复事实和正常闭场。R20的发布前v10候选旧档通过保持原范围。正式上传v10来源的R19业务RED保留；直接Edit、往返/连续替换、完整文化行为及更多通知路径仍待。v11已上传公开，整体闭环仍待实际缓存菜单加载及最终收尾。详见 [整改记录](bugfix-report-2026-10-15.md)、[R23冷载](native-cold-r23-2026-10-16.md)、[R22范围与原件](native-main-r22-2026-10-16.md)、[R20](native-legacy-r20-2026-10-15.md)、[通知候选](selector-notification-candidate-2026-10-15.md) 及 [native 能力记录](native-runtime-progress-2026-10-15.md)。
+每项记录 `未排查 / 已复现 / 静态通过 / 实机通过 / 未通过 / 正式发布`，附可复现命令及证据；源码修复不等于实机通过，实机通过不等于已经发布。R22已通过当前48文件候选的新局八事实和正常闭场，包含两个普通组、核心替换、末槽/稀疏创建、默认文化4/6、有限通知及实际保存；R23进一步通过该实际保存的独立新PID冷载、四项恢复事实和正常闭场。R20的发布前v10候选旧档通过保持原范围。正式上传v10来源的R19业务RED保留；直接Edit、往返/连续替换、完整文化行为及更多通知路径仍待。v11已上传公开，R25进一步补齐缓存菜单／正常退出及最终离线和资源闭场，整体发布闭环完成；额外未覆盖路径作为范围风险保留。详见 [整改记录](bugfix-report-2026-10-15.md)、[R23冷载](native-cold-r23-2026-10-16.md)、[R22范围与原件](native-main-r22-2026-10-16.md)、[R20](native-legacy-r20-2026-10-15.md)、[通知候选](selector-notification-candidate-2026-10-15.md) 及 [native 能力记录](native-runtime-progress-2026-10-15.md)。
 
-每个独立工作包完成必要验证或形成可复现 RED 后立即提交、普通 fast-forward push 到 `master`。只暂存该工作包文件，不改写历史证据，不等待全部工作完成才交付。v10历史发布以 `docs/workshop/publication-v10.md` 为准；当前v11公开身份与缓存加载待办见 `docs/workshop/publication-v11.md`，README已对应更新。
+每个独立工作包完成必要验证或形成可复现 RED 后立即提交、普通 fast-forward push 到 `master`。只暂存该工作包文件，不改写历史证据，不等待全部工作完成才交付。v10历史发布以 `docs/workshop/publication-v10.md` 为准；当前v11公开身份及完整闭环见 `docs/workshop/publication-v11.md`，README已对应更新。
 
 ## 系统富化与归属
 
