@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "item_id": "3182367229",
+  "consumer_app_id": 1158310,
+  "product_version": "11",
+  "target_game_version": "1.20.0.4",
+  "machine_id": "bf-202609141645-5434332d4d",
+  "frozen_at_utc": "2026-10-15T18:28:04.684360+00:00",
+  "status": "LOCAL_COPY_FROZEN_NOT_PUBLISHED",
+  "publication_verified": false,
+  "formal_tag": null,
+  "formal_build": null,
+  "media_commit": "5be332f4bf9c4da6652b3977cbc973919861e513",
+  "tags": [
+    "1.20 'Crozier'",
+    "Religion"
+  ],
+  "texts": {
+    "description.bbcode": {
+      "file_bytes": 5100,
+      "file_sha256": "de71868d2ab17084579f3b7793ef19c2abfa1f7b333293dacc9ed0469b2509cb",
+      "normalized_characters": 3981,
+      "normalized_lines": 49,
+      "normalized_utf8_bytes": 5099,
+      "normalized_sha256": "78090be514726d208ae5d1ae24086a7c785e1deb8c62dae2002731afd0156bdd"
+    },
+    "change-notes-v11.txt": {
+      "file_bytes": 3200,
+      "file_sha256": "91c5de24aed1cbced445744193cd44199c28ffd685b8da7cc01a02f455739bce",
+      "normalized_characters": 2321,
+      "normalized_lines": 21,
+      "normalized_utf8_bytes": 3199,
+      "normalized_sha256": "06e45811558d8a1f29e6e9a50941c9da9442ff9a7451a3eaa646ed28331ae0e2"
+    }
+  },
+  "claim_evidence": [
+    {
+      "path": "docs/evidence/native-main-r22.json",
+      "bytes": 64105,
+      "sha256": "45a79b3f32d85ee34801186f972675cdeb1e23e31aba0b1ce2839f030271ef35"
+    },
+    {
+      "path": "docs/evidence/native-cold-r23.json",
+      "bytes": 56156,
+      "sha256": "2e8769f354c30b4ac9170c410f17402451e758c1ca77d486c446b8fe7b588004"
+    }
+  ],
+  "checks": {
+    "bbcode_supported_tags_balanced": true,
+    "list_item_markers_inside_lists": true,
+    "description_within_8000_utf8_bytes": true,
+    "upstream_holger_source_and_item_links_retained": true,
+    "historical_media_urls_unchanged": true,
+    "acceptance_placeholder_keys_consumed": 4,
+    "utf8_no_bom_lf_single_final_newline": true,
+    "main_and_cold_closed_evidence_checked": true,
+    "notification_claim_bounded_over75_seconds": true,
+    "readme_publication_status_unchanged": true
+  },
+  "localization_format": {
+    "status": "format-certified",
+    "languages": [
+      "english",
+      "french",
+      "german",
+      "japanese",
+      "korean",
+      "polish",
+      "russian",
+      "simp_chinese",
+      "spanish"
+    ],
+    "files": 18,
+    "keys_per_language": 305,
+    "translated_keys_per_language": 5,
+    "intentionally_empty_keys_per_language": 300,
+    "native_language_layout_sha256": "649319eebff6212e1993e54bd0dc652c35e2158f77909ed9fb8bd840f2648eb9",
+    "live_verified": false
+  },
+  "normalization": {
+    "source": "ck3_eternal_recurrence/tools/verify_workshop_publication.py",
+    "source_bytes": 6655,
+    "source_sha256": "1355c850003812c650317e19e4293f48bdf14229dc2c9704696266885777a8f4",
+    "functions_ast_sha256": "79c5f06545659c0894057e782b81b2a49498d148b5b1522ae936275307d2103e"
+  },
+  "ownership": "Product copy and evidence stay in this product; existing framework normalization and product localization validator are reused. No new generic capability.",
+  "scope_note": "Local reviewed text only. MAIN eight facts and independent cold four facts apply to their recorded .4 product bytes. Bounded notification observations do not prove permanent absence; no all-DLC, non-head Edit, upload, anonymous public readback or fresh-cache PASS is claimed."
+}

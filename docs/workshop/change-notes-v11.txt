@@ -1,0 +1,21 @@
+Version 11 — CK3 1.20.0.4 (Crozier)
+
+- Retains 100 core tenet slots and scrollable rite/faith tenet grids, with the game's native eligibility, conflicts, costs and DLC requirements.
+- Removes the bundled 10000 culture tradition limit. This mod now leaves cultural tradition limits and their normal bonuses to the base game; players who want extra traditions can choose a separate tradition mod.
+- Refreshes the rite and faith interfaces from CK3 1.20.0.4, including ordinary doctrine selector bindings and current native compatibility checks.
+- Filters rite-update handling only when a change consists entirely of this mod's internal selector metadata. Real tenet and doctrine changes retain the game's normal notification behavior.
+
+Simplified Chinese acceptance on CK3 1.20.0.4 covered ordinary doctrine candidates and replacement, core tenet replacement, selection of slot 100, sparse rite creation, normal cultural tradition limits, notification convergence and saving. An independent cold reload in a new game process verified the saved character, date and religious identity, retained all four real core tenets and the unique selections in the tested ordinary doctrine groups, and checked notifications again. After the finite creation notices cleared, no recurring rite-update notifications were observed in the recorded creation and cold-reload windows, each longer than 75 seconds.
+
+This update covers More Tenets Slots (XA), not the separate POD patches. The existing screenshots remain historical version-10 images. Nine localization languages are included; live acceptance uses Simplified Chinese and other languages receive format checks. Compatibility of saves already above the normal culture tradition limit remains unverified.
+
+版本 11 — CK3 1.20.0.4（Crozier）
+
+- 保留 100 个核心信条槽位及礼仪／信仰界面的滚动网格，继续遵守原生条件、互斥、费用与 DLC 限制。
+- 取消捆绑的 10000 文化传统上限。本 mod 不再覆盖文化传统上限，使用游戏本身的上限与正常增益；需要更多传统的玩家可自行选择独立传统 mod。
+- 按 CK3 1.20.0.4 原版重新投影礼仪与信仰界面，包括普通教义选择器绑定及当前原生兼容检查。
+- 仅在变化全部属于本 mod 内部选择器元数据时过滤礼仪更新处理；真实信条或教义变化仍保留游戏的正常通知行为。
+
+已在 CK3 1.20.0.4 使用简体中文验证普通教义候选与替换、核心信条替换、第 100 槽位选择、稀疏礼仪创建、原版文化传统上限、通知收敛及保存。独立新进程冷载核对了存档角色、日期和宗教身份，保留全部四个真实核心信条，受测普通教义组中的选择仍各自唯一，并再次检查了通知。有限的创建通知清理后，新建与冷载各自超过 75 秒的有界观察期间，均未见礼仪更新通知反复出现。
+
+本次只更新 More Tenets Slots（XA），不包含独立 POD 补丁。现有截图保留为版本 10 历史图片。包含九种语言本地化；实机验收使用简体中文，其他语言仅做格式检查。既有文化已经超过原版传统上限的存档兼容性仍未验证。
