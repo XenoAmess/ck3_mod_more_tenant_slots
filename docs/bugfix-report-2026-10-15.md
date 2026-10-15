@@ -47,3 +47,13 @@
 ## 后续工作
 
 教义空白、替换残留及通知仍在排查。当前未进行新实机、工坊上传或新增发布；不改变 v10 历史结论。
+
+## 1.20.0.4 原生业务 case 与独立冷载
+
+新增 `native-october-reported-bugs` 与 `native-cold-reload`，通过公共入口的标准 adapter 三接口运行。原生场使用普通1066罗贝尔29829和独立资源夹具，仅给予100000虔诚，不预设被测信条、教义、宗教或文化。当前角色/礼仪/信仰/宗教与资源由实际MCP context/snapshot取证；候选及操作按可用typed能力优先，缺口保留后才用官方UI。
+
+第一场八项业务事实以 `save_written` 收尾，记录实际存档pin和原生身份。第二场通过标准saved_campaign产品profile冷启动，要求前场真实normal-close通过、同份保存与正式产品清单、实际不同PID，再核对角色、日期、宗教身份、保存的信条/教义和通知。两个场次不互相冒充，同进程菜单读档不能授第二场通过。
+
+`dev_tools/test_native_acceptance_adapter.py` 首次4项离线回归通过（0.138s）；新增冷载合同后5项通过（0.273s），覆盖真实共享profile准备、mock native run/verify、证据缺失/变更拒绝与新旧PID区分。命令为 `python -B -X utf8 dev_tools/test_native_acceptance_adapter.py --framework-root <framework> --runtime <native-runtime-mapping>`。未启动CK3，仍无业务通过。
+
+归属：产品adapter、资源fixture、业务事实和冷载关系属于本项目；标准MCP、profile、keeper、正常退出与原生查询能力复用框架。只读确认了可复用的原共享R90闭场；R90自身业务RED保持。Steam当次黑屏经已有正常重启路径恢复，新位移帧人工读到离线；没有据重启ACK推断离线。

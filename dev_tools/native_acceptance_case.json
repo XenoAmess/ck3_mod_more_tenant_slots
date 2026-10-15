@@ -1,0 +1,40 @@
+{
+  "schema": "mts-native-reported-bugs-v1",
+  "product": "more-tenets-slots",
+  "case": "native-october-reported-bugs",
+  "initial_actor_id": 29829,
+  "post_start": {
+    "government_key": "feudal_government",
+    "primary_title_tier_key": "duchy",
+    "independent": true
+  },
+  "required_startup": ["MTSQA: RESOURCE GRANT player"],
+  "forbidden_startup": ["MTSQA: SETUP FAILED"],
+  "native_observations": [],
+  "phases": [
+    {
+      "id": "mts-doctrines-and-tenets",
+      "requirements": ["ordinary_doctrine_candidates", "ordinary_doctrine_replacement", "core_tenet_replacement", "last_slot_selection"],
+      "instructions": "Observe ordinary doctrine candidates, replace one ordinary doctrine and one core tenet through available typed native controls first, verify old choices are removed and the final supported slot remains selectable. If a typed action is unavailable, preserve its real diagnostic before official UI use. Do not set tested doctrines or tenets through a fixture. Save actual before/after evidence."
+    },
+    {
+      "id": "mts-rites-culture-notifications-save",
+      "requirements": ["sparse_rite_creation", "vanilla_culture_limit", "notifications_converge", "save_written"],
+      "instructions": "Use actual typed capabilities first for sparse Rite creation, vanilla cultural tradition capacity, finite religion-change notifications, and an actual written SAVE. Return save_origin with exact save pin, current player/date/Rite/Faith/Religion IDs, core_tenets list, ordinary_doctrines mapping and actual saved-readback evidence pins. A separate saved_campaign case performs the true new-process cold reload. No fake fixture PASS marker supplies these facts."
+    }
+  ],
+  "ownership": "Product fixture and reported-bug case data remain in MTS; common runtime, MCP providers, preparation and lifecycle stay in ck3_eternal_recurrence.",
+  "cold_case": {
+    "schema": "mts-native-cold-reload-v1",
+    "product": "more-tenets-slots",
+    "case": "native-cold-reload",
+    "native_observations": [],
+    "phases": [
+      {
+        "id": "mts-cold-saved-state",
+        "requirements": ["saved_actor_and_religion", "saved_core_tenets", "saved_ordinary_doctrines", "notifications_after_cold_reload"],
+        "instructions": "In the new retained PID, compare current actor/Rite/Faith/Religion, core tenets and ordinary doctrines with saved_origin. Use existing typed queries first and retain actual diagnostic before any official UI fallback. Observe that notifications converge after cold loading. Preserve exact native, original saved-file, GUI and observed-time evidence. This scoped case does not repeat initial resource setup or the original eight product facts."
+      }
+    ]
+  }
+}

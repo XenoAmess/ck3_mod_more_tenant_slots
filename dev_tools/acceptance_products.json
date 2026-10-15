@@ -1,11 +1,85 @@
 {
   "schema": "ck3-mod-acceptance-products-v1",
+  "product_inventory": "acceptance_products.json",
   "products": {
     "more-tenets-slots": {
       "runtime_mod_key": "more-tenets-slots",
       "external_mod": false,
       "workshop_item_id": "3182367229",
       "cases": [
+        {
+          "id": "native-october-reported-bugs",
+          "status": "ready",
+          "implementation_credit": "Product adapter implemented; actual native and reported-bug acceptance NOT_RUN",
+          "adapter": {
+            "path": "native_acceptance_adapter.py",
+            "config": "native_acceptance_case.json"
+          },
+          "initial_plan": "{run_dir}/prepared/initial-plan.json",
+          "startup": {
+            "mode": "fixture",
+            "state_dir": "{run_dir}/state",
+            "fixture_start_policy": "{run_dir}/prepared/frontend-fixture-start-policy.json"
+          },
+          "budgets": {
+            "command_timeout": 300,
+            "readiness_timeout": 400,
+            "timeout": 2100,
+            "hold_seconds": 900,
+            "poll_interval": 0.5
+          },
+          "required_mcp_tools": [
+            "ck3_take_snapshot",
+            "ck3_query_player_religion_context_v1"
+          ],
+          "opt_in_read_only_mcp_tools": [
+            "ck3_query_player_religion_context_v1"
+          ],
+          "normal_close": {
+            "owner": "shared entry/CaseClient",
+            "reserve_seconds": 90,
+            "actual_retained_OS0_and_original_native0_required": true
+          },
+          "business_contract_applicable": true,
+          "whole_product_acceptance_credit": false
+        },
+        {
+          "id": "native-cold-reload",
+          "status": "ready",
+          "adapter": {
+            "path": "native_acceptance_adapter.py",
+            "config": "native_acceptance_case.json"
+          },
+          "initial_plan": "{run_dir}/prepared/initial-plan.json",
+          "startup": {
+            "mode": "saved_campaign",
+            "state_dir": "{run_dir}/state",
+            "saved_campaign": {
+              "save": null,
+              "bytes": null,
+              "sha256": null,
+              "player_id": null,
+              "date_raw": null,
+              "product_inventory": null
+            }
+          },
+          "budgets": {
+            "command_timeout": 300,
+            "readiness_timeout": 400,
+            "timeout": 2100,
+            "hold_seconds": 900,
+            "poll_interval": 0.5
+          },
+          "required_mcp_tools": ["ck3_take_snapshot", "ck3_query_player_religion_context_v1"],
+          "opt_in_read_only_mcp_tools": ["ck3_query_player_religion_context_v1"],
+          "normal_close": {
+            "owner": "shared entry/CaseClient",
+            "reserve_seconds": 90,
+            "actual_retained_OS0_and_original_native0_required": true
+          },
+          "business_contract_applicable": true,
+          "whole_product_acceptance_credit": false
+        },
         {
           "id": "october-reported-bugs",
           "budgets": {
