@@ -1,18 +1,20 @@
 # 2026-10-15 用户反馈整改记录
 
+**发布里程碑：** [v11已于2026-10-16正式更新](workshop/publication-v11.md)，tag指向`d1c9deee5c0214f9418c8df821a8ac9f3f97d334`。原生上传result1、完整匿名描述／Notes唯一条目1792089226、实际SDK新缓存48文件严格匹配及发布后离线恢复通过。新缓存加载[R24](native-cache-r24-2026-10-16.md)在游戏启动前因共享profile schema拒绝而RED：host1/public2、无native-report、CK3为空、keeper0/CAS6345释放；不授normal/native0。整体`CACHE_LOAD_PENDING/release_complete=false`，后继缓存加载及最终闭场仍待。
+
 执行清单见 [计划](bugfix-plan-2026-10-15.md)。本轮起始公开产品是 [v10](workshop/publication-v10.md)，已于 2026-10-03 发布；源码整改、当前版本实机与下一次正式发布分别记账。
 
-**最新冷载进度：** [R23独立冷载](native-cold-r23-2026-10-16.md)通过：新PID12944恢复R22原binary，首帧精确actor31254/date53145144/Rite150/Faith13/Religion8，当前四核心和Equal/Pluralistic唯一匹配；92.327955秒有限通知窗四原图经Root审阅无顶部重复提示。007原生退出与独立OS/native/host/public/keeper全0、CAS6321释放，公共verify的业务与normal/cold均通过。[索引](evidence/native-cold-r23.json)顶层明确`case_acceptance_pass/normal_close_qualified/independent_cold_load_pass=true`；正式发布和实际缓存核验仍待。
+**最新冷载进度：** [R23独立冷载](native-cold-r23-2026-10-16.md)通过：新PID12944恢复R22原binary，首帧精确actor31254/date53145144/Rite150/Faith13/Religion8，当前四核心和Equal/Pluralistic唯一匹配；92.327955秒有限通知窗四原图经Root审阅无顶部重复提示。007原生退出与独立OS/native/host/public/keeper全0、CAS6321释放，公共verify的业务与normal/cold均通过。[索引](evidence/native-cold-r23.json)顶层明确`case_acceptance_pass/normal_close_qualified/independent_cold_load_pass=true`；v11已上传公开，实际新缓存48文件严格匹配；缓存菜单加载与最终闭场仍待。
 
 **新局主场范围：** [R22新局主场](native-main-r22-2026-10-16.md)在机器`bf-202609141645-5434332d4d`通过八项业务事实、一次binary SAVE及离线语义读回、官方GUI正常闭场：两普通候选非空且替换唯一，PeaceOfGod旧核心移除，实际slot99及稀疏四核心创建，默认文化4/6，有限通知收敛。原host唯一failed step为未暂停的只读事件查询被守卫拒绝，原statusRED/实际返回1保持；UTF8公共verify后继实际0、业务及normal pass，原OS/nativeprocess_exit0/fullcleanup/public0/keeper0并CAS6290释放。native fresh Quit因`-continuelastsave`参数未支持而unavailable，不授其动作资格。R23另用007的显式`-loadsave`路径，未升级007或改写前场原件。[R22索引](evidence/native-main-r22.json)保留94个pins与52项嵌套核对。
 
 **R21历史RED保持：** [R21](native-main-r21-2026-10-15.md)原业务窗口超时、第一阶段GAP、没有保存；public wait2、normal-close=false、保留OS0=false。native停止清理、host0、keeper0与CAS6197分别成立，不冒充正常Quit；后继六小时预算没有追改其原期限。
 
-**保留的限定通过：** [R20发布前v10候选旧档回归](native-legacy-r20-2026-10-15.md)四项业务事实与实际保存通过：合法创建分支151→152、普通性别组唯一替换、目标核心旧项移除及79.861秒有限通知收敛；public/host/原OS/native/keeper正常闭场，CAS6110释放。执行机器为`bf-202609141645-5434332d4d`，精确原件见[证据索引](evidence/native-legacy-r20.json)。来源是R8未发布30文件v10候选且有历史标记夹具，不授正式上传46文件v10、新局、直接Edit、独立冷载、100槽/文化或整产品通过。原[R19正式v10旧档](native-legacy-r19-2026-10-15.md)受原版合法性限制的业务RED保持；[R18](native-baseline-r18-2026-10-15.md)等同样保留历史事实。工坊仍为v10，当前候选尚未发布；下文1.20.1及早期未实机文字描述对应历史阶段。
+**保留的限定通过：** [R20发布前v10候选旧档回归](native-legacy-r20-2026-10-15.md)四项业务事实与实际保存通过：合法创建分支151→152、普通性别组唯一替换、目标核心旧项移除及79.861秒有限通知收敛；public/host/原OS/native/keeper正常闭场，CAS6110释放。执行机器为`bf-202609141645-5434332d4d`，精确原件见[证据索引](evidence/native-legacy-r20.json)。来源是R8未发布30文件v10候选且有历史标记夹具，不授正式上传46文件v10、新局、直接Edit、独立冷载、100槽/文化或整产品通过。原[R19正式v10旧档](native-legacy-r19-2026-10-15.md)受原版合法性限制的业务RED保持；[R18](native-baseline-r18-2026-10-15.md)等同样保留历史事实。当前工坊已更新v11，R20的限定范围不因此扩大；下文1.20.1及早期未实机文字描述对应历史阶段。
 
 ## WP1：信条与文化传统分离
 
-状态：**静态通过；R22默认上限4/6实机通过，完整文化行为与发布仍待**。
+状态：**静态通过；R22默认上限4/6实机通过，完整文化行为及最终缓存加载闭环仍待**。
 
 旧 `common/defines/More tradition slots.txt` 同时包含 `NCulture.DEFAULT_MAX_TRADITIONS=10000` 和 `NReligion.FAITH_CORE_TENETS_CAP=100`，因此仅需信条槽的玩家也被强制修改文化传统上限。现移除整个 `NCulture` 覆盖，文件更名为 `more_tenets_slots.txt`；主产品继承原版文化基础上限及时代等增益，继续保留 100 个信条槽和会议镜像值。本轮不增建新的传统扩展产品，避免把捆绑改成另一项默认依赖；需要额外文化传统的玩家可独立选择传统 mod。
 
@@ -54,7 +56,7 @@
 
 ## 后续工作
 
-R20已完成发布前候选旧档的代表性创建分支回归；R22进一步完成当前候选新局两个普通教义组、核心旧项移除、实际第100槽及稀疏创建、文化默认4/6、有限通知、保存和正常闭场；R23已将该实际保存经独立新PID冷载，四项恢复事实及正常闭场通过。正式上传v10来源的合法性限制、直接Edit、反向/连续替换、完整文化行为及更多通知路径仍须继续；未进行工坊上传或新增发布，不改变v10历史结论。
+R20已完成发布前候选旧档的代表性创建分支回归；R22进一步完成当前候选新局两个普通教义组、核心旧项移除、实际第100槽及稀疏创建、文化默认4/6、有限通知、保存和正常闭场；R23已将该实际保存经独立新PID冷载，四项恢复事实及正常闭场通过。正式上传v10来源的合法性限制、直接Edit、反向/连续替换、完整文化行为及更多通知路径仍须继续；v11已完成工坊上传、匿名全文／Notes和实际新缓存匹配，缓存菜单加载及最终闭场仍待，不改变v10历史结论。
 
 通知整改已形成 [静态候选](selector-notification-candidate-2026-10-15.md)：创建入口取消对源礼仪的额外写入，编辑保留安全准备；纯内部教义更新不再进入原版通知与宗教领袖effect，真实变化保持原版逻辑。两项投影回归及48文件双构建通过；R20有限窗79.861秒、R22新局创建后87.425699秒、R23独立冷载后92.327955秒均未见顶部信条更新持续重复，R22与R23各四张定时原图有Root直接审阅。有限路径不证明永久循环在所有场景均已关闭。
 

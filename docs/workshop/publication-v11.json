@@ -1,0 +1,541 @@
+{
+  "schema": "mts.workshop-publication.v1",
+  "product": "more_tenets_slots_xa_dev",
+  "item_id": "3182367229",
+  "app_id": 1158310,
+  "machine_id": "bf-202609141645-5434332d4d",
+  "status": "CACHE_LOAD_PENDING",
+  "draft_only": false,
+  "published_date_asia_shanghai": "2026-10-16",
+  "uploaded_source_commit": "d1c9deee5c0214f9418c8df821a8ac9f3f97d334",
+  "remote_source_commit_verified": true,
+  "release_tag": {
+    "name": "more-tenets-slots-v11-ck3-1.20.0.4",
+    "status": "annotated-pushed",
+    "target_commit": "d1c9deee5c0214f9418c8df821a8ac9f3f97d334"
+  },
+  "manifest_git_tag": "more-tenets-slots-v11-ck3-1.20.0.4",
+  "game": {
+    "version": "1.20.0.4",
+    "name": "Crozier",
+    "steam_build": 25734779,
+    "exe_sha256": "98702f88a547cde2eaf29a85f93b85f68ee4cf8148336a4f7afaeb75319dd518",
+    "live_language": "simp_chinese",
+    "authority": "R22 MAIN and R23 independent COLD exact game identity; publication postflight remains pending.",
+    "post_publication_exe_recheck": null
+  },
+  "previous_public_baseline": {
+    "product_version": "10",
+    "supported_version": "1.20.0.3",
+    "source_commit": "da4b579659ebb4de397672b833369e95fdbd03c6",
+    "tag": {
+      "name": "more-tenets-slots-v10-ck3-1.20.0.3",
+      "status": "annotated-pushed",
+      "target_commit": "da4b579659ebb4de397672b833369e95fdbd03c6"
+    },
+    "file_count": 46,
+    "manifest": {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/workshop/release-manifest-v10.json",
+      "bytes": 8775,
+      "sha256": "d79bd36bcee5c081da05a99fe409421f76b49e890d6b8ec194ad700d8f77ca00"
+    },
+    "time_updated": 1790978434,
+    "hcontent_file": "2486335635832374929",
+    "file_size": 1008047,
+    "authority": "Permanent v10 publication record; not re-downloaded or re-published by this report task."
+  },
+  "build": {
+    "file_count": 48,
+    "uncompressed_bytes": 1015384,
+    "manifest_path": "docs/workshop/release-manifest-v11.json",
+    "manifest_bytes": 9159,
+    "manifest_sha256": "2d9c319293b2bce98c2cc041c759b0d6400aa22ce1d9216ba620b8f194823172",
+    "zip_path": "artifacts/bugfix-20261015/workshop-v11-actual-001/formal-build-001/more_tenets_slots_xa_dev.zip",
+    "zip_bytes": 729030,
+    "zip_sha256": "235016183f48b6b22ceda152dc78efbcdacb05243a40c45aea0bd72d8f0768fd",
+    "static_report": {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/formal-build-001.report.json",
+      "bytes": 15164,
+      "sha256": "cec5d9b68e306d5a75767b0c06c9058239cf6315f5df24df828d9a6d9bc86a0d"
+    },
+    "matches_reviewed_candidate_file_bytes": true,
+    "build_status": "static-ready",
+    "build_live_verified": false
+  },
+  "upload": {
+    "app_id": 1158310,
+    "created_at": "2026-10-15T18:33:34.459515+00:00",
+    "item_id": "3182367229",
+    "legal_agreement_required": false,
+    "operation": "update",
+    "operation_id": "mts-v11-20261016-d1c9dee-001",
+    "payload_sha256": "905e5846df81e604468724c70950c3dcc1bb7c94dd011553add6e210ae54b6fd",
+    "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+    "stage": "complete",
+    "steam_result": 1,
+    "submitted_at": "2026-10-15T18:33:41.694501+00:00",
+    "tags": [
+      "Religion",
+      "1.20 'Crozier'"
+    ],
+    "tags_only": false,
+    "update_scope": "content_and_metadata",
+    "updated_at": "2026-10-15T18:33:41.694571+00:00",
+    "submitted_at_utc": "2026-10-15T18:33:41.694501+00:00",
+    "actual_original_exit_code": 0,
+    "actual_receipt": {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/native-publish-receipt.json",
+      "bytes": 627,
+      "sha256": "476a2904dd53c28acb48e2b38c6cdab90271c7310a7a399344c10c15a3900c3a"
+    }
+  },
+  "public": {
+    "title": "More Tenets Slots (XA) - CK3 1.20",
+    "visibility": 0,
+    "banned": 0,
+    "tags": [
+      "Religion",
+      "1.20 'Crozier'"
+    ],
+    "time_updated": 1792089226,
+    "hcontent_file": "6449428825073299086",
+    "file_size": 1015384,
+    "text_verification": {
+      "title_exact": true,
+      "description_exact": true,
+      "description_characters": 3981,
+      "description_sha256": "78090BE514726D208AE5D1AE24086A7C785E1DEB8C62DAE2002731AFD0156BDD",
+      "expected_description_sha256": "78090BE514726D208AE5D1AE24086A7C785E1DEB8C62DAE2002731AFD0156BDD",
+      "change_notes_exact": true,
+      "changelog_entry_id": "1792089226",
+      "change_notes_characters": 2321,
+      "change_notes_lines": 21,
+      "change_notes_sha256": "06E45811558D8A1F29E6E9A50941C9DA9442FF9A7451A3EAA646ED28331AE0E2",
+      "expected_change_notes_characters": 2321,
+      "expected_change_notes_lines": 21,
+      "expected_change_notes_sha256": "06E45811558D8A1F29E6E9A50941C9DA9442FF9A7451A3EAA646ED28331AE0E2",
+      "time_updated": 1792089226,
+      "file_size": "1015384",
+      "ok": true,
+      "anonymous": true,
+      "complete_notes_body_verified": true,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/anonymous-publication-readback-final-005.json",
+        "bytes": 5971,
+        "sha256": "5bc20beaba85c2ac3a46ec5a60d5cb7b446f2969ea220762218870100cdf959b"
+      },
+      "changelog_url": "https://steamcommunity.com/sharedfiles/filedetails/changelog/3182367229?l=english&p=1",
+      "historical_failures_preserved": [
+        "original proposal changelog429 before upload",
+        "001 officialCLI HTTP429 original wait1",
+        "002 independent response capture HTTP429/noRetryAfter",
+        "003 backed-off canonical request HTTP429/noRetryAfter original wait2",
+        "004 web tool URL-not-accessible/no body"
+      ],
+      "causality_bound": "No A/B: query parameters, ordinary headers and elapsed cooldown differ together. Success does not isolate a root cause for previous429."
+    },
+    "media_verification": {
+      "status": "EXISTING_MEDIA_IDENTITIES_PRESERVED",
+      "new_media_uploaded": false,
+      "checks": {
+        "additional_previews_exact": true,
+        "additional_previews_count3": true,
+        "thumbnail_url_unchanged": true,
+        "description_three_media_urls_unchanged": true
+      },
+      "additional_previews": [
+        {
+          "index": 0,
+          "original_filename": "01-rite-creation.jpg",
+          "type": 0,
+          "url": "https://images.steamusercontent.com/ugc/14884467143376428478/454A61629D6838BDE6B1B632918B0F5DC789509B/"
+        },
+        {
+          "index": 1,
+          "original_filename": "02-tenet-selector.jpg",
+          "type": 0,
+          "url": "https://images.steamusercontent.com/ugc/11406957942841010730/A8CAF70291EAA850D5A300C9F91C9CDF5FAE22ED/"
+        },
+        {
+          "index": 2,
+          "original_filename": "03-two-tenet-rite.jpg",
+          "type": 0,
+          "url": "https://images.steamusercontent.com/ugc/16871842455022831072/0B76A34427A0500C3137A832D7BE8566B00523CB/"
+        }
+      ],
+      "thumbnail_url": "https://images.steamusercontent.com/ugc/12409224100181941193/41C7EDC08D3E265EAFA76055CAD30775429D1D0A/",
+      "fresh_cdn_bytes_or_pixels_verified": false,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/preserved-media-verification-001.json",
+        "bytes": 2468,
+        "sha256": "c6a5b161aeb3e845c491d785f8f74c73624277188fc551821d30869ddc3627ce"
+      }
+    }
+  },
+  "fresh_cache": {
+    "status": "PASS",
+    "actual_path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1158310\\3182367229",
+    "file_count": 48,
+    "manifest_sha256": "2d9c319293b2bce98c2cc041c759b0d6400aa22ce1d9216ba620b8f194823172",
+    "callback": {
+      "app_id": 1158310,
+      "callback_id": 3406,
+      "item_id": "3182367229",
+      "result": 1
+    },
+    "expected_cache_absent_before_start": true,
+    "worker_exit_code": 0,
+    "elapsed_seconds": 8.926,
+    "descriptor_normalization_applied": false,
+    "strict_path_size_sha256_match": true,
+    "acf_manifest": null,
+    "acf_time_updated": null,
+    "actual_receipt": {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/fresh-cache-strict48-verification.json",
+      "bytes": 1053,
+      "sha256": "ac7fb45bac3a71b8bb4ef8b7fc799fe281429e37a5dbd19becae88998f37f533"
+    },
+    "original_process_exit_code": 0,
+    "staging_copied_to_cache": false,
+    "install_size_on_disk": 1015384,
+    "install_timestamp": 1792089226,
+    "authority": "Actual fresh SDK download and strict 48-file match; independent of game menu-load qualification."
+  },
+  "cache_menu_load": {
+    "status": "CACHE_LOAD_PENDING",
+    "actual_run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0024",
+    "actual_loaded_cache_path": null,
+    "only_selected_product_enabled": null,
+    "language": null,
+    "root_review": null,
+    "retained_os_exit_code": null,
+    "native_process_exit_code": null,
+    "host_returncode": 1,
+    "cleanup_ok": null,
+    "actual_receipt": {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/evidence/native-cache-r24.json",
+      "bytes": 7343,
+      "sha256": "d1ff820f314fee69cad53e05b17abc72ec31668dfd1cd6789c42aae250d351ba"
+    },
+    "scope": "R24 failed before CK3 launch because the selected runtime rejected workshop-cache preparation schema. No menu or normal-exit credit.",
+    "normal_close_qualified": false,
+    "original_public_returncode": 2
+  },
+  "prepublication_acceptance": {
+    "main": {
+      "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0022",
+      "case_acceptance_pass": true,
+      "normal_close_qualified": true,
+      "eight_required_business_facts": true,
+      "original_host_status": "RED",
+      "original_host_returncode": 1,
+      "failed_step": "r22-progress-event-context",
+      "failure_scope": "A read-only event query was rejected by the unpaused guard; raw report and exit remain RED/1.",
+      "public_verify_utf8_successor_returncode": 0,
+      "evidence": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "docs/evidence/native-main-r22.json",
+        "bytes": 64105,
+        "sha256": "45a79b3f32d85ee34801186f972675cdeb1e23e31aba0b1ce2839f030271ef35"
+      }
+    },
+    "independent_cold": {
+      "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0023",
+      "case_acceptance_pass": true,
+      "normal_close_qualified": true,
+      "independent_cold_load_pass": true,
+      "previous_pid": 17196,
+      "cold_pid": 12944,
+      "initial_saved_context": {
+        "played_character_id": 31254,
+        "date_raw": 53145144,
+        "rite_id": 150,
+        "faith_id": 13,
+        "religion_id": 8
+      },
+      "current_core_exact4": [
+        "tenet_transubstantiation",
+        "tenet_be_fruitful_and_multiply",
+        "tenet_apostolic_succession",
+        "tenet_communion"
+      ],
+      "ordinary_groups_unique": {
+        "doctrine_gender": [
+          "doctrine_gender_equal"
+        ],
+        "doctrine_pluralism": [
+          "doctrine_pluralism_pluralistic"
+        ]
+      },
+      "bounded_notification_seconds": 92.32795529998839,
+      "release_cas": 6321,
+      "evidence": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "docs/evidence/native-cold-r23.json",
+        "bytes": 56156,
+        "sha256": "2e8769f354c30b4ac9170c410f17402451e758c1ca77d486c446b8fe7b588004"
+      }
+    },
+    "scope": "Recorded 48-file candidate on exact CK3 1.20.0.4 in Simplified Chinese. Final formal build identity must be independently checked.",
+    "notification_claim": "Root reviewed four original frames per creation/cold window; no repeating top rite-update notices observed in each bounded window longer than 75 seconds.",
+    "native_unknown_ack_preserved": true,
+    "all_logs_clean": false
+  },
+  "closure": {
+    "steam_offline": {
+      "status": "PASS",
+      "captured_at_utc": "2026-10-15T18:47:21.197981+00:00",
+      "operator_reviewed": true,
+      "observed_text": "离线模式",
+      "screenshot": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\workshop-v11-actual-001\\steam-offline-fresh-001\\steam-moved.png",
+      "screenshot_sha256": "b31a17df69e318af7d488d220d10e92bcd3f18dfea756c32f968acf7fbded172",
+      "freshness_proof": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/steam-offline-fresh-001/steam-frame-freshness.json",
+        "bytes": 1296,
+        "sha256": "95be5fb3a59205f3f35e11b70d5452bb6e738c429a970b97b500c465eccf674d"
+      },
+      "ck3_process_count": 0,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/root-steam-offline-restored.json",
+        "bytes": 1169,
+        "sha256": "f90f110d0beef745ac4c7127cdfccbe82aedbc8c7f8d985495d35ff8a1b2b2d8"
+      },
+      "observed_clock": "2026/10/16 02:47",
+      "reviewed_at_utc": "2026-10-15T18:51:26.999169+00:00",
+      "scope": "Actual post-upload official offline transition and Root fresh-image review. Final post-cache-load closure still pending."
+    },
+    "resource_release": {
+      "cas_sequence": 6341,
+      "at_utc": "2026-10-15T18:52:41.027084+00:00",
+      "resources": [],
+      "keeper_actual_exit_code": 0,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/screen-resource-release.json",
+        "bytes": 1447,
+        "sha256": "d8dc4ba8cdff693d0699a9f3c426c1854eb5bb62db7bd83c983083cae9d6c825"
+      }
+    },
+    "publication_verified": true,
+    "fresh_cache_verified": true,
+    "cache_menu_load_verified": false,
+    "steam_offline_verified": true,
+    "release_complete": false,
+    "documentation_delivery": "This first permanent master package records completed upload/readback/download/offline milestones and R24 prelaunch RED. Final cache load remains pending.",
+    "latest_cache_attempt_resource_release": {
+      "cas_sequence": 6345,
+      "resources": [],
+      "keeper_actual_exit_code": 0,
+      "actual_receipt": {
+        "machine_id": "bf-202609141645-5434332d4d",
+        "path": "artifacts/bugfix-20261015/native-cache-r24-resource-release.json",
+        "bytes": 1475,
+        "sha256": "c7cb268d1bbd0ecc0a6c07e1369231ecb4e75bf6ce78c61e00616f82d964751d"
+      }
+    }
+  },
+  "evidence": [
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/workshop/publication-v10.json",
+      "bytes": 8507,
+      "sha256": "baab03df7941b73de2cd9e3dff77492512d05e7246d2c568fd24a4af6ff43763"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/workshop/release-manifest-v10.json",
+      "bytes": 8775,
+      "sha256": "d79bd36bcee5c081da05a99fe409421f76b49e890d6b8ec194ad700d8f77ca00"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/workshop/publication-text-freeze-v11.json",
+      "bytes": 3368,
+      "sha256": "81bf7e727559dfdc7bd211a6f3008cb2c269a69fc5d3540a6b90c1e857bbcbe0"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/workshop/description.bbcode",
+      "bytes": 5100,
+      "sha256": "de71868d2ab17084579f3b7793ef19c2abfa1f7b333293dacc9ed0469b2509cb"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/workshop/change-notes-v11.txt",
+      "bytes": 3200,
+      "sha256": "91c5de24aed1cbced445744193cd44199c28ffd685b8da7cc01a02f455739bce"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/evidence/native-main-r22.json",
+      "bytes": 64105,
+      "sha256": "45a79b3f32d85ee34801186f972675cdeb1e23e31aba0b1ce2839f030271ef35"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/evidence/native-cold-r23.json",
+      "bytes": 56156,
+      "sha256": "2e8769f354c30b4ac9170c410f17402451e758c1ca77d486c446b8fe7b588004"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/evidence/native-legacy-r20.json",
+      "bytes": 17670,
+      "sha256": "671c8f2c4c8ef80936b8f8756be6dca596aea4f36ee76087de409c254d324e31"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/evidence/bugfix-20261015-current-static.json",
+      "bytes": 15004,
+      "sha256": "b12ef2a5883547739c4680f5ecbff1305e78d8f55278e70464efa486dbc662ef"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/formal-tag-and-build.json",
+      "bytes": 2974,
+      "sha256": "c0681c76db8b4bd3a5de13f7d86f48111dc814e7331e04c74a725211dc05f657"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/formal-build-001.report.json",
+      "bytes": 15164,
+      "sha256": "cec5d9b68e306d5a75767b0c06c9058239cf6315f5df24df828d9a6d9bc86a0d"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/formal-build-001.original-exit.json",
+      "bytes": 909,
+      "sha256": "f879d717a39b814b0be53a61ce785b3881fbd77d9667a3501ee7c5302163d414"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/native-publish-receipt.json",
+      "bytes": 627,
+      "sha256": "476a2904dd53c28acb48e2b38c6cdab90271c7310a7a399344c10c15a3900c3a"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/native-publish-001.original-exit.json",
+      "bytes": 177,
+      "sha256": "75a8cc49f0766a5683e1cb7f6e9184cc95bd23e3d36cab4b88edd68477a6103f"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/native-download-001.stdout.json",
+      "bytes": 2767,
+      "sha256": "2b9151e8fcd846c8c0a055e6d5681feb5f96cced3280f90519d12b965afe8b5d"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/native-download-001.original-exit.json",
+      "bytes": 177,
+      "sha256": "c6e76234636fe282e053b6eb89fd57839e1ba1bf4ae3efbe032f23ac6e91c124"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/actual-cache-preservation-001.json",
+      "bytes": 8924,
+      "sha256": "e4af8ecec37489160cf7f4f9ed0a249a4173b88fb9e31e740510e290263a8d75"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/fresh-cache-strict48-verification.json",
+      "bytes": 1053,
+      "sha256": "ac7fb45bac3a71b8bb4ef8b7fc799fe281429e37a5dbd19becae88998f37f533"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/anonymous-publication-readback-final-005.json",
+      "bytes": 5971,
+      "sha256": "5bc20beaba85c2ac3a46ec5a60d5cb7b446f2969ea220762218870100cdf959b"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/anonymous-publication-verification-005.PROCESS.actual.json",
+      "bytes": 2001,
+      "sha256": "ac5174cbf273a0170d6768dc09f6a53e5f653196c4480c81d3bb2d8bb9149e6c"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/preserved-media-verification-001.json",
+      "bytes": 2468,
+      "sha256": "c6a5b161aeb3e845c491d785f8f74c73624277188fc551821d30869ddc3627ce"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/root-steam-offline-restored.json",
+      "bytes": 1169,
+      "sha256": "f90f110d0beef745ac4c7127cdfccbe82aedbc8c7f8d985495d35ff8a1b2b2d8"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/steam-offline-fresh-001/steam-frame-freshness.json",
+      "bytes": 1296,
+      "sha256": "95be5fb3a59205f3f35e11b70d5452bb6e738c429a970b97b500c465eccf674d"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/screen-keeper-original-exit.json",
+      "bytes": 177,
+      "sha256": "229cbd339cf13af7b23c4f85f2455a7d1e2b145b80f947f35b866368fa4ade27"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/screen-resource-release.json",
+      "bytes": 1447,
+      "sha256": "d8dc4ba8cdff693d0699a9f3c426c1854eb5bb62db7bd83c983083cae9d6c825"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "docs/evidence/native-cache-r24.json",
+      "bytes": 7343,
+      "sha256": "d1ff820f314fee69cad53e05b17abc72ec31668dfd1cd6789c42aae250d351ba"
+    }
+  ],
+  "uncovered_scope": [
+    "Separate POD products",
+    "All DLC and all mutually compatible tenet combinations",
+    "Direct non-head Edit and continuous or reverse replacements",
+    "Complete culture tradition bonuses and saves already over the normal limit",
+    "Unbounded proof that recurring notifications never return"
+  ],
+  "ownership": "Product-only permanent publication record and version comparison. Generic uploader, downloader, text normalization and managed acceptance remain in ck3_eternal_recurrence. No framework changes or external operations by this task.",
+  "published": true,
+  "publication_verified": true,
+  "release_complete": false,
+  "milestone_recorded_at_utc": "2026-10-15T19:03:14.336273+00:00",
+  "source_pin_validation": {
+    "checked_nested_source_pins": 35,
+    "mismatches": [],
+    "historical_source_references": [
+      {
+        "original_pin": {
+          "path": "C:\\workspace\\ck3_eternal_recurrence\\tools\\ck3_mod_acceptance_cases\\workshop_cache_adapter.py",
+          "bytes": 17692,
+          "sha256": "fcd1b0df7e2fe98bf8da96eda047d5bbf0c2730f91ad3da06e72cbd650076968"
+        },
+        "current_checkout_matches_historical_pin": false,
+        "matching_frozen_source": {
+          "machine_id": "bf-202609141645-5434332d4d",
+          "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\source-001\\tools\\ck3_mod_acceptance_cases\\workshop_cache_adapter.py",
+          "bytes": 17692,
+          "sha256": "fcd1b0df7e2fe98bf8da96eda047d5bbf0c2730f91ad3da06e72cbd650076968"
+        },
+        "authority": "The framework owner is now repairing this file after R24 closed. R24 original prepared evidence is preserved; only a byte-identical immutable source is used to validate its historical code identity."
+      }
+    ]
+  },
+  "pending": [
+    "Actual managed menu load of the freshly downloaded cache",
+    "Normal close and final resources/offline closure after that cache-load attempt"
+  ]
+}

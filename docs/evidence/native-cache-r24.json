@@ -1,0 +1,154 @@
+{
+  "schema": "mts-native-cache-r24-evidence-v1",
+  "machine_id": "bf-202609141645-5434332d4d",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0024",
+  "observed_at_utc": "2026-10-15T19:03:14.322326+00:00",
+  "status": "PUBLIC_PRE_GAME_PROFILE_BINDING_RED",
+  "case": "workshop_cache",
+  "runtime": "20261015-native-religion-007",
+  "game_version": "1.20.0.4",
+  "exe_sha256": "98702f88a547cde2eaf29a85f93b85f68ee4cf8148336a4f7afaeb75319dd518",
+  "formal_manifest": {
+    "machine_id": "bf-202609141645-5434332d4d",
+    "path": "artifacts/bugfix-20261015/workshop-v11-actual-001/formal-build-001/more_tenets_slots_xa_dev.manifest.json",
+    "bytes": 9159,
+    "sha256": "2d9c319293b2bce98c2cc041c759b0d6400aa22ce1d9216ba620b8f194823172"
+  },
+  "cache_files_exact_before_launch": true,
+  "case_acceptance_pass": false,
+  "cache_load_pass": false,
+  "normal_close_qualified": false,
+  "product_release_pass": false,
+  "game_launch_observed": false,
+  "native_report_exists": false,
+  "actual_ck3_inventory_at_root_check": [],
+  "retained_os_exit_code": null,
+  "native_process_exit_code": null,
+  "original_host_returncode": 1,
+  "original_public_returncode": 2,
+  "keeper_actual_returncode": 0,
+  "resource_released": true,
+  "release_cas": 6345,
+  "released_at_utc": "2026-10-15T18:58:47.212581+00:00",
+  "failure": {
+    "module": "ck3_mod_acceptance_normal_exit_profile.project_profile",
+    "reason": "public preparation and selected runtime identities differ",
+    "profile_schema": "ck3-mod-acceptance-prepared-workshop-cache-v1",
+    "startup_schema": "ck3-mod-acceptance-profile-startup-evidence-v1",
+    "scope": "The selected runtime rejected the cache profile during prelaunch source binding; no CK3/native session or normal Quit occurred."
+  },
+  "qualification_boundary": "Resource cleanup and keeper0 are not normal OS0, native0, a game-load PASS, or a business PASS.",
+  "repair_owner": "Generic profile/schema integration belongs to ck3_eternal_recurrence; successor runtime and its future actual load remain pending.",
+  "evidence": [
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\root-pre-game-red.json",
+      "bytes": 1162,
+      "sha256": "64075d144324588b903e6ca641075ffe5071562d596c6f0299963e85808e5152"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\host-stderr.log",
+      "bytes": 1160,
+      "sha256": "247674d033b7b6184163770a26cdad9247edfbf7c386f410598520e1e275acd8"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\host-stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\host-original-process-exit.json",
+      "bytes": 255,
+      "sha256": "7ea79055e3826ae308da0327feff9754aaa4bd314ac4248a7bcadc81723f507d"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\public-run-original-command.json",
+      "bytes": 941,
+      "sha256": "e300311786db2bc8b4a74ab658f95dff18760783e0637e99c1af1bca60128cdc"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\public-run-original-exit.json",
+      "bytes": 282,
+      "sha256": "9cdb363d89fcd09894a4a4bf403fa33f60c980ac54b7f00371b30d3a3af065a2"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\public-run-stdout.log",
+      "bytes": 23330,
+      "sha256": "59b71d21e5ddf16d0c578b24b1d2a46f6436784e16f5c59e2f521c7baef6f68f"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\public-run-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\keeper-actual-parent-exit.json",
+      "bytes": 609,
+      "sha256": "5d89441a7ac4571ed50ccf7064b2ca1b842f0ffbaece0b52d83f4aaff81b8d8e"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0024\\root-allocation-completion.json",
+      "bytes": 1473,
+      "sha256": "356c87c911efd0a7bdc7567637ec8a479fdb279e8b5ab4a9e8659e7a5c56a646"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "artifacts/bugfix-20261015/native-cache-r24-resource-release.json",
+      "bytes": 1475,
+      "sha256": "c7cb268d1bbd0ecc0a6c07e1369231ecb4e75bf6ce78c61e00616f82d964751d"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-workshop11-001\\prepared\\prepared-case.json",
+      "bytes": 6436,
+      "sha256": "75a8085e9b66b5c27970f0a6c1fcab23262e839691984dddeb3bd9feef9ba2aa"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-workshop11-001\\prepared\\profile-preparation.json",
+      "bytes": 2541,
+      "sha256": "de93da85b0183c9f359090fa11397d349befe3ba91811e1775a9fce812c76081"
+    },
+    {
+      "machine_id": "bf-202609141645-5434332d4d",
+      "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-workshop11-001\\state\\preparation.json",
+      "bytes": 1182,
+      "sha256": "f59441c9e817b8ccefbed30f2d8f87dcd87c07d291db60278fcfa7e6a4e7fc72"
+    }
+  ],
+  "report_task_actions": {
+    "game_launches": 0,
+    "screen_actions": 0,
+    "network_calls": 0
+  },
+  "nested_source_pin_checks": {
+    "count": 35,
+    "mismatches": [],
+    "historical_source_references": [
+      {
+        "original_pin": {
+          "path": "C:\\workspace\\ck3_eternal_recurrence\\tools\\ck3_mod_acceptance_cases\\workshop_cache_adapter.py",
+          "bytes": 17692,
+          "sha256": "fcd1b0df7e2fe98bf8da96eda047d5bbf0c2730f91ad3da06e72cbd650076968"
+        },
+        "current_checkout_matches_historical_pin": false,
+        "matching_frozen_source": {
+          "machine_id": "bf-202609141645-5434332d4d",
+          "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\source-001\\tools\\ck3_mod_acceptance_cases\\workshop_cache_adapter.py",
+          "bytes": 17692,
+          "sha256": "fcd1b0df7e2fe98bf8da96eda047d5bbf0c2730f91ad3da06e72cbd650076968"
+        },
+        "authority": "The framework owner is now repairing this file after R24 closed. R24 original prepared evidence is preserved; only a byte-identical immutable source is used to validate its historical code identity."
+      }
+    ]
+  }
+}

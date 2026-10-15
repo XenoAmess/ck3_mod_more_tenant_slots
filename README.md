@@ -1,8 +1,8 @@
 # More Tenets Slots(XA)
 
-`more_tenets_slots_xa_dev/` extends the native core tenet limit to **100**, with scrollable rite creation and faith views. The development version now inherits vanilla culture tradition limits; extra tradition slots are no longer bundled.
+`more_tenets_slots_xa_dev/` extends the native core tenet limit to **100**, with scrollable rite creation and faith views. Version 11 inherits vanilla culture tradition limits; extra tradition slots are no longer bundled.
 
-The latest published release is [v10, published on 2026-10-03](docs/workshop/publication-v10.md) for CK3 1.20.0.3. Its culture cap was 10000. The current development changes target CK3 **1.20.0.4**, as requested by the project owner; they have **not** been released. Follow the [bug investigation and release checklist](docs/bugfix-plan-2026-10-15.md) and [results](docs/bugfix-report-2026-10-15.md) for the four October reports.
+The latest published release is [v11, published on 2026-10-16](docs/workshop/publication-v11.md) for CK3 **1.20.0.4**. Upload, complete anonymous description and Change Notes readback, and a fresh 48-file Workshop cache match passed. Final loading of that cache is pending: [R24](docs/native-cache-r24-2026-10-16.md) stopped before game launch because the shared runtime rejected its profile schema. The overall release closure remains incomplete. See the [v11 changelog](docs/release-changelogs/more-tenets-slots/11.md), [bug checklist](docs/bugfix-plan-2026-10-15.md), and [results](docs/bugfix-report-2026-10-15.md).
 
 Historical validation: [migration report](docs/migration-report.md), [localization format coverage](docs/localization-coverage.md), [sparse tenet creation](docs/live-R0012-sparse-create.md), and [cold reload](docs/live-R0013-cold-reload.md). These results apply to their recorded game build and product bytes. New live validation uses Simplified Chinese only; other supported languages receive format checks. POD products require their own migration and acceptance.
 
