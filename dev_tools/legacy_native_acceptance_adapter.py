@@ -5,6 +5,7 @@ claims the stricter new-save/new-process cold-reload contract.
 """
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 
 from ck3_mod_acceptance_prepare import finish_product_profile, materialize_product_profile, pin, write_json
@@ -23,6 +24,63 @@ from .native_acceptance_adapter import (
 FACTS = {'ordinary_doctrine_candidates_and_unique_replacement',
          'core_tenet_replacement_old_removed', 'notifications_converge',
          'legacy_save_identity_loaded'}
+
+
+def candidate_inspection(context, inspection, raw, proof, rite_id, faith_id, session):
+    """Validate the real bounded report; its candidate status grants no live credit."""
+    seed = context['saved_campaign']
+    saved = inspection['saved_identity']
+    require(inspection.get('status') == 'OFFLINE_CREATE_CANDIDATE_NO_EDIT_QUALIFICATION' and
+            inspection.get('live_verified') is False and inspection.get('source_unchanged_after_read') is True and
+            inspection.get('no_melt_performed') is True and
+            saved['actor_id'] == seed['player_id'] and int(saved['rite_id']) == rite_id and
+            int(saved['faith_id']) == faith_id and saved['body_date'] == proof['body_date'] and
+            saved['meta_date'] == proof['meta_date'], 'Candidate inspection identity differs from the original save')
+    expected = {'meta': ('meta_data', 'meta_data'), 'played': ('played_character', 'played_character'),
+                'actor': ('living', str(seed['player_id'])), 'rite': ('rites/database', str(rite_id)),
+                'faith': ('faiths/database', str(faith_id))}
+    require(set(inspection['records']) == set(expected), 'Complete bounded legacy records required')
+    for key, (section, identity) in expected.items():
+        record = inspection['records'][key]
+        start, length = record['byte_start'], record['bytes']
+        require(type(start) is int and type(length) is int and start >= 0 and length > 0 and
+                start + length <= len(raw) and record['section'] == section and record['key'] == identity and
+                record.get('exact_ast_consumed') is True, 'Candidate bounded record identity/range differs')
+        body = raw[start:start + length]
+        require(hashlib.sha256(body).hexdigest() == record['sha256'], 'Candidate bounded record bytes changed')
+        parse_block(block_body(body.decode('utf-8')))
+    provenance = inspection['product_provenance']
+    require(provenance['session'] == context['case_inputs']['legacy_session'] and
+            provenance['source_commit'] == session['source_commit'] == session['production']['manifest']['git_sha'] and
+            provenance['mod_version'] == str(session['production']['manifest']['mod_version']) == '10' and
+            provenance['candidate_file_count'] == len(session['production']['manifest']['files']) and
+            provenance['classification'] == 'prepublication_v10_candidate_not_the_uploaded_v10_46_file_tree' and
+            provenance.get('historical_fixture'), 'Actual prepublication v10 session provenance required')
+    for key in ('fixture_paste_receipt', 'historical_report', 'published_release_manifest'):
+        checked(provenance[key])
+    published = read(provenance['published_release_manifest']['path'])
+    require(provenance['published_file_count'] == len(published['files']) and
+            provenance['published_source_commit'] == published['git_sha'] and
+            provenance['source_commit'] != provenance['published_source_commit'],
+            'Candidate must not claim the uploaded v10 source identity')
+    anchor = inspection['date_raw_seed']
+    checked(anchor['evidence'])
+    require(anchor['value'] == seed['date_raw'] and anchor['saved_calendar_date'] == proof['body_date'] and
+            anchor['not_direct_R0008_native_date_read'] is True and
+            anchor['seed_must_be_verified_again_after_new_process_load'] is True,
+            'Candidate raw date is only an explicit same-calendar native anchor')
+    game = context['shared_game']
+    rows = read(anchor['evidence']['path'])
+    require(any(row.get('ok') is True and row.get('result', {}).get('available') is True and
+                row['result'].get('read_only') is True and row['result'].get('date_raw') == seed['date_raw'] and
+                row['result'].get('played_character_id') == anchor['native_actor_id'] and
+                row['result'].get('current_context', {}).get('rite_id') == anchor['native_rite_id'] and
+                row['result'].get('game_version') == game['version'] and
+                row['result'].get('executable_sha256', '').lower() == game['exe_sha256'].lower() and
+                row.get('after_snapshot', {}).get('date_raw') == seed['date_raw'] for row in rows),
+            'Actual selected-build native raw-date anchor unavailable')
+    return {**provenance, 'date_raw_anchor': anchor,
+            'published_v10_compatibility_credit': False, 'fresh_fixture_changes': False}
 
 
 def validate_contract(context):
@@ -65,12 +123,8 @@ def legacy_input(context):
     faith_id = int(one(parse_block(block_body(rite)), 'faith', required=True))
     checked(inputs['legacy_inspection'])
     inspection = read(inputs['legacy_inspection']['path'])
-    require(inspection.get('schema') == 'mts.native-text-save-inspection.v1' and
-            inspection.get('authority') == 'offline-save-inspection-only' and
-            inspection.get('status') == 'PASS' and inspection.get('source_unchanged') is True and
-            all(inspection['source'][key] == save[key] for key in ('bytes', 'sha256')) and
-            inspection['actor_id'] == seed['player_id'] and inspection['actor_current_rite_id'] == rite_id and
-            inspection['rite']['id'] == rite_id and inspection['rite']['faith_id'] == faith_id,
+    require(inspection.get('authority') == 'offline-save-inspection-only' and
+            all(inspection['source'][key] == save[key] for key in ('bytes', 'sha256')),
             'Historical offline inspection differs from the actual legacy save')
     checked(inputs['legacy_session'])
     session = read(inputs['legacy_session']['path'])
@@ -78,10 +132,22 @@ def legacy_input(context):
     require(str(session['production']['manifest']['mod_version']) == '10' and len(userdirs) == 1 and
             Path(save['path']).is_relative_to(Path(userdirs[0]).resolve()),
             'Legacy save must come from the pinned v10 original session profile')
+    schema = inspection.get('schema')
+    if schema == 'mts.native-text-save-inspection.v1':
+        require(inspection.get('status') == 'PASS' and inspection.get('source_unchanged') is True and
+                inspection['actor_id'] == seed['player_id'] and inspection['actor_current_rite_id'] == rite_id and
+                inspection['rite']['id'] == rite_id and inspection['rite']['faith_id'] == faith_id,
+                'Historical offline inspection differs from the actual legacy save')
+        provenance = {'classification': 'historical-v10-session', 'source_commit': session.get('source_commit')}
+    elif schema == 'mts-legacy-save-candidate-offline-inspection-v1':
+        provenance = candidate_inspection(context, inspection, raw, proof, rite_id, faith_id, session)
+    else:
+        raise ValueError('Unsupported actual legacy inspection schema')
     return {'save': save, 'body_date': proof['body_date'], 'meta_date': proof['meta_date'],
             'player_id': seed['player_id'], 'date_raw': seed['date_raw'],
             'rite_id': rite_id, 'faith_id': faith_id, 'inspection': inputs['legacy_inspection'],
             'source_session': inputs['legacy_session'], 'source_run_id': session['run_id'],
+            'product_provenance': provenance,
             'date_binding': 'Explicit native seed; actual snapshot plus Root save-date review required',
             'strict_cold_origin_credit': False, 'offline_only': True}
 

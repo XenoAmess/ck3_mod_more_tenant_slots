@@ -61,6 +61,60 @@ class LegacyAdapterTests(unittest.TestCase):
         self.context['case_inputs'].update(product_dir=str(product), formal_product_files=formal,
                                          plain_configuration=configuration)
 
+    def candidate_inputs(self):
+        from lyd_c3_checkpoint_readback.dependencies.bounded_save_parser import extract_exact_indented_block
+        self.save.write_text(self.save.read_text(encoding='utf-8') +
+            'faiths={\n\tdatabase={\n\t\t33={\n\t\t\treligion=44\n\t\t}\n\t}\n}\n', encoding='utf-8')
+        source = ADAPTER.pin(self.save)
+        self.context['saved_campaign'].update(bytes=source['bytes'], sha256=source['sha256'])
+        session_path = Path(self.context['case_inputs']['legacy_session']['path'])
+        session = json.loads(session_path.read_text())
+        session['source_commit'] = 'a' * 40
+        session['production']['manifest'].update(git_sha='a' * 40, files=[{}] * 30)
+        self.write(session_path, session)
+        session_pin = ADAPTER.pin(session_path)
+        self.context['case_inputs']['legacy_session'] = session_pin
+        text = self.save.read_text(encoding='utf-8')
+        specs = {'meta': ('meta_data', 'meta_data', 0, text),
+                 'played': ('played_character', 'played_character', 0, text),
+                 'actor': ('living', '901', 0, text),
+                 'rite': ('rites/database', '22', 2, extract_exact_indented_block(text, 'rites', 0)),
+                 'faith': ('faiths/database', '33', 2, extract_exact_indented_block(text, 'faiths', 0))}
+        raw = self.save.read_bytes()
+        import hashlib
+        records = {}
+        for name, (section, key, depth, parent) in specs.items():
+            body = extract_exact_indented_block(parent, key, depth).replace('\r\n', '\n').encode('utf-8')
+            # write_text uses native newlines; match the actual bytes, as the real inspection does.
+            if body not in raw:
+                body = body.replace(b'\n', b'\r\n')
+            records[name] = {'section': section, 'key': key, 'byte_start': raw.index(body),
+                'bytes': len(body), 'sha256': hashlib.sha256(body).hexdigest(), 'exact_ast_consumed': True}
+        published = self.root / 'published.json'
+        self.write(published, {'git_sha': 'b' * 40, 'files': [{}] * 46})
+        anchor = self.root / 'date-anchor.json'
+        self.write(anchor, [{'ok': True, 'result': {'available': True, 'read_only': True,
+            'date_raw': 53144328, 'played_character_id': 901, 'current_context': {'rite_id': 99},
+            'game_version': '1.20.0.4', 'executable_sha256': 'f' * 64}, 'after_snapshot': {'date_raw': 53144328}}])
+        self.context['shared_game'] = {'version': '1.20.0.4', 'exe_sha256': 'f' * 64}
+        inspection = {'schema': 'mts-legacy-save-candidate-offline-inspection-v1',
+            'status': 'OFFLINE_CREATE_CANDIDATE_NO_EDIT_QUALIFICATION', 'authority': 'offline-save-inspection-only',
+            'live_verified': False, 'source_unchanged_after_read': True, 'no_melt_performed': True, 'source': source,
+            'saved_identity': {'actor_id': 901, 'rite_id': '22', 'faith_id': '33',
+                'body_date': '1066.9.15', 'meta_date': '1066.9.15'}, 'records': records,
+            'product_provenance': {'session': session_pin, 'source_commit': 'a' * 40, 'mod_version': '10',
+                'candidate_file_count': 30, 'published_file_count': 46, 'published_source_commit': 'b' * 40,
+                'classification': 'prepublication_v10_candidate_not_the_uploaded_v10_46_file_tree',
+                'historical_fixture': 'Synthetic historical flag fixture disclosure',
+                'fixture_paste_receipt': ADAPTER.pin(self.evidence), 'historical_report': ADAPTER.pin(self.evidence),
+                'published_release_manifest': ADAPTER.pin(published)},
+            'date_raw_seed': {'value': 53144328, 'saved_calendar_date': '1066.9.15',
+                'not_direct_R0008_native_date_read': True, 'seed_must_be_verified_again_after_new_process_load': True,
+                'native_actor_id': 901, 'native_rite_id': 99, 'evidence': ADAPTER.pin(anchor)}}
+        self.write(self.inspection, inspection)
+        self.context['case_inputs']['legacy_inspection'] = ADAPTER.pin(self.inspection)
+        return inspection
+
     def test_public_selection_and_fixed_native_budgets(self):
         from ck3_mod_acceptance import Selection
         selected = Selection(OPTIONS.runtime, Path(__file__).with_name('acceptance_products.json'),
@@ -156,6 +210,34 @@ class LegacyAdapterTests(unittest.TestCase):
         self.context['saved_campaign']['player_id'] = 901
         self.inspection.write_text('{}', encoding='utf-8')
         with self.assertRaisesRegex(ValueError, 'evidence/formal input changed'):
+            ADAPTER.legacy_input(self.context)
+
+    def test_bounded_prepublication_candidate_keeps_historical_fixture_and_credit_limits(self):
+        self.candidate_inputs()
+        self.formal_inputs()
+        value = ADAPTER.prepare_case(self.context)
+        provenance = value['legacy_identity']['product_provenance']
+        self.assertEqual(provenance['candidate_file_count'], 30)
+        self.assertEqual(provenance['published_file_count'], 46)
+        self.assertIn('historical flag fixture', provenance['historical_fixture'])
+        self.assertFalse(provenance['published_v10_compatibility_credit'])
+        self.assertFalse(provenance['fresh_fixture_changes'])
+        self.assertFalse(value['fixture_mounted'])
+        self.assertFalse(value['business_pass'])
+
+    def test_bounded_candidate_rejects_forged_record_and_unbound_native_anchor(self):
+        inspection = self.candidate_inputs()
+        original = copy.deepcopy(inspection)
+        inspection['records']['actor']['sha256'] = '0' * 64
+        self.write(self.inspection, inspection)
+        self.context['case_inputs']['legacy_inspection'] = ADAPTER.pin(self.inspection)
+        with self.assertRaisesRegex(ValueError, 'bounded record bytes changed'):
+            ADAPTER.legacy_input(self.context)
+        inspection = original
+        inspection['date_raw_seed']['value'] += 24
+        self.write(self.inspection, inspection)
+        self.context['case_inputs']['legacy_inspection'] = ADAPTER.pin(self.inspection)
+        with self.assertRaisesRegex(ValueError, 'same-calendar native anchor'):
             ADAPTER.legacy_input(self.context)
 
     def client(self):
