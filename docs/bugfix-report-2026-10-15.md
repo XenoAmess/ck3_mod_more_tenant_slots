@@ -2,13 +2,15 @@
 
 执行清单见 [计划](bugfix-plan-2026-10-15.md)。本轮起始公开产品是 [v10](workshop/publication-v10.md)，已于 2026-10-03 发布；源码整改、当前版本实机与下一次正式发布分别记账。
 
-**最新实机进度：** [R21新局主场](native-main-r21-2026-10-15.md)在机器`bf-202609141645-5434332d4d`因原业务窗口超时保持RED，Root第一阶段GAP；仅取得文化4/6、原版合法傀儡交互和100虔诚扣费、三项初始核心及草案名称字段阻塞的观察。没有普通教义／核心替换、末槽、创建提交、通知或保存通过；public wait2、normal-close=false、保留OS0=false。native停止清理、host0、keeper0及CAS6197资源释放分别成立，不冒充正常Quit。[原件索引](evidence/native-main-r21.json)保留155个pins。未来六小时MAIN/COLD预算只约束新场，不能追改本场期限。
+**最新实机进度：** [R22新局主场](native-main-r22-2026-10-16.md)在机器`bf-202609141645-5434332d4d`通过八项业务事实、一次binary SAVE及离线语义读回、官方GUI正常闭场：两普通候选非空且替换唯一，PeaceOfGod旧核心移除，实际slot99及稀疏四核心创建，默认文化4/6，有限通知收敛。原host唯一failed step为未暂停的只读事件查询被守卫拒绝，原statusRED/实际返回1保持；UTF8公共verify后继实际0、业务及normal pass，原OS/nativeprocess_exit0/fullcleanup/public0/keeper0并CAS6290释放。native fresh Quit因`-continuelastsave`参数未支持而unavailable，不授其动作资格。独立新PID冷载与正式发布仍待。[原件索引](evidence/native-main-r22.json)保留94个pins与52项嵌套核对。
+
+**R21历史RED保持：** [R21](native-main-r21-2026-10-15.md)原业务窗口超时、第一阶段GAP、没有保存；public wait2、normal-close=false、保留OS0=false。native停止清理、host0、keeper0与CAS6197分别成立，不冒充正常Quit；后继六小时预算没有追改其原期限。
 
 **保留的限定通过：** [R20发布前v10候选旧档回归](native-legacy-r20-2026-10-15.md)四项业务事实与实际保存通过：合法创建分支151→152、普通性别组唯一替换、目标核心旧项移除及79.861秒有限通知收敛；public/host/原OS/native/keeper正常闭场，CAS6110释放。执行机器为`bf-202609141645-5434332d4d`，精确原件见[证据索引](evidence/native-legacy-r20.json)。来源是R8未发布30文件v10候选且有历史标记夹具，不授正式上传46文件v10、新局、直接Edit、独立冷载、100槽/文化或整产品通过。原[R19正式v10旧档](native-legacy-r19-2026-10-15.md)受原版合法性限制的业务RED保持；[R18](native-baseline-r18-2026-10-15.md)等同样保留历史事实。工坊仍为v10，当前候选尚未发布；下文1.20.1及早期未实机文字描述对应历史阶段。
 
 ## WP1：信条与文化传统分离
 
-状态：**静态通过；当前版本实机及发布待执行**。
+状态：**静态通过；R22默认上限4/6实机通过，完整文化行为与发布仍待**。
 
 旧 `common/defines/More tradition slots.txt` 同时包含 `NCulture.DEFAULT_MAX_TRADITIONS=10000` 和 `NReligion.FAITH_CORE_TENETS_CAP=100`，因此仅需信条槽的玩家也被强制修改文化传统上限。现移除整个 `NCulture` 覆盖，文件更名为 `more_tenets_slots.txt`；主产品继承原版文化基础上限及时代等增益，继续保留 100 个信条槽和会议镜像值。本轮不增建新的传统扩展产品，避免把捆绑改成另一项默认依赖；需要额外文化传统的玩家可独立选择传统 mod。
 
@@ -50,9 +52,9 @@
 
 ## 后续工作
 
-R20已完成发布前候选旧档的代表性创建分支回归，普通性别选择器未复现空白，提交后唯一替换及目标核心移除成立，有限通知窗收敛。正式上传v10来源、新局、第二普通教义组、直接Edit、反向/连续替换、100槽/稀疏创建、文化行为和独立冷载仍须继续；未进行工坊上传或新增发布，不改变 v10 历史结论。
+R20已完成发布前候选旧档的代表性创建分支回归；R22进一步完成当前候选新局两个普通教义组、核心旧项移除、实际第100槽及稀疏创建、文化默认4/6、有限通知、保存和正常闭场。正式上传v10来源的合法性限制、直接Edit、反向/连续替换、完整文化行为、更多通知路径及独立冷载仍须继续；未进行工坊上传或新增发布，不改变v10历史结论。
 
-通知整改已形成 [静态候选](selector-notification-candidate-2026-10-15.md)：创建入口取消对源礼仪的额外写入，编辑保留安全准备；纯内部教义更新不再进入原版通知与宗教领袖effect，真实变化保持原版逻辑。两项投影回归及48文件双构建通过；R20又区分了有限创建事件队列和上方更新通知，实际三事件耗尽后79.861秒没有持续重复。该有限路径不证明永久循环在所有场景均已关闭。
+通知整改已形成 [静态候选](selector-notification-candidate-2026-10-15.md)：创建入口取消对源礼仪的额外写入，编辑保留安全准备；纯内部教义更新不再进入原版通知与宗教领袖effect，真实变化保持原版逻辑。两项投影回归及48文件双构建通过；R20有限窗79.861秒、R22新局创建后87.425699秒均未见顶部信条更新持续重复，R22四张定时原图有Root直接审阅。有限路径不证明永久循环在所有场景均已关闭。
 
 R20日志保留66条日志头，包括本产品1条重复`on_rite_updated` effect提示、宫廷场景/无效character及活动名错误；没有授日志全净。退出prepare/continue/confirm的原即时`dispatch_unknown_claimed`也保留，正常退出只由后续确认窗和未勾选PNG、原保留句柄OS0、native清理及真实host/keeper wait0成立。详情及归属见[R20报告](native-legacy-r20-2026-10-15.md)。
 
@@ -62,6 +64,6 @@ R20日志保留66条日志头，包括本产品1条重复`on_rite_updated` effec
 
 第一场八项业务事实以 `save_written` 收尾，记录实际存档pin和原生身份。第二场通过标准saved_campaign产品profile冷启动，要求前场真实normal-close通过、同份保存与正式产品清单、实际不同PID，再核对角色、日期、宗教身份、保存的信条/教义和通知。两个场次不互相冒充，同进程菜单读档不能授第二场通过。
 
-`dev_tools/test_native_acceptance_adapter.py` 首次4项离线回归通过（0.138s）；新增冷载合同后5项通过（0.273s），覆盖真实共享profile准备、mock native run/verify、证据缺失/变更拒绝与新旧PID区分。命令为 `python -B -X utf8 dev_tools/test_native_acceptance_adapter.py --framework-root <framework> --runtime <native-runtime-mapping>`。未启动CK3，仍无业务通过。
+`dev_tools/test_native_acceptance_adapter.py` 首次4项离线回归通过（0.138s）；新增冷载合同后5项通过（0.273s），覆盖真实共享profile准备、mock native run/verify、证据缺失/变更拒绝与新旧PID区分。命令为 `python -B -X utf8 dev_tools/test_native_acceptance_adapter.py --framework-root <framework> --runtime <native-runtime-mapping>`。上述离线包当时未启动CK3，不授业务通过；后续R22实机与其独立记账。
 
 归属：产品adapter、资源fixture、业务事实和冷载关系属于本项目；标准MCP、profile、keeper、正常退出与原生查询能力复用框架。只读确认了可复用的原共享R90闭场；R90自身业务RED保持。Steam当次黑屏经已有正常重启路径恢复，新位移帧人工读到离线；没有据重启ACK推断离线。
