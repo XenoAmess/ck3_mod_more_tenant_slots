@@ -1,0 +1,31 @@
+{
+  "schema": "ck3-mod-acceptance-products-v1",
+  "products": {
+    "more-tenets-slots": {
+      "runtime_mod_key": "more-tenets-slots",
+      "external_mod": false,
+      "workshop_item_id": "3182367229",
+      "cases": [
+        {
+          "id": "october-reported-bugs",
+          "budgets": {
+            "timeout": 7200,
+            "quit_timeout": 90,
+            "poll_interval": 1,
+            "max_prepare_bytes": 536870912
+          },
+          "required_business_evidence": [
+            "ordinary_doctrine_candidates",
+            "ordinary_doctrine_replacement",
+            "core_tenet_replacement",
+            "last_slot_selection",
+            "sparse_rite_creation",
+            "vanilla_culture_limit",
+            "notifications_converge",
+            "save_and_cold_reload"
+          ]
+        }
+      ]
+    }
+  }
+}

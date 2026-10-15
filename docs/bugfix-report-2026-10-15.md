@@ -28,6 +28,14 @@
 
 归属：当前版本 GUI、输入 pin、产品版本和具体报告归本项目，复用框架文本投影与构建原语；索引与副作用排查方法待有结果后富化框架。公共 native runtime 仍绑定 `1.20.0.4`，本机暂无可调用 operator/gameplay MCP；实机前将补公共入口的官方 GUI 执行路径，不能注入失配 DLL，也不能沿用旧私有 launcher。
 
+## 公共验收入口接入
+
+本机原公共 runtime 的 native 部分精确绑定 `1.20.0.4`，而当前游戏已为 `1.20.1`；本机也没有 operator/gameplay MCP endpoint。框架新增公共入口的显式 `gui_only` 后备路径，已提交推送 `cf476f656b592190b818a04582434b11667ef87a`，合同在框架 `docs/ck3-mod-acceptance-gui-only.md`。它仍消费统一 manifest、任务总线/keeper、隔离 userdir 和真实游戏 SHA，不注入旧 DLL。离线8项、路由2项和原公共入口22项通过；没有据此授产品实机通过。
+
+本产品提供 [业务 case 数据](../dev_tools/acceptance_products.json)，八个必要证据键覆盖本轮反馈、末槽、创建、文化上限及保存冷载。机器路径、全局 manifest 映射、旧存档与正式 staging pins 留本地配置。本轮公共 `plan` 已消费该产品，结果为 `NOT_RUN/business_pass=false`；不是业务验收。
+
+归属：通用 GUI 后备执行、租约和证据判定属于框架，具体 case、正式产品和源存档属于本仓。没有扩大为通用宗教 AI 研究或把 GUI 通过宣称为 native capability 资格。
+
 ## 后续工作
 
 教义空白、替换残留及通知仍在排查。当前未进行新实机、工坊上传或新增发布；不改变 v10 历史结论。
