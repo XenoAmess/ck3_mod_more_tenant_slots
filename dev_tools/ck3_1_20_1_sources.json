@@ -1,0 +1,47 @@
+{
+  "version": "1.20.1",
+  "steam_build": "25870654",
+  "exe_sha256": "2667e409f586f20d60142873ccb1b4eb345eee54ed996925115a46132260cff7",
+  "sources": {
+    "gui/window_faith.gui": {
+      "sha256": "efe02f04c6cc2432d9907aeaf5cc9730eb9ad26b774ed4ab8e09d4ef63150ed9",
+      "normalized_sha256": "e0111e1826e4360ae0560647d088fe76b9368a979815617229ac167e6235f5c4"
+    },
+    "gui/window_rite_creation.gui": {
+      "sha256": "7814d4bf587383d741406d95ecdd419f43c1a75c59c40d59331e72228f5ed990",
+      "normalized_sha256": "973fcb9cae67c1c2b06d80fbfafbac9dce67a3a38016cc16817af14646469849"
+    },
+    "common/defines/00_defines.txt": {
+      "sha256": "220fedcb4ad2bf1996b60244b2313094301d6ccdcd4835fcc3c3685e98c35ad7",
+      "normalized_sha256": "e8d14777c30d940a81913a3a3a6e377bc6e1223b407712cda98d5a4d1cc5f3cf"
+    },
+    "common/script_values/pam_values.txt": {
+      "sha256": "306ea81bc034f4ddbf9232082276fe05d52f524d5bb6989a252fff6d9ebcf4ae",
+      "normalized_sha256": "bf2eeefad2bb128f7e4858130f37b5beeecc560933e1f737a3465b14c4ca3912"
+    },
+    "common/religion/tenet_types/_tenet_types.info": {
+      "sha256": "3d92e01d1e619add5ad57b1f3aad59ee1080904e72ef79c225890a8872a37010",
+      "normalized_sha256": "008bcbaa7cac8e83dbb81aa6b97db56cc178120a7d995fdf0012eb2fe61c2779"
+    },
+    "common/religion/doctrine_group_types/00_doctrine_group_types.txt": {
+      "sha256": "276100fe6e99ef17805da9992b4e8f38d648315dd8a30238b5fb42d113bd7456",
+      "normalized_sha256": "154953c7963c21c4030ff3c89cca85b59ca7bab25c457876276dee1821bbc907"
+    },
+    "common/on_action/religion_on_actions.txt": {
+      "sha256": "3de3ef4c0c25f93ed1bad3e6cd04f502271a9046cdfddd8f883eda3147d379ce",
+      "normalized_sha256": "fbb47357f1e932500ec1db346863e978b9454f5e8d11cb89a154ff8149586cba"
+    },
+    "common/religion/doctrine_group_types/_doctrine_group_types.info": {
+      "sha256": "729a90af80e920398cf2e0a1f981acc585228a5c3a2d3cbb84877e9bf9334996",
+      "normalized_sha256": "208dd0e97edc7e7d3ece83ca68b24a8a766c920acf5c4b46c2211c9b0667da36"
+    },
+    "common/religion/doctrine_types/_doctrine_types.info": {
+      "sha256": "8e161d30cb96216f2fce091fc1907aa2141480e60fcde05b48a4e5d76a1aa9a4",
+      "normalized_sha256": "8f11e5551e32451c06c7f73138d9db03f1b7e52a795e1055f694ddc899908fc7"
+    },
+    "common/religion/doctrine_category_types/00_doctrine_category_types.txt": {
+      "sha256": "64eef090e487cb06e058abdc1f877f457494a0ff513d2daac9168002d057ab2b",
+      "normalized_sha256": "711207d7c8a060d5318a2ceca1b68ea9241123b72d4bb56852c14f14f39f6162"
+    }
+  }
+}

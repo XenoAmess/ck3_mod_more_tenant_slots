@@ -17,6 +17,7 @@ from selector_padding import LANGUAGES, generated_files
 
 PRODUCT = "more_tenets_slots_xa_dev"
 WORKSHOP_ID = "3182367229"
+PRODUCT_VERSION = "11"
 RELEASE_FILES = (
     "descriptor.mod", "thumbnail.png",
     "common/defines/more_tenets_slots.txt",
@@ -102,7 +103,8 @@ def validate(framework: Path, game: Path) -> dict:
     if actual - DEVELOPMENT_FILES != set(RELEASE_FILES):
         raise ValueError(f"release allowlist differs: {sorted(actual ^ set(RELEASE_FILES))}")
     descriptor = (MOD / "descriptor.mod").read_text(encoding="utf-8-sig")
-    if 'supported_version="1.20.0.3"' not in descriptor or 'version="10"' not in descriptor:
+    game_version = json.loads(CONTRACT.read_text(encoding="utf-8"))["version"]
+    if f'supported_version="{game_version}"' not in descriptor or f'version="{PRODUCT_VERSION}"' not in descriptor:
         raise ValueError("descriptor differs from the migrated product identity")
     if "remote_file_id" in descriptor:
         raise ValueError("inner descriptor must not contain Workshop ID")
@@ -155,7 +157,7 @@ def build(framework: Path, destination: Path, revision: str) -> dict:
         target = staging / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(MOD / relative, target)
-    manifest = create_manifest(staging, revision, "10")
+    manifest = create_manifest(staging, revision, PRODUCT_VERSION)
     manifest["workshop_item_id"] = WORKSHOP_ID
     (destination / f"{PRODUCT}.manifest.json").write_bytes(manifest_bytes(manifest))
     archive = destination / f"{PRODUCT}.zip"

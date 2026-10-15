@@ -1,4 +1,4 @@
-"""Project the exact CK3 1.20.0.3 GUI with scrollable MTS tenet grids."""
+"""Project the reviewed CK3 1.20 GUI with scrollable MTS tenet grids."""
 
 from __future__ import annotations
 
@@ -11,8 +11,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT / "more_tenets_slots_xa_dev"
-CONTRACT = ROOT / "dev_tools/ck3_1_20_0_3_sources.json"
-HEADER = "# GENERATED FILE - CK3 1.20.0.3 native GUI with MTS scrollable tenet grids\n"
+CONTRACT = ROOT / "dev_tools/ck3_1_20_1_sources.json"
+HEADER = "# GENERATED FILE - CK3 1.20.1 native GUI with MTS scrollable tenet grids\n"
 
 
 def framework_tools(framework: Path) -> None:

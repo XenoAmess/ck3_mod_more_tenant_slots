@@ -1,0 +1,346 @@
+{
+  "status": "static-ready",
+  "native_projection": {
+    "selector_padding": {
+      "doctrine_count": 100,
+      "group_count": 100,
+      "tenet_placeholders": 0,
+      "files": 31,
+      "live_verified": false
+    },
+    "gui/window_faith.gui": {
+      "sha256": "b48f8beb8377e908a42cc41c11628eaa404f53d2011f7fb317b8240fc2fbd994",
+      "native_recovery": "PASS",
+      "changes": 5
+    },
+    "gui/window_rite_creation.gui": {
+      "sha256": "7ca15f4bc07be7dfae3db6b05f1a470c9524bf1ad1d6e0d747234c61c611c23e",
+      "native_recovery": "PASS",
+      "changes": 1
+    }
+  },
+  "localization": {
+    "status": "format-certified",
+    "languages": [
+      "english",
+      "french",
+      "german",
+      "japanese",
+      "korean",
+      "polish",
+      "russian",
+      "simp_chinese",
+      "spanish"
+    ],
+    "files": 18,
+    "keys_per_language": 305,
+    "translated_keys_per_language": 5,
+    "intentionally_empty_keys_per_language": 300,
+    "native_language_layout_sha256": "649319eebff6212e1993e54bd0dc652c35e2158f77909ed9fb8bd840f2648eb9",
+    "live_verified": false
+  },
+  "checks": [
+    "exact-native-inputs",
+    "reversible-native-gui",
+    "native-controls-preserved",
+    "native-and-council-cap-100",
+    "script-value-override-order",
+    "culture-limits-inherited",
+    "BOM-and-braces",
+    "no-retired-dependencies",
+    "localization-structure",
+    "release-allowlist"
+  ],
+  "release_file_count": 46,
+  "live_verified": false,
+  "reproducible_build": {
+    "manifest": {
+      "format_version": 2,
+      "mod_version": "11",
+      "git_tag": null,
+      "git_sha": "aad871935054f5ee077c8d69c1a12f97337805f3",
+      "workshop_item_id": "3182367229",
+      "files": [
+        {
+          "path": "common/defines/more_tenets_slots.txt",
+          "size": 129,
+          "sha256": "a508d40033eac55cf81f8bf529ca7d4008a57da5f343cdb34c089a555d184b99"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_00.txt",
+          "size": 1501,
+          "sha256": "cd9c2be4eb3de18e431ddfcc235b47133bb06e919d5afbcf92ba49a592074859"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_01.txt",
+          "size": 1501,
+          "sha256": "040fd2b3929dfb98fb6bfdddc765ed230e8d62e36e565d3d7bcc21169858788e"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_02.txt",
+          "size": 1501,
+          "sha256": "12f8279b23b669fc70b9b952086f6707113bc7677e3a90e50b3bf500e176ee62"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_03.txt",
+          "size": 1501,
+          "sha256": "5369ebea2c77e32b97778ca54b68391db78810050d1f0fc4afe9d4fa25e63bb4"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_04.txt",
+          "size": 1501,
+          "sha256": "851a40d9cf49a332e755a8594d96e4e4bf62087f6ad384ab18068a0b4880dcc4"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_05.txt",
+          "size": 1501,
+          "sha256": "8802dfefc5788967e4f8bc1e3c647844b8a56dadbfac5b272a7472c8609dceb2"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_06.txt",
+          "size": 1501,
+          "sha256": "ee904cf882c329a1f7954760773fd70ba3a510e34076d561b32bcb14547dd52e"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_07.txt",
+          "size": 1501,
+          "sha256": "793b65e89db297529944e5071b5f9d20b7efde50bbff0c631f560862f6dd0efe"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_08.txt",
+          "size": 1501,
+          "sha256": "c2b83e94ca6a3679df4c22d37fcbd373f98d1b4c312315373bd91b2b87778c39"
+        },
+        {
+          "path": "common/religion/doctrine_group_types/mts_selector_09.txt",
+          "size": 1501,
+          "sha256": "2d56e1f5a21a59e584141bc1111d7dc30dfe81ec070d4c82c5e1c5e43580f9a0"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_00.txt",
+          "size": 1431,
+          "sha256": "d13e016fa5fdf3de3daeee4070f265df1a44de151d0c1bbdb8e6c11fe98cbee8"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_01.txt",
+          "size": 1431,
+          "sha256": "e74c99f9192b7a95398a531718ee3d640dc670580f25a0089a730bb4457ccdb4"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_02.txt",
+          "size": 1431,
+          "sha256": "3660ca34c4a349bedd4668504e73cd1f5f37f5e02119f0f804f71b6a1e3726e1"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_03.txt",
+          "size": 1431,
+          "sha256": "9cd20a6de9801c247fad41a800e9670b3132a60334ee89878659edc16a531fb3"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_04.txt",
+          "size": 1431,
+          "sha256": "c89974e89bd934bd2732c470fae6d5c86a8532fbc278ec8bba9eca198fe3f107"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_05.txt",
+          "size": 1431,
+          "sha256": "6ef3399a4a4a986b9f76aa56c00906f42f480630fa15a7ed3e0c0a4f277a6453"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_06.txt",
+          "size": 1431,
+          "sha256": "1aad65cd352cbdc81827332cdd652c3dc2e5828b8054b3b2e83944b3b4a5ca7f"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_07.txt",
+          "size": 1431,
+          "sha256": "50b506c98feb5fda1e53fc667959d7cda73c3ae442674d8baea354b1563fcacf"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_08.txt",
+          "size": 1431,
+          "sha256": "afc456dddfb722251f52f86ca9757cbf55bade47422a652b2f31566c14cecc49"
+        },
+        {
+          "path": "common/religion/doctrine_types/mts_selector_09.txt",
+          "size": 1431,
+          "sha256": "8873c12b7c7f2359d6c59f7c74189540de5609fa0ef93df4a1300f014ca17429"
+        },
+        {
+          "path": "common/script_values/zz_mts_core_tenets_cap.txt",
+          "size": 134,
+          "sha256": "acd95b47fff9f740ee31ed94ce040d910e0da6da2bbea7abd326ef95e0a58687"
+        },
+        {
+          "path": "common/scripted_effects/mts_selector.txt",
+          "size": 13301,
+          "sha256": "eb4816d467af2a139189762b7b0dbf991c0f739866eb67fa78b3f3b408e145a5"
+        },
+        {
+          "path": "common/scripted_guis/mts_selector.txt",
+          "size": 324,
+          "sha256": "932d74b738c86746cb459e6b6edfc0f2aade8024b6eb7d45ee27dd9cb8b5d970"
+        },
+        {
+          "path": "descriptor.mod",
+          "size": 137,
+          "sha256": "14a495ad513f5c425df052ada23e1790841b8f7c9b6cbef354cf9849e22693cc"
+        },
+        {
+          "path": "gui/window_faith.gui",
+          "size": 148510,
+          "sha256": "b48f8beb8377e908a42cc41c11628eaa404f53d2011f7fb317b8240fc2fbd994"
+        },
+        {
+          "path": "gui/window_rite_creation.gui",
+          "size": 45406,
+          "sha256": "7ca15f4bc07be7dfae3db6b05f1a470c9524bf1ad1d6e0d747234c61c611c23e"
+        },
+        {
+          "path": "localization/english/religion/MTS_religion_confucianism_l_english.yml",
+          "size": 414,
+          "sha256": "4f208cf09da82d17aa9ada4da8d44a681c66c28b82d465d4e5add63c335e5cf2"
+        },
+        {
+          "path": "localization/english/religion/mts_selector_l_english.yml",
+          "size": 10873,
+          "sha256": "59a4118683364f39442cd6804c2659be075625b4237744b11051958debee740d"
+        },
+        {
+          "path": "localization/french/religion/MTS_religion_confucianism_l_french.yml",
+          "size": 456,
+          "sha256": "aaa39b17ab2d39bd2fa028b9b7176ba43451019bf4925b41c6c49576e47898d7"
+        },
+        {
+          "path": "localization/french/religion/mts_selector_l_french.yml",
+          "size": 10872,
+          "sha256": "b787edab30a16b4e35a9e5d92a3e536b0abbb33cd8e3c0de6a72e24fd13c04c1"
+        },
+        {
+          "path": "localization/german/religion/MTS_religion_confucianism_l_german.yml",
+          "size": 416,
+          "sha256": "ed1a3cbd278d3ea7c08f587fb6fde19cd2b96624fbd6ecd5bff1e5f1ec7eb46c"
+        },
+        {
+          "path": "localization/german/religion/mts_selector_l_german.yml",
+          "size": 10872,
+          "sha256": "de656e22025ba7abb4b646b3f0722d0a284198e2aec8fef0f9a3cf027d9e0534"
+        },
+        {
+          "path": "localization/japanese/religion/MTS_religion_confucianism_l_japanese.yml",
+          "size": 377,
+          "sha256": "c42b3dc8df7bd6bbfd5b9efa50e121b29a18e412371e13bee2f30a88a61cf5fa"
+        },
+        {
+          "path": "localization/japanese/religion/mts_selector_l_japanese.yml",
+          "size": 10874,
+          "sha256": "ecea43c39f0ffa353bde12432f3d9f41175ba73e53bb0c374bfca2f0a847faea"
+        },
+        {
+          "path": "localization/korean/religion/MTS_religion_confucianism_l_korean.yml",
+          "size": 453,
+          "sha256": "f3f812cd1ad349339173961f9bf1595ce9a9c339a2984339f425fefa6901c691"
+        },
+        {
+          "path": "localization/korean/religion/mts_selector_l_korean.yml",
+          "size": 10872,
+          "sha256": "81d2d6b142437b5f12ff636ff5dba570c55790e1154097e238ad5ef0741c1c38"
+        },
+        {
+          "path": "localization/polish/religion/MTS_religion_confucianism_l_polish.yml",
+          "size": 445,
+          "sha256": "ed4567f35af191012c68a29491d4bcfde8a1205398ca13782a47fe718290a769"
+        },
+        {
+          "path": "localization/polish/religion/mts_selector_l_polish.yml",
+          "size": 10872,
+          "sha256": "f2fad8d6c21fc80e96713c0c6e7855038918b4209b8c5a73402e60dcb3fdca10"
+        },
+        {
+          "path": "localization/russian/religion/MTS_religion_confucianism_l_russian.yml",
+          "size": 654,
+          "sha256": "e10a4ff1ed98504ecc109572305d31e402ca8797cd2278e16c93a4d6c69da9d5"
+        },
+        {
+          "path": "localization/russian/religion/mts_selector_l_russian.yml",
+          "size": 10873,
+          "sha256": "f839dc5506e9caea52766e768f000c3deed03f4b0ca15158e441ab5623f93d0e"
+        },
+        {
+          "path": "localization/simp_chinese/religion/MTS_religion_confucianism_l_simp_chinese.yml",
+          "size": 336,
+          "sha256": "cb7dc44fbd6655a015036b34f21c92acd1894b65bbc2fc0de2c2b65de9afd070"
+        },
+        {
+          "path": "localization/simp_chinese/religion/mts_selector_l_simp_chinese.yml",
+          "size": 10878,
+          "sha256": "875afae3379202810c3a47a45ce3e55590c88c11f0fd645be7c4a3459491f8ac"
+        },
+        {
+          "path": "localization/spanish/religion/MTS_religion_confucianism_l_spanish.yml",
+          "size": 426,
+          "sha256": "c16856d5fd705f8d36cfa734ea47e42b53b241dc08ccc51a7b1e17e2be2e8082"
+        },
+        {
+          "path": "localization/spanish/religion/mts_selector_l_spanish.yml",
+          "size": 10873,
+          "sha256": "e98f3dd22ac9ec2c804f0770435c9e46ea9d156b6568932fa2d47a7c8b3e23e4"
+        },
+        {
+          "path": "thumbnail.png",
+          "size": 673309,
+          "sha256": "53fa59a29aa04d18a7ac623dc19223f7d213938ac5a8a692531d5616e2ba0690"
+        }
+      ]
+    },
+    "zip_sha256": "842ed55aa9b5da05647431a203c3c394cd678a767a2eda68aa48b52e19797e6a"
+  },
+  "input_contract": {
+    "version": "1.20.1",
+    "steam_build": "25870654",
+    "exe_sha256": "2667e409f586f20d60142873ccb1b4eb345eee54ed996925115a46132260cff7",
+    "sources": {
+      "gui/window_faith.gui": {
+        "sha256": "efe02f04c6cc2432d9907aeaf5cc9730eb9ad26b774ed4ab8e09d4ef63150ed9",
+        "normalized_sha256": "e0111e1826e4360ae0560647d088fe76b9368a979815617229ac167e6235f5c4"
+      },
+      "gui/window_rite_creation.gui": {
+        "sha256": "7814d4bf587383d741406d95ecdd419f43c1a75c59c40d59331e72228f5ed990",
+        "normalized_sha256": "973fcb9cae67c1c2b06d80fbfafbac9dce67a3a38016cc16817af14646469849"
+      },
+      "common/defines/00_defines.txt": {
+        "sha256": "220fedcb4ad2bf1996b60244b2313094301d6ccdcd4835fcc3c3685e98c35ad7",
+        "normalized_sha256": "e8d14777c30d940a81913a3a3a6e377bc6e1223b407712cda98d5a4d1cc5f3cf"
+      },
+      "common/script_values/pam_values.txt": {
+        "sha256": "306ea81bc034f4ddbf9232082276fe05d52f524d5bb6989a252fff6d9ebcf4ae",
+        "normalized_sha256": "bf2eeefad2bb128f7e4858130f37b5beeecc560933e1f737a3465b14c4ca3912"
+      },
+      "common/religion/tenet_types/_tenet_types.info": {
+        "sha256": "3d92e01d1e619add5ad57b1f3aad59ee1080904e72ef79c225890a8872a37010",
+        "normalized_sha256": "008bcbaa7cac8e83dbb81aa6b97db56cc178120a7d995fdf0012eb2fe61c2779"
+      },
+      "common/religion/doctrine_group_types/00_doctrine_group_types.txt": {
+        "sha256": "276100fe6e99ef17805da9992b4e8f38d648315dd8a30238b5fb42d113bd7456",
+        "normalized_sha256": "154953c7963c21c4030ff3c89cca85b59ca7bab25c457876276dee1821bbc907"
+      },
+      "common/on_action/religion_on_actions.txt": {
+        "sha256": "3de3ef4c0c25f93ed1bad3e6cd04f502271a9046cdfddd8f883eda3147d379ce",
+        "normalized_sha256": "fbb47357f1e932500ec1db346863e978b9454f5e8d11cb89a154ff8149586cba"
+      },
+      "common/religion/doctrine_group_types/_doctrine_group_types.info": {
+        "sha256": "729a90af80e920398cf2e0a1f981acc585228a5c3a2d3cbb84877e9bf9334996",
+        "normalized_sha256": "208dd0e97edc7e7d3ece83ca68b24a8a766c920acf5c4b46c2211c9b0667da36"
+      },
+      "common/religion/doctrine_types/_doctrine_types.info": {
+        "sha256": "8e161d30cb96216f2fce091fc1907aa2141480e60fcde05b48a4e5d76a1aa9a4",
+        "normalized_sha256": "8f11e5551e32451c06c7f73138d9db03f1b7e52a795e1055f694ddc899908fc7"
+      },
+      "common/religion/doctrine_category_types/00_doctrine_category_types.txt": {
+        "sha256": "64eef090e487cb06e058abdc1f877f457494a0ff513d2daac9168002d057ab2b",
+        "normalized_sha256": "711207d7c8a060d5318a2ceca1b68ea9241123b72d4bb56852c14f14f39f6162"
+      }
+    }
+  },
+  "framework_commit": "3eb9a608e4499e10ff9fb51a32d2341ed32d3bc3"
+}

@@ -14,6 +14,20 @@
 
 归属：具体文化上限和产品防捆绑检查属于本产品；复用框架 `ck3_text_projection.masked`，没有复制 parser。此包没有新增通用实现；其差异、测试与边界留本报告，后续综合方法再评估框架富化。
 
+## 当前原版投影迁移
+
+状态：**静态通过；仍保留待修复的隐藏教义准备机制，未授业务通过**。
+
+当前安装为 CK3 `1.20.1 (Crozier)`、Steam build `25870654`，EXE `101124216` 字节，SHA-256 `2667e409f586f20d60142873ccb1b4eb345eee54ed996925115a46132260cff7`。新增 [精确输入合同](../dev_tools/ck3_1_20_1_sources.json)，保留原 `1.20.0.3` 合同作为历史输入。
+
+两个 GUI 从当前原版重新生成并可逆恢复。恢复新版的 `TenetPickableForEditedRite` 合法性检查、受限候选提示、自动命名/描述入口、描述长度 define、教义 tooltip block 名及布局修订；没有旁路费用或合法性。`TenetPickableForEditedRite` 来自当前原版 `game/data_binding/pam_data_bindings.txt`，属于编辑主礼仪时的流行度候选限制，不能据此断言它修复了旧条目残留。
+
+开发产品版本提升为 `11`，不表示已经发布。执行 `python -X utf8 dev_tools/validate_and_build.py --framework <framework> --game <game> --report docs/evidence/bugfix-20261015-1201-projection.json`：精确来源、可逆投影、上限/加载顺序、46 文件 allowlist、九语言格式和确定性双构建通过；[收据](evidence/bugfix-20261015-1201-projection.json) 明确保留 `live_verified=false`。
+
+旧 GUI 和当前原版都调用 `ShowWindowSortList(TenetItem.GetSlotIndex)`。当前 EXE 的只读窄链复核仍存在以信条槽号读取另一教义向量的风险，故本包不直接删除 100 个兼容条目。原版 `on_rite_updated` 会对教义变化发送 `msg_rite_updated`；旧准备 effect 连续 `change_rite_doctrine` 100 次构成明确通知生产链，但没有发现本 mod 的周期事件钩子。**百连通知可解释，永久循环尚未实机证实。** 后续继续核对普通教义索引和静默添加原语，不以屏蔽原版通知代替根因修复。
+
+归属：当前版本 GUI、输入 pin、产品版本和具体报告归本项目，复用框架文本投影与构建原语；索引与副作用排查方法待有结果后富化框架。公共 native runtime 仍绑定 `1.20.0.4`，本机暂无可调用 operator/gameplay MCP；实机前将补公共入口的官方 GUI 执行路径，不能注入失配 DLL，也不能沿用旧私有 launcher。
+
 ## 后续工作
 
 教义空白、替换残留及通知仍在排查。当前未进行新实机、工坊上传或新增发布；不改变 v10 历史结论。
