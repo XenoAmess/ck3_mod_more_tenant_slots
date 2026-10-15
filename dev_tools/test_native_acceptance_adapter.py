@@ -36,6 +36,7 @@ class NativeAdapterTests(unittest.TestCase):
                   if argument == '--case-read-only-mcp-tool']
         self.assertEqual(routed, selected.opt_in_read_only_mcp_tools)
         self.assertEqual(len(routed), 7)
+        self.assertEqual(selected.argv[selected.argv.index('--readiness-timeout') + 1], '1800')
 
     def test_shared_profile_prepare_with_resource_only_fixture(self):
         product = self.root / 'formal'

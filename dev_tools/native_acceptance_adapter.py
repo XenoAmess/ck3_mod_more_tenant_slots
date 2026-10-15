@@ -11,7 +11,7 @@ from pathlib import Path
 from ck3_mod_acceptance_prepare import materialize_fixture_profile, materialize_product_profile, pin, write_json
 
 
-BUDGETS = {'command_timeout': 300, 'readiness_timeout': 400, 'timeout': 2100,
+BUDGETS = {'command_timeout': 300, 'readiness_timeout': 1800, 'timeout': 2100,
            'hold_seconds': 900, 'poll_interval': 0.5}
 CONTEXT_TOOL = 'ck3_query_player_religion_context_v1'
 

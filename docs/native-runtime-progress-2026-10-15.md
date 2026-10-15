@@ -20,3 +20,11 @@ R0016 后继已通过投影 SHA 检查，但于启动游戏前被原有 normal-e
 框架 `4ffaa41e7` 的资源闭场扩展经过八项测试；`3f20da8f3` 在原始 host 已退出且首个报告缺席时保存确切退出收据并及时报告，11 项离线测试通过，R0015/R0016 原档只读核验一致。`d6bbfc40a` 使公共缓存验收兼容当前构建器的 manifest format 2，继续严格核对 tag 与逐文件原始字节，11 项缓存边界测试通过。
 
 下一实机对照使用当时**实际上传的 v10 46 文件**，已逐项匹配正式 manifest `d79bd36bcee5c081da05a99fe409421f76b49e890d6b8ec194ad700d8f77ca00`。它保留原始 supported_version 1.20.0.3 字节；实际执行游戏仍固定 1.20.0.4、简中。之前两场未启动游戏的 1.20.0.4 投影基线不替代用户版本复现。v11 候选 48 文件的当前静态结果见 [回执](evidence/bugfix-20261015-current-static.json)。
+
+R0017 首次真正启动 CK3；共享 runtime 的宗教 GUI source inventory 已通过。原生入口单次选择正确的 1066 bookmark 与罗贝尔模型并提交 Start。原来的 400 秒来自框架现有新用例模板，本项目沿用，未经本机冷启动耗时验证；这是本轮预算设置疏漏。
+
+原公共 client 在 400 秒后记录 `READINESS_TIMEOUT`，host 的开局等待随后也超时。当时原生观察仍为 `map_ready=false/player=null`，没有拿到政体／头衔数据，不应将错误文字解释成实际政体不匹配。`debug.log` 在 04:50:13 UTC 才记录 history setup 完成，04:50:36 才出现真实资源夹具标记；完整冷启动约 734 秒。它说明预算不足，不证明任何宗教业务通过。
+
+Root 保留真实进程句柄并尝试原版菜单退出，已打开退出窗口、取消退出自动保存；最终 Quit 未在原 hold 截止前完成。原运行时于 05:05 触发 managed stop：原 host wait 1，native shutdown 记录 CK3 exit 1、tree gone 和清理完成；Root 旧 retained-handle 收据仍为 signaled false／exit null，不改写为已证明正常退出。keeper 原父进程 wait 0，CAS 5984 已释放。原有资源准入检查真实通过，仅允许下一场继续；正常退出、native0、业务和发布信用均为 false。
+
+用户随后明确要求未来启动／就绪超时最低默认 1800 秒。本产品新局与冷载用例及 adapter 的预算已统一为 1800 秒，五项离线测试通过，包含公共 host 实际 argv 的 1800 秒断言。框架中央下限及 CLI 默认另行提交。R0017 原 400 秒实际记录与原冻结 runtime 保持不变。
