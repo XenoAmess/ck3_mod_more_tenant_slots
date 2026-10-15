@@ -147,10 +147,16 @@ def validate(framework: Path, game: Path) -> dict:
             "release_file_count": len(RELEASE_FILES), "live_verified": False}
 
 
-def build(framework: Path, destination: Path, revision: str) -> dict:
+def build(framework: Path, destination: Path, revision: str, tag: str | None = None) -> dict:
     framework_tools(framework)
     from build_release import create_manifest, manifest_bytes, write_deterministic_zip
 
+    if tag:
+        tagged = subprocess.check_output(
+            ["git", "rev-parse", "--verify", f"refs/tags/{tag}^{{commit}}"], cwd=ROOT, text=True).strip()
+        if tagged != revision:
+            raise ValueError("release tag does not identify the selected source commit")
+        subprocess.run(["git", "diff", "--quiet", tagged, "--", str(MOD)], cwd=ROOT, check=True)
     # The caller provides a new build directory; old attempts are preserved.
     destination.mkdir(parents=True, exist_ok=False)
     staging = destination / PRODUCT
@@ -158,7 +164,7 @@ def build(framework: Path, destination: Path, revision: str) -> dict:
         target = staging / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(MOD / relative, target)
-    manifest = create_manifest(staging, revision, PRODUCT_VERSION)
+    manifest = create_manifest(staging, revision, PRODUCT_VERSION, tag=tag)
     manifest["workshop_item_id"] = WORKSHOP_ID
     (destination / f"{PRODUCT}.manifest.json").write_bytes(manifest_bytes(manifest))
     archive = destination / f"{PRODUCT}.zip"
@@ -171,14 +177,15 @@ def main() -> int:
     parser.add_argument("--framework", type=Path, required=True)
     parser.add_argument("--game", type=Path, required=True)
     parser.add_argument("--output", type=Path, help="new build directory; omit for validation only")
+    parser.add_argument("--git-tag", help="existing tag at HEAD; include exact release identity in the manifest")
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
     try:
         result = validate(args.framework, args.game)
         revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
         with tempfile.TemporaryDirectory(prefix="mts-build-") as temp:
-            first = build(args.framework, Path(temp) / "a", revision)
-            second = build(args.framework, Path(temp) / "b", revision)
+            first = build(args.framework, Path(temp) / "a", revision, args.git_tag)
+            second = build(args.framework, Path(temp) / "b", revision, args.git_tag)
             if first != second:
                 raise ValueError("two production builds differ")
         result["reproducible_build"] = first
@@ -187,7 +194,7 @@ def main() -> int:
             ["git", "-C", str(args.framework), "rev-parse", "HEAD"], text=True).strip()
         if args.output:
             result["output"] = str(args.output.resolve())
-            build(args.framework, args.output, revision)
+            build(args.framework, args.output, revision, args.git_tag)
         if args.report:
             args.report.parent.mkdir(parents=True, exist_ok=True)
             args.report.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
