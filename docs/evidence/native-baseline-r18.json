@@ -1,0 +1,441 @@
+{
+  "schema": "mts-native-baseline-r18-evidence-v1",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0018",
+  "evidence": {
+    "readiness-window": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/case-output/readiness-window.json",
+      "bytes": 1658,
+      "sha256": "77069a6f2c9241083da19d2e3873e9b1855ca1b8b39d2532f02993f63ca65e98"
+    },
+    "readiness-window-result": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/case-output/readiness-window-result.json",
+      "bytes": 1487,
+      "sha256": "9c278f8ed32bf678f52176ef18a00dbb34d7159d926aae1d7fd7055b66bce54f"
+    },
+    "case-error-preserved": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/case-output/case-error-preserved.json",
+      "bytes": 213,
+      "sha256": "fe06fb0e41f90f4e8ab953dc8dd14f56c5f9660cf5fcf01b42f4644a181ee553"
+    },
+    "retained-current-process-identity": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/case-output/retained-current-process-identity.json",
+      "bytes": 109,
+      "sha256": "8c495aa10e2b13f369035284694b5640d96f004030daf0a57d603d61ecbf5949"
+    },
+    "actual-retained-handle-os-exit": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/case-output/actual-retained-handle-os-exit.json",
+      "bytes": 183,
+      "sha256": "a507a84b84df07871a3e0560c9d6ad9c844b53dbecc8d3c78ee6b4b1e0d344e6"
+    },
+    "normal-close-result": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/case-output/normal-close-result.json",
+      "bytes": 710,
+      "sha256": "0c4ca76ca842942875dff1bf1d6a07d8f990e89d55b35a9ea55036423e43d64e"
+    },
+    "entry-run-result": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/case-output/entry-run-result.json",
+      "bytes": 15498,
+      "sha256": "4f50bee9721a0de3cb14469525148230d01f2dcc2a3e80aa9a377d75b89676e9"
+    },
+    "frozen-argv": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/frozen-argv.json",
+      "bytes": 46566,
+      "sha256": "e794e41891f8c19e811828ba7ce482562d1a551565ef6fd0a0635f33dad2e4f4"
+    },
+    "actual-public-run-command": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/actual-public-run-command.json",
+      "bytes": 978,
+      "sha256": "908fca9e5a7a33730be152f49b1ea127bf95d2a3c261b117dc523100d4a13bbb"
+    },
+    "host-original-process-exit": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/host-original-process-exit.json",
+      "bytes": 254,
+      "sha256": "98c56245304259fe532e8cfe1bad1b3c5df766f09eed9492b6c2ed51782ca558"
+    },
+    "keeper-actual-parent-exit": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/keeper-actual-parent-exit.json",
+      "bytes": 618,
+      "sha256": "d3a62b2a5cbda3754400c2138ea4560392009d46731d6aaffa0652c1ab253af0"
+    },
+    "keeper-process": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/keeper-process.json",
+      "bytes": 708,
+      "sha256": "e4deac89c217a4786384ab7ba7e1f9db5fa91cc8d4f34f358182de9e6cb504ce"
+    },
+    "keeper-report": {
+      "path": "C:/workspace/ck3-common-runtime/keepers/20261015-mts-a04/report.json",
+      "bytes": 445,
+      "sha256": "285701a0800acb7fccb149d32335f28be69f404d348ba7ff7561dfa373861ccd"
+    },
+    "cas-release": {
+      "path": "C:/workspace/ck3_mod_more_tenant_slots/artifacts/bugfix-20261015/native-v10-baseline-004-resource-release.json",
+      "bytes": 1333,
+      "sha256": "7aa63e7622e3d9cd3d13b6ada001ba556b8e1ba0ccc9b2bfc0a1679de3144877"
+    },
+    "runtime-manifest": {
+      "path": "C:/workspace/ck3-common-runtime/20261015-native-religion-004/manifest.json",
+      "bytes": 171647,
+      "sha256": "6e36f884a95986cca671411700eac94cfd2409630e71b81ee194c8df4ff28e98"
+    },
+    "prepared-case": {
+      "path": "C:/workspace/ck3-common-runtime/cases/mts-v10-baseline-20261015-004/prepared/prepared-case.json",
+      "bytes": 26629,
+      "sha256": "6c2c04acc372d074be2f3b6ddde018dc7566177ad70c8bbe1cfd8e32319df321"
+    },
+    "v10-formal-manifest": {
+      "path": "C:/workspace/ck3_mod_more_tenant_slots/artifacts/workshop-v10/final-build-frozen/more_tenets_slots_xa_dev.manifest.json",
+      "bytes": 8775,
+      "sha256": "d79bd36bcee5c081da05a99fe409421f76b49e890d6b8ec194ad700d8f77ca00"
+    },
+    "v10-tradition-cap": {
+      "path": "C:/workspace/ck3_mod_more_tenant_slots/artifacts/workshop-v10/final-build-frozen/more_tenets_slots_xa_dev/common/defines/More tradition slots.txt",
+      "bytes": 177,
+      "sha256": "72b1099f231e7952c648275f2b5386b50d4fb7ff2530f4be783ab7755d66ef56"
+    },
+    "baseline-character-open.png": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-character-open.png",
+      "bytes": 2493067,
+      "sha256": "fdf94a6eb4c334dc86acd815cf2ed9791ac8396f5242743103604e6c5f207210"
+    },
+    "baseline-gender-popup.png": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-gender-popup.png",
+      "bytes": 2300335,
+      "sha256": "c39c2a981185bbf19e41fde341d17ca809c5633690f8b99980e9ca279c4bae44"
+    },
+    "baseline-gender-equal-after.png": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-gender-equal-after.png",
+      "bytes": 2342811,
+      "sha256": "9b5105b9e59a8b1cb124f9364a03cf0c22a7120f95c8f9aa747aa72060ad0fdf"
+    },
+    "baseline-gender-equal-click.mapping.json": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-gender-equal-click.mapping.json",
+      "bytes": 1524,
+      "sha256": "a39916b2908a474511e1dc08de2d811afdc22df09c722d243cf8ca79692a79a2"
+    },
+    "religion-action-capability-gap.json": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/religion-action-capability-gap.json",
+      "bytes": 15383,
+      "sha256": "7be86245b61952fbe6bc696f954c3e739702c0fbc4dfa236c7856bf97a794ffd"
+    },
+    "exit-context-01.queue.json": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/exit-context-01.queue.json",
+      "bytes": 716,
+      "sha256": "9670285a2977ee42c4b6e8d04450bcdeaa32695243586404f62b2070be369664"
+    },
+    "baseline-current-01-plan": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-current-01.plan.json",
+      "bytes": 598,
+      "sha256": "4e34de567fea1c5f2a2d67d91732b18a7c5cd7ac045da36c8e3ce93766415c6e"
+    },
+    "baseline-draft-before-plan": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-draft-before.plan.json",
+      "bytes": 222,
+      "sha256": "f57954e497768cea40ddc10b66d49c456ba2978e6181b5ef94dc47e98d6059d0"
+    },
+    "baseline-gender-native-plan": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-gender-native.plan.json",
+      "bytes": 432,
+      "sha256": "7e238fe2b7a76f62055a67a7050c9fe44d76167117f70d5b5a46129adfaa46ea"
+    },
+    "baseline-after-gender-plan": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-after-gender.plan.json",
+      "bytes": 432,
+      "sha256": "94587a49964a91ae57cb4a3e440f6e793fac149d1fd7900a78901b4d24ca9631"
+    },
+    "post-run-current-steam-appmanifest": {
+      "path": "C:/Program Files (x86)/Steam/steamapps/appmanifest_1158310.acf",
+      "bytes": 4293,
+      "sha256": "c0b0ec108886f3b305b5264cba661e70caa526de57337db5d3debc369a9679b2",
+      "observation_scope": "Post-run current installed buildid25734779; not a replacement for frozen/native exact EXE binding"
+    }
+  },
+  "full_raw_references_not_copied": {
+    "native-report.json": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/native-report.json",
+      "bytes": 16939310,
+      "sha256": "f4b78b0b22d8466f4073fa7b20ec7c862b2bfdc426606e326475b64f2326fae2"
+    },
+    "native-report.frontend-observations.jsonl": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/native-report.frontend-observations.jsonl",
+      "bytes": 10137859,
+      "sha256": "3061c7ffcec96b045179333e35db5af808c9f429f4c67ccb1f6b7e2eaacc0758"
+    },
+    "native-report.mcp-calls.jsonl": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/native-report.mcp-calls.jsonl",
+      "bytes": 43804419,
+      "sha256": "428eb821ef80634a0f01ce4d8de2cd548e1c293b1aefd581db2e53b789ee295b"
+    },
+    "native-report.mcp-wire.jsonl": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/native-report.mcp-wire.jsonl",
+      "bytes": 30857206,
+      "sha256": "af388aec66a6d4c61fdd09163810d96a4b7145724a236c5579a7a9f7f4b1df24"
+    },
+    "native-report.native-wire.jsonl": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/native-report.native-wire.jsonl",
+      "bytes": 40886159,
+      "sha256": "f236bf3f0cf3811377baeda27974c048c8c26fa0e732c8b3d0ea4129b7ebfbe2"
+    },
+    "baseline-current-01-results": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-current-01.results.json",
+      "bytes": 114810,
+      "sha256": "07d6a2c6393e2c9cb79aa6a1d028fdfc5b8fbf33dfd95a39fc0e07a578e33e0c"
+    },
+    "baseline-draft-before-results": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-draft-before.results.json",
+      "bytes": 59876,
+      "sha256": "22dd9e8b9979dd541e9c2e2b73324431ac6798fe55607f04d728d5ad5fc2e298"
+    },
+    "baseline-gender-native-results": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-gender-native.results.json",
+      "bytes": 196106,
+      "sha256": "28971a353730083df27cfbb4948baeef60a4b280bdb23f0f46dac118b06fc116"
+    },
+    "baseline-after-gender-results": {
+      "path": "C:/workspace/ck3-common-runtime/runs/bf-202609141645-5434332d4d--more-tenets-slots--R0018/root-evidence/baseline-after-gender.results.json",
+      "bytes": 169690,
+      "sha256": "7ceff2fcc6fcd97fc0710ca040e16fa25c07e52be5428c193fb1b7a547bfb048"
+    }
+  },
+  "recorded_at_utc": "2026-10-15T06:09:40.954789+00:00",
+  "product": "more_tenets_slots_xa_dev",
+  "baseline": "published-v10",
+  "game_version": "1.20.0.4",
+  "language": "simp_chinese",
+  "pid": 6168,
+  "connection_generation": 1,
+  "budgets": {
+    "readiness": 1800,
+    "hold": 900,
+    "timeout": 2100,
+    "command": 300,
+    "poll": 0.5
+  },
+  "readiness": {
+    "status": "READINESS_HOLD_OBSERVED",
+    "observed_at_utc": "2026-10-15T05:40:49.223110+00:00",
+    "elapsed_seconds": 915.9363791000214,
+    "within_original_deadline": true,
+    "hold_until_utc_estimated": 1792043747.0961807
+  },
+  "adapter": {
+    "expected_actor_id": 29829,
+    "actual_actor_id": 31254,
+    "error": "ValueError: Ordinary 1066 Robert initial actor not observed",
+    "gui_identity": "Apulia Duke Robert the Fox; original screenshot reviewed",
+    "original_case_red_preserved": true
+  },
+  "native_queries": [
+    {
+      "id": "baseline-current-01-0",
+      "tool": "ck3_query_player_religion_context_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:42:14.605535+00:00"
+    },
+    {
+      "id": "baseline-current-01-1",
+      "tool": "ck3_query_player_religion_tenets_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:42:17.171734+00:00"
+    },
+    {
+      "id": "baseline-current-01-2",
+      "tool": "ck3_query_player_religion_doctrines_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:42:19.102664+00:00"
+    },
+    {
+      "id": "baseline-draft-before-0",
+      "tool": "ck3_query_player_religion_draft_groups_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:45:38.396576+00:00"
+    },
+    {
+      "id": "baseline-gender-native-0",
+      "tool": "ck3_query_player_religion_draft_groups_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:48:02.978656+00:00"
+    },
+    {
+      "id": "baseline-gender-native-1",
+      "tool": "ck3_query_player_religion_draft_doctrine_choices_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:48:05.609753+00:00"
+    },
+    {
+      "id": "baseline-after-gender-0",
+      "tool": "ck3_query_player_religion_draft_doctrine_choices_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:51:09.237631+00:00"
+    },
+    {
+      "id": "baseline-after-gender-1",
+      "tool": "ck3_query_player_religion_reform_context_v1",
+      "ok": true,
+      "available": true,
+      "read_only": true,
+      "actor_id": 31254,
+      "date_raw": 53144328,
+      "snapshot_id": "native:3",
+      "revision": 4,
+      "finished_at": "2026-10-15T05:51:14.051790+00:00"
+    }
+  ],
+  "gender_draft": {
+    "before": {
+      "slot_index": 10,
+      "group_key": "doctrine_gender",
+      "selected_doctrine_key": "doctrine_gender_male_dominated",
+      "sources": [
+        {
+          "source_index": 0,
+          "doctrine_key": "doctrine_gender_male_dominated",
+          "currently_selected": true,
+          "duplicate_excluded": false,
+          "passed_shown": true,
+          "native_can_pick": true,
+          "native_knows_doctrine": true,
+          "native_has_prophet": null,
+          "final_selectable": true
+        },
+        {
+          "source_index": 1,
+          "doctrine_key": "doctrine_gender_equal",
+          "currently_selected": false,
+          "duplicate_excluded": false,
+          "passed_shown": true,
+          "native_can_pick": true,
+          "native_knows_doctrine": true,
+          "native_has_prophet": null,
+          "final_selectable": true
+        },
+        {
+          "source_index": 2,
+          "doctrine_key": "doctrine_gender_female_dominated",
+          "currently_selected": false,
+          "duplicate_excluded": false,
+          "passed_shown": true,
+          "native_can_pick": true,
+          "native_knows_doctrine": false,
+          "native_has_prophet": false,
+          "final_selectable": false
+        }
+      ]
+    },
+    "after": {
+      "slot_index": 10,
+      "group_key": "doctrine_gender",
+      "selected_doctrine_key": "doctrine_gender_equal",
+      "sources": [
+        {
+          "source_index": 0,
+          "doctrine_key": "doctrine_gender_male_dominated",
+          "currently_selected": false,
+          "duplicate_excluded": false,
+          "passed_shown": true,
+          "native_can_pick": true,
+          "native_knows_doctrine": true,
+          "native_has_prophet": null,
+          "final_selectable": true
+        },
+        {
+          "source_index": 1,
+          "doctrine_key": "doctrine_gender_equal",
+          "currently_selected": true,
+          "duplicate_excluded": false,
+          "passed_shown": true,
+          "native_can_pick": true,
+          "native_knows_doctrine": true,
+          "native_has_prophet": null,
+          "final_selectable": true
+        },
+        {
+          "source_index": 2,
+          "doctrine_key": "doctrine_gender_female_dominated",
+          "currently_selected": false,
+          "duplicate_excluded": false,
+          "passed_shown": true,
+          "native_can_pick": true,
+          "native_knows_doctrine": false,
+          "native_has_prophet": false,
+          "final_selectable": false
+        }
+      ]
+    },
+    "gui_picker_blank_reproduced": false,
+    "can_create_rite": false,
+    "can_edit_rite": false,
+    "submitted": false,
+    "cold_reloaded": false
+  },
+  "baseline_tradition_cap": 10000,
+  "closure": {
+    "public_run_exit": 2,
+    "host_original_wait_exit": 1,
+    "native_exit_reason": "stop",
+    "native_shutdown_ck3_exit": 1,
+    "managed_session_done": true,
+    "managed_thread_finished": true,
+    "cleanup_ok": true,
+    "normal_close_qualified": false,
+    "retained_os0": false,
+    "normal_gui_review": null,
+    "keeper_pid": 18240,
+    "keeper_actual_wait_exit": 0,
+    "cas_release": 6002
+  },
+  "credit": {
+    "draft_gender_selection_only": true,
+    "business_pass": false,
+    "native_zero": false,
+    "normal_quit": false,
+    "release_pass": false
+  },
+  "next_attempt_planned_not_applied": {
+    "readiness": 1800,
+    "hold": 7200,
+    "timeout": 10800
+  },
+  "method": "Read existing original files and images only; no game, queue, source edits or repeated tests."
+}
