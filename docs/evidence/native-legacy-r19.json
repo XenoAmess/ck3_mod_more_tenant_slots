@@ -1,0 +1,394 @@
+{
+  "schema": "mts-native-legacy-r19-evidence-v1",
+  "machine_id": "bf-202609141645-5434332d4d",
+  "observed_at_utc": "2026-10-15T08:15:51.507609+00:00",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0019",
+  "game_version": "1.20.0.4",
+  "language": "simp_chinese",
+  "business_pass": false,
+  "reason": "Original legacy actor cannot legally commit: already created rite and not head of rite. Draft-only checks are not current-state or saved-state PASS.",
+  "loaded_identity": {
+    "save": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bf-202609141645-5434332d4d--more-tenets-slots--R0013\\userdir\\last_save.ck3",
+      "bytes": 91143003,
+      "sha256": "3a02cfae5d89af71b8229e09e197a1576eaae02977388ac6c043b5e6de6d001f"
+    },
+    "body_date": "1066.9.15",
+    "meta_date": "1066.9.15",
+    "player_id": 33339,
+    "date_raw": 53144328,
+    "rite_id": 153,
+    "faith_id": 28,
+    "inspection": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bf-202609141645-5434332d4d--more-tenets-slots--R0013\\offline-save-inspection\\parsed-native-text.json",
+      "bytes": 1709,
+      "sha256": "36827a5e16f6a0ea29d3c1ebb4e5856ea75b3284df91c1041ca2614e2d9a7ea5"
+    },
+    "source_session": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bf-202609141645-5434332d4d--more-tenets-slots--R0013\\session.json",
+      "bytes": 10717,
+      "sha256": "98cd0109a3e3e2fb84716e058447393d5b580d2e70da2ccb6f2877b511ee6bbc"
+    },
+    "source_run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0013",
+    "date_binding": "Explicit native seed; actual snapshot plus Root save-date review required",
+    "strict_cold_origin_credit": false,
+    "offline_only": true
+  },
+  "readiness": {
+    "schema": "ck3-mod-acceptance-readiness-window-result-v1",
+    "binding": {
+      "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0019",
+      "screen_task": "common-mts-12004-20261015-a06",
+      "live": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019",
+      "state_dir": "C:\\workspace\\ck3-common-runtime\\cases\\mts-lg6-001\\state",
+      "frozen_argv": {
+        "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\frozen-argv.json",
+        "bytes": 45310,
+        "sha256": "599a315c531c3faf3fb54bf17fd436bc9d8384b5d4a70728b0ee5c7d1da02b17"
+      },
+      "runtime_manifest": {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-006\\manifest.json",
+        "bytes": 174508,
+        "sha256": "79ea98e4617d852f4c7df5d587f6339103dd2dbbb2eea10086c1bebc74bc2b71"
+      }
+    },
+    "status": "READINESS_HOLD_OBSERVED",
+    "observed_at_utc": "2026-10-15T07:40:32.718469+00:00",
+    "observed_monotonic": 504476.6393946,
+    "elapsed_seconds": 914.3376010999782,
+    "deadline_monotonic": 505362.3017935,
+    "within_original_deadline": true,
+    "host_phase": "hold",
+    "host_started_at": "2026-10-15T07:25:25.186045+00:00",
+    "host_finished_at": null,
+    "restore_status": "ACTUAL_SAVED_CAMPAIGN_CURRENT_CONTEXT_BOUND",
+    "restore_finished_at": "2026-10-15T07:40:31.605234+00:00",
+    "hold_until_utc_estimated": 1792057232.2034144,
+    "error": null,
+    "host_exit_before_report": null,
+    "new_wait_or_replay": false,
+    "business_pass": false
+  },
+  "draft_gender": [
+    {
+      "selected_array_index": 10,
+      "selected_definition_key": "doctrine_gender_male_dominated",
+      "group_key": "doctrine_gender",
+      "group_source_definition_keys": [
+        "doctrine_gender_male_dominated",
+        "doctrine_gender_equal",
+        "doctrine_gender_female_dominated"
+      ]
+    }
+  ],
+  "draft_core": [
+    {
+      "slot_index": 0,
+      "selected_tenet_key": "tenet_divine_liturgy"
+    },
+    {
+      "slot_index": 1,
+      "selected_tenet_key": "tenet_sanctity_of_nature"
+    }
+  ],
+  "actual_eligibility": {
+    "schema": "ck3_12004_rite_draft_eligibility_v1",
+    "scope": "actual_current_rite_creation_window_draft",
+    "available": true,
+    "unavailable_reason": null,
+    "draft_actor_id": 33339,
+    "can_create_rite": false,
+    "can_edit_rite": false,
+    "can_create_rite_native_text": "\u0015indent_newline:0 \u0015!\u0015indent_newline:6 \u0016warning_icon! \u0015X 你已经在扮演该角色的时候改革或创建了一种新\u0015E; \u0015TOOLTIP:GAME_CONCEPT,rite 礼仪\u0015!\u0015!！\u0015!\u0015!\n\u0016warning_icon! \u0015X 名称为空\u0015!\n\u0016warning_icon! \u0015X 形容词为空\u0015!\n\u0016warning_icon! \u0015X 信徒单数格为空\u0015!\n\u0016warning_icon! \u0015X 信徒复数格为空\u0015!",
+    "can_edit_rite_native_text": "\u0015indent_newline:0 \u0015!\u0015indent_newline:6 \u0016warning_icon! \u0015X 你\u0015bold 不是\u0015!\u0015E; \u0015TOOLTIP:GAME_CONCEPT,head_of_rite 礼仪领袖\u0015!\u0015!\u0015!\u0015!\n\u0016warning_icon! \u0015X 名称为空\u0015!\n\u0016warning_icon! \u0015X 形容词为空\u0015!\n\u0016warning_icon! \u0015X 信徒单数格为空\u0015!\n\u0016warning_icon! \u0015X 信徒复数格为空\u0015!"
+  },
+  "native_exit_query": {
+    "schema": "ck3-normal-exit-context-result-v1",
+    "status": "unavailable",
+    "public_revision": 2,
+    "native_observation": {
+      "schema": "ck3-normal-exit-map-v1",
+      "step": "normal-exit-map-v1",
+      "action": "query_context",
+      "status": "unavailable",
+      "native_revision": 1,
+      "connection_generation": 1,
+      "game_pid": 18272,
+      "played_character_id": 33339,
+      "process_creation_filetime_100ns": 134365227356121647,
+      "pump_epoch": 153607,
+      "exact_build_verified": true,
+      "owner_verified": true,
+      "process_identity_verified": true,
+      "source_abi_pins_verified": true,
+      "stock_files_verified": false,
+      "loaded_source_binding_verified": false,
+      "frame_verified": false,
+      "context_signature_verified": false,
+      "confirmation_visible": false,
+      "exit_autosave": {
+        "state_available": false,
+        "control_visible": false,
+        "control_enabled": false,
+        "should_save": false,
+        "disable_claimed": false,
+        "dispatch_invoked": false,
+        "postcondition_observed": false
+      },
+      "orderly_exit_verified": false,
+      "autosave_verified": false,
+      "exit_context_signature": "",
+      "reason": "enabled_mod_gui_or_file_inventory_unsupported",
+      "stage_consumed": [
+        false,
+        false,
+        false
+      ],
+      "targets": [
+        {
+          "read_complete": false,
+          "root_exists": false,
+          "root_visible": false,
+          "target_exists": false,
+          "target_visible": false,
+          "target_enabled": false,
+          "unique_target": false,
+          "dispatch_admitted": false,
+          "target_vtable_rva": 0
+        },
+        {
+          "read_complete": false,
+          "root_exists": false,
+          "root_visible": false,
+          "target_exists": false,
+          "target_visible": false,
+          "target_enabled": false,
+          "unique_target": false,
+          "dispatch_admitted": false,
+          "target_vtable_rva": 0
+        },
+        {
+          "read_complete": false,
+          "root_exists": false,
+          "root_visible": false,
+          "target_exists": false,
+          "target_visible": false,
+          "target_enabled": false,
+          "unique_target": false,
+          "dispatch_admitted": false,
+          "target_vtable_rva": 0
+        }
+      ],
+      "dispatches": [
+        {
+          "claim_latched": false,
+          "dispatch_invoked": false,
+          "native_handled": false,
+          "post_read_complete": false,
+          "postcondition_observed": false
+        },
+        {
+          "claim_latched": false,
+          "dispatch_invoked": false,
+          "native_handled": false,
+          "post_read_complete": false,
+          "postcondition_observed": false
+        },
+        {
+          "claim_latched": false,
+          "dispatch_invoked": false,
+          "native_handled": false,
+          "post_read_complete": false,
+          "postcondition_observed": false
+        }
+      ]
+    },
+    "exit_context_signature": "",
+    "source_inventory_sha256": "8533df39a98154948301f1e67065e94c85a248fe78ef007a6e3e3a623e0aeae2",
+    "process_creation_filetime_100ns": 134365227356121647,
+    "claim_consumed": false,
+    "retry_authorized": false,
+    "orderly_exit_verified": false,
+    "autosave_verified": false
+  },
+  "closure": {
+    "normal_close_qualified": true,
+    "managed_thread_finished": true,
+    "cleanup_ok": true,
+    "host_error": null
+  },
+  "actual_os_exit": {
+    "signaled": true,
+    "exit_code": 0,
+    "actual_retained_os0": true,
+    "pid": 18272,
+    "create_time": 1792049135.6121647,
+    "retained_synchronize_query_handle_acquired": true
+  },
+  "actual_host_wait": {
+    "at_utc": "2026-10-15T08:08:19.542750+00:00",
+    "pid": 20068,
+    "returncode": 0,
+    "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0019",
+    "actual_original_popen_wait": true,
+    "normal_ck3_exit_inferred": false,
+    "business_pass": false
+  },
+  "actual_keeper_wait": {
+    "keeper_actual_exit_code": 0,
+    "keeper_report": {
+      "schema": "xar.promo.screen-lease-keeper/v1",
+      "task_id": "common-mts-12004-20261015-a06",
+      "last_sequence": 6029,
+      "failure": null,
+      "thread_exited": true,
+      "journal": "C:\\workspace\\ck3-common-runtime\\keepers\\20261015-mts-a06\\journal.jsonl",
+      "at_utc": "2026-10-15T08:09:49.225513+00:00",
+      "entry_error": null,
+      "checkout_head": "a5d3ba9366213e9ffdc3eb6c6c02f2935c2f4072",
+      "screen_released": false,
+      "game_actions": false
+    },
+    "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0019"
+  },
+  "release_sequence": 6031,
+  "error_log": "[15:27:48][E][jomini_onaction.cpp:161]: There is more than one 'effect' defined using most recent:file: common/on_action/zz_mts_selector_on_action.txt line: 6 (on_rite_updated)\n[15:41:09][E][jomini_custom_text.h:93]: Object of type 'character' is not valid for 'GetActivityName'\n",
+  "references": [
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\frozen-argv.json",
+      "bytes": 45310,
+      "sha256": "599a315c531c3faf3fb54bf17fd436bc9d8384b5d4a70728b0ee5c7d1da02b17"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\case-output\\readiness-window-result.json",
+      "bytes": 1540,
+      "sha256": "2be10dbca89687731197f6841e518dd521e3cdf70792b938482becdc15ebd346"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\case-output\\mts-legacy-v10-edit-awaiting.json",
+      "bytes": 70902,
+      "sha256": "4e3989d06cba4de4c0ea129fafe221650e233d9f154067a4a0e899ba557282cd"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\case-output\\mts-legacy-v10-edit-root-result.json",
+      "bytes": 3293,
+      "sha256": "0f3369679a0519b239829b8b9cda11375c5670e2258121fe4126278a5126f668"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\case-output\\normal-close-result.json",
+      "bytes": 11052,
+      "sha256": "94edbf40f4cd6a0646653fd8c25eaed1a7fa488d7db9619c751e332b640fe6c3"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\case-output\\actual-retained-handle-os-exit.json",
+      "bytes": 179,
+      "sha256": "afdcb4b91558177328d1d1a96ac94e214c674db88a623c66cc8b2810dc19e683"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\host-original-process-exit.json",
+      "bytes": 255,
+      "sha256": "b61aa1c0d8c4fb35e730666912a03e12f521ac2adf8a99f297a0d40f2dca1aa0"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\keeper-actual-parent-exit.json",
+      "bytes": 609,
+      "sha256": "5c3b4ed8ae3581c4f69f0785bf2498f78ac732880f019ea8059f24887bb26f6a"
+    },
+    {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\native-legacy-r19-resource-release-02.json",
+      "bytes": 1377,
+      "sha256": "6677c3fd23d675db0783d71ffc5860eb3a9807919bd4e9c6cd29c745c4d0100f"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-006\\runtime.local.json",
+      "bytes": 4001,
+      "sha256": "10b81dd080e2be8e74a38765024919924f5c360e26f88db8706fce5f8cf6d720"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-006\\READY.actual.json",
+      "bytes": 5636,
+      "sha256": "058bd8c8131d2951a7ca31218deb1a4481ff6a4aa457951cad6ac0951672df47"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-initial-map.png",
+      "bytes": 2434019,
+      "sha256": "d0796b9d4cd6cee03984c43954886dbdaf3e0c3d416b2e5175c69b8929da5c4f"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-character-open.png",
+      "bytes": 2464123,
+      "sha256": "90c6549d844cc43a155623eaf7343c1aca3864efbda93fc14da7822bd6c2201a"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-editor-fresh.png",
+      "bytes": 2215187,
+      "sha256": "98a8b48d5126743011f8654bc565ce2fa4473a3c8e9ae6ae560c7a010c75b622"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-current-before.results.json",
+      "bytes": 107197,
+      "sha256": "404bcff2671abd114038e4b72a9020d86af19509e7e6618975b045eb75daf6e1"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-draft-eligibility.results.json",
+      "bytes": 27465,
+      "sha256": "49f3f84ce4136e4f3cd388196a8afb530d2936d3b8cc87584555c7703a3af101"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-gender-popup.png",
+      "bytes": 2181931,
+      "sha256": "1330fe9bfd313117d8f541c8440c9b9d4a879a83414377237d637c6ee943090d"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-gender-options.results.json",
+      "bytes": 193747,
+      "sha256": "d0da84bb81f43649cb109d61f8a4efb68616888745da94b8a35c7e57bdee7e04"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-gender-changed.results.json",
+      "bytes": 66952,
+      "sha256": "b6d5022041e8471cfe6d4d87e1f5ab97f0078f6714113ebc1e2596d774d260cf"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-core-options.results.json",
+      "bytes": 154242,
+      "sha256": "0ea9fa8c8ad00dcfaf18b1b5762246d283633562953be659f194511b490cd49e"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-draft-after-changes.results.json",
+      "bytes": 196267,
+      "sha256": "71da962486de9f6d0efcd2c3969628d17d7da3c735ac09f224f619f7fd8dc468"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-draft-after-view.png",
+      "bytes": 2227838,
+      "sha256": "e234e683d39b171d8602b3f1c6e743479ce4bf1cc22f2fb5cfaa895795c6f008"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-red-quit-context0.results.json",
+      "bytes": 22490,
+      "sha256": "3a934fddfda5bcd453deb4dec5f27e8dfe5f9135182101272dd5622a770afff8"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-red-unchecked.png",
+      "bytes": 1607626,
+      "sha256": "b1629ee3661402fe4395ffc158b9bfa31d06068eaac44b3efdb7d892d90d0b63"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-red-desktop-quit.mapping.json",
+      "bytes": 1515,
+      "sha256": "bec42e70aaa7cfc181984a5a63c7a9d3beb3b1eacd5cc4f0b5b180ebcc68bc6f"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0019\\root-evidence\\legacy-red-post-quit.png",
+      "bytes": 1613955,
+      "sha256": "a43da505479fe2fb95249ed60f0608a622db8d36cbb0dae0c0ad936ef6162e09"
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-lg6-001\\state\\profile\\logs\\error.log",
+      "bytes": 281,
+      "sha256": "9b24baf05481fb8ee4c14f424f27dad33e4081fedbcd73a893ca6ec325a47d24"
+    }
+  ],
+  "ownership": "Product behavior and exact session evidence remain in this repo. Generic native GUI source-verifier parity correction belongs to ck3_eternal_recurrence; no generic capability or POD pass inferred."
+}
