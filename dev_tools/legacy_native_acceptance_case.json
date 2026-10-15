@@ -1,0 +1,24 @@
+{
+  "schema": "mts-native-legacy-v10-edit-v1",
+  "product": "more-tenets-slots",
+  "case": "native-legacy-v10-edit",
+  "phases": [
+    {
+      "id": "mts-legacy-v10-edit",
+      "requirements": [
+        "ordinary_doctrine_candidates_and_unique_replacement",
+        "core_tenet_replacement_old_removed",
+        "notifications_converge",
+        "legacy_save_identity_loaded"
+      ],
+      "instructions": "Review the actual original v10 save actor/name/title, displayed saved date and initial native Rite/Faith identity. Use typed native queries/actions first; retain any real capability/legality RED before official UI fallback. Show the ordinary doctrine candidates (blank-picker regression), COMMIT one legal ordinary doctrine replacement and verify exactly one current choice in that group, then COMMIT a core tenet replacement and verify the old core item is absent and the new item occurs once. Observe religion-change notifications until they finish and record the actual observation duration. If the saved actor lacks a legal creation/edit path, preserve RED; do not change the player, government, tested doctrines/tenets, or resource state through fixtures/console. Return legacy_readback with loaded_identity {save pin, player_id, date_raw, rite_id, faith_id, body_date}, ordinary_doctrine {group, old, new, committed:true, current:[new]}, core_tenets {old, new, committed:true, current:[actual current core keys]}, and notifications {observed_seconds, recurring:false, remaining_religion_change_notifications:0}. Pin real before/after native/UI and timed notification evidence. Draft selection, ACKs or pre-existing saved values do not prove a replacement. This is a historical-save regression, not strict cold-origin acceptance. Leave 900 seconds for the shared actual normal Quit."
+    }
+  ],
+  "ownership": "Product-specific v10 save regression and evidence belong to MTS. Profile preparation, native runtime/MCP, Steam/screen/process custody and normal exit remain shared framework capabilities.",
+  "runtime_status": "NOT_RUN",
+  "strict_cold_origin_credit": false,
+  "required_inputs": {
+    "saved_campaign": "Explicit exact save/bytes/sha256/player_id/date_raw; actual save player is read independently. Text save dates do not supply a native raw-date decoder.",
+    "case_inputs": ["product_dir", "formal_manifest or formal_product_files", "plain_configuration", "legacy_inspection pin", "legacy_session pin"]
+  }
+}
