@@ -25,8 +25,8 @@
           "budgets": {
             "command_timeout": 300,
             "readiness_timeout": 1800,
-            "timeout": 10800,
-            "hold_seconds": 7200,
+            "timeout": 25200,
+            "hold_seconds": 21600,
             "poll_interval": 0.5
           },
           "required_mcp_tools": [
@@ -79,8 +79,8 @@
           "budgets": {
             "command_timeout": 300,
             "readiness_timeout": 1800,
-            "timeout": 10800,
-            "hold_seconds": 7200,
+            "timeout": 25200,
+            "hold_seconds": 21600,
             "poll_interval": 0.5
           },
           "required_mcp_tools": [

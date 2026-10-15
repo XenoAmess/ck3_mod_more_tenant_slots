@@ -13,8 +13,8 @@ from ck3_mod_acceptance_prepare import (
 )
 
 
-BUDGETS = {'command_timeout': 300, 'readiness_timeout': 1800, 'timeout': 10800,
-           'hold_seconds': 7200, 'poll_interval': 0.5}
+BUDGETS = {'command_timeout': 300, 'readiness_timeout': 1800, 'timeout': 25200,
+           'hold_seconds': 21600, 'poll_interval': 0.5}
 QUIT_RESERVE = 900
 CONTEXT_TOOL = 'ck3_query_player_religion_context_v1'
 

@@ -36,9 +36,28 @@ class NativeAdapterTests(unittest.TestCase):
                   if argument == '--case-read-only-mcp-tool']
         self.assertEqual(routed, selected.opt_in_read_only_mcp_tools)
         self.assertEqual(len(routed), 7)
-        self.assertEqual(selected.argv[selected.argv.index('--readiness-timeout') + 1], '1800')
-        self.assertEqual(selected.argv[selected.argv.index('--hold-seconds') + 1], '7200')
-        self.assertEqual(selected.argv[selected.argv.index('--timeout') + 1], '10800')
+        for case in (CASE, COLD_CASE):
+            route = Selection(OPTIONS.runtime, Path(__file__).with_name('acceptance_products.json'),
+                              'more-tenets-slots', case['id'])
+            for flag, expected in (('--readiness-timeout', '1800'), ('--hold-seconds', '21600'),
+                                   ('--timeout', '25200'), ('--command-timeout', '300'),
+                                   ('--poll-interval', '0.5')):
+                self.assertEqual(route.argv[route.argv.index(flag) + 1], expected)
+            self.assertEqual(case['normal_close']['reserve_seconds'], 900)
+            ADAPTER.validate_contract({**self.context, 'case': case['id'], 'case_spec': case})
+
+    def test_budget_contract_rejects_stale_or_mixed_main_and_cold(self):
+        import copy
+        for case in (CASE, COLD_CASE):
+            for change in ({'hold_seconds': 7200, 'timeout': 10800},
+                           {'hold_seconds': 7200}, {'timeout': 10800},
+                           {'readiness_timeout': 400}, {'command_timeout': 600},
+                           {'poll_interval': 1}):
+                with self.subTest(case=case['id'], change=change):
+                    stale = copy.deepcopy(case)
+                    stale['budgets'].update(change)
+                    with self.assertRaisesRegex(ValueError, 'Declared native case budget changed'):
+                        ADAPTER.validate_contract({**self.context, 'case': case['id'], 'case_spec': stale})
 
     def test_actual_start_identity_uses_runtime_actor_not_old_numeric_id(self):
         import copy

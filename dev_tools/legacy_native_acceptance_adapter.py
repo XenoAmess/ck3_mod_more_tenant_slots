@@ -16,9 +16,14 @@ from lyd_c3_checkpoint_readback.dependencies.bounded_save_parser import (
 )
 
 from .native_acceptance_adapter import (
-    BUDGETS, CONTEXT_TOOL, QUIT_RESERVE, checked, observe_context,
+    CONTEXT_TOOL, QUIT_RESERVE, checked, observe_context,
     product_matches, read, require, root_phase, validate_response,
 )
+
+
+# Preserve this historical case budget independently of MAIN/COLD.
+BUDGETS = {'command_timeout': 300, 'readiness_timeout': 1800, 'timeout': 10800,
+           'hold_seconds': 7200, 'poll_interval': 0.5}
 
 
 FACTS = {'ordinary_doctrine_candidates_and_unique_replacement',
