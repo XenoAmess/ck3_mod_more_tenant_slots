@@ -1,0 +1,1184 @@
+{
+  "schema": "mts-native-main-r21-red-evidence-v1",
+  "machine_id": "bf-202609141645-5434332d4d",
+  "recorded_at_utc": "2026-10-15T14:17:38.688639+00:00",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0021",
+  "case": "native-october-reported-bugs",
+  "status": "RED_OR_INCOMPLETE",
+  "language": "simp_chinese",
+  "game_version": "1.20.0.4",
+  "steam_build_id": "25734779",
+  "executable_sha256": "98702F88A547CDE2EAF29A85F93B85F68EE4CF8148336A4F7AFAEB75319DD518",
+  "runtime": "immutable007",
+  "business_pass": false,
+  "case_contract_qualified": false,
+  "gui_contract_qualified": false,
+  "normal_close_qualified": false,
+  "save_written_qualified": false,
+  "strict_cold_reload_credit": false,
+  "last_slot_selection_credit": false,
+  "ordinary_doctrine_replacement_credit": false,
+  "new_rite_creation_credit": false,
+  "core_tenet_replacement_credit": false,
+  "notification_regression_credit": false,
+  "published_release_credit": false,
+  "root_phase1": "GAP",
+  "original_budgets": {
+    "command_timeout": 300,
+    "readiness_timeout": 1800,
+    "timeout": 10800,
+    "hold_seconds": 7200,
+    "poll_interval": 0.5
+  },
+  "original_hold_deadline_epoch": 1792071829.5505176,
+  "original_hold_deadline_utc": "2026-10-15T13:43:49.550518+00:00",
+  "normal_quit_reserve_seconds": 900,
+  "original_quit_reserve_start_utc": "2026-10-15T13:28:49.550518+00:00",
+  "case_error": {
+    "error": "TimeoutError: Original normal Quit reserve reached; pending Root phase remains GAP",
+    "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0021",
+    "business_pass": false,
+    "submitted_steps_never_replayed": true
+  },
+  "public_original_wait": {
+    "argv": [
+      "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\source-001\\tools\\ck3_mod_acceptance.py",
+      "run",
+      "--runtime",
+      "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\runtime.local.json",
+      "--products",
+      "C:\\workspace\\ck3_mod_more_tenant_slots\\dev_tools\\acceptance_products.json",
+      "--product",
+      "more-tenets-slots",
+      "--case",
+      "native-october-reported-bugs",
+      "--run-context",
+      "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\reviewed-run-context.json",
+      "--prepared-case",
+      "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\prepared\\prepared-case.json"
+    ],
+    "at_utc": "2026-10-15T11:30:28.183511+00:00",
+    "machine_id": "bf-202609141645-5434332d4d",
+    "pid": 19632,
+    "returncode": 2,
+    "finished_at_utc": "2026-10-15T13:43:49.713250+00:00",
+    "actual_original_popen_wait": true
+  },
+  "initial_identity": {
+    "actor": 31254,
+    "date_raw": 53144328,
+    "rite_id": 0,
+    "faith_id": 13
+  },
+  "partial_observations": {
+    "culture": {
+      "traditions": 4,
+      "capacity": 6,
+      "authority": "Root and delegated reviewer directly viewed original culture PNG; no native culture-cap getter",
+      "full_behavior_pass": false
+    },
+    "clerical_puppet": {
+      "authority": "official GUI legal interaction and mapped send, original PNGs plus independent native piety change",
+      "piety_cost": 100,
+      "native_piety_changes": [
+        {
+          "line": 1969,
+          "at_utc": "2026-10-15T11:41:25.336257+00:00",
+          "piety": {
+            "raw": 15000000,
+            "scale": 100000
+          },
+          "snapshot_id": "native:2",
+          "date_raw": 53144328
+        },
+        {
+          "line": 2959,
+          "at_utc": "2026-10-15T11:43:37.750971+00:00",
+          "piety": {
+            "raw": 10015000000,
+            "scale": 100000
+          },
+          "snapshot_id": "native:3",
+          "date_raw": 53144328
+        },
+        {
+          "line": 3019,
+          "at_utc": "2026-10-15T13:02:52.548512+00:00",
+          "piety": {
+            "raw": 10005000000,
+            "scale": 100000
+          },
+          "snapshot_id": "native:4",
+          "date_raw": 53144328
+        }
+      ],
+      "religion_fixture_setter_used": false
+    },
+    "current_draft": {
+      "eligibility": {
+        "schema": "ck3_12004_rite_draft_eligibility_v1",
+        "scope": "actual_current_rite_creation_window_draft",
+        "available": true,
+        "unavailable_reason": null,
+        "draft_actor_id": 31254,
+        "can_create_rite": false,
+        "can_edit_rite": false,
+        "can_create_rite_native_text": "\u0016warning_icon! \u0015X 名称为空\u0015!\n\u0016warning_icon! \u0015X 形容词为空\u0015!\n\u0016warning_icon! \u0015X 信徒单数格为空\u0015!\n\u0016warning_icon! \u0015X 信徒复数格为空\u0015!",
+        "can_edit_rite_native_text": "\u0015indent_newline:0 \u0015!\u0015indent_newline:6 \u0016warning_icon! \u0015X 你\u0015bold 不是\u0015!\u0015E; \u0015TOOLTIP:GAME_CONCEPT,head_of_rite 礼仪领袖\u0015!\u0015!\u0015!\u0015!\n\u0016warning_icon! \u0015X 名称为空\u0015!\n\u0016warning_icon! \u0015X 形容词为空\u0015!\n\u0016warning_icon! \u0015X 信徒单数格为空\u0015!\n\u0016warning_icon! \u0015X 信徒复数格为空\u0015!"
+      },
+      "costs": {
+        "schema": "ck3_12004_rite_creation_costs_v1",
+        "game_version": "1.20.0.4",
+        "executable_sha256": "98702F88A547CDE2EAF29A85F93B85F68EE4CF8148336A4F7AFAEB75319DD518",
+        "available": true,
+        "unavailable_reason": null,
+        "capture_epoch": 463188,
+        "date_raw": 53144328,
+        "played_character_id": 31254,
+        "source_rite_id": 0,
+        "editing_owned_current_rite": false,
+        "piety_cost_raw": 427500000,
+        "piety_missing_signed_raw": -9577500000,
+        "has_enough_piety": true,
+        "raw_scale": 100000,
+        "final_creation_legality_observed": false,
+        "other_resource_costs_observed": false
+      },
+      "slot_count": 100,
+      "initial_selected_core_tenets": [
+        "tenet_peace_of_god",
+        "tenet_apostolic_succession",
+        "tenet_communion"
+      ],
+      "last_slot_clicked": false,
+      "ordinary_picker_replacement_completed": false,
+      "names_filled": false,
+      "creation_committed": false
+    }
+  },
+  "normal_close_original": {
+    "root_normal_gui_review": null,
+    "operator_normal_gui_review": null,
+    "normal_quit_automation": null,
+    "normal_quit_automation_failure_preserved": null,
+    "retained_handle": {
+      "signaled": false,
+      "exit_code": null,
+      "actual_retained_os0": false,
+      "pid": 17256,
+      "create_time": 1792063844.0714984,
+      "retained_synchronize_query_handle_acquired": true
+    },
+    "native_zero_proof": null,
+    "finish_hold_rows": null,
+    "host_finished_at": null,
+    "managed_thread_finished": false,
+    "cleanup_ok": null,
+    "host_error": null,
+    "failure_shutdown_proof": null,
+    "failure_preserved": false,
+    "failure_lifecycle_completed": false,
+    "business_pass": false,
+    "normal_close_qualified": false
+  },
+  "retained_os_exit_original": {
+    "signaled": false,
+    "exit_code": null,
+    "actual_retained_os0": false,
+    "pid": 17256,
+    "create_time": 1792063844.0714984,
+    "retained_synchronize_query_handle_acquired": true
+  },
+  "native_final": {
+    "top_level_status": "GREEN",
+    "exit_reason": "stop",
+    "process_exit_code": null,
+    "finished_at": "2026-10-15T13:43:52.339914+00:00",
+    "shutdown": {
+      "nonce": "1b909fe77a9b41ba83ebfbae35961256",
+      "ck3_pid": 17256,
+      "ck3_creation_date": "20261015113044.071498+000",
+      "ck3_exit_code": 1,
+      "job_active_processes_before_termination": 1,
+      "job_active_processes_final": 0,
+      "tree_gone": true,
+      "cleanup_proven": true,
+      "final_ck3_inventory": {
+        "tasklist_returncode": 0,
+        "tasklist_pids": [],
+        "wmi_pids": [],
+        "native_pids": [],
+        "inventory_backend": "tasklist+toolhelp32",
+        "processes": []
+      },
+      "watchdog_pid": 18916,
+      "watchdog_creation_date": "20261015113043.257254+000",
+      "watchdog_state_before": "running",
+      "watchdog_state_after": "absent",
+      "control_files_absent": {
+        "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\state\\control\\ck3.json": true,
+        "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\state\\control\\watchdog-1b909fe77a9b41ba83ebfbae35961256.ready.json": true,
+        "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\state\\control\\ck3.watchdog_error": true,
+        "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\state\\control\\unsafe-cleanup.json": true
+      },
+      "contract_errors": [],
+      "ok": true
+    }
+  },
+  "host_original_wait": {
+    "at_utc": "2026-10-15T13:43:53.831487+00:00",
+    "pid": 18856,
+    "returncode": 0,
+    "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0021",
+    "actual_original_popen_wait": true,
+    "normal_ck3_exit_inferred": false,
+    "business_pass": false
+  },
+  "keeper_original_wait": {
+    "keeper_actual_exit_code": 0,
+    "keeper_report": {
+      "schema": "xar.promo.screen-lease-keeper/v1",
+      "task_id": "common-mts-12004-20261015-a08",
+      "last_sequence": 6196,
+      "failure": null,
+      "thread_exited": true,
+      "journal": "C:\\workspace\\ck3-common-runtime\\keepers\\20261015-mts-a08\\journal.jsonl",
+      "at_utc": "2026-10-15T14:09:51.676324+00:00",
+      "entry_error": null,
+      "checkout_head": "3e99036b6a33e8b6278a5b8308316402e1f338da",
+      "screen_released": false,
+      "game_actions": false
+    },
+    "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0021"
+  },
+  "current_process_absence": {
+    "machine_id": "bf-202609141645-5434332d4d",
+    "observed_at_utc": "2026-10-15T14:12:20.271366+00:00",
+    "scope": "CK3 processes and exact original identities; absence is resource observation only",
+    "ck3_processes": [],
+    "normal_close_qualified": false,
+    "business_pass": false
+  },
+  "resource_release": {
+    "sequence": 6197,
+    "at_utc": "2026-10-15T14:10:05.533074+00:00",
+    "resources": []
+  },
+  "no_save_observation": {
+    "checked_at_utc": "2026-10-15T14:17:38.688694+00:00",
+    "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\state\\profile\\save games",
+    "directory_exists": false
+  },
+  "declared_original_inputs": {
+    "prepared_case": {
+      "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\prepared\\prepared-case.json",
+      "bytes": 26245,
+      "sha256": "44d6155d93f6ec3778d495fe6d407c3cbe86ee8aa4a29f05919be9c2a72df69d"
+    },
+    "case_inputs": {
+      "product_dir": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\selector-candidate-build\\more_tenets_slots_xa_dev",
+      "formal_manifest": {
+        "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\selector-candidate-build\\more_tenets_slots_xa_dev.manifest.json",
+        "bytes": 9127,
+        "sha256": "133fd81ef2b1c76068a3f5ebe13ed3283aa92f6ab7d933ec42f0db1095f89ca8"
+      },
+      "plain_configuration": {
+        "pdx_settings.txt": {
+          "path": "C:\\workspace\\ck3_lyd_runtime_20261004\\live-attempt-038\\userdir\\pdx_settings.txt",
+          "bytes": 7135,
+          "sha256": "2c784b081521c8c8e2129c5304734bbb7fd184f70cba78fb03e42907330e3a90"
+        },
+        "tutorial.txt": {
+          "path": "C:\\workspace\\ck3_lyd_runtime_20261004\\live-attempt-038\\userdir\\tutorial.txt",
+          "bytes": 57,
+          "sha256": "de93ebed7d262c2450ac9fd18543e0890d8e5d3661cc773b62f707fc310a2075"
+        },
+        "presets.txt": {
+          "path": "C:\\workspace\\ck3-common-runtime\\cases\\lyd-transaction-control-20261010-001\\plain-configuration\\presets.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "player/game_rules/presets.txt": {
+          "path": "C:\\workspace\\ck3-common-runtime\\cases\\lyd-transaction-control-20261010-001\\plain-configuration\\player\\game_rules\\presets.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    "public_checked_inputs": [
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\manifest.json",
+        "bytes": 176414,
+        "sha256": "7afbf96d4ec226063b20520b0a60cbc922ffc11eb11b77fe4718d2fef5289ff3"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\prepared\\prepared-case.json",
+        "bytes": 26245,
+        "sha256": "44d6155d93f6ec3778d495fe6d407c3cbe86ee8aa4a29f05919be9c2a72df69d"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\host_entry.py",
+        "bytes": 14419,
+        "sha256": "252ca534c7a5dbba7003f5fc885d2561c8a5718963b3822e8ec20fea75ceb92b"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\source-index.json",
+        "bytes": 1797317,
+        "sha256": "c8ba6bb3826df802e5ee82821e5af2ce71fd46dae434e81ef8ffb28e946421c2"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\native-source-index.json",
+        "bytes": 1021731,
+        "sha256": "75e2e260df0669b1ba94961c2c312b59523c6c00d01a77c904e1c9cfbfad801d"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\HOST-CONFIG.json",
+        "bytes": 1467,
+        "sha256": "31d4c85f812ef05f8d3cf6a2a59194ac4a770fde0912c3c2d457becee69bd063"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\source-001\\tools\\ck3_mod_acceptance_normal_exit_profile.py",
+        "bytes": 6198,
+        "sha256": "c9e8f5ebe52808597d8125c8810618f92e2a3d24b8861c8cff952bbaf4b918b1"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\20261015-native-religion-007\\source-001\\tools\\build_normal_exit_source_inventory_v1.py",
+        "bytes": 5059,
+        "sha256": "60d2567cd65fc677c654c88be0b0c1820172795955e3e9c9e292e9de4c36a993"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\normal-exit-gui-source-20261015-001\\build-001\\xar_ck3_bridge.dll",
+        "bytes": 13235200,
+        "sha256": "bfdfb1fe7f02321e7f7d1117e13953131d93c8f1eab6716b9572838e6f3eb612"
+      },
+      {
+        "path": "C:\\cbr3\\xar_ck3_bridge_injector.exe",
+        "bytes": 39936,
+        "sha256": "9b29a7506948d73c16e62b9a2568ee74701179e70d17d44e73c80e0b1ed4af48"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\prepared\\initial-plan.json",
+        "bytes": 18,
+        "sha256": "06a47cf1fb789f4455b297272f9ec7cf2fd1b612e10a35886ecdbce39669b6b4"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-new7-001\\prepared\\frontend-fixture-start-policy.json",
+        "bytes": 8710,
+        "sha256": "79de9e92842ede7c2cf657c7a7356f53a5cc64b9e4456f762b1eb0ac01c6e775"
+      },
+      {
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Crusader Kings III\\binaries\\ck3.exe",
+        "bytes": 101040248,
+        "sha256": "98702f88a547cde2eaf29a85f93b85f68ee4cf8148336a4f7afaeb75319dd518"
+      },
+      {
+        "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\dev_tools\\native_acceptance_adapter.py",
+        "bytes": 17520,
+        "sha256": "335524c741f15f12ed8adbe77cb81a236718995e5ce48741a6a46b8b247e978f"
+      },
+      {
+        "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\dev_tools\\native_acceptance_case.json",
+        "bytes": 3148,
+        "sha256": "a8107f4bb3cd73cd40dfc3929f149f63dd1f2f32091b46c5d3f06205292d8001"
+      },
+      {
+        "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\frozen-argv.json",
+        "bytes": 46943,
+        "sha256": "f4709f97321b4cce08790bad2f3aa61eac29d2c8640f20c59fab47a19191e350"
+      }
+    ]
+  },
+  "r20_preserved": {
+    "scoped_business_pass": true,
+    "normal_close_qualified": true,
+    "scope": "prepublication v10 candidate legacy branch only; not main/fresh/cold/published v10"
+  },
+  "boundaries": [
+    "native top-level GREEN, cleanup_proven and host/keeper wait0 are not normal CK3 Quit or case PASS",
+    "no actual Root normal-Quit receipt or R21 checkpoint; no R21-saved continuation input exists",
+    "future six-hour budgets do not extend R21 deadlines or retrospectively qualify it",
+    "14:09 Root absence observation was not persisted; inventory receipt uses its actual 14:12:20.271366 UTC time"
+  ],
+  "pins": {
+    "actual-public-run-command.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\actual-public-run-command.json",
+      "bytes": 1081,
+      "sha256": "f680db47dc3d0016454d1440ddbac052985ed95c8c0591ba14591234b1644d48"
+    },
+    "allocated-context.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\allocated-context.json",
+      "bytes": 2167,
+      "sha256": "5051523091d0fd12a2d43033849ce273eec812bec32bd54724a2a8a329bc1b14"
+    },
+    "case-output/actual-retained-handle-os-exit.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\actual-retained-handle-os-exit.json",
+      "bytes": 184,
+      "sha256": "a81792bf38e6278a53d2850ed423c6a4166c06ecb1f101ec0d02288891843d4e"
+    },
+    "case-output/case-error-preserved.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\case-error-preserved.json",
+      "bytes": 236,
+      "sha256": "255f878ad45f41eec9c90474f9b20d92baffdb02c07dc83f3b0f9d83dca95b1a"
+    },
+    "case-output/case-once.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\case-once.json",
+      "bytes": 2553,
+      "sha256": "c478d44bfd2be1296c986379078900c57de30f9b6d36b0dfbb4b636c0c33efac"
+    },
+    "case-output/case-snapshot-0001.actual-results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\case-snapshot-0001.actual-results.json",
+      "bytes": 38167,
+      "sha256": "98a64714986bafd301adee881e193bb6bf429c43b6dc2a6fee63d66ee8e46625"
+    },
+    "case-output/case-snapshot-0001.queue-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\case-snapshot-0001.queue-result.json",
+      "bytes": 673,
+      "sha256": "9f0542c4e9a58e082c342dd90f597ca5f5edf36a360b9652e9a896b2b9c44b3c"
+    },
+    "case-output/case-snapshot-0001.stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\case-snapshot-0001.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "case-output/case-snapshot-0001.stdout.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\case-snapshot-0001.stdout.log",
+      "bytes": 2042,
+      "sha256": "fb23cef604857796b424be386e7490f65515a99c3a8685a55bd0c4a1ed381baf"
+    },
+    "case-output/entry-run-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\entry-run-result.json",
+      "bytes": 13882,
+      "sha256": "0382da3b79f388be6a9785da4c5d2bc69963eea40bb8e585599f733b91c3fda8"
+    },
+    "case-output/manual-quit-awaiting.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\manual-quit-awaiting.json",
+      "bytes": 648,
+      "sha256": "9ed1d36888e1407da906a47350d91a00baa13fc9e0084184506146c36bbd2951"
+    },
+    "case-output/mts-doctrines-and-tenets-awaiting.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\mts-doctrines-and-tenets-awaiting.json",
+      "bytes": 72590,
+      "sha256": "0fdbf051278ac97682bb1667013eefc07a38ad3b193ba67aef46e857504b1b38"
+    },
+    "case-output/mts-native-context-initial.actual-results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\mts-native-context-initial.actual-results.json",
+      "bytes": 45682,
+      "sha256": "316cf162ff040b9ac96540ece6b44c2e61e0a0af62d1d4b9a3a757dec1e21321"
+    },
+    "case-output/mts-native-context-initial.queue-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\mts-native-context-initial.queue-result.json",
+      "bytes": 689,
+      "sha256": "6d1b4838aafb6ee393c7f8db5f253955ced623a694c6849487f93ac08a53394e"
+    },
+    "case-output/mts-native-context-initial.stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\mts-native-context-initial.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "case-output/mts-native-context-initial.stdout.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\mts-native-context-initial.stdout.log",
+      "bytes": 2066,
+      "sha256": "0e98c66b5b5b3665c759167ccf69de04d5003c2398e4c072c5895f2061464f91"
+    },
+    "case-output/normal-close-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\normal-close-result.json",
+      "bytes": 711,
+      "sha256": "4ca5bf84a85d372badddb3344388007ddae598fe61ab219c52168fe3b668f8e5"
+    },
+    "case-output/normal-quit-awaiting.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\normal-quit-awaiting.json",
+      "bytes": 644,
+      "sha256": "fa8af6421e87521562e225e2225b9e4e2a56a9241fa8c203991c3f271483e825"
+    },
+    "case-output/plans/case-snapshot-0001.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\plans\\case-snapshot-0001.json",
+      "bytes": 204,
+      "sha256": "9b5ab279078d1d270491b240e1b98804654840c5c37e2c18780bf9f81172098f"
+    },
+    "case-output/plans/mts-native-context-initial.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\plans\\mts-native-context-initial.json",
+      "bytes": 209,
+      "sha256": "d5904f428d07dfa814080d8da3f8b751c9a6a776e83041b1241f27ac4fea921f"
+    },
+    "case-output/readiness-window-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\readiness-window-result.json",
+      "bytes": 1470,
+      "sha256": "b231cfaed8b702705a74d18cad2320f865abc606a9f2e4c7c92982306f9aeb81"
+    },
+    "case-output/readiness-window.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\readiness-window.json",
+      "bytes": 1641,
+      "sha256": "29af9f9610f8881c8fb28c2f9a6f891ebd93c2c75d97f3a478a4ad58aa611143"
+    },
+    "case-output/retained-current-process-identity.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\case-output\\retained-current-process-identity.json",
+      "bytes": 110,
+      "sha256": "20501fa1a0800f578c4ec466723b551037b981981b52df35c0567a6bbfd51add"
+    },
+    "frozen-argv.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\frozen-argv.json",
+      "bytes": 46943,
+      "sha256": "f4709f97321b4cce08790bad2f3aa61eac29d2c8640f20c59fab47a19191e350"
+    },
+    "host-original-process-exit.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\host-original-process-exit.json",
+      "bytes": 255,
+      "sha256": "fa905d08bb53cd0ef29f47c4963f2eb583d86482b509bcb010a6b60ec84afe75"
+    },
+    "host-started.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\host-started.json",
+      "bytes": 4187,
+      "sha256": "e31b93c13e927d6c3a80f522d32a2f0ba0f959e8e4474cff75ab32434cc13544"
+    },
+    "host-stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\host-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "host-stdout.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\host-stdout.log",
+      "bytes": 186,
+      "sha256": "d16d5826753450f22445c8d62e8db1913026f1d864fa87cf0f0782478a7d71c1"
+    },
+    "host-supervisor-started.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\host-supervisor-started.json",
+      "bytes": 1003,
+      "sha256": "767cfc39ba5bd9e4b9c8db98f7731bcdf88d323d16222557368064f3ae54edec"
+    },
+    "host-supervisor-stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\host-supervisor-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "host-supervisor-stdout.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\host-supervisor-stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "keeper-actual-parent-exit.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\keeper-actual-parent-exit.json",
+      "bytes": 609,
+      "sha256": "1d56fbd2569672437326440067ff2bd866af18342887e2ea06b2ddc1948de98d"
+    },
+    "keeper-process.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\keeper-process.json",
+      "bytes": 708,
+      "sha256": "f0973285654a2a85390b65381aecf315af35972d18c8e1e6cb08fa4fcce87c66"
+    },
+    "keeper-stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\keeper-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "keeper-stdout.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\keeper-stdout.log",
+      "bytes": 533,
+      "sha256": "c1c91edcdf750c5f689f007ed6c1af4ae8ec72c1906b773bfba6059ce5602e5e"
+    },
+    "launch-intent.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\launch-intent.json",
+      "bytes": 1697,
+      "sha256": "d3d1747315bd698df5f4a6895b93fec43e80524891f0755d39a5779b7cac5a50"
+    },
+    "native-report.frontend-fixture-start-policy.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.frontend-fixture-start-policy.json",
+      "bytes": 8710,
+      "sha256": "79de9e92842ede7c2cf657c7a7356f53a5cc64b9e4456f762b1eb0ac01c6e775"
+    },
+    "native-report.frontend-observations.jsonl": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.frontend-observations.jsonl",
+      "bytes": 8872671,
+      "sha256": "e8c8e1a4393e92fb92867509048bfef1e5080965d39a93fe13e542c545de870d"
+    },
+    "native-report.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.json",
+      "bytes": 14866479,
+      "sha256": "0545697a434b85cfc6b8804dbd20ffc0a1df6956f05a33d4e3f99662a5fdafe8"
+    },
+    "native-report.mcp-calls.jsonl": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.mcp-calls.jsonl",
+      "bytes": 39091349,
+      "sha256": "4bae22a8c67fbccc29fb515a59f46ee108c2223dce02ff66c07bd051ef913121"
+    },
+    "native-report.mcp-wire.jsonl": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.mcp-wire.jsonl",
+      "bytes": 27554775,
+      "sha256": "184af31f3f6d80e9e070b3bc596871961e34a45bdef48a4238aba32fdbb6ef09"
+    },
+    "native-report.native-wire.jsonl": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.native-wire.jsonl",
+      "bytes": 179472655,
+      "sha256": "f092b2ab1121c50a368461da6c11d07fb5cef398bacf08621047fb2a8d55469f"
+    },
+    "native-report.server-stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.server-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native-report.session.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\native-report.session.log",
+      "bytes": 6924,
+      "sha256": "49f41fd7980d16d1b4c05cd8db784a1ab823ba2a91be19c3a34db7f407ddd261"
+    },
+    "predecessor-admission.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\predecessor-admission.json",
+      "bytes": 221622,
+      "sha256": "17630ab6f2cf8499274afbe0635afecb3e27b6e4d5f93dabb77813ffd7371e37"
+    },
+    "public-run-original-command.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\public-run-original-command.json",
+      "bytes": 947,
+      "sha256": "d0158fb90110f55c27249a9c5dbe79e8174165f90a3ff991c0352dd1ad5d3b47"
+    },
+    "public-run-stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\public-run-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public-run-stdout.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\public-run-stdout.log",
+      "bytes": 18594,
+      "sha256": "0af2bfd799e580cc8f9c2d0b070af429fefd2405a5457e49e1a1d446abafb6f6"
+    },
+    "ready-context.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\ready-context.json",
+      "bytes": 2419,
+      "sha256": "db4d7eb04abf0e5538ac4b72d198295d9d35835c1a058dbc9cba23210672d3a1"
+    },
+    "reviewed-run-context.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\reviewed-run-context.json",
+      "bytes": 2832,
+      "sha256": "0e5749feb4ae33cf2ca048a42a48ee800a0aeb7e363e9ec7dc033cddc609b66f"
+    },
+    "root-allocation-completion.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-allocation-completion.json",
+      "bytes": 1319,
+      "sha256": "3b6ecef84f0c8ee196e342e6e805a5792924d16e02f938fd884733a23cf2353e"
+    },
+    "root-allocation-original-command.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-allocation-original-command.json",
+      "bytes": 1240,
+      "sha256": "b8642abcfb958a35abf85d54e449210a52de57b7275bda5002d58736a8a9f52f"
+    },
+    "root-evidence/r21-branch-create-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-branch-create-click.mapping.json",
+      "bytes": 1504,
+      "sha256": "411c83f75b15b3fadd9f258379a3ea53a3405a3a4d67ce53d009e67574aff568"
+    },
+    "root-evidence/r21-branch-create-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-branch-create-click.png",
+      "bytes": 2515540,
+      "sha256": "45564e29eaeba86d885d78cc6bec73022e992ce88e422aab2d3121579ef20032"
+    },
+    "root-evidence/r21-branch-create-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-branch-create-click.png.json",
+      "bytes": 1504,
+      "sha256": "411c83f75b15b3fadd9f258379a3ea53a3405a3a4d67ce53d009e67574aff568"
+    },
+    "root-evidence/r21-branch-create-click.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-branch-create-click.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-branch-create-click.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-branch-create-click.stdout.txt",
+      "bytes": 1251,
+      "sha256": "96024c3a677419c0f9abb8bd6db53dff724fe93fdbf6a143f717d02bd6e0d7b7"
+    },
+    "root-evidence/r21-branch-create-open.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-branch-create-open.capture.json",
+      "bytes": 419,
+      "sha256": "71dfeeb99a22a1c4b8ba41ae312b353a1978d77975bca092fb3334cff16572cc"
+    },
+    "root-evidence/r21-branch-create-open.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-branch-create-open.png",
+      "bytes": 2520935,
+      "sha256": "2a548d3da14a996c6bbc6efcd0040177ba0f7c15a66f83e3a190c1dd294a98af"
+    },
+    "root-evidence/r21-chaplain-character-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-character-click.mapping.json",
+      "bytes": 1518,
+      "sha256": "74739d01cf55f84b0a60ba93fd6be8934ba28457fadbf1e518d3a2ec26276d7b"
+    },
+    "root-evidence/r21-chaplain-character-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-character-click.png",
+      "bytes": 2476595,
+      "sha256": "e756d117ed53820a36a585a429434460f8fb102924300f8356b42f6f479d842e"
+    },
+    "root-evidence/r21-chaplain-character-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-character-click.png.json",
+      "bytes": 1518,
+      "sha256": "74739d01cf55f84b0a60ba93fd6be8934ba28457fadbf1e518d3a2ec26276d7b"
+    },
+    "root-evidence/r21-chaplain-character-click.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-character-click.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-chaplain-character-click.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-character-click.stdout.txt",
+      "bytes": 1265,
+      "sha256": "31893f7d31ab4cd1c0e67310214bd522c801997a6dbc1a3732aae0f19ba67cd4"
+    },
+    "root-evidence/r21-chaplain-character.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-character.capture.json",
+      "bytes": 419,
+      "sha256": "00ab610d57d37797d478763606f339a52c3dfd64c1ff2686e31456ba5b360b32"
+    },
+    "root-evidence/r21-chaplain-character.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-character.png",
+      "bytes": 2388929,
+      "sha256": "5a63762836e8fb12b7ec10ff48761e8fc8f1d79b0f4e7c1347f73db8752a422b"
+    },
+    "root-evidence/r21-chaplain-debug.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-debug.capture.json",
+      "bytes": 415,
+      "sha256": "d6a8c30f0f3786b266b6ccc2a905620dba0972e153fb28f04c8e9e54071961dd"
+    },
+    "root-evidence/r21-chaplain-debug.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-debug.png",
+      "bytes": 2396649,
+      "sha256": "f3e93d33859216836e67fd2ee3a801d80a423ea7a8b32279d63c7c12375e87a2"
+    },
+    "root-evidence/r21-chaplain-interactions-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-interactions-click.mapping.json",
+      "bytes": 1272,
+      "sha256": "1a8364aead2abc3d83600f49f2f78741583cc96b4d174d7a4a0d6b24a6392d75"
+    },
+    "root-evidence/r21-chaplain-interactions-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-interactions-click.png",
+      "bytes": 2390943,
+      "sha256": "5d4cf15d9e1295c704673dd334e33037255fdf531f7f1efbb1e236d8d72ff10e"
+    },
+    "root-evidence/r21-chaplain-interactions-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-interactions-click.png.json",
+      "bytes": 1525,
+      "sha256": "98ed16ca5eb4c6e88ff4429370ff163603b6a41c8efcdac4811942c9209ea3c2"
+    },
+    "root-evidence/r21-chaplain-interactions.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-interactions.capture.json",
+      "bytes": 422,
+      "sha256": "eb52e7d2323da51d6180d90fbad62b6fac93eb0643c318628e5d874002e86256"
+    },
+    "root-evidence/r21-chaplain-interactions.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-interactions.png",
+      "bytes": 2378830,
+      "sha256": "e9df8eb7b643947ddf354b1cfce4868c8362159bb96c04ff07deffad3baf45e9"
+    },
+    "root-evidence/r21-chaplain-name-move.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-name-move.mapping.json",
+      "bytes": 1648,
+      "sha256": "e476c433c6fc1a0d820040e1e992a0e985f0b54c991a67c817bd5472c4919353"
+    },
+    "root-evidence/r21-chaplain-name-move.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-name-move.png",
+      "bytes": 2396096,
+      "sha256": "ce0a546160fb1a5e1b8e06dfb77783f837b9ad99af828d3cf63e52d2ec7c349f"
+    },
+    "root-evidence/r21-chaplain-name-move.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-chaplain-name-move.png.json",
+      "bytes": 2040,
+      "sha256": "cb40f98b8cfa03648ad49c0211eaac16bc861eca33d069af41f3fcc4fe5ef23a"
+    },
+    "root-evidence/r21-character-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-character-click.mapping.json",
+      "bytes": 1497,
+      "sha256": "94f2233b47553dabb5fe6c9d48c9f7c776267410198ffa54dc92ed5678338cdd"
+    },
+    "root-evidence/r21-character-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-character-click.png",
+      "bytes": 2519307,
+      "sha256": "691d790a243354ea8f7012bb5ce0f231a716ba19898820d28737d54bbfdc4107"
+    },
+    "root-evidence/r21-character-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-character-click.png.json",
+      "bytes": 1497,
+      "sha256": "94f2233b47553dabb5fe6c9d48c9f7c776267410198ffa54dc92ed5678338cdd"
+    },
+    "root-evidence/r21-character-click.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-character-click.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-character-click.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-character-click.stdout.txt",
+      "bytes": 1244,
+      "sha256": "c9bce88410c76c99a7f0aa13eba39e578b86f15279b0c901f846e25d6405840a"
+    },
+    "root-evidence/r21-character-open.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-character-open.capture.json",
+      "bytes": 415,
+      "sha256": "a0abeb3822ad8f33c1f33261a4ae12a2d8b9b8c4ed25e395e8e80e1d8fce02ed"
+    },
+    "root-evidence/r21-character-open.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-character-open.png",
+      "bytes": 2493249,
+      "sha256": "1a46588b438e063d325c960c6b73960c948a1ffa2c146f8446d2f89a256c0a15"
+    },
+    "root-evidence/r21-clerical-puppet-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-clerical-puppet-click.mapping.json",
+      "bytes": 1519,
+      "sha256": "9032488ad81676b450369505d0cf9401e35d8d3bce7d3bc3171cb62521352816"
+    },
+    "root-evidence/r21-clerical-puppet-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-clerical-puppet-click.png",
+      "bytes": 2382562,
+      "sha256": "775aab58f784fab0c3a2e563975daf677007b097db5123d20c41b7fe009daf10"
+    },
+    "root-evidence/r21-clerical-puppet-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-clerical-puppet-click.png.json",
+      "bytes": 1519,
+      "sha256": "9032488ad81676b450369505d0cf9401e35d8d3bce7d3bc3171cb62521352816"
+    },
+    "root-evidence/r21-clerical-puppet-click.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-clerical-puppet-click.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-clerical-puppet-click.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-clerical-puppet-click.stdout.txt",
+      "bytes": 1266,
+      "sha256": "388e02f8b0ce55bffb8d60a543679ced1e105818cd324b2b804ffa8d6bf9809b"
+    },
+    "root-evidence/r21-clerical-puppet-dialog.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-clerical-puppet-dialog.capture.json",
+      "bytes": 423,
+      "sha256": "d0c95000a0b32921544559711b42a359588f3dfc63c12398b9d6a0fbc855d346"
+    },
+    "root-evidence/r21-clerical-puppet-dialog.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-clerical-puppet-dialog.png",
+      "bytes": 2268997,
+      "sha256": "3919db321f810273d231dbaaa53e30a5f6f0eb620974a7c10bd95bac5a324e85"
+    },
+    "root-evidence/r21-council-close.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-close.mapping.json",
+      "bytes": 1506,
+      "sha256": "0a67162fca3857b8ab6a24965b588782caf4c57400642477f150f015869e61cb"
+    },
+    "root-evidence/r21-council-close.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-close.png",
+      "bytes": 2505518,
+      "sha256": "0b186c33420282a27c606bc837ba7baddd761f3b11dc4be6ccfd6f6eb9717469"
+    },
+    "root-evidence/r21-council-close.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-close.png.json",
+      "bytes": 1506,
+      "sha256": "0a67162fca3857b8ab6a24965b588782caf4c57400642477f150f015869e61cb"
+    },
+    "root-evidence/r21-council-close.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-close.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-council-close.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-close.stdout.txt",
+      "bytes": 1253,
+      "sha256": "b9f1ddcb707fd927fbb89c0fd11d26c9ffe55dd4b3ff00b6f376645750fa4ce4"
+    },
+    "root-evidence/r21-council-open-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-open-click.mapping.json",
+      "bytes": 1506,
+      "sha256": "3a5425e21fe53dc506e96d4e31b46ab8b1856c5079faa216f27c372395211afa"
+    },
+    "root-evidence/r21-council-open-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-open-click.png",
+      "bytes": 2558882,
+      "sha256": "80d4cf89400576dba6f129e60311dedd8fcdceef93f4af5694b7ddfa54226749"
+    },
+    "root-evidence/r21-council-open-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-open-click.png.json",
+      "bytes": 1506,
+      "sha256": "3a5425e21fe53dc506e96d4e31b46ab8b1856c5079faa216f27c372395211afa"
+    },
+    "root-evidence/r21-council-open-click.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-open-click.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-council-open-click.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-open-click.stdout.txt",
+      "bytes": 1253,
+      "sha256": "d625b1a5d160e8acefe166d9b8c55c9162a2cd545915caf72e738f676b664683"
+    },
+    "root-evidence/r21-council-open.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-open.capture.json",
+      "bytes": 413,
+      "sha256": "6d4d730257de371581fae60f362ca6dec438bb5471621238a26f93b36efd7a04"
+    },
+    "root-evidence/r21-council-open.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-council-open.png",
+      "bytes": 2457533,
+      "sha256": "0a5cffbd991374d1294297f898f96c58851d40374f6bb404a0cccf62acb83bb1"
+    },
+    "root-evidence/r21-culture-cap-move.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-cap-move.mapping.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-culture-cap-tooltip.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-cap-tooltip.capture.json",
+      "bytes": 420,
+      "sha256": "a2cd9bbe06687a561b0c0a9087cdbebd17b4c614c2916c30e8659ffe22dd8f5a"
+    },
+    "root-evidence/r21-culture-cap-tooltip.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-cap-tooltip.png",
+      "bytes": 2560809,
+      "sha256": "cf6c715014f7848bad952770d71856a21cbcef4373d3b312178f901e50cbe125"
+    },
+    "root-evidence/r21-culture-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-click.mapping.json",
+      "bytes": 1496,
+      "sha256": "f5d2664a0af2fa8302c5382749d8903416e28e132fc1e1722105f2756ba36640"
+    },
+    "root-evidence/r21-culture-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-click.png",
+      "bytes": 2493746,
+      "sha256": "3b1be8bce55520efd9d9847d852b825c329c3f7aeca3f8b5486e744658b6ec2f"
+    },
+    "root-evidence/r21-culture-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-click.png.json",
+      "bytes": 1496,
+      "sha256": "f5d2664a0af2fa8302c5382749d8903416e28e132fc1e1722105f2756ba36640"
+    },
+    "root-evidence/r21-culture-click.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-click.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-culture-click.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-click.stdout.txt",
+      "bytes": 1243,
+      "sha256": "490ac0fcafd289d5c23c47a3be20e9a671cc3aa2e263f4c43666db61b204f4e2"
+    },
+    "root-evidence/r21-culture-open.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-open.capture.json",
+      "bytes": 413,
+      "sha256": "8dd0972178a26853c5aca5ed54258078bc6e82dca789be497e9c4bca5d1ee8e3"
+    },
+    "root-evidence/r21-culture-open.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-culture-open.png",
+      "bytes": 2557585,
+      "sha256": "9bca682aab4da83ec5fe4e018d52ec0c01525e956c54de56f1b4e36628d354d1"
+    },
+    "root-evidence/r21-draft-initial.plan.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-draft-initial.plan.json",
+      "bytes": 625,
+      "sha256": "31174fff1064de542ab920184740cdd64f3352d7ee7385dd75ba44f0b4c3f88f"
+    },
+    "root-evidence/r21-draft-initial.queue.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-draft-initial.queue.json",
+      "bytes": 3271,
+      "sha256": "d913b4879c2421c62c059f4d7ec9332fc504ddec098d0c65084cb2a322af6d13"
+    },
+    "root-evidence/r21-draft-initial.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-draft-initial.results.json",
+      "bytes": 242093,
+      "sha256": "72b985e846b1907ad3abb9ab2ee02d0cb8c3ac0c2b9cb330114a481c10a81bb4"
+    },
+    "root-evidence/r21-editor-fresh.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-editor-fresh.capture.json",
+      "bytes": 413,
+      "sha256": "1e93ef3cbf94e920b0ab9960f9af42fbc09a1ae5d7ee8cb30364287540f93232"
+    },
+    "root-evidence/r21-editor-fresh.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-editor-fresh.png",
+      "bytes": 2337148,
+      "sha256": "85036d998ee334931bcbc30158d9f3338d095810f2543cabad1e5dcec43629d6"
+    },
+    "root-evidence/r21-faith-open-click.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-faith-open-click.mapping.json",
+      "bytes": 1507,
+      "sha256": "f3187e918757d5d56c10cb1fc5d92c3f862efa36d88470a21c6c1bb9bc3231a4"
+    },
+    "root-evidence/r21-faith-open-click.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-faith-open-click.png",
+      "bytes": 2494013,
+      "sha256": "4c7a62397460b4b18d4089ce37294cd6f3852535eeca1c14ad7ca6ecbf95f230"
+    },
+    "root-evidence/r21-faith-open-click.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-faith-open-click.png.json",
+      "bytes": 1507,
+      "sha256": "f3187e918757d5d56c10cb1fc5d92c3f862efa36d88470a21c6c1bb9bc3231a4"
+    },
+    "root-evidence/r21-faith-open-click.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-faith-open-click.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-faith-open-click.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-faith-open-click.stdout.txt",
+      "bytes": 1254,
+      "sha256": "20039fe2de44baeffc355e083fadca2c959c705a25d4923ae5e0238926b705b2"
+    },
+    "root-evidence/r21-faith-open.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-faith-open.capture.json",
+      "bytes": 411,
+      "sha256": "46f012cb19fbe9f2d877f6159152792d7d0dfc4e8cb7649d962f12c9c9be95be"
+    },
+    "root-evidence/r21-faith-open.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-faith-open.png",
+      "bytes": 2512080,
+      "sha256": "317b2b22db2fbfb1bdfd5d20fcad981e65ee0da85e5cac618a762bee84e9075a"
+    },
+    "root-evidence/r21-focused-map.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-focused-map.capture.json",
+      "bytes": 412,
+      "sha256": "bb53c0f2358deaf2cc3a54f964488c9dc065ec7b73e002c0065d994f5e85beed"
+    },
+    "root-evidence/r21-focused-map.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-focused-map.png",
+      "bytes": 2525141,
+      "sha256": "ea699c75e900e6a126a85d1177ec10ee1fef12f7c26cf7e4104e38ac3594ecd2"
+    },
+    "root-evidence/r21-initial-current.plan.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-initial-current.plan.json",
+      "bytes": 407,
+      "sha256": "a0f79dd007f4a2668bd61889dfd1c3fd4024eca72478ef828952fe401a24d0b3"
+    },
+    "root-evidence/r21-initial-current.queue.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-initial-current.queue.json",
+      "bytes": 3050,
+      "sha256": "50c35be2fda96675dd52544b4225cc5a588319fe06b1f764489fbfdb0f06ceb6"
+    },
+    "root-evidence/r21-initial-current.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-initial-current.results.json",
+      "bytes": 70329,
+      "sha256": "d755f0e43374a698504103fbe0437afc5ea652bfb6cec7ca4d2b87c57b4035df"
+    },
+    "root-evidence/r21-initial-map.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-initial-map.capture.json",
+      "bytes": 413,
+      "sha256": "13745830ee628578f650be8ca9303e8b3492d7933a773151c04a650d965da076"
+    },
+    "root-evidence/r21-initial-map.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-initial-map.png",
+      "bytes": 2514541,
+      "sha256": "7303710ab356648f52b735d7ecfe5ddcf98ace4d44baa9bba85847f66282a6f3"
+    },
+    "root-evidence/r21-owned-focus.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-owned-focus.json",
+      "bytes": 376,
+      "sha256": "471c00081c12b38dbe1d688e4dc088ec7d480460925ceebe33104e71e83e77a6"
+    },
+    "root-evidence/r21-player-after-puppet.capture.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-player-after-puppet.capture.json",
+      "bytes": 420,
+      "sha256": "6100a0ccd75dd070a3e9ae6b847dc4d877070eadfb478f3ed297d793780b18cc"
+    },
+    "root-evidence/r21-player-after-puppet.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-player-after-puppet.png",
+      "bytes": 2490471,
+      "sha256": "cf1c3340676067f35f3402ec4be71af33de1dc28ef6403718e6aed54a6b064dd"
+    },
+    "root-evidence/r21-player-reopen.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-player-reopen.mapping.json",
+      "bytes": 1493,
+      "sha256": "0b939c481f720b7ce1f7b24ef757f8e342d542e98c0d72a72ef4b71bc5880d65"
+    },
+    "root-evidence/r21-player-reopen.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-player-reopen.png",
+      "bytes": 2523639,
+      "sha256": "b84528b86e539db046e7ea4daacbff5208e8c4ed8408a323e3344709c23f2477"
+    },
+    "root-evidence/r21-player-reopen.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-player-reopen.png.json",
+      "bytes": 1493,
+      "sha256": "0b939c481f720b7ce1f7b24ef757f8e342d542e98c0d72a72ef4b71bc5880d65"
+    },
+    "root-evidence/r21-player-reopen.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-player-reopen.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-player-reopen.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-player-reopen.stdout.txt",
+      "bytes": 1240,
+      "sha256": "15bfc22a6ed02f6a73194fcd964869c30d47b0043c62e86500fadc94c9b918f5"
+    },
+    "root-evidence/r21-postdeadline-process-inventory-001.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-postdeadline-process-inventory-001.json",
+      "bytes": 294,
+      "sha256": "f7100d96127bd5c109cdb8b5c1f22ffbe9003bc91680419c7c0d9c841f240adc"
+    },
+    "root-evidence/r21-priest-close.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-priest-close.mapping.json",
+      "bytes": 1502,
+      "sha256": "d8167f4df68ac310421dda8d8cd6e41c6e4c96893e8249bc3d17f49414508dd5"
+    },
+    "root-evidence/r21-priest-close.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-priest-close.png",
+      "bytes": 2430509,
+      "sha256": "641a756128ea928377272e938842fc1a726e8bfa32fa17db72b7917cd607090c"
+    },
+    "root-evidence/r21-priest-close.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-priest-close.png.json",
+      "bytes": 1502,
+      "sha256": "d8167f4df68ac310421dda8d8cd6e41c6e4c96893e8249bc3d17f49414508dd5"
+    },
+    "root-evidence/r21-priest-close.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-priest-close.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-priest-close.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-priest-close.stdout.txt",
+      "bytes": 1249,
+      "sha256": "bb6a4fc206542c53438f8e67b84bb1adbc4968756f778ec34ddd35039ce11b87"
+    },
+    "root-evidence/r21-puppet-send.mapping.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-puppet-send.mapping.json",
+      "bytes": 1500,
+      "sha256": "d7942fd135faaac3e8fe32b396e55530de59b9787afbddf5d5b3d199534473a6"
+    },
+    "root-evidence/r21-puppet-send.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-puppet-send.png",
+      "bytes": 2354423,
+      "sha256": "1e34eaabe376f08aa4bd421d2dd016e73968ead0664bf93c0579fc5e2ac1a0cd"
+    },
+    "root-evidence/r21-puppet-send.png.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-puppet-send.png.json",
+      "bytes": 1500,
+      "sha256": "d7942fd135faaac3e8fe32b396e55530de59b9787afbddf5d5b3d199534473a6"
+    },
+    "root-evidence/r21-puppet-send.stderr.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-puppet-send.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "root-evidence/r21-puppet-send.stdout.txt": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\root-evidence\\r21-puppet-send.stdout.txt",
+      "bytes": 1247,
+      "sha256": "5952faddc754c674299ad42aa1d4f85aaf462636061734ac03e565b56de0eaf7"
+    },
+    "screen-registration-stderr.log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\screen-registration-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "screen-registration.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0021\\screen-registration.json",
+      "bytes": 1436,
+      "sha256": "663ed0cebe978c28704596dde5c0687944fc92cc3f713dba606824edcdfd184b"
+    },
+    "product/resource-release": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\native-main-r21-resource-release.json",
+      "bytes": 1379,
+      "sha256": "2a8f4af67aef91c84341fa70ed7a11c1e77b0c67d7e1f4c8747acd943866adcf"
+    },
+    "product/r20-preserved-evidence": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\docs\\evidence\\native-legacy-r20.json",
+      "bytes": 17670,
+      "sha256": "671c8f2c4c8ef80936b8f8756be6dca596aea4f36ee76087de409c254d324e31"
+    },
+    "product/r21-design-only-continuation": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\r21-main-saved-continuation-plan-001.json",
+      "bytes": 9918,
+      "sha256": "b754b4380c6018a448b12b52e25485d12ca84d6e786a00557f25eb1e62c6c288"
+    }
+  },
+  "framework_task_checkout": "3e99036b6a33e8b6278a5b8308316402e1f338da"
+}
