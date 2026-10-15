@@ -2,7 +2,9 @@
 
 执行清单见 [计划](bugfix-plan-2026-10-15.md)。本轮起始公开产品是 [v10](workshop/publication-v10.md)，已于 2026-10-03 发布；源码整改、当前版本实机与下一次正式发布分别记账。
 
-**最新实机进度：** [R22新局主场](native-main-r22-2026-10-16.md)在机器`bf-202609141645-5434332d4d`通过八项业务事实、一次binary SAVE及离线语义读回、官方GUI正常闭场：两普通候选非空且替换唯一，PeaceOfGod旧核心移除，实际slot99及稀疏四核心创建，默认文化4/6，有限通知收敛。原host唯一failed step为未暂停的只读事件查询被守卫拒绝，原statusRED/实际返回1保持；UTF8公共verify后继实际0、业务及normal pass，原OS/nativeprocess_exit0/fullcleanup/public0/keeper0并CAS6290释放。native fresh Quit因`-continuelastsave`参数未支持而unavailable，不授其动作资格。独立新PID冷载与正式发布仍待。[原件索引](evidence/native-main-r22.json)保留94个pins与52项嵌套核对。
+**最新冷载进度：** [R23独立冷载](native-cold-r23-2026-10-16.md)通过：新PID12944恢复R22原binary，首帧精确actor31254/date53145144/Rite150/Faith13/Religion8，当前四核心和Equal/Pluralistic唯一匹配；92.327955秒有限通知窗四原图经Root审阅无顶部重复提示。007原生退出与独立OS/native/host/public/keeper全0、CAS6321释放，公共verify的业务与normal/cold均通过。[索引](evidence/native-cold-r23.json)顶层明确`case_acceptance_pass/normal_close_qualified/independent_cold_load_pass=true`；正式发布和实际缓存核验仍待。
+
+**新局主场范围：** [R22新局主场](native-main-r22-2026-10-16.md)在机器`bf-202609141645-5434332d4d`通过八项业务事实、一次binary SAVE及离线语义读回、官方GUI正常闭场：两普通候选非空且替换唯一，PeaceOfGod旧核心移除，实际slot99及稀疏四核心创建，默认文化4/6，有限通知收敛。原host唯一failed step为未暂停的只读事件查询被守卫拒绝，原statusRED/实际返回1保持；UTF8公共verify后继实际0、业务及normal pass，原OS/nativeprocess_exit0/fullcleanup/public0/keeper0并CAS6290释放。native fresh Quit因`-continuelastsave`参数未支持而unavailable，不授其动作资格。R23另用007的显式`-loadsave`路径，未升级007或改写前场原件。[R22索引](evidence/native-main-r22.json)保留94个pins与52项嵌套核对。
 
 **R21历史RED保持：** [R21](native-main-r21-2026-10-15.md)原业务窗口超时、第一阶段GAP、没有保存；public wait2、normal-close=false、保留OS0=false。native停止清理、host0、keeper0与CAS6197分别成立，不冒充正常Quit；后继六小时预算没有追改其原期限。
 
@@ -52,9 +54,9 @@
 
 ## 后续工作
 
-R20已完成发布前候选旧档的代表性创建分支回归；R22进一步完成当前候选新局两个普通教义组、核心旧项移除、实际第100槽及稀疏创建、文化默认4/6、有限通知、保存和正常闭场。正式上传v10来源的合法性限制、直接Edit、反向/连续替换、完整文化行为、更多通知路径及独立冷载仍须继续；未进行工坊上传或新增发布，不改变v10历史结论。
+R20已完成发布前候选旧档的代表性创建分支回归；R22进一步完成当前候选新局两个普通教义组、核心旧项移除、实际第100槽及稀疏创建、文化默认4/6、有限通知、保存和正常闭场；R23已将该实际保存经独立新PID冷载，四项恢复事实及正常闭场通过。正式上传v10来源的合法性限制、直接Edit、反向/连续替换、完整文化行为及更多通知路径仍须继续；未进行工坊上传或新增发布，不改变v10历史结论。
 
-通知整改已形成 [静态候选](selector-notification-candidate-2026-10-15.md)：创建入口取消对源礼仪的额外写入，编辑保留安全准备；纯内部教义更新不再进入原版通知与宗教领袖effect，真实变化保持原版逻辑。两项投影回归及48文件双构建通过；R20有限窗79.861秒、R22新局创建后87.425699秒均未见顶部信条更新持续重复，R22四张定时原图有Root直接审阅。有限路径不证明永久循环在所有场景均已关闭。
+通知整改已形成 [静态候选](selector-notification-candidate-2026-10-15.md)：创建入口取消对源礼仪的额外写入，编辑保留安全准备；纯内部教义更新不再进入原版通知与宗教领袖effect，真实变化保持原版逻辑。两项投影回归及48文件双构建通过；R20有限窗79.861秒、R22新局创建后87.425699秒、R23独立冷载后92.327955秒均未见顶部信条更新持续重复，R22与R23各四张定时原图有Root直接审阅。有限路径不证明永久循环在所有场景均已关闭。
 
 R20日志保留66条日志头，包括本产品1条重复`on_rite_updated` effect提示、宫廷场景/无效character及活动名错误；没有授日志全净。退出prepare/continue/confirm的原即时`dispatch_unknown_claimed`也保留，正常退出只由后续确认窗和未勾选PNG、原保留句柄OS0、native清理及真实host/keeper wait0成立。详情及归属见[R20报告](native-legacy-r20-2026-10-15.md)。
 
