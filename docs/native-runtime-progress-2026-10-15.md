@@ -12,3 +12,9 @@
 首次受管 attempt `bf-202609141645-5434332d4d--more-tenets-slots--R0015` 的原始 host 于 2026-10-15 04:09:13 UTC 退出 1：冻结生成器使用 Windows 默认换行写入 effective host，而记录的 SHA 来自 LF 字符串，命中 `effective host differs from reviewed projection` 校验。游戏未启动，不能记为游戏退出 0 或任何业务结果。已停止原 keeper，并以 CAS 5967 释放屏幕，保留原始 host stderr、实际 Popen wait 和冻结输入。后继包以明确 UTF-8 LF 字节冻结，并离线执行与 wrapper 相同的校验路径至实际 exec 边界，未执行底层 host 或启动游戏。
 
 框架 `c078afe13` 补齐独立产品复用统一工坊缓存用例，以及这一精确启动前失败原因的资源释放准入；29 项离线测试通过。资源释放通道不授予 native 清理、游戏正常退出或业务通过。机器路径和临时二进制保留于配置/外置回执，不写入产品配置。
+
+R0016 后继已通过投影 SHA 检查，但于启动游戏前被原有 normal-exit source inventory 的“所有启用 mod GUI 均不支持”合同拒绝。原始 host 退出 1、公共 entry 在原 400 秒就绪预算后退出 2、keeper 原父进程 wait 0；CAS 5970 已释放，游戏与 native 报告未产生。下一包会补齐与退出菜单无关的宗教 GUI 资格；不删除该守卫，也不把此场算作业务测试。
+
+框架 `4ffaa41e7` 的资源闭场扩展经过八项测试；`3f20da8f3` 在原始 host 已退出且首个报告缺席时保存确切退出收据并及时报告，11 项离线测试通过，R0015/R0016 原档只读核验一致。`d6bbfc40a` 使公共缓存验收兼容当前构建器的 manifest format 2，继续严格核对 tag 与逐文件原始字节，11 项缓存边界测试通过。
+
+下一实机对照使用当时**实际上传的 v10 46 文件**，已逐项匹配正式 manifest `d79bd36bcee5c081da05a99fe409421f76b49e890d6b8ec194ad700d8f77ca00`。它保留原始 supported_version 1.20.0.3 字节；实际执行游戏仍固定 1.20.0.4、简中。之前两场未启动游戏的 1.20.0.4 投影基线不替代用户版本复现。v11 候选 48 文件的当前静态结果见 [回执](evidence/bugfix-20261015-current-static.json)。
