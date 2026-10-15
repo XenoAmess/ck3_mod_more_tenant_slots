@@ -1,0 +1,350 @@
+{
+  "schema": "mts-native-legacy-r20-evidence-v1",
+  "machine_id": "bf-202609141645-5434332d4d",
+  "recorded_at_utc": "2026-10-15T11:04:31.811427+00:00",
+  "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0020",
+  "case": "native-legacy-v10-edit",
+  "game_version": "1.20.0.4",
+  "steam_build_id": "25734779",
+  "language": "simp_chinese",
+  "case_contract_qualified": true,
+  "gui_contract_qualified": true,
+  "scoped_business_pass": true,
+  "normal_close_qualified": true,
+  "product_release_pass": false,
+  "strict_cold_origin_credit": false,
+  "native_religion_write_credit": false,
+  "published_v10_compatibility_credit": false,
+  "fresh_campaign_credit": false,
+  "direct_owned_rite_edit_credit": false,
+  "source_provenance": {
+    "classification": "prepublication_v10_candidate_not_the_uploaded_v10_46_file_tree",
+    "source_commit": "b7dc3ef0809a795270bdc3c24769ba6a5c575b95",
+    "candidate_file_count": 30,
+    "published_source_commit": "da4b579659ebb4de397672b833369e95fdbd03c6",
+    "published_file_count": 46,
+    "historical_fixture": "Existing R0008 history cleared has_created_a_faith; failed final draft was not committed. No new variables, doctrines, tenets or relations changed by this inspection."
+  },
+  "loaded_identity": {
+    "save": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bf-202609141645-5434332d4d--more-tenets-slots--R0008\\userdir\\save games\\autosave_exit.ck3",
+      "bytes": 91083139,
+      "sha256": "ecc186cd5ac4623616521db4eb72edd15a8b4dc5c35ec5a27341096687e18e43"
+    },
+    "player_id": 33339,
+    "date_raw": 53144328,
+    "rite_id": 151,
+    "faith_id": 28,
+    "body_date": "1066.9.15"
+  },
+  "committed_branch": {
+    "old_rite_id": 151,
+    "new_rite_id": 152,
+    "draft_initial_faith_main_rite_id": 93,
+    "loaded_identity": {
+      "save": {
+        "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bf-202609141645-5434332d4d--more-tenets-slots--R0008\\userdir\\save games\\autosave_exit.ck3",
+        "bytes": 91083139,
+        "sha256": "ecc186cd5ac4623616521db4eb72edd15a8b4dc5c35ec5a27341096687e18e43"
+      },
+      "player_id": 33339,
+      "date_raw": 53144328,
+      "rite_id": 151,
+      "faith_id": 28,
+      "body_date": "1066.9.15"
+    },
+    "ordinary_doctrine": {
+      "group": "doctrine_gender",
+      "old": "doctrine_gender_equal",
+      "new": "doctrine_gender_male_dominated",
+      "committed": true,
+      "current": [
+        "doctrine_gender_male_dominated"
+      ]
+    },
+    "core_tenets": {
+      "old": "tenet_sanctity_of_nature",
+      "new": "tenet_ora_et_labora",
+      "committed": true,
+      "current": [
+        "tenet_ora_et_labora",
+        "tenet_communal_identity"
+      ]
+    },
+    "notifications": {
+      "observed_seconds": 79.86109479999868,
+      "recurring": false,
+      "remaining_religion_change_notifications": 0,
+      "sampling": "Three original map frames during native-resumed timeline plus final paused frame; Root directly viewed all original frames. Old queued creation event instances3,2,1 drained with actual native postconditions; no new active event after continuation to1066.10.9."
+    }
+  },
+  "written_save": {
+    "save": {
+      "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-r8c7-001\\state\\profile\\save games\\xar_checkpoint.ck3",
+      "bytes": 90257883,
+      "sha256": "fd94f4f30475a5cc214678d6db50b2115b88f52686c6c37fccfc9974808edf0e"
+    },
+    "player_id": 33339,
+    "date_raw": 53144904,
+    "rite_id": 152,
+    "faith_id": 28,
+    "religion_id": 8,
+    "core_tenets": [
+      "tenet_ora_et_labora",
+      "tenet_communal_identity"
+    ],
+    "ordinary_doctrines": {
+      "doctrine_gender": "doctrine_gender_male_dominated"
+    }
+  },
+  "saved_body_date": "1066.10.9",
+  "notification_observation": {
+    "machine_id": "bf-202609141645-5434332d4d",
+    "run_id": "bf-202609141645-5434332d4d--more-tenets-slots--R0020",
+    "samples": [
+      {
+        "capture": "r20-post-events-observe-0.capture.json",
+        "elapsed_seconds": 3.2999131999677047,
+        "at_utc": "2026-10-15T10:19:07.945637+00:00"
+      },
+      {
+        "capture": "r20-post-events-observe-1.capture.json",
+        "elapsed_seconds": 24.31343189999461,
+        "at_utc": "2026-10-15T10:19:28.959134+00:00"
+      },
+      {
+        "capture": "r20-post-events-observe-2.capture.json",
+        "elapsed_seconds": 48.85925929999212,
+        "at_utc": "2026-10-15T10:19:53.504961+00:00"
+      }
+    ],
+    "observed_seconds": 79.86109479999868,
+    "native_final": {
+      "date_raw": 53144904,
+      "paused": true,
+      "active_event": null,
+      "pending_character_interaction": null
+    },
+    "business_pass": false
+  },
+  "native_exit": {
+    "pid": 15228,
+    "exit_reason": "process_exit",
+    "process_exit_code": 0,
+    "managed_session_done": true,
+    "finished_at": "2026-10-15T10:49:55.298474+00:00"
+  },
+  "public_run": {
+    "started_at_utc": "2026-10-15T08:53:15.896529+00:00",
+    "finished_at_utc": "2026-10-15T10:50:01.818485+00:00",
+    "returncode": 0
+  },
+  "resource_release": {
+    "sequence": 6110,
+    "at_utc": "2026-10-15T10:58:04.915976+00:00",
+    "resources": []
+  },
+  "preserved_log_headers": {
+    "There is more than one 'effect' defined using most recent:file: common/on_action/zz_mts_selector_on_action.txt line: 6 (on_rite_updated)": 1,
+    "Script system error!": 57,
+    "Failed to find applicable culture set for character with id 4294967295": 1,
+    "Object of type 'character' is not valid for 'GetActivityName'": 7
+  },
+  "audit": {
+    "machine_id": "bf-202609141645-5434332d4d",
+    "observed_at_utc": "2026-10-15T11:03:42.360275+00:00",
+    "nested_original_pins_checked": 34,
+    "mismatches": [],
+    "original_public_wait": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\actual-public-run-command.json",
+      "bytes": 1075,
+      "sha256": "a06a8393cc90d343a558f55be8e89f38a161632a2d24bb135a7515d8f31e615b"
+    }
+  },
+  "pins": {
+    "actual-public-run-command.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\actual-public-run-command.json",
+      "bytes": 1075,
+      "sha256": "a06a8393cc90d343a558f55be8e89f38a161632a2d24bb135a7515d8f31e615b"
+    },
+    "case-output/mts-legacy-native-case-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\case-output\\mts-legacy-native-case-result.json",
+      "bytes": 169032,
+      "sha256": "ad0509de9507a369e000a7272c20728a7a5ca798bb244d54120f507b0006b586"
+    },
+    "case-output/mts-legacy-v10-edit-root-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\case-output\\mts-legacy-v10-edit-root-result.json",
+      "bytes": 7237,
+      "sha256": "17031b379a70a4a1be5f5fa1afcb19777b4273c320f640d530892aa26c1b85ec"
+    },
+    "case-output/normal-close-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\case-output\\normal-close-result.json",
+      "bytes": 10334,
+      "sha256": "969958281f57f96d7ebfff8d75c5ff56a781481233d44d18fb2059f3a1807097"
+    },
+    "case-output/actual-retained-handle-os-exit.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\case-output\\actual-retained-handle-os-exit.json",
+      "bytes": 179,
+      "sha256": "a677afd9eff9671e92383c0987961f71ab9ef36a78f88b9895314a4c2dad74fb"
+    },
+    "case-output/normal-quit-root-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\case-output\\normal-quit-root-result.json",
+      "bytes": 2684,
+      "sha256": "192c9eea78d1aeea41ab3c2699bf629c882e5444a6ee8d762a3a7618903971b1"
+    },
+    "host-original-process-exit.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\host-original-process-exit.json",
+      "bytes": 255,
+      "sha256": "d6f3482cff53a03eb5af14b05d0d309ea225d6ecb2090efd1db16895edb2f173"
+    },
+    "keeper-actual-parent-exit.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\keeper-actual-parent-exit.json",
+      "bytes": 609,
+      "sha256": "275cd43eebe3ebe43889df1ce8641a00c9ce4a36fcd224195b9e337464b531df"
+    },
+    "case-output/readiness-window-result.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\case-output\\readiness-window-result.json",
+      "bytes": 1539,
+      "sha256": "867667520874e29319e1b62dc25f460135d485529fd71166e5bff56d5fa14845"
+    },
+    "root-evidence/r20-initial-current.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-initial-current.results.json",
+      "bytes": 103623,
+      "sha256": "7db6e23e5966c74ebdf2d578ecd6b833f255e3020d5ff31c394d24c36217aeaa"
+    },
+    "root-evidence/r20-gender-options.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-gender-options.results.json",
+      "bytes": 193732,
+      "sha256": "db5ebc1d7808c28a4f13b2adcd040da1ee9eb93857bfad3739ad435b82f30160"
+    },
+    "root-evidence/r20-precommit.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-precommit.results.json",
+      "bytes": 194588,
+      "sha256": "6c67ab1f430b31063b1e3756a5aa5c0e9d9984458d1e6bbacd2d3fc26b7cb81d"
+    },
+    "root-evidence/r20-committed-current.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-committed-current.results.json",
+      "bytes": 126269,
+      "sha256": "925f27166a6dca4f836185de8d17872d6e2d848cfe1fa7f204d8fa17d11ae944"
+    },
+    "root-evidence/r20-final-state.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-final-state.results.json",
+      "bytes": 127067,
+      "sha256": "93424c778065197f05c6948856f7cad0a11d4c0e2b46d7599a93d319bad56c30"
+    },
+    "root-evidence/r20-save-once.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-save-once.results.json",
+      "bytes": 20359,
+      "sha256": "2f8d15ba3e1d63817e082e48f84102bee2267976f6a9c7785ca171f3d012d500"
+    },
+    "root-evidence/r20-save-readback.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-save-readback.json",
+      "bytes": 7966,
+      "sha256": "3ab26164e705bbe99b4e8a3f5a4a6dd4f654645e394714e9eb453aab2ebdca06"
+    },
+    "root-evidence/r20-event-drain-trace.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-event-drain-trace.json",
+      "bytes": 9236,
+      "sha256": "e67858af5e42dc4eb86e705c52d101e99e8dc0448f3e40358a98c66293da9bf9"
+    },
+    "root-evidence/r20-post-events-observation.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-post-events-observation.json",
+      "bytes": 871,
+      "sha256": "d1be2b678cb68bd431aa686e09bacbed05ebf8c16441458fa8afa35f5e4dcc34"
+    },
+    "root-evidence/religion-action-capability-gap.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\religion-action-capability-gap.json",
+      "bytes": 5913,
+      "sha256": "c66fcc14c0f132402aa6e7a8acefeb83050d23a3540c09d16295c0e50f61e92f"
+    },
+    "root-evidence/r20-native-quit-prepare.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-native-quit-prepare.results.json",
+      "bytes": 23794,
+      "sha256": "564b9c821a7e8bfb00bb2c2734e32312268e18bd2e9ad863cadd22526dcddcfb"
+    },
+    "root-evidence/r20-native-quit-continue.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-native-quit-continue.results.json",
+      "bytes": 23795,
+      "sha256": "859cd94dd22960608092ce7aadc2cfbb1e5f1e96e1df0da4d546b6e1dd5eb1ce"
+    },
+    "root-evidence/r20-native-quit-disable-autosave.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-native-quit-disable-autosave.results.json",
+      "bytes": 23783,
+      "sha256": "5734225ba07a69e4dfb84d4ce0d026c47c5599b44f23a9544154f1aa24388274"
+    },
+    "root-evidence/r20-native-quit-unchecked-context.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-native-quit-unchecked-context.results.json",
+      "bytes": 23043,
+      "sha256": "be5e023efc37ae6254c4a99851dad5c3a864a888eaecee52f24823902d122a6e"
+    },
+    "root-evidence/r20-native-confirm-confirm-desktop.results.json": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-native-confirm-confirm-desktop.results.json",
+      "bytes": 6021,
+      "sha256": "db8c231fa463785badbbb74774b02ce9f2da697c74dcad50069bf8bd858d358a"
+    },
+    "root-evidence/r20-gender-popup.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-gender-popup.png",
+      "bytes": 2178222,
+      "sha256": "74bfa5f31478148ef73bbcb43003e455f0511756dfa621417b783ca949e1f284"
+    },
+    "root-evidence/r20-committed-view.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-committed-view.png",
+      "bytes": 2417812,
+      "sha256": "26b42fcf06f9cd91e1bfe9f2c246204a3aaef27fde6e55e15b6d86703dfa1afa"
+    },
+    "root-evidence/r20-native-quit-unchecked.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-native-quit-unchecked.png",
+      "bytes": 1608211,
+      "sha256": "76933a0309e8875a903cc5e5fefcc259da9b45cf0870660491cd3f6f1ebd5712"
+    },
+    "root-evidence/r20-post-events-observe-0.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-post-events-observe-0.png",
+      "bytes": 2392810,
+      "sha256": "56991226be47d1a80236fb18dea685a319a7d3a111bc412edf01de256e54cc53"
+    },
+    "root-evidence/r20-post-events-observe-1.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-post-events-observe-1.png",
+      "bytes": 2395162,
+      "sha256": "473e079dd90c25586377a8581bc58230507b1709bd46491c6dd35c5d880308c1"
+    },
+    "root-evidence/r20-post-events-observe-2.png": {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\root-evidence\\r20-post-events-observe-2.png",
+      "bytes": 2390993,
+      "sha256": "5454d3fccccd22c7c95e41c2af835ed7a575fb1ae7eeae58eb97327c1e42d663"
+    },
+    "resource_release": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\native-legacy-r20-resource-release.json",
+      "bytes": 1383,
+      "sha256": "0c0c434c8c1474bee28fa724260f72d2024fea23a115332ef8c948dbf95e5f89"
+    },
+    "queued_event_attribution": {
+      "path": "C:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\bugfix-20261015\\queued-event-diagnosis\\r20-001\\report.json",
+      "bytes": 47774,
+      "sha256": "4c0657fefcc57554616e95c4e52bc41d1bc40c0055e9ffdf6b3770e07a79c152"
+    },
+    "error_log": {
+      "path": "C:\\workspace\\ck3-common-runtime\\cases\\mts-r8c7-001\\state\\profile\\logs\\error.log",
+      "bytes": 18314,
+      "sha256": "ab0fd682e830a52c08f1672fc9dbd0ccad26be12780920c2b4884502ac21d15c"
+    }
+  },
+  "run_root": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020",
+  "full_raw_references": [
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\native-report.json",
+      "bytes": 6341345
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\native-report.mcp-calls.jsonl",
+      "bytes": 18310309
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\native-report.native-wire.jsonl",
+      "bytes": 140268460
+    },
+    {
+      "path": "C:\\workspace\\ck3-common-runtime\\runs\\bf-202609141645-5434332d4d--more-tenets-slots--R0020\\public-run-stdout.log",
+      "bytes": 210533
+    }
+  ]
+}
