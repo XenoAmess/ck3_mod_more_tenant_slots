@@ -22,4 +22,6 @@ Root随后按官方Escape菜单退出，直接审阅未勾选autosave的原始�
 
 日志保留两条实际E记录：一条为本产品对`on_rite_updated` effect的覆盖，游戏报告使用后加载的候选effect；另一条为07:41:09初始native context查询附近的`character/GetActivityName`类型错误，来源仍待窄范围归因。没有宣称零错误。前一条不能单独证明通知机制有效，后一条也不能在没有来源证据时归为Mod故障或无害。
 
+追加归因：同一查询07:41:09.458922提交、09.497180返回，包含共享provider的confession决议扩展；该决议`is_shown=false`，仍生成的`can_take_reasons`出现`CHARACTER,4294967295`无效角色链接及“目前正忙于”后空活动名。该文字对应原版`ALREADY_IN_ACTIVITY_THIRD_NOT`中的`CHARACTER.Custom('GetActivityName')`，confession reader在决议未显示时仍调用`decision_can_take`并复制理由。产品没有`GetActivityName`引用，宗教GUI操作发生在数分钟后。证据指向native查询触发的原版决议理由路径，未取得精确调用栈，不能断定无效上下文、司祭引用或API使用中的哪一项是最终原因；继续保留该诊断，不授其理由扩展通过。
+
 本轮补记产品报告与证据，未修改已加载候选。下一场必须选用实际有创建/编辑资格的保存或新角色；历史候选与正式公开v10的保存覆盖分别记账。通用退出校验、解析及生命周期工具归`ck3_eternal_recurrence`；具体产品行为、存档和证据归本仓，不向POD产品外推。

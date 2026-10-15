@@ -38,3 +38,13 @@ Root 保留真实进程句柄并尝试原版菜单退出，已打开退出窗口
 启动前完整预检又发现原normal-exit profile仅接受fixture准备，产品自写旧存档/冷载envelope无法消费。框架 `109e771d1` 提供 `finish_product_profile`，从实际产品文件、选定engine身份和产品inventory生成标准 `ck3-mod-acceptance-prepared-product-v1`，不生成或冒充fixture。两类产品saved_campaign adapter均改为消费该接口。框架13项、主adapter6项、legacy9项离线验证通过；legacy最后一项真实消费48文件候选的公共prepare→完整wrapper静态profile链，在底层game main前停止。旧005 schema RED及首轮诊断路径过长RED保留；短路径后继通过，不放松校验。
 
 具体完整链证据位于本机配置指定的 `cases/mts-lg6-001/full-host-static-preflight/RESULT.actual.json`，SHA-256 `c7ce15bea5c0eb197f12a0baebc6ec832861aaaa01c7f01e98cbce04bd63d059`，54个profile输入。runtime006仅从005窄移植这两个通用准备工具，保留原native、1800秒策略与旧runtime。以上仍为启动前和离线资格，实机与发布尚未完成。
+
+## R19实际缺口与runtime007
+
+机器`bf-202609141645-5434332d4d`，2026-10-15。[R19](native-legacy-r19-2026-10-15.md)实际native退出查询拒绝宗教GUI：Python准备侧已支持无关GUI，生产C++仍一律拒绝`.gui`。本轮以正常官方GUI退出，保留真实OS0/native终态清理/宿主0/keeper0；这不授native退出动作通过，也不改变旧档提交受原版规则限制的业务RED。
+
+框架已推送`68b6ee27d`与fixture参数修正`82e710187`，将C++退出来源校验同步到现有依赖与命名空间规则，继续检查原版依赖、完整文件哈希、文件清点及受保护的退出定义/回调。5项生成器、16组生产Python/C++正反对照、3项宽字符参数检查通过。只重编一个生产单元，742个对象及21项前代递归覆盖沿用；新DLL SHA为`bfdfb1fe7f02321e7f7d1117e13953131d93c8f1eab6716b9572838e6f3eb612`。Defender精确EXE登记失败继续独立保持RED，未追认为成功。
+
+runtime007映射4036字节/SHA`44857c7feba738b5959ffe3e838bbe907a21adad60cb5cfaf0b7f79ad5feb006`，manifest176414字节/SHA`7afbf96d4ec226063b20520b0a60cbc922ffc11eb11b77fe4718d2fef5289ff3`。READY8156字节/SHA`3e2883c5cd2711994c53f6d17f0e65e171c3c63e5e0292907b20d519a8d73c86`包含实际主场prepare、plan和完整host静态链，三个原进程exit0，58个profile输入/48个产品文件。R8历史候选又在独立`mts-r8c7-001`目录完成公共prepare/plan/fullhost，54个profile输入；旧006输出未覆盖。机器映射、完整资格和原始回执留在配置指定的外置runtime及case目录。
+
+以上为来源、编译和静态资格。R20已通过公共入口启动，使用[R8未发布v10候选旧档](native-r8-candidate-preparation-2026-10-15.md)，仍待实际提交、通知及native退出读回。没有据离线C++通过授实机加载、正常退出或产品发布资格；通用实现及方法归框架，具体产品验收归本仓。
