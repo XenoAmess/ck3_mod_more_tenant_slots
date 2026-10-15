@@ -1,0 +1,23 @@
+{
+  "status": "RED",
+  "live_verified": false,
+  "reason": "exact installed version differs from v10 reviewed 1.20.0.3 contract",
+  "command": [
+    "python",
+    "-X",
+    "utf8",
+    "dev_tools/validate_and_build.py",
+    "--framework",
+    "<framework>",
+    "--game",
+    "<game>"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "RED: installed version differs from the reviewed contract\n",
+  "installed_game_version": "1.20.1",
+  "exe_bytes": 101124216,
+  "exe_sha256": "2667e409f586f20d60142873ccb1b4eb345eee54ed996925115a46132260cff7",
+  "previous_product_commit": "b10d50faac3c8462354cfa235ea62d72265ee54d",
+  "framework_commit": "3eb9a608e4499e10ff9fb51a32d2341ed32d3bc3"
+}

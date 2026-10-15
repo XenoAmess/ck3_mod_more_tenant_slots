@@ -19,7 +19,7 @@ PRODUCT = "more_tenets_slots_xa_dev"
 WORKSHOP_ID = "3182367229"
 RELEASE_FILES = (
     "descriptor.mod", "thumbnail.png",
-    "common/defines/More tradition slots.txt",
+    "common/defines/more_tenets_slots.txt",
     "common/script_values/zz_mts_core_tenets_cap.txt",
     "gui/window_faith.gui", "gui/window_rite_creation.gui",
 ) + tuple(f"localization/{language}/religion/MTS_religion_confucianism_l_{language}.yml"
@@ -81,6 +81,18 @@ def validate_localization(game: Path) -> dict:
             "live_verified": False}
 
 
+def validate_caps(mod: Path) -> None:
+    """Keep the tenet-only product independent from culture configuration."""
+    from ck3_text_projection import masked
+
+    definitions = "\n".join(masked(p.read_text(encoding="utf-8-sig"))
+                            for p in (mod / "common/defines").glob("*.txt"))
+    if re.search(r"\bNCulture\s*=|\bDEFAULT_MAX_TRADITIONS\s*=", definitions):
+        raise ValueError("tenet-only product must inherit native culture limits")
+    if len(re.findall(r"\bFAITH_CORE_TENETS_CAP\s*=\s*100\b", definitions)) != 1:
+        raise ValueError("native tenet cap must be 100")
+
+
 def validate(framework: Path, game: Path) -> dict:
     framework_tools(framework)
     from ck3_text_projection import blocks, masked
@@ -106,12 +118,8 @@ def validate(framework: Path, game: Path) -> dict:
                         "faith_creation_clean", "on_mts_faith_creation"):
                 if old in source:
                     raise ValueError(f"retired dependency {old}: {relative}")
-    defines = masked((MOD / RELEASE_FILES[2]).read_text(encoding="utf-8-sig"))
+    validate_caps(MOD)
     values = masked((MOD / RELEASE_FILES[3]).read_text(encoding="utf-8-sig"))
-    for pattern in (r"FAITH_CORE_TENETS_CAP\s*=\s*100\b",
-                    r"DEFAULT_MAX_TRADITIONS\s*=\s*10000\b"):
-        if len(re.findall(pattern, defines)) != 1:
-            raise ValueError("native cap contract differs")
     if not re.search(r"pam_faith_core_tenets_cap_value\s*=\s*{\s*value\s*=\s*100\s*}", values):
         raise ValueError("council cap differs from native cap")
     # Script-value IDs are merged across filenames; the native pam_values.txt
@@ -131,7 +139,7 @@ def validate(framework: Path, game: Path) -> dict:
             "localization": localization,
             "checks": ["exact-native-inputs", "reversible-native-gui", "native-controls-preserved",
                        "native-and-council-cap-100", "script-value-override-order",
-                       "traditions-cap-10000", "BOM-and-braces",
+                       "culture-limits-inherited", "BOM-and-braces",
                        "no-retired-dependencies", "localization-structure", "release-allowlist"],
             "release_file_count": len(RELEASE_FILES), "live_verified": False}
 
