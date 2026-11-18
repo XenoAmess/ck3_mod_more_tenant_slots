@@ -33,3 +33,6 @@ The native GUI contains trailing whitespace. It is deliberately preserved by the
 ## Ownership
 
 Product projections, source pins, compatibility predicate, cases and specific evidence belong here. A reusable background Steam discovery defect was fixed in the framework: interactive startup omitted optional `SILENT_STARTUP`; the actual `target_candidates` regression, all22 probe tests, full production-module strict mypy and a source/process-bound online probe passed. Framework commit `2fafef1ea76be4087725112760df8605c6816f89`; [shared record](https://github.com/XenoAmess/ck3_eternal_recurrence/blob/2fafef1ea76be4087725112760df8605c6816f89/docs/maintenance/2026-11-19-steam-interactive-context.md). This infrastructure result grants no product live or release credit.
+
+
+2026-11-19：新局简中GUI业务和实际存档读回通过，正常退出及资源释放通过；独立冷载/发布尚待完成。详见 [实机报告](live-report-2026-11-19.md)。

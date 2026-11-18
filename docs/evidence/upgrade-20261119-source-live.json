@@ -1,0 +1,434 @@
+{
+  "schema": "mts-florin-source-evidence-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--more-tenets-slots--R0001",
+  "version": "1.21.0",
+  "steam_build": 26757580,
+  "source_commit": "eb4f0dd74259586056af65cfab2d29c7bbe84d57",
+  "framework_commit": "2fafef1ea76be4087725112760df8605c6816f89",
+  "status": {
+    "status": "PASS",
+    "process_pass": true,
+    "closure_pass": true,
+    "gui_business_pass": true,
+    "case_acceptance_pass": true,
+    "business_pass": true,
+    "product_release_pass": false,
+    "native_capability_pass": false
+  },
+  "save": {
+    "bytes": 12832888,
+    "sha256": "09527cd7f8813bc3d7831bf6f8ab60e8132e39079c9b521a1c443456f9f2403c"
+  },
+  "saved_semantics": {
+    "schema": "mts-florin-saved-semantics-v1",
+    "date": "1066.9.26",
+    "player_id": 36423,
+    "rite_id": 150,
+    "faith_id": 14,
+    "founder_id": 36423,
+    "core_tenets": [
+      "tenet_apostolic_succession",
+      "tenet_philanthropia",
+      "tenet_communion"
+    ],
+    "all_tenet_statuses": [
+      {
+        "tenet": "tenet_peace_of_god",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_dulia",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_transubstantiation",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_ora_et_labora",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_hyperdulia",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_simony",
+        "status": "prohibited"
+      },
+      {
+        "tenet": "tenet_monophysitism",
+        "status": "prohibited"
+      },
+      {
+        "tenet": "tenet_acts_of_apostles",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_purgatory",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_be_fruitful_and_multiply",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_apostolic_succession",
+        "status": "core"
+      },
+      {
+        "tenet": "tenet_confession",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_original_sin",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_celestial_hierarchy",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_miles_christi",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_philanthropia",
+        "status": "core"
+      },
+      {
+        "tenet": "tenet_adoptionism",
+        "status": "prohibited"
+      },
+      {
+        "tenet": "tenet_love_thy_neighbour",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_divine_liturgy",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_miaphysitism",
+        "status": "prohibited"
+      },
+      {
+        "tenet": "tenet_hesychasm",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_anachoresis",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_mortification_of_the_flesh",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_aniconism",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_communal_identity",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_communion",
+        "status": "core"
+      },
+      {
+        "tenet": "tenet_gnosticism",
+        "status": "prohibited"
+      },
+      {
+        "tenet": "tenet_pentarchy",
+        "status": "prohibited"
+      },
+      {
+        "tenet": "tenet_vows_of_poverty",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_adaptive",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_esotericism",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_legalism",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_literalism",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_religious_legal_pronouncements",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_asceticism",
+        "status": "permitted"
+      },
+      {
+        "tenet": "tenet_ritual_celebrations",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_sanctity_of_nature",
+        "status": "known"
+      },
+      {
+        "tenet": "tenet_natural_primitivism",
+        "status": "prohibited"
+      },
+      {
+        "tenet": "tenet_polyamory",
+        "status": "prohibited"
+      }
+    ],
+    "ordinary_doctrines": [
+      "abrahamic_hostility_doctrine",
+      "doctrine_monogamy",
+      "doctrine_divorce_approval",
+      "doctrine_bastardry_legitimization",
+      "doctrine_homosexuality_shunned",
+      "doctrine_deviancy_crime",
+      "doctrine_adultery_men_shunned",
+      "doctrine_adultery_women_crime",
+      "doctrine_kinslaying_close_kin_crime",
+      "doctrine_witchcraft_crime",
+      "doctrine_gender_equal",
+      "doctrine_consanguinity_aunt_nephew_and_uncle_niece",
+      "doctrine_pluralism_righteous",
+      "doctrine_theocracy_temporal",
+      "doctrine_spiritual_head",
+      "doctrine_clerical_function_taxation",
+      "doctrine_clerical_gender_male_only",
+      "doctrine_clerical_marriage_disallowed",
+      "doctrine_clerical_succession_conditional",
+      "doctrine_pilgrimage_encouraged",
+      "doctrine_funeral_stoic",
+      "doctrine_imperial_anointment",
+      "doctrine_monotheist",
+      "doctrine_scriptural",
+      "doctrine_monasticism_accepted",
+      "doctrine_sacraments_central",
+      "doctrine_usury_forbidden",
+      "special_doctrine_is_christian_faith",
+      "special_doctrine_ecumenical_christian",
+      "special_doctrine_has_clerical_electors",
+      "doctrine_alcohol_permitted",
+      "doctrine_diet_unrestricted",
+      "special_doctrine_is_western_christian_faith"
+    ],
+    "inert_selector_metadata_doctrines": 100,
+    "core_capacity": 100,
+    "unfilled_core_capacity": 97,
+    "fake_core_tenets": 0,
+    "method": "Existing framework lossless bounded-save parser on actual UI-written save; offline evidence, not live native MCP"
+  },
+  "facts": {
+    "ordinary_doctrine_candidates": {
+      "passed": true,
+      "detail": "Three native gender candidates; ordinary selector has real choices.",
+      "evidence": [
+        {
+          "name": "165237139379-click.png",
+          "bytes": 3552017,
+          "sha256": "9983a113138b57227d4d31f722365882e25cc4b90509fd86c76d549c785dcc87"
+        }
+      ]
+    },
+    "ordinary_doctrine_replacement": {
+      "passed": true,
+      "detail": "Male dominated replaced by gender equal; actual save confirms doctrine_gender_equal.",
+      "evidence": [
+        {
+          "name": "165527686884-click.png",
+          "bytes": 3614697,
+          "sha256": "38a265853f73b418f7cd8beea69235088c8209706532a7f0f9ab39dd942c8d23"
+        },
+        {
+          "name": "saved-semantics.json",
+          "bytes": 5402,
+          "sha256": "79aeca77d8f649cfc1533fc48aededd852bb3a2859419c3866afa31b14082314"
+        }
+      ]
+    },
+    "core_tenet_replacement": {
+      "passed": true,
+      "detail": "Peace of God replaced by philanthropy; native core statuses confirmed in save.",
+      "evidence": [
+        {
+          "name": "165527686884-click.png",
+          "bytes": 3614697,
+          "sha256": "38a265853f73b418f7cd8beea69235088c8209706532a7f0f9ab39dd942c8d23"
+        },
+        {
+          "name": "171354769875-click.png",
+          "bytes": 3957425,
+          "sha256": "148e348c86fd768e9e24ac4b544b1c879f5f83f22a8dfe20a19b6433e307eb97"
+        },
+        {
+          "name": "saved-semantics.json",
+          "bytes": 5402,
+          "sha256": "79aeca77d8f649cfc1533fc48aededd852bb3a2859419c3866afa31b14082314"
+        }
+      ]
+    },
+    "last_slot_selection": {
+      "passed": true,
+      "detail": "Last singleton of 100 slots accepted real tenet; cancelled whole creation and reopened, tail empty and base cost restored.",
+      "evidence": [
+        {
+          "name": "163339809807-scroll.png",
+          "bytes": 3667849,
+          "sha256": "2a6964c1bcc66ac7a82126b629be5fd21089d67fe820f4996289e32a75aad865"
+        },
+        {
+          "name": "163422108036-click.png",
+          "bytes": 3684350,
+          "sha256": "8582b2759cfe64460d50839165090663d6bc6cb447fd3b89e7ffbec1b0943bd4"
+        },
+        {
+          "name": "165115621408-scroll.png",
+          "bytes": 3575179,
+          "sha256": "05d89917c1c600ac62536c05adfa71ecb4fbb1cd2222d67160f3e8194c3b17a0"
+        }
+      ]
+    },
+    "sparse_rite_creation": {
+      "passed": true,
+      "detail": "Native Roman Rite starts with three cores; created with three real cores and 97 unfilled capacity. Historical two-core case not run on this three-core actor.",
+      "evidence": [
+        {
+          "name": "170139670042-click.png",
+          "bytes": 3646217,
+          "sha256": "0bb38a19a4e171f5d22c62c41aea5d1d231069321eca0898ac9d0ee78bc6377f"
+        },
+        {
+          "name": "170335359726-click.png",
+          "bytes": 3924664,
+          "sha256": "e39e5e49020e134ae7a107a81587a41e828d131ed09bd68f231c500afeb415d7"
+        },
+        {
+          "name": "171354769875-click.png",
+          "bytes": 3957425,
+          "sha256": "148e348c86fd768e9e24ac4b544b1c879f5f83f22a8dfe20a19b6433e307eb97"
+        },
+        {
+          "name": "saved-semantics.json",
+          "bytes": 5402,
+          "sha256": "79aeca77d8f649cfc1533fc48aededd852bb3a2859419c3866afa31b14082314"
+        }
+      ]
+    },
+    "vanilla_culture_limit": {
+      "passed": true,
+      "detail": "Norman culture 4/6, native early medieval cap (base 5 plus era 1).",
+      "evidence": [
+        {
+          "name": "172106684483-click.png",
+          "bytes": 4195454,
+          "sha256": "18b4f229d03f5a58ec6bb8716564ce5da3b4e1e356f49d48f71522da5783b4ff"
+        }
+      ]
+    },
+    "notifications_converge": {
+      "passed": true,
+      "detail": "Handled native papal-authority and own-rite events. Advanced from 1066.9.15 to 1066.9.26; no repeat rite-event flood at final paused state.",
+      "evidence": [
+        {
+          "name": "170335359726-click.png",
+          "bytes": 3924664,
+          "sha256": "e39e5e49020e134ae7a107a81587a41e828d131ed09bd68f231c500afeb415d7"
+        },
+        {
+          "name": "173150721029-key.png",
+          "bytes": 4174333,
+          "sha256": "2f0f02009c171672a323a50e9ffc0d98e20d64e2c314d42851deb05b8f4f5aff"
+        },
+        {
+          "name": "173330255382-key.png",
+          "bytes": 4225472,
+          "sha256": "d3e35e3f2a7aac6f7af07c4f0aec4af8c3f072529561a1625b398c61aa3b3bd4"
+        },
+        {
+          "name": "173854482821-click.png",
+          "bytes": 3051171,
+          "sha256": "ab1ac38c5adfffced515f11fab33ca8f6717ab5b0e129649df1804fcfc389eb3"
+        },
+        {
+          "name": "saved-semantics.json",
+          "bytes": 5402,
+          "sha256": "79aeca77d8f649cfc1533fc48aededd852bb3a2859419c3866afa31b14082314"
+        }
+      ]
+    },
+    "save_written": {
+      "passed": true,
+      "detail": "Actual normal Save UI wrote zip/gamestate; actor and rite read back offline.",
+      "evidence": [
+        {
+          "name": "阿普利亚公爵，罗贝尔_1066_09_26.ck3",
+          "bytes": 12832888,
+          "sha256": "09527cd7f8813bc3d7831bf6f8ab60e8132e39079c9b521a1c443456f9f2403c"
+        },
+        {
+          "name": "saved-semantics.json",
+          "bytes": 5402,
+          "sha256": "79aeca77d8f649cfc1533fc48aededd852bb3a2859419c3866afa31b14082314"
+        },
+        {
+          "name": "173854482821-click.png",
+          "bytes": 3051171,
+          "sha256": "ab1ac38c5adfffced515f11fab33ca8f6717ab5b0e129649df1804fcfc389eb3"
+        },
+        {
+          "name": "174059062273-click.png",
+          "bytes": 3055399,
+          "sha256": "0e406964ac20791f98a7d73f3da86591c4e6b8ab91a09066d30fc144fda1dd18"
+        }
+      ]
+    },
+    "native_precepts_preserved": {
+      "passed": true,
+      "detail": "Native funeral, coronation, usury, alcohol and diet precepts visible and persisted.",
+      "evidence": [
+        {
+          "name": "170139670042-click.png",
+          "bytes": 3646217,
+          "sha256": "0bb38a19a4e171f5d22c62c41aea5d1d231069321eca0898ac9d0ee78bc6377f"
+        },
+        {
+          "name": "saved-semantics.json",
+          "bytes": 5402,
+          "sha256": "79aeca77d8f649cfc1533fc48aededd852bb3a2859419c3866afa31b14082314"
+        }
+      ]
+    }
+  },
+  "exit": {
+    "at_utc": "2026-11-18T17:45:48.591631+00:00",
+    "pid": 26608,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "keeper": {
+    "schema": "xar.promo.screen-lease-keeper/v1",
+    "task_id": "mts-pc-20260924rtuf-f11af23c08--more-tenets-slots--R0001",
+    "last_sequence": 1410,
+    "failure": null,
+    "thread_exited": true
+  },
+  "cold_reload": "NOT_RUN",
+  "publication": "NOT_RUN"
+}
