@@ -1,0 +1,48 @@
+{
+  "schema": "ck3-mod-acceptance-products-v1",
+  "products": {
+    "potential-output": {
+      "directory": "mod_potential_output",
+      "runtime_mod_key": "potential-output",
+      "external_mod": true,
+      "cases": [
+        {
+          "id": "map-filters",
+          "budgets": {
+            "timeout": 7200,
+            "quit_timeout": 90,
+            "poll_interval": 1,
+            "max_prepare_bytes": 536870912
+          },
+          "required_business_evidence": [
+            "actual_product_loaded",
+            "map_entry",
+            "county_potential_icons",
+            "single_good_filter",
+            "multi_good_filter",
+            "clear_filter",
+            "select_all_filter",
+            "category_filter",
+            "panel_collapse",
+            "mode_restore",
+            "zoom_display"
+          ]
+        },
+        {
+          "id": "existing-save",
+          "budgets": {
+            "timeout": 3600,
+            "quit_timeout": 90,
+            "poll_interval": 1,
+            "max_prepare_bytes": 536870912
+          },
+          "required_business_evidence": [
+            "existing_save_loaded",
+            "potential_goods_on_existing_save",
+            "filter_after_reload"
+          ]
+        }
+      ]
+    }
+  }
+}
