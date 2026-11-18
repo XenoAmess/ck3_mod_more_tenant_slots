@@ -9,7 +9,18 @@
     "characters": 4090,
     "lines": 50,
     "sha256": "2f2c0db8d9a9dd1c2fea2e7137a9165341efb765d33e3f4b5702b39a588f4aee",
-    "normalized_sha256": "b8d890eb3ca465726eb68b32c0638016a5729535a0e853168c5b1ad832c92186"
+    "raw_trimmed_sha256": "b8d890eb3ca465726eb68b32c0638016a5729535a0e853168c5b1ad832c92186",
+    "public_canonical": {
+      "characters": 4039,
+      "lines": 50,
+      "sha256": "1E1BAA6FF69E247DE2C26D44AF24B6BA5FF7AAF163C3FE5CF30E57D732503093",
+      "normalization": "CRLF/CR to LF, trim final LF only",
+      "actual_plan_file": {
+        "path": "artifacts/upgrade-20261118/publish-plan.json",
+        "bytes": 2975,
+        "sha256": "259bc6a8eea7e10c55e705eaab4b376c8f2bcfa6690805b8471d9923d5b03277"
+      }
+    }
   },
   "change_notes": {
     "path": "docs/workshop/change-notes-v12.txt",
@@ -17,6 +28,18 @@
     "characters": 1763,
     "lines": 21,
     "sha256": "7ca1db2052809ecb305fe7e158fd60fc6fd5b446c54f9a4a7a60eedb03824002",
-    "normalized_sha256": "951dcddcade052b9789f1b11b0d084445eb3623835b3c4790acf7514f1c4be3e"
-  }
+    "raw_trimmed_sha256": "951dcddcade052b9789f1b11b0d084445eb3623835b3c4790acf7514f1c4be3e",
+    "public_canonical": {
+      "characters": 1741,
+      "lines": 21,
+      "sha256": "186838D73B333FE5E5D095FADAE86B953426A84A18E96060E38961D63ECC47C6",
+      "normalization": "CRLF/CR to LF, trim final LF only",
+      "actual_plan_file": {
+        "path": "artifacts/upgrade-20261118/publish-plan.json",
+        "bytes": 2975,
+        "sha256": "259bc6a8eea7e10c55e705eaab4b376c8f2bcfa6690805b8471d9923d5b03277"
+      }
+    }
+  },
+  "normalization_note": "The original pre-upload file freeze is retained at release tag 066e955. File bytes/counts include CRLF. raw_trimmed_sha256 names its original raw trailing-LF trim accurately; public_canonical records the actual plan/public verifier LF normalization."
 }

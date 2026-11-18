@@ -36,3 +36,6 @@ Product projections, source pins, compatibility predicate, cases and specific ev
 
 
 2026-11-19：新局简中GUI业务和实际存档读回通过，正常退出及资源释放通过；独立冷载/发布尚待完成。详见 [实机报告](live-report-2026-11-19.md)。
+
+
+2026-11-19：独立冷载及v12工坊发布闭环完成，包含完整公开文本读回、真实下载48文件exact match、缓存实际加载和正常退出、Steam离线及资源释放。详见[发布记录](workshop/publication-v12.md)。两项通用修复已分别提交框架；POD不在本轮结论中。

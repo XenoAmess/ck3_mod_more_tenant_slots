@@ -32,3 +32,8 @@ error.log为1503字节：原版长城地图对象数量诊断、预期的同名o
 ## 独立冷载通过
 
 R0002 / PID18452，独立隔离userdir，仅正式产品；精确复制R0001的存档。载入1066.9.26，罗贝尔/阿普利亚天主教、三个core与男女平等教义保留，原生面板正常，实际超过75秒未出现礼仪事件连发。资源夹具未挂载，载入列表的缺少mod提示对应此夹具。正常退出桌面，原始Popen返回0，keeper和screen释放通过。共享verify为PASS；新版native/MCP资格化及正式发布仍不由此推定。日志1183字节，保留长城原版诊断及同名effect警告。见[冷载证据](evidence/upgrade-20261119-cold-live.json)。
+
+
+## 发布闭环完成
+
+v12已更新既有3182367229，完整描述/双语Notes/1.21标签匿名精确回读，原预览保留。Steam重新下载48文件逐字节匹配正式tag树；R0003实际从缓存目录mounted/Enabled并到达主菜单，未开新局、未重复业务，正常GUI退出原始进程0。最终Steam后台探针为offline，keeper及screen均释放。首次缓存准备RED保留；通用GUI缓存磁盘身份修复d5dfb281f归框架，33项检查及新模块严格mypy通过，不授新native ABI资格。见[完整发布记录](workshop/publication-v12.md)。

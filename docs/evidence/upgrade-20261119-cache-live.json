@@ -1,0 +1,74 @@
+{
+  "schema": "mts-florin-cache-evidence-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--more-tenets-slots--R0003",
+  "status": {
+    "status": "PASS",
+    "process_pass": true,
+    "closure_pass": true,
+    "normal_gui_quit": true,
+    "case_acceptance_pass": true,
+    "cache_acceptance_pass": true,
+    "business_contract_applicable": false,
+    "gui_business_pass": false,
+    "business_pass": false,
+    "product_release_pass": false,
+    "native_capability_pass": false
+  },
+  "pid": 28772,
+  "exit": {
+    "at_utc": "2026-11-18T21:36:29.338882+00:00",
+    "pid": 28772,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "file_count": 48,
+  "cache_content_copied": false,
+  "fixture_mounted": false,
+  "campaign_started": false,
+  "framework_commit": "d5dfb281f39df52e39240a162c5d21770c5d1724",
+  "log_load": {
+    "mounted_log_lines": [
+      {
+        "line": 99,
+        "text": "[05:16:05][D][virtualfilesystem_physfs.cpp:814]: Mounted Data: C:/SteamLibrary/steamapps/workshop/content/1158310/3182367229"
+      }
+    ],
+    "enabled_log_lines": [
+      {
+        "line": 66,
+        "text": "More Tenets Slots(XA)|mod/product.mod|Enabled"
+      }
+    ],
+    "engine_log": {
+      "path": "artifacts/upgrade-20261118/userdirs/gui-cache-v12-a02/profile/logs/debug.log",
+      "bytes": 500537,
+      "sha256": "39fb7c0676e3edbae0bfdd92c1652822b9310aad178d98936c91c4b7b4cb1399"
+    }
+  },
+  "normal_quit_images": [
+    {
+      "path": "artifacts/upgrade-20261118/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0003/review/213515187897-click.png",
+      "bytes": 3439527,
+      "sha256": "9508c56115790cb347fef4a8dc565192384f03b943851f0dbd5a8b8d25b1058d"
+    },
+    {
+      "path": "artifacts/upgrade-20261118/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0003/review/213624745888-click.png",
+      "bytes": 2811589,
+      "sha256": "2db32accfb6a65ecf034684e40e55d9c6ad9d8ecc76e25dfb48281529f9b75c6"
+    }
+  ],
+  "keeper_thread_exited": true,
+  "screen_released": true,
+  "prior_prepare_failure": {
+    "status": "RED before launch",
+    "reason": "Old native identity registry excluded current EXE from GUI-only cache preparation",
+    "framework_fix": "d5dfb281f",
+    "attempt": "cache-prepared",
+    "preserved": true
+  }
+}

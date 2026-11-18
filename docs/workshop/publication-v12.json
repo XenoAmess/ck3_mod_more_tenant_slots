@@ -1,0 +1,251 @@
+{
+  "schema": "mts.workshop-publication.v1",
+  "product": "more_tenets_slots_xa_dev",
+  "item_id": "3182367229",
+  "app_id": 1158310,
+  "machine_id": "pc-20260924rtuf-f11af23c08",
+  "status": "complete",
+  "draft_only": false,
+  "published_date_asia_shanghai": "2026-11-19",
+  "uploaded_source_commit": "066e9550b34d23206490f305e4bf54c411e8a235",
+  "release_tag": {
+    "name": "more-tenets-slots-v12-ck3-1.21.0",
+    "status": "annotated-pushed",
+    "target_commit": "066e9550b34d23206490f305e4bf54c411e8a235"
+  },
+  "game": {
+    "version": "1.21.0",
+    "name": "Florin",
+    "steam_build": 26757580,
+    "exe_sha256": "bb3fef106240e95ecdb6f1532982e89e9432c92a99d33db623521572f06e6f79",
+    "live_language": "simp_chinese",
+    "post_publication_exe_recheck": {
+      "path": "artifacts/upgrade-20261118/post-publish-exe.json",
+      "bytes": 196,
+      "sha256": "72402c62519025720e5bb79d6c6ecb31b1c68947df8bf5045ae5c7149a0279e8"
+    }
+  },
+  "build": {
+    "file_count": 48,
+    "uncompressed_bytes": 1022446,
+    "manifest": {
+      "path": "docs/workshop/release-manifest-v12.json",
+      "bytes": 9157,
+      "sha256": "af2e8a71e96a72b0cda70cb3907778aaf834f2cbab6d345449bb45493e9966b3"
+    },
+    "zip": {
+      "bytes": 730069,
+      "sha256": "608e13233a600ad9b6cc352d019959600a050afbfca19a57c21ab50f4024897b"
+    },
+    "matches_source_and_cold_tested_bytes": true,
+    "double_build_identical": true
+  },
+  "upload": {
+    "app_id": 1158310,
+    "created_at": "2026-11-18T20:13:01.889560+00:00",
+    "item_id": "3182367229",
+    "legal_agreement_required": false,
+    "operation": "update",
+    "operation_id": "mts-v12-20261119-066e955-001",
+    "payload_sha256": "ad59992f59207dcd469671ca48d945648642f104b642c0f12879f7c83912ea5f",
+    "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+    "stage": "complete",
+    "steam_result": 1,
+    "submitted_at": "2026-11-18T20:13:16.498785+00:00",
+    "tags": [
+      "Religion",
+      "1.21 'Florin'"
+    ],
+    "tags_only": false,
+    "update_scope": "content_and_metadata",
+    "updated_at": "2026-11-18T20:13:16.498815+00:00"
+  },
+  "public_readback": {
+    "title_exact": true,
+    "description_exact": true,
+    "description_characters": 4039,
+    "description_sha256": "1E1BAA6FF69E247DE2C26D44AF24B6BA5FF7AAF163C3FE5CF30E57D732503093",
+    "expected_description_sha256": "1E1BAA6FF69E247DE2C26D44AF24B6BA5FF7AAF163C3FE5CF30E57D732503093",
+    "change_notes_exact": true,
+    "changelog_entry_id": "1795032795",
+    "change_notes_characters": 1741,
+    "change_notes_lines": 21,
+    "change_notes_sha256": "186838D73B333FE5E5D095FADAE86B953426A84A18E96060E38961D63ECC47C6",
+    "expected_change_notes_characters": 1741,
+    "expected_change_notes_lines": 21,
+    "expected_change_notes_sha256": "186838D73B333FE5E5D095FADAE86B953426A84A18E96060E38961D63ECC47C6",
+    "time_updated": 1795032795,
+    "file_size": "1022446",
+    "ok": true,
+    "tags_exact": true,
+    "owner_app_item_exact": true,
+    "preview_preserved": true,
+    "public_visible": true,
+    "observed_at_utc": "2026-11-18T20:24:09.430646+00:00"
+  },
+  "public_urls": {
+    "item": "https://steamcommunity.com/sharedfiles/filedetails/?id=3182367229",
+    "changelog": "https://steamcommunity.com/sharedfiles/filedetails/changelog/3182367229"
+  },
+  "public_raw_evidence": [
+    {
+      "path": "artifacts/upgrade-20261118/public-read-a01/item-api.json",
+      "bytes": 5917,
+      "sha256": "183e2f05e31d0c8b445d35ed249696d7d72ff76d1f09773fba9a49927f1676e2"
+    },
+    {
+      "path": "artifacts/upgrade-20261118/public-read-a01/changelog.html",
+      "bytes": 62192,
+      "sha256": "0770a6a5e55ab773a5299c9c1c32e9454c1d54a05d58ec5af7c8c6b78593da51"
+    },
+    {
+      "path": "artifacts/upgrade-20261118/public-read-a01/verification.json",
+      "bytes": 946,
+      "sha256": "21c5166bd75e6f899241656d1e0d931e34ae0b74366d16cd1e3de4561d2ce33b"
+    }
+  ],
+  "submitted_text": {
+    "description": {
+      "characters": 4039,
+      "lines": 50,
+      "sha256": "1E1BAA6FF69E247DE2C26D44AF24B6BA5FF7AAF163C3FE5CF30E57D732503093",
+      "normalization": "CRLF/CR to LF, trim final LF only",
+      "actual_plan_file": {
+        "path": "artifacts/upgrade-20261118/publish-plan.json",
+        "bytes": 2975,
+        "sha256": "259bc6a8eea7e10c55e705eaab4b376c8f2bcfa6690805b8471d9923d5b03277"
+      }
+    },
+    "change_notes": {
+      "characters": 1741,
+      "lines": 21,
+      "sha256": "186838D73B333FE5E5D095FADAE86B953426A84A18E96060E38961D63ECC47C6",
+      "normalization": "CRLF/CR to LF, trim final LF only",
+      "actual_plan_file": {
+        "path": "artifacts/upgrade-20261118/publish-plan.json",
+        "bytes": 2975,
+        "sha256": "259bc6a8eea7e10c55e705eaab4b376c8f2bcfa6690805b8471d9923d5b03277"
+      }
+    }
+  },
+  "before_tags": [
+    "Religion",
+    "1.20 'Crozier'"
+  ],
+  "after_tags": [
+    "Religion",
+    "1.21 'Florin'"
+  ],
+  "preview_preserved": true,
+  "hcontent_preview": "12409224100181941193",
+  "hcontent_file": "4617830893481829765",
+  "native_download": {
+    "app_id": 1158310,
+    "callback": {
+      "app_id": 1158310,
+      "callback_id": 3406,
+      "item_id": "3182367229",
+      "result": 1
+    },
+    "dll_sha256": "1db3fd414039d3e5815a5721925dd2e0a3a9f2549603c6cab7c49b84966a1af3",
+    "download_info": {
+      "available": true,
+      "downloaded_bytes": 0,
+      "total_bytes": 0
+    },
+    "elapsed_seconds": 5.239,
+    "expected_cache_absent_before_start": true,
+    "fresh_cache_requested": true,
+    "ignored_callbacks": 30,
+    "isolated_worker": true,
+    "item_id": "3182367229",
+    "ok": true,
+    "schema": "ck3_workshop_mcp.steam_native.download.v1",
+    "started": true,
+    "state_flags": {
+      "download_pending": false,
+      "downloading": false,
+      "installed": true,
+      "legacy": false,
+      "needs_update": false,
+      "raw": 5,
+      "subscribed": true
+    },
+    "status": "complete",
+    "timeout_seconds": 600.0,
+    "worker_exit_code": 0,
+    "worker_pid": 28272
+  },
+  "cache_installation": {
+    "leaf": "workshop/content/1158310/3182367229",
+    "size_on_disk": 1022446,
+    "exact_formal": true,
+    "file_count": 48,
+    "actual_load_and_normal_quit": true,
+    "run_id": "pc-20260924rtuf-f11af23c08--more-tenets-slots--R0003"
+  },
+  "acceptance": {
+    "source": {
+      "status": "PASS",
+      "process_pass": true,
+      "closure_pass": true,
+      "gui_business_pass": true,
+      "case_acceptance_pass": true,
+      "business_pass": true,
+      "product_release_pass": false,
+      "native_capability_pass": false
+    },
+    "independent_cold": {
+      "status": "PASS",
+      "process_pass": true,
+      "closure_pass": true,
+      "gui_business_pass": true,
+      "case_acceptance_pass": true,
+      "business_pass": true,
+      "product_release_pass": false,
+      "native_capability_pass": false
+    },
+    "published_cache": {
+      "status": "PASS",
+      "process_pass": true,
+      "closure_pass": true,
+      "normal_gui_quit": true,
+      "case_acceptance_pass": true,
+      "cache_acceptance_pass": true,
+      "business_contract_applicable": false,
+      "gui_business_pass": false,
+      "business_pass": false,
+      "product_release_pass": false,
+      "native_capability_pass": false
+    }
+  },
+  "steam_offline": {
+    "status": "offline",
+    "offline_mode": true,
+    "observed_at_utc": "2026-11-18T21:38:29.974816+00:00",
+    "method": "native_current_user_byte",
+    "evidence": {
+      "path": "artifacts/upgrade-20261118/final-offline.json",
+      "bytes": 2338,
+      "sha256": "684654e94325339718b0fa13f5f34db5aaf0f1d98ef1c4cc88589b0a8c6f605f"
+    }
+  },
+  "resources_released": true,
+  "scope_limits": [
+    "Three real core tenets plus97 unfilled slots tested; historical two-core case not rerun",
+    "Only simp_chinese live; nine localization languages statically checked",
+    "POD products and older-save migration not covered",
+    "No new native religion/MCP capability qualification",
+    "Known native diagnostic and duplicate on_action warning preserved; no zero-error claim"
+  ],
+  "framework_enrichment": [
+    {
+      "commit": "2fafef1ea76be4087725112760df8605c6816f89",
+      "purpose": "Steam interactive CEF source/context matching"
+    },
+    {
+      "commit": "d5dfb281f",
+      "purpose": "GUI-only cache disk metadata distinct from native ABI registry"
+    }
+  ]
+}
