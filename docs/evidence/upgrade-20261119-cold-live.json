@@ -1,0 +1,117 @@
+{
+  "schema": "mts-florin-cold-evidence-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--more-tenets-slots--R0002",
+  "source_commit": "a97b4c59fc8303c9953f8adae080760694270696",
+  "status": {
+    "status": "PASS",
+    "process_pass": true,
+    "closure_pass": true,
+    "gui_business_pass": true,
+    "case_acceptance_pass": true,
+    "business_pass": true,
+    "product_release_pass": false,
+    "native_capability_pass": false
+  },
+  "save": {
+    "bytes": 12832888,
+    "sha256": "09527cd7f8813bc3d7831bf6f8ab60e8132e39079c9b521a1c443456f9f2403c"
+  },
+  "same_copied_save": true,
+  "pid": 18452,
+  "source_pid": 26608,
+  "facts": {
+    "saved_actor_and_religion": {
+      "detail": "Independent PID18452 loaded exact source save, Robert51/Apulia, 1066.9.26, Apulian Catholic rite. Product only; no resource fixture.",
+      "passed": true,
+      "evidence": [
+        {
+          "name": "阿普利亚公爵，罗贝尔_1066_09_26.ck3",
+          "bytes": 12832888,
+          "sha256": "09527cd7f8813bc3d7831bf6f8ab60e8132e39079c9b521a1c443456f9f2403c"
+        },
+        {
+          "name": "183834292048-click.png",
+          "bytes": 3676978,
+          "sha256": "9e0a782c7ebde9f37a95cb1989a945a5a0d66dbf18f32f73246c92d6138281c8"
+        },
+        {
+          "name": "185228377751-capture.png",
+          "bytes": 4244350,
+          "sha256": "5add20c589e6cdd99fe0e399abf8141c0e515a7de5df96fb38e3e621e738c7d3"
+        },
+        {
+          "name": "185559234176-click.png",
+          "bytes": 4077474,
+          "sha256": "e6fc0a79a92647922ab5692ed1fe62e6417c9672229daf0b62e51c1dfdf07c82"
+        },
+        {
+          "name": "190043458826-click.png",
+          "bytes": 4136033,
+          "sha256": "711829c2e2a14fd94dca00c2811b6ae8fd60f9baf594ed45d9c71275150d6adb"
+        }
+      ]
+    },
+    "saved_core_tenets": {
+      "detail": "Apostolic Succession, Philanthropy and Communion retained in cold-loaded native faith panel.",
+      "passed": true,
+      "evidence": [
+        {
+          "name": "190043458826-click.png",
+          "bytes": 4136033,
+          "sha256": "711829c2e2a14fd94dca00c2811b6ae8fd60f9baf594ed45d9c71275150d6adb"
+        },
+        {
+          "name": "190346521163-key.png",
+          "bytes": 4124015,
+          "sha256": "0083321e999f3fa29fa635c57a41f2a9fe881af6b7aa2b9e824d9853b63756fd"
+        }
+      ]
+    },
+    "saved_ordinary_doctrines": {
+      "detail": "Native full doctrine panel highlights gender equal as rite choice; male dominated remains base-faith choice.",
+      "passed": true,
+      "evidence": [
+        {
+          "name": "190210799124-click.png",
+          "bytes": 3885467,
+          "sha256": "9010ca9509f4b64b40b19d1655619262d835d9f9a82fa064a4465ab8f0a42095"
+        }
+      ]
+    },
+    "notifications_after_cold_reload": {
+      "detail": "Loaded paused at saved date, reviewed through doctrine and normal quit menu, no repeat rite-event popup; over 75 seconds of actual bounded observation.",
+      "passed": true,
+      "evidence": [
+        {
+          "name": "185228377751-capture.png",
+          "bytes": 4244350,
+          "sha256": "5add20c589e6cdd99fe0e399abf8141c0e515a7de5df96fb38e3e621e738c7d3"
+        },
+        {
+          "name": "190043458826-click.png",
+          "bytes": 4136033,
+          "sha256": "711829c2e2a14fd94dca00c2811b6ae8fd60f9baf594ed45d9c71275150d6adb"
+        },
+        {
+          "name": "190528591437-key.png",
+          "bytes": 3583472,
+          "sha256": "dfc0d71a495b10f221832b0cd815ae27498a3d07f13f1f78170b8eae2cf7d0fa"
+        }
+      ]
+    }
+  },
+  "exit": {
+    "at_utc": "2026-11-18T19:12:10.002151+00:00",
+    "pid": 18452,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "keeper_thread_exited": true,
+  "screen_released": true,
+  "error_log_bytes": 1183
+}
