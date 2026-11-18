@@ -64,6 +64,7 @@ def generated_files() -> dict[str, str]:
         "\t}\n"
         "\tNOT = { any_in_list = { list = added_tenets count >= 1 } }\n"
         "\tNOT = { any_in_list = { list = removed_tenets count >= 1 } }\n"
+        "\tNOT = { any_in_list = { list = changed_tenet_status count >= 1 } }\n"
         "\tNOT = {\n\t\tany_in_list = {\n\t\t\tlist = added_doctrines\n"
         "\t\t\tNOT = { mts_selector_internal_doctrine_trigger = yes }\n\t\t}\n\t}\n"
         "\tNOT = {\n\t\tany_in_list = {\n\t\t\tlist = removed_doctrines\n"
