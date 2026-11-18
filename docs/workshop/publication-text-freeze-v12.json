@@ -1,0 +1,22 @@
+{
+  "schema": "mts-publication-text-freeze-v1",
+  "product_version": "12",
+  "title": "More Tenets Slots (XA) - CK3 1.21",
+  "item_id": "3182367229",
+  "description": {
+    "path": "docs/workshop/description.bbcode",
+    "bytes": 5164,
+    "characters": 4090,
+    "lines": 50,
+    "sha256": "2f2c0db8d9a9dd1c2fea2e7137a9165341efb765d33e3f4b5702b39a588f4aee",
+    "normalized_sha256": "b8d890eb3ca465726eb68b32c0638016a5729535a0e853168c5b1ad832c92186"
+  },
+  "change_notes": {
+    "path": "docs/workshop/change-notes-v12.txt",
+    "bytes": 2403,
+    "characters": 1763,
+    "lines": 21,
+    "sha256": "7ca1db2052809ecb305fe7e158fd60fc6fd5b446c54f9a4a7a60eedb03824002",
+    "normalized_sha256": "951dcddcade052b9789f1b11b0d084445eb3623835b3c4790acf7514f1c4be3e"
+  }
+}

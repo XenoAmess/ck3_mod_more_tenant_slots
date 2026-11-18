@@ -1,0 +1,21 @@
+Version 12 — CK3 1.21.0 (Florin)
+
+- Updates the rite creation and faith interfaces from CK3 1.21.0 while retaining 100 core tenet slots and scrollable grids.
+- Preserves native eligibility, conflicts, costs, DLC requirements, rite permissions and the new funeral, coronation, usury, alcohol and dietary precepts.
+- Retains the complete new native rite-update effects. Internal selector-only metadata changes are filtered; real tenet status changes still run native handling.
+- Cultural tradition limits continue to follow the base game.
+
+Simplified Chinese live acceptance verified ordinary doctrine candidates and replacement, core tenet replacement, slot 100 selection and cancellation, sparse creation with three real core tenets and 97 unfilled slots, vanilla culture limits, native precepts, notifications and saving. An independent process loaded the same save with the formal product alone and retained the tested character, date, rite, core tenets and ordinary doctrine. Nine localization languages passed static format and key-set checks; no other language was live-tested.
+
+This release covers More Tenets Slots (XA) only. POD products require separate acceptance. Existing images remain labeled historical v10 screenshots. All tenet/DLC combinations and migration of older saves are not covered by these tests.
+
+版本 12 — CK3 1.21.0（Florin）
+
+- 按 CK3 1.21.0 原版更新礼仪创建与信仰界面，保留 100 个核心信条槽位和滚动网格。
+- 保留原生条件、互斥、费用、DLC、礼仪权限，以及新版丧葬、加冕、有息贷款、酒精和食物戒律。
+- 完整保留新版礼仪更新效果；只过滤内部选择器元数据变化，真实信条状态变化仍执行原生处理。
+- 文化传统上限继续使用原版规则。
+
+简中实机验证普通教义候选与替换、核心信条替换、第 100 槽选择及取消、三个真实核心信条加 97 个尾空槽创建、原版文化上限、新版戒律、通知及保存。独立新进程仅挂载正式产品，载入同一存档，保留受测角色、日期、礼仪、核心信条和普通教义。九种语言通过格式与键集静态检查，未启动其他语言实机测试。
+
+本次只更新 More Tenets Slots（XA），POD 产品分别验收。现有图片保留版本 10 历史标注；本轮测试不涵盖全部信条/DLC组合和旧存档迁移。
