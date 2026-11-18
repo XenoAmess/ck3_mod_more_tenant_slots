@@ -1,0 +1,13 @@
+﻿l_french:
+ xapo_potential_output:0 "Production potentielle"
+ xapo_potential_output_desc:0 "Affiche les marchandises que chaque comté peut produire, y compris les ressources inexploitées. Le panneau filtre les icônes de la carte."
+ xapo_all:0 "Tout sélectionner"
+ xapo_none:0 "Effacer"
+ xapo_basic:0 "Marchandises de base"
+ xapo_other:0 "Marchandises"
+ xapo_misc:0 "Divers"
+ xapo_hint:0 "Cliquez sur un produit ou une catégorie pour modifier le filtre. Plusieurs sélections affichent leur union."
+ xapo_empty:0 "Aucun produit sélectionné"
+ xapo_scope:0 "Inclut les ressources inexploitées. Les icônes indiquent les produits possibles, pas les quantités."
+ xapo_panel:0 "Afficher / masquer le filtre"
+ xapo_exit:0 "Revenir au mode de carte précédent"

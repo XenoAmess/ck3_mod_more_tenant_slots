@@ -1,0 +1,2 @@
+﻿gui/xapo_potential_output.gui = xapo_map_launcher
+gui/xapo_potential_output.gui = xapo_goods_panel

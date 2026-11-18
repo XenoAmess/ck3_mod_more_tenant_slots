@@ -1,0 +1,13 @@
+﻿l_polish:
+ xapo_potential_output:0 "Potencjał produkcji"
+ xapo_potential_output_desc:0 "Pokazuje możliwe towary każdego hrabstwa, w tym niewykorzystane zasoby. Panel filtruje ikony na mapie."
+ xapo_all:0 "Zaznacz wszystko"
+ xapo_none:0 "Wyczyść"
+ xapo_basic:0 "Podstawowe towary"
+ xapo_other:0 "Towary handlowe"
+ xapo_misc:0 "Inne"
+ xapo_hint:0 "Kliknij towar lub kategorię, aby zmienić filtr. Kilka zaznaczeń wyświetla wszystkie wybrane towary."
+ xapo_empty:0 "Nie wybrano towarów"
+ xapo_scope:0 "Obejmuje niewykorzystane zasoby. Ikony wskazują możliwe towary, a nie wielkość produkcji."
+ xapo_panel:0 "Pokaż / ukryj filtr towarów"
+ xapo_exit:0 "Wróć do poprzedniego trybu mapy"

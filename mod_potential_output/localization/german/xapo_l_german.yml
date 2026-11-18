@@ -1,0 +1,13 @@
+﻿l_german:
+ xapo_potential_output:0 "Produktionspotenzial"
+ xapo_potential_output_desc:0 "Zeigt mögliche Handelswaren jeder Grafschaft, einschließlich unerschlossener Ressourcen. Das Warenfenster filtert die Kartensymbole."
+ xapo_all:0 "Alle auswählen"
+ xapo_none:0 "Leeren"
+ xapo_basic:0 "Grundlegende Handelswaren"
+ xapo_other:0 "Handelswaren"
+ xapo_misc:0 "Sonstige"
+ xapo_hint:0 "Waren oder Kategorien anklicken, um den Filter zu ändern. Mehrere Auswahlen werden gemeinsam angezeigt."
+ xapo_empty:0 "Keine Waren ausgewählt"
+ xapo_scope:0 "Enthält unerschlossene Ressourcen. Symbole zeigen mögliche Waren, keine Produktionsmengen."
+ xapo_panel:0 "Warenfilter anzeigen / ausblenden"
+ xapo_exit:0 "Zum vorherigen Kartenmodus zurückkehren"

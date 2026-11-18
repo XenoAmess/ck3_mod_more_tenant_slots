@@ -24,4 +24,8 @@ POD mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2216659254
 
 ### order
 
+### Potential Output (XA)
+
+[`mod_potential_output/`](mod_potential_output/) is a new independent CK3 1.21 submod for county potential trade goods, with a grouped goods filter panel. It reads native potential goods, including undeveloped resources, and keeps filter state local to the UI. Current implementation and verification status: [report](docs/potential-output-report.md); [acceptance plan](docs/potential-output-acceptance-plan.md). It has no Workshop ID and is independent of MTS and POD.
+
 ![mods_order](mods_order.png)

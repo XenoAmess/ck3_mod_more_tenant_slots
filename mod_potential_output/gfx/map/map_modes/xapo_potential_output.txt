@@ -1,0 +1,36 @@
+﻿# Independent county view; potential goods are native GUI data.
+xapo_potential_output = {
+    color_mode = dejure_counties
+    small_map_names = dejure_counties
+    large_map_names = dejure_counties
+    selection = county_capital_holdings
+    select_holdings_on_close_zoom = no
+    fill_in_impassable = no
+    barony_description = DEJURE_COUNTIES_MAPMODE_TOOLTIP
+    gradient_parameters = {
+        zoom_step = 2
+        gradient_alpha_inside = 0.35
+        gradient_alpha_outside = 0.6
+        gradient_width = 0.4
+        gradient_color_mult = 0.6
+        edge_width = 0.04
+        edge_sharpness = 0.015
+        edge_alpha = 1
+        edge_color_mult = 0.65
+        before_lighting_blend = 0.5
+        after_lighting_blend = 0.95
+    }
+    gradient_parameters = {
+        zoom_step = 21
+        gradient_alpha_inside = 0.6
+        gradient_alpha_outside = 1
+        gradient_width = 0.4
+        gradient_color_mult = 0.6
+        edge_width = 0.05
+        edge_sharpness = 0
+        edge_alpha = 1
+        edge_color_mult = 0.7
+        before_lighting_blend = 0
+        after_lighting_blend = 0.95
+    }
+}

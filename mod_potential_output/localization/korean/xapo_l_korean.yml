@@ -1,0 +1,13 @@
+﻿l_korean:
+ xapo_potential_output:0 "잠재 생산"
+ xapo_potential_output_desc:0 "미개발 자원을 포함해 각 백작령에서 생산 가능한 교역품을 표시합니다. 패널에서 지도 아이콘을 필터링할 수 있습니다."
+ xapo_all:0 "모두 선택"
+ xapo_none:0 "선택 해제"
+ xapo_basic:0 "기본 교역품"
+ xapo_other:0 "교역품"
+ xapo_misc:0 "기타"
+ xapo_hint:0 "교역품이나 분류를 눌러 표시를 전환합니다. 여러 교역품을 동시에 선택할 수 있습니다."
+ xapo_empty:0 "선택한 교역품 없음"
+ xapo_scope:0 "미개발 자원을 포함합니다. 아이콘은 생산 가능한 품목을 나타내며 생산량을 뜻하지 않습니다."
+ xapo_panel:0 "교역품 필터 열기 / 닫기"
+ xapo_exit:0 "이전 지도 모드로 돌아가기"

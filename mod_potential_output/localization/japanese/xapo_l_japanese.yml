@@ -1,0 +1,13 @@
+﻿l_japanese:
+ xapo_potential_output:0 "潜在生産"
+ xapo_potential_output_desc:0 "未開発の資源を含め、各伯爵領で生産可能な交易品を表示します。パネルで地図のアイコンを絞り込めます。"
+ xapo_all:0 "すべて選択"
+ xapo_none:0 "選択解除"
+ xapo_basic:0 "基本交易品"
+ xapo_other:0 "交易品"
+ xapo_misc:0 "その他"
+ xapo_hint:0 "交易品または分類をクリックして表示を切り替えます。複数選択した品目を同時に表示します。"
+ xapo_empty:0 "交易品が未選択です"
+ xapo_scope:0 "未開発の資源も含みます。アイコンは生産可能な品目を示し、生産量ではありません。"
+ xapo_panel:0 "交易品フィルターを開閉"
+ xapo_exit:0 "前の地図モードに戻る"

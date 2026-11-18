@@ -1,0 +1,12 @@
+{
+  "schema": "xapo-native-sources-v1",
+  "game_version": "1.21.0",
+  "steam_build_id": "26757580",
+  "native_text_sha256": {
+    "gui/map_icon_layer.gui": "34eb82ed9da04413c0978a87620479f3c90f54ae4cac2ce7c4ecaf7219656f12",
+    "gfx/map/map_modes/map_modes.txt": "81fc365ff94c35332241705dfb79e0ffdd6a085416f8fb3947aad6be2db473c9",
+    "common/trade/trade_good_types/basic_trade_goods.txt": "88673b0296716c8bea0afac4bc2559a0c190c4df914cd48fd71ff8c52e655d1b",
+    "common/trade/trade_good_categories/01_need_type_trade_good_categories.txt": "2bc3be7a7757094644ba57229106450e3691e62237a6abd221ef48afdd7221ba",
+    "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt": "d091714c8acc34c6f2d814109643eb426f33e4364b4e16f6e4d3659ac3b25ad1"
+  }
+}

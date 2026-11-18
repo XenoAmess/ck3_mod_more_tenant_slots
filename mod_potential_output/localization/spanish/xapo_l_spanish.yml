@@ -1,0 +1,13 @@
+﻿l_spanish:
+ xapo_potential_output:0 "Producción potencial"
+ xapo_potential_output_desc:0 "Muestra los bienes que puede producir cada condado, incluidos los recursos sin explotar. El panel filtra los iconos del mapa."
+ xapo_all:0 "Seleccionar todo"
+ xapo_none:0 "Limpiar"
+ xapo_basic:0 "Bienes básicos"
+ xapo_other:0 "Bienes comerciales"
+ xapo_misc:0 "Otros"
+ xapo_hint:0 "Pulsa un bien o una categoría para cambiar el filtro. Puedes mostrar varios bienes a la vez."
+ xapo_empty:0 "Ningún bien seleccionado"
+ xapo_scope:0 "Incluye recursos sin explotar. Los iconos indican bienes posibles, no cantidades de producción."
+ xapo_panel:0 "Mostrar / ocultar el filtro"
+ xapo_exit:0 "Volver al modo de mapa anterior"

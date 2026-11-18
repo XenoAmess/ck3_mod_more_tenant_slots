@@ -1,0 +1,13 @@
+﻿l_english:
+ xapo_potential_output:0 "Potential Output"
+ xapo_potential_output_desc:0 "Show each county's potential trade goods, including goods not yet produced. Use the goods panel to filter the map icons."
+ xapo_all:0 "Select all"
+ xapo_none:0 "Clear"
+ xapo_basic:0 "Basic trade goods"
+ xapo_other:0 "Trade goods"
+ xapo_misc:0 "Other"
+ xapo_hint:0 "Click a good to show or hide it. Click a category to toggle its goods. Multiple selections show their union."
+ xapo_empty:0 "No goods selected"
+ xapo_scope:0 "Potential goods, including undeveloped resources. Icons show possible goods, not production quantities."
+ xapo_panel:0 "Show / hide goods filter"
+ xapo_exit:0 "Return to the previous map mode"

@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+ xapo_potential_output:0 "潜在产出"
+ xapo_potential_output_desc:0 "展示每个伯爵领可生产的贸易商品，包含尚未投产的商品。通过产物面板筛选地图图标。"
+ xapo_all:0 "全选"
+ xapo_none:0 "清空"
+ xapo_basic:0 "基础贸易商品"
+ xapo_other:0 "贸易商品"
+ xapo_misc:0 "杂项"
+ xapo_hint:0 "点击商品开启或关闭展示；点击分类切换整组商品。多选时展示所选商品的并集。"
+ xapo_empty:0 "尚未选择产物"
+ xapo_scope:0 "包含尚未开发的资源。图标表示可生产的商品种类，不代表产量。"
+ xapo_panel:0 "展开／收起产物筛选"
+ xapo_exit:0 "返回上一个地图视角"
