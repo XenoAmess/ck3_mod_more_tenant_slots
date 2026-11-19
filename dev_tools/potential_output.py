@@ -404,14 +404,19 @@ type xapo_goods_panel = widget {{
                 widget = {{
                     size = {{ 4 4 }}
                     alwaystransparent = yes
-                    state = {{
-                        name = "xapo_refresh_scores"
-                        trigger_when = "[And( EqualTo_string( ActivityPlanner.GetActivityType.GetKey, '{ACTIVITY}' ), EqualTo_int32( ActivityOption.GetIndexInCategory, Select_int32( GetVariableSystem.Exists( 'xapo_refresh' ), '(int32)1', '(int32)0' ) ) )]"
-                        duration = 0.3
-                        position_x = 1
-                        on_finish = "[ActivityPlanner.OpenSpecialOptionSelection]"
-                        on_finish = "[ActivityPlanner.SelectOption( ActivityOption.Self )]"
-                        on_finish = "[ActivityPlanner.StartLocationPicking]"
+                    # Animate a free child; the hbox owns its item's position.
+                    widget = {{
+                        size = {{ 2 2 }}
+                        alwaystransparent = yes
+                        state = {{
+                            name = "xapo_refresh_scores"
+                            trigger_when = "[And( EqualTo_string( ActivityPlanner.GetActivityType.GetKey, '{ACTIVITY}' ), EqualTo_int32( ActivityOption.GetIndexInCategory, Select_int32( GetVariableSystem.Exists( 'xapo_refresh' ), '(int32)1', '(int32)0' ) ) )]"
+                            duration = 0.3
+                            position_x = 1
+                            on_finish = "[ActivityPlanner.OpenSpecialOptionSelection]"
+                            on_finish = "[ActivityPlanner.SelectOption( ActivityOption.Self )]"
+                            on_finish = "[ActivityPlanner.StartLocationPicking]"
+                        }}
                     }}
                 }}
             }}
