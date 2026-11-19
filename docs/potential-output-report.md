@@ -40,3 +40,11 @@
 离线测试通过显式环境 `XAPO_FRAMEWORK_DIR`、`XAPO_GAME_DIR` 选择输入，运行 `-m unittest discover -s dev_tools -p test_potential_output.py -v`。公共实机入口按 [验收计划](potential-output-acceptance-plan.md)；本产品不自建第二套 runner。
 
 归属决定：商品规则、生成器、命名空间、兼容边界及具体验收证据只服务本产品，留本仓库；解析、投影、安装识别、日志和确定性封包复用框架。通用地图图标分配与 GUI 接口的富化须等实机查明后再落成可复用知识，当前不把候选写成通用通过。
+
+## R0001：真实加载，业务 RED
+
+公共 GUI-only 生命周期，简中新局、1066.9.15维塔莱·法列罗，独立 profile，仅本产品。新视角与面板确实显示；远景和近景未看到县产物图标，核心需求未通过。日志另发现布局容器内的 `parentanchor` 与无效 `#small` 格式标签。原件与来源见 [R0001 精简证据](evidence/potential-output-R0001.json)。
+
+通过官方调试控制台生成本构建 `script_docs` 和 `dump_data_types`，用来核对数据接口；原件只留隔离 profile，不搬入框架或产品。新发现 `GetTradeGoodType(key)` 全局 getter 和 `TradeGoodType.GetTextIconNoFormat` 确实注册，可据此使用不依赖语言的共同筛选键。数据类型注册仅证明接口存在，不证明地图图标已正确分配。
+
+本轮实际保存12,319,604字节私有存档，原生退出桌面，公共 runner 正常结束；keeper 与 screen 释放已读回。无业务签核，共享 verify 返回非零，保留 RED；进程正常结束不代表功能通过。下一包修复布局、筛选键与地图图标路径后重验。归属：具体失败与产品修复留本仓；可复用的原生 GUI 接口研究在查明并验证后再富化框架。

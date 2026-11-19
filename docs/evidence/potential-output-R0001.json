@@ -1,0 +1,42 @@
+{
+  "schema": "xapo-live-evidence-v1",
+  "machine_id": "pc-20260924rtuf-f11af23c08",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0001",
+  "source_commit": "f7f365966759f72b6b0f69fa95aceff33d2f0cf1",
+  "game": {
+    "version": "1.21.0",
+    "steam_build_id": "26757580",
+    "exe_sha256": "bb3fef106240e95ecdb6f1532982e89e9432c92a99d33db623521572f06e6f79"
+  },
+  "result": "RED",
+  "actual_product_loaded": true,
+  "entry_and_panel_visible": true,
+  "county_potential_icons": "not observed at overview or close zoom",
+  "engine_errors": [
+    "Widget cannot have a position in a layout",
+    "Unknown formatting tag small"
+  ],
+  "normal_exit": {
+    "at_utc": "2026-11-19T00:12:10.215320+00:00",
+    "pid": 15584,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "keeper": {
+    "schema": "xar.promo.screen-lease-keeper/v1",
+    "task_id": "xapo-pc-20260924rtuf-f11af23c08--potential-output--R0001",
+    "last_sequence": 1483,
+    "failure": null,
+    "thread_exited": true,
+    "journal": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0001\\lease-journal.jsonl"
+  },
+  "screen_release_sequence": 1484,
+  "private_save_created": true,
+  "raw_evidence_location": "ignored artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0001",
+  "no_workshop_publication": true
+}
