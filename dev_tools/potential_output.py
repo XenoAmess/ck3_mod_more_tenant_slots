@@ -51,22 +51,6 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
     body_start = next(b.end for b in blocks(planner_old) if b.key == 'state' and re.match(r'\s*name\s*=\s*_hide\b', planner_old[b.opening + 1:b.end]))
     planner_header = planner_old[:body_start].replace('using = Animation_FadeOut_Quick', 'using = Animation_FadeOut_Quick\n        on_start = "[GetScriptedGui( \'xapo_reset_filters\' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"', 1)
     planner_new = planner_header + f'''
-    hbox = {{
-        size = {{ 0 0 }}
-        datamodel = "[ActivityType.GetSpecialOptionCategory.GetOptions]"
-        item = {{
-            widget = {{
-                size = {{ 0 0 }}
-                alpha = 0
-                state = {{
-                    name = "xapo_refresh_scores"
-                    trigger_when = "[And( EqualTo_string( ActivityType.GetKey, '{ACTIVITY}' ), EqualTo_int32( ActivityOption.GetIndexInCategory, Select_int32( GetVariableSystem.Exists( 'xapo_refresh' ), '(int32)1', '(int32)0' ) ) )]"
-                    on_start = "[ActivityPlanner.SelectOption( ActivityOption.Self )]"
-                    on_start = "[ActivityPlanner.StartLocationPicking]"
-                }}
-            }}
-        }}
-    }}
     xapo_goods_panel = {{}}
     xapo_view_controls = {{}}
     widget = {{
@@ -411,6 +395,27 @@ type xapo_goods_panel = widget {{
         position = {{ -200 -112 }}
         size = {{ 160 36 }}
         visible = "[{ACTIVE}]"
+        hbox = {{
+            size = {{ 8 4 }}
+            alwaystransparent = yes
+            datacontext = "[GetActivityType( '{ACTIVITY}' ).GetOptionCategoryByKey( 'special_type' )]"
+            datamodel = "[ActivityOptionCategory.GetOptions]"
+            item = {{
+                widget = {{
+                    size = {{ 4 4 }}
+                    alwaystransparent = yes
+                    state = {{
+                        name = "xapo_refresh_scores"
+                        trigger_when = "[And( EqualTo_string( ActivityPlanner.GetActivityType.GetKey, '{ACTIVITY}' ), EqualTo_int32( ActivityOption.GetIndexInCategory, Select_int32( GetVariableSystem.Exists( 'xapo_refresh' ), '(int32)1', '(int32)0' ) ) )]"
+                        duration = 0.3
+                        position_x = 1
+                        on_finish = "[ActivityPlanner.OpenSpecialOptionSelection]"
+                        on_finish = "[ActivityPlanner.SelectOption( ActivityOption.Self )]"
+                        on_finish = "[ActivityPlanner.StartLocationPicking]"
+                    }}
+                }}
+            }}
+        }}
         button_standard = {{
             size = {{ 120 36 }}
             text = "xapo_potential_output"
@@ -461,48 +466,6 @@ type xapo_goods_panel = widget {{
         }}
     }}
 }}
-"""
-
-
-def map_mode() -> str:
-    # Values taken from the reviewed vanilla county map. Using a new key leaves
-    # all native map modes, trade selections and economy state untouched.
-    return """# Independent county view; potential goods are native GUI data.
-xapo_potential_output = {
-    color_mode = activity_planner
-    small_map_names = dejure_counties
-    large_map_names = dejure_counties
-    selection = holding
-    select_holdings_on_close_zoom = yes
-    fill_in_impassable = no
-    barony_description = DEJURE_COUNTIES_MAPMODE_TOOLTIP
-    gradient_parameters = {
-        zoom_step = 2
-        gradient_alpha_inside = 0.35
-        gradient_alpha_outside = 0.6
-        gradient_width = 0.4
-        gradient_color_mult = 0.6
-        edge_width = 0.04
-        edge_sharpness = 0.015
-        edge_alpha = 1
-        edge_color_mult = 0.65
-        before_lighting_blend = 0.5
-        after_lighting_blend = 0.95
-    }
-    gradient_parameters = {
-        zoom_step = 21
-        gradient_alpha_inside = 0.6
-        gradient_alpha_outside = 1
-        gradient_width = 0.4
-        gradient_color_mult = 0.6
-        edge_width = 0.05
-        edge_sharpness = 0
-        edge_alpha = 1
-        edge_color_mult = 0.7
-        before_lighting_blend = 0
-        after_lighting_blend = 0.95
-    }
-}
 """
 
 
@@ -569,7 +532,6 @@ def generated(game: Path) -> dict[str, bytes]:
         "gui/xapo_potential_output.gui": panel(goods, basic, categories),
         "gui/scripted_widgets/xapo_potential_output.txt":
             "gui/xapo_potential_output.gui = xapo_map_launcher\n",
-        "gfx/map/map_modes/xapo_potential_output.txt": map_mode(),
         "common/activities/activity_types/xapo_potential_output.txt": activity_type(goods),
         "common/script_values/xapo_potential_output.txt": count_value(goods),
         "common/scripted_guis/xapo_potential_output.txt": filter_effects(goods),

@@ -9,7 +9,7 @@
         {
           "id": "map-filters",
           "budgets": {
-            "timeout": 21600,
+            "timeout": 43200,
             "quit_timeout": 90,
             "poll_interval": 1,
             "max_prepare_bytes": 536870912
@@ -35,7 +35,7 @@
         {
           "id": "existing-save",
           "budgets": {
-            "timeout": 3600,
+            "timeout": 7200,
             "quit_timeout": 90,
             "poll_interval": 1,
             "max_prepare_bytes": 536870912

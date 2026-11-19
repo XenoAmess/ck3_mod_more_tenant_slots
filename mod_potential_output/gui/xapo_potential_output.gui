@@ -1359,6 +1359,27 @@ type xapo_goods_panel = widget {
         position = { -200 -112 }
         size = { 160 36 }
         visible = "[And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
+        hbox = {
+            size = { 8 4 }
+            alwaystransparent = yes
+            datacontext = "[GetActivityType( 'activity_xapo_potential_output' ).GetOptionCategoryByKey( 'special_type' )]"
+            datamodel = "[ActivityOptionCategory.GetOptions]"
+            item = {
+                widget = {
+                    size = { 4 4 }
+                    alwaystransparent = yes
+                    state = {
+                        name = "xapo_refresh_scores"
+                        trigger_when = "[And( EqualTo_string( ActivityPlanner.GetActivityType.GetKey, 'activity_xapo_potential_output' ), EqualTo_int32( ActivityOption.GetIndexInCategory, Select_int32( GetVariableSystem.Exists( 'xapo_refresh' ), '(int32)1', '(int32)0' ) ) )]"
+                        duration = 0.3
+                        position_x = 1
+                        on_finish = "[ActivityPlanner.OpenSpecialOptionSelection]"
+                        on_finish = "[ActivityPlanner.SelectOption( ActivityOption.Self )]"
+                        on_finish = "[ActivityPlanner.StartLocationPicking]"
+                    }
+                }
+            }
+        }
         button_standard = {
             size = { 120 36 }
             text = "xapo_potential_output"
