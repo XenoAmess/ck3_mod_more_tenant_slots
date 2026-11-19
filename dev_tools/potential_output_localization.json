@@ -50,7 +50,7 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "所选潜力种类数：0 为灰色，种类越多颜色越深。放大地图查看产物图标。",
+    "xapo_legend": "地块数字表示所选潜力种类数。灰色表示没有匹配，种类越多绿色越深。放大地图查看产物图标。",
     "xapo_show_map": "显示地图",
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
