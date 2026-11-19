@@ -1,0 +1,92 @@
+{
+  "status": "native-source-definition-reviewed",
+  "game_version": "1.21.0",
+  "live_mod_verified": false,
+  "all_goods": 44,
+  "potential_goods": 35,
+  "goods_without_county_potential": [
+    "trade_good_beer",
+    "trade_good_books_paper",
+    "trade_good_cheese",
+    "trade_good_glass",
+    "trade_good_jewelry",
+    "trade_good_lacquerware",
+    "trade_good_leather",
+    "trade_good_meat",
+    "trade_good_textiles"
+  ],
+  "configured_counties": 3549,
+  "potential_kind_count_distribution": {
+    "2": 189,
+    "3": 743,
+    "4": 1621,
+    "5": 993,
+    "6": 3
+  },
+  "county_examples": {
+    "c_venezia": [
+      "trade_good_dyes",
+      "trade_good_fish",
+      "trade_good_flax",
+      "trade_good_honey",
+      "trade_good_salt"
+    ],
+    "c_roma": [
+      "trade_good_fish",
+      "trade_good_flax",
+      "trade_good_grain",
+      "trade_good_oil"
+    ],
+    "c_firenze": [
+      "trade_good_ceramics",
+      "trade_good_flax",
+      "trade_good_horses",
+      "trade_good_oil",
+      "trade_good_wine"
+    ]
+  },
+  "native_sources": [
+    {
+      "relative_to": "configured-game/game",
+      "path": "localization/simp_chinese/dlc/gdp/gdp_game_concepts_l_simp_chinese.yml",
+      "bytes": 67482,
+      "sha256": "fe66b84555193608299e7d0ff72ca94249978eb4b05113aae195e5ec90ab3b9e"
+    },
+    {
+      "relative_to": "configured-game/game",
+      "path": "common/trade/county_potential_trade_goods/county_potential_trade_goods.info",
+      "bytes": 501,
+      "sha256": "8d5e99e360fea06149507317a98d78f74d9e91c8a46b45d0f7c35460f1401796"
+    },
+    {
+      "relative_to": "configured-game/game",
+      "path": "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt",
+      "bytes": 150030,
+      "sha256": "42b051f984d3efb8aa26587ca271dfc938cee0a82afa1746cdb70b7c4803a586"
+    },
+    {
+      "relative_to": "configured-game/game",
+      "path": "common/trade/trade_good_types/basic_trade_goods.txt",
+      "bytes": 3672,
+      "sha256": "c6f21120415c303bfb6e16675d35010ec3fd26d1216ef64ba52a9b93c779a9ed"
+    },
+    {
+      "relative_to": "configured-game/game",
+      "path": "gui/window_county_view.gui",
+      "bytes": 251908,
+      "sha256": "e9202f91a2273c524bde1167c70594529b2ce7d3ca025a01258609ba059bd1f8"
+    },
+    {
+      "relative_to": "configured-game/game",
+      "path": "common/districts/resource_districts.txt",
+      "bytes": 47553,
+      "sha256": "583eada9210a3a244330e393d9ce8614e8d220b5bb7da6e670c413027ce2cd1c"
+    },
+    {
+      "relative_to": "configured-game/game",
+      "path": "localization/simp_chinese/map/map_modes_l_simp_chinese.yml",
+      "bytes": 4510,
+      "sha256": "f020c8444bf81bd6d7673706fbecdf26c86f7b21245d2ba7c778e717a18885b4"
+    }
+  ]
+}
