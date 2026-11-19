@@ -1,6 +1,5 @@
 ﻿window = {
 	name = "activity_planner"
-	visible = "[Not( EqualTo_string( ActivityPlanner.GetActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
 	size = { 100% 100% }
 	movable = no
 	layer = middle
@@ -11,6 +10,14 @@
 	datacontext = "[ActivityPlanner.AccessAsTravelPlanner]"
 	datacontext = "[TravelPlanner.GetTravelPlanData]"
 	datacontext = "[GetVariableSystem]"
+
+    xapo_goods_panel = {}
+    xapo_view_controls = {}
+    widget = {
+        name = "xapo_native_planner_content"
+        size = { 100% 100% }
+        alwaystransparent = yes
+        visible = "[Not( EqualTo_string( ActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
 
 	state = {
 		name = _show
@@ -153,6 +160,8 @@
 		position = { 530 -10 }
 		visible = "[And( Not( IsPauseMenuShown ), Not(ReleaseMode) )]"
 	}
+
+    }
 }
 
 types ActivityPlannerTypes

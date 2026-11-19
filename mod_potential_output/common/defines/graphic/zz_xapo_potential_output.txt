@@ -1,0 +1,5 @@
+﻿# Shared activity score presentation palette; no gameplay values.
+NMapModes = {
+    ACTIVITY_PLANNER_SCORE_LOW = { 0.78 0.80 0.82 1 }
+    ACTIVITY_PLANNER_SCORE_HIGH = { 0.04 0.22 0.10 1 }
+}

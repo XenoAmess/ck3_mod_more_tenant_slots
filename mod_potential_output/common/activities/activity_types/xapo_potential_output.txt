@@ -7,51 +7,19 @@ activity_xapo_potential_output = {
     is_valid = { always = no }
     province_filter = all
     ai_province_filter = capital
-    is_location_valid = { is_county_capital = yes }
+    is_location_valid = { exists = county }
     province_score = {
         value = 0
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_grain } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_millet } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_rice } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_fish } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_fruit } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_oil } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_honey } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_tea } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_horses } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_cattle } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_silver } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_gold } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_iron } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_copper } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_wine } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_gems } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_amber } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_ivory } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_jade } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_wood } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_hemp } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_wool } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_cotton } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_flax } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_furs } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_sugar } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_spices } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_ceramics } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_silk } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_incense } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_medicaments } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_stone } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_salt } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_alum } } add = 1 }
-        if = { limit = { county = { has_potential_for_trade_good = trade_good_type:trade_good_dyes } } add = 1 }
+        if = { limit = { exists = county } county = { add = xapo_selected_potential_count } }
     }
+    max_guests = 0
+    host_intents = { default = survey_overseer_intent intents = { survey_overseer_intent } }
+    guest_intents = { default = survey_learning_intent_guest intents = { survey_learning_intent_guest } }
+    header_background = "gfx/interface/illustrations/event_scenes/bp2_courtyard.dds"
     phases = {
-        xapo_display_phase = {
+        phase_surveying = {
             is_predefined = yes
-            can_pick = { always = yes }
             is_valid = { always = no }
-            duration = { days = 1 }
         }
     }
     ai_check_interval_by_tier = { barony = 0 county = 0 duchy = 0 kingdom = 0 empire = 0 hegemony = 0 }

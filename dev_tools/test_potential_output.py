@@ -42,10 +42,13 @@ class GuiActions:
 
     def __init__(self) -> None:
         self.values: dict[str, str] = {}
+        self.planning: dict[str, float] = {}
 
     def evaluate(self, expression: str) -> str | bool:
         expression = expression.strip()
         if expression.startswith("'") and expression.endswith("'"):
+            if expression.startswith("'(CFixedPoint)"):
+                return float(expression[len("'(CFixedPoint)"):-1])
             return expression[1:-1]
         good = re.fullmatch(r"GetTradeGoodType\(\s*'([^']+)'\s*\)\.GetTextIconNoFormat", expression)
         if good:
@@ -72,6 +75,13 @@ class GuiActions:
             return bool(args[0] and args[1])
         if name == "Select_CString":
             return args[1] if args[0] else args[2]
+        if name == "Select_CFixedPoint":
+            return args[1] if args[0] else args[2]
+        if name == "MakeScopeValue":
+            return args[0]
+        if name == "ActivityPlanner.AddOrSetOnCreationObject":
+            self.planning[str(args[0])] = float(args[1])
+            return True
         raise AssertionError(f"unsupported GUI function: {name}")
 
     def click(self, gui: str, key: str, kind: str = "button_standard") -> None:
@@ -86,6 +96,8 @@ class GuiActions:
             self.evaluate(action)
 
     def visible(self, good: str) -> bool:
+        if f"xapo_hidden_{good}" in self.planning:
+            assert (self.planning[f"xapo_hidden_{good}"] == 1) == (self.values.get(f"xapo_hidden_@{good}!") == "yes")
         return self.values.get(f"xapo_hidden_@{good}!") != "yes"
 
 
@@ -187,8 +199,10 @@ class PotentialOutputTests(unittest.TestCase):
         self.assertNotIn("remote_file_id", descriptor)
         self.assertNotIn("replace_path", descriptor)
         self.assertFalse(any(p.startswith("events/") for p in self.files))
-        self.assertEqual([p for p in self.files if p.startswith("common/")],
-                         ["common/activities/activity_types/xapo_potential_output.txt"])
+        self.assertEqual({p for p in self.files if p.startswith("common/")},
+                         {"common/activities/activity_types/xapo_potential_output.txt",
+                          "common/script_values/xapo_potential_output.txt",
+                          "common/defines/graphic/zz_xapo_potential_output.txt"})
         activity = self.files["common/activities/activity_types/xapo_potential_output.txt"].decode("utf-8-sig")
         self.assertIn("can_start = { always = no }", activity)
         self.assertIn("is_shown = { always = no }", activity)

@@ -28,13 +28,11 @@ NATIVE_FILES = (
     "common/trade/trade_good_categories/01_need_type_trade_good_categories.txt",
     "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt",
     "gui/window_activity_planner.gui",
+    "gui/window_activity_list.gui",
+    "gui/window_activity_list.gui",
 )
-ANCHOR = '\t### ALL ITEMS\n'
-INSERTION = ('\t# XAPO_BEGIN: additive county potential icons\n'
-             '\txapo_county_potential_icons = {}\n'
-             '\t# XAPO_END\n\n')
 ACTIVITY = "activity_xapo_potential_output"
-ACTIVE = f"IsGameViewDataShown( 'activity_planner', GetActivityType( '{ACTIVITY}' ) )"
+ACTIVE = f"And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, '{ACTIVITY}' ) )"
 
 
 def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
@@ -47,9 +45,30 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
     added = ('\txapo_county_potential_icons = {}\n\n' + anchor +
              f'\t\tvisible = "[Not( EqualTo_string( ActivityType.GetKey, \'{ACTIVITY}\' ) )]"\n')
     new = old.replace(anchor, added, 1)
-    planner_anchor = '\tname = "activity_planner"\n'
-    planner_added = planner_anchor + f'\tvisible = "[Not( EqualTo_string( ActivityPlanner.GetActivityType.GetKey, \'{ACTIVITY}\' ) )]"\n'
-    return {NATIVE_FILES[0]: [(old, new)], NATIVE_FILES[5]: [(planner_anchor, planner_added)]}
+    planner = native_text(game, NATIVE_FILES[5])
+    planner_block = named_block(planner, "window", "activity_planner")
+    planner_old = planner[planner_block.start:planner_block.end]
+    body_start = planner_old.index('\n\tstate = {')
+    planner_new = planner_old[:body_start] + f'''
+    xapo_goods_panel = {{}}
+    xapo_view_controls = {{}}
+    widget = {{
+        name = "xapo_native_planner_content"
+        size = {{ 100% 100% }}
+        alwaystransparent = yes
+        visible = "[Not( EqualTo_string( ActivityType.GetKey, '{ACTIVITY}' ) )]"
+''' + planner_old[body_start:-1] + '\n    }\n}'
+    host_anchor = '\tname = "activity_list_detail_host"\n'
+    host_added = host_anchor + f'''
+    alpha = "[Select_float( EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' ), '(float)0', '(float)1' )]"
+    state = {{
+        name = "xapo_open_display"
+        trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' )]"
+        on_start = "[ActivityListDetailHostView.Confirm]"
+    }}
+'''
+    return {NATIVE_FILES[0]: [(old, new)], NATIVE_FILES[5]: [(planner_old, planner_new)],
+            NATIVE_FILES[6]: [(host_anchor, host_added)]}
 
 
 def framework_tools(framework: Path) -> None:
@@ -127,9 +146,22 @@ def conjunction(expressions: list[str]) -> str:
 
 def set_goods(goods: list[str], value: str) -> str:
     return "\n".join(
-        f'\t\t\t\t\tonclick = "[GetVariableSystem.Set( {hidden_key(good)}, {value} )]"'
+        f'\t\t\t\t\tonclick = "[GetVariableSystem.Set( {hidden_key(good)}, {value} )]"\n'
+        f'\t\t\t\t\tonclick = "[{sync_good(good)}]"'
         for good in goods
     )
+
+
+def sync_good(good: str) -> str:
+    return (f"ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_{good}', "
+            f"MakeScopeValue( Select_CFixedPoint( {is_hidden(good)}, '(CFixedPoint)1', '(CFixedPoint)0' ) ) )")
+
+
+def count_context(goods: list[str]) -> str:
+    return "GuiScope.SetRoot( County.GetTitle.MakeScope )" + "".join(
+        f".AddScope( 'xapo_hidden_{good}', MakeScopeValue( Select_CFixedPoint( {is_hidden(good)}, '(CFixedPoint)1', '(CFixedPoint)0' ) ) )"
+        for good in goods
+    ) + ".End"
 
 
 def good_button(good: str) -> str:
@@ -141,6 +173,7 @@ def good_button(good: str) -> str:
                 using = tooltip_ne
                 down = "[Not( {is_hidden(good)} )]"
                 onclick = "[GetVariableSystem.Set( {hidden_key(good)}, Select_CString( {is_hidden(good)}, 'no', 'yes' ) )]"
+                onclick = "[{sync_good(good)}]"
                 icon = {{
                     size = {{ 32 32 }}
                     parentanchor = center
@@ -215,7 +248,7 @@ window = {{
         tooltip = "xapo_potential_output_desc"
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
-        onclick = "[OpenGameViewData( 'activity_planner', GetActivityType( '{ACTIVITY}' ) )]"
+        onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ) )]"
     }}
     button_standard = {{
         name = "xapo_toggle_panel"
@@ -228,7 +261,8 @@ window = {{
     }}
 }}
 
-window = {{
+types XapoPotentialOutput {{
+type xapo_goods_panel = widget {{
     name = "xapo_goods_panel"
     layer = middle
     parentanchor = top|right
@@ -314,10 +348,39 @@ window = {{
             default_format = "#weak"
             using = Font_Size_Small
         }}
+        text_multi = {{
+            text = "xapo_legend"
+            max_width = 298
+            autoresize = yes
+            using = Font_Size_Small
+        }}
     }}
 }}
 
-types XapoPotentialOutput {{
+    type xapo_view_controls = widget {{
+        parentanchor = bottom|right
+        position = {{ -200 -112 }}
+        size = {{ 160 36 }}
+        visible = "[{ACTIVE}]"
+        state = {{
+            name = "xapo_seed_filters"
+            trigger_when = "[{ACTIVE}]"
+{chr(10).join(f'            on_start = "[{sync_good(good)}]"' for good in goods)}
+        }}
+        button_standard = {{
+            size = {{ 120 36 }}
+            text = "xapo_potential_output"
+            onclick = "[GetVariableSystem.Toggle( 'xapo_panel_collapsed' )]"
+        }}
+        button_close = {{
+            position = {{ 126 4 }}
+            size = {{ 28 28 }}
+            shortcut = "close_window"
+            tooltip = "xapo_exit"
+            onclick = "[CloseGameView( 'activity_planner' )]"
+            onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
+        }}
+    }}
     type xapo_county_potential_icons = flowcontainer {{
         name = "xapo_county_potential_icons"
         parentanchor = center
@@ -325,11 +388,12 @@ types XapoPotentialOutput {{
         direction = vertical
         allow_outside = yes
         ignoreinvisible = yes
-        visible = "[EqualTo_string( ActivityPlannerMapIcon.GetActivityType.GetKey, '{ACTIVITY}' )]"
+        visible = "[And( EqualTo_string( ActivityPlannerMapIcon.GetActivityType.GetKey, '{ACTIVITY}' ), And( LessThan_int32( GetZoomLevel, '(int32)14' ), ObjectsEqual( ActivityPlannerMapIcon.GetProvince, ActivityPlannerMapIcon.GetProvince.GetCountyCapitalProvince ) ) )]"
         datacontext = "[ActivityPlannerMapIcon.GetProvince.GetCounty]"
+        datacontext = "[{count_context(goods)}]"
 
         text_single = {{
-            text = "[County.GetTitle.GetNameNoTooltip] ([GetDataModelSize( County.GetPotentialTradeGoodTypes )])"
+            raw_text = "[County.GetTitle.GetNameNoTooltip] ([TopScope.ScriptValue( 'xapo_selected_potential_count' )|0])"
             using = Font_Size_Small
         }}
 
@@ -361,7 +425,7 @@ def map_mode() -> str:
     # all native map modes, trade selections and economy state untouched.
     return """# Independent county view; potential goods are native GUI data.
 xapo_potential_output = {
-    color_mode = economy_buildings
+    color_mode = activity_planner
     small_map_names = dejure_counties
     large_map_names = dejure_counties
     selection = holding
@@ -399,10 +463,6 @@ xapo_potential_output = {
 
 
 def activity_type(goods: list[str]) -> str:
-    score = "\n".join(
-        f"        if = {{ limit = {{ county = {{ has_potential_for_trade_good = trade_good_type:{good} }} }} add = 1 }}"
-        for good in goods
-    )
     return f"""# Display-only planner. Never exposed as a hostable activity.
 {ACTIVITY} = {{
     is_shown = {{ always = no }}
@@ -412,23 +472,32 @@ def activity_type(goods: list[str]) -> str:
     is_valid = {{ always = no }}
     province_filter = all
     ai_province_filter = capital
-    is_location_valid = {{ is_county_capital = yes }}
+    is_location_valid = {{ exists = county }}
     province_score = {{
         value = 0
-{score}
+        if = {{ limit = {{ exists = county }} county = {{ add = xapo_selected_potential_count }} }}
     }}
+    max_guests = 0
+    host_intents = {{ default = survey_overseer_intent intents = {{ survey_overseer_intent }} }}
+    guest_intents = {{ default = survey_learning_intent_guest intents = {{ survey_learning_intent_guest }} }}
+    header_background = "gfx/interface/illustrations/event_scenes/bp2_courtyard.dds"
     phases = {{
-        xapo_display_phase = {{
+        phase_surveying = {{
             is_predefined = yes
-            can_pick = {{ always = yes }}
             is_valid = {{ always = no }}
-            duration = {{ days = 1 }}
         }}
     }}
     ai_check_interval_by_tier = {{ barony = 0 county = 0 duchy = 0 kingdom = 0 empire = 0 hegemony = 0 }}
     ai_will_do = {{ value = 0 }}
 }}
 """
+
+
+def count_value(goods: list[str]) -> str:
+    return "xapo_selected_potential_count = {\n    value = 0\n" + "\n".join(
+        f"    if = {{ limit = {{ has_potential_for_trade_good = trade_good_type:{good} OR = {{ NOT = {{ exists = scope:xapo_hidden_{good} }} scope:xapo_hidden_{good} < 0.5 }} }} add = 1 }}"
+        for good in goods
+    ) + "\n}\n"
 
 
 def generated(game: Path) -> dict[str, bytes]:
@@ -445,14 +514,21 @@ def generated(game: Path) -> dict[str, bytes]:
                            'name="Potential Output (XA)"\n'
                            'supported_version="1.21.*"\n'),
         "gui/map_icon_layer.gui": project(source, sha, projections(game)[NATIVE_FILES[0]]),
-        "gui/window_activity_planner.gui": project(native_text(game, NATIVE_FILES[5]), json.loads(CONTRACT.read_text())["native_text_sha256"][NATIVE_FILES[5]], projections(game)[NATIVE_FILES[5]]),
         "gui/xapo_potential_output.gui": panel(goods, basic, categories),
         "gui/scripted_widgets/xapo_potential_output.txt":
-            "gui/xapo_potential_output.gui = xapo_map_launcher\n"
-            "gui/xapo_potential_output.gui = xapo_goods_panel\n",
+            "gui/xapo_potential_output.gui = xapo_map_launcher\n",
         "gfx/map/map_modes/xapo_potential_output.txt": map_mode(),
         "common/activities/activity_types/xapo_potential_output.txt": activity_type(goods),
+        "common/script_values/xapo_potential_output.txt": count_value(goods),
+        "common/defines/graphic/zz_xapo_potential_output.txt":
+            "# Shared activity score presentation palette; no gameplay values.\n"
+            "NMapModes = {\n"
+            "    ACTIVITY_PLANNER_SCORE_LOW = { 0.78 0.80 0.82 1 }\n"
+            "    ACTIVITY_PLANNER_SCORE_HIGH = { 0.04 0.22 0.10 1 }\n"
+            "}\n",
     }
+    for relative, replacements in projections(game).items():
+        files[relative] = project(native_text(game, relative), json.loads(CONTRACT.read_text())["native_text_sha256"][relative], replacements)
     output = {name: text.encode("utf-8-sig") for name, text in files.items()}
     localizations = json.loads(LOCALIZATION.read_text(encoding="utf-8"))
     for language, entries in localizations.items():

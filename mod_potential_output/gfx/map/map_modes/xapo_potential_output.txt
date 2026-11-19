@@ -1,6 +1,6 @@
 ﻿# Independent county view; potential goods are native GUI data.
 xapo_potential_output = {
-    color_mode = economy_buildings
+    color_mode = activity_planner
     small_map_names = dejure_counties
     large_map_names = dejure_counties
     selection = holding
