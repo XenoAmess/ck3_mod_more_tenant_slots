@@ -143,11 +143,14 @@ def conjunction(expressions: list[str]) -> str:
 
 
 def set_goods(goods: list[str], value: str, sync: bool = True) -> str:
-    return "\n".join(
+    actions = "\n".join(
         f'\t\t\t\t\tonclick = "[GetVariableSystem.Set( {hidden_key(good)}, {value} )]"\n' +
         (f'\t\t\t\t\tonclick = "[{sync_good(good)}]"' if sync else '')
         for good in goods
     )
+    if sync:
+        actions += '\n                    onclick = "[ActivityPlanner.StartLocationPicking]"'
+    return actions
 
 
 def sync_good(good: str) -> str:
@@ -172,6 +175,7 @@ def good_button(good: str) -> str:
                 down = "[Not( {is_hidden(good)} )]"
                 onclick = "[GetVariableSystem.Set( {hidden_key(good)}, Select_CString( {is_hidden(good)}, 'no', 'yes' ) )]"
                 onclick = "[{sync_good(good)}]"
+                onclick = "[ActivityPlanner.StartLocationPicking]"
                 icon = {{
                     size = {{ 32 32 }}
                     parentanchor = center
@@ -235,29 +239,20 @@ window = {{
     position = {{ -184 -112 }}
     size = {{ 140 36 }}
     movable = no
-    visible = "[And( GetPlayer.IsValid, Or( CanChangeMapMode, {ACTIVE} ) )]"
+    visible = "[And( GetPlayer.IsValid, CanChangeMapMode )]"
     alwaystransparent = yes
 
     button_standard = {{
         name = "xapo_open_map"
         size = {{ 100% 100% }}
-        visible = "[Not( {ACTIVE} )]"
         text = "xapo_potential_output"
         tooltip = "xapo_potential_output_desc"
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
 {set_goods(goods, "'no'", sync=False)}
-        onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ) )]"
+        onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ).Self )]"
     }}
-    button_standard = {{
-        name = "xapo_toggle_panel"
-        size = {{ 100% 100% }}
-        visible = "[{ACTIVE}]"
-        down = yes
-        text = "xapo_potential_output"
-        tooltip = "xapo_panel"
-        onclick = "[GetVariableSystem.Toggle( 'xapo_panel_collapsed' )]"
-    }}
+
 }}
 
 types XapoPotentialOutput {{
@@ -402,7 +397,7 @@ type xapo_goods_panel = widget {{
         direction = vertical
         allow_outside = yes
         ignoreinvisible = yes
-        visible = "[And( EqualTo_string( ActivityPlannerMapIcon.GetActivityType.GetKey, '{ACTIVITY}' ), And( LessThan_int32( GetZoomLevel, '(int32)14' ), ObjectsEqual( ActivityPlannerMapIcon.GetProvince, ActivityPlannerMapIcon.GetProvince.GetCountyCapitalProvince ) ) )]"
+        visible = "[And( EqualTo_string( ActivityPlannerMapIcon.GetActivityType.GetKey, '{ACTIVITY}' ), And( LessThan_int32( GetZoomLevel, '(int32)10' ), ObjectsEqual( ActivityPlannerMapIcon.GetProvince, ActivityPlannerMapIcon.GetProvince.GetCountyCapitalProvince ) ) )]"
         datacontext = "[ActivityPlannerMapIcon.GetProvince.GetCounty]"
         datacontext = "[{count_context(goods)}]"
 

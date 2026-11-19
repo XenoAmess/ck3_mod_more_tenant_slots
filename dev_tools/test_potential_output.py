@@ -50,6 +50,8 @@ class GuiActions:
             if expression.startswith("'(CFixedPoint)"):
                 return float(expression[len("'(CFixedPoint)"):-1])
             return expression[1:-1]
+        if expression == "ActivityPlanner.StartLocationPicking":
+            return True
         good = re.fullmatch(r"GetTradeGoodType\(\s*'([^']+)'\s*\)\.GetTextIconNoFormat", expression)
         if good:
             return f"@{good[1]}!"
@@ -198,6 +200,10 @@ class PotentialOutputTests(unittest.TestCase):
             ancestors = [block for block in blocks(text) if block.opening < state.start < block.end]
             self.assertEqual(ancestors, [root])
         self.assertNotIn("xapo_seed_filters", self.gui)
+        launcher = named_block(self.gui, "window", "xapo_map_launcher")
+        launcher_gui = self.gui[launcher.start:launcher.end]
+        self.assertNotIn("ActivityPlanner.", launcher_gui)
+        self.assertNotIn("xapo_toggle_panel", launcher_gui)
 
     def test_build_is_deterministic_and_has_independent_identity(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
