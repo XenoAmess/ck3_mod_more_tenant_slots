@@ -1,115 +1,65 @@
 # 潜在产出：实现与验收记录
 
-2026-11-19；独立产品 `mod_potential_output/`，版本候选 0.1.0。此记录持续更新；初步静态结论不代表地图引擎和实机通过。
+更新：2026-11-20。独立产品 `mod_potential_output/`，版本 0.1.0。**已完成本地实现、静态验证与简中实机验收；未发布 Workshop。** 使用方式见[玩家说明](potential-output-usage.md)，原版定义见[研究报告](potential-output-definition.md)。
 
-## 原版依据与实现
+## 最终行为与依据
 
-本机只读安装识别：CK3 1.21.0 Florin、Steam public / build 26757580；没有变更 Steam 模式或启动游戏。关键原文的规范化 SHA-256 见 [依赖清单](../dev_tools/potential_output_sources.json)，机器路径仅保存在忽略的本地配置。
+视角展示伯爵领可以生产的商品，包含尚未开发的资源，数据直接取自原版 `County.GetPotentialTradeGoodTypes`。只提供原版县潜力表中存在的 35 种商品；其余 9 种加工商品不进入筛选。原版潜力表共有 3549 个县，潜力种类数为 2–6；它没有提供储量或月产量。
 
-原版 `common/trade/county_potential_trade_goods/*.info` 明确按县头衔列出可产商品；`gui/window_county_view.gui:5691` 使用 `County.GetPotentialTradeGoodTypes`。产品直接读取同一运行时列表，包含未投产资源，不估计产量、不改经济。官方开发日志也说明潜力按伯爵领配置：[Silk & Silver Dev Diary #9](https://steamcommunity.com/app/1158310/allnews/)。
+地图数字和底色共用同一个值：县潜力商品集合与已选商品集合的交集大小。0 为灰色，种类越多绿色越深。单选为 0/1，多选为 0/1/2 等。商品独立开关、整类开关、全选、清空、面板收起与展开均已实现。近距离显示县首府上的商品图标及计数，远距离保留底色。再次进入默认全选；收起面板保留筛选；关闭视角恢复先前地图与相机。
 
-独立地图 key `xapo_potential_output` 使用原版县界着色和县首府选择。`ProvinceIcon.GetProvince` 与 `Province.GetCountyCapitalProvince` 的比较把图标限定在伯爵领首府；每个商品图标读取原生 `TradeGoodType.GetSmallIcon`。原版引擎实际分配地图图标的缩放范围仍须实机检查。
+右下角「潜在产出」入口先打开说明，再点击「显示地图」。实现使用原版活动规划地图的全省份定位与评分刷新，不注册不能分配足够图标的自定义地图模式。专用展示活动禁止实际启动与 AI 选择，不收取活动费用，不推进日期。刷新先完成 ScriptedGui 筛选写入，再通过 0.3 秒动画的 on_finish 重新选择原生选项并进入选址，避免读到上一轮筛选。
 
-界面入口与面板通过 `gui/scripted_widgets` 注册。面板按原版 need category 与 basic 标记分组，共44种商品。商品、分类、全选和清空只修改本机 `GetVariableSystem` 状态；多选按并集展示。不运行事件、on_action、决议、脚本效果或存档迁移；AI与经济状态不变。关闭面板保留当前筛选，关闭视角返回进入前的地图模式；退出游戏后筛选回到默认全选。
+筛选使用玩家角色上的 35 个 `xapo_hidden_` 展示变量；退出规划器清理，再次进入也会重置。它们不影响经济、资源、建筑、头衔或 AI。若在视角内保存，变量可能随存档保留，因此不再沿用早期“仅 GUI 状态、绝不入存档”的说法。
 
-筛选的共同键由 `xapo_hidden_` 与原版 `TradeGoodType.GetTextIconNoFormat` 构成，面板通过已核对的 `GetTradeGoodType(native_good_key)` 取同一对象。键不依赖翻译或名称中的 tooltip 格式，只在 GUI 会话存在，不入存档。未知新增商品和全图转换 mod 尚未验收，不宣称兼容。
+## 验证与证据
 
-## 覆盖与升级风险
+游戏：CK3 1.21.0 Florin，Steam build 26757580；EXE SHA-256 为 `bb3fef106240e95ecdb6f1532982e89e9432c92a99d33db623521572f06e6f79`。运行时使用冻结框架提交 `ef4fd06cd3b9a41030127759e0c63552c70da57b`，公共受管入口负责离线准入、独占、原进程等待与租约释放。当前没有可用的 CK3 MCP 工具，本次按已记录缺口使用官方 GUI 路径；未注入桥接代码。
 
-仅覆盖一份原生 GUI：`gui/map_icon_layer.gui`。生成器在 `province_map_icon` 的原生内容之前增加一个自定义控件，其余内容逐字保留；框架 `project/recover` 验证可逆性。因为 CK3 同路径 GUI 整份覆盖，其他覆盖该文件的 mod 需要专门合并补丁；MTS 两份宗教 GUI 不与它同路径，但组合实机尚未验收。原版变化时 hash 门禁拒绝生成，必须先审查差异。
+最终运行代码提交：`58e8727b57187ba5289193ed10d7f68e5663bc56`。23 个交付文件与实测构建逐文件 SHA 完全一致。八项离线测试通过（11.071 秒），覆盖实际按钮表达式的独立切换、空集、多选、整组快照、原版所有县的交集、可逆投影、原生窗口状态层级、独立身份与双构建一致性。九语言的 BOM、结构、非空文本和键集通过；仅简体中文实机验收，不将格式校验称为其他语言体验通过。
 
-新增地图定义只追加独立文件，不覆盖原版地图模式。图片仅引用当前游戏的原版图标，参考截图不打包，不包含跨游戏第三方素材。尚无 Workshop ID。
+| 实机记录 | 结论 |
+| --- | --- |
+| R0009 / acc4a98 / map-filters | 15 项地图业务与正常退出通过；随后闭场日志发现布局错误，不能称零项目错误 |
+| R0010 / 06c3917 / existing-save | 三项独立旧存档业务与正常退出通过；仍有同一布局错误 |
+| R0011 / 58e8727 / map-filters | 修正布局后，15 项地图业务再次通过；同一旧存档的加载、潜力图标、过滤也重新直接核对 |
 
-## 离线验证：通过，实机待验
+R0011 实际观察：清空时陆地为灰色；谷物单选时各县显示 0/1；加入粟后显示 0/1/2 及对应的深浅；谷物分类整体开启与关闭正确；全选恢复全部潜力图标及各县 3/4/5 等计数。面板收起再展开保留状态，退出后恢复政治地图。原版宴会类型选择和选址正常，专用面板不混入原版规划器。活动列表没有新增正在进行的活动，金钱仍为 50，日期始终为 1066 年 9 月 15 日。
 
-- 框架结构扫描、原生依赖 hash、可逆投影与14文件生成一致性通过。结构扫描不提供 CK3 作用域或数据函数合法性认证。
-- 九种语言共12个自定义键：UTF-8 BOM、语言头、结构、非空文本和键集覆盖通过；仅简中安排实机。
-- 七项离线测试通过（5.848秒）：实际生成按钮表达式的44商品独立开关、清空后两商品并集、全选恢复、分类批处理快照及组外不变、原版全部县商品交集、投影拒绝原文变化、双构建一致及独立身份。
-- 原版 GUI 资产路径检查通过；正式投影仅14个运行文件，ZIP与 manifest 双构建一致，`workshop_item_id=null`，不包含工具或夹具。
+R0011 从冻结正式构建冷启动，没有热改 profile 或诊断控件。通过游戏菜单退出桌面，原始 Popen 返回 0，未触发超时关闭；keeper 与 screen 租约已释放。公共 verify 返回 `process_pass=true`、`closure_pass=true`、`gui_business_pass=true` 和 `case_acceptance_pass=true`。它不授 Workshop 或通用 native 能力资格。
 
-状态：`structural-static-pass`；`live-verified=NOT_RUN`；`published=NOT_RUN`。需要检查真实地图模式注册、GUI求值、所有县图标分配、缩放、筛选与恢复，不能以离线测试替代。
+闭场日志经框架两次有界一致读取与完整分组：1005 字节，SHA-256 `034945e50c6a698a903644a16132ec19830d91e34c7a62884baa89657fa0f6c3`，仅 1 条既有原版 Generated Map Objects 读取错误。此前本产品的 `Widget cannot have a position in a layout` 已归零。没有把原版错误删掉或计成零日志。
 
-## 开发与构建
+可审计的运行身份、构建、图片与退出回执 hash 见[证据索引](evidence/potential-output-live-20261120.json)。原始图片、私有存档、机器配置与原生完整文件在忽略的本机 artifacts 中；干净 clone 只包含索引，不保证这些本机原件可用。GUI 实测是代表性县与两种商品组合，不宣称逐个点击过全部 35 个商品或逐县实测。
+
+## 交付与兼容
+
+可用 ZIP：`artifacts/potential-output-20261119/tested-build-a11/mod_potential_output.zip`，64056 字节，SHA-256 `955e9ee13b4e2e3db1bd4eb50e122d94aeb7bfff059c5cbf70200ede4eb1d4e5`。同目录 manifest 绑定上述代码提交，`product=mod_potential_output`、`workshop_item_id=null`。未上传或更新任何工坊条目。
+
+需要投影三份原版 GUI：`gui/map_icon_layer.gui`、`gui/window_activity_planner.gui`、`gui/window_activity_list.gui`；依赖原文 hash 改变即拒绝生成。每份投影能逆恢复固定原版全文。其他覆盖同路径的 Mod 需要合并补丁。全图县数据模型复用原版，地图图标只放在县首府；四张透明 DDS 为自行生成的占位资产，没有打包参考截图或复制其他游戏素材。
+
+活动规划器评分共用灰绿配色，普通活动的评分地图也会呈现这套色板。进入视角暂时占用规划器，请先退出其他活动规划。当前活动中或旅行中的角色、多人游戏、MTS/POD 组合、大地图转换 Mod 与其他 CK3 版本未独立实机验收，不作兼容承诺。密集地区全选时图标可能重叠，可进一步放大或筛选商品。
+
+## 开发与归属
 
 ```text
-<configured-python> -B -X utf8 dev_tools/potential_output.py generate --framework <framework> --game <game>
-<configured-python> -B -X utf8 dev_tools/potential_output.py validate --framework <framework> --game <game>
-<configured-python> -B -X utf8 dev_tools/potential_output.py build --framework <framework> --game <game> --output <new-output>
+<configured-python> -X utf8 dev_tools/potential_output.py generate --framework <framework> --game <game>
+<configured-python> -X utf8 dev_tools/potential_output.py validate --framework <framework> --game <game>
+<configured-python> -X utf8 dev_tools/potential_output.py build --framework <framework> --game <game> --output <new-output>
 ```
 
-离线测试通过显式环境 `XAPO_FRAMEWORK_DIR`、`XAPO_GAME_DIR` 选择输入，运行 `-m unittest discover -s dev_tools -p test_potential_output.py -v`。公共实机入口按 [验收计划](potential-output-acceptance-plan.md)；本产品不自建第二套 runner。
+离线测试使用显式 `XAPO_FRAMEWORK_DIR`、`XAPO_GAME_DIR`，运行 `-m unittest discover -s dev_tools -p test_potential_output.py`。安装识别、解析、可逆投影、日志分组、构建和受管生命周期复用框架；商品清单、筛选与产品证据留本仓库。可复用的 GUI 上下文、布局与刷新时序发现归框架知识文档，不搬运产品源码、私有存档或第三方素材，不外推本产品通过结论。
 
-归属决定：商品规则、生成器、命名空间、兼容边界及具体验收证据只服务本产品，留本仓库；解析、投影、安装识别、日志和确定性封包复用框架。通用地图图标分配与 GUI 接口的富化须等实机查明后再落成可复用知识，当前不把候选写成通用通过。
+## 历史失败边界
 
-## R0001：真实加载，业务 RED
+| 记录 | 保留的失败事实 |
+| --- | --- |
+| R0001–R0002 | 新地图 key 没有分配全图县图标；原始退出 0，业务未通过 |
+| R0003 | 原生规划图层可分配图标，但重复男爵领与初始脚本错误；只作诊断 |
+| R0004 | widget 属性、TopScope promote、宾客上限错误；超时触发关闭，未通过 |
+| R0005 | 初始化界面不可用；外部作用域警告，业务未通过 |
+| R0006 | 全局按钮错误引用窗口上下文，重叠控件挡住入口；清空不能刷新底色 |
+| R0007 | 入口修正；仅重新进入选址仍使用旧评分，未通过 |
+| R0008 | 诊断证明选项重选及延迟回调可刷新评分；超时且有 profile 热改，未授正式 PASS |
 
-公共 GUI-only 生命周期，简中新局、1066.9.15维塔莱·法列罗，独立 profile，仅本产品。新视角与面板确实显示；远景和近景未看到县产物图标，核心需求未通过。日志另发现布局容器内的 `parentanchor` 与无效 `#small` 格式标签。原件与来源见 [R0001 精简证据](evidence/potential-output-R0001.json)。
-
-通过官方调试控制台生成本构建 `script_docs` 和 `dump_data_types`，用来核对数据接口；原件只留隔离 profile，不搬入框架或产品。新发现 `GetTradeGoodType(key)` 全局 getter 和 `TradeGoodType.GetTextIconNoFormat` 确实注册，可据此使用不依赖语言的共同筛选键。数据类型注册仅证明接口存在，不证明地图图标已正确分配。
-
-本轮实际保存12,319,604字节私有存档，原生退出桌面，公共 runner 正常结束；keeper 与 screen 释放已读回。无业务签核，共享 verify 返回非零，保留 RED；进程正常结束不代表功能通过。下一包修复布局、筛选键与地图图标路径后重验。归属：具体失败与产品修复留本仓；可复用的原生 GUI 接口研究在查明并验证后再富化框架。
-
-## R0001 后续修复候选
-
-已移除布局内的文本锚点、改用原生小字号样式，并增加不透明面板背景。共同筛选键改读原生商品 text-icon token。地图候选切换为原版 `economy_buildings` 着色／holding 选择来检查原生省份图标的创建路径；这时底图颜色仍是原生经济底图，不代表商品潜力。商品潜力真值仍仅来自县的潜在商品列表，是否正确绘制须在下一场实际核对。七项离线合同及双构建再次通过（6.450秒），不授实机通过。
-
-## R0002：布局修复通过，地图业务仍 RED
-
-源提交 `d29b192621e9586ef2a8a18148f3c16ea78ac61f` 冷启动后，候选 GUI 无前轮布局／格式警告，但新增地图模式仍未显示县潜力图标，核心业务失败。失败后仅在隔离 profile 热编辑进行图层诊断，备份原文并标记 `formal_business_acceptance_eligible=false`；诊断修改没有回写产品或正式 staging，也不能作为本轮业务通过证据。原生 ProvinceIcon 的无条件测试标记在政治视角出现，在自定义地图模式消失；其他原版图层仍须另行验证。
-
-2026-11-19 01:13:30 UTC 原始 Popen 确认退出码 0；keeper 线程退出、screen CAS 释放读回成功。共享 verify 返回 2／INCOMPLETE，进程与闭环通过，业务和发布均未通过。没有填写通过签核。
-
-用户随后要求先核对“潜在产出”含义，已暂停功能实现。核对结果见 [原版定义报告](potential-output-definition.md)：县级潜力配置涉及 35 种商品，不能把全部 44 种商品作为同等的潜力筛选项。原版概念、县面板数据绑定及资源地产条件均已交叉核对；后续实现须以该报告的集合语义为准。
-
-## 35 ??????????
-
-???????????????????????? 35 ??????????????????????????????????????AI ????????????????????????????????????? `province_score` ??????????????????????7.370 ??????????????????????????????????? score ?????
-
-## R0003 ???????
-
-R0003 ???????????????????????????????????? RED?????? profile ????????? host-view Confirm ??????????????????? County.GetPotentialTradeGoodTypes??? NMapModes.ACTIVITY_PLANNER_SCORE_LOW/HIGH ???????????????????????????reload activity_types ???????????????????? GUI ??????? Popen 0?screen ????
-
-???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
-
-## R0004?????? RED
-
-???? ed5bf1c ?? widget ??? movable?End ???????? datacontext promote???????????? GUI ????? 35 ? named scope ??? never-set ??????????????????????????? 7200 ???? runner ??? WM_CLOSE????????????? Popen 0?keeper ?????screen ???? process_pass=false?verify INCOMPLETE/2??? profile ????reload gui?????????????????????????????????
-
-???????? widget ??? datacontext End?? host Confirm ???????????????????????????????? 1 ????????????????????????????????????????????????????????? 21600 ????????????????????????????????????????? R0004 ???????????????????? GUI ??/Promote ??????????
-
-
-## R0005 initialization RED and root window correction
-
-Source 338c5e9; native process exited normally (0), common verify reports process/closure true, GUI business INCOMPLETE. Entry changed planner state without rendering the panel. Startup no longer reports invalid widget properties, TopScope promotion or guest limit; 70 externally supplied scope warnings remain unresolved. Diagnostic localization reload was isolated and disqualifies business certification.
-
-Preserve native root `_show` and `_hide` states instead of moving them inside a child widget. Add a manual display confirmation through the native host view and remove reentrant filter seeding during window construction. Each entry resets selection to all goods; collapse preserves the current selection. The predefined display phase is valid while actual activity start remains prohibited. Eight offline contracts cover this change; engine behavior remains pending. Product implementation and this report belong here; generic root animation behavior is a framework enrichment candidate after live confirmation.
-
-
-## R0006 scoped GUI and cached color RED
-
-Source 2514cf3. Display planner, potential icons and county count were observed directly. Clearing selected goods removes icons and changes counts to 0, but the underlying native score color remains unchanged. Exit restores the previous map and camera. Global launcher expressions incorrectly referenced ActivityPlanner, a window supplied context, and therefore both overlapping buttons were drawn when that context was absent. A new native CreateWidget diagnostic confirmed closed planner/host state; diagnostic source is retained privately, not eligible for formal business PASS. Root show/hide preservation is retained.
-
-Next correction keeps one global entry button with no planner context access, uses the native Self argument, and requests location picking once after each completed filter batch. Icon visibility moves to closer zoom to reduce overlap. This is an engine refresh probe; cached color behavior remains unverified. Reusable context lifetime findings are framework enrichment candidates; specific county presentation remains product owned.
-
-
-## R0007 entry passes; score refresh RED
-
-Source 4c244b0. The single global button opens the native host confirmation and the display map reliably. Clear selection is visible, but StartLocationPicking does not refresh native province colors from the planner creation objects. Normal GUI exit returned process 0 and the common process/closure checks pass; business acceptance remains INCOMPLETE.
-
-The next score input uses 35 namespaced cosmetic filter variables on the viewing character, read through the documented province_score host scope. Scripted GUI sets or removes only these flags, without changing resource production, title colors, buildings, income or costs. Entry resets them, and the native planner hide transition removes them. If a save is made while the view is open, dormant filter flags may be saved; they have no economic effect and are reset on the next entry. This introduces small reversible character metadata and supersedes the earlier GUI-only claim.
-
-Two hidden special choices request the engine's native score recomputation after a complete filter batch. Their four transparent 4x4 DDS placeholders are generated original bytes, not copied game assets. Native planner controls stay available for ordinary activities. County count text now reads the same character flags as province_score; the canonical GUI filter keys continue to control goods visibility. This is an engine integration candidate, not a release PASS. Product-specific effects remain here; scope/context and refresh findings are framework enrichment candidates after observation.
-
-
-## R0008 diagnostic breakthrough; formal acceptance still RED
-
-Source ce0c918. Startup contains only the previously identified native great-wall error; the 70 external event-target warnings are gone. An official CreateWidget diagnostic reads hidden iron/fish flags = 1 and Venice count = 0 after Clear. Scripted GUI state is therefore present and the shared county count is correct.
-
-The working diagnostic refresh uses a bound ActivityOptionCategory from GetOptionCategoryByKey, selects a different hidden option through OpenSpecialOptionSelection -> SelectOption -> StartLocationPicking, and delays those callbacks until an actual 0.3-second GUI animation finishes. Immediate callbacks can recompute before queued scripted-GUI changes have arrived. Readback shows all-clear neutral land, wine-only green counties, and restored all-goods gradients after Select All. Manual buttons outside their parent bounds did not receive clicks; the corrected diagnostic keeps its controls inside their parent. Generic data-context lifetimes, input bounds and deferred refresh are framework enrichment candidates.
-
-This run used isolated diagnostic GUI edits and exceeded the six-hour managed budget; the runner requested WM_CLOSE and normal GUI exit then returned the game process 0. Preserve it as a RED investigation, not formal business evidence. The next frozen source moves the working refresh inside the planner control type with nonzero invisible layout, includes the native stage transition and animation completion delay, and removes the unused custom map-mode registration. The map-filters time budget is 12 hours to allow direct visual review without silently extending an active run.
-
-
-## R0009 / R0010 functional PASS; layout log correction
-
-R0009 (acc4a98) passed all 15 map-filter GUI business facts and normal closure; R0010 (06c3917) passed the three independent existing-save facts and normal closure. Direct image review and original Popen exit 0 are bound by each common verify result. Neither result qualifies Workshop publication. Closed-log triage found repeated product layout errors: the refresh state animated a direct hbox item position. Move the animated state into a free child widget, keeping the deferred on_finish order; cold verification of this correction remains pending. Historical functional PASS does not certify the later corrected payload. The Chinese legend change only clarifies a static zero-color explanation, not a runtime total.
+历史原件仍保留于本机 artifacts；旧报告中早期 44 商品、自定义地图 key、只覆盖一份 GUI 和绝不写角色变量等候选描述由本文最终实现取代。Git 历史保留原始失败报告，不追认历史诊断为正式包通过。

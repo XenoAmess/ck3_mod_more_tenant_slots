@@ -1,0 +1,716 @@
+{
+  "schema": "xapo-live-evidence-v1",
+  "product": "mod_potential_output",
+  "version": "0.1.0",
+  "game_version": "1.21.0",
+  "steam_build": "26757580",
+  "game_exe_sha256": "bb3fef106240e95ecdb6f1532982e89e9432c92a99d33db623521572f06e6f79",
+  "language": "simp_chinese",
+  "framework_commit": "ef4fd06cd3b9a41030127759e0c63552c70da57b",
+  "evidence_policy": "Screenshots, private save, machine configuration and full native files remain in ignored local artifacts. Hash references do not make their bytes available in a clean clone. R0009 and R0010 retain their layout errors. R0011 independently repeats map filters and old-save observations after the layout fix. No Workshop release.",
+  "runs": [
+    {
+      "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0009",
+      "case": "map-filters",
+      "source_commit": "acc4a9823271ea32a325615705b4a0776b96b59d",
+      "verify": {
+        "status": "PASS",
+        "process_pass": true,
+        "closure_pass": true,
+        "gui_business_pass": true,
+        "case_acceptance_pass": true,
+        "business_pass": true,
+        "product_release_pass": false,
+        "native_capability_pass": false
+      },
+      "business_review": {
+        "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0009",
+        "case": "map-filters",
+        "reviewer": "Codex direct screenshot review",
+        "direct_image_review": true,
+        "passed": true,
+        "facts": {
+          "single_good_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205359097937-capture.png",
+                "bytes": 4408220,
+                "sha256": "429612667472b5078a38ad8100f86d7e347a63c47c8dc35154e3993b818dc0e5"
+              }
+            ]
+          },
+          "multi_good_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205434097212-capture.png",
+                "bytes": 4480609,
+                "sha256": "98697208e213bda855652956cf13b72d1d9259597db9e968c150a083d73e7147"
+              }
+            ]
+          },
+          "clear_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205508218436-capture.png",
+                "bytes": 4414590,
+                "sha256": "2d68a50a36824db29a0761697fff72cec3c77a1e59fbaf4921ea53b4e8622319"
+              }
+            ]
+          },
+          "select_all_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205550714063-capture.png",
+                "bytes": 4692632,
+                "sha256": "889b134c15ce4ea0473a250e1c083fdfdea77a291e174102c340d8493b1eedc2"
+              }
+            ]
+          },
+          "category_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205450762209-capture.png",
+                "bytes": 4481941,
+                "sha256": "a5cb6509ccbdcaa0c9e1fd156c19f776a73393c36471804b67eb787f0f087bfe"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205508218436-capture.png",
+                "bytes": 4414590,
+                "sha256": "2d68a50a36824db29a0761697fff72cec3c77a1e59fbaf4921ea53b4e8622319"
+              }
+            ]
+          },
+          "panel_collapse": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205636812824-capture.png",
+                "bytes": 4762477,
+                "sha256": "cc5620156f0755471226db80410d922ac7beab582140c68e68025c899c810fdf"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205714579722-capture.png",
+                "bytes": 4691687,
+                "sha256": "2ff08d737c36a041e455834a8b1a769c3957250b5e151e38be10dab31aa2dc15"
+              }
+            ]
+          },
+          "mode_restore": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205758357995-capture.png",
+                "bytes": 4295059,
+                "sha256": "3f92d3c88c9e6aabe4f96fa0dbf2e696e48998035dcd7e1dea9606a1fb3d22ab"
+              }
+            ]
+          },
+          "no_actual_activity_started": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205833225462-capture.png",
+                "bytes": 4015216,
+                "sha256": "9f47d604cf0438ba7d6e541ae3e33e9a478efd6ecb311661fa24cc7f3d0b2039"
+              }
+            ]
+          },
+          "normal_activity_planner": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/210101215112-capture.png",
+                "bytes": 3576316,
+                "sha256": "af1f6e867b555d9f8109d5da79209f9b4a926bd176710268b7760375928d6799"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/210312971837-capture.png",
+                "bytes": 4057258,
+                "sha256": "61e80db15e6b26420d6a520905a38ac3682ae05920d470748137593bf5525f4c"
+              }
+            ]
+          },
+          "county_potential_icons": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205550714063-capture.png",
+                "bytes": 4692632,
+                "sha256": "889b134c15ce4ea0473a250e1c083fdfdea77a291e174102c340d8493b1eedc2"
+              }
+            ]
+          },
+          "potential_kind_shading": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205434097212-capture.png",
+                "bytes": 4480609,
+                "sha256": "98697208e213bda855652956cf13b72d1d9259597db9e968c150a083d73e7147"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205508218436-capture.png",
+                "bytes": 4414590,
+                "sha256": "2d68a50a36824db29a0761697fff72cec3c77a1e59fbaf4921ea53b4e8622319"
+              }
+            ]
+          },
+          "zero_single_multi_shading": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205359097937-capture.png",
+                "bytes": 4408220,
+                "sha256": "429612667472b5078a38ad8100f86d7e347a63c47c8dc35154e3993b818dc0e5"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205434097212-capture.png",
+                "bytes": 4480609,
+                "sha256": "98697208e213bda855652956cf13b72d1d9259597db9e968c150a083d73e7147"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205508218436-capture.png",
+                "bytes": 4414590,
+                "sha256": "2d68a50a36824db29a0761697fff72cec3c77a1e59fbaf4921ea53b4e8622319"
+              }
+            ]
+          },
+          "actual_product_loaded": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205550714063-capture.png",
+                "bytes": 4692632,
+                "sha256": "889b134c15ce4ea0473a250e1c083fdfdea77a291e174102c340d8493b1eedc2"
+              }
+            ]
+          },
+          "map_entry": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205550714063-capture.png",
+                "bytes": 4692632,
+                "sha256": "889b134c15ce4ea0473a250e1c083fdfdea77a291e174102c340d8493b1eedc2"
+              }
+            ]
+          },
+          "zoom_display": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/205359097937-capture.png",
+                "bytes": 4408220,
+                "sha256": "429612667472b5078a38ad8100f86d7e347a63c47c8dc35154e3993b818dc0e5"
+              }
+            ]
+          }
+        },
+        "normal_gui_quit": true,
+        "normal_quit_evidence": [
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/210547326463-click.png",
+            "bytes": 2872581,
+            "sha256": "eff4f89577c83b8639f46829259111a329290ea50223d19448a1be62e890438a"
+          },
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/review/210613820817-click.png.json",
+            "bytes": 1764,
+            "sha256": "04b5d1a806dad5d7406ceffeab0dda4a95c7e877dbd01e0738f25357c545eadc"
+          },
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/game-exit.json",
+            "bytes": 252,
+            "sha256": "91b00bc1582c35c4a50b1a2d2d84e2a8105ae6dc6d0897a237c70104ccd76809"
+          }
+        ]
+      },
+      "original_process_exit": {
+        "at_utc": "2026-11-19T21:06:30.899705+00:00",
+        "pid": 4692,
+        "returncode": 0,
+        "actual_original_popen_wait": true,
+        "window_close_requested": false,
+        "error": null,
+        "process_pass": true,
+        "normal_gui_quit": null,
+        "business_pass": false
+      },
+      "keeper_report": {
+        "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/keeper-report.json",
+        "bytes": 368,
+        "sha256": "7ef2b743d91f36fad51e92540193d7b1a7b8003db23682f0d9f9291b1c2e3cd2"
+      },
+      "screen_release": {
+        "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0009/screen-release.json",
+        "bytes": 1183,
+        "sha256": "1d3d0f656fa3a9c0a814d63ac278e4943b674392a0399cbfd37db1e5e4af4ebb"
+      },
+      "formal_manifest": {
+        "path": "artifacts/potential-output-20261119/tested-build-a09/mod_potential_output.manifest.json",
+        "bytes": 4245,
+        "sha256": "49b8b33755868d75930d35acb3f1120a2d562b48e8d69251bbe99eb884604114"
+      },
+      "archive": {
+        "path": "artifacts/potential-output-20261119/tested-build-a09/mod_potential_output.zip",
+        "bytes": 63984,
+        "sha256": "42c2e53b8aae80764ff4ccf6d94dc9e146fc6f6b75a3d4a1e5562b8855937562"
+      },
+      "error_log": {
+        "source_bytes": 5205,
+        "source_sha256": "51cbbd409e6df0c5afa30829d360cf365b7f079d91d6146977315b1d3347e2ef",
+        "error_record_count": 36,
+        "group_count": 2
+      },
+      "log_groups": [
+        {
+          "error": "gui/xapo_potential_output.gui:1368 - Widget cannot have a position in a layout",
+          "records": 35
+        },
+        {
+          "error": "Error: \"Reading Generated Map Objects Error: Expected 11 instances, but found 8 in file: 6337.863770 0.000000 2697.582764 0.000000 -0.889999 0.000000 -0.455963 1.000000 1.000000 1.000000",
+          "records": 1
+        }
+      ]
+    },
+    {
+      "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0010",
+      "case": "existing-save",
+      "source_commit": "06c39178a84d62afc22b1685b420ef3c3832c1ab",
+      "verify": {
+        "status": "PASS",
+        "process_pass": true,
+        "closure_pass": true,
+        "gui_business_pass": true,
+        "case_acceptance_pass": true,
+        "business_pass": true,
+        "product_release_pass": false,
+        "native_capability_pass": false
+      },
+      "business_review": {
+        "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0010",
+        "case": "existing-save",
+        "reviewer": "Codex direct screenshot review",
+        "direct_image_review": true,
+        "passed": true,
+        "facts": {
+          "existing_save_loaded": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/review/212708292120-capture.png",
+                "bytes": 3480788,
+                "sha256": "ba522596f08ff7c765a3e8fbc3f962af0a0bb402d17b72a393d16374d72a3471"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/review/212954234546-capture.png",
+                "bytes": 4185578,
+                "sha256": "764d7e348036c7c1a9c703a3bb180433b84299b1fc405c14d9df8eb5c4726467"
+              }
+            ]
+          },
+          "potential_goods_on_existing_save": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/review/214106617466-scroll.png",
+                "bytes": 4410604,
+                "sha256": "eb76840c9773e77369aeba7bbff67febc28779236e72ccf1f6ffea75b4441817"
+              }
+            ]
+          },
+          "filter_after_reload": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/review/213842780274-capture.png",
+                "bytes": 4063135,
+                "sha256": "63ef0a45cee1efb96bbcd90a4c5091bef806116b721ac300cb00e65aa7a34fab"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/review/214106617466-scroll.png",
+                "bytes": 4410604,
+                "sha256": "eb76840c9773e77369aeba7bbff67febc28779236e72ccf1f6ffea75b4441817"
+              }
+            ]
+          }
+        },
+        "normal_gui_quit": true,
+        "normal_quit_evidence": [
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/review/214721032637-click.png",
+            "bytes": 2946655,
+            "sha256": "b45a406ac8b88370ee34f0b0bd43064097ffbbb42ef0da86c5c885e79f8399bf"
+          },
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/review/215118948772-click.png.json",
+            "bytes": 1771,
+            "sha256": "42012aff14aaec91f1cc187c8b44d8b3980a9168c3927608f6fb4312f0022aa0"
+          },
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/game-exit.json",
+            "bytes": 253,
+            "sha256": "4a48894242392e81a9bc11218a6153adfeebd333f19d3f0f3d6052f7ae410a4d"
+          }
+        ]
+      },
+      "original_process_exit": {
+        "at_utc": "2026-11-19T21:51:34.288437+00:00",
+        "pid": 29632,
+        "returncode": 0,
+        "actual_original_popen_wait": true,
+        "window_close_requested": false,
+        "error": null,
+        "process_pass": true,
+        "normal_gui_quit": null,
+        "business_pass": false
+      },
+      "keeper_report": {
+        "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/keeper-report.json",
+        "bytes": 368,
+        "sha256": "f96231dd76fd18e08500a74fc870ee7a706493db3fcc1c017910a4192708177c"
+      },
+      "screen_release": {
+        "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0010/screen-release.json",
+        "bytes": 1183,
+        "sha256": "9ab1bd29a6c384390d62597fdf17dc63fac8a1626fa44550f924056914b70c6a"
+      },
+      "formal_manifest": {
+        "path": "artifacts/potential-output-20261119/tested-build-a10/mod_potential_output.manifest.json",
+        "bytes": 4245,
+        "sha256": "10cd2d5895b6bcf5a40d1e0b0c5a8322a72af54fbbe1c5b78f87cc6757ff050c"
+      },
+      "archive": {
+        "path": "artifacts/potential-output-20261119/tested-build-a10/mod_potential_output.zip",
+        "bytes": 64000,
+        "sha256": "83cf5218aa9c67513754de4d2b2b46389ee95b382c4d62e4be0fba6af654a757"
+      },
+      "error_log": {
+        "source_bytes": 1725,
+        "source_sha256": "df66d1d1295c29c654f0738c281e3ec215bab087ab0e50296c5e62d0b90157d7",
+        "error_record_count": 7,
+        "group_count": 2
+      },
+      "log_groups": [
+        {
+          "error": "gui/xapo_potential_output.gui:1368 - Widget cannot have a position in a layout",
+          "records": 6
+        },
+        {
+          "error": "Error: \"Reading Generated Map Objects Error: Expected 11 instances, but found 8 in file: 6337.863770 0.000000 2697.582764 0.000000 -0.889999 0.000000 -0.455963 1.000000 1.000000 1.000000",
+          "records": 1
+        }
+      ]
+    },
+    {
+      "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0011",
+      "case": "map-filters",
+      "source_commit": "58e8727b57187ba5289193ed10d7f68e5663bc56",
+      "verify": {
+        "status": "PASS",
+        "process_pass": true,
+        "closure_pass": true,
+        "gui_business_pass": true,
+        "case_acceptance_pass": true,
+        "business_pass": true,
+        "product_release_pass": false,
+        "native_capability_pass": false
+      },
+      "business_review": {
+        "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0011",
+        "case": "map-filters",
+        "reviewer": "Codex direct screenshot review",
+        "direct_image_review": true,
+        "passed": true,
+        "facts": {
+          "single_good_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223250550268-scroll.png",
+                "bytes": 4412815,
+                "sha256": "e0876d52af97df6a4d74afa68c99c1f5d964158e378613e22561a73ffda9cf6d"
+              }
+            ]
+          },
+          "multi_good_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223400689716-capture.png",
+                "bytes": 4483542,
+                "sha256": "7a816c5303a4b5bd10e2903fdf7ceaf74b1915c077a8779d6058b0b0222c72fe"
+              }
+            ]
+          },
+          "clear_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223149804181-capture.png",
+                "bytes": 4063089,
+                "sha256": "4e620723606fada9a90c678d90a24a192122cd986a254c569191dd48b18c4a27"
+              }
+            ]
+          },
+          "select_all_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223654289028-capture.png",
+                "bytes": 4695219,
+                "sha256": "4845db6e0ff89edc0b7e9bd661f97d472418ed7be6affba8d24caf021038b882"
+              }
+            ]
+          },
+          "category_filter": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223503590981-capture.png",
+                "bytes": 4482710,
+                "sha256": "97698b107d89a6769b06be3cb8596e402b6fec03018985678aa8d5ce779106ce"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223559191851-capture.png",
+                "bytes": 4421387,
+                "sha256": "f522d47f8a67652bbe33b02e7b6a989bc5d840b8b0a094251f8500ad22601c3d"
+              }
+            ]
+          },
+          "panel_collapse": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223751052385-capture.png",
+                "bytes": 4761359,
+                "sha256": "d02612c8e54ef013c9d6cb8901ace587362c62408bfbdb41bac9582b2b73e538"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223904449541-capture.png",
+                "bytes": 4692586,
+                "sha256": "d1372d937e198340e2a3c2daf1e906daf9bb03df4b0a6e07b0553170f41e3a52"
+              }
+            ]
+          },
+          "mode_restore": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/224555824437-capture.png",
+                "bytes": 4301008,
+                "sha256": "3b7f8fff7fd59feca4de5a72bec69fb57cddff3b115c6e4249df060797769737"
+              }
+            ]
+          },
+          "no_actual_activity_started": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/224933431094-capture.png",
+                "bytes": 4015583,
+                "sha256": "6bcb19f9dcc14496a049b75a53a8ef41c90d163e61eaa77fca14698002e3a00c"
+              }
+            ]
+          },
+          "normal_activity_planner": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/225143494879-capture.png",
+                "bytes": 3577491,
+                "sha256": "15a45204c70d73fb35142ad046205328d5155bf05dbc60f4df6515b2984a75ca"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/225304807135-capture.png",
+                "bytes": 4051551,
+                "sha256": "23b12bfcf0f7935271fcdb5d1ff0bf7517205a37b5168098a89456502a6cc55c"
+              }
+            ]
+          },
+          "county_potential_icons": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223654289028-capture.png",
+                "bytes": 4695219,
+                "sha256": "4845db6e0ff89edc0b7e9bd661f97d472418ed7be6affba8d24caf021038b882"
+              }
+            ]
+          },
+          "potential_kind_shading": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223400689716-capture.png",
+                "bytes": 4483542,
+                "sha256": "7a816c5303a4b5bd10e2903fdf7ceaf74b1915c077a8779d6058b0b0222c72fe"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223559191851-capture.png",
+                "bytes": 4421387,
+                "sha256": "f522d47f8a67652bbe33b02e7b6a989bc5d840b8b0a094251f8500ad22601c3d"
+              }
+            ]
+          },
+          "zero_single_multi_shading": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223149804181-capture.png",
+                "bytes": 4063089,
+                "sha256": "4e620723606fada9a90c678d90a24a192122cd986a254c569191dd48b18c4a27"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223250550268-scroll.png",
+                "bytes": 4412815,
+                "sha256": "e0876d52af97df6a4d74afa68c99c1f5d964158e378613e22561a73ffda9cf6d"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223400689716-capture.png",
+                "bytes": 4483542,
+                "sha256": "7a816c5303a4b5bd10e2903fdf7ceaf74b1915c077a8779d6058b0b0222c72fe"
+              }
+            ]
+          },
+          "actual_product_loaded": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223059230995-capture.png",
+                "bytes": 4242553,
+                "sha256": "962b2a557443128be9e7931f7af5afc10f0542ee19b7d359011cb3fc49b65f1d"
+              }
+            ]
+          },
+          "map_entry": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223059230995-capture.png",
+                "bytes": 4242553,
+                "sha256": "962b2a557443128be9e7931f7af5afc10f0542ee19b7d359011cb3fc49b65f1d"
+              }
+            ]
+          },
+          "zoom_display": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223059230995-capture.png",
+                "bytes": 4242553,
+                "sha256": "962b2a557443128be9e7931f7af5afc10f0542ee19b7d359011cb3fc49b65f1d"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223654289028-capture.png",
+                "bytes": 4695219,
+                "sha256": "4845db6e0ff89edc0b7e9bd661f97d472418ed7be6affba8d24caf021038b882"
+              }
+            ]
+          },
+          "existing_save_loaded": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/222349651975-capture.png",
+                "bytes": 4175008,
+                "sha256": "05d57aa18095258f46a2b3b033981730eeefb4f42ebc5d9aa145a73c96024b71"
+              }
+            ]
+          },
+          "potential_goods_on_existing_save": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223654289028-capture.png",
+                "bytes": 4695219,
+                "sha256": "4845db6e0ff89edc0b7e9bd661f97d472418ed7be6affba8d24caf021038b882"
+              }
+            ]
+          },
+          "filter_after_reload": {
+            "passed": true,
+            "evidence": [
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223149804181-capture.png",
+                "bytes": 4063089,
+                "sha256": "4e620723606fada9a90c678d90a24a192122cd986a254c569191dd48b18c4a27"
+              },
+              {
+                "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223250550268-scroll.png",
+                "bytes": 4412815,
+                "sha256": "e0876d52af97df6a4d74afa68c99c1f5d964158e378613e22561a73ffda9cf6d"
+              }
+            ]
+          }
+        },
+        "normal_gui_quit": true,
+        "normal_quit_evidence": [
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/230803913325-capture.png",
+            "bytes": 2873306,
+            "sha256": "a3287804e9937d88ed652e25220d8043f5a1ceacc43cee1a6bc22d08d35b6cfd"
+          },
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/231002787012-click.png.json",
+            "bytes": 1774,
+            "sha256": "dc639a84d45a98ba8aba511b95a5ca624f08d8a6b0b45d388752097df8ab4057"
+          },
+          {
+            "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/game-exit.json",
+            "bytes": 253,
+            "sha256": "ec24d52d102ef45062298bfd71a2ff7d23a1799f614d21d9140f4889903fd4c8"
+          }
+        ]
+      },
+      "original_process_exit": {
+        "at_utc": "2026-11-19T23:10:20.640326+00:00",
+        "pid": 29964,
+        "returncode": 0,
+        "actual_original_popen_wait": true,
+        "window_close_requested": false,
+        "error": null,
+        "process_pass": true,
+        "normal_gui_quit": null,
+        "business_pass": false
+      },
+      "keeper_report": {
+        "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/keeper-report.json",
+        "bytes": 368,
+        "sha256": "080d34ac3e24afba5d24acdc49c4efa1efaaa49a4776a2fd8329046eadce7d98"
+      },
+      "screen_release": {
+        "path": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/screen-release.json",
+        "bytes": 1183,
+        "sha256": "56e6ae6be57369a454d73e3cdf82d149d57b48bad6ad4f55992fbf9ef5b30d5c"
+      },
+      "formal_manifest": {
+        "path": "artifacts/potential-output-20261119/tested-build-a11/mod_potential_output.manifest.json",
+        "bytes": 4245,
+        "sha256": "9db6b39247ee0aef9c4e3fabf0db726526c67fc99c281ad83f3dd129f0dbd10c"
+      },
+      "archive": {
+        "path": "artifacts/potential-output-20261119/tested-build-a11/mod_potential_output.zip",
+        "bytes": 64056,
+        "sha256": "955e9ee13b4e2e3db1bd4eb50e122d94aeb7bfff059c5cbf70200ede4eb1d4e5"
+      },
+      "error_log": {
+        "source_bytes": 1005,
+        "source_sha256": "034945e50c6a698a903644a16132ec19830d91e34c7a62884baa89657fa0f6c3",
+        "error_record_count": 1,
+        "group_count": 1
+      },
+      "log_groups": [
+        {
+          "error": "Error: \"Reading Generated Map Objects Error: Expected 11 instances, but found 8 in file: 6337.863770 0.000000 2697.582764 0.000000 -0.889999 0.000000 -0.455963 1.000000 1.000000 1.000000",
+          "records": 1
+        }
+      ]
+    }
+  ]
+}
