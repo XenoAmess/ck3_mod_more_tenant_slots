@@ -20,8 +20,25 @@
 	state = {
 		name = _hide
 		using = Animation_FadeOut_Quick
+        on_start = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 		on_start = "[GetVariableSystem.Clear( 'activity_planner_hide_default_magnificence' )]"
 	}
+    hbox = {
+        size = { 0 0 }
+        datamodel = "[ActivityType.GetSpecialOptionCategory.GetOptions]"
+        item = {
+            widget = {
+                size = { 0 0 }
+                alpha = 0
+                state = {
+                    name = "xapo_refresh_scores"
+                    trigger_when = "[And( EqualTo_string( ActivityType.GetKey, 'activity_xapo_potential_output' ), EqualTo_int32( ActivityOption.GetIndexInCategory, Select_int32( GetVariableSystem.Exists( 'xapo_refresh' ), '(int32)1', '(int32)0' ) ) )]"
+                    on_start = "[ActivityPlanner.SelectOption( ActivityOption.Self )]"
+                    on_start = "[ActivityPlanner.StartLocationPicking]"
+                }
+            }
+        }
+    }
     xapo_goods_panel = {}
     xapo_view_controls = {}
     widget = {

@@ -1,38 +1,38 @@
 ﻿xapo_selected_potential_count = {
     value = 0
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_grain OR = { NOT = { exists = scope:xapo_hidden_trade_good_grain } scope:xapo_hidden_trade_good_grain < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_millet OR = { NOT = { exists = scope:xapo_hidden_trade_good_millet } scope:xapo_hidden_trade_good_millet < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_rice OR = { NOT = { exists = scope:xapo_hidden_trade_good_rice } scope:xapo_hidden_trade_good_rice < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_fish OR = { NOT = { exists = scope:xapo_hidden_trade_good_fish } scope:xapo_hidden_trade_good_fish < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_fruit OR = { NOT = { exists = scope:xapo_hidden_trade_good_fruit } scope:xapo_hidden_trade_good_fruit < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_oil OR = { NOT = { exists = scope:xapo_hidden_trade_good_oil } scope:xapo_hidden_trade_good_oil < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_honey OR = { NOT = { exists = scope:xapo_hidden_trade_good_honey } scope:xapo_hidden_trade_good_honey < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_tea OR = { NOT = { exists = scope:xapo_hidden_trade_good_tea } scope:xapo_hidden_trade_good_tea < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_horses OR = { NOT = { exists = scope:xapo_hidden_trade_good_horses } scope:xapo_hidden_trade_good_horses < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_cattle OR = { NOT = { exists = scope:xapo_hidden_trade_good_cattle } scope:xapo_hidden_trade_good_cattle < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_silver OR = { NOT = { exists = scope:xapo_hidden_trade_good_silver } scope:xapo_hidden_trade_good_silver < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_gold OR = { NOT = { exists = scope:xapo_hidden_trade_good_gold } scope:xapo_hidden_trade_good_gold < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_iron OR = { NOT = { exists = scope:xapo_hidden_trade_good_iron } scope:xapo_hidden_trade_good_iron < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_copper OR = { NOT = { exists = scope:xapo_hidden_trade_good_copper } scope:xapo_hidden_trade_good_copper < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_wine OR = { NOT = { exists = scope:xapo_hidden_trade_good_wine } scope:xapo_hidden_trade_good_wine < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_gems OR = { NOT = { exists = scope:xapo_hidden_trade_good_gems } scope:xapo_hidden_trade_good_gems < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_amber OR = { NOT = { exists = scope:xapo_hidden_trade_good_amber } scope:xapo_hidden_trade_good_amber < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_ivory OR = { NOT = { exists = scope:xapo_hidden_trade_good_ivory } scope:xapo_hidden_trade_good_ivory < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_jade OR = { NOT = { exists = scope:xapo_hidden_trade_good_jade } scope:xapo_hidden_trade_good_jade < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_wood OR = { NOT = { exists = scope:xapo_hidden_trade_good_wood } scope:xapo_hidden_trade_good_wood < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_hemp OR = { NOT = { exists = scope:xapo_hidden_trade_good_hemp } scope:xapo_hidden_trade_good_hemp < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_wool OR = { NOT = { exists = scope:xapo_hidden_trade_good_wool } scope:xapo_hidden_trade_good_wool < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_cotton OR = { NOT = { exists = scope:xapo_hidden_trade_good_cotton } scope:xapo_hidden_trade_good_cotton < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_flax OR = { NOT = { exists = scope:xapo_hidden_trade_good_flax } scope:xapo_hidden_trade_good_flax < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_furs OR = { NOT = { exists = scope:xapo_hidden_trade_good_furs } scope:xapo_hidden_trade_good_furs < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_sugar OR = { NOT = { exists = scope:xapo_hidden_trade_good_sugar } scope:xapo_hidden_trade_good_sugar < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_spices OR = { NOT = { exists = scope:xapo_hidden_trade_good_spices } scope:xapo_hidden_trade_good_spices < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_ceramics OR = { NOT = { exists = scope:xapo_hidden_trade_good_ceramics } scope:xapo_hidden_trade_good_ceramics < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_silk OR = { NOT = { exists = scope:xapo_hidden_trade_good_silk } scope:xapo_hidden_trade_good_silk < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_incense OR = { NOT = { exists = scope:xapo_hidden_trade_good_incense } scope:xapo_hidden_trade_good_incense < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_medicaments OR = { NOT = { exists = scope:xapo_hidden_trade_good_medicaments } scope:xapo_hidden_trade_good_medicaments < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_stone OR = { NOT = { exists = scope:xapo_hidden_trade_good_stone } scope:xapo_hidden_trade_good_stone < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_salt OR = { NOT = { exists = scope:xapo_hidden_trade_good_salt } scope:xapo_hidden_trade_good_salt < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_alum OR = { NOT = { exists = scope:xapo_hidden_trade_good_alum } scope:xapo_hidden_trade_good_alum < 0.5 } } add = 1 }
-    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_dyes OR = { NOT = { exists = scope:xapo_hidden_trade_good_dyes } scope:xapo_hidden_trade_good_dyes < 0.5 } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_grain scope:host = { NOT = { has_variable = xapo_hidden_trade_good_grain } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_millet scope:host = { NOT = { has_variable = xapo_hidden_trade_good_millet } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_rice scope:host = { NOT = { has_variable = xapo_hidden_trade_good_rice } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_fish scope:host = { NOT = { has_variable = xapo_hidden_trade_good_fish } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_fruit scope:host = { NOT = { has_variable = xapo_hidden_trade_good_fruit } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_oil scope:host = { NOT = { has_variable = xapo_hidden_trade_good_oil } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_honey scope:host = { NOT = { has_variable = xapo_hidden_trade_good_honey } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_tea scope:host = { NOT = { has_variable = xapo_hidden_trade_good_tea } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_horses scope:host = { NOT = { has_variable = xapo_hidden_trade_good_horses } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_cattle scope:host = { NOT = { has_variable = xapo_hidden_trade_good_cattle } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_silver scope:host = { NOT = { has_variable = xapo_hidden_trade_good_silver } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_gold scope:host = { NOT = { has_variable = xapo_hidden_trade_good_gold } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_iron scope:host = { NOT = { has_variable = xapo_hidden_trade_good_iron } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_copper scope:host = { NOT = { has_variable = xapo_hidden_trade_good_copper } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_wine scope:host = { NOT = { has_variable = xapo_hidden_trade_good_wine } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_gems scope:host = { NOT = { has_variable = xapo_hidden_trade_good_gems } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_amber scope:host = { NOT = { has_variable = xapo_hidden_trade_good_amber } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_ivory scope:host = { NOT = { has_variable = xapo_hidden_trade_good_ivory } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_jade scope:host = { NOT = { has_variable = xapo_hidden_trade_good_jade } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_wood scope:host = { NOT = { has_variable = xapo_hidden_trade_good_wood } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_hemp scope:host = { NOT = { has_variable = xapo_hidden_trade_good_hemp } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_wool scope:host = { NOT = { has_variable = xapo_hidden_trade_good_wool } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_cotton scope:host = { NOT = { has_variable = xapo_hidden_trade_good_cotton } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_flax scope:host = { NOT = { has_variable = xapo_hidden_trade_good_flax } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_furs scope:host = { NOT = { has_variable = xapo_hidden_trade_good_furs } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_sugar scope:host = { NOT = { has_variable = xapo_hidden_trade_good_sugar } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_spices scope:host = { NOT = { has_variable = xapo_hidden_trade_good_spices } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_ceramics scope:host = { NOT = { has_variable = xapo_hidden_trade_good_ceramics } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_silk scope:host = { NOT = { has_variable = xapo_hidden_trade_good_silk } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_incense scope:host = { NOT = { has_variable = xapo_hidden_trade_good_incense } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_medicaments scope:host = { NOT = { has_variable = xapo_hidden_trade_good_medicaments } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_stone scope:host = { NOT = { has_variable = xapo_hidden_trade_good_stone } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_salt scope:host = { NOT = { has_variable = xapo_hidden_trade_good_salt } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_alum scope:host = { NOT = { has_variable = xapo_hidden_trade_good_alum } } } add = 1 }
+    if = { limit = { has_potential_for_trade_good = trade_good_type:trade_good_dyes scope:host = { NOT = { has_variable = xapo_hidden_trade_good_dyes } } } add = 1 }
 }

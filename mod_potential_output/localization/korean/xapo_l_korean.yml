@@ -22,3 +22,7 @@
  activity_xapo_potential_output_conclusion_desc:0 "$xapo_potential_output_desc$"
  xapo_legend:0 "선택한 잠재 산물 수: 0은 회색이며, 많을수록 진해집니다. 확대하면 산물 아이콘이 표시됩니다."
  xapo_show_map:0 "지도 표시"
+ xapo_refresh_a:0 "$xapo_potential_output$"
+ xapo_refresh_b:0 "$xapo_potential_output$"
+ xapo_refresh_a_desc:0 "$xapo_potential_output$"
+ xapo_refresh_b_desc:0 "$xapo_potential_output$"

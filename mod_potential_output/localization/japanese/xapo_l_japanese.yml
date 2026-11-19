@@ -22,3 +22,7 @@
  activity_xapo_potential_output_conclusion_desc:0 "$xapo_potential_output_desc$"
  xapo_legend:0 "選択中の潜在産物の種類数：0は灰色、種類が多いほど濃い緑色。拡大するとアイコンを表示。"
  xapo_show_map:0 "マップを表示"
+ xapo_refresh_a:0 "$xapo_potential_output$"
+ xapo_refresh_b:0 "$xapo_potential_output$"
+ xapo_refresh_a_desc:0 "$xapo_potential_output$"
+ xapo_refresh_b_desc:0 "$xapo_potential_output$"

@@ -1,0 +1,107 @@
+﻿xapo_hide_trade_good_grain = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_grain value = 1 } } }
+xapo_show_trade_good_grain = { scope = character effect = { remove_variable = xapo_hidden_trade_good_grain } }
+xapo_hide_trade_good_millet = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_millet value = 1 } } }
+xapo_show_trade_good_millet = { scope = character effect = { remove_variable = xapo_hidden_trade_good_millet } }
+xapo_hide_trade_good_rice = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_rice value = 1 } } }
+xapo_show_trade_good_rice = { scope = character effect = { remove_variable = xapo_hidden_trade_good_rice } }
+xapo_hide_trade_good_fish = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_fish value = 1 } } }
+xapo_show_trade_good_fish = { scope = character effect = { remove_variable = xapo_hidden_trade_good_fish } }
+xapo_hide_trade_good_fruit = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_fruit value = 1 } } }
+xapo_show_trade_good_fruit = { scope = character effect = { remove_variable = xapo_hidden_trade_good_fruit } }
+xapo_hide_trade_good_oil = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_oil value = 1 } } }
+xapo_show_trade_good_oil = { scope = character effect = { remove_variable = xapo_hidden_trade_good_oil } }
+xapo_hide_trade_good_honey = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_honey value = 1 } } }
+xapo_show_trade_good_honey = { scope = character effect = { remove_variable = xapo_hidden_trade_good_honey } }
+xapo_hide_trade_good_tea = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_tea value = 1 } } }
+xapo_show_trade_good_tea = { scope = character effect = { remove_variable = xapo_hidden_trade_good_tea } }
+xapo_hide_trade_good_horses = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_horses value = 1 } } }
+xapo_show_trade_good_horses = { scope = character effect = { remove_variable = xapo_hidden_trade_good_horses } }
+xapo_hide_trade_good_cattle = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_cattle value = 1 } } }
+xapo_show_trade_good_cattle = { scope = character effect = { remove_variable = xapo_hidden_trade_good_cattle } }
+xapo_hide_trade_good_silver = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_silver value = 1 } } }
+xapo_show_trade_good_silver = { scope = character effect = { remove_variable = xapo_hidden_trade_good_silver } }
+xapo_hide_trade_good_gold = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_gold value = 1 } } }
+xapo_show_trade_good_gold = { scope = character effect = { remove_variable = xapo_hidden_trade_good_gold } }
+xapo_hide_trade_good_iron = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_iron value = 1 } } }
+xapo_show_trade_good_iron = { scope = character effect = { remove_variable = xapo_hidden_trade_good_iron } }
+xapo_hide_trade_good_copper = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_copper value = 1 } } }
+xapo_show_trade_good_copper = { scope = character effect = { remove_variable = xapo_hidden_trade_good_copper } }
+xapo_hide_trade_good_wine = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_wine value = 1 } } }
+xapo_show_trade_good_wine = { scope = character effect = { remove_variable = xapo_hidden_trade_good_wine } }
+xapo_hide_trade_good_gems = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_gems value = 1 } } }
+xapo_show_trade_good_gems = { scope = character effect = { remove_variable = xapo_hidden_trade_good_gems } }
+xapo_hide_trade_good_amber = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_amber value = 1 } } }
+xapo_show_trade_good_amber = { scope = character effect = { remove_variable = xapo_hidden_trade_good_amber } }
+xapo_hide_trade_good_ivory = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_ivory value = 1 } } }
+xapo_show_trade_good_ivory = { scope = character effect = { remove_variable = xapo_hidden_trade_good_ivory } }
+xapo_hide_trade_good_jade = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_jade value = 1 } } }
+xapo_show_trade_good_jade = { scope = character effect = { remove_variable = xapo_hidden_trade_good_jade } }
+xapo_hide_trade_good_wood = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_wood value = 1 } } }
+xapo_show_trade_good_wood = { scope = character effect = { remove_variable = xapo_hidden_trade_good_wood } }
+xapo_hide_trade_good_hemp = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_hemp value = 1 } } }
+xapo_show_trade_good_hemp = { scope = character effect = { remove_variable = xapo_hidden_trade_good_hemp } }
+xapo_hide_trade_good_wool = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_wool value = 1 } } }
+xapo_show_trade_good_wool = { scope = character effect = { remove_variable = xapo_hidden_trade_good_wool } }
+xapo_hide_trade_good_cotton = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_cotton value = 1 } } }
+xapo_show_trade_good_cotton = { scope = character effect = { remove_variable = xapo_hidden_trade_good_cotton } }
+xapo_hide_trade_good_flax = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_flax value = 1 } } }
+xapo_show_trade_good_flax = { scope = character effect = { remove_variable = xapo_hidden_trade_good_flax } }
+xapo_hide_trade_good_furs = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_furs value = 1 } } }
+xapo_show_trade_good_furs = { scope = character effect = { remove_variable = xapo_hidden_trade_good_furs } }
+xapo_hide_trade_good_sugar = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_sugar value = 1 } } }
+xapo_show_trade_good_sugar = { scope = character effect = { remove_variable = xapo_hidden_trade_good_sugar } }
+xapo_hide_trade_good_spices = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_spices value = 1 } } }
+xapo_show_trade_good_spices = { scope = character effect = { remove_variable = xapo_hidden_trade_good_spices } }
+xapo_hide_trade_good_ceramics = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_ceramics value = 1 } } }
+xapo_show_trade_good_ceramics = { scope = character effect = { remove_variable = xapo_hidden_trade_good_ceramics } }
+xapo_hide_trade_good_silk = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_silk value = 1 } } }
+xapo_show_trade_good_silk = { scope = character effect = { remove_variable = xapo_hidden_trade_good_silk } }
+xapo_hide_trade_good_incense = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_incense value = 1 } } }
+xapo_show_trade_good_incense = { scope = character effect = { remove_variable = xapo_hidden_trade_good_incense } }
+xapo_hide_trade_good_medicaments = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_medicaments value = 1 } } }
+xapo_show_trade_good_medicaments = { scope = character effect = { remove_variable = xapo_hidden_trade_good_medicaments } }
+xapo_hide_trade_good_stone = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_stone value = 1 } } }
+xapo_show_trade_good_stone = { scope = character effect = { remove_variable = xapo_hidden_trade_good_stone } }
+xapo_hide_trade_good_salt = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_salt value = 1 } } }
+xapo_show_trade_good_salt = { scope = character effect = { remove_variable = xapo_hidden_trade_good_salt } }
+xapo_hide_trade_good_alum = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_alum value = 1 } } }
+xapo_show_trade_good_alum = { scope = character effect = { remove_variable = xapo_hidden_trade_good_alum } }
+xapo_hide_trade_good_dyes = { scope = character effect = { set_variable = { name = xapo_hidden_trade_good_dyes value = 1 } } }
+xapo_show_trade_good_dyes = { scope = character effect = { remove_variable = xapo_hidden_trade_good_dyes } }
+xapo_reset_filters = { scope = character effect = {
+    remove_variable = xapo_hidden_trade_good_grain
+    remove_variable = xapo_hidden_trade_good_millet
+    remove_variable = xapo_hidden_trade_good_rice
+    remove_variable = xapo_hidden_trade_good_fish
+    remove_variable = xapo_hidden_trade_good_fruit
+    remove_variable = xapo_hidden_trade_good_oil
+    remove_variable = xapo_hidden_trade_good_honey
+    remove_variable = xapo_hidden_trade_good_tea
+    remove_variable = xapo_hidden_trade_good_horses
+    remove_variable = xapo_hidden_trade_good_cattle
+    remove_variable = xapo_hidden_trade_good_silver
+    remove_variable = xapo_hidden_trade_good_gold
+    remove_variable = xapo_hidden_trade_good_iron
+    remove_variable = xapo_hidden_trade_good_copper
+    remove_variable = xapo_hidden_trade_good_wine
+    remove_variable = xapo_hidden_trade_good_gems
+    remove_variable = xapo_hidden_trade_good_amber
+    remove_variable = xapo_hidden_trade_good_ivory
+    remove_variable = xapo_hidden_trade_good_jade
+    remove_variable = xapo_hidden_trade_good_wood
+    remove_variable = xapo_hidden_trade_good_hemp
+    remove_variable = xapo_hidden_trade_good_wool
+    remove_variable = xapo_hidden_trade_good_cotton
+    remove_variable = xapo_hidden_trade_good_flax
+    remove_variable = xapo_hidden_trade_good_furs
+    remove_variable = xapo_hidden_trade_good_sugar
+    remove_variable = xapo_hidden_trade_good_spices
+    remove_variable = xapo_hidden_trade_good_ceramics
+    remove_variable = xapo_hidden_trade_good_silk
+    remove_variable = xapo_hidden_trade_good_incense
+    remove_variable = xapo_hidden_trade_good_medicaments
+    remove_variable = xapo_hidden_trade_good_stone
+    remove_variable = xapo_hidden_trade_good_salt
+    remove_variable = xapo_hidden_trade_good_alum
+    remove_variable = xapo_hidden_trade_good_dyes
+} }

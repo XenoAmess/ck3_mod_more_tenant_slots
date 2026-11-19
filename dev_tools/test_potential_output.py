@@ -52,6 +52,16 @@ class GuiActions:
             return expression[1:-1]
         if expression == "ActivityPlanner.StartLocationPicking":
             return True
+        scripted = re.fullmatch(r"GetScriptedGui\( (.*) \)\.Execute\( GuiScope\.SetRoot\( GetPlayer\.MakeScope \)\.End \)", expression)
+        if scripted:
+            key = str(self.evaluate(scripted[1]))
+            if key.startswith("xapo_hide_"):
+                self.planning["xapo_hidden_" + key[len("xapo_hide_"):]] = 1
+            elif key.startswith("xapo_show_"):
+                self.planning["xapo_hidden_" + key[len("xapo_show_"):]] = 0
+            else:
+                raise AssertionError(key)
+            return True
         good = re.fullmatch(r"GetTradeGoodType\(\s*'([^']+)'\s*\)\.GetTextIconNoFormat", expression)
         if good:
             return f"@{good[1]}!"
@@ -68,6 +78,13 @@ class GuiActions:
             return self.values.get(str(args[0])) == args[1]
         if name == "GetVariableSystem.Get":
             return self.values[str(args[0])]
+        if name == "GetVariableSystem.Toggle":
+            key = str(args[0])
+            if key in self.values:
+                del self.values[key]
+            else:
+                self.values[key] = "yes"
+            return True
         if name == "GetVariableSystem.Set":
             self.values[str(args[0])] = str(args[1])
             return True
@@ -220,11 +237,20 @@ class PotentialOutputTests(unittest.TestCase):
         self.assertEqual({p for p in self.files if p.startswith("common/")},
                          {"common/activities/activity_types/xapo_potential_output.txt",
                           "common/script_values/xapo_potential_output.txt",
+                          "common/scripted_guis/xapo_potential_output.txt",
                           "common/defines/graphic/zz_xapo_potential_output.txt"})
         activity = self.files["common/activities/activity_types/xapo_potential_output.txt"].decode("utf-8-sig")
         self.assertIn("can_start = { always = no }", activity)
         self.assertIn("is_shown = { always = no }", activity)
         self.assertNotIn("on_start", activity)
+        effects = self.files["common/scripted_guis/xapo_potential_output.txt"].decode("utf-8-sig")
+        self.assertEqual(effects.count("scope = character"), 71)
+        for good in self.goods:
+            self.assertIn(f"name = xapo_hidden_{good} value = 1", effects)
+            self.assertEqual(effects.count(f"remove_variable = xapo_hidden_{good}"), 2)
+        count = self.files["common/script_values/xapo_potential_output.txt"].decode("utf-8-sig")
+        self.assertNotIn("scope:xapo_hidden", count)
+        self.assertEqual(count.count("scope:host"), 35)
 
 
 if __name__ == "__main__":

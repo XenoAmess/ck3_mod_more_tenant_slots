@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import struct
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,7 +49,24 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
     planner_block = named_block(planner, "window", "activity_planner")
     planner_old = planner[planner_block.start:planner_block.end]
     body_start = next(b.end for b in blocks(planner_old) if b.key == 'state' and re.match(r'\s*name\s*=\s*_hide\b', planner_old[b.opening + 1:b.end]))
-    planner_new = planner_old[:body_start] + f'''
+    planner_header = planner_old[:body_start].replace('using = Animation_FadeOut_Quick', 'using = Animation_FadeOut_Quick\n        on_start = "[GetScriptedGui( \'xapo_reset_filters\' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"', 1)
+    planner_new = planner_header + f'''
+    hbox = {{
+        size = {{ 0 0 }}
+        datamodel = "[ActivityType.GetSpecialOptionCategory.GetOptions]"
+        item = {{
+            widget = {{
+                size = {{ 0 0 }}
+                alpha = 0
+                state = {{
+                    name = "xapo_refresh_scores"
+                    trigger_when = "[And( EqualTo_string( ActivityType.GetKey, '{ACTIVITY}' ), EqualTo_int32( ActivityOption.GetIndexInCategory, Select_int32( GetVariableSystem.Exists( 'xapo_refresh' ), '(int32)1', '(int32)0' ) ) )]"
+                    on_start = "[ActivityPlanner.SelectOption( ActivityOption.Self )]"
+                    on_start = "[ActivityPlanner.StartLocationPicking]"
+                }}
+            }}
+        }}
+    }}
     xapo_goods_panel = {{}}
     xapo_view_controls = {{}}
     widget = {{
@@ -149,20 +167,35 @@ def set_goods(goods: list[str], value: str, sync: bool = True) -> str:
         for good in goods
     )
     if sync:
-        actions += '\n                    onclick = "[ActivityPlanner.StartLocationPicking]"'
+        actions += '\n                    onclick = "[GetVariableSystem.Toggle( \'xapo_refresh\' )]"'
     return actions
 
 
 def sync_good(good: str) -> str:
-    return (f"ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_{good}', "
-            f"MakeScopeValue( Select_CFixedPoint( {is_hidden(good)}, '(CFixedPoint)1', '(CFixedPoint)0' ) ) )")
+    return (f"GetScriptedGui( Select_CString( {is_hidden(good)}, 'xapo_hide_{good}', 'xapo_show_{good}' ) )"
+            ".Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )")
 
 
 def count_context(goods: list[str]) -> str:
-    return "GuiScope.SetRoot( County.GetTitle.MakeScope )" + "".join(
-        f".AddScope( 'xapo_hidden_{good}', MakeScopeValue( Select_CFixedPoint( {is_hidden(good)}, '(CFixedPoint)1', '(CFixedPoint)0' ) ) )"
-        for good in goods
-    )
+    return "GuiScope.SetRoot( County.GetTitle.MakeScope ).AddScope( 'host', GetPlayer.MakeScope )"
+
+
+def filter_effects(goods: list[str]) -> str:
+    effects = []
+    for good in goods:
+        effects.append(f"xapo_hide_{good} = {{ scope = character effect = {{ set_variable = {{ name = xapo_hidden_{good} value = 1 }} }} }}")
+        effects.append(f"xapo_show_{good} = {{ scope = character effect = {{ remove_variable = xapo_hidden_{good} }} }}")
+    effects.append("xapo_reset_filters = { scope = character effect = {\n" + "\n".join(f"    remove_variable = xapo_hidden_{good}" for good in goods) + "\n} }\n")
+    return "\n".join(effects)
+
+
+def empty_option_texture() -> bytes:
+    # Original transparent 4x4 DDS: the invisible refresh choices need valid
+    # engine texture slots. No native or third-party bitmap bytes are copied.
+    header = [124, 0x100f, 4, 4, 16, 0, 0] + [0] * 11
+    header += [32, 0x41, 0, 32, 0xff0000, 0xff00, 0xff, 0xff000000]
+    header += [0x1000, 0, 0, 0, 0]
+    return b"DDS " + struct.pack("<31I", *header) + bytes(64)
 
 
 def good_button(good: str) -> str:
@@ -175,7 +208,7 @@ def good_button(good: str) -> str:
                 down = "[Not( {is_hidden(good)} )]"
                 onclick = "[GetVariableSystem.Set( {hidden_key(good)}, Select_CString( {is_hidden(good)}, 'no', 'yes' ) )]"
                 onclick = "[{sync_good(good)}]"
-                onclick = "[ActivityPlanner.StartLocationPicking]"
+                onclick = "[GetVariableSystem.Toggle( 'xapo_refresh' )]"
                 icon = {{
                     size = {{ 32 32 }}
                     parentanchor = center
@@ -250,6 +283,8 @@ window = {{
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
 {set_goods(goods, "'no'", sync=False)}
+        onclick = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        onclick = "[GetVariableSystem.Clear( 'xapo_refresh' )]"
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ).Self )]"
     }}
 
@@ -486,6 +521,13 @@ def activity_type(goods: list[str]) -> str:
         value = 0
         if = {{ limit = {{ exists = county }} county = {{ add = xapo_selected_potential_count }} }}
     }}
+    special_option_category = special_type
+    options = {{
+        special_type = {{
+            xapo_refresh_a = {{ default = yes }}
+            xapo_refresh_b = {{}}
+        }}
+    }}
     max_guests = 1
     can_be_activity_guest = {{ always = no }}
     host_intents = {{ default = survey_overseer_intent intents = {{ survey_overseer_intent }} }}
@@ -505,7 +547,7 @@ def activity_type(goods: list[str]) -> str:
 
 def count_value(goods: list[str]) -> str:
     return "xapo_selected_potential_count = {\n    value = 0\n" + "\n".join(
-        f"    if = {{ limit = {{ has_potential_for_trade_good = trade_good_type:{good} OR = {{ NOT = {{ exists = scope:xapo_hidden_{good} }} scope:xapo_hidden_{good} < 0.5 }} }} add = 1 }}"
+        f"    if = {{ limit = {{ has_potential_for_trade_good = trade_good_type:{good} scope:host = {{ NOT = {{ has_variable = xapo_hidden_{good} }} }} }} add = 1 }}"
         for good in goods
     ) + "\n}\n"
 
@@ -530,6 +572,7 @@ def generated(game: Path) -> dict[str, bytes]:
         "gfx/map/map_modes/xapo_potential_output.txt": map_mode(),
         "common/activities/activity_types/xapo_potential_output.txt": activity_type(goods),
         "common/script_values/xapo_potential_output.txt": count_value(goods),
+        "common/scripted_guis/xapo_potential_output.txt": filter_effects(goods),
         "common/defines/graphic/zz_xapo_potential_output.txt":
             "# Shared activity score presentation palette; no gameplay values.\n"
             "NMapModes = {\n"
@@ -540,6 +583,9 @@ def generated(game: Path) -> dict[str, bytes]:
     for relative, replacements in projections(game).items():
         files[relative] = project(native_text(game, relative), json.loads(CONTRACT.read_text())["native_text_sha256"][relative], replacements)
     output = {name: text.encode("utf-8-sig") for name, text in files.items()}
+    for option in ("xapo_refresh_a", "xapo_refresh_b"):
+        for directory in ("gfx/interface/icons/activity_types", "gfx/interface/illustrations/activity_types"):
+            output[f"{directory}/{option}.dds"] = empty_option_texture()
     localizations = json.loads(LOCALIZATION.read_text(encoding="utf-8"))
     for language, entries in localizations.items():
         lines = [f"l_{language}:"]

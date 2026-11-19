@@ -12,6 +12,13 @@ activity_xapo_potential_output = {
         value = 0
         if = { limit = { exists = county } county = { add = xapo_selected_potential_count } }
     }
+    special_option_category = special_type
+    options = {
+        special_type = {
+            xapo_refresh_a = { default = yes }
+            xapo_refresh_b = {}
+        }
+    }
     max_guests = 1
     can_be_activity_guest = { always = no }
     host_intents = { default = survey_overseer_intent intents = { survey_overseer_intent } }

@@ -22,7 +22,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "Matching potential types: gray at 0, darker with more types. Zoom in for goods icons.",
-    "xapo_show_map": "Show map"
+    "xapo_show_map": "Show map",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "simp_chinese": {
     "xapo_potential_output": "潜在产出",
@@ -47,7 +51,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "所选潜力种类数：0 为灰色，种类越多颜色越深。放大地图查看产物图标。",
-    "xapo_show_map": "显示地图"
+    "xapo_show_map": "显示地图",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "french": {
     "xapo_potential_output": "Production potentielle",
@@ -72,7 +80,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "Types potentiels retenus : gris pour 0, plus sombre si plus nombreux. Zoomez pour les icones.",
-    "xapo_show_map": "Afficher la carte"
+    "xapo_show_map": "Afficher la carte",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "german": {
     "xapo_potential_output": "Produktionspotenzial",
@@ -97,7 +109,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "Passende Potenzialarten: Grau bei 0, dunkler bei mehr Arten. Fur Warensymbole heranzoomen.",
-    "xapo_show_map": "Karte anzeigen"
+    "xapo_show_map": "Karte anzeigen",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "japanese": {
     "xapo_potential_output": "潜在生産",
@@ -122,7 +138,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "選択中の潜在産物の種類数：0は灰色、種類が多いほど濃い緑色。拡大するとアイコンを表示。",
-    "xapo_show_map": "マップを表示"
+    "xapo_show_map": "マップを表示",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "korean": {
     "xapo_potential_output": "잠재 생산",
@@ -147,7 +167,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "선택한 잠재 산물 수: 0은 회색이며, 많을수록 진해집니다. 확대하면 산물 아이콘이 표시됩니다.",
-    "xapo_show_map": "지도 표시"
+    "xapo_show_map": "지도 표시",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "polish": {
     "xapo_potential_output": "Potencjał produkcji",
@@ -172,7 +196,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "Liczba pasujacych typow potencjalu: 0 to szary, wiecej to ciemniejszy kolor. Zbliz mape, aby zobaczyc ikony.",
-    "xapo_show_map": "Pokaż mapę"
+    "xapo_show_map": "Pokaż mapę",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "russian": {
     "xapo_potential_output": "Потенциал производства",
@@ -197,7 +225,11 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "Число выбранных потенциальных товаров: серый при 0, темнее при большем числе. Приблизьте карту для значков.",
-    "xapo_show_map": "Показать карту"
+    "xapo_show_map": "Показать карту",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   },
   "spanish": {
     "xapo_potential_output": "Producción potencial",
@@ -222,6 +254,10 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "Tipos potenciales seleccionados: gris para 0, mas oscuro con mas tipos. Acerca el mapa para ver los iconos.",
-    "xapo_show_map": "Mostrar mapa"
+    "xapo_show_map": "Mostrar mapa",
+    "xapo_refresh_a": "$xapo_potential_output$",
+    "xapo_refresh_b": "$xapo_potential_output$",
+    "xapo_refresh_a_desc": "$xapo_potential_output$",
+    "xapo_refresh_b_desc": "$xapo_potential_output$"
   }
 }
