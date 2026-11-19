@@ -34,7 +34,7 @@
     "xapo_misc": "杂项",
     "xapo_hint": "点击商品开启或关闭展示；点击分类切换整组商品。多选时展示所选商品的并集。",
     "xapo_empty": "尚未选择产物",
-    "xapo_scope": "??????????????????????????????",
+    "xapo_scope": "伯爵领的资源潜力，包含尚未投产的商品。仅统计可生产的种类，不表示储量或月产量。",
     "xapo_panel": "展开／收起产物筛选",
     "xapo_exit": "返回上一个地图视角",
     "activity_xapo_potential_output": "$xapo_potential_output$",
@@ -46,8 +46,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "??????0 ??????????????????????",
-    "xapo_show_map": "????"
+    "xapo_legend": "所选潜力种类数：0 为灰色，种类越多颜色越深。放大地图查看产物图标。",
+    "xapo_show_map": "显示地图"
   },
   "french": {
     "xapo_potential_output": "Production potentielle",
@@ -121,8 +121,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "??????????0??????????????????????????????",
-    "xapo_show_map": "??????"
+    "xapo_legend": "選択中の潜在産物の種類数：0は灰色、種類が多いほど濃い緑色。拡大するとアイコンを表示。",
+    "xapo_show_map": "マップを表示"
   },
   "korean": {
     "xapo_potential_output": "잠재 생산",
@@ -146,8 +146,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "??? ?? ?? ?: 0? ????, ???? ?????. ???? ?? ???? ?????.",
-    "xapo_show_map": "?? ??"
+    "xapo_legend": "선택한 잠재 산물 수: 0은 회색이며, 많을수록 진해집니다. 확대하면 산물 아이콘이 표시됩니다.",
+    "xapo_show_map": "지도 표시"
   },
   "polish": {
     "xapo_potential_output": "Potencjał produkcji",
@@ -172,7 +172,7 @@
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
     "xapo_legend": "Liczba pasujacych typow potencjalu: 0 to szary, wiecej to ciemniejszy kolor. Zbliz mape, aby zobaczyc ikony.",
-    "xapo_show_map": "Pokaz map?"
+    "xapo_show_map": "Pokaż mapę"
   },
   "russian": {
     "xapo_potential_output": "Потенциал производства",
@@ -196,8 +196,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "????? ????????? ????????????? ???????: ????? ??? 0, ?????? ??? ??????? ?????. ?????????? ????? ??? ???????.",
-    "xapo_show_map": "???????? ?????"
+    "xapo_legend": "Число выбранных потенциальных товаров: серый при 0, темнее при большем числе. Приблизьте карту для значков.",
+    "xapo_show_map": "Показать карту"
   },
   "spanish": {
     "xapo_potential_output": "Producción potencial",

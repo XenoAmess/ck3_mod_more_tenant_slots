@@ -585,7 +585,7 @@ def validate(framework: Path, game: Path) -> dict:
             raise ValueError(f"invalid localization header: {language}")
         if baseline is None:
             baseline = set(entries)
-        if set(entries) != baseline or not all(entries.values()):
+        if set(entries) != baseline or not all(entries.values()) or any(re.search(r"\?{2}", value) for value in entries.values()):
             raise ValueError(f"localization coverage differs: {language}")
     return {"status": "structural-static-pass", "game_version": version,
             "files": len(expected), "goods": len(goods),
