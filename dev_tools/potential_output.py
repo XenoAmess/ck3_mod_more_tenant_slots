@@ -27,11 +27,29 @@ NATIVE_FILES = (
     "common/trade/trade_good_types/basic_trade_goods.txt",
     "common/trade/trade_good_categories/01_need_type_trade_good_categories.txt",
     "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt",
+    "gui/window_activity_planner.gui",
 )
 ANCHOR = '\t### ALL ITEMS\n'
 INSERTION = ('\t# XAPO_BEGIN: additive county potential icons\n'
              '\txapo_county_potential_icons = {}\n'
              '\t# XAPO_END\n\n')
+ACTIVITY = "activity_xapo_potential_output"
+ACTIVE = f"IsGameViewDataShown( 'activity_planner', GetActivityType( '{ACTIVITY}' ) )"
+
+
+def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
+    from ck3_text_projection import named_block
+
+    source = native_text(game, NATIVE_FILES[0])
+    block = named_block(source, "widget", "activity_planner_widget")
+    old = source[block.start:block.end]
+    anchor = '\tflowcontainer = {\n'
+    added = ('\txapo_county_potential_icons = {}\n\n' + anchor +
+             f'\t\tvisible = "[Not( EqualTo_string( ActivityType.GetKey, \'{ACTIVITY}\' ) )]"\n')
+    new = old.replace(anchor, added, 1)
+    planner_anchor = '\tname = "activity_planner"\n'
+    planner_added = planner_anchor + f'\tvisible = "[Not( EqualTo_string( ActivityPlanner.GetActivityType.GetKey, \'{ACTIVITY}\' ) )]"\n'
+    return {NATIVE_FILES[0]: [(old, new)], NATIVE_FILES[5]: [(planner_anchor, planner_added)]}
 
 
 def framework_tools(framework: Path) -> None:
@@ -80,6 +98,10 @@ def catalog(game: Path) -> tuple[list[str], set[str], list[tuple[str, list[str]]
         raise ValueError("native goods must be nonempty and unique")
     if len(set(assigned)) != len(assigned) or not set(assigned) <= set(goods):
         raise ValueError("native need categories overlap or reference unknown goods")
+    potential = {block.key for block in blocks(native_text(game, NATIVE_FILES[4]))}
+    goods = [good for good in goods if good in potential]
+    basic &= set(goods)
+    categories = [(key, [good for good in members if good in potential]) for key, members in categories]
     categories.append(("xapo_misc", [good for good in goods if good not in assigned]))
     return goods, basic, categories
 
@@ -182,23 +204,23 @@ window = {{
     position = {{ -184 -112 }}
     size = {{ 140 36 }}
     movable = no
-    visible = "[And( GetPlayer.IsValid, CanChangeMapMode )]"
+    visible = "[And( GetPlayer.IsValid, Or( CanChangeMapMode, {ACTIVE} ) )]"
     alwaystransparent = yes
 
     button_standard = {{
         name = "xapo_open_map"
         size = {{ 100% 100% }}
-        visible = "[Not( IsMapMode( 'xapo_potential_output' ) )]"
+        visible = "[Not( {ACTIVE} )]"
         text = "xapo_potential_output"
         tooltip = "xapo_potential_output_desc"
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
-        onclick = "[SetMapMode( 'xapo_potential_output' )]"
+        onclick = "[OpenGameViewData( 'activity_planner', GetActivityType( '{ACTIVITY}' ) )]"
     }}
     button_standard = {{
         name = "xapo_toggle_panel"
         size = {{ 100% 100% }}
-        visible = "[IsMapMode( 'xapo_potential_output' )]"
+        visible = "[{ACTIVE}]"
         down = yes
         text = "xapo_potential_output"
         tooltip = "xapo_panel"
@@ -213,7 +235,7 @@ window = {{
     position = {{ -16 100 }}
     size = {{ 330 640 }}
     movable = no
-    visible = "[And( IsMapMode( 'xapo_potential_output' ), Not( GetVariableSystem.Exists( 'xapo_panel_collapsed' ) ) )]"
+    visible = "[And( {ACTIVE}, Not( GetVariableSystem.Exists( 'xapo_panel_collapsed' ) ) )]"
     using = Window_Background
     background = {{ using = Background_Area_Dark }}
 
@@ -240,6 +262,7 @@ window = {{
                 name = "xapo_exit_map"
                 size = {{ 28 28 }}
                 tooltip = "xapo_exit"
+                onclick = "[CloseGameView( 'activity_planner' )]"
                 onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
             }}
         }}
@@ -302,9 +325,13 @@ types XapoPotentialOutput {{
         direction = vertical
         allow_outside = yes
         ignoreinvisible = yes
-        visible = "[And( IsMapMode( 'xapo_potential_output' ), ObjectsEqual( ProvinceIcon.GetProvince, ProvinceIcon.GetProvince.GetCountyCapitalProvince ) )]"
-        visible_at_creation = no
-        datacontext = "[ProvinceIcon.GetProvince.GetCounty]"
+        visible = "[EqualTo_string( ActivityPlannerMapIcon.GetActivityType.GetKey, '{ACTIVITY}' )]"
+        datacontext = "[ActivityPlannerMapIcon.GetProvince.GetCounty]"
+
+        text_single = {{
+            text = "[County.GetTitle.GetNameNoTooltip] ([GetDataModelSize( County.GetPotentialTradeGoodTypes )])"
+            using = Font_Size_Small
+        }}
 
         flowcontainer = {{
             name = "xapo_filtered_potential_goods"
@@ -371,6 +398,39 @@ xapo_potential_output = {
 """
 
 
+def activity_type(goods: list[str]) -> str:
+    score = "\n".join(
+        f"        if = {{ limit = {{ county = {{ has_potential_for_trade_good = trade_good_type:{good} }} }} add = 1 }}"
+        for good in goods
+    )
+    return f"""# Display-only planner. Never exposed as a hostable activity.
+{ACTIVITY} = {{
+    is_shown = {{ always = no }}
+    can_plan = {{ always = yes }}
+    can_start = {{ always = no }}
+    can_always_plan = yes
+    is_valid = {{ always = no }}
+    province_filter = all
+    ai_province_filter = capital
+    is_location_valid = {{ is_county_capital = yes }}
+    province_score = {{
+        value = 0
+{score}
+    }}
+    phases = {{
+        xapo_display_phase = {{
+            is_predefined = yes
+            can_pick = {{ always = yes }}
+            is_valid = {{ always = no }}
+            duration = {{ days = 1 }}
+        }}
+    }}
+    ai_check_interval_by_tier = {{ barony = 0 county = 0 duchy = 0 kingdom = 0 empire = 0 hegemony = 0 }}
+    ai_will_do = {{ value = 0 }}
+}}
+"""
+
+
 def generated(game: Path) -> dict[str, bytes]:
     from ck3_text_projection import project
 
@@ -384,12 +444,14 @@ def generated(game: Path) -> dict[str, bytes]:
                            'tags={ "Utilities" "Interface" }\n'
                            'name="Potential Output (XA)"\n'
                            'supported_version="1.21.*"\n'),
-        "gui/map_icon_layer.gui": project(source, sha, [(ANCHOR, INSERTION + ANCHOR)]),
+        "gui/map_icon_layer.gui": project(source, sha, projections(game)[NATIVE_FILES[0]]),
+        "gui/window_activity_planner.gui": project(native_text(game, NATIVE_FILES[5]), json.loads(CONTRACT.read_text())["native_text_sha256"][NATIVE_FILES[5]], projections(game)[NATIVE_FILES[5]]),
         "gui/xapo_potential_output.gui": panel(goods, basic, categories),
         "gui/scripted_widgets/xapo_potential_output.txt":
             "gui/xapo_potential_output.gui = xapo_map_launcher\n"
             "gui/xapo_potential_output.gui = xapo_goods_panel\n",
         "gfx/map/map_modes/xapo_potential_output.txt": map_mode(),
+        "common/activities/activity_types/xapo_potential_output.txt": activity_type(goods),
     }
     output = {name: text.encode("utf-8-sig") for name, text in files.items()}
     localizations = json.loads(LOCALIZATION.read_text(encoding="utf-8"))
@@ -417,9 +479,9 @@ def validate(framework: Path, game: Path) -> dict:
     for relative, data in expected.items():
         if relative.endswith((".gui", ".txt", ".mod")):
             blocks(data.decode("utf-8-sig"))
-    sha = json.loads(CONTRACT.read_text())["native_text_sha256"][NATIVE_FILES[0]]
-    recover(actual["gui/map_icon_layer.gui"].decode("utf-8-sig"), sha,
-            [(ANCHOR, INSERTION + ANCHOR)])
+    for relative, replacements in projections(game).items():
+        sha = json.loads(CONTRACT.read_text())["native_text_sha256"][relative]
+        recover(actual[relative].decode("utf-8-sig"), sha, replacements)
     goods, _, _ = catalog(game)
     for good in goods:
         if not (game / f"game/gfx/interface/icons/trade/trade_goods/{good}.dds").is_file():

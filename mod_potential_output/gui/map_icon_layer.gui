@@ -38,10 +38,6 @@ widget = {
 	widgetanchor = center
 	allow_outside = yes
 
-	# XAPO_BEGIN: additive county potential icons
-	xapo_county_potential_icons = {}
-	# XAPO_END
-
 	### ALL ITEMS
 	flowcontainer = {
 		parentanchor = center
@@ -1914,7 +1910,10 @@ widget = {
 
 	allow_outside = yes
 
+	xapo_county_potential_icons = {}
+
 	flowcontainer = {
+		visible = "[Not( EqualTo_string( ActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
 		widgetanchor = bottom|hcenter
 
 		direction = vertical

@@ -11,3 +11,7 @@
  xapo_scope:0 "Inclut les ressources inexploitées. Les icônes indiquent les produits possibles, pas les quantités."
  xapo_panel:0 "Afficher / masquer le filtre"
  xapo_exit:0 "Revenir au mode de carte précédent"
+ activity_xapo_potential_output:0 "$xapo_potential_output$"
+ activity_xapo_potential_output_name:0 "$xapo_potential_output$"
+ xapo_display_phase:0 "$xapo_potential_output$"
+ xapo_display_phase_desc:0 "$xapo_potential_output$"

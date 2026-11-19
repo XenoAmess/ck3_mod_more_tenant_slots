@@ -7,6 +7,7 @@
     "gfx/map/map_modes/map_modes.txt": "81fc365ff94c35332241705dfb79e0ffdd6a085416f8fb3947aad6be2db473c9",
     "common/trade/trade_good_types/basic_trade_goods.txt": "88673b0296716c8bea0afac4bc2559a0c190c4df914cd48fd71ff8c52e655d1b",
     "common/trade/trade_good_categories/01_need_type_trade_good_categories.txt": "2bc3be7a7757094644ba57229106450e3691e62237a6abd221ef48afdd7221ba",
-    "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt": "d091714c8acc34c6f2d814109643eb426f33e4364b4e16f6e4d3659ac3b25ad1"
+    "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt": "d091714c8acc34c6f2d814109643eb426f33e4364b4e16f6e4d3659ac3b25ad1",
+    "gui/window_activity_planner.gui": "10b0c7636c66617e1484ceffc31fdb3cfcafc989f85d7e9fb1ced63f834b2ef8"
   }
 }

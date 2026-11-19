@@ -11,3 +11,7 @@
  xapo_scope:0 "Obejmuje niewykorzystane zasoby. Ikony wskazują możliwe towary, a nie wielkość produkcji."
  xapo_panel:0 "Pokaż / ukryj filtr towarów"
  xapo_exit:0 "Wróć do poprzedniego trybu mapy"
+ activity_xapo_potential_output:0 "$xapo_potential_output$"
+ activity_xapo_potential_output_name:0 "$xapo_potential_output$"
+ xapo_display_phase:0 "$xapo_potential_output$"
+ xapo_display_phase_desc:0 "$xapo_potential_output$"

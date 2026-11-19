@@ -11,3 +11,7 @@
  xapo_scope:0 "未開発の資源も含みます。アイコンは生産可能な品目を示し、生産量ではありません。"
  xapo_panel:0 "交易品フィルターを開閉"
  xapo_exit:0 "前の地図モードに戻る"
+ activity_xapo_potential_output:0 "$xapo_potential_output$"
+ activity_xapo_potential_output_name:0 "$xapo_potential_output$"
+ xapo_display_phase:0 "$xapo_potential_output$"
+ xapo_display_phase_desc:0 "$xapo_potential_output$"

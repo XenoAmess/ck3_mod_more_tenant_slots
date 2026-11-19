@@ -101,7 +101,7 @@ class PotentialOutputTests(unittest.TestCase):
 
     def test_generation_matches_complete_product_and_native_inputs(self) -> None:
         report = product.validate(self.framework, self.game)
-        self.assertEqual(report["goods"], 44)
+        self.assertEqual(report["goods"], 35)
         self.assertFalse(report["live_verified"])
         for good in self.goods:
             self.assertEqual(self.gui.count(f'name = "xapo_toggle_{good}"'), 1)
@@ -146,7 +146,7 @@ class PotentialOutputTests(unittest.TestCase):
 
     def test_map_reads_native_potential_and_shares_filter_keys(self) -> None:
         self.assertIn('datamodel = "[County.GetPotentialTradeGoodTypes]"', self.gui)
-        self.assertIn("ProvinceIcon.GetProvince.GetCountyCapitalProvince", self.gui)
+        self.assertIn("ActivityPlannerMapIcon.GetProvince.GetCounty", self.gui)
         self.assertIn("Concatenate( 'xapo_hidden_', TradeGoodType.GetTextIconNoFormat )", self.gui)
         potential = product.native_text(self.game, product.NATIVE_FILES[4])
         from ck3_text_projection import blocks
@@ -170,7 +170,7 @@ class PotentialOutputTests(unittest.TestCase):
 
         native = product.native_text(self.game, product.NATIVE_FILES[0])
         output = self.files[product.NATIVE_FILES[0]].decode("utf-8-sig")
-        replacements = [(product.ANCHOR, product.INSERTION + product.ANCHOR)]
+        replacements = product.projections(self.game)[product.NATIVE_FILES[0]]
         self.assertEqual(recover(output, digest(native), replacements), native)
         with self.assertRaises(ValueError):
             project(native + "# changed\n", digest(native), replacements)
@@ -186,7 +186,13 @@ class PotentialOutputTests(unittest.TestCase):
         descriptor = self.files["descriptor.mod"].decode("utf-8-sig")
         self.assertNotIn("remote_file_id", descriptor)
         self.assertNotIn("replace_path", descriptor)
-        self.assertFalse(any(p.startswith(("common/", "events/")) for p in self.files))
+        self.assertFalse(any(p.startswith("events/") for p in self.files))
+        self.assertEqual([p for p in self.files if p.startswith("common/")],
+                         ["common/activities/activity_types/xapo_potential_output.txt"])
+        activity = self.files["common/activities/activity_types/xapo_potential_output.txt"].decode("utf-8-sig")
+        self.assertIn("can_start = { always = no }", activity)
+        self.assertIn("is_shown = { always = no }", activity)
+        self.assertNotIn("on_start", activity)
 
 
 if __name__ == "__main__":

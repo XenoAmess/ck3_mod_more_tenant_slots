@@ -11,3 +11,7 @@
  xapo_scope:0 "미개발 자원을 포함합니다. 아이콘은 생산 가능한 품목을 나타내며 생산량을 뜻하지 않습니다."
  xapo_panel:0 "교역품 필터 열기 / 닫기"
  xapo_exit:0 "이전 지도 모드로 돌아가기"
+ activity_xapo_potential_output:0 "$xapo_potential_output$"
+ activity_xapo_potential_output_name:0 "$xapo_potential_output$"
+ xapo_display_phase:0 "$xapo_potential_output$"
+ xapo_display_phase_desc:0 "$xapo_potential_output$"

@@ -11,3 +11,7 @@
  xapo_scope:0 "Potential goods, including undeveloped resources. Icons show possible goods, not production quantities."
  xapo_panel:0 "Show / hide goods filter"
  xapo_exit:0 "Return to the previous map mode"
+ activity_xapo_potential_output:0 "$xapo_potential_output$"
+ activity_xapo_potential_output_name:0 "$xapo_potential_output$"
+ xapo_display_phase:0 "$xapo_potential_output$"
+ xapo_display_phase_desc:0 "$xapo_potential_output$"
