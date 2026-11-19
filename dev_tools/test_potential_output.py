@@ -187,6 +187,18 @@ class PotentialOutputTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             project(native + "# changed\n", digest(native), replacements)
 
+    def test_native_window_animation_stays_on_root(self) -> None:
+        from ck3_text_projection import blocks, named_block
+
+        text = self.files["gui/window_activity_planner.gui"].decode("utf-8-sig")
+        root = named_block(text, "window", "activity_planner")
+        states = [block for block in blocks(text) if block.key == "state" and root.opening < block.start < root.end]
+        for name in ("_show", "_hide"):
+            state = next(block for block in states if re.match(r"\s*name\s*=\s*" + name + r"\b", text[block.opening + 1:block.end]))
+            ancestors = [block for block in blocks(text) if block.opening < state.start < block.end]
+            self.assertEqual(ancestors, [root])
+        self.assertNotIn("xapo_seed_filters", self.gui)
+
     def test_build_is_deterministic_and_has_independent_identity(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             first = product.build(self.framework, self.game, Path(directory) / "a", "test-revision")

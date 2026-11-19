@@ -234,14 +234,6 @@
 # This is basically a duplication of the decision detail view
 window = {
 	name = "activity_list_detail_host"
-
-    alpha = "[Select_float( EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' ), '(float)0', '(float)1' )]"
-    state = {
-        name = "xapo_open_display"
-        trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
-        duration = 0.1
-        on_finish = "[ActivityListDetailHostView.Confirm]"
-    }
 	parentanchor = top|right
 	position = { -650 110 }
 	size = { 630 935 }
@@ -266,7 +258,9 @@ window = {
 		using = Sound_WindowHide_Standard
 	}
 
+    xapo_host_intro = {}
 	vbox = {
+        visible = "[Not( EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' ) )]"
 		using = Window_Margins
 
 		header_pattern = {

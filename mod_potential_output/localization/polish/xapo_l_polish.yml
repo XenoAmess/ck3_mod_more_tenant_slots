@@ -21,3 +21,4 @@
  activity_xapo_potential_output_guest_desc:0 "$xapo_potential_output_desc$"
  activity_xapo_potential_output_conclusion_desc:0 "$xapo_potential_output_desc$"
  xapo_legend:0 "Liczba pasujacych typow potencjalu: 0 to szary, wiecej to ciemniejszy kolor. Zbliz mape, aby zobaczyc ikony."
+ xapo_show_map:0 "Pokaz map?"

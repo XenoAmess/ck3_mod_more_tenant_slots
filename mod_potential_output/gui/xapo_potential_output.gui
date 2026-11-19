@@ -17,6 +17,76 @@ window = {
         tooltip = "xapo_potential_output_desc"
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'no' )]"
+
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'no' )]"
+
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( 'activity_xapo_potential_output' ) )]"
     }
     button_standard = {
@@ -31,6 +101,27 @@ window = {
 }
 
 types XapoPotentialOutput {
+    type xapo_host_intro = vbox {
+        using = Window_Margins
+        spacing = 20
+        visible = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
+        header_pattern = {
+            layoutpolicy_horizontal = expanding
+            blockoverride "header_text" { text = "xapo_potential_output" }
+            blockoverride "button_close" { onclick = "[ActivityListDetailHostView.Close]" }
+        }
+        text_multi = {
+            text = "xapo_potential_output_desc"
+            max_width = 550
+            autoresize = yes
+        }
+        button_primary = {
+            name = "xapo_show_map"
+            size = { 380 50 }
+            text = "xapo_show_map"
+            onclick = "[ActivityListDetailHostView.Confirm]"
+        }
+    }
 type xapo_goods_panel = widget {
     name = "xapo_goods_panel"
     layer = middle
@@ -1223,47 +1314,6 @@ type xapo_goods_panel = widget {
         position = { -200 -112 }
         size = { 160 36 }
         visible = "[And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
-        state = {
-            name = "xapo_seed_filters"
-            trigger_when = "[And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
-            duration = 0.1
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_grain', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_millet', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_rice', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_fish', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_fruit', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_oil', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_honey', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_tea', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_horses', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_cattle', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_silver', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_gold', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_iron', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_copper', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_wine', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_gems', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_amber', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_ivory', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_jade', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_wood', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_hemp', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_wool', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_cotton', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_flax', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_furs', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_sugar', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_spices', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_ceramics', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_silk', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_incense', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_medicaments', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_stone', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_salt', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_alum', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.AddOrSetOnCreationObject( 'xapo_hidden_trade_good_dyes', MakeScopeValue( Select_CFixedPoint( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'yes' ), '(CFixedPoint)1', '(CFixedPoint)0' ) ) )]"
-            on_finish = "[ActivityPlanner.StartLocationPicking]"
-        }
         button_standard = {
             size = { 120 36 }
             text = "xapo_potential_output"

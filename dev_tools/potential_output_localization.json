@@ -21,7 +21,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "Matching potential types: gray at 0, darker with more types. Zoom in for goods icons."
+    "xapo_legend": "Matching potential types: gray at 0, darker with more types. Zoom in for goods icons.",
+    "xapo_show_map": "Show map"
   },
   "simp_chinese": {
     "xapo_potential_output": "潜在产出",
@@ -45,7 +46,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "??????0 ??????????????????????"
+    "xapo_legend": "??????0 ??????????????????????",
+    "xapo_show_map": "????"
   },
   "french": {
     "xapo_potential_output": "Production potentielle",
@@ -69,7 +71,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "Types potentiels retenus : gris pour 0, plus sombre si plus nombreux. Zoomez pour les icones."
+    "xapo_legend": "Types potentiels retenus : gris pour 0, plus sombre si plus nombreux. Zoomez pour les icones.",
+    "xapo_show_map": "Afficher la carte"
   },
   "german": {
     "xapo_potential_output": "Produktionspotenzial",
@@ -93,7 +96,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "Passende Potenzialarten: Grau bei 0, dunkler bei mehr Arten. Fur Warensymbole heranzoomen."
+    "xapo_legend": "Passende Potenzialarten: Grau bei 0, dunkler bei mehr Arten. Fur Warensymbole heranzoomen.",
+    "xapo_show_map": "Karte anzeigen"
   },
   "japanese": {
     "xapo_potential_output": "潜在生産",
@@ -117,7 +121,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "??????????0??????????????????????????????"
+    "xapo_legend": "??????????0??????????????????????????????",
+    "xapo_show_map": "??????"
   },
   "korean": {
     "xapo_potential_output": "잠재 생산",
@@ -141,7 +146,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "??? ?? ?? ?: 0? ????, ???? ?????. ???? ?? ???? ?????."
+    "xapo_legend": "??? ?? ?? ?: 0? ????, ???? ?????. ???? ?? ???? ?????.",
+    "xapo_show_map": "?? ??"
   },
   "polish": {
     "xapo_potential_output": "Potencjał produkcji",
@@ -165,7 +171,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "Liczba pasujacych typow potencjalu: 0 to szary, wiecej to ciemniejszy kolor. Zbliz mape, aby zobaczyc ikony."
+    "xapo_legend": "Liczba pasujacych typow potencjalu: 0 to szary, wiecej to ciemniejszy kolor. Zbliz mape, aby zobaczyc ikony.",
+    "xapo_show_map": "Pokaz map?"
   },
   "russian": {
     "xapo_potential_output": "Потенциал производства",
@@ -189,7 +196,8 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "????? ????????? ????????????? ???????: ????? ??? 0, ?????? ??? ??????? ?????. ?????????? ????? ??? ???????."
+    "xapo_legend": "????? ????????? ????????????? ???????: ????? ??? 0, ?????? ??? ??????? ?????. ?????????? ????? ??? ???????.",
+    "xapo_show_map": "???????? ?????"
   },
   "spanish": {
     "xapo_potential_output": "Producción potencial",
@@ -213,6 +221,7 @@
     "activity_xapo_potential_output_host_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_guest_desc": "$xapo_potential_output_desc$",
     "activity_xapo_potential_output_conclusion_desc": "$xapo_potential_output_desc$",
-    "xapo_legend": "Tipos potenciales seleccionados: gris para 0, mas oscuro con mas tipos. Acerca el mapa para ver los iconos."
+    "xapo_legend": "Tipos potenciales seleccionados: gris para 0, mas oscuro con mas tipos. Acerca el mapa para ver los iconos.",
+    "xapo_show_map": "Mostrar mapa"
   }
 }

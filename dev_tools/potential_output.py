@@ -35,7 +35,7 @@ ACTIVE = f"And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPl
 
 
 def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
-    from ck3_text_projection import named_block
+    from ck3_text_projection import blocks, named_block
 
     source = native_text(game, NATIVE_FILES[0])
     block = named_block(source, "widget", "activity_planner_widget")
@@ -47,7 +47,7 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
     planner = native_text(game, NATIVE_FILES[5])
     planner_block = named_block(planner, "window", "activity_planner")
     planner_old = planner[planner_block.start:planner_block.end]
-    body_start = planner_old.index('\n\tstate = {')
+    body_start = next(b.end for b in blocks(planner_old) if b.key == 'state' and re.match(r'\s*name\s*=\s*_hide\b', planner_old[b.opening + 1:b.end]))
     planner_new = planner_old[:body_start] + f'''
     xapo_goods_panel = {{}}
     xapo_view_controls = {{}}
@@ -57,18 +57,16 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
         alwaystransparent = yes
         visible = "[Not( EqualTo_string( ActivityType.GetKey, '{ACTIVITY}' ) )]"
 ''' + planner_old[body_start:-1] + '\n    }\n}'
-    host_anchor = '\tname = "activity_list_detail_host"\n'
-    host_added = host_anchor + f'''
-    alpha = "[Select_float( EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' ), '(float)0', '(float)1' )]"
-    state = {{
-        name = "xapo_open_display"
-        trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' )]"
-        duration = 0.1
-        on_finish = "[ActivityListDetailHostView.Confirm]"
-    }}
-'''
+    host_source = native_text(game, NATIVE_FILES[6])
+    host_block = named_block(host_source, "window", "activity_list_detail_host")
+    host_old = host_source[host_block.start:host_block.end]
+    host_anchor = '\t vbox = {'.replace('\t ', '\t')
+    host_new = host_old.replace(host_anchor, f'''    xapo_host_intro = {{}}
+{host_anchor}
+        visible = "[Not( EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' ) )]"''', 1)
     return {NATIVE_FILES[0]: [(old, new)], NATIVE_FILES[5]: [(planner_old, planner_new)],
-            NATIVE_FILES[6]: [(host_anchor, host_added)]}
+            NATIVE_FILES[6]: [(host_old, host_new)]}
+
 
 
 def framework_tools(framework: Path) -> None:
@@ -144,10 +142,10 @@ def conjunction(expressions: list[str]) -> str:
     return result
 
 
-def set_goods(goods: list[str], value: str) -> str:
+def set_goods(goods: list[str], value: str, sync: bool = True) -> str:
     return "\n".join(
-        f'\t\t\t\t\tonclick = "[GetVariableSystem.Set( {hidden_key(good)}, {value} )]"\n'
-        f'\t\t\t\t\tonclick = "[{sync_good(good)}]"'
+        f'\t\t\t\t\tonclick = "[GetVariableSystem.Set( {hidden_key(good)}, {value} )]"\n' +
+        (f'\t\t\t\t\tonclick = "[{sync_good(good)}]"' if sync else '')
         for good in goods
     )
 
@@ -248,6 +246,7 @@ window = {{
         tooltip = "xapo_potential_output_desc"
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
+{set_goods(goods, "'no'", sync=False)}
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ) )]"
     }}
     button_standard = {{
@@ -262,6 +261,27 @@ window = {{
 }}
 
 types XapoPotentialOutput {{
+    type xapo_host_intro = vbox {{
+        using = Window_Margins
+        spacing = 20
+        visible = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' )]"
+        header_pattern = {{
+            layoutpolicy_horizontal = expanding
+            blockoverride "header_text" {{ text = "xapo_potential_output" }}
+            blockoverride "button_close" {{ onclick = "[ActivityListDetailHostView.Close]" }}
+        }}
+        text_multi = {{
+            text = "xapo_potential_output_desc"
+            max_width = 550
+            autoresize = yes
+        }}
+        button_primary = {{
+            name = "xapo_show_map"
+            size = {{ 380 50 }}
+            text = "xapo_show_map"
+            onclick = "[ActivityListDetailHostView.Confirm]"
+        }}
+    }}
 type xapo_goods_panel = widget {{
     name = "xapo_goods_panel"
     layer = middle
@@ -361,13 +381,6 @@ type xapo_goods_panel = widget {{
         position = {{ -200 -112 }}
         size = {{ 160 36 }}
         visible = "[{ACTIVE}]"
-        state = {{
-            name = "xapo_seed_filters"
-            trigger_when = "[{ACTIVE}]"
-            duration = 0.1
-{chr(10).join(f'            on_finish = "[{sync_good(good)}]"' for good in goods)}
-            on_finish = "[ActivityPlanner.StartLocationPicking]"
-        }}
         button_standard = {{
             size = {{ 120 36 }}
             text = "xapo_potential_output"
@@ -486,7 +499,7 @@ def activity_type(goods: list[str]) -> str:
     phases = {{
         phase_surveying = {{
             is_predefined = yes
-            is_valid = {{ always = no }}
+            is_valid = {{ always = yes }}
         }}
     }}
     ai_check_interval_by_tier = {{ barony = 0 county = 0 duchy = 0 kingdom = 0 empire = 0 hegemony = 0 }}

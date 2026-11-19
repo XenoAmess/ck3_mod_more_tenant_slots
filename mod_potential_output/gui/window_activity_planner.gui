@@ -11,14 +11,6 @@
 	datacontext = "[TravelPlanner.GetTravelPlanData]"
 	datacontext = "[GetVariableSystem]"
 
-    xapo_goods_panel = {}
-    xapo_view_controls = {}
-    widget = {
-        name = "xapo_native_planner_content"
-        size = { 100% 100% }
-        alwaystransparent = yes
-        visible = "[Not( EqualTo_string( ActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
-
 	state = {
 		name = _show
 		using = Animation_FadeIn_Quick
@@ -30,6 +22,14 @@
 		using = Animation_FadeOut_Quick
 		on_start = "[GetVariableSystem.Clear( 'activity_planner_hide_default_magnificence' )]"
 	}
+    xapo_goods_panel = {}
+    xapo_view_controls = {}
+    widget = {
+        name = "xapo_native_planner_content"
+        size = { 100% 100% }
+        alwaystransparent = yes
+        visible = "[Not( EqualTo_string( ActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
+
 
 	location_picking_help_text_widget = {
 		position = {0 160}
