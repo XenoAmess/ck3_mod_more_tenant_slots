@@ -239,7 +239,8 @@ window = {
     state = {
         name = "xapo_open_display"
         trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
-        on_start = "[ActivityListDetailHostView.Confirm]"
+        duration = 0.1
+        on_finish = "[ActivityListDetailHostView.Confirm]"
     }
 	parentanchor = top|right
 	position = { -650 110 }

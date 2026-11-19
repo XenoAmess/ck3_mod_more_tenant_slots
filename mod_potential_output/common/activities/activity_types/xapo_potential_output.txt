@@ -12,7 +12,8 @@ activity_xapo_potential_output = {
         value = 0
         if = { limit = { exists = county } county = { add = xapo_selected_potential_count } }
     }
-    max_guests = 0
+    max_guests = 1
+    can_be_activity_guest = { always = no }
     host_intents = { default = survey_overseer_intent intents = { survey_overseer_intent } }
     guest_intents = { default = survey_learning_intent_guest intents = { survey_learning_intent_guest } }
     header_background = "gfx/interface/illustrations/event_scenes/bp2_courtyard.dds"

@@ -9,7 +9,7 @@
         {
           "id": "map-filters",
           "budgets": {
-            "timeout": 7200,
+            "timeout": 21600,
             "quit_timeout": 90,
             "poll_interval": 1,
             "max_prepare_bytes": 536870912
@@ -25,7 +25,11 @@
             "category_filter",
             "panel_collapse",
             "mode_restore",
-            "zoom_display"
+            "zoom_display",
+            "potential_kind_shading",
+            "zero_single_multi_shading",
+            "no_actual_activity_started",
+            "normal_activity_planner"
           ]
         },
         {

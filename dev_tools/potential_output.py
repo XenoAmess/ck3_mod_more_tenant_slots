@@ -29,7 +29,6 @@ NATIVE_FILES = (
     "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt",
     "gui/window_activity_planner.gui",
     "gui/window_activity_list.gui",
-    "gui/window_activity_list.gui",
 )
 ACTIVITY = "activity_xapo_potential_output"
 ACTIVE = f"And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, '{ACTIVITY}' ) )"
@@ -64,7 +63,8 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
     state = {{
         name = "xapo_open_display"
         trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' )]"
-        on_start = "[ActivityListDetailHostView.Confirm]"
+        duration = 0.1
+        on_finish = "[ActivityListDetailHostView.Confirm]"
     }}
 '''
     return {NATIVE_FILES[0]: [(old, new)], NATIVE_FILES[5]: [(planner_old, planner_new)],
@@ -161,7 +161,7 @@ def count_context(goods: list[str]) -> str:
     return "GuiScope.SetRoot( County.GetTitle.MakeScope )" + "".join(
         f".AddScope( 'xapo_hidden_{good}', MakeScopeValue( Select_CFixedPoint( {is_hidden(good)}, '(CFixedPoint)1', '(CFixedPoint)0' ) ) )"
         for good in goods
-    ) + ".End"
+    )
 
 
 def good_button(good: str) -> str:
@@ -268,7 +268,6 @@ type xapo_goods_panel = widget {{
     parentanchor = top|right
     position = {{ -16 100 }}
     size = {{ 330 640 }}
-    movable = no
     visible = "[And( {ACTIVE}, Not( GetVariableSystem.Exists( 'xapo_panel_collapsed' ) ) )]"
     using = Window_Background
     background = {{ using = Background_Area_Dark }}
@@ -365,7 +364,9 @@ type xapo_goods_panel = widget {{
         state = {{
             name = "xapo_seed_filters"
             trigger_when = "[{ACTIVE}]"
-{chr(10).join(f'            on_start = "[{sync_good(good)}]"' for good in goods)}
+            duration = 0.1
+{chr(10).join(f'            on_finish = "[{sync_good(good)}]"' for good in goods)}
+            on_finish = "[ActivityPlanner.StartLocationPicking]"
         }}
         button_standard = {{
             size = {{ 120 36 }}
@@ -477,7 +478,8 @@ def activity_type(goods: list[str]) -> str:
         value = 0
         if = {{ limit = {{ exists = county }} county = {{ add = xapo_selected_potential_count }} }}
     }}
-    max_guests = 0
+    max_guests = 1
+    can_be_activity_guest = {{ always = no }}
     host_intents = {{ default = survey_overseer_intent intents = {{ survey_overseer_intent }} }}
     guest_intents = {{ default = survey_learning_intent_guest intents = {{ survey_learning_intent_guest }} }}
     header_background = "gfx/interface/illustrations/event_scenes/bp2_courtyard.dds"
