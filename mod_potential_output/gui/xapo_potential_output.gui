@@ -39,6 +39,7 @@ window = {
     movable = no
     visible = "[And( IsMapMode( 'xapo_potential_output' ), Not( GetVariableSystem.Exists( 'xapo_panel_collapsed' ) ) )]"
     using = Window_Background
+    background = { using = Background_Area_Dark }
 
     vbox = {
         margin = { 14 14 }
@@ -70,7 +71,8 @@ window = {
             text = "xapo_hint"
             max_width = 298
             autoresize = yes
-            default_format = "#small;weak"
+            default_format = "#weak"
+            using = Font_Size_Small
         }
         hbox = {
             spacing = 8
@@ -78,107 +80,108 @@ window = {
                 name = "xapo_select_all"
                 size = { 142 32 }
                 text = "xapo_all"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), 'no' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'no' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), 'no' )]"
             }
             button_standard = {
                 name = "xapo_clear_all"
                 size = { 142 32 }
                 text = "xapo_none"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), 'yes' )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'yes' )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), 'yes' )]"
             }
         }
         text_single = {
             name = "xapo_no_goods_selected"
             text = "xapo_empty"
-            visible = "[And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), 'yes' ), GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), 'yes' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )]"
+            visible = "[And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'yes' ), And( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'yes' ), GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), 'yes' ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )]"
             default_format = "#high"
-            parentanchor = hcenter
+            layoutpolicy_horizontal = expanding
+            align = center|nobaseline
         }
         scrollbox = {
             name = "xapo_goods_scroll"
@@ -192,7 +195,8 @@ window = {
                 text = "xapo_basic"
                 margin_top = 8
                 margin_bottom = 6
-                parentanchor = hcenter
+                layoutpolicy_horizontal = expanding
+                align = center|nobaseline
                 using = Font_Size_Medium
             }
             
@@ -205,9 +209,9 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_alcohol"
                 tooltip = "trade_category_alcohol"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), 'yes' ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'yes' ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -218,14 +222,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_beer"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_beer.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_beer' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_beer' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -234,14 +238,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_wine"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_wine.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wine' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wine' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -257,10 +261,10 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_cereals"
                 tooltip = "trade_category_cereals"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), 'yes' ) ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'yes' ) ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -271,14 +275,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_grain"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_grain.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_grain' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -287,14 +291,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_millet"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_millet.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_millet' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_millet' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -303,14 +307,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_rice"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_rice.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_rice' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_rice' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -326,9 +330,9 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_meat"
                 tooltip = "trade_category_meat"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), 'yes' ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'yes' ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -339,14 +343,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_meat"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_meat.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_meat' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_meat' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -355,14 +359,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_fish"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_fish.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fish' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fish' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -378,9 +382,9 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_beasts_of_burden"
                 tooltip = "trade_category_beasts_of_burden"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), 'yes' ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'yes' ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -391,14 +395,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_horses"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_horses.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_horses' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_horses' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -407,14 +411,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_cattle"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_cattle.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cattle' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cattle' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -430,9 +434,9 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_carpentry_supplies"
                 tooltip = "trade_category_carpentry_supplies"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), 'yes' ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'yes' ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -443,14 +447,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_wood"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_wood.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wood' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wood' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -459,14 +463,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_hemp"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_hemp.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_hemp' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_hemp' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -482,9 +486,9 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_base_metals"
                 tooltip = "trade_category_base_metals"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), 'yes' ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'yes' ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -495,14 +499,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_iron"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_iron.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_iron' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_iron' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -511,14 +515,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_copper"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_copper.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_copper' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_copper' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -534,9 +538,9 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_precious_metals"
                 tooltip = "trade_category_precious_metals"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), 'yes' ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'yes' ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -547,14 +551,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_silver"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_silver.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silver' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silver' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -563,14 +567,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_gold"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_gold.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gold' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gold' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -586,8 +590,8 @@ window = {
                 size = { 64 40 }
                 text = "xapo_misc"
                 tooltip = "xapo_misc"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), 'yes' ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'yes' ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -598,14 +602,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_stone"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_stone.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_stone' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_stone' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -617,7 +621,8 @@ window = {
                 text = "xapo_other"
                 margin_top = 8
                 margin_bottom = 6
-                parentanchor = hcenter
+                layoutpolicy_horizontal = expanding
+                align = center|nobaseline
                 using = Font_Size_Medium
             }
             
@@ -630,12 +635,12 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_comforts"
                 tooltip = "trade_category_comforts"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), 'yes' ) ) ) ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'yes' ) ) ) ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -646,14 +651,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_cheese"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_cheese.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cheese' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cheese' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -662,14 +667,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_fruit"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_fruit.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_fruit' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_fruit' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -678,14 +683,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_oil"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_oil.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_oil' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_oil' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -694,14 +699,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_honey"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_honey.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_honey' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_honey' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -710,14 +715,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_tea"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_tea.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_tea' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_tea' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -733,10 +738,10 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_clothes"
                 tooltip = "trade_category_clothes"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), 'yes' ) ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), 'yes' ) ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -747,14 +752,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_textiles"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_textiles.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_textiles' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_textiles' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -763,14 +768,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_furs"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_furs.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_furs' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_furs' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -779,14 +784,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_leather"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_leather.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_leather' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_leather' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -802,10 +807,10 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_fabrics"
                 tooltip = "trade_category_fabrics"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), 'yes' ) ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'yes' ) ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -816,14 +821,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_wool"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_wool.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_wool' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_wool' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -832,14 +837,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_cotton"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_cotton.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_cotton' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_cotton' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -848,14 +853,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_flax"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_flax.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_flax' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_flax' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -871,12 +876,12 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_luxury_items"
                 tooltip = "trade_category_luxury_items"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), 'yes' ) ) ) ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'yes' ) ) ) ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -887,14 +892,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_ceramics"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_ceramics.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ceramics' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ceramics' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -903,14 +908,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_glass"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_glass.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_glass' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_glass' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -919,14 +924,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_jewelry"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_jewelry.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jewelry' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jewelry' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -935,14 +940,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_lacquerware"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_lacquerware.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_lacquerware' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_lacquerware' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -951,14 +956,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_silk"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_silk.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_silk' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_silk' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -974,11 +979,11 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_jewelry_materials"
                 tooltip = "trade_category_jewelry_materials"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), 'yes' ) ) ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'yes' ) ) ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -989,14 +994,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_gems"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_gems.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_gems' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_gems' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1005,14 +1010,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_amber"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_amber.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_amber' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_amber' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1021,14 +1026,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_ivory"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_ivory.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_ivory' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_ivory' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1037,14 +1042,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_jade"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_jade.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_jade' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_jade' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1060,9 +1065,9 @@ window = {
                 size = { 64 40 }
                 text = "trade_category_luxury_consumption"
                 tooltip = "trade_category_luxury_consumption"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), 'yes' ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'yes' ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -1073,14 +1078,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_sugar"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_sugar.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_sugar' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_sugar' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1089,14 +1094,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_spices"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_spices.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_spices' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_spices' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1112,13 +1117,13 @@ window = {
                 size = { 64 40 }
                 text = "xapo_misc"
                 tooltip = "xapo_misc"
-                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), 'yes' ) ) ) ) ) ) ), 'yes', 'no' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
-					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+                onclick = "[GetVariableSystem.Set( 'xapo_batch_hide', Select_CString( And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'yes' ) ), And( Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'yes' ) ), Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), 'yes' ) ) ) ) ) ) ), 'yes', 'no' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
+					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), GetVariableSystem.Get( 'xapo_batch_hide' ) )]"
             }
             flowcontainer = {
                 wrap_count = 5
@@ -1129,14 +1134,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_incense"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_incense.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_incense' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_incense' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1145,14 +1150,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_medicaments"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_medicaments.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_medicaments' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_medicaments' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1161,14 +1166,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_salt"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_salt.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_salt' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_salt' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1177,14 +1182,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_alum"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_alum.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_alum' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_alum' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1193,14 +1198,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_dyes"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_dyes.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_dyes' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_dyes' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1209,14 +1214,14 @@ window = {
                 size = { 40 40 }
                 tooltip = "trade_good_books_paper"
                 using = tooltip_ne
-                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), 'yes' ) )]"
-                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), 'yes' ), 'no', 'yes' ) )]"
+                down = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), 'yes' ) )]"
+                onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), Select_CString( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), 'yes' ), 'no', 'yes' ) )]"
                 icon = {
                     size = { 32 32 }
                     parentanchor = center
                     alwaystransparent = yes
                     texture = "gfx/interface/icons/trade/trade_goods/trade_good_books_paper.dds"
-                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', Localize( 'trade_good_books_paper' ) ), 'yes' ), '(float)0.25', '(float)1' )]"
+                    alpha = "[Select_float( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_books_paper' ).GetTextIconNoFormat ), 'yes' ), '(float)0.25', '(float)1' )]"
                 }
             }
 
@@ -1231,7 +1236,8 @@ window = {
             text = "xapo_scope"
             max_width = 298
             autoresize = yes
-            default_format = "#small;weak"
+            default_format = "#weak"
+            using = Font_Size_Small
         }
     }
 }
@@ -1245,6 +1251,7 @@ types XapoPotentialOutput {
         allow_outside = yes
         ignoreinvisible = yes
         visible = "[And( IsMapMode( 'xapo_potential_output' ), ObjectsEqual( ProvinceIcon.GetProvince, ProvinceIcon.GetProvince.GetCountyCapitalProvince ) )]"
+        visible_at_creation = no
         datacontext = "[ProvinceIcon.GetProvince.GetCounty]"
 
         flowcontainer = {
@@ -1256,7 +1263,7 @@ types XapoPotentialOutput {
             item = {
                 icon = {
                     name = "xapo_potential_good"
-                    visible = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', TradeGoodType.GetName ), 'yes' ) )]"
+                    visible = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', TradeGoodType.GetTextIconNoFormat ), 'yes' ) )]"
                     size = { 26 26 }
                     texture = "[TradeGoodType.GetSmallIcon]"
                     tooltipwidget = trade_good_type_tooltip

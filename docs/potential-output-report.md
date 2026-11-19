@@ -12,7 +12,7 @@
 
 界面入口与面板通过 `gui/scripted_widgets` 注册。面板按原版 need category 与 basic 标记分组，共44种商品。商品、分类、全选和清空只修改本机 `GetVariableSystem` 状态；多选按并集展示。不运行事件、on_action、决议、脚本效果或存档迁移；AI与经济状态不变。关闭面板保留当前筛选，关闭视角返回进入前的地图模式；退出游戏后筛选回到默认全选。
 
-筛选的共同键由 `xapo_hidden_` 与原版商品名称构成，面板用 `Localize(native_good_key)`、地图用 `TradeGoodType.GetName`。这些键只在当前语言的 GUI 会话存在，不入存档。未知新增商品、同名商品和全图转换 mod 尚未验收，不宣称兼容。
+筛选的共同键由 `xapo_hidden_` 与原版 `TradeGoodType.GetTextIconNoFormat` 构成，面板通过已核对的 `GetTradeGoodType(native_good_key)` 取同一对象。键不依赖翻译或名称中的 tooltip 格式，只在 GUI 会话存在，不入存档。未知新增商品和全图转换 mod 尚未验收，不宣称兼容。
 
 ## 覆盖与升级风险
 
@@ -48,3 +48,7 @@
 通过官方调试控制台生成本构建 `script_docs` 和 `dump_data_types`，用来核对数据接口；原件只留隔离 profile，不搬入框架或产品。新发现 `GetTradeGoodType(key)` 全局 getter 和 `TradeGoodType.GetTextIconNoFormat` 确实注册，可据此使用不依赖语言的共同筛选键。数据类型注册仅证明接口存在，不证明地图图标已正确分配。
 
 本轮实际保存12,319,604字节私有存档，原生退出桌面，公共 runner 正常结束；keeper 与 screen 释放已读回。无业务签核，共享 verify 返回非零，保留 RED；进程正常结束不代表功能通过。下一包修复布局、筛选键与地图图标路径后重验。归属：具体失败与产品修复留本仓；可复用的原生 GUI 接口研究在查明并验证后再富化框架。
+
+## R0001 后续修复候选
+
+已移除布局内的文本锚点、改用原生小字号样式，并增加不透明面板背景。共同筛选键改读原生商品 text-icon token。地图候选切换为原版 `economy_buildings` 着色／holding 选择来检查原生省份图标的创建路径；这时底图颜色仍是原生经济底图，不代表商品潜力。商品潜力真值仍仅来自县的潜在商品列表，是否正确绘制须在下一场实际核对。七项离线合同及双构建再次通过（6.450秒），不授实机通过。

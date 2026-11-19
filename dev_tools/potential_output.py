@@ -85,9 +85,9 @@ def catalog(game: Path) -> tuple[list[str], set[str], list[tuple[str, list[str]]
 
 
 def hidden_key(good: str) -> str:
-    # GetName is a documented native TradeGoodType getter. Localized names are
-    # session-local keys only; no names or selections are written to a save.
-    return f"Concatenate( 'xapo_hidden_', Localize( '{good}' ) )"
+    # Both getters were confirmed by this build's dump_data_types. The native
+    # text-icon token identifies the good independently of language or markup.
+    return f"Concatenate( 'xapo_hidden_', GetTradeGoodType( '{good}' ).GetTextIconNoFormat )"
 
 
 def is_hidden(good: str) -> str:
@@ -168,7 +168,8 @@ def panel(goods: list[str], basic: set[str], categories: list[tuple[str, list[st
                 text = "{'xapo_basic' if basic_section else 'xapo_other'}"
                 margin_top = 8
                 margin_bottom = 6
-                parentanchor = hcenter
+                layoutpolicy_horizontal = expanding
+                align = center|nobaseline
                 using = Font_Size_Medium
             }}
             {''.join(rows)}
@@ -214,6 +215,7 @@ window = {{
     movable = no
     visible = "[And( IsMapMode( 'xapo_potential_output' ), Not( GetVariableSystem.Exists( 'xapo_panel_collapsed' ) ) )]"
     using = Window_Background
+    background = {{ using = Background_Area_Dark }}
 
     vbox = {{
         margin = {{ 14 14 }}
@@ -245,7 +247,8 @@ window = {{
             text = "xapo_hint"
             max_width = 298
             autoresize = yes
-            default_format = "#small;weak"
+            default_format = "#weak"
+            using = Font_Size_Small
         }}
         hbox = {{
             spacing = 8
@@ -267,7 +270,8 @@ window = {{
             text = "xapo_empty"
             visible = "[{conjunction([is_hidden(g) for g in goods])}]"
             default_format = "#high"
-            parentanchor = hcenter
+            layoutpolicy_horizontal = expanding
+            align = center|nobaseline
         }}
         scrollbox = {{
             name = "xapo_goods_scroll"
@@ -284,7 +288,8 @@ window = {{
             text = "xapo_scope"
             max_width = 298
             autoresize = yes
-            default_format = "#small;weak"
+            default_format = "#weak"
+            using = Font_Size_Small
         }}
     }}
 }}
@@ -298,6 +303,7 @@ types XapoPotentialOutput {{
         allow_outside = yes
         ignoreinvisible = yes
         visible = "[And( IsMapMode( 'xapo_potential_output' ), ObjectsEqual( ProvinceIcon.GetProvince, ProvinceIcon.GetProvince.GetCountyCapitalProvince ) )]"
+        visible_at_creation = no
         datacontext = "[ProvinceIcon.GetProvince.GetCounty]"
 
         flowcontainer = {{
@@ -309,7 +315,7 @@ types XapoPotentialOutput {{
             item = {{
                 icon = {{
                     name = "xapo_potential_good"
-                    visible = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', TradeGoodType.GetName ), 'yes' ) )]"
+                    visible = "[Not( GetVariableSystem.HasValue( Concatenate( 'xapo_hidden_', TradeGoodType.GetTextIconNoFormat ), 'yes' ) )]"
                     size = {{ 26 26 }}
                     texture = "[TradeGoodType.GetSmallIcon]"
                     tooltipwidget = trade_good_type_tooltip
@@ -328,11 +334,11 @@ def map_mode() -> str:
     # all native map modes, trade selections and economy state untouched.
     return """# Independent county view; potential goods are native GUI data.
 xapo_potential_output = {
-    color_mode = dejure_counties
+    color_mode = economy_buildings
     small_map_names = dejure_counties
     large_map_names = dejure_counties
-    selection = county_capital_holdings
-    select_holdings_on_close_zoom = no
+    selection = holding
+    select_holdings_on_close_zoom = yes
     fill_in_impassable = no
     barony_description = DEJURE_COUNTIES_MAPMODE_TOOLTIP
     gradient_parameters = {

@@ -47,6 +47,9 @@ class GuiActions:
         expression = expression.strip()
         if expression.startswith("'") and expression.endswith("'"):
             return expression[1:-1]
+        good = re.fullmatch(r"GetTradeGoodType\(\s*'([^']+)'\s*\)\.GetTextIconNoFormat", expression)
+        if good:
+            return f"@{good[1]}!"
         match = re.fullmatch(r"([\w.]+)\s*\((.*)\)", expression)
         if not match:
             raise AssertionError(f"unsupported GUI expression: {expression}")
@@ -83,7 +86,7 @@ class GuiActions:
             self.evaluate(action)
 
     def visible(self, good: str) -> bool:
-        return self.values.get(f"xapo_hidden_localized:{good}") != "yes"
+        return self.values.get(f"xapo_hidden_@{good}!") != "yes"
 
 
 class PotentialOutputTests(unittest.TestCase):
@@ -144,7 +147,7 @@ class PotentialOutputTests(unittest.TestCase):
     def test_map_reads_native_potential_and_shares_filter_keys(self) -> None:
         self.assertIn('datamodel = "[County.GetPotentialTradeGoodTypes]"', self.gui)
         self.assertIn("ProvinceIcon.GetProvince.GetCountyCapitalProvince", self.gui)
-        self.assertIn("Concatenate( 'xapo_hidden_', TradeGoodType.GetName )", self.gui)
+        self.assertIn("Concatenate( 'xapo_hidden_', TradeGoodType.GetTextIconNoFormat )", self.gui)
         potential = product.native_text(self.game, product.NATIVE_FILES[4])
         from ck3_text_projection import blocks
 
