@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "process_pass": true,
+  "closure_pass": true,
+  "normal_gui_quit": true,
+  "cache_load": {
+    "loaded": true,
+    "exact_cache": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\cache-prepared-a01\\workshop-cache-exact-formal.json",
+      "bytes": 6745,
+      "sha256": "6ce1102199c32da4f9d80b30550686d3c8f5bb905f9d809459efb4af386232ef"
+    },
+    "engine_log": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\published-cache-a01\\profile\\logs\\debug.log",
+      "bytes": 500537,
+      "sha256": "077df16126152418aa1f357deaa6c44c75e9c4c92b2b0b01897dda8b2e942299"
+    },
+    "mounted_log_lines": [
+      {
+        "line": 100,
+        "text": "[15:12:58][D][virtualfilesystem_physfs.cpp:814]: Mounted Data: C:/SteamLibrary/steamapps/workshop/content/1158310/3842767123"
+      }
+    ],
+    "enabled_log_lines": [
+      {
+        "line": 67,
+        "text": "Potential Output (XA)|mod/product.mod|Enabled"
+      }
+    ],
+    "cache_path": "C:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\3842767123",
+    "file_count": 23,
+    "item_id": "3842767123"
+  },
+  "case_acceptance_pass": true,
+  "cache_acceptance_pass": true,
+  "business_contract_applicable": false,
+  "gui_business_pass": false,
+  "business_pass": false,
+  "product_release_pass": false,
+  "native_capability_pass": false,
+  "evidence": [
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0012\\review\\072005108237-click.png",
+      "bytes": 2454082,
+      "sha256": "19f5af343125eee34d847ca589996ec373a258297c4c91dca7ffe81a5a0b3aa2"
+    },
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0012\\review\\072031091697-click.png",
+      "bytes": 725011,
+      "sha256": "e048c5c052d1e0c63d553f0ed67646d9cae3a49e90db9a61049a7e321275588b"
+    },
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0012\\review\\072031091697-click.png.json",
+      "bytes": 1806,
+      "sha256": "82a882bef34cf3f0f6c908730f5c01deebc23cc1251fe0d71dc6c6b7cc9cf93e"
+    }
+  ]
+}

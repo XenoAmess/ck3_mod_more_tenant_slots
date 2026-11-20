@@ -1,0 +1,17 @@
+{
+  "source": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\published-cache-a01\\profile\\logs\\debug.log",
+    "bytes": 500537,
+    "sha256": "077df16126152418aa1f357deaa6c44c75e9c4c92b2b0b01897dda8b2e942299"
+  },
+  "lines": [
+    {
+      "line": 67,
+      "text": "Potential Output (XA)|mod/product.mod|Enabled"
+    },
+    {
+      "line": 100,
+      "text": "[15:12:58][D][virtualfilesystem_physfs.cpp:814]: Mounted Data: C:/SteamLibrary/steamapps/workshop/content/1158310/3842767123"
+    }
+  ]
+}

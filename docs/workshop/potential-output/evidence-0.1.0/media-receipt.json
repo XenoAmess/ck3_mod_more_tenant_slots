@@ -1,0 +1,52 @@
+{
+  "additional_preview_changes": {
+    "add": [
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\01-overview.jpg",
+        "sha256": "5ecdfb29988dae4313dfe147c90d4c865f2d1b85cebf98f757f315a8bdb01b8b",
+        "size": 567629
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\02-county-goods.jpg",
+        "sha256": "d5ad2760ec668e994a0a077afc91ecca2801d46670d2f3d223a8018aab5d398b",
+        "size": 825519
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\03-single-grain.jpg",
+        "sha256": "927d28262730d46b257e5893b6964e5cfd651f944ff2cc822d57f833c6ee18a2",
+        "size": 701380
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\04-multiple-goods.jpg",
+        "sha256": "421deeb5067f69a4d5206faf6d00c870234ddfd8ed2eba40da0d6be53b725dd8",
+        "size": 703157
+      }
+    ],
+    "remove_indices": [],
+    "update": []
+  },
+  "additional_previews_before": {
+    "app_id": 1158310,
+    "item_id": "3842767123",
+    "previews": []
+  },
+  "app_id": 1158310,
+  "created_at": "2026-11-20T05:16:13.640279+00:00",
+  "item_id": "3842767123",
+  "legal_agreement_required": false,
+  "operation": "update",
+  "operation_id": "xapo-0.1.0-media-20261120-a01",
+  "payload_sha256": "024d0f9fdcbc6bbe394a18d2eaabe4980a3c353c2b7e23b0fd8f5b9871137779",
+  "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+  "stage": "complete",
+  "steam_result": 1,
+  "submitted_at": "2026-11-20T05:16:32.980637+00:00",
+  "tags": [
+    "Interface",
+    "Utilities",
+    "1.21 'Florin'"
+  ],
+  "tags_only": false,
+  "update_scope": "content_and_metadata",
+  "updated_at": "2026-11-20T05:16:32.980661+00:00"
+}

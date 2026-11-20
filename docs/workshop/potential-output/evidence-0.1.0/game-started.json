@@ -1,0 +1,32 @@
+{
+  "at_utc": "2026-11-20T07:12:53.540393+00:00",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0012",
+  "pid": 29640,
+  "argv": [
+    "C:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\binaries\\ck3.exe",
+    "-userdir=D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\published-cache-a01\\profile",
+    "-debug_mode"
+  ],
+  "retained_original_popen": true,
+  "native_injection": false,
+  "language": "simp_chinese",
+  "review": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\prelaunch-workshop_cache-a01-offline.json",
+    "bytes": 2338,
+    "sha256": "04defe8244abf4d0c107e338833c5cd03d2f4631301a13671b9d9a3031bff335"
+  },
+  "background_offline_admission": {
+    "schema": "ck3-mod-acceptance-background-offline-admission-v1",
+    "machine_id": "pc-20260924rtuf-f11af23c08",
+    "observed_at_utc": "2026-11-20T07:12:50.961777+00:00",
+    "receipt": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\prelaunch-workshop_cache-a01-offline.json",
+      "bytes": 2338,
+      "sha256": "04defe8244abf4d0c107e338833c5cd03d2f4631301a13671b9d9a3031bff335"
+    },
+    "steam_pid": 15364,
+    "steam_birth_filetime": "134394913645915363",
+    "observation_method": "native_current_user_byte",
+    "background_only": true
+  }
+}

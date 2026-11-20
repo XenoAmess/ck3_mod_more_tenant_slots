@@ -1,6 +1,6 @@
 # 潜在产出：实现与验收记录
 
-更新：2026-11-20。独立产品 `mod_potential_output/`，版本 0.1.0。**已完成本地实现、静态验证与简中实机验收；未发布 Workshop。** 使用方式见[玩家说明](potential-output-usage.md)，原版定义见[研究报告](potential-output-definition.md)。
+更新：2026-11-20。独立产品 `mod_potential_output/`，版本 0.1.0。**已完成本地实现、静态验证、简中实机验收及 Workshop 正式发布。** [工坊条目 3842767123](https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123)、[发布回执与范围](workshop/potential-output/publication-0.1.0.md)。使用方式见[玩家说明](potential-output-usage.md)，原版定义见[研究报告](potential-output-definition.md)。
 
 ## 最终行为与依据
 
@@ -34,7 +34,9 @@ R0011 从冻结正式构建冷启动，没有热改 profile 或诊断控件。�
 
 ## 交付与兼容
 
-可用 ZIP：`artifacts/potential-output-20261119/tested-build-a11/mod_potential_output.zip`，64056 字节，SHA-256 `955e9ee13b4e2e3db1bd4eb50e122d94aeb7bfff059c5cbf70200ede4eb1d4e5`。同目录 manifest 绑定上述代码提交，`product=mod_potential_output`、`workshop_item_id=null`。未上传或更新任何工坊条目。
+可用 ZIP：`artifacts/potential-output-20261119/tested-build-a11/mod_potential_output.zip`，64056 字节，SHA-256 `955e9ee13b4e2e3db1bd4eb50e122d94aeb7bfff059c5cbf70200ede4eb1d4e5`。同目录 manifest 绑定上述代码提交，`product=mod_potential_output`、`workshop_item_id=null`，保留为发布前实测记录。正式 tag `potential-output-v0.1.0-ck3-1.21.0` 的两次构建与实测 23 文件完全一致，首次发布后另存[含 canonical ID 的清单](workshop/potential-output/evidence-0.1.0/release-manifest.json)，不改写原 tag、构建或运行文件。
+
+正式发布包含四张真实游戏截图及正文穿插图，公开标题、完整说明和更新日志均回读一致。首次中文标题因 PowerShell 管道将 Python 字面量转为问号，已更新同一条目并在匿名 API 和浏览器中核对修复。R0012 从 Steam 实际下载目录启用并挂载，23 文件精确匹配；正常 GUI 退出、原进程 0、keeper 与 CAS 释放及最终 Steam 离线均通过。其间本机已更新为 1.21.0.3／build26785313，本次缓存验收只证明该版本的菜单加载；上文地图与旧存档功能实测仍属 1.21.0／build26757580，不将缓存加载写成新版本完整功能验收。
 
 需要投影三份原版 GUI：`gui/map_icon_layer.gui`、`gui/window_activity_planner.gui`、`gui/window_activity_list.gui`；依赖原文 hash 改变即拒绝生成。每份投影能逆恢复固定原版全文。其他覆盖同路径的 Mod 需要合并补丁。全图县数据模型复用原版，地图图标只放在县首府；四张透明 DDS 为自行生成的占位资产，没有打包参考截图或复制其他游戏素材。
 

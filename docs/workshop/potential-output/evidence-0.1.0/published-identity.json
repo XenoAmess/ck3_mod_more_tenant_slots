@@ -1,0 +1,14 @@
+{
+  "original_manifest": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\formal-build-a01\\mod_potential_output.manifest.json",
+    "bytes": 4277,
+    "sha256": "2fe5d0a5a3c744b5c2f614bd252b11c4339a4e7a3d5df4e5dbfd988aa9fb90cc"
+  },
+  "published_manifest": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\published-identity.manifest.json",
+    "bytes": 4285,
+    "sha256": "28f71194ce4fed0c05ec5f1d4c35da3d178a4047022b22f4bbcc73d0183f0409"
+  },
+  "payload_unchanged": true,
+  "reason": "Assign the newly created canonical ID to an immutable sidecar; original tag build and runtime payload remain unchanged. No rebuild against the subsequently updated game."
+}

@@ -1,0 +1,26 @@
+{
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0012",
+  "case": "workshop_cache",
+  "reviewer": "Codex Root",
+  "direct_image_review": true,
+  "passed": true,
+  "normal_gui_quit": true,
+  "normal_quit_evidence": [
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0012\\review\\072005108237-click.png",
+      "bytes": 2454082,
+      "sha256": "19f5af343125eee34d847ca589996ec373a258297c4c91dca7ffe81a5a0b3aa2"
+    },
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0012\\review\\072031091697-click.png",
+      "bytes": 725011,
+      "sha256": "e048c5c052d1e0c63d553f0ed67646d9cae3a49e90db9a61049a7e321275588b"
+    },
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0012\\review\\072031091697-click.png.json",
+      "bytes": 1806,
+      "sha256": "82a882bef34cf3f0f6c908730f5c01deebc23cc1251fe0d71dc6c6b7cc9cf93e"
+    }
+  ],
+  "observations": "Directly reviewed actual Simplified Chinese main menu on Florin 1.21.0.3, then clicked Quit to Desktop. No campaign or business scenarios repeated; actual cache mount is verified from debug.log by the common verifier."
+}

@@ -1,0 +1,22 @@
+{
+  "app_id": 1158310,
+  "create_result": 1,
+  "created_at": "2026-11-20T05:03:47.905414+00:00",
+  "item_id": "3842767123",
+  "legal_agreement_required": false,
+  "operation": "create",
+  "operation_id": "xapo-0.1.0-create-20261120-a01",
+  "payload_sha256": "a1b44fbb676c1bd6a7fa0758ea5b9c81e7b08d950395e2dd23791433a4004728",
+  "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+  "stage": "complete",
+  "steam_result": 1,
+  "submitted_at": "2026-11-20T05:04:06.521195+00:00",
+  "tags": [
+    "Interface",
+    "Utilities",
+    "1.21 'Florin'"
+  ],
+  "tags_only": false,
+  "update_scope": "content_and_metadata",
+  "updated_at": "2026-11-20T05:04:06.521220+00:00"
+}

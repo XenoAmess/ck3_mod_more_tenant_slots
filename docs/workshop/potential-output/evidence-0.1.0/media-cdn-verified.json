@@ -1,0 +1,45 @@
+{
+  "gallery": [
+    {
+      "index": 0,
+      "url": "https://images.steamusercontent.com/ugc/15340769625436620976/5D17D7DCED41B091105268E933DCCAF01617E794/",
+      "filename": "01-overview.jpg",
+      "source": "docs/workshop/potential-output/media/01-overview.jpg",
+      "bytes": 567629,
+      "sha256": "5ecdfb29988dae4313dfe147c90d4c865f2d1b85cebf98f757f315a8bdb01b8b",
+      "pixels_exact": true,
+      "bytes_exact": true
+    },
+    {
+      "index": 1,
+      "url": "https://images.steamusercontent.com/ugc/16543435202132488653/98C5E8243D7B3921630EDF0455E6D34285600EFA/",
+      "filename": "02-county-goods.jpg",
+      "source": "docs/workshop/potential-output/media/02-county-goods.jpg",
+      "bytes": 825519,
+      "sha256": "d5ad2760ec668e994a0a077afc91ecca2801d46670d2f3d223a8018aab5d398b",
+      "pixels_exact": true,
+      "bytes_exact": true
+    },
+    {
+      "index": 2,
+      "url": "https://images.steamusercontent.com/ugc/11428322250782441285/57ED4858E2B4326A7CCD955311BAFA9858067F83/",
+      "filename": "03-single-grain.jpg",
+      "source": "docs/workshop/potential-output/media/03-single-grain.jpg",
+      "bytes": 701380,
+      "sha256": "927d28262730d46b257e5893b6964e5cfd651f944ff2cc822d57f833c6ee18a2",
+      "pixels_exact": true,
+      "bytes_exact": true
+    },
+    {
+      "index": 3,
+      "url": "https://images.steamusercontent.com/ugc/15212408156818550840/BDE9359C0E9CEF4527DF22AE9A80AFC0FE22BF53/",
+      "filename": "04-multiple-goods.jpg",
+      "source": "docs/workshop/potential-output/media/04-multiple-goods.jpg",
+      "bytes": 703157,
+      "sha256": "421deeb5067f69a4d5206faf6d00c870234ddfd8ed2eba40da0d6be53b725dd8",
+      "pixels_exact": true,
+      "bytes_exact": true
+    }
+  ],
+  "thumbnail_bytes_exact": true
+}

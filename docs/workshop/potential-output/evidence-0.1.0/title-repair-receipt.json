@@ -1,0 +1,21 @@
+{
+  "app_id": 1158310,
+  "created_at": "2026-11-20T05:35:39.401360+00:00",
+  "item_id": "3842767123",
+  "legal_agreement_required": false,
+  "operation": "update",
+  "operation_id": "xapo-0.1.0-title-repair-20261120-a01",
+  "payload_sha256": "f6b4e214fadfe573993f4c9bdcb4be9a19b56d4d5ddedb52dc3e8eca23604ea7",
+  "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+  "stage": "complete",
+  "steam_result": 1,
+  "submitted_at": "2026-11-20T05:35:43.688699+00:00",
+  "tags": [
+    "Interface",
+    "Utilities",
+    "1.21 'Florin'"
+  ],
+  "tags_only": false,
+  "update_scope": "content_and_metadata",
+  "updated_at": "2026-11-20T05:35:43.688725+00:00"
+}

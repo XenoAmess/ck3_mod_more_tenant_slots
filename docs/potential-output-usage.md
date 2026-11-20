@@ -16,6 +16,10 @@
 
 ## 安装与兼容边界
 
+推荐订阅 [Steam 创意工坊：潜在产出 / Potential Output (XA)](https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123)，然后在启动器播放集中启用 Potential Output (XA)。当前发布版本为 0.1.0；[发布记录](workshop/potential-output/publication-0.1.0.md)包含说明、截图及实际下载加载验收。
+
+手动安装也可使用本地正式 ZIP：
+
 将 ZIP 解压到 CK3 用户目录下的 `mod/`，包中已包含 `mod_potential_output/` 子目录。再在 `mod/` 下新建同级文件 `mod_potential_output.mod`：
 
 ```text
@@ -24,7 +28,7 @@ path="mod/mod_potential_output"
 supported_version="1.21.*"
 ```
 
-重新打开启动器，把 Potential Output (XA) 加入播放集并启用。也可以用启动器创建同名本地 Mod，再将本产品目录内容复制到它的 Mod 目录。没有 Workshop ID，尚未上传创意工坊。
+重新打开启动器，把 Potential Output (XA) 加入播放集并启用。也可以用启动器创建同名本地 Mod，再将本产品目录内容复制到它的 Mod 目录。同一播放集只启用工坊版或本地版其中一个。
 
 该视角使用原版活动规划地图的图标与着色能力，进入时会暂时占用规划界面。请先退出其他活动规划，再打开潜在产出。它禁止实际启动展示用活动，不消耗金钱或推进日期；过滤使用玩家角色上命名空间为 `xapo_hidden_` 的展示变量，退出时清理。若在视角内保存游戏，这些无经济效果的变量可能随存档保留，下次进入会重置。
 

@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "annotations": null,
+      "meta": null,
+      "text": "{\n  \"schema\": \"ck3_workshop_mcp.steam_native.previews.v1\",\n  \"ok\": true,\n  \"item_id\": \"3842767123\",\n  \"app_id\": 1158310,\n  \"previews\": [\n    {\n      \"index\": 0,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/15340769625436620976/5D17D7DCED41B091105268E933DCCAF01617E794/\",\n      \"original_filename\": \"01-overview.jpg\"\n    },\n    {\n      \"index\": 1,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/16543435202132488653/98C5E8243D7B3921630EDF0455E6D34285600EFA/\",\n      \"original_filename\": \"02-county-goods.jpg\"\n    },\n    {\n      \"index\": 2,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/11428322250782441285/57ED4858E2B4326A7CCD955311BAFA9858067F83/\",\n      \"original_filename\": \"03-single-grain.jpg\"\n    },\n    {\n      \"index\": 3,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/15212408156818550840/BDE9359C0E9CEF4527DF22AE9A80AFC0FE22BF53/\",\n      \"original_filename\": \"04-multiple-goods.jpg\"\n    }\n  ]\n}",
+      "type": "text"
+    }
+  ],
+  "ok": true,
+  "result": {
+    "app_id": 1158310,
+    "item_id": "3842767123",
+    "ok": true,
+    "previews": [
+      {
+        "index": 0,
+        "original_filename": "01-overview.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/15340769625436620976/5D17D7DCED41B091105268E933DCCAF01617E794/"
+      },
+      {
+        "index": 1,
+        "original_filename": "02-county-goods.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/16543435202132488653/98C5E8243D7B3921630EDF0455E6D34285600EFA/"
+      },
+      {
+        "index": 2,
+        "original_filename": "03-single-grain.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/11428322250782441285/57ED4858E2B4326A7CCD955311BAFA9858067F83/"
+      },
+      {
+        "index": 3,
+        "original_filename": "04-multiple-goods.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/15212408156818550840/BDE9359C0E9CEF4527DF22AE9A80AFC0FE22BF53/"
+      }
+    ],
+    "schema": "ck3_workshop_mcp.steam_native.previews.v1"
+  },
+  "tool": "workshop_native_previews"
+}

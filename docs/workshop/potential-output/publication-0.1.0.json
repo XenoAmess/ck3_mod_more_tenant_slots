@@ -1,0 +1,430 @@
+{
+  "schema": "xapo.workshop-publication.v1",
+  "product": "mod_potential_output",
+  "mod_version": "0.1.0",
+  "status": "complete",
+  "item_id": "3842767123",
+  "app_id": 1158310,
+  "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123",
+  "title": "潜在产出 / Potential Output (XA)",
+  "machine_id": "pc-20260924rtuf-f11af23c08",
+  "date_asia_shanghai": "2026-11-20",
+  "release_tag": "potential-output-v0.1.0-ck3-1.21.0",
+  "tagged_commit": "a312484a5c4c5ba852684347a39b86680e5b5a5e",
+  "tested_runtime_commit": "58e8727b57187ba5289193ed10d7f68e5663bc56",
+  "runtime_payload_matches_R0011": true,
+  "formal_manifest": {
+    "path": "docs/workshop/potential-output/evidence-0.1.0/release-manifest.json",
+    "bytes": 4285,
+    "sha256": "28f71194ce4fed0c05ec5f1d4c35da3d178a4047022b22f4bbcc73d0183f0409"
+  },
+  "original_id_free_manifest": {
+    "path": "docs/workshop/potential-output/evidence-0.1.0/initial-id-free-release-manifest.json",
+    "bytes": 4277,
+    "sha256": "2fe5d0a5a3c744b5c2f614bd252b11c4339a4e7a3d5df4e5dbfd988aa9fb90cc"
+  },
+  "identity_sidecar": "Canonical ID assigned after first create; payload, original build and tag not rewritten.",
+  "zip": {
+    "bytes": 64056,
+    "sha256": "955e9ee13b4e2e3db1bd4eb50e122d94aeb7bfff059c5cbf70200ede4eb1d4e5",
+    "double_build_identical": true
+  },
+  "publication_operations": {
+    "create": {
+      "app_id": 1158310,
+      "create_result": 1,
+      "created_at": "2026-11-20T05:03:47.905414+00:00",
+      "item_id": "3842767123",
+      "legal_agreement_required": false,
+      "operation": "create",
+      "operation_id": "xapo-0.1.0-create-20261120-a01",
+      "payload_sha256": "a1b44fbb676c1bd6a7fa0758ea5b9c81e7b08d950395e2dd23791433a4004728",
+      "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+      "stage": "complete",
+      "steam_result": 1,
+      "submitted_at": "2026-11-20T05:04:06.521195+00:00",
+      "tags": [
+        "Interface",
+        "Utilities",
+        "1.21 'Florin'"
+      ],
+      "tags_only": false,
+      "update_scope": "content_and_metadata",
+      "updated_at": "2026-11-20T05:04:06.521220+00:00"
+    },
+    "gallery_and_public_visibility": {
+      "additional_preview_changes": {
+        "add": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\01-overview.jpg",
+            "sha256": "5ecdfb29988dae4313dfe147c90d4c865f2d1b85cebf98f757f315a8bdb01b8b",
+            "size": 567629
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\02-county-goods.jpg",
+            "sha256": "d5ad2760ec668e994a0a077afc91ecca2801d46670d2f3d223a8018aab5d398b",
+            "size": 825519
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\03-single-grain.jpg",
+            "sha256": "927d28262730d46b257e5893b6964e5cfd651f944ff2cc822d57f833c6ee18a2",
+            "size": 701380
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\workshop\\potential-output\\media\\04-multiple-goods.jpg",
+            "sha256": "421deeb5067f69a4d5206faf6d00c870234ddfd8ed2eba40da0d6be53b725dd8",
+            "size": 703157
+          }
+        ],
+        "remove_indices": [],
+        "update": []
+      },
+      "additional_previews_before": {
+        "app_id": 1158310,
+        "item_id": "3842767123",
+        "previews": []
+      },
+      "app_id": 1158310,
+      "created_at": "2026-11-20T05:16:13.640279+00:00",
+      "item_id": "3842767123",
+      "legal_agreement_required": false,
+      "operation": "update",
+      "operation_id": "xapo-0.1.0-media-20261120-a01",
+      "payload_sha256": "024d0f9fdcbc6bbe394a18d2eaabe4980a3c353c2b7e23b0fd8f5b9871137779",
+      "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+      "stage": "complete",
+      "steam_result": 1,
+      "submitted_at": "2026-11-20T05:16:32.980637+00:00",
+      "tags": [
+        "Interface",
+        "Utilities",
+        "1.21 'Florin'"
+      ],
+      "tags_only": false,
+      "update_scope": "content_and_metadata",
+      "updated_at": "2026-11-20T05:16:32.980661+00:00"
+    },
+    "title_repair": {
+      "app_id": 1158310,
+      "created_at": "2026-11-20T05:35:39.401360+00:00",
+      "item_id": "3842767123",
+      "legal_agreement_required": false,
+      "operation": "update",
+      "operation_id": "xapo-0.1.0-title-repair-20261120-a01",
+      "payload_sha256": "f6b4e214fadfe573993f4c9bdcb4be9a19b56d4d5ddedb52dc3e8eca23604ea7",
+      "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+      "stage": "complete",
+      "steam_result": 1,
+      "submitted_at": "2026-11-20T05:35:43.688699+00:00",
+      "tags": [
+        "Interface",
+        "Utilities",
+        "1.21 'Florin'"
+      ],
+      "tags_only": false,
+      "update_scope": "content_and_metadata",
+      "updated_at": "2026-11-20T05:35:43.688725+00:00"
+    }
+  },
+  "title_incident": {
+    "initial_title": "???? / Potential Output (XA)",
+    "cause": "Non-ASCII Python literal was corrupted in a PowerShell pipe before the native tool received it.",
+    "repair": "Updated the same item using ASCII Unicode escapes; final repository freeze is UTF-8 and exact title checked.",
+    "anonymous_api_title_exact": true,
+    "browser_dom_title_exact": true
+  },
+  "public_text": {
+    "title_exact": true,
+    "description_exact": true,
+    "description_characters": 2953,
+    "description_sha256": "504D5DE5CB8AA87C6D301A42F00F1CDAAC965F651433DEAB3B4FA9B3F924A2E5",
+    "expected_description_sha256": "504D5DE5CB8AA87C6D301A42F00F1CDAAC965F651433DEAB3B4FA9B3F924A2E5",
+    "change_notes_exact": true,
+    "changelog_entry_id": "1795151044",
+    "change_notes_characters": 850,
+    "change_notes_lines": 17,
+    "change_notes_sha256": "FC96904AE211D4AF522503C4687C8AB2058FEA2B7D4D26E8C5761CA0BB588B8D",
+    "expected_change_notes_characters": 850,
+    "expected_change_notes_lines": 17,
+    "expected_change_notes_sha256": "FC96904AE211D4AF522503C4687C8AB2058FEA2B7D4D26E8C5761CA0BB588B8D",
+    "time_updated": 1795151044,
+    "file_size": "454656",
+    "ok": true
+  },
+  "public_visibility": 0,
+  "public_banned": 0,
+  "tags": [
+    "Interface",
+    "Utilities",
+    "1.21 'Florin'"
+  ],
+  "media": {
+    "actual_gameplay_images": 4,
+    "gallery_count": 4,
+    "gallery_and_thumbnail_download_exact": true,
+    "inline_image_count": 4,
+    "inline_images_loaded_in_anonymous_browser": true,
+    "interleaved_with_feature_text_reviewed": true,
+    "immutable_image_commit": "484e05d5c32763f2ab6eaeeab3f42de55bd2848f",
+    "provenance": {
+      "path": "docs/workshop/potential-output/media/provenance.json",
+      "bytes": 4221,
+      "sha256": "0353898502cca447882e5289857904a3c50e7a8b9c6ac78141cdbf8f5ccc0b68"
+    },
+    "cdn_proof": {
+      "gallery": [
+        {
+          "index": 0,
+          "url": "https://images.steamusercontent.com/ugc/15340769625436620976/5D17D7DCED41B091105268E933DCCAF01617E794/",
+          "filename": "01-overview.jpg",
+          "source": "docs/workshop/potential-output/media/01-overview.jpg",
+          "bytes": 567629,
+          "sha256": "5ecdfb29988dae4313dfe147c90d4c865f2d1b85cebf98f757f315a8bdb01b8b",
+          "pixels_exact": true,
+          "bytes_exact": true
+        },
+        {
+          "index": 1,
+          "url": "https://images.steamusercontent.com/ugc/16543435202132488653/98C5E8243D7B3921630EDF0455E6D34285600EFA/",
+          "filename": "02-county-goods.jpg",
+          "source": "docs/workshop/potential-output/media/02-county-goods.jpg",
+          "bytes": 825519,
+          "sha256": "d5ad2760ec668e994a0a077afc91ecca2801d46670d2f3d223a8018aab5d398b",
+          "pixels_exact": true,
+          "bytes_exact": true
+        },
+        {
+          "index": 2,
+          "url": "https://images.steamusercontent.com/ugc/11428322250782441285/57ED4858E2B4326A7CCD955311BAFA9858067F83/",
+          "filename": "03-single-grain.jpg",
+          "source": "docs/workshop/potential-output/media/03-single-grain.jpg",
+          "bytes": 701380,
+          "sha256": "927d28262730d46b257e5893b6964e5cfd651f944ff2cc822d57f833c6ee18a2",
+          "pixels_exact": true,
+          "bytes_exact": true
+        },
+        {
+          "index": 3,
+          "url": "https://images.steamusercontent.com/ugc/15212408156818550840/BDE9359C0E9CEF4527DF22AE9A80AFC0FE22BF53/",
+          "filename": "04-multiple-goods.jpg",
+          "source": "docs/workshop/potential-output/media/04-multiple-goods.jpg",
+          "bytes": 703157,
+          "sha256": "421deeb5067f69a4d5206faf6d00c870234ddfd8ed2eba40da0d6be53b725dd8",
+          "pixels_exact": true,
+          "bytes_exact": true
+        }
+      ],
+      "thumbnail_bytes_exact": true
+    }
+  },
+  "source_game": {
+    "version": "1.21.0",
+    "steam_build_id": "26757580",
+    "exe_sha256": "bb3fef106240e95ecdb6f1532982e89e9432c92a99d33db623521572f06e6f79",
+    "live_case": "R0011 map-filters; prior R0010 existing-save plus recheck R0011",
+    "language": "simp_chinese"
+  },
+  "cache_game": {
+    "version": "1.21.0.3",
+    "sha256": "859f0d380098adcb130eb9d453458222749fcdf6d46126ad0ed99d78f9a0aa28",
+    "exe": "C:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\binaries\\ck3.exe",
+    "steam_build_id": "26785313",
+    "language": "simp_chinese"
+  },
+  "cache": {
+    "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0012",
+    "file_count": 23,
+    "sdk_download_callback_result": 1,
+    "fresh_absent_before_download": true,
+    "formal_bytes_exact": true,
+    "actual_cache_load": {
+      "loaded": true,
+      "exact_cache": {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\cache-prepared-a01\\workshop-cache-exact-formal.json",
+        "bytes": 6745,
+        "sha256": "6ce1102199c32da4f9d80b30550686d3c8f5bb905f9d809459efb4af386232ef"
+      },
+      "engine_log": {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\published-cache-a01\\profile\\logs\\debug.log",
+        "bytes": 500537,
+        "sha256": "077df16126152418aa1f357deaa6c44c75e9c4c92b2b0b01897dda8b2e942299"
+      },
+      "mounted_log_lines": [
+        {
+          "line": 100,
+          "text": "[15:12:58][D][virtualfilesystem_physfs.cpp:814]: Mounted Data: C:/SteamLibrary/steamapps/workshop/content/1158310/3842767123"
+        }
+      ],
+      "enabled_log_lines": [
+        {
+          "line": 67,
+          "text": "Potential Output (XA)|mod/product.mod|Enabled"
+        }
+      ],
+      "cache_path": "C:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\3842767123",
+      "file_count": 23,
+      "item_id": "3842767123"
+    },
+    "process_pass": true,
+    "closure_pass": true,
+    "normal_gui_quit": true,
+    "cache_acceptance_pass": true,
+    "business_tests_repeated": false,
+    "gameplay_acceptance_for_1_21_0_3": false,
+    "policy": "2026-10-07 exact SDK cache plus actual menu mount/load and normal closure"
+  },
+  "cache_log": {
+    "bytes": 1005,
+    "sha256": "a5678a60a9e23a61da67b460aac542dcd071f8ca9da515025c11c2fde49c2a6e",
+    "observation": "One Generated Map Objects read error for great_wall_china_gate.txt; no product-path error observed. No zero-log or new-build vanilla baseline claim."
+  },
+  "final": {
+    "steam_offline": true,
+    "ck3_processes": 0,
+    "original_popen_exit_code": 0,
+    "window_close_requested": false,
+    "screen_released": true
+  },
+  "failures_preserved": [
+    "Initial title was corrupted, repaired on the same item.",
+    "A metadata rebuild attempt stopped on actual 1.21.0.3 versus source contract 1.21.0; no output built. The original formal payload was retained, with a new canonical-ID sidecar.",
+    "First cache helper task-bus read failed because its child used the Windows code page; rerun with inherited PYTHONUTF8 passed before allocation.",
+    "The first CDN request with default user agent reset; normal browser User-Agent/Referer downloads matched all bytes.",
+    "Initial public verifier invocation used wrong keyword names; rerun with the documented signature passed."
+  ],
+  "ownership": "Product identity, copy, media and concrete evidence belong to this independent repository. Existing framework native publish, preview, UTF-8 text, cache and managed GUI contracts were reused. No generic implementation change required; initial corruption occurred before the framework input boundary. Prior GUI findings already enriched upstream as c82e82ebe.",
+  "evidence": {
+    "create-receipt.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/create-receipt.json",
+      "bytes": 668,
+      "sha256": "9813af92aac2efbec400c35cfa0ffadee072f228406262e45cc776eb088b82b5"
+    },
+    "media-receipt.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/media-receipt.json",
+      "bytes": 1846,
+      "sha256": "418a93814897bb581ca3014970620e8b50c1bdec044f38b76f79ce89900d9d24"
+    },
+    "title-repair-receipt.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/title-repair-receipt.json",
+      "bytes": 652,
+      "sha256": "1b1b0403e6633a7e98269d610856e90931e3c10b4f37e0129fcb4df58a3eba55"
+    },
+    "public-after-title-repair.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/public-after-title-repair.json",
+      "bytes": 5908,
+      "sha256": "3884ea422f90827521b295c4a4771d928adda1364892834bed9285fb7522ed61"
+    },
+    "public-text-verification.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/public-text-verification.json",
+      "bytes": 756,
+      "sha256": "0d99f67ad7d0486b4a36371d82bee66f7063243fc35211055dbd0d19352c3cc1"
+    },
+    "previews-after.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/previews-after.json",
+      "bytes": 2348,
+      "sha256": "fdddfb6369a151c62cfa9cb4ed8087b76f556350363ff54a636ffd314e8c18a1"
+    },
+    "media-cdn-verified.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/media-cdn-verified.json",
+      "bytes": 1763,
+      "sha256": "44163b89ee4cbe0f95d3a2ff91b65169f547cc3125bfbcdf21a2978cfba36640"
+    },
+    "public-rendered.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/public-rendered.json",
+      "bytes": 4967,
+      "sha256": "0df4c6bb3541973c5b923944516c38885831958816755fd832471fd50beeaa18"
+    },
+    "download-before.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/download-before.json",
+      "bytes": 330,
+      "sha256": "dde5586bf3fb4b790995d1c875a1dab9cbbf1ea8b206fb7a9d211c8e3e37b45a"
+    },
+    "download-result.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/download-result.json",
+      "bytes": 2950,
+      "sha256": "5e67edc5422420b9bebbd9e497c1e20839da3ed35a68f8fae978e5c131e30744"
+    },
+    "exact-cache.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/exact-cache.json",
+      "bytes": 3857,
+      "sha256": "afc344e62c2511072d069736dd6ab23a7c635e1cbe530a63e020a37b86368cab"
+    },
+    "verify-cache-a01.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/verify-cache-a01.json",
+      "bytes": 2416,
+      "sha256": "907e43e165debb1ae2b9c96ff589da01d73d1a8b04e5e18021abb9d95a19f8a6"
+    },
+    "installed-game-after-publication.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/installed-game-after-publication.json",
+      "bytes": 195,
+      "sha256": "e4fc1e8489d64dd1a9a001cf77444782ed3f112113a20b386986319d66d0977a"
+    },
+    "post-patch-native-projection.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/post-patch-native-projection.json",
+      "bytes": 184,
+      "sha256": "e52bf4def9c50df90c70024b57c8404c7882c145f13c5ab93cc41633b680526c"
+    },
+    "final-steam-offline.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/final-steam-offline.json",
+      "bytes": 2338,
+      "sha256": "64dc8f839ab14cfcc4beb861fe615a8ccf8d16365de3ebe7bc27011afecdd30e"
+    },
+    "publish-keeper-report.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/publish-keeper-report.json",
+      "bytes": 297,
+      "sha256": "03fc063e02ad463c131df6acb81e6164d963b1271dee8c84033eb9d74a594373"
+    },
+    "publish-screen-release.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/publish-screen-release.json",
+      "bytes": 1151,
+      "sha256": "f09231225729ff6b80956834e5e66c9076b5e1fb2da044a5c4d1cbe0b5fa401e"
+    },
+    "game-started.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/game-started.json",
+      "bytes": 1399,
+      "sha256": "3de03534a374243f24473f7e58976b9d4c801cb50f14c24aa0c05aacbb4c8d9d"
+    },
+    "game-exit.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/game-exit.json",
+      "bytes": 253,
+      "sha256": "731a0c6e7c23a477d224f25e6a3669dc968ac4a7b426e1775f4692806d0addad"
+    },
+    "keeper-report.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/keeper-report.json",
+      "bytes": 380,
+      "sha256": "f12ed5c0656ba6358e9f27f7b9af9b29693e7813c39e1bee45c10797d99eb20f"
+    },
+    "screen-release.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/screen-release.json",
+      "bytes": 1183,
+      "sha256": "2a66d25eae45e81179cb7199edf80d253a1859ff98f082a3b733e46ff6f077d7"
+    },
+    "cache-review.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/cache-review.json",
+      "bytes": 1431,
+      "sha256": "08ad72386b68faf1ff3c5494a6697bf2fa5d5a911c0f8f1ecee303b1253aa94b"
+    },
+    "public-inline-1.png": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/public-inline-1.png",
+      "bytes": 923089,
+      "sha256": "1834bb2d395cd13f9a03ef35c07d769d448fb90cbd7e119f8c0db222da1d74fc"
+    },
+    "public-inline-3.png": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/public-inline-3.png",
+      "bytes": 873041,
+      "sha256": "54db5920c7f1312474261177b0b16388c673732c0734c20642594e7f5f6f4803"
+    },
+    "error.log": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/cache-error.log",
+      "bytes": 1005,
+      "sha256": "a5678a60a9e23a61da67b460aac542dcd071f8ca9da515025c11c2fde49c2a6e"
+    },
+    "load-log-excerpt.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.0/load-log-excerpt.json",
+      "bytes": 558,
+      "sha256": "b7b33fd39d3c523a5ad91bceae158b6ad98721e987a5701483a13c3aab13a056"
+    }
+  },
+  "artifact_scope": "Raw desktop images, full startup log, configurations and browser profile stay in ignored local artifacts. This repository archives public-page screenshots and receipts, not private desktop captures or machine configuration.",
+  "receipt_archive_encoding": "Archived JSON is losslessly reserialized as UTF-8/LF before hashing; original tool files remain unchanged in ignored artifacts. Embedded original evidence pins retain their original meanings."
+}

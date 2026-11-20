@@ -1,0 +1,2 @@
+# Preserve the original engine diagnostic bytes referenced by the evidence hash.
+cache-error.log binary

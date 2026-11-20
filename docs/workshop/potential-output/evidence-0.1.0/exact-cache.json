@@ -1,0 +1,99 @@
+{
+  "exact": true,
+  "file_count": 23,
+  "cache_path": "C:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\3842767123",
+  "files": {
+    "descriptor.mod": {
+      "size": 108,
+      "sha256": "4cf0e2adbe1982766907641ae07705ac1162dd7febc7119ba0b60c5271927850"
+    },
+    "gui/map_icon_layer.gui": {
+      "size": 210442,
+      "sha256": "d2d2621b243aaa938092b2218ed7d0fa9f858b4585046124ab2d105f8d36c5f8"
+    },
+    "gui/window_activity_list.gui": {
+      "size": 24139,
+      "sha256": "b9dd79147628d66be0a81f77e095c3bc72dbe5fb0a178489bbe976eb028a31b1"
+    },
+    "gui/window_activity_planner.gui": {
+      "size": 51027,
+      "sha256": "d15bcda7f895beca8ec271a3697abe94ca4a50816605b27d33883ba4c4e001c4"
+    },
+    "gui/xapo_potential_output.gui": {
+      "size": 134741,
+      "sha256": "adb16d35ffc4e32538115df479b75e0ec4f1ddda4d5af8bfca13d31c4a25ac7d"
+    },
+    "localization/english/xapo_l_english.yml": {
+      "size": 1630,
+      "sha256": "55e7ee72d7ff90d19f5af78fef198b30292939116bc9ea7b8f6d887cf01aeb09"
+    },
+    "localization/french/xapo_l_french.yml": {
+      "size": 1706,
+      "sha256": "1c5c7cb37ec779d48cb3e2645cc86f1abf0eb0d8ab71df1789e624d397f994b5"
+    },
+    "localization/german/xapo_l_german.yml": {
+      "size": 1685,
+      "sha256": "3e5a05a6ef9287a5b18be27e215fb841eea2e4b88fe3ab8dee228f64380e3f30"
+    },
+    "localization/japanese/xapo_l_japanese.yml": {
+      "size": 1771,
+      "sha256": "d47f98495ce9c46a41dd3bed5d73fd3b91aa7ee2559a81d093ae8db6ec848e83"
+    },
+    "localization/korean/xapo_l_korean.yml": {
+      "size": 1776,
+      "sha256": "56a68c0b16c6ad7f05f872dab157262895ccb757d7b5ffdcb9c693fc4c5edeaf"
+    },
+    "localization/polish/xapo_l_polish.yml": {
+      "size": 1652,
+      "sha256": "b1a6ede1318cf4f70e645eb158d0a2ae84506c63804604465fcbc202749d9c7f"
+    },
+    "localization/russian/xapo_l_russian.yml": {
+      "size": 2153,
+      "sha256": "aeb680ba9b316445cfbaaff0a512dc7d28bc8c983e49c665ee827a58f732b7ef"
+    },
+    "localization/simp_chinese/xapo_l_simp_chinese.yml": {
+      "size": 1690,
+      "sha256": "0ad09b118a1ae3c0a4464c43d6c5852439ba13555d9b36f2d8d0d799976ec22e"
+    },
+    "localization/spanish/xapo_l_spanish.yml": {
+      "size": 1668,
+      "sha256": "d958f6dec87a289f6a1d4929a015b4b0973b5a04a1f1f916575012c238f2e9ee"
+    },
+    "gui/scripted_widgets/xapo_potential_output.txt": {
+      "size": 53,
+      "sha256": "e899606b6a6b706598518602fd35e8db76a0174417e10881ddb2b9d824c6751b"
+    },
+    "gfx/interface/illustrations/activity_types/xapo_refresh_a.dds": {
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    "gfx/interface/illustrations/activity_types/xapo_refresh_b.dds": {
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    "gfx/interface/icons/activity_types/xapo_refresh_a.dds": {
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    "gfx/interface/icons/activity_types/xapo_refresh_b.dds": {
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    "common/scripted_guis/xapo_potential_output.txt": {
+      "size": 10234,
+      "sha256": "09a35e2b581d69f6ca37021f573b8b5062a50fbe839aa72ade8261eb5d0e9f3a"
+    },
+    "common/script_values/xapo_potential_output.txt": {
+      "size": 5929,
+      "sha256": "86fad1941fed1f4d595905e668f0307b30784e1f3fc5f77ad752a342fd0b0936"
+    },
+    "common/defines/graphic/zz_xapo_potential_output.txt": {
+      "size": 194,
+      "sha256": "1aba714fe0ab6c588d49a1e67de8624285905699ddb144bcdf6b820505eaa317"
+    },
+    "common/activities/activity_types/xapo_potential_output.txt": {
+      "size": 1290,
+      "sha256": "55d6dd6b635d3f9ffcfff86b9bd8c7395d380e83a2225c21921bc44d61963686"
+    }
+  }
+}

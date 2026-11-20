@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-11-20T07:29:36.761185+00:00",
+  "permanent_evidence_pins_verified": 29,
+  "tag_and_actual_SDK_cache_files_exact": 23,
+  "relative_document_links_exist": true,
+  "publication_metadata_JSON_valid": true,
+  "runtime_product_diff": false,
+  "release_identity_tests": {
+    "passed": 4,
+    "seconds": 1.163,
+    "entry": "dev_tools/test_potential_release_identity.py --framework <configured-framework>"
+  },
+  "new_work_package_logical_bytes": 243351005,
+  "reserved_peak_bytes": 2147483648,
+  "within_reservation": true,
+  "data_volume_free_bytes": 402172071936
+}

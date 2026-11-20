@@ -26,6 +26,6 @@ POD mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2216659254
 
 ### Potential Output (XA)
 
-[`mod_potential_output/`](mod_potential_output/) is an independent CK3 1.21 submod for county potential trade goods, including undeveloped resources. A grouped panel filters 35 potential goods; county colors show the number of selected potential kinds. [Usage and compatibility](docs/potential-output-usage.md), [verification report](docs/potential-output-report.md), and [acceptance plan](docs/potential-output-acceptance-plan.md). It has no Workshop ID and is independent of MTS and POD.
+[`mod_potential_output/`](mod_potential_output/) is an independent CK3 1.21 submod for county potential trade goods, including undeveloped resources. A grouped panel filters 35 potential goods; county colors show the number of selected potential kinds. [Subscribe on Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123). Version 0.1.0 was published on 2026-11-20 with four actual gameplay screenshots, interleaved illustrated BBCode, and verified Steam cache loading. [Publication record](docs/workshop/potential-output/publication-0.1.0.md), [usage and compatibility](docs/potential-output-usage.md), [verification report](docs/potential-output-report.md), and [acceptance plan](docs/potential-output-acceptance-plan.md). Independent of MTS and POD.
 
 ![mods_order](mods_order.png)

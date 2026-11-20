@@ -1,0 +1,74 @@
+{
+  "schema": "xar.steam-offline-state-probe/v2",
+  "machine_id": "pc-20260924rtuf-f11af23c08",
+  "observed_at_utc": "2026-11-20T07:21:10.899883+00:00",
+  "nonce": "61316decd0fd4fcbb68a4c6fba0ba838",
+  "reason": "observed",
+  "steam": {
+    "pid": 15364,
+    "birth_filetime": "134394913645915363",
+    "exe": "D:\\steam\\steam.exe",
+    "file_version": "11.23.65.88"
+  },
+  "source": {
+    "path": "D:\\steam\\SteamUI.dll",
+    "bytes": 19675800,
+    "sha256": "2dfb0a5d50dd90667549cc7d413c7bfb0794c9af4ebaf08bf1cf7d938a11ea93",
+    "file_id": "1125899908071526",
+    "mtime_ns": "1794535550000000000"
+  },
+  "endpoint": null,
+  "diagnostics": [],
+  "observation_method": "native_current_user_byte",
+  "native_evidence": {
+    "machine_id": "pc-20260924rtuf-f11af23c08",
+    "observed_at_utc": "2026-11-20T07:21:10.899883+00:00",
+    "nonce": "61316decd0fd4fcbb68a4c6fba0ba838",
+    "module_base": "140711631781888",
+    "module_size": 19959808,
+    "value_rva": "18653399",
+    "value_address": "140711650435287",
+    "producer_rva": "6691596",
+    "producer_anchor_hex": "440fb605c385b600488d15c5297800488bcbe8dd0a3e00",
+    "producer_anchor_sha256": "e2ee13da1019c3cb41a999d4fda37bde192574390690cb2328c903de7fdd54c2",
+    "raw_samples": [
+      1,
+      1
+    ],
+    "steam_before": {
+      "pid": 15364,
+      "birth_filetime": "134394913645915363",
+      "exe": "D:\\steam\\steam.exe",
+      "file_version": "11.23.65.88"
+    },
+    "steam_after": {
+      "pid": 15364,
+      "birth_filetime": "134394913645915363",
+      "exe": "D:\\steam\\steam.exe",
+      "file_version": "11.23.65.88"
+    },
+    "source_before": {
+      "path": "D:\\steam\\SteamUI.dll",
+      "bytes": 19675800,
+      "sha256": "2dfb0a5d50dd90667549cc7d413c7bfb0794c9af4ebaf08bf1cf7d938a11ea93",
+      "file_id": "1125899908071526",
+      "mtime_ns": "1794535550000000000"
+    },
+    "source_after": {
+      "path": "D:\\steam\\SteamUI.dll",
+      "bytes": 19675800,
+      "sha256": "2dfb0a5d50dd90667549cc7d413c7bfb0794c9af4ebaf08bf1cf7d938a11ea93",
+      "file_id": "1125899908071526",
+      "mtime_ns": "1794535550000000000"
+    },
+    "tray_manager_pointer_rva": "18645800",
+    "tray_manager_address": "1576774541440",
+    "tray_state_offset": "352",
+    "tray_state_samples": [
+      4,
+      4
+    ]
+  },
+  "status": "offline",
+  "offline_mode": true
+}

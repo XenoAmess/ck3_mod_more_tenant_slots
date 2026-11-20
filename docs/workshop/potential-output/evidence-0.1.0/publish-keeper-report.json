@@ -1,0 +1,8 @@
+{
+  "schema": "xar.promo.screen-lease-keeper/v1",
+  "task_id": "xapo-publish-screen-20261120-a01",
+  "last_sequence": 2840,
+  "failure": null,
+  "thread_exited": true,
+  "journal": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-20261120\\publish-lease.jsonl"
+}

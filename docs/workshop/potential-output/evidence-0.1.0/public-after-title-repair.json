@@ -1,0 +1,44 @@
+{
+  "response": {
+    "result": 1,
+    "resultcount": 1,
+    "publishedfiledetails": [
+      {
+        "publishedfileid": "3842767123",
+        "result": 1,
+        "creator": "76561198273714027",
+        "creator_app_id": 1158310,
+        "consumer_app_id": 1158310,
+        "filename": "",
+        "file_size": "454656",
+        "file_url": "",
+        "hcontent_file": "1957183862682183869",
+        "preview_url": "https://images.steamusercontent.com/ugc/16514153245080430916/85350062F2834BAE7982C134BF53D7199E6B212D/",
+        "hcontent_preview": "16514153245080430916",
+        "title": "潜在产出 / Potential Output (XA)",
+        "description": "[h1]潜在产出 · Potential Output (XA)[/h1]\n想找适合发展某种商品的伯爵领？这个独立 Mod 为 CK3 增加「潜在产出」地图视角，把各县[b]可以生产的商品[/b]集中展示，并用商品面板筛选地图。\n\n[b]潜在产出包含尚未开发、尚未投产的资源。[/b]地图读取原版伯爵领潜力清单；当前没有生产某种商品，不代表这里没有它的潜力。\n\n[h2]先看哪里有发展潜力[/h2]\n默认全选原版县潜力表中的 35 种商品。缩小地图看资源潜力的分布，放大后查看县首府上的商品图标和种类数。下图为本 Mod 的真实游戏画面。\n[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/01-overview.jpg[/img]\n\n[h2]每个伯爵领可以生产什么[/h2]\n近距离会显示该县的潜力商品及匹配种类数。全选时可以概览全部潜力；商品较密集的地区可继续放大，或筛掉暂时不关注的商品。仅能加工得到、没有县资源潜力的 9 种商品不会混入筛选清单。\n[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/02-county-goods.jpg[/img]\n\n[h2]只找你需要的产物[/h2]\n[list]\n[*]点击商品图标：独立开启或关闭该商品。\n[*]点击分类名称：切换整组商品。\n[*]「全选」恢复所有商品，「清空」显示无匹配。\n[*]减号收起面板；右下角「潜在产出」按钮重新展开，保留当前筛选。\n[/list]\n例如只选择谷物，具有谷物潜力的县显示绿色与数字 1，没有谷物潜力的县显示灰色与数字 0。\n[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/03-single-grain.jpg[/img]\n\n[h2]颜色越深，匹配的潜力种类越多[/h2]\n[b]数字 = 该县可以生产的商品 ∩ 当前勾选商品的种类数。[/b]\n灰色表示没有匹配，匹配种类越多绿色越深。下图同时选择谷物与粟，因此可以看到 0、1、2 三种结果。多选展示各商品的并集，不要求每个县同时拥有全部所选商品。\n[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/04-multiple-goods.jpg[/img]\n\n[b]这些数字表示潜力种类数，不表示矿藏储量、月产量、当前产量或建筑槽位。[/b]\n\n[h2]使用方法[/h2]\n[list]\n[*]订阅后，在 CK3 启动器的播放集中启用「Potential Output (XA)」。\n[*]进入游戏，点击地图右下角「潜在产出」，再点击「显示地图」。\n[*]用面板筛选商品，放大地图查看图标；点击叉号退出并恢复之前的地图视角。\n[/list]\n每次重新进入视角默认全选。旧存档可直接使用，不需要新开战役。\n\n[h2]版本与兼容[/h2]\n[list]\n[*]版本 0.1.0；实测 CK3 1.21.0（Florin）。本 Mod 独立运行，无需 More Tenets Slots 或 POD。\n[*]该视角暂时使用活动规划地图，请先退出其他活动规划。它不会实际举办展示活动，也不收取活动费用；关闭视角后恢复正常地图。\n[*]普通活动规划地图会共用本 Mod 的灰绿评分配色。\n[*]覆盖 map_icon_layer.gui、window_activity_planner.gui、window_activity_list.gui；同样修改这些文件的 Mod 需要合并补丁。大地图转换、多人及全部 DLC 组合未逐项验收。\n[*]截图与实机验收使用简体中文；附带其他语言文本，但其他语言仅检查文件格式与键覆盖。\n[/list]\n\n[h2]English[/h2]\nAdds a county potential-goods view with 35 selectable goods, category toggles, select all and clear. Includes undeveloped resources. County labels and shading count the selected goods that the county can potentially produce: zero is gray, more matching kinds are darker green. This is not current production or resource quantity.\n\nOpen “Potential Output” at the lower right, then “Show map”. Zoom in for goods icons; close the view to restore your previous map. Existing saves are supported. Tested on CK3 1.21.0 Florin in Simplified Chinese. The view temporarily uses the activity planner; overlapping GUI mods need a compatibility patch. Ordinary activity score maps share the gray-green palette.\n\n[url=https://github.com/XenoAmess/ck3_mod_more_tenant_slots/tree/master/mod_potential_output]源码 / Source[/url] · [url=https://github.com/XenoAmess/ck3_mod_more_tenant_slots/blob/master/docs/potential-output-usage.md]使用与兼容说明 / Usage[/url]\n",
+        "time_created": 1795151044,
+        "time_updated": 1795151044,
+        "visibility": 0,
+        "banned": 0,
+        "ban_reason": "",
+        "subscriptions": 0,
+        "favorited": 0,
+        "lifetime_subscriptions": 0,
+        "lifetime_favorited": 0,
+        "views": 1,
+        "tags": [
+          {
+            "tag": "Interface"
+          },
+          {
+            "tag": "Utilities"
+          },
+          {
+            "tag": "1.21 'Florin'"
+          }
+        ]
+      }
+    ]
+  }
+}
