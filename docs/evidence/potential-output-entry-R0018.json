@@ -1,0 +1,52 @@
+{
+  "schema": "xapo-entry-attempt-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0018",
+  "source_commit": "3bf87fa6860af0e52f21d49127fa52a3cfa550f1",
+  "status": "failed-repeat-entry",
+  "original_process": {
+    "at_utc": "2026-11-20T12:46:02.711298+00:00",
+    "pid": 12820,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "screen_released": true,
+  "actual_observations": [
+    "First single-click entry succeeds; second entry from faith view remains at introduction.",
+    "The candidate used Toggle but tested a literal yes value; the test interpreter incorrectly assumed Toggle stores yes."
+  ],
+  "review_images": {
+    "121727519842-capture.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0018\\review\\121727519842-capture.png",
+      "bytes": 3359654,
+      "sha256": "cc2e9130e15f705335709769ff439bd7d877ec3f82d4be3d435c2f722b2eb441"
+    },
+    "122555241563-capture.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0018\\review\\122555241563-capture.png",
+      "bytes": 3252830,
+      "sha256": "4997ec0ea6fbf465910f1197b83b086574327e5c250af1c9918cb0fd7db2751d"
+    }
+  },
+  "failed_second_entry": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0018\\review\\123650907459-capture.png",
+    "bytes": 2762125,
+    "sha256": "6c639fa545be23ef3c2d842cb1c63c387a868e45395f9b6a9d747653ccebe6ed"
+  },
+  "normal_gui_quit_evidence": [
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0018\\review\\124450940716-capture.png",
+      "bytes": 2150594,
+      "sha256": "7c337154c66ea75e9742ccec31152b3ce86307a76699ab99e50b36dc0f821da1"
+    },
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0018\\review\\124544786180-click.png.json",
+      "bytes": 1786,
+      "sha256": "d2d63df5e67c87b03222542616d9d6a4389048a22419bfeb782c5c594b0c4ec8"
+    }
+  ],
+  "next": "Use an explicit Set yes/no cycle and correct the test interpreter; retest on a fresh frozen build."
+}

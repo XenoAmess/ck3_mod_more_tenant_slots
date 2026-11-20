@@ -284,7 +284,7 @@ types XapoPotentialOutput {{
         onclick = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_refresh' )]"
         onclick = "[GetVariableSystem.Clear( 'mapmodes_expand' )]"
-        onclick = "[GetVariableSystem.Toggle( 'xapo_entry_cycle' )]"
+        onclick = "[GetVariableSystem.Set( 'xapo_entry_cycle', Select_CString( GetVariableSystem.HasValue( 'xapo_entry_cycle', 'yes' ), 'no', 'yes' ) )]"
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ).Self )]"
         button_icon = {{
             size = {{ 22 22 }}

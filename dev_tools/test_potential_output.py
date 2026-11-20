@@ -85,7 +85,8 @@ class GuiActions:
             if key in self.values:
                 del self.values[key]
             else:
-                self.values[key] = "yes"
+                # Toggle's stored value is opaque; only existence is portable.
+                self.values[key] = "<toggle-present>"
             return True
         if name == "GetVariableSystem.Set":
             self.values[str(args[0])] = str(args[1])
@@ -255,7 +256,7 @@ class PotentialOutputTests(unittest.TestCase):
 
         launcher = named_block(self.gui, 'button_round', 'xapo_open_map')
         actions = re.findall(r'onclick\s*=\s*"\[(.*?)\]"', self.gui[launcher.start:launcher.end])
-        toggles = [a for a in actions if "Toggle( 'xapo_entry_cycle' )" in a]
+        toggles = [a for a in actions if "Set( 'xapo_entry_cycle'," in a]
         self.assertEqual(len(toggles), 1)
         transitions = re.findall(r'name = "(xapo_enter_potential_map_[ab])"\s+trigger_when = "\[(.*?)\]"', self.gui)
         state = GuiActions()
