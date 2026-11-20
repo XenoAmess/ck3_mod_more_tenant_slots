@@ -72,12 +72,6 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
     host_new = host_old.replace(host_anchor, f'''    xapo_host_intro = {{}}
 {host_anchor}
         visible = "[Not( EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' ) )]"''', 1)
-    # The engine reuses this window and its activity type across openings.
-    # Bind the automatic entry to its show/hide lifecycle, not just the type.
-    host_new = host_new.replace('using = Animation_FadeIn_Standard',
-        'using = Animation_FadeIn_Standard\n        on_start = "[GetVariableSystem.Set( \'xapo_host_open\', \'yes\' )]"', 1)
-    host_new = host_new.replace('using = Animation_FadeOut_Quick',
-        'using = Animation_FadeOut_Quick\n        on_start = "[GetVariableSystem.Clear( \'xapo_host_open\' )]"', 1)
     return {NATIVE_FILES[0]: [(old, new)], NATIVE_FILES[5]: [(planner_old, planner_new)],
             NATIVE_FILES[6]: [(host_old, host_new)]}
 
@@ -290,6 +284,7 @@ types XapoPotentialOutput {{
         onclick = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_refresh' )]"
         onclick = "[GetVariableSystem.Clear( 'mapmodes_expand' )]"
+        onclick = "[GetVariableSystem.Toggle( 'xapo_entry_cycle' )]"
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ).Self )]"
         button_icon = {{
             size = {{ 22 22 }}
@@ -343,8 +338,14 @@ types XapoPotentialOutput {{
         spacing = 20
         visible = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' )]"
         state = {{
-            name = "xapo_enter_potential_map"
-            trigger_when = "[And( GetVariableSystem.HasValue( 'xapo_host_open', 'yes' ), EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' ) )]"
+            name = "xapo_enter_potential_map_a"
+            trigger_when = "[And( GetVariableSystem.HasValue( 'xapo_entry_cycle', 'yes' ), EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' ) )]"
+            duration = 0.3
+            on_finish = "[ActivityListDetailHostView.Confirm]"
+        }}
+        state = {{
+            name = "xapo_enter_potential_map_b"
+            trigger_when = "[And( Not( GetVariableSystem.HasValue( 'xapo_entry_cycle', 'yes' ) ), EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' ) )]"
             duration = 0.3
             on_finish = "[ActivityListDetailHostView.Confirm]"
         }}

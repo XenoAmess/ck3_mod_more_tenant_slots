@@ -1,0 +1,62 @@
+{
+  "schema": "xapo-entry-attempt-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0017",
+  "source_commit": "df4617d",
+  "status": "failed-repeat-entry",
+  "original_process": {
+    "at_utc": "2026-11-20T11:47:34.889228+00:00",
+    "pid": 25020,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "screen_released": true,
+  "actual_observations": [
+    "Final circular position and Chinese tooltip remain correct.",
+    "The native More Map Modes popup opens without being obstructed.",
+    "First entry succeeds automatically; second entry from faith view still stays at the host introduction.",
+    "Show/hide condition flags alone did not rearm the finished child animation."
+  ],
+  "review_images": {
+    "113359587628-hover.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0017\\review\\113359587628-hover.png",
+      "bytes": 3358912,
+      "sha256": "cd1f27ef0784d2bf77f982905b6b4f1243183b3734c948eea157368a34a6b2f0"
+    },
+    "113439711363-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0017\\review\\113439711363-click.png",
+      "bytes": 3349174,
+      "sha256": "0bd7c5cafc15e1db831ba71c1bfd157d79f6e3da59e2d49b4ef94fe45932d2b0"
+    },
+    "114044857814-capture.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0017\\review\\114044857814-capture.png",
+      "bytes": 3251950,
+      "sha256": "d73d579d66bd941e51e9d0fe2b580e6b801388a89fb5a4e3c8f27effa571dc9b"
+    },
+    "114214072162-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0017\\review\\114214072162-click.png",
+      "bytes": 3341989,
+      "sha256": "0cd24a657603432999f91f3509b6cc460de2de77e37eaf715ccdb9ffba02324c"
+    },
+    "114343284610-capture.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0017\\review\\114343284610-capture.png",
+      "bytes": 2800772,
+      "sha256": "dfe9919908ed547a0632a0eabe11f51b89879a498cee41d5773c4a025e78ab85"
+    },
+    "114628934031-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0017\\review\\114628934031-click.png",
+      "bytes": 2155257,
+      "sha256": "c63926936baf12930f340b7b25b4894018b06780a3a050fe1c269ea5604544bb"
+    },
+    "114719898180-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0017\\review\\114719898180-click.png",
+      "bytes": 2066185,
+      "sha256": "05e03b84e89af9680da2a07e7c8337af085a3fcc4a70129ae3c2da12dbefc4b6"
+    }
+  },
+  "next": "Alternate two entry animation states on each user click, then verify repeated opening in a new frozen run."
+}

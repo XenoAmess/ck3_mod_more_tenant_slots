@@ -97,6 +97,7 @@ types XapoPotentialOutput {
         onclick = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_refresh' )]"
         onclick = "[GetVariableSystem.Clear( 'mapmodes_expand' )]"
+        onclick = "[GetVariableSystem.Toggle( 'xapo_entry_cycle' )]"
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( 'activity_xapo_potential_output' ).Self )]"
         button_icon = {
             size = { 22 22 }
@@ -150,8 +151,14 @@ types XapoPotentialOutput {
         spacing = 20
         visible = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
         state = {
-            name = "xapo_enter_potential_map"
-            trigger_when = "[And( GetVariableSystem.HasValue( 'xapo_host_open', 'yes' ), EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' ) )]"
+            name = "xapo_enter_potential_map_a"
+            trigger_when = "[And( GetVariableSystem.HasValue( 'xapo_entry_cycle', 'yes' ), EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' ) )]"
+            duration = 0.3
+            on_finish = "[ActivityListDetailHostView.Confirm]"
+        }
+        state = {
+            name = "xapo_enter_potential_map_b"
+            trigger_when = "[And( Not( GetVariableSystem.HasValue( 'xapo_entry_cycle', 'yes' ) ), EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' ) )]"
             duration = 0.3
             on_finish = "[ActivityListDetailHostView.Confirm]"
         }

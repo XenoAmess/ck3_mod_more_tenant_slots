@@ -251,32 +251,24 @@ class PotentialOutputTests(unittest.TestCase):
                          'gui/xapo_potential_output.gui = xapo_map_launcher')
 
     def test_automatic_entry_rearms_after_reusing_host_window(self) -> None:
-        from ck3_text_projection import blocks, named_block
+        from ck3_text_projection import named_block
 
-        host = self.files['gui/window_activity_list.gui'].decode('utf-8-sig')
-        root = named_block(host, 'window', 'activity_list_detail_host')
-        lifecycle = {}
-        for block in blocks(host):
-            if block.key != 'state' or not root.opening < block.start < root.end:
-                continue
-            body = host[block.opening:block.end]
-            match = re.search(r'\bname\s*=\s*(_show|_hide)\b', body)
-            if match:
-                lifecycle[match[1]] = re.findall(r'on_start\s*=\s*"\[(.*?)\]"', body)
-        trigger = re.search(r'name = "xapo_enter_potential_map"\s+trigger_when = "\[(.*?)\]"', self.gui)[1]
+        launcher = named_block(self.gui, 'button_round', 'xapo_open_map')
+        actions = re.findall(r'onclick\s*=\s*"\[(.*?)\]"', self.gui[launcher.start:launcher.end])
+        toggles = [a for a in actions if "Toggle( 'xapo_entry_cycle' )" in a]
+        self.assertEqual(len(toggles), 1)
+        transitions = re.findall(r'name = "(xapo_enter_potential_map_[ab])"\s+trigger_when = "\[(.*?)\]"', self.gui)
         state = GuiActions()
         state.host_type = product.ACTIVITY
-        for _ in range(3):
-            for action in lifecycle['_show']:
-                state.evaluate(action)
-            self.assertTrue(state.evaluate(trigger))
-            for action in lifecycle['_hide']:
-                state.evaluate(action)
-            self.assertFalse(state.evaluate(trigger))
+        previous = None
+        for _ in range(4):
+            state.evaluate(toggles[0])
+            active = [name for name, trigger in transitions if state.evaluate(trigger)]
+            self.assertEqual(len(active), 1)
+            self.assertNotEqual(active[0], previous)
+            previous = active[0]
         state.host_type = 'activity_feast'
-        for action in lifecycle['_show']:
-            state.evaluate(action)
-        self.assertFalse(state.evaluate(trigger))
+        self.assertFalse(any(state.evaluate(trigger) for _,trigger in transitions))
 
     def test_collapsed_panel_preserves_refresh_and_does_not_reset_filters(self) -> None:
         from ck3_text_projection import named_block
