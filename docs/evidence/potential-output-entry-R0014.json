@@ -1,0 +1,32 @@
+{
+  "schema": "xapo-entry-attempt-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0014",
+  "source_commit": "b30d9dc661bdb6bb1621109d544dc228699cdc81",
+  "status": "not-passed",
+  "live_verified_entry": false,
+  "normal_gui_quit_reviewed": true,
+  "original_process": {
+    "at_utc": "2026-11-20T09:17:30.702480+00:00",
+    "pid": 17464,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "screen_released": true,
+  "observations": [
+    "Old save and unmodified original toolbar loaded.",
+    "Entering the campaign triggers a product badge error: inherited fontsize_min is not below fontsize12; explicit minimum is required.",
+    "The independent entry remained unavailable. Earlier geometric out-of-bounds explanation is an inference from the native flush-right placement, not an engine coordinate readback of the failed custom widget.",
+    "Official gui.debug and gui.createwidget were used for diagnosis after the failure; duplicate diagnostics from manual recreation are retained, not counted as separate source failures.",
+    "One rejected hover request used LTRB instead of xywh reviewed bounds; no pointer action occurred, corrected call retained."
+  ],
+  "error_triage": {
+    "bytes": 1685,
+    "sha256": "36bb879029d19ce2882d8a095b94dc9207099070aaf06ef9e0f1c44d93e6ab69"
+  },
+  "private_run_dir": "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0014"
+}

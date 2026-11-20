@@ -264,7 +264,7 @@ window = {{
     }}
     parentanchor = right|vcenter
     widgetanchor = left|vcenter
-    position = {{ 0 38 }}
+    position = {{ -32 38 }}
     size = {{ 32 32 }}
     visible = "[And4( IsInGame, GetPlayer.IsValid, And( Not( IsPauseMenuShown ), Not( IsGameViewOpen( 'barbershop' ) ) ), Or( CanChangeMapMode, GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) ) )]"
     alwaystransparent = yes
@@ -305,6 +305,7 @@ types XapoPotentialOutput {{
                 size = {{ 100% 100% }}
                 text = "xapo_mod_badge"
                 fontsize = 12
+                fontsize_min = 8
                 align = center
                 alwaystransparent = yes
             }}
@@ -328,6 +329,7 @@ types XapoPotentialOutput {{
         text_single = {{
             text = "xapo_mod_badge"
             fontsize = 12
+            fontsize_min = 8
             parentanchor = top|right
             alwaystransparent = yes
         }}
