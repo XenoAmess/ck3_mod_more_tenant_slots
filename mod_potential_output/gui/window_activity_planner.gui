@@ -14,16 +14,19 @@
 	state = {
 		name = _show
 		using = Animation_FadeIn_Quick
+        on_start = "[GetVariableSystem.Set( 'xapo_view_active', Select_CString( EqualTo_string( ActivityType.GetKey, 'activity_xapo_potential_output' ), 'yes', 'no' ) )]"
 		on_start = "[GetVariableSystem.Clear( 'reorganizing_multi_location' )]"
 	}
 
 	state = {
 		name = _hide
 		using = Animation_FadeOut_Quick
+        on_start = "[GetVariableSystem.Clear( 'xapo_view_active' )]"
         on_start = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 		on_start = "[GetVariableSystem.Clear( 'activity_planner_hide_default_magnificence' )]"
 	}
     xapo_goods_panel = {}
+    xapo_collapsed_panel = {}
     xapo_view_controls = {}
     widget = {
         name = "xapo_native_planner_content"

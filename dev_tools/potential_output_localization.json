@@ -26,7 +26,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "Potential Output (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "simp_chinese": {
     "xapo_potential_output": "潜在产出",
@@ -55,7 +59,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "潜在产出（XA MOD）",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "french": {
     "xapo_potential_output": "Production potentielle",
@@ -84,7 +92,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "Production potentielle (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "german": {
     "xapo_potential_output": "Produktionspotenzial",
@@ -113,7 +125,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "Produktionspotenzial (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "japanese": {
     "xapo_potential_output": "潜在生産",
@@ -142,7 +158,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "潜在生産 (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "korean": {
     "xapo_potential_output": "잠재 생산",
@@ -171,7 +191,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "잠재 생산 (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "polish": {
     "xapo_potential_output": "Potencjał produkcji",
@@ -200,7 +224,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "Potencjał produkcji (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "russian": {
     "xapo_potential_output": "Потенциал производства",
@@ -229,7 +257,11 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "Потенциал производства (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   },
   "spanish": {
     "xapo_potential_output": "Producción potencial",
@@ -258,6 +290,10 @@
     "xapo_refresh_a": "$xapo_potential_output$",
     "xapo_refresh_b": "$xapo_potential_output$",
     "xapo_refresh_a_desc": "$xapo_potential_output$",
-    "xapo_refresh_b_desc": "$xapo_potential_output$"
+    "xapo_refresh_b_desc": "$xapo_potential_output$",
+    "xapo_mapmode_title": "Producción potencial (XA MOD)",
+    "xapo_mapmode_tooltip": "#T $xapo_mapmode_title$#!\n$xapo_scope$",
+    "xapo_mod_group": "XA MOD",
+    "xapo_mod_badge": "MOD"
   }
 }

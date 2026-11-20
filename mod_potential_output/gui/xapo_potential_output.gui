@@ -2,18 +2,29 @@
 window = {
     name = "xapo_map_launcher"
     layer = middle
-    parentanchor = bottom|right
-    position = { -184 -112 }
-    size = { 140 36 }
-    movable = no
-    visible = "[And( GetPlayer.IsValid, CanChangeMapMode )]"
+    attachto = {
+        widgetid = "map_mode_houses_button"
+        inherit_visibility = no
+    }
+    parentanchor = right|vcenter
+    widgetanchor = left|vcenter
+    position = { 38 0 }
+    size = { 40 40 }
+    visible = "[And4( IsInGame, GetPlayer.IsValid, Not( IsPauseMenuShown ), Or( CanChangeMapMode, GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) ) )]"
     alwaystransparent = yes
+    xapo_mapmode_entry = {}
+}
+types XapoPotentialOutput {
+    type xapo_mapmode_entry = widget {
+        size = { 40 40 }
 
-    button_standard = {
+    button_round = {
         name = "xapo_open_map"
-        size = { 100% 100% }
-        text = "xapo_potential_output"
-        tooltip = "xapo_potential_output_desc"
+        visible = "[Not( GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) )]"
+        size = { 40 40 }
+        allow_outside = yes
+        tooltip = "xapo_mapmode_tooltip"
+        using = tooltip_nw
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
 					onclick = "[GetVariableSystem.Set( Concatenate( 'xapo_hidden_', GetTradeGoodType( 'trade_good_grain' ).GetTextIconNoFormat ), 'no' )]"
@@ -88,16 +99,63 @@ window = {
 
         onclick = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_refresh' )]"
+        onclick = "[GetVariableSystem.Clear( 'mapmodes_expand' )]"
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( 'activity_xapo_potential_output' ).Self )]"
+        button_icon = {
+            size = { 26 26 }
+            parentanchor = center
+            alwaystransparent = yes
+            texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
+            color = { 0.45 0.9 0.75 1 }
+        }
+        widget = {
+            size = { 28 14 }
+            parentanchor = top|right
+            position = { 7 -4 }
+            alwaystransparent = yes
+            background = { using = Background_Area_Dark }
+            text_single = {
+                size = { 100% 100% }
+                text = "xapo_mod_badge"
+                fontsize = 10
+                align = center
+                alwaystransparent = yes
+            }
+        }
     }
-
+    button_round = {
+        name = "xapo_reopen_filter"
+        visible = "[GetVariableSystem.HasValue( 'xapo_view_active', 'yes' )]"
+        size = { 40 40 }
+        down = yes
+        tooltip = "xapo_mapmode_tooltip"
+        using = tooltip_nw
+        onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
+        button_icon = {
+            size = { 26 26 }
+            parentanchor = center
+            alwaystransparent = yes
+            texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
+            color = { 0.45 0.9 0.75 1 }
+        }
+        text_single = {
+            text = "xapo_mod_badge"
+            fontsize = 10
+            parentanchor = top|right
+            alwaystransparent = yes
+        }
+    }
 }
-
-types XapoPotentialOutput {
     type xapo_host_intro = vbox {
         using = Window_Margins
         spacing = 20
         visible = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
+        state = {
+            name = "xapo_enter_potential_map"
+            trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
+            duration = 0.3
+            on_finish = "[ActivityListDetailHostView.Confirm]"
+        }
         header_pattern = {
             layoutpolicy_horizontal = expanding
             blockoverride "header_text" { text = "xapo_potential_output" }
@@ -148,6 +206,7 @@ type xapo_goods_panel = widget {
                 name = "xapo_exit_map"
                 size = { 28 28 }
                 tooltip = "xapo_exit"
+                shortcut = "close_window"
                 onclick = "[CloseGameView( 'activity_planner' )]"
                 onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
             }
@@ -1354,10 +1413,51 @@ type xapo_goods_panel = widget {
     }
 }
 
+    type xapo_collapsed_panel = widget {
+        name = "xapo_collapsed_panel"
+        layer = middle
+        parentanchor = top|right
+        position = { -16 100 }
+        size = { 330 44 }
+        visible = "[And( And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, 'activity_xapo_potential_output' ) ), GetVariableSystem.Exists( 'xapo_panel_collapsed' ) )]"
+        using = Window_Background
+        background = { using = Background_Area_Dark }
+        hbox = {
+            margin = { 8 6 }
+            layoutpolicy_horizontal = expanding
+            spacing = 6
+            button_round = {
+                name = "xapo_expand_panel"
+                size = { 32 32 }
+                down = yes
+                tooltip = "xapo_mapmode_tooltip"
+                onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
+                button_icon = {
+                    size = { 22 22 }
+                    parentanchor = center
+                    alwaystransparent = yes
+                    texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
+                    color = { 0.45 0.9 0.75 1 }
+                }
+            }
+            text_single = {
+                text = "xapo_mapmode_title"
+                using = Font_Size_Small
+            }
+            expand = {}
+            button_close = {
+                name = "xapo_exit_collapsed_map"
+                size = { 28 28 }
+                shortcut = "close_window"
+                tooltip = "xapo_exit"
+                onclick = "[CloseGameView( 'activity_planner' )]"
+                onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
+            }
+        }
+    }
     type xapo_view_controls = widget {
-        parentanchor = bottom|right
-        position = { -200 -112 }
-        size = { 160 36 }
+        size = { 4 4 }
+        alwaystransparent = yes
         visible = "[And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, 'activity_xapo_potential_output' ) )]"
         hbox = {
             size = { 8 4 }
@@ -1384,19 +1484,6 @@ type xapo_goods_panel = widget {
                     }
                 }
             }
-        }
-        button_standard = {
-            size = { 120 36 }
-            text = "xapo_potential_output"
-            onclick = "[GetVariableSystem.Toggle( 'xapo_panel_collapsed' )]"
-        }
-        button_close = {
-            position = { 126 4 }
-            size = { 28 28 }
-            shortcut = "close_window"
-            tooltip = "xapo_exit"
-            onclick = "[CloseGameView( 'activity_planner' )]"
-            onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
         }
     }
     type xapo_county_potential_icons = flowcontainer {

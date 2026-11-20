@@ -217,10 +217,40 @@ class PotentialOutputTests(unittest.TestCase):
             ancestors = [block for block in blocks(text) if block.opening < state.start < block.end]
             self.assertEqual(ancestors, [root])
         self.assertNotIn("xapo_seed_filters", self.gui)
-        launcher = named_block(self.gui, "window", "xapo_map_launcher")
+        launcher = named_block(self.gui, "button_round", "xapo_open_map")
         launcher_gui = self.gui[launcher.start:launcher.end]
         self.assertNotIn("ActivityPlanner.", launcher_gui)
+        self.assertNotIn("SetMapMode(", launcher_gui)
         self.assertNotIn("xapo_toggle_panel", launcher_gui)
+        self.assertIn('name = "xapo_map_launcher"', self.gui)
+
+    def test_independent_entry_does_not_override_native_mapmode_types(self) -> None:
+        from ck3_text_projection import named_block
+
+        self.assertNotIn("gui/shared/mapmodes.gui", self.files)
+        self.assertNotIn("gui/hud.gui", self.files)
+        self.assertNotIn("gui/shared/buttons.gui", self.files)
+        for relative,data in self.files.items():
+            if relative.endswith('.gui'):
+                declared = re.findall(r'\btype\s+(\w+)\s*=', data.decode('utf-8-sig'))
+                self.assertFalse(set(declared) & {'map_modes', 'flowcontainer_additional_mapmodes', 'icon_button_mapmode'})
+        launcher = named_block(self.gui, 'window', 'xapo_map_launcher')
+        body = self.gui[launcher.start:launcher.end]
+        self.assertIn('widgetid = "map_mode_houses_button"', body)
+        self.assertIn('xapo_mapmode_entry = {}', body)
+        self.assertNotIn('button_standard', body)
+        self.assertEqual(self.files['gui/scripted_widgets/xapo_potential_output.txt'].decode('utf-8-sig').strip(),
+                         'gui/xapo_potential_output.gui = xapo_map_launcher')
+
+    def test_collapsed_panel_preserves_refresh_and_does_not_reset_filters(self) -> None:
+        from ck3_text_projection import named_block
+        expand = named_block(self.gui, "button_round", "xapo_expand_panel")
+        body = self.gui[expand.start:expand.end]
+        self.assertIn("Clear( 'xapo_panel_collapsed' )", body)
+        self.assertNotIn("xapo_reset_filters", body)
+        self.assertIn('name = "xapo_refresh_scores"', self.gui)
+        self.assertIn("on_finish = \"[ActivityPlanner.SelectOption( ActivityOption.Self )]\"", self.gui)
+        self.assertIn('xapo_collapsed_panel = {}', self.files['gui/window_activity_planner.gui'].decode('utf-8-sig'))
 
     def test_build_is_deterministic_and_has_independent_identity(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

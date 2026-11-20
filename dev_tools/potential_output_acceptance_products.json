@@ -56,6 +56,39 @@
             "poll_interval": 1,
             "max_prepare_bytes": 536870912
           }
+        },
+        {
+          "id": "entry-redesign",
+          "budgets": {
+            "timeout": 14400,
+            "quit_timeout": 90,
+            "poll_interval": 1,
+            "max_prepare_bytes": 536870912
+          },
+          "required_business_evidence": [
+            "actual_product_loaded",
+            "map_entry",
+            "county_potential_icons",
+            "single_good_filter",
+            "multi_good_filter",
+            "clear_filter",
+            "select_all_filter",
+            "category_filter",
+            "panel_collapse",
+            "mode_restore",
+            "zoom_display",
+            "potential_kind_shading",
+            "zero_single_multi_shading",
+            "no_actual_activity_started",
+            "normal_activity_planner",
+            "native_toolbar_adjacent_entry",
+            "original_toolbar_unchanged",
+            "mod_tooltip",
+            "single_click_entry",
+            "no_rectangular_launcher",
+            "collapsed_title_restore",
+            "existing_save_entry"
+          ]
         }
       ]
     }

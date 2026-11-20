@@ -19,7 +19,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 PRODUCT = "mod_potential_output"
 MOD = ROOT / PRODUCT
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 CONTRACT = Path(__file__).with_name("potential_output_sources.json")
 LOCALIZATION = Path(__file__).with_name("potential_output_localization.json")
 NATIVE_FILES = (
@@ -30,6 +30,7 @@ NATIVE_FILES = (
     "common/trade/county_potential_trade_goods/county_potential_trade_goods.txt",
     "gui/window_activity_planner.gui",
     "gui/window_activity_list.gui",
+    "gui/shared/mapmodes.gui",
 )
 ACTIVITY = "activity_xapo_potential_output"
 ACTIVE = f"And( IsGameViewOpen( 'activity_planner' ), EqualTo_string( ActivityPlanner.GetActivityType.GetKey, '{ACTIVITY}' ) )"
@@ -50,8 +51,13 @@ def projections(game: Path) -> dict[str, list[tuple[str, str]]]:
     planner_old = planner[planner_block.start:planner_block.end]
     body_start = next(b.end for b in blocks(planner_old) if b.key == 'state' and re.match(r'\s*name\s*=\s*_hide\b', planner_old[b.opening + 1:b.end]))
     planner_header = planner_old[:body_start].replace('using = Animation_FadeOut_Quick', 'using = Animation_FadeOut_Quick\n        on_start = "[GetScriptedGui( \'xapo_reset_filters\' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"', 1)
+    planner_header = planner_header.replace('using = Animation_FadeOut_Quick',
+        'using = Animation_FadeOut_Quick\n        on_start = "[GetVariableSystem.Clear( \'xapo_view_active\' )]"', 1)
+    planner_header = planner_header.replace('using = Animation_FadeIn_Quick',
+        'using = Animation_FadeIn_Quick\n        on_start = "[GetVariableSystem.Set( \'xapo_view_active\', Select_CString( EqualTo_string( ActivityType.GetKey, \'activity_xapo_potential_output\' ), \'yes\', \'no\' ) )]"', 1)
     planner_new = planner_header + f'''
     xapo_goods_panel = {{}}
+    xapo_collapsed_panel = {{}}
     xapo_view_controls = {{}}
     widget = {{
         name = "xapo_native_planner_content"
@@ -252,33 +258,91 @@ def panel(goods: list[str], basic: set[str], categories: list[tuple[str, list[st
 window = {{
     name = "xapo_map_launcher"
     layer = middle
-    parentanchor = bottom|right
-    position = {{ -184 -112 }}
-    size = {{ 140 36 }}
-    movable = no
-    visible = "[And( GetPlayer.IsValid, CanChangeMapMode )]"
+    attachto = {{
+        widgetid = "map_mode_houses_button"
+        inherit_visibility = no
+    }}
+    parentanchor = right|vcenter
+    widgetanchor = left|vcenter
+    position = {{ 38 0 }}
+    size = {{ 40 40 }}
+    visible = "[And4( IsInGame, GetPlayer.IsValid, Not( IsPauseMenuShown ), Or( CanChangeMapMode, GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) ) )]"
     alwaystransparent = yes
+    xapo_mapmode_entry = {{}}
+}}
+types XapoPotentialOutput {{
+    type xapo_mapmode_entry = widget {{
+        size = {{ 40 40 }}
 
-    button_standard = {{
+    button_round = {{
         name = "xapo_open_map"
-        size = {{ 100% 100% }}
-        text = "xapo_potential_output"
-        tooltip = "xapo_potential_output_desc"
+        visible = "[Not( GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) )]"
+        size = {{ 40 40 }}
+        allow_outside = yes
+        tooltip = "xapo_mapmode_tooltip"
+        using = tooltip_nw
         onclick = "[GetVariableSystem.Set( 'xapo_previous_mapmode', GetCurrentMapMode.GetKey )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
 {set_goods(goods, "'no'", sync=False)}
         onclick = "[GetScriptedGui( 'xapo_reset_filters' ).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
         onclick = "[GetVariableSystem.Clear( 'xapo_refresh' )]"
+        onclick = "[GetVariableSystem.Clear( 'mapmodes_expand' )]"
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( '{ACTIVITY}' ).Self )]"
+        button_icon = {{
+            size = {{ 26 26 }}
+            parentanchor = center
+            alwaystransparent = yes
+            texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
+            color = {{ 0.45 0.9 0.75 1 }}
+        }}
+        widget = {{
+            size = {{ 28 14 }}
+            parentanchor = top|right
+            position = {{ 7 -4 }}
+            alwaystransparent = yes
+            background = {{ using = Background_Area_Dark }}
+            text_single = {{
+                size = {{ 100% 100% }}
+                text = "xapo_mod_badge"
+                fontsize = 10
+                align = center
+                alwaystransparent = yes
+            }}
+        }}
     }}
-
+    button_round = {{
+        name = "xapo_reopen_filter"
+        visible = "[GetVariableSystem.HasValue( 'xapo_view_active', 'yes' )]"
+        size = {{ 40 40 }}
+        down = yes
+        tooltip = "xapo_mapmode_tooltip"
+        using = tooltip_nw
+        onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
+        button_icon = {{
+            size = {{ 26 26 }}
+            parentanchor = center
+            alwaystransparent = yes
+            texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
+            color = {{ 0.45 0.9 0.75 1 }}
+        }}
+        text_single = {{
+            text = "xapo_mod_badge"
+            fontsize = 10
+            parentanchor = top|right
+            alwaystransparent = yes
+        }}
+    }}
 }}
-
-types XapoPotentialOutput {{
     type xapo_host_intro = vbox {{
         using = Window_Margins
         spacing = 20
         visible = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' )]"
+        state = {{
+            name = "xapo_enter_potential_map"
+            trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, '{ACTIVITY}' )]"
+            duration = 0.3
+            on_finish = "[ActivityListDetailHostView.Confirm]"
+        }}
         header_pattern = {{
             layoutpolicy_horizontal = expanding
             blockoverride "header_text" {{ text = "xapo_potential_output" }}
@@ -329,6 +393,7 @@ type xapo_goods_panel = widget {{
                 name = "xapo_exit_map"
                 size = {{ 28 28 }}
                 tooltip = "xapo_exit"
+                shortcut = "close_window"
                 onclick = "[CloseGameView( 'activity_planner' )]"
                 onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
             }}
@@ -390,10 +455,51 @@ type xapo_goods_panel = widget {{
     }}
 }}
 
+    type xapo_collapsed_panel = widget {{
+        name = "xapo_collapsed_panel"
+        layer = middle
+        parentanchor = top|right
+        position = {{ -16 100 }}
+        size = {{ 330 44 }}
+        visible = "[And( {ACTIVE}, GetVariableSystem.Exists( 'xapo_panel_collapsed' ) )]"
+        using = Window_Background
+        background = {{ using = Background_Area_Dark }}
+        hbox = {{
+            margin = {{ 8 6 }}
+            layoutpolicy_horizontal = expanding
+            spacing = 6
+            button_round = {{
+                name = "xapo_expand_panel"
+                size = {{ 32 32 }}
+                down = yes
+                tooltip = "xapo_mapmode_tooltip"
+                onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
+                button_icon = {{
+                    size = {{ 22 22 }}
+                    parentanchor = center
+                    alwaystransparent = yes
+                    texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
+                    color = {{ 0.45 0.9 0.75 1 }}
+                }}
+            }}
+            text_single = {{
+                text = "xapo_mapmode_title"
+                using = Font_Size_Small
+            }}
+            expand = {{}}
+            button_close = {{
+                name = "xapo_exit_collapsed_map"
+                size = {{ 28 28 }}
+                shortcut = "close_window"
+                tooltip = "xapo_exit"
+                onclick = "[CloseGameView( 'activity_planner' )]"
+                onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
+            }}
+        }}
+    }}
     type xapo_view_controls = widget {{
-        parentanchor = bottom|right
-        position = {{ -200 -112 }}
-        size = {{ 160 36 }}
+        size = {{ 4 4 }}
+        alwaystransparent = yes
         visible = "[{ACTIVE}]"
         hbox = {{
             size = {{ 8 4 }}
@@ -420,19 +526,6 @@ type xapo_goods_panel = widget {{
                     }}
                 }}
             }}
-        }}
-        button_standard = {{
-            size = {{ 120 36 }}
-            text = "xapo_potential_output"
-            onclick = "[GetVariableSystem.Toggle( 'xapo_panel_collapsed' )]"
-        }}
-        button_close = {{
-            position = {{ 126 4 }}
-            size = {{ 28 28 }}
-            shortcut = "close_window"
-            tooltip = "xapo_exit"
-            onclick = "[CloseGameView( 'activity_planner' )]"
-            onclick = "[SetMapMode( Select_CString( GetVariableSystem.Exists( 'xapo_previous_mapmode' ), GetVariableSystem.Get( 'xapo_previous_mapmode' ), 'realms' ) )]"
         }}
     }}
     type xapo_county_potential_icons = flowcontainer {{
@@ -568,9 +661,14 @@ def validate(framework: Path, game: Path) -> dict:
     from translate_localization_minimax import parse_ck3_localization
 
     version = installed_game_version(game / "binaries/ck3.exe")
-    expected_version = json.loads(CONTRACT.read_text())["game_version"]
+    contract = json.loads(CONTRACT.read_text())
+    expected_version = contract["game_version"]
+    expected_exe = contract["exe_sha256"]
     if version != expected_version:
         raise ValueError(f"game version differs: {version} != {expected_version}")
+    expected_exe = json.loads(CONTRACT.read_text())["exe_sha256"]
+    if hashlib.sha256((game / "binaries/ck3.exe").read_bytes()).hexdigest() != expected_exe:
+        raise ValueError("game executable differs from the reviewed exact build")
     expected = generated(game)
     actual = {p.relative_to(MOD).as_posix(): p.read_bytes() for p in MOD.rglob("*") if p.is_file()}
     if expected != actual:

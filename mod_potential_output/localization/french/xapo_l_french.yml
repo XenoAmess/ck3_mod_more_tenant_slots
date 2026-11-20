@@ -26,3 +26,7 @@
  xapo_refresh_b:0 "$xapo_potential_output$"
  xapo_refresh_a_desc:0 "$xapo_potential_output$"
  xapo_refresh_b_desc:0 "$xapo_potential_output$"
+ xapo_mapmode_title:0 "Production potentielle (XA MOD)"
+ xapo_mapmode_tooltip:0 "#T $xapo_mapmode_title$#!\n$xapo_scope$"
+ xapo_mod_group:0 "XA MOD"
+ xapo_mod_badge:0 "MOD"
