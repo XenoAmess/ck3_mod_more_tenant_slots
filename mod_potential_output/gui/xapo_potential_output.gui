@@ -151,7 +151,7 @@ types XapoPotentialOutput {
         visible = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
         state = {
             name = "xapo_enter_potential_map"
-            trigger_when = "[EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' )]"
+            trigger_when = "[And( GetVariableSystem.HasValue( 'xapo_host_open', 'yes' ), EqualTo_string( ActivityListDetailHostView.GetType.GetKey, 'activity_xapo_potential_output' ) )]"
             duration = 0.3
             on_finish = "[ActivityListDetailHostView.Confirm]"
         }

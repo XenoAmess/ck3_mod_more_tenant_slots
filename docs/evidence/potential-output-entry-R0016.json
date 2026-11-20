@@ -1,0 +1,113 @@
+{
+  "schema": "xapo-entry-attempt-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0016",
+  "source_commit": "adb464f",
+  "status": "partial-not-accepted-repeat-entry",
+  "original_process": {
+    "at_utc": "2026-11-20T11:13:53.950029+00:00",
+    "pid": 28576,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "screen_released": true,
+  "actual_observations": [
+    "Independent round MOD entry is below native plus with no overlap in the tested window.",
+    "Native plus expands and the original toolbar remains usable.",
+    "First click enters the potential map automatically; selected potential goods and count labels update.",
+    "Single/multiple/category/clear/all filters and compact header restoration work on the existing save.",
+    "Second entry remains on the host introduction; automatic confirmation does not rearm with a persistent activity type."
+  ],
+  "not_qualified": [
+    "repeat single-click entry",
+    "nondefault map-mode restoration",
+    "normal activity regression"
+  ],
+  "error_log": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\gui-9db5b117253746d78a4e265efd3751c8\\profile\\logs\\error.log",
+    "bytes": 1005,
+    "sha256": "25851ee0cadee0598ec7c5a1aaa6b06165f121a42bb99123c11c8e7ad22556a4"
+  },
+  "log_triage": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\R0016-log-triage.json",
+    "bytes": 3553,
+    "sha256": "febd8bf45b06faa9f9b8d9a297cc8bdda49afafed91d5980cfbbf1c4af11074c"
+  },
+  "review_images": {
+    "105551307551-capture.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\105551307551-capture.png",
+      "bytes": 3269819,
+      "sha256": "868aedb8e3cae782aeb0ad92277ec9047ed3955285ec412ad949d58bbe84c7dc"
+    },
+    "105625043988-hover.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\105625043988-hover.png",
+      "bytes": 3320640,
+      "sha256": "286f40b39163465d9ddedf932226099e4b34f70aaf90666d82474da02dc1327f"
+    },
+    "105719305652-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\105719305652-click.png",
+      "bytes": 3275930,
+      "sha256": "6c4fcd7dad9da7fcc05682d6cf541ea58dc74420cef2a88bebabd2f83fb955e6"
+    },
+    "105857000295-capture.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\105857000295-capture.png",
+      "bytes": 3239370,
+      "sha256": "c181440827a025f1d4cf52423a40391b9f630e213c3383f501461cdbde68c79e"
+    },
+    "105936569393-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\105936569393-click.png",
+      "bytes": 3079488,
+      "sha256": "42bc13732578ebde72322ad9ca58401e5a785acf5fb47e33a89c4ef32b128b66"
+    },
+    "110241302076-scroll.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\110241302076-scroll.png",
+      "bytes": 3494259,
+      "sha256": "b33db24cf2606e43d4b2e8abc79ad82e7bc3e71e6c95e4e0f17285be75bf18c3"
+    },
+    "110305994094-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\110305994094-click.png",
+      "bytes": 3459739,
+      "sha256": "1f1d5aa06e5c7e6c9ec28fc6bee63cb45fd1cf8f005e3bec5f3eda9e930cae05"
+    },
+    "110329961919-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\110329961919-click.png",
+      "bytes": 3521589,
+      "sha256": "2d28d7e77fb0c275c856b29383e0f6a2230243194ef610fa3b1e05dce612b6aa"
+    },
+    "110352634473-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\110352634473-click.png",
+      "bytes": 3433274,
+      "sha256": "94c15cafc84204fe0534975f7432598402b41d3f3ab9b76a8ce369644c7aa8d9"
+    },
+    "110438927809-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\110438927809-click.png",
+      "bytes": 3400732,
+      "sha256": "c1f4a2c784afbe5f5acb215f758c0743e9b3ad0ca45b706a5e93156e69224708"
+    },
+    "110500989805-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\110500989805-click.png",
+      "bytes": 3470352,
+      "sha256": "d235db123d062fbad2453255673681d70de7ce63223c1a7fe95f4082d0f128dc"
+    },
+    "110722879854-capture.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\110722879854-capture.png",
+      "bytes": 2849129,
+      "sha256": "2a80994f54fafb25e394477457bf216be6c3f56e8ac1232538e6e44d6b5e49a2"
+    },
+    "111304684818-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\111304684818-click.png",
+      "bytes": 2134307,
+      "sha256": "266d37bd8dab718afc40ffccfa824db9cc12a925196917b428f13e7950ad3765"
+    },
+    "111336777876-click.png": {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0016\\review\\111336777876-click.png",
+      "bytes": 2134751,
+      "sha256": "63a7f94d5907b0789c3c484db56c8b5d16901d312073b9d6d4db169ca32ea302"
+    }
+  },
+  "next": "Bind intro trigger to the native host window show/hide lifecycle, then freeze a fresh run."
+}

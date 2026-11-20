@@ -52,6 +52,8 @@ class GuiActions:
             return expression[1:-1]
         if expression == "ActivityPlanner.StartLocationPicking":
             return True
+        if expression == "ActivityListDetailHostView.GetType.GetKey":
+            return self.host_type
         scripted = re.fullmatch(r"GetScriptedGui\( (.*) \)\.Execute\( GuiScope\.SetRoot\( GetPlayer\.MakeScope \)\.End \)", expression)
         if scripted:
             key = str(self.evaluate(scripted[1]))
@@ -88,6 +90,11 @@ class GuiActions:
         if name == "GetVariableSystem.Set":
             self.values[str(args[0])] = str(args[1])
             return True
+        if name == "GetVariableSystem.Clear":
+            self.values.pop(str(args[0]), None)
+            return True
+        if name == "EqualTo_string":
+            return args[0] == args[1]
         if name == "Not":
             return not args[0]
         if name == "And":
@@ -242,6 +249,34 @@ class PotentialOutputTests(unittest.TestCase):
         self.assertNotIn('button_standard', body)
         self.assertEqual(self.files['gui/scripted_widgets/xapo_potential_output.txt'].decode('utf-8-sig').strip(),
                          'gui/xapo_potential_output.gui = xapo_map_launcher')
+
+    def test_automatic_entry_rearms_after_reusing_host_window(self) -> None:
+        from ck3_text_projection import blocks, named_block
+
+        host = self.files['gui/window_activity_list.gui'].decode('utf-8-sig')
+        root = named_block(host, 'window', 'activity_list_detail_host')
+        lifecycle = {}
+        for block in blocks(host):
+            if block.key != 'state' or not root.opening < block.start < root.end:
+                continue
+            body = host[block.opening:block.end]
+            match = re.search(r'\bname\s*=\s*(_show|_hide)\b', body)
+            if match:
+                lifecycle[match[1]] = re.findall(r'on_start\s*=\s*"\[(.*?)\]"', body)
+        trigger = re.search(r'name = "xapo_enter_potential_map"\s+trigger_when = "\[(.*?)\]"', self.gui)[1]
+        state = GuiActions()
+        state.host_type = product.ACTIVITY
+        for _ in range(3):
+            for action in lifecycle['_show']:
+                state.evaluate(action)
+            self.assertTrue(state.evaluate(trigger))
+            for action in lifecycle['_hide']:
+                state.evaluate(action)
+            self.assertFalse(state.evaluate(trigger))
+        state.host_type = 'activity_feast'
+        for action in lifecycle['_show']:
+            state.evaluate(action)
+        self.assertFalse(state.evaluate(trigger))
 
     def test_collapsed_panel_preserves_refresh_and_does_not_reset_filters(self) -> None:
         from ck3_text_projection import named_block

@@ -248,6 +248,7 @@ window = {
 	state = {
 		name = _show
 		using = Animation_FadeIn_Standard
+        on_start = "[GetVariableSystem.Set( 'xapo_host_open', 'yes' )]"
 		using = Sound_WindowShow_Standard
 		position = { -650 110 }
 	}
@@ -255,6 +256,7 @@ window = {
 	state = {
 		name = _hide
 		using = Animation_FadeOut_Quick
+        on_start = "[GetVariableSystem.Clear( 'xapo_host_open' )]"
 		using = Sound_WindowHide_Standard
 	}
 
