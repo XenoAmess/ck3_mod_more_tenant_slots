@@ -1,14 +1,14 @@
 # 潜在产出（Potential Output XA）
 
-独立子 Mod：`mod_potential_output/`，适配 CK3 1.21.0 Florin。无需 MTS 或 POD。
+独立子 Mod：`mod_potential_output/`，仓库 0.1.1 已在 CK3 1.21.0.3 Florin 自测通过。无需 MTS 或 POD。工坊当前仍为 0.1.0。
 
 ## 使用
 
 1. 在启动器中启用 Potential Output (XA)，进入新游戏或旧存档。
-2. 点击地图右下角的「潜在产出」，再点击「显示地图」。
+2. 仓库 0.1.1：点击原生视角栏末尾、“＋”下方带 MOD 角标的绿色圆形按钮，单击进入；悬停显示「潜在产出（XA MOD）」。工坊 0.1.0 仍使用文字入口，再点「显示地图」。
 3. 点击商品图标开关单项，点击分类名称切换整组；也可全选或清空。
 4. 放大地图查看各伯爵领的商品图标和匹配种类数。缩小时保留地图底色。
-5. 面板右上角的减号收起面板，右下角「潜在产出」按钮重新展开；叉号退出并恢复之前的地图视角。
+5. 面板右上角的减号收起为窄标题条，点击标题条左侧圆形图标或右下角圆形入口重新展开；叉号退出并恢复之前的地图模式。
 
 展示的是伯爵领**可以生产**的商品，包含尚未开发的资源。商品清单来自原版潜力接口，不读取当前产量。只列入原版县潜力表中的 35 种商品，不列仅靠加工获得的 9 种商品。
 
@@ -18,7 +18,9 @@
 
 推荐订阅 [Steam 创意工坊：潜在产出 / Potential Output (XA)](https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123)，然后在启动器播放集中启用 Potential Output (XA)。当前发布版本为 0.1.0；[发布记录](workshop/potential-output/publication-0.1.0.md)包含说明、截图及实际下载加载验收。
 
-手动安装也可使用本地正式 ZIP：
+仓库 0.1.1 的实测截图、兼容边界和本地 ZIP 见 [入口改造验收报告](potential-output-entry-0.1.1-report.md)。新入口独立注册，不改原生视角栏，但原有三份地图/活动 GUI 覆盖仍存在。
+
+手动安装也可使用本地实测 ZIP：
 
 将 ZIP 解压到 CK3 用户目录下的 `mod/`，包中已包含 `mod_potential_output/` 子目录。再在 `mod/` 下新建同级文件 `mod_potential_output.mod`：
 

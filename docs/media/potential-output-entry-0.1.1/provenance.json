@@ -1,0 +1,98 @@
+{
+  "schema": "xapo-real-screenshot-crops-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0019",
+  "source_commit": "511e65a1028ff7415b78908f47876c072a9cc3d3",
+  "policy": "Original game desktop screenshots, cropped to game pixels only. No compositing, generated imagery, annotation or resizing. JPEG maps use quality 92.",
+  "images": [
+    {
+      "source": {
+        "path": "artifacts/potential-output-entry-20261120/live/pc-20260924rtuf-f11af23c08--potential-output--R0019/review/132408883938-capture.png",
+        "bytes": 3273390,
+        "sha256": "baafb65ec6a0aa680c5a0194a834d68bb068f3303226161c940d15766b027ae3"
+      },
+      "crop_xyxy": [
+        1750,
+        980,
+        2180,
+        1180
+      ],
+      "output": {
+        "path": "docs/media/potential-output-entry-0.1.1/01-entry.png",
+        "bytes": 154718,
+        "sha256": "8d133913071eb64612d877b060230fb5874dbe2d1a6dd68fd08f3162d061b4e0"
+      }
+    },
+    {
+      "source": {
+        "path": "artifacts/potential-output-entry-20261120/live/pc-20260924rtuf-f11af23c08--potential-output--R0019/review/133244493229-capture.png",
+        "bytes": 3370387,
+        "sha256": "ce3186a87ba8cae956a0a837f103f364500f009ac330a7cd1320ebc3284ada84"
+      },
+      "crop_xyxy": [
+        1720,
+        1000,
+        2180,
+        1180
+      ],
+      "output": {
+        "path": "docs/media/potential-output-entry-0.1.1/02-tooltip.png",
+        "bytes": 120883,
+        "sha256": "a14abea3fbcc4cb7f093ab2d1351ab9dda666be334f76b8bc7472dfc36e780c8"
+      }
+    },
+    {
+      "source": {
+        "path": "artifacts/potential-output-entry-20261120/live/pc-20260924rtuf-f11af23c08--potential-output--R0019/review/141435382191-capture.png",
+        "bytes": 3551037,
+        "sha256": "e1a3b8b6840c73d21d0071c058d92f2a2d78e4548f8089467340eec69bc7172c"
+      },
+      "crop_xyxy": [
+        1810,
+        320,
+        2160,
+        385
+      ],
+      "output": {
+        "path": "docs/media/potential-output-entry-0.1.1/03-collapsed.png",
+        "bytes": 45178,
+        "sha256": "fd8d3f9b2b66146a56f730b076b83e2ebd0e12e0b8725ea244d21234bc6a2c8f"
+      }
+    },
+    {
+      "source": {
+        "path": "artifacts/potential-output-entry-20261120/live/pc-20260924rtuf-f11af23c08--potential-output--R0019/review/140641124686-capture.png",
+        "bytes": 3216242,
+        "sha256": "506d5ae6b42c9e6ec916586e5150cf6cfe84aa09addb34d6ab9702f54de1197b"
+      },
+      "crop_xyxy": [
+        380,
+        230,
+        2180,
+        1210
+      ],
+      "output": {
+        "path": "docs/media/potential-output-entry-0.1.1/04-filter-map.jpg",
+        "bytes": 672428,
+        "sha256": "d8277233c6c32739a8ed965a309796b9601aaddd53d3ed6bc73894a342789e41"
+      }
+    },
+    {
+      "source": {
+        "path": "artifacts/potential-output-entry-20261120/live/pc-20260924rtuf-f11af23c08--potential-output--R0019/review/140801099290-capture.png",
+        "bytes": 3509139,
+        "sha256": "e79323ca226041afe1dceff17dafd802d0b15a82d612db1e215e1adf442f5e91"
+      },
+      "crop_xyxy": [
+        380,
+        230,
+        2180,
+        1210
+      ],
+      "output": {
+        "path": "docs/media/potential-output-entry-0.1.1/05-county-icons.jpg",
+        "bytes": 768310,
+        "sha256": "1127bfd263b71cb692f423dc1b878a24eaa22cb05fbdf7abb2bb68c516c46549"
+      }
+    }
+  ]
+}

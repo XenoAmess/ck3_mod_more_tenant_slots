@@ -1,0 +1,466 @@
+{
+  "schema": "xapo-entry-acceptance-v1",
+  "version": "0.1.1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0019",
+  "source_commit": "511e65a1028ff7415b78908f47876c072a9cc3d3",
+  "game_version": "1.21.0.3",
+  "steam_build": "26785313",
+  "game_exe_sha256": "859f0d380098adcb130eb9d453458222749fcdf6d46126ad0ed99d78f9a0aa28",
+  "framework_commit": "c82e82ebeac09d32196debb62b2deca1530763ba",
+  "language": "simp_chinese",
+  "client_size": [
+    1800,
+    980
+  ],
+  "verification": {
+    "status": "PASS",
+    "process_pass": true,
+    "closure_pass": true,
+    "gui_business_pass": true,
+    "case_acceptance_pass": true,
+    "business_pass": true,
+    "product_release_pass": false,
+    "native_capability_pass": false
+  },
+  "business_review": {
+    "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0019",
+    "case": "entry-redesign",
+    "reviewer": "Codex direct screenshot review",
+    "direct_image_review": true,
+    "passed": true,
+    "facts": {
+      "actual_product_loaded": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\133244493229-capture.png",
+            "bytes": 3370387,
+            "sha256": "ce3186a87ba8cae956a0a837f103f364500f009ac330a7cd1320ebc3284ada84"
+          }
+        ]
+      },
+      "map_entry": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\134651335742-capture.png",
+            "bytes": 3229317,
+            "sha256": "496d1c20cf7e37a97709900eb4ffb1bd43c57bf63f314b7921475f0782fb92f4"
+          }
+        ]
+      },
+      "county_potential_icons": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140801099290-capture.png",
+            "bytes": 3509139,
+            "sha256": "e79323ca226041afe1dceff17dafd802d0b15a82d612db1e215e1adf442f5e91"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\142730219168-capture.png",
+            "bytes": 3463358,
+            "sha256": "6f1f28d8467f3e3f54b63eb0dfb189af8cb5ef7f8c26030f46363035dc2545ef"
+          }
+        ]
+      },
+      "single_good_filter": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140516388912-capture.png",
+            "bytes": 3206331,
+            "sha256": "a18f0b0021fc9b4ce367ffb37edcdafe1ec06942ce40ecb3eb11897664feb8ab"
+          }
+        ]
+      },
+      "multi_good_filter": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140641124686-capture.png",
+            "bytes": 3216242,
+            "sha256": "506d5ae6b42c9e6ec916586e5150cf6cfe84aa09addb34d6ab9702f54de1197b"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140801099290-capture.png",
+            "bytes": 3509139,
+            "sha256": "e79323ca226041afe1dceff17dafd802d0b15a82d612db1e215e1adf442f5e91"
+          }
+        ]
+      },
+      "clear_filter": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\135758765463-capture.png",
+            "bytes": 3125793,
+            "sha256": "150b0ca481e4ab3b3a9406ee7898c34c3705664f8490d1ce03d7a7fd61cae8d9"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\143531818343-click.png",
+            "bytes": 3372778,
+            "sha256": "799f617e1d42a60401a58cffeadf8ab970fb9fc7dae976d4c51fc96f43e173cb"
+          }
+        ]
+      },
+      "select_all_filter": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\142730219168-capture.png",
+            "bytes": 3463358,
+            "sha256": "6f1f28d8467f3e3f54b63eb0dfb189af8cb5ef7f8c26030f46363035dc2545ef"
+          }
+        ]
+      },
+      "category_filter": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\141749857298-capture.png",
+            "bytes": 3388786,
+            "sha256": "7447db259730c7d0ec45c6c32fca9010d2b38fce585aa6d877a6fe681af7a07f"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\142613545882-capture.png",
+            "bytes": 3386688,
+            "sha256": "06948cda0eeb4efcb32c1a2bd6d23ba5072e31a45703743bb430e60369e9bc03"
+          }
+        ]
+      },
+      "panel_collapse": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\141435382191-capture.png",
+            "bytes": 3551037,
+            "sha256": "e1a3b8b6840c73d21d0071c058d92f2a2d78e4548f8089467340eec69bc7172c"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\141547699024-capture.png",
+            "bytes": 3375398,
+            "sha256": "084bcb31a8d30297d4b01b704ac80045749218d6d3d104fc53f0e6b8ef3350f3"
+          }
+        ]
+      },
+      "mode_restore": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\135555378091-capture.png",
+            "bytes": 3314780,
+            "sha256": "b1aa5c7bf53f766698427c36b95a3f88d6406e11032fe720746db9637c2c7f78"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\143719127460-capture.png",
+            "bytes": 3564679,
+            "sha256": "c4591f35826333a5aa27bad15c0c93e8503479eef20f28de079fa7a90240b2e4"
+          }
+        ]
+      },
+      "zoom_display": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140641124686-capture.png",
+            "bytes": 3216242,
+            "sha256": "506d5ae6b42c9e6ec916586e5150cf6cfe84aa09addb34d6ab9702f54de1197b"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140801099290-capture.png",
+            "bytes": 3509139,
+            "sha256": "e79323ca226041afe1dceff17dafd802d0b15a82d612db1e215e1adf442f5e91"
+          }
+        ]
+      },
+      "potential_kind_shading": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\135758765463-capture.png",
+            "bytes": 3125793,
+            "sha256": "150b0ca481e4ab3b3a9406ee7898c34c3705664f8490d1ce03d7a7fd61cae8d9"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140516388912-capture.png",
+            "bytes": 3206331,
+            "sha256": "a18f0b0021fc9b4ce367ffb37edcdafe1ec06942ce40ecb3eb11897664feb8ab"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140641124686-capture.png",
+            "bytes": 3216242,
+            "sha256": "506d5ae6b42c9e6ec916586e5150cf6cfe84aa09addb34d6ab9702f54de1197b"
+          }
+        ]
+      },
+      "zero_single_multi_shading": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140641124686-capture.png",
+            "bytes": 3216242,
+            "sha256": "506d5ae6b42c9e6ec916586e5150cf6cfe84aa09addb34d6ab9702f54de1197b"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140801099290-capture.png",
+            "bytes": 3509139,
+            "sha256": "e79323ca226041afe1dceff17dafd802d0b15a82d612db1e215e1adf442f5e91"
+          }
+        ]
+      },
+      "no_actual_activity_started": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\153442221173-capture.png",
+            "bytes": 3067514,
+            "sha256": "662dde0aff841b993ec29cb10e98860f919cefb43972457129f82a8bf5619fa1"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\160538116875-capture.png",
+            "bytes": 3232878,
+            "sha256": "9d874c486b1b1c7b51faf52e0b010f5050e055b794ee3a79e31e273b071fe22f"
+          }
+        ]
+      },
+      "normal_activity_planner": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\153552241645-capture.png",
+            "bytes": 2750976,
+            "sha256": "8294897e65105e05314fc30a000c2cbf08e1d7ec85f5aebe1aa3cf979fb8b530"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\153718647916-capture.png",
+            "bytes": 2642113,
+            "sha256": "fd2756af17bf093c283f1b8292e37be68e4631a6b78cabfe87f555692467d2f2"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\154628462232-capture.png",
+            "bytes": 3079145,
+            "sha256": "9a68ac21d22c04aad10951f0f02c32bf64d41c6691b9af3bf6461e89bfd2efa8"
+          }
+        ]
+      },
+      "native_toolbar_adjacent_entry": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\132408883938-capture.png",
+            "bytes": 3273390,
+            "sha256": "baafb65ec6a0aa680c5a0194a834d68bb068f3303226161c940d15766b027ae3"
+          }
+        ]
+      },
+      "original_toolbar_unchanged": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\132408883938-capture.png",
+            "bytes": 3273390,
+            "sha256": "baafb65ec6a0aa680c5a0194a834d68bb068f3303226161c940d15766b027ae3"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\134440628805-capture.png",
+            "bytes": 3406318,
+            "sha256": "77e343340defac187e64a36297030ca718791e8b50c212c70c4d771eacdd79b4"
+          }
+        ]
+      },
+      "mod_tooltip": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\133244493229-capture.png",
+            "bytes": 3370387,
+            "sha256": "ce3186a87ba8cae956a0a837f103f364500f009ac330a7cd1320ebc3284ada84"
+          }
+        ]
+      },
+      "single_click_entry": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\134651335742-capture.png",
+            "bytes": 3229317,
+            "sha256": "496d1c20cf7e37a97709900eb4ffb1bd43c57bf63f314b7921475f0782fb92f4"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\135649904377-capture.png",
+            "bytes": 3320417,
+            "sha256": "dd8876556957cad9d177560283b340060ce1e1f0691f506f2ee3ec2dc5b7b5f2"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\144559888045-capture.png",
+            "bytes": 3233559,
+            "sha256": "2c2a8e2bca8cf3342de5700ec357565ffa681f8e8027a2662eb4cdb7bf2007b5"
+          }
+        ]
+      },
+      "no_rectangular_launcher": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\132408883938-capture.png",
+            "bytes": 3273390,
+            "sha256": "baafb65ec6a0aa680c5a0194a834d68bb068f3303226161c940d15766b027ae3"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140801099290-capture.png",
+            "bytes": 3509139,
+            "sha256": "e79323ca226041afe1dceff17dafd802d0b15a82d612db1e215e1adf442f5e91"
+          }
+        ]
+      },
+      "collapsed_title_restore": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\141435382191-capture.png",
+            "bytes": 3551037,
+            "sha256": "e1a3b8b6840c73d21d0071c058d92f2a2d78e4548f8089467340eec69bc7172c"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\141547699024-capture.png",
+            "bytes": 3375398,
+            "sha256": "084bcb31a8d30297d4b01b704ac80045749218d6d3d104fc53f0e6b8ef3350f3"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\142730219168-capture.png",
+            "bytes": 3463358,
+            "sha256": "6f1f28d8467f3e3f54b63eb0dfb189af8cb5ef7f8c26030f46363035dc2545ef"
+          }
+        ]
+      },
+      "existing_save_entry": {
+        "passed": true,
+        "evidence": [
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\132408883938-capture.png",
+            "bytes": 3273390,
+            "sha256": "baafb65ec6a0aa680c5a0194a834d68bb068f3303226161c940d15766b027ae3"
+          },
+          {
+            "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\140801099290-capture.png",
+            "bytes": 3509139,
+            "sha256": "e79323ca226041afe1dceff17dafd802d0b15a82d612db1e215e1adf442f5e91"
+          }
+        ]
+      }
+    },
+    "normal_gui_quit": true,
+    "normal_quit_evidence": [
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\160701713470-capture.png",
+        "bytes": 2378603,
+        "sha256": "7a460dd9e08909053c286c6565a434f116af917004ef4da465fa154095fd4a2b"
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\161704461495-capture.png",
+        "bytes": 1854345,
+        "sha256": "a4644caac4453d3cab3cbcf9d37c70290f254b58d3b6a60b3f0e72db32fd2851"
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\review\\162600065575-click.png.json",
+        "bytes": 1785,
+        "sha256": "c87d8d597ff0e72147df0bd3dcbf7ca200b84ff425b13aca9c3be10accb528ff"
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\game-exit.json",
+        "bytes": 253,
+        "sha256": "bca990884310981cad8674f10e2c77387b9eaefa529bc12b8ea89c680bdbb6ae"
+      }
+    ],
+    "review_notes": [
+      "Three successive user-click entries open automatically; no second confirm click was used.",
+      "Clear before the third entry, then re-entry restores default all-selected state.",
+      "The collapsed header round button restores the same grain/millet selection.",
+      "Faith mode is restored on exit; the previous camera position or zoom is not certified.",
+      "Normal feast confirmation remains manual and reaches the normal location picker; planning is cancelled without starting an activity.",
+      "Acceptance is limited to this build, simp_chinese and the observed 1800x980 client window; it is not a cross-mod compatibility certification."
+    ]
+  },
+  "original_process": {
+    "at_utc": "2026-11-20T16:26:26.040341+00:00",
+    "pid": 13240,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "keeper_report": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\keeper-report.json",
+    "bytes": 374,
+    "sha256": "09fe3628222bcf617736daeb8d3aeabe2954466fc0bc6b2dbee584a17b7935b4"
+  },
+  "screen_release": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0019\\screen-release.json",
+    "bytes": 1183,
+    "sha256": "000c2bd0dd81d54fceb1f0afaadd62d5f10b95ccfc014b9e769ebab53a86e582"
+  },
+  "formal_manifest": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\tested-build-a07\\mod_potential_output.manifest.json",
+    "bytes": 4245,
+    "sha256": "45deb76aad9d1b9ab90d9275f0dcb6f7b73a3a89c4d6f014c20bfe05195816db"
+  },
+  "archive": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\tested-build-a07\\mod_potential_output.zip",
+    "bytes": 65392,
+    "sha256": "0ab19f41a1c379562508205902bd7164fd12d38ee712d34045f705df7725359d"
+  },
+  "runtime_files_sha256": {
+    "descriptor.mod": "409ec8f029f877cfb1d7423ebf2b7bda6d0a303f7d312197850dbd609d89b5e2",
+    "gui/map_icon_layer.gui": "d2d2621b243aaa938092b2218ed7d0fa9f858b4585046124ab2d105f8d36c5f8",
+    "gui/window_activity_list.gui": "b9dd79147628d66be0a81f77e095c3bc72dbe5fb0a178489bbe976eb028a31b1",
+    "gui/window_activity_planner.gui": "f52193eb1382b3347e1363ea2e8ce2f75a941d29b4139c16902e761d7673c6ef",
+    "gui/xapo_potential_output.gui": "acf8022fde88612c2126ad14f43876b50f8090dd6712469cd1c981b63388591f",
+    "localization/english/xapo_l_english.yml": "f06d2796fe808d0036380e925dad80f5daeb3e3fc6616a174acdcf3b46e9a6b0",
+    "localization/french/xapo_l_french.yml": "650252da3ebf5c0d990c502378949bb7ea33d5c6c6636a44ef3ae9c860586a37",
+    "localization/german/xapo_l_german.yml": "3498024a327f33632001b885c9344dc7634d74d879c1f0c56313dccb0276568e",
+    "localization/japanese/xapo_l_japanese.yml": "628d7c637b5aebd1df62416e386d02b9c5f2d476f8796ef82698e41de4968bd2",
+    "localization/korean/xapo_l_korean.yml": "7b826fa1716b386fcb9ba0c6b30ac9402cbbff7f95fba2d6393198b0d686912c",
+    "localization/polish/xapo_l_polish.yml": "a38137d002cb04484da6245b79cdb02ce078c1b460d18289a32915d7e4c56007",
+    "localization/russian/xapo_l_russian.yml": "0106c27e1778dc6e3a5d8025c1f375c2c6438090923a6b3d4c7a5f18beea7b77",
+    "localization/simp_chinese/xapo_l_simp_chinese.yml": "46507be0190f503aab0119b2aaf8cdebb5759351f227db73b84b3e2f8d95ef4a",
+    "localization/spanish/xapo_l_spanish.yml": "d7bf0f970ab75f842164bef4f800277ae6fcc72106c37e84d987d57850027183",
+    "gui/scripted_widgets/xapo_potential_output.txt": "e899606b6a6b706598518602fd35e8db76a0174417e10881ddb2b9d824c6751b",
+    "gfx/interface/illustrations/activity_types/xapo_refresh_a.dds": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+    "gfx/interface/illustrations/activity_types/xapo_refresh_b.dds": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+    "gfx/interface/icons/activity_types/xapo_refresh_a.dds": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+    "gfx/interface/icons/activity_types/xapo_refresh_b.dds": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+    "common/scripted_guis/xapo_potential_output.txt": "09a35e2b581d69f6ca37021f573b8b5062a50fbe839aa72ade8261eb5d0e9f3a",
+    "common/script_values/xapo_potential_output.txt": "86fad1941fed1f4d595905e668f0307b30784e1f3fc5f77ad752a342fd0b0936",
+    "common/defines/graphic/zz_xapo_potential_output.txt": "1aba714fe0ab6c588d49a1e67de8624285905699ddb144bcdf6b820505eaa317",
+    "common/activities/activity_types/xapo_potential_output.txt": "55d6dd6b635d3f9ffcfff86b9bd8c7395d380e83a2225c21921bc44d61963686"
+  },
+  "error_log": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\gui-1e7bb8040a854171bbe9a7b916dcf205\\profile\\logs\\error.log",
+    "bytes": 1005,
+    "sha256": "c546526624846388b4454438d4a239b67e009315c5c5f6d66c87c9c936d1166e"
+  },
+  "error_log_triage": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\R0019-log-triage.json",
+    "bytes": 3555,
+    "sha256": "a00f114fbd8cbb59c34d71e0d06c1bb24332ab3b2d090cf196e4d8a5d6fcc991"
+  },
+  "log_scope": "Only one pre-existing Generated Map Objects diagnostic for great_wall_china_gate.txt; no product diagnostics observed.",
+  "source_load_identity": "Managed preparation and launch bind the exact source package and isolated profile; see prepared case and formal manifest.",
+  "prepared_case": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-entry-20261120\\source-prepared-a07\\prepared-case.json",
+    "bytes": 1555370,
+    "sha256": "0de22348f4b09cfe8ccb983f0fadd3c9ed201af57c67b172b2421e1b3b5d43ab"
+  },
+  "seed_save": {
+    "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\gui-8292ccca876244b9a6c990e417928916\\profile\\save games\\法列罗家族贵人，维塔莱_1066_09_15.ck3",
+    "bytes": 12319604,
+    "sha256": "9b4039d35174e70f186ea95acf6ce7967fa283eebcdea29df2aa5cade5037579"
+  },
+  "compatibility_scope": "No additional native map toolbar file or native type override. Existing three map/activity GUI overrides remain. No combined third-party mod acceptance.",
+  "evidence_policy": "Private save, machine configuration and full desktop captures stay in ignored artifacts. Hash references alone do not make those bytes present in a clean clone. Public client-area crops have separate provenance.",
+  "publication": "Not uploaded to Workshop; the published 0.1.0 remains separate."
+}
