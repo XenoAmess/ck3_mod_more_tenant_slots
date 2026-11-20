@@ -1,6 +1,7 @@
 {
   "schema": "xapo-publication-text-freeze-v1",
-  "title": "???? / Potential Output (XA)",
+  "title": "潜在产出 / Potential Output (XA)",
+  "title_encoding_correction": "The initial PowerShell-piped Python literal became four question marks. The same item was updated using Unicode escapes; the anonymous Steam API confirms the exact Chinese title. Original create/update receipts remain unchanged in publication evidence.",
   "description": {
     "path": "docs/workshop/potential-output/description.bbcode",
     "bytes": 4743,

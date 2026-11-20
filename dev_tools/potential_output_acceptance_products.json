@@ -1,10 +1,12 @@
 {
   "schema": "ck3-mod-acceptance-products-v1",
+  "product_inventory": "workshop_products.json",
   "products": {
     "potential-output": {
       "directory": "mod_potential_output",
       "runtime_mod_key": "potential-output",
       "external_mod": true,
+      "workshop_item_id": "3842767123",
       "cases": [
         {
           "id": "map-filters",
@@ -45,6 +47,15 @@
             "potential_goods_on_existing_save",
             "filter_after_reload"
           ]
+        },
+        {
+          "id": "workshop_cache",
+          "budgets": {
+            "timeout": 7200,
+            "quit_timeout": 90,
+            "poll_interval": 1,
+            "max_prepare_bytes": 536870912
+          }
         }
       ]
     }
