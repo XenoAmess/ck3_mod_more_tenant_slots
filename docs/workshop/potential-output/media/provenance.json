@@ -1,0 +1,106 @@
+{
+  "schema": "xapo-workshop-media-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0011",
+  "source_commit": "58e8727b57187ba5289193ed10d7f68e5663bc56",
+  "game_version": "1.21.0",
+  "language": "simp_chinese",
+  "screenshots": [
+    {
+      "path": "docs/workshop/potential-output/media/01-overview.jpg",
+      "bytes": 567629,
+      "sha256": "5ecdfb29988dae4313dfe147c90d4c865f2d1b85cebf98f757f315a8bdb01b8b",
+      "width": 1800,
+      "height": 980,
+      "source": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223059230995-capture.png",
+      "source_sha256": "962b2a557443128be9e7931f7af5afc10f0542ee19b7d359011cb3fc49b65f1d",
+      "source_size": [
+        2560,
+        1440
+      ],
+      "crop_box": [
+        380,
+        230,
+        2180,
+        1210
+      ],
+      "processing": "Game-client crop only; JPEG quality=89 optimize=true subsampling=0; no game pixel retouch, compositing or labels",
+      "caption": "All selected potential goods: zoomed-out county shading and filter panel."
+    },
+    {
+      "path": "docs/workshop/potential-output/media/02-county-goods.jpg",
+      "bytes": 825519,
+      "sha256": "d5ad2760ec668e994a0a077afc91ecca2801d46670d2f3d223a8018aab5d398b",
+      "width": 1800,
+      "height": 980,
+      "source": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223654289028-capture.png",
+      "source_sha256": "4845db6e0ff89edc0b7e9bd661f97d472418ed7be6affba8d24caf021038b882",
+      "source_size": [
+        2560,
+        1440
+      ],
+      "crop_box": [
+        380,
+        230,
+        2180,
+        1210
+      ],
+      "processing": "Game-client crop only; JPEG quality=89 optimize=true subsampling=0; no game pixel retouch, compositing or labels",
+      "caption": "All selected potential goods: native county-capital goods and potential-kind counts."
+    },
+    {
+      "path": "docs/workshop/potential-output/media/03-single-grain.jpg",
+      "bytes": 701380,
+      "sha256": "927d28262730d46b257e5893b6964e5cfd651f944ff2cc822d57f833c6ee18a2",
+      "width": 1800,
+      "height": 980,
+      "source": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223250550268-scroll.png",
+      "source_sha256": "e0876d52af97df6a4d74afa68c99c1f5d964158e378613e22561a73ffda9cf6d",
+      "source_size": [
+        2560,
+        1440
+      ],
+      "crop_box": [
+        380,
+        230,
+        2180,
+        1210
+      ],
+      "processing": "Game-client crop only; JPEG quality=89 optimize=true subsampling=0; no game pixel retouch, compositing or labels",
+      "caption": "Only grain selected: matching counties show 1 and nonmatching counties show 0."
+    },
+    {
+      "path": "docs/workshop/potential-output/media/04-multiple-goods.jpg",
+      "bytes": 703157,
+      "sha256": "421deeb5067f69a4d5206faf6d00c870234ddfd8ed2eba40da0d6be53b725dd8",
+      "width": 1800,
+      "height": 980,
+      "source": "artifacts/potential-output-20261119/live/pc-20260924rtuf-f11af23c08--potential-output--R0011/review/223400689716-capture.png",
+      "source_sha256": "7a816c5303a4b5bd10e2903fdf7ceaf74b1915c077a8779d6058b0b0222c72fe",
+      "source_size": [
+        2560,
+        1440
+      ],
+      "crop_box": [
+        380,
+        230,
+        2180,
+        1210
+      ],
+      "processing": "Game-client crop only; JPEG quality=89 optimize=true subsampling=0; no game pixel retouch, compositing or labels",
+      "caption": "Grain and millet selected: county potential intersections show 0, 1 or 2."
+    }
+  ],
+  "thumbnail": {
+    "path": "docs/workshop/potential-output/media/thumbnail.jpg",
+    "bytes": 197164,
+    "sha256": "19831cbe7fd9ab319422ac66ed3ea5fb373d050cb3d00d3d533481931cc34c84",
+    "source": "01-overview.jpg",
+    "processing": "Lanczos resize to 900x490; JPEG quality=92 optimize=true subsampling=0"
+  },
+  "strip_order": [
+    "docs/workshop/potential-output/media/01-overview.jpg",
+    "docs/workshop/potential-output/media/02-county-goods.jpg",
+    "docs/workshop/potential-output/media/03-single-grain.jpg",
+    "docs/workshop/potential-output/media/04-multiple-goods.jpg"
+  ]
+}

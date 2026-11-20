@@ -602,10 +602,23 @@ def validate(framework: Path, game: Path) -> dict:
             "scope_validation": "requires CK3 engine acceptance"}
 
 
-def build(framework: Path, game: Path, destination: Path, revision: str) -> dict:
+def build(framework: Path, game: Path, destination: Path, revision: str,
+          tag: str | None = None, workshop_item_id: str | None = None) -> dict:
     validate(framework, game)
     from build_release import create_manifest, manifest_bytes, write_deterministic_zip
 
+    if tag:
+        tagged = subprocess.check_output(
+            ["git", "rev-parse", "--verify", f"refs/tags/{tag}^{{commit}}"], cwd=ROOT, text=True).strip()
+        if tagged != revision:
+            raise ValueError("release tag does not identify the selected source commit")
+        subprocess.run(["git", "diff", "--quiet", tagged, "--", str(MOD)], cwd=ROOT, check=True)
+    if workshop_item_id is not None:
+        registry = json.loads((ROOT / "dev_tools/workshop_products.json").read_text(encoding="utf-8"))
+        identities = [p for p in registry["products"] if p["directory"] == PRODUCT]
+        if (len(identities) != 1 or identities[0]["workshop_item_id"] != workshop_item_id
+                or workshop_item_id in registry["forbidden_upstream_target_ids"]):
+            raise ValueError("Workshop ID does not match this product's canonical registry")
     if destination.exists():
         raise ValueError("build destination must be new")
     staging = destination / PRODUCT
@@ -614,10 +627,10 @@ def build(framework: Path, game: Path, destination: Path, revision: str) -> dict
         target = staging / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
-    manifest = create_manifest(staging, revision, VERSION)
+    manifest = create_manifest(staging, revision, VERSION, tag=tag)
     # The framework helper defaults to its own published product. This is a new
     # independent mod; never inherit its Workshop identity.
-    manifest["workshop_item_id"] = None
+    manifest["workshop_item_id"] = workshop_item_id
     manifest["product"] = PRODUCT
     path = destination / f"{PRODUCT}.manifest.json"
     path.write_bytes(manifest_bytes(manifest))
@@ -632,6 +645,8 @@ def main() -> int:
     parser.add_argument("--framework", type=Path, required=True)
     parser.add_argument("--game", type=Path, required=True)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--git-tag", help="existing release tag identifying the selected HEAD")
+    parser.add_argument("--workshop-item-id", help="explicit ID already registered for this product")
     args = parser.parse_args()
     framework_tools(args.framework)
     if args.mode == "generate":
@@ -644,7 +659,8 @@ def main() -> int:
         if args.output is None:
             parser.error("build requires --output")
         revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-        report["build"] = build(args.framework, args.game, args.output, revision)
+        report["build"] = build(args.framework, args.game, args.output, revision,
+                                args.git_tag, args.workshop_item_id)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0
 
