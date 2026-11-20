@@ -1,0 +1,90 @@
+{
+  "schema": "xapo-mapmode-entry-research-v1",
+  "observed_at_utc": "2026-11-20T07:43:50.609167+00:00",
+  "status": "source-structural-feasibility-only",
+  "product_source_commit": "030174c474561eb04fe8133bf1c65e5d34a81240",
+  "framework_commit": "c82e82ebeac09d32196debb62b2deca1530763ba",
+  "game": {
+    "version": "1.21.0.3",
+    "steam_build_id": "26785313",
+    "exe_sha256": "859f0d380098adcb130eb9d453458222749fcdf6d46126ad0ed99d78f9a0aa28"
+  },
+  "sources": [
+    {
+      "game_relative_path": "game/gui/shared/mapmodes.gui",
+      "raw_bytes": 40831,
+      "raw_sha256": "426c8839935e87d5c9b9c12db2d4cd5856da89c6603858af3f09bb7528a55acb",
+      "normalized_text_sha256": "c7ba056a78f80d367c1a67457a9898abc93376b49374930478eb706c0bca6d0d",
+      "line_count": 1787
+    },
+    {
+      "game_relative_path": "game/gui/shared/buttons.gui",
+      "raw_bytes": 45559,
+      "raw_sha256": "0a9dd1f124f0f9c74e8ef4b62cbd170318b1e1180f67ba235869580271c41014",
+      "normalized_text_sha256": "ba38ab37f4c0471b5c42e0c0d75041f45faaffc12b60132b2333c136086f730b",
+      "line_count": 1969
+    },
+    {
+      "game_relative_path": "game/gui/hud.gui",
+      "raw_bytes": 239779,
+      "raw_sha256": "35bb7ceffe17222a7de8796cec5a676349e2294de406df261f623ce48d112f01",
+      "normalized_text_sha256": "17619bead9d8bf612a09c41199af39340e2bf7ed1d1057c6e7234600be30cc0d",
+      "line_count": 9763
+    },
+    {
+      "game_relative_path": "game/gui/multiplayer_lobby.gui",
+      "raw_bytes": 32912,
+      "raw_sha256": "c0c0814306bdc5b0bf7d3f20212f3b23ba99428c3f06c07fde1abfc0c57e9518",
+      "normalized_text_sha256": "52ca50e3189fb0afbb9fcad61e578b4bf198b06659598abdfe5228a59328c74b",
+      "line_count": 1442
+    }
+  ],
+  "verified": {
+    "native_constant_group_exists": true,
+    "plus_is_last_child_of_other_row": true,
+    "single_unique_insertion_anchor": true,
+    "placeholder_inserted_after_plus": true,
+    "candidate_braces_balanced": true,
+    "projection_recovers_exact_original": true,
+    "generic_mapmode_default_onclick_precedes_extension_block": true,
+    "same_type_reused_by_multiplayer_lobby": true,
+    "existing_after_hook_found": false,
+    "source_files_unchanged": true
+  },
+  "native_entry_lines": {
+    "mapmodes_type": 97,
+    "other_row": 335,
+    "plus_widget": 394,
+    "hud_instance": 2644,
+    "popup_type": 472,
+    "popup_before_hook": 515,
+    "generic_template": 1127,
+    "default_onclick": 1163,
+    "extension_block": 1167
+  },
+  "candidate": {
+    "kind": "nonfunctional hidden layout placeholder, not an implemented button",
+    "local_path": "artifacts/mapmode-entry-research-20261120/layout-only-candidate.gui",
+    "sha256": "e575d21f310bb2586268bee0407047e301958d36da07acc5379faabfa2d3babd"
+  },
+  "design": {
+    "placement": "Last child of constant native other-mapmodes row, after the plus button",
+    "size_gui_units": [
+      40,
+      40
+    ],
+    "gap_gui_units": [
+      6,
+      8
+    ],
+    "badge": "MOD",
+    "tooltip_title": "潜在产出（XA MOD）",
+    "native_round_button_style": true,
+    "layout_and_visibility_live_verified": false
+  },
+  "live_verified": false,
+  "game_started": false,
+  "runtime_product_changed": false,
+  "workshop_updated": false,
+  "ownership": "Product-specific entry design/evidence; existing framework text-projection primitives reused; no new shared implementation or qualification."
+}
