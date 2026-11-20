@@ -1,0 +1,125 @@
+{
+  "files": [
+    {
+      "path": "common/activities/activity_types/xapo_potential_output.txt",
+      "sha256": "55d6dd6b635d3f9ffcfff86b9bd8c7395d380e83a2225c21921bc44d61963686",
+      "size": 1290
+    },
+    {
+      "path": "common/defines/graphic/zz_xapo_potential_output.txt",
+      "sha256": "1aba714fe0ab6c588d49a1e67de8624285905699ddb144bcdf6b820505eaa317",
+      "size": 194
+    },
+    {
+      "path": "common/script_values/xapo_potential_output.txt",
+      "sha256": "86fad1941fed1f4d595905e668f0307b30784e1f3fc5f77ad752a342fd0b0936",
+      "size": 5929
+    },
+    {
+      "path": "common/scripted_guis/xapo_potential_output.txt",
+      "sha256": "09a35e2b581d69f6ca37021f573b8b5062a50fbe839aa72ade8261eb5d0e9f3a",
+      "size": 10234
+    },
+    {
+      "path": "descriptor.mod",
+      "sha256": "409ec8f029f877cfb1d7423ebf2b7bda6d0a303f7d312197850dbd609d89b5e2",
+      "size": 108
+    },
+    {
+      "path": "gfx/interface/icons/activity_types/xapo_refresh_a.dds",
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+      "size": 192
+    },
+    {
+      "path": "gfx/interface/icons/activity_types/xapo_refresh_b.dds",
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+      "size": 192
+    },
+    {
+      "path": "gfx/interface/illustrations/activity_types/xapo_refresh_a.dds",
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+      "size": 192
+    },
+    {
+      "path": "gfx/interface/illustrations/activity_types/xapo_refresh_b.dds",
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4",
+      "size": 192
+    },
+    {
+      "path": "gui/map_icon_layer.gui",
+      "sha256": "d2d2621b243aaa938092b2218ed7d0fa9f858b4585046124ab2d105f8d36c5f8",
+      "size": 210442
+    },
+    {
+      "path": "gui/scripted_widgets/xapo_potential_output.txt",
+      "sha256": "e899606b6a6b706598518602fd35e8db76a0174417e10881ddb2b9d824c6751b",
+      "size": 53
+    },
+    {
+      "path": "gui/window_activity_list.gui",
+      "sha256": "b9dd79147628d66be0a81f77e095c3bc72dbe5fb0a178489bbe976eb028a31b1",
+      "size": 24139
+    },
+    {
+      "path": "gui/window_activity_planner.gui",
+      "sha256": "f52193eb1382b3347e1363ea2e8ce2f75a941d29b4139c16902e761d7673c6ef",
+      "size": 51297
+    },
+    {
+      "path": "gui/xapo_potential_output.gui",
+      "sha256": "acf8022fde88612c2126ad14f43876b50f8090dd6712469cd1c981b63388591f",
+      "size": 138759
+    },
+    {
+      "path": "localization/english/xapo_l_english.yml",
+      "sha256": "f06d2796fe808d0036380e925dad80f5daeb3e3fc6616a174acdcf3b46e9a6b0",
+      "size": 1797
+    },
+    {
+      "path": "localization/french/xapo_l_french.yml",
+      "sha256": "650252da3ebf5c0d990c502378949bb7ea33d5c6c6636a44ef3ae9c860586a37",
+      "size": 1879
+    },
+    {
+      "path": "localization/german/xapo_l_german.yml",
+      "sha256": "3498024a327f33632001b885c9344dc7634d74d879c1f0c56313dccb0276568e",
+      "size": 1856
+    },
+    {
+      "path": "localization/japanese/xapo_l_japanese.yml",
+      "sha256": "628d7c637b5aebd1df62416e386d02b9c5f2d476f8796ef82698e41de4968bd2",
+      "size": 1934
+    },
+    {
+      "path": "localization/korean/xapo_l_korean.yml",
+      "sha256": "7b826fa1716b386fcb9ba0c6b30ac9402cbbff7f95fba2d6393198b0d686912c",
+      "size": 1940
+    },
+    {
+      "path": "localization/polish/xapo_l_polish.yml",
+      "sha256": "a38137d002cb04484da6245b79cdb02ce078c1b460d18289a32915d7e4c56007",
+      "size": 1823
+    },
+    {
+      "path": "localization/russian/xapo_l_russian.yml",
+      "sha256": "0106c27e1778dc6e3a5d8025c1f375c2c6438090923a6b3d4c7a5f18beea7b77",
+      "size": 2347
+    },
+    {
+      "path": "localization/simp_chinese/xapo_l_simp_chinese.yml",
+      "sha256": "46507be0190f503aab0119b2aaf8cdebb5759351f227db73b84b3e2f8d95ef4a",
+      "size": 1856
+    },
+    {
+      "path": "localization/spanish/xapo_l_spanish.yml",
+      "sha256": "d7bf0f970ab75f842164bef4f800277ae6fcc72106c37e84d987d57850027183",
+      "size": 1840
+    }
+  ],
+  "format_version": 2,
+  "git_sha": "c947381f4e09e57f9aeb62f3e0c89e97de133e1f",
+  "git_tag": "potential-output-v0.1.1-ck3-1.21.0.3",
+  "mod_version": "0.1.1",
+  "product": "mod_potential_output",
+  "workshop_item_id": "3842767123"
+}

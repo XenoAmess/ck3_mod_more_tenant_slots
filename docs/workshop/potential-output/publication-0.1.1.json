@@ -1,0 +1,385 @@
+{
+  "schema": "xapo.workshop-publication.v1",
+  "status": "complete",
+  "product": "mod_potential_output",
+  "mod_version": "0.1.1",
+  "item_id": "3842767123",
+  "app_id": 1158310,
+  "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123",
+  "title": "潜在产出 / Potential Output (XA)",
+  "date_asia_shanghai": "2026-11-21",
+  "release_tag": "potential-output-v0.1.1-ck3-1.21.0.3",
+  "tagged_commit": "c947381f4e09e57f9aeb62f3e0c89e97de133e1f",
+  "tested_runtime_commit": "511e65a1028ff7415b78908f47876c072a9cc3d3",
+  "runtime_payload_matches_R0019": true,
+  "formal_manifest": {
+    "path": "docs/workshop/potential-output/evidence-0.1.1/release-manifest.json",
+    "bytes": 4287,
+    "sha256": "169268a5600344c225b0911a652365809cef9c281bfcb1ea81f9ded236853340"
+  },
+  "zip": {
+    "bytes": 65392,
+    "sha256": "0ab19f41a1c379562508205902bd7164fd12d38ee712d34045f705df7725359d",
+    "double_build_identical": true
+  },
+  "source_acceptance": {
+    "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0019",
+    "facts_passed": 22,
+    "game_version": "1.21.0.3",
+    "steam_build_id": "26785313",
+    "language": "simp_chinese",
+    "evidence": "docs/evidence/potential-output-entry-R0019.json"
+  },
+  "publication_operation": {
+    "additional_preview_changes": {
+      "add": [
+        {
+          "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\01-entry.png",
+          "sha256": "8d133913071eb64612d877b060230fb5874dbe2d1a6dd68fd08f3162d061b4e0",
+          "size": 154718
+        },
+        {
+          "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\02-tooltip.png",
+          "sha256": "a14abea3fbcc4cb7f093ab2d1351ab9dda666be334f76b8bc7472dfc36e780c8",
+          "size": 120883
+        },
+        {
+          "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\03-collapsed.png",
+          "sha256": "fd8d3f9b2b66146a56f730b076b83e2ebd0e12e0b8725ea244d21234bc6a2c8f",
+          "size": 45178
+        },
+        {
+          "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\04-filter-map.jpg",
+          "sha256": "d8277233c6c32739a8ed965a309796b9601aaddd53d3ed6bc73894a342789e41",
+          "size": 672428
+        },
+        {
+          "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\05-county-icons.jpg",
+          "sha256": "1127bfd263b71cb692f423dc1b878a24eaa22cb05fbdf7abb2bb68c516c46549",
+          "size": 768310
+        }
+      ],
+      "remove_indices": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "update": []
+    },
+    "additional_previews_before": {
+      "app_id": 1158310,
+      "item_id": "3842767123",
+      "previews": [
+        {
+          "index": 0,
+          "original_filename": "01-overview.jpg",
+          "type": 0,
+          "url": "https://images.steamusercontent.com/ugc/15340769625436620976/5D17D7DCED41B091105268E933DCCAF01617E794/"
+        },
+        {
+          "index": 1,
+          "original_filename": "02-county-goods.jpg",
+          "type": 0,
+          "url": "https://images.steamusercontent.com/ugc/16543435202132488653/98C5E8243D7B3921630EDF0455E6D34285600EFA/"
+        },
+        {
+          "index": 2,
+          "original_filename": "03-single-grain.jpg",
+          "type": 0,
+          "url": "https://images.steamusercontent.com/ugc/11428322250782441285/57ED4858E2B4326A7CCD955311BAFA9858067F83/"
+        },
+        {
+          "index": 3,
+          "original_filename": "04-multiple-goods.jpg",
+          "type": 0,
+          "url": "https://images.steamusercontent.com/ugc/15212408156818550840/BDE9359C0E9CEF4527DF22AE9A80AFC0FE22BF53/"
+        }
+      ]
+    },
+    "app_id": 1158310,
+    "created_at": "2026-11-20T18:55:20.674213+00:00",
+    "item_id": "3842767123",
+    "legal_agreement_required": false,
+    "operation": "update",
+    "operation_id": "xapo-0.1.1-update-20261121-a01",
+    "payload_sha256": "778ce79f9c2570a7de404536d464d6de092c3de8fcbe62b3d1978f07778c71ef",
+    "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+    "stage": "complete",
+    "steam_result": 1,
+    "submitted_at": "2026-11-20T18:55:39.317742+00:00",
+    "tags": [
+      "Interface",
+      "Utilities",
+      "1.21 'Florin'"
+    ],
+    "tags_only": false,
+    "update_scope": "content_and_metadata",
+    "updated_at": "2026-11-20T18:55:39.317768+00:00"
+  },
+  "public_text": {
+    "title_exact": true,
+    "description_exact": true,
+    "description_characters": 3049,
+    "description_sha256": "FECA3F60E950AFEA22BD7F324186B240E7A2B6D2E9FE17F51C1ACDD8745C2C33",
+    "expected_description_sha256": "FECA3F60E950AFEA22BD7F324186B240E7A2B6D2E9FE17F51C1ACDD8745C2C33",
+    "change_notes_exact": true,
+    "changelog_entry_id": "1795200936",
+    "change_notes_characters": 447,
+    "change_notes_lines": 10,
+    "change_notes_sha256": "39EB2DD42DD5E0BBCA6942C743E5FEB68660B69B5098D05BC65D14153C4493C2",
+    "expected_change_notes_characters": 447,
+    "expected_change_notes_lines": 10,
+    "expected_change_notes_sha256": "39EB2DD42DD5E0BBCA6942C743E5FEB68660B69B5098D05BC65D14153C4493C2",
+    "time_updated": 1795200936,
+    "file_size": "460485",
+    "ok": true
+  },
+  "visibility": 0,
+  "banned": false,
+  "tags": [
+    "Interface",
+    "Utilities",
+    "1.21 'Florin'"
+  ],
+  "media": {
+    "gallery_count": 5,
+    "inline_count": 5,
+    "thumbnail_updated": true,
+    "all_downloaded_images_exact": 11,
+    "anonymous_browser_all_images_loaded": true,
+    "interleaved_text_and_images_directly_reviewed": true,
+    "immutable_image_commit": "93960dfea8e6c77a0aab6c7e181488119dccc1d0",
+    "provenance": "docs/media/potential-output-entry-0.1.1/provenance.json"
+  },
+  "cache": {
+    "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0020",
+    "file_count": 23,
+    "sdk_download_callback_result": 1,
+    "fresh_absent_before_download": true,
+    "formal_bytes_exact": true,
+    "actual_cache_load": {
+      "loaded": true,
+      "exact_cache": {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-0.1.1-20261121\\cache-prepared-a01\\workshop-cache-exact-formal.json",
+        "bytes": 6759,
+        "sha256": "713acf7e4d59ee273a686f6d5f68bffe507cd8db17ca64ab5d38ca3d4a349a14"
+      },
+      "engine_log": {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-20261119\\userdirs\\published-cache-011-a01\\profile\\logs\\debug.log",
+        "bytes": 500930,
+        "sha256": "e9c10d61ffc66a03982906c07022e27ca855250e97f7c661b140ccfd8e3d3dce"
+      },
+      "mounted_log_lines": [
+        {
+          "line": 100,
+          "text": "[03:23:09][D][virtualfilesystem_physfs.cpp:814]: Mounted Data: C:/SteamLibrary/steamapps/workshop/content/1158310/3842767123"
+        }
+      ],
+      "enabled_log_lines": [
+        {
+          "line": 67,
+          "text": "Potential Output (XA)|mod/product.mod|Enabled"
+        }
+      ],
+      "cache_path": "C:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\3842767123",
+      "file_count": 23,
+      "item_id": "3842767123"
+    },
+    "normal_gui_quit": true,
+    "original_popen_exit_code": 0,
+    "window_close_requested": false,
+    "cache_acceptance_pass": true,
+    "business_tests_repeated": false,
+    "business_contract_applicable": false,
+    "closure_pass": true
+  },
+  "log_scope": "One pre-existing Generated Map Objects diagnostic for great_wall_china_gate.txt, 1005 bytes; no product diagnostic observed.",
+  "final": {
+    "steam_offline": true,
+    "ck3_processes": 0,
+    "screen_released": true,
+    "native_injection": false
+  },
+  "failures_preserved": [
+    "GoOffline request returned ACK but live state remained online. Normally shut down the confirmed idle client, changed only the current user offline preference while stopped, restarted silently, and verified actual offline state. The first request is not counted as successful restoration.",
+    "The first public changelog HTTP request returned 429. A later request using ordinary browser headers completed and exact public text validation passed.",
+    "A PowerShell inline helper edit had a quoting parse error before Python executed; the private helper was then patched as a file. No product or published payload changed."
+  ],
+  "framework_enrichment": {
+    "commit": "442508b53f14e5aa649b2f77d8bcd96557491480",
+    "path": "docs/ck3-gui-independent-entry-notes.md"
+  },
+  "ownership": "Product copy, screenshots and concrete evidence remain in this independent repository. Existing native MCP publication, preview, public text, SDK cache and managed lifecycle contracts are reused. Offline request limitations already have common framework documentation; no new generic implementation required.",
+  "storage": {
+    "peak_reserved_bytes": 2147483648,
+    "publication_artifacts_bytes": 56864838,
+    "cache_profile_bytes": 182091107,
+    "preserved_old_cache": true,
+    "deleted_research_assets": false
+  },
+  "evidence": {
+    "release-manifest.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/release-manifest.json",
+      "bytes": 4287,
+      "sha256": "169268a5600344c225b0911a652365809cef9c281bfcb1ea81f9ded236853340"
+    },
+    "update-receipt.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/update-receipt.json",
+      "bytes": 3043,
+      "sha256": "8f0a62e49113310b4e7f48f8e9d9d6f1d11b9554cd19e1ef67d2ed4098d5a270"
+    },
+    "public-after.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/public-after.json",
+      "bytes": 5890,
+      "sha256": "bc38fb81ee56a9905f3de41ea0f03f60eba3eb7a1253e7d538657ec7a0280169"
+    },
+    "public-text-verification.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/public-text-verification.json",
+      "bytes": 756,
+      "sha256": "d5ac5fb800fd7513ca3ac74beba344c8d7902c4575fc3ab5c0a7dacf3003c54b"
+    },
+    "public-rendered.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/public-rendered.json",
+      "bytes": 5044,
+      "sha256": "a9d5bce73ceae6bbd77129254672b81239745d4fd4d38e4b13b1752703f70ec6"
+    },
+    "previews-after.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/previews-after.json",
+      "bytes": 2778,
+      "sha256": "ed38321003a592ee46f449705e0515fd7b03957e56b0dcb2c7274e3e41aaaea1"
+    },
+    "media-cdn-verified.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/media-cdn-verified.json",
+      "bytes": 4551,
+      "sha256": "5ade3824bf0d469cbc74c4740433aa15a916fa0dd33017ac6da42c3f62fe10c2"
+    },
+    "download-before.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/download-before.json",
+      "bytes": 319,
+      "sha256": "4c6dca5b976c8721f15837777630b99781164d45defa55caf4492a3d71ac38fb"
+    },
+    "download-result.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/download-result.json",
+      "bytes": 2934,
+      "sha256": "34d8383e449fdb6e659edf0ffdf5296212c64dd48d604cb436717b8b27eadbc2"
+    },
+    "exact-cache.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/exact-cache.json",
+      "bytes": 4309,
+      "sha256": "636865688057c6cc29b66f98728881b252acd37d696c503867c6d918f9f1ad1c"
+    },
+    "verify-cache-a01.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/verify-cache-a01.json",
+      "bytes": 2446,
+      "sha256": "c894085e216a3f13b88a46e60d1892f0fdb2859bf22da1815fc1a5f43c3361ae"
+    },
+    "installed-game-after-publication.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/installed-game-after-publication.json",
+      "bytes": 130,
+      "sha256": "f541e15e10ca835f1db377ecd366cf4af418bef4b008c55358b3f631eb3cfacc"
+    },
+    "final-steam-offline.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/final-steam-offline.json",
+      "bytes": 2338,
+      "sha256": "8e4a10b495d178d4eabe7b8763d03cb40e56e7edc3fba421145bba8d38c9f139"
+    },
+    "publish-keeper-report.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/publish-keeper-report.json",
+      "bytes": 307,
+      "sha256": "afa299f8324805cfc9a3bdbc77e155578a504406c3c75ab22c37fdd62cda5d50"
+    },
+    "publish-screen-release.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/publish-screen-release.json",
+      "bytes": 1159,
+      "sha256": "23995e8084958f60e0fee1f40a64160d2685cd723b2c18877391f30bf32ec96c"
+    },
+    "post-publication-offline.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/post-publication-offline.json",
+      "bytes": 1250,
+      "sha256": "624f3f0ad983e17e886279b4570c54960ccf7b0a0e10f1a232447c8aeab01ec0"
+    },
+    "after-offline-request-idle.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/after-offline-request-idle.json",
+      "bytes": 270,
+      "sha256": "6220759c59a8f1f6f680e2b907607e1804086310a5bfaa2ef82ff04c08c9a2d8"
+    },
+    "offline-recovery-intent.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/offline-recovery-intent.json",
+      "bytes": 248,
+      "sha256": "118c83610e182703a4a643e32b4bf882fb103f028616d670e565c0c05f7f4f8a"
+    },
+    "offline-preference-request.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/offline-preference-request.json",
+      "bytes": 434,
+      "sha256": "0a6a78f5ab378b58064eb212e36a820c52ce9d676b1d3bc5063a5aac91dcd6b6"
+    },
+    "offline-recovery-complete.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/offline-recovery-complete.json",
+      "bytes": 314,
+      "sha256": "427663d8716bcc7ef2a0e9881f84b3b3d0f5848553f4fdc5965e46e5fb75ff60"
+    },
+    "offline-recovery-keeper-report.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/offline-recovery-keeper-report.json",
+      "bytes": 318,
+      "sha256": "2668b52379bc30a35e2556e32d5d976de72ecceac92309a87cfe5d82e6281e58"
+    },
+    "offline-recovery-screen-release.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/offline-recovery-screen-release.json",
+      "bytes": 1163,
+      "sha256": "cd43245a9aaacedfb2e084c77b3bbcf07feb112d152d535cde16a0ca89f7270e"
+    },
+    "offline-restored-runtime.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/offline-restored-runtime.json",
+      "bytes": 1265,
+      "sha256": "23b18c0aee2f6d792c04ec9710bef1c2c94a69b4951d2bbc9b93693e984d290d"
+    },
+    "game-started.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/game-started.json",
+      "bytes": 1415,
+      "sha256": "0c929ec89ab3a4bef0f80adb2d73ea13eb170b2b59a1111fc832e0a23c66f670"
+    },
+    "game-exit.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/game-exit.json",
+      "bytes": 253,
+      "sha256": "a092c960f89c8c23a31956bdfe3bb1e50ef6495d049261504edd87e25a605165"
+    },
+    "keeper-report.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/keeper-report.json",
+      "bytes": 386,
+      "sha256": "d460015832ab823b84dbb7e2b8ae7618b99294e759a33abff8c2dbb65edb5d3c"
+    },
+    "screen-release.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/screen-release.json",
+      "bytes": 1183,
+      "sha256": "c039141246b9135f96232020d04d57fdec39111b7ce2aff3bccdb84ffd3ef0aa"
+    },
+    "cache-review.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/cache-review.json",
+      "bytes": 1450,
+      "sha256": "34cd7c58edc47e35039e00c80b0c5725748caf2832fe7c19316a63b194cfd3ca"
+    },
+    "public-inline-1.png": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/public-inline-1.png",
+      "bytes": 452682,
+      "sha256": "3dc9022b2c0179758545c8750d5da83a42c679f72cf15bd9c9639358902888b1"
+    },
+    "public-inline-4.png": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/public-inline-4.png",
+      "bytes": 862055,
+      "sha256": "eaa071de0e90294d735761f58aa60adcfd1bf32804dcd29bee42c502631b8254"
+    },
+    "public-inline-5.png": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/public-inline-5.png",
+      "bytes": 669448,
+      "sha256": "2a394c632bfb96586cecc96944f3f96aad83c64dda23ee9fe47ff02dcdad0315"
+    },
+    "cache-log-excerpt.json": {
+      "path": "docs/workshop/potential-output/evidence-0.1.1/cache-log-excerpt.json",
+      "bytes": 1764,
+      "sha256": "c911e6f28827dcf0560c99bf6e73f664495eb2f3fdb251369c7b3a9d2344accd"
+    }
+  },
+  "artifact_scope": "Private full desktop captures, configurations, raw user preferences, private saves and browser profile stay in ignored artifacts. Only public-page screenshots, product screenshot crops and non-secret receipts are archived.",
+  "receipt_archive_encoding": "Archived JSON is reserialized as UTF-8/LF before hashing; embedded pins still refer to original local receipts."
+}

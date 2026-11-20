@@ -1,0 +1,42 @@
+{
+  "schema": "codex.task_bus.v1",
+  "ok": true,
+  "task": {
+    "git": {
+      "branch": "master",
+      "dirty_entries": 0,
+      "head": "c947381f4e09e57f9aeb62f3e0c89e97de133e1f"
+    },
+    "last_sequence": 3494,
+    "next_step": "",
+    "pid": 25220,
+    "repo": "D:\\workspace\\ck3_mod_more_tenant_slots",
+    "resources": [],
+    "schema": "codex.task_bus.v1",
+    "state": "done",
+    "summary": "Publication Steam screen phase closed",
+    "task_id": "xapo-offline-recovery-011-20261121-a01",
+    "updated_at_utc": "2026-11-20T19:19:41.662251+00:00"
+  },
+  "event": {
+    "schema": "codex.task_bus.v1",
+    "sequence": 3494,
+    "event_id": "a84c7808165d467a876d5790526643be",
+    "timestamp_utc": "2026-11-20T19:19:41.663092+00:00",
+    "kind": "completed",
+    "task_id": "xapo-offline-recovery-011-20261121-a01",
+    "to": [
+      "*"
+    ],
+    "state": "done",
+    "summary": "Publication Steam screen phase closed",
+    "next_step": "",
+    "resources": [],
+    "repo": "D:\\workspace\\ck3_mod_more_tenant_slots",
+    "git": {
+      "branch": "master",
+      "dirty_entries": 0,
+      "head": "c947381f4e09e57f9aeb62f3e0c89e97de133e1f"
+    }
+  }
+}

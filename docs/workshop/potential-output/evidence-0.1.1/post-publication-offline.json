@@ -1,0 +1,36 @@
+{
+  "schema": "xar.steam-offline-state-probe/v2",
+  "machine_id": "pc-20260924rtuf-f11af23c08",
+  "observed_at_utc": "2026-11-20T19:03:54.859446Z",
+  "nonce": "e7728542f23f7729e37f67955288c9bc",
+  "reason": "observed",
+  "steam": {
+    "pid": 15364,
+    "birth_filetime": "134394913645915363",
+    "exe": "D:\\steam\\steam.exe",
+    "file_version": "11.23.65.88"
+  },
+  "source": {
+    "path": "D:\\steam\\steamui\\sp.js",
+    "bytes": 16224005,
+    "sha256": "4b818cd371388e06c66fe8c0bb592b7dfd4a6fb55eb56844d1b360b64aec3046",
+    "file_id": "1125899908071315",
+    "mtime_ns": "1794423728000000000"
+  },
+  "endpoint": {
+    "pid": 11420,
+    "birth_filetime": "134394913647220856",
+    "port": 8080,
+    "target_id": "5213C3D857262AE4219B9617BB253888",
+    "target_url": "https://steamloopback.host/index.html?LOCAL_HOSTNAME=PC-20260924RTUF&LANGUAGE=schinese&COUNTRY=JP&LAUNCHER_TYPE=0&CLIENT_SESSION=1795017764&PACKAGE_CL=1794536281&IN_CLIENT=true&PLATFORM=windows&ARCH=x64"
+  },
+  "diagnostics": [
+    "native_provider_unavailable=native_online_not_qualified",
+    "checked_webhelpers=6",
+    "owned_debugger_candidates=1"
+  ],
+  "observation_method": "cef_app_getters",
+  "native_evidence": null,
+  "status": "online",
+  "offline_mode": false
+}

@@ -1,0 +1,50 @@
+{
+  "content": [
+    {
+      "annotations": null,
+      "meta": null,
+      "text": "{\n  \"schema\": \"ck3_workshop_mcp.steam_native.previews.v1\",\n  \"ok\": true,\n  \"item_id\": \"3842767123\",\n  \"app_id\": 1158310,\n  \"previews\": [\n    {\n      \"index\": 0,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/10777703613371571823/83F17C40285513FADB0B081DF1A569E6465DC501/\",\n      \"original_filename\": \"01-entry.png\"\n    },\n    {\n      \"index\": 1,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/9683710719034342028/F4F96E72F055197E5B3242369271976D9D8DA262/\",\n      \"original_filename\": \"02-tooltip.png\"\n    },\n    {\n      \"index\": 2,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/16707220663261794164/D16F60CD826B352EACC8795708A923DF70499024/\",\n      \"original_filename\": \"03-collapsed.png\"\n    },\n    {\n      \"index\": 3,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/11845650495903803019/0FE67FB37CEDD9221035A3C07FD2F0790CD9670D/\",\n      \"original_filename\": \"04-filter-map.jpg\"\n    },\n    {\n      \"index\": 4,\n      \"type\": 0,\n      \"url\": \"https://images.steamusercontent.com/ugc/15132593986753401200/0E0B8B7FFF77B3B07FC0A80DF9FC1DF5DDD6B5A4/\",\n      \"original_filename\": \"05-county-icons.jpg\"\n    }\n  ]\n}",
+      "type": "text"
+    }
+  ],
+  "ok": true,
+  "result": {
+    "app_id": 1158310,
+    "item_id": "3842767123",
+    "ok": true,
+    "previews": [
+      {
+        "index": 0,
+        "original_filename": "01-entry.png",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/10777703613371571823/83F17C40285513FADB0B081DF1A569E6465DC501/"
+      },
+      {
+        "index": 1,
+        "original_filename": "02-tooltip.png",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/9683710719034342028/F4F96E72F055197E5B3242369271976D9D8DA262/"
+      },
+      {
+        "index": 2,
+        "original_filename": "03-collapsed.png",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/16707220663261794164/D16F60CD826B352EACC8795708A923DF70499024/"
+      },
+      {
+        "index": 3,
+        "original_filename": "04-filter-map.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/11845650495903803019/0FE67FB37CEDD9221035A3C07FD2F0790CD9670D/"
+      },
+      {
+        "index": 4,
+        "original_filename": "05-county-icons.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/15132593986753401200/0E0B8B7FFF77B3B07FC0A80DF9FC1DF5DDD6B5A4/"
+      }
+    ],
+    "schema": "ck3_workshop_mcp.steam_native.previews.v1"
+  },
+  "tool": "workshop_native_previews"
+}

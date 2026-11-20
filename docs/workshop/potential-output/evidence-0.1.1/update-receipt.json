@@ -1,0 +1,87 @@
+{
+  "additional_preview_changes": {
+    "add": [
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\01-entry.png",
+        "sha256": "8d133913071eb64612d877b060230fb5874dbe2d1a6dd68fd08f3162d061b4e0",
+        "size": 154718
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\02-tooltip.png",
+        "sha256": "a14abea3fbcc4cb7f093ab2d1351ab9dda666be334f76b8bc7472dfc36e780c8",
+        "size": 120883
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\03-collapsed.png",
+        "sha256": "fd8d3f9b2b66146a56f730b076b83e2ebd0e12e0b8725ea244d21234bc6a2c8f",
+        "size": 45178
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\04-filter-map.jpg",
+        "sha256": "d8277233c6c32739a8ed965a309796b9601aaddd53d3ed6bc73894a342789e41",
+        "size": 672428
+      },
+      {
+        "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\docs\\media\\potential-output-entry-0.1.1\\05-county-icons.jpg",
+        "sha256": "1127bfd263b71cb692f423dc1b878a24eaa22cb05fbdf7abb2bb68c516c46549",
+        "size": 768310
+      }
+    ],
+    "remove_indices": [
+      3,
+      2,
+      1,
+      0
+    ],
+    "update": []
+  },
+  "additional_previews_before": {
+    "app_id": 1158310,
+    "item_id": "3842767123",
+    "previews": [
+      {
+        "index": 0,
+        "original_filename": "01-overview.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/15340769625436620976/5D17D7DCED41B091105268E933DCCAF01617E794/"
+      },
+      {
+        "index": 1,
+        "original_filename": "02-county-goods.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/16543435202132488653/98C5E8243D7B3921630EDF0455E6D34285600EFA/"
+      },
+      {
+        "index": 2,
+        "original_filename": "03-single-grain.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/11428322250782441285/57ED4858E2B4326A7CCD955311BAFA9858067F83/"
+      },
+      {
+        "index": 3,
+        "original_filename": "04-multiple-goods.jpg",
+        "type": 0,
+        "url": "https://images.steamusercontent.com/ugc/15212408156818550840/BDE9359C0E9CEF4527DF22AE9A80AFC0FE22BF53/"
+      }
+    ]
+  },
+  "app_id": 1158310,
+  "created_at": "2026-11-20T18:55:20.674213+00:00",
+  "item_id": "3842767123",
+  "legal_agreement_required": false,
+  "operation": "update",
+  "operation_id": "xapo-0.1.1-update-20261121-a01",
+  "payload_sha256": "778ce79f9c2570a7de404536d464d6de092c3de8fcbe62b3d1978f07778c71ef",
+  "schema": "ck3_workshop_mcp.steam_native.receipt.v1",
+  "stage": "complete",
+  "steam_result": 1,
+  "submitted_at": "2026-11-20T18:55:39.317742+00:00",
+  "tags": [
+    "Interface",
+    "Utilities",
+    "1.21 'Florin'"
+  ],
+  "tags_only": false,
+  "update_scope": "content_and_metadata",
+  "updated_at": "2026-11-20T18:55:39.317768+00:00"
+}

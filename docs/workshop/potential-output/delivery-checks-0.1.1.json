@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "published_version": "0.1.1",
+  "receipt_hashes_checked": 32,
+  "runtime_files_exact": 23,
+  "public_text_exact": true,
+  "real_gallery_images": 5,
+  "real_inline_images": 5,
+  "cache_acceptance_pass": true,
+  "steam_offline": true,
+  "ck3_processes": 0,
+  "documentation_links_checked": true,
+  "release_tag": "potential-output-v0.1.1-ck3-1.21.0.3"
+}

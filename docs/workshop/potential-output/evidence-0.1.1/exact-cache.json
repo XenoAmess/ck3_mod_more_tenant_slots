@@ -1,0 +1,128 @@
+{
+  "cache_path": "C:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\3842767123",
+  "file_count": 23,
+  "files": [
+    {
+      "path": "descriptor.mod",
+      "size": 108,
+      "sha256": "409ec8f029f877cfb1d7423ebf2b7bda6d0a303f7d312197850dbd609d89b5e2"
+    },
+    {
+      "path": "gui/map_icon_layer.gui",
+      "size": 210442,
+      "sha256": "d2d2621b243aaa938092b2218ed7d0fa9f858b4585046124ab2d105f8d36c5f8"
+    },
+    {
+      "path": "gui/window_activity_list.gui",
+      "size": 24139,
+      "sha256": "b9dd79147628d66be0a81f77e095c3bc72dbe5fb0a178489bbe976eb028a31b1"
+    },
+    {
+      "path": "gui/window_activity_planner.gui",
+      "size": 51297,
+      "sha256": "f52193eb1382b3347e1363ea2e8ce2f75a941d29b4139c16902e761d7673c6ef"
+    },
+    {
+      "path": "gui/xapo_potential_output.gui",
+      "size": 138759,
+      "sha256": "acf8022fde88612c2126ad14f43876b50f8090dd6712469cd1c981b63388591f"
+    },
+    {
+      "path": "localization/english/xapo_l_english.yml",
+      "size": 1797,
+      "sha256": "f06d2796fe808d0036380e925dad80f5daeb3e3fc6616a174acdcf3b46e9a6b0"
+    },
+    {
+      "path": "localization/french/xapo_l_french.yml",
+      "size": 1879,
+      "sha256": "650252da3ebf5c0d990c502378949bb7ea33d5c6c6636a44ef3ae9c860586a37"
+    },
+    {
+      "path": "localization/german/xapo_l_german.yml",
+      "size": 1856,
+      "sha256": "3498024a327f33632001b885c9344dc7634d74d879c1f0c56313dccb0276568e"
+    },
+    {
+      "path": "localization/japanese/xapo_l_japanese.yml",
+      "size": 1934,
+      "sha256": "628d7c637b5aebd1df62416e386d02b9c5f2d476f8796ef82698e41de4968bd2"
+    },
+    {
+      "path": "localization/korean/xapo_l_korean.yml",
+      "size": 1940,
+      "sha256": "7b826fa1716b386fcb9ba0c6b30ac9402cbbff7f95fba2d6393198b0d686912c"
+    },
+    {
+      "path": "localization/polish/xapo_l_polish.yml",
+      "size": 1823,
+      "sha256": "a38137d002cb04484da6245b79cdb02ce078c1b460d18289a32915d7e4c56007"
+    },
+    {
+      "path": "localization/russian/xapo_l_russian.yml",
+      "size": 2347,
+      "sha256": "0106c27e1778dc6e3a5d8025c1f375c2c6438090923a6b3d4c7a5f18beea7b77"
+    },
+    {
+      "path": "localization/simp_chinese/xapo_l_simp_chinese.yml",
+      "size": 1856,
+      "sha256": "46507be0190f503aab0119b2aaf8cdebb5759351f227db73b84b3e2f8d95ef4a"
+    },
+    {
+      "path": "localization/spanish/xapo_l_spanish.yml",
+      "size": 1840,
+      "sha256": "d7bf0f970ab75f842164bef4f800277ae6fcc72106c37e84d987d57850027183"
+    },
+    {
+      "path": "gui/scripted_widgets/xapo_potential_output.txt",
+      "size": 53,
+      "sha256": "e899606b6a6b706598518602fd35e8db76a0174417e10881ddb2b9d824c6751b"
+    },
+    {
+      "path": "gfx/interface/illustrations/activity_types/xapo_refresh_a.dds",
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    {
+      "path": "gfx/interface/illustrations/activity_types/xapo_refresh_b.dds",
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    {
+      "path": "gfx/interface/icons/activity_types/xapo_refresh_a.dds",
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    {
+      "path": "gfx/interface/icons/activity_types/xapo_refresh_b.dds",
+      "size": 192,
+      "sha256": "47413a90e90e72875c2c1144dadc23b2879db19961a69459b37704a0cc0faad4"
+    },
+    {
+      "path": "common/scripted_guis/xapo_potential_output.txt",
+      "size": 10234,
+      "sha256": "09a35e2b581d69f6ca37021f573b8b5062a50fbe839aa72ade8261eb5d0e9f3a"
+    },
+    {
+      "path": "common/script_values/xapo_potential_output.txt",
+      "size": 5929,
+      "sha256": "86fad1941fed1f4d595905e668f0307b30784e1f3fc5f77ad752a342fd0b0936"
+    },
+    {
+      "path": "common/defines/graphic/zz_xapo_potential_output.txt",
+      "size": 194,
+      "sha256": "1aba714fe0ab6c588d49a1e67de8624285905699ddb144bcdf6b820505eaa317"
+    },
+    {
+      "path": "common/activities/activity_types/xapo_potential_output.txt",
+      "size": 1290,
+      "sha256": "55d6dd6b635d3f9ffcfff86b9bd8c7395d380e83a2225c21921bc44d61963686"
+    }
+  ],
+  "formal_match": true,
+  "download_callback": {
+    "app_id": 1158310,
+    "callback_id": 3406,
+    "item_id": "3842767123",
+    "result": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0020",
+  "case": "workshop_cache",
+  "reviewer": "Codex direct image review",
+  "direct_image_review": true,
+  "passed": true,
+  "normal_gui_quit": true,
+  "normal_quit_evidence": [
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-0.1.1-20261121\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0020\\review\\194510190558-capture.png",
+      "bytes": 2421869,
+      "sha256": "070b838f957c7a7ecf7c45826b4233269c448fa695550fad1f626f1a6e878d93"
+    },
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-0.1.1-20261121\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0020\\review\\194913138108-click.png",
+      "bytes": 722171,
+      "sha256": "4f57652f9ee98e9ba600d2c98a139ca596ec0886a90ab15c41c8d87d05a7639e"
+    },
+    {
+      "path": "D:\\workspace\\ck3_mod_more_tenant_slots\\artifacts\\potential-output-publication-0.1.1-20261121\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0020\\review\\194913138108-click.png.json",
+      "bytes": 1814,
+      "sha256": "7e2e4e4a995fdabaaa7953b5dcd05fe47c73a33d730b00f513c6e42f3693d1ca"
+    }
+  ],
+  "observations": "Reviewed actual Simplified Chinese main menu, then clicked Quit to Desktop. No campaign or product business tests repeated. Common verifier reads actual Workshop cache mount/load from engine debug.log."
+}

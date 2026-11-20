@@ -1,0 +1,7 @@
+{
+  "at_utc": "2026-11-20T19:16:53.294018+00:00",
+  "old_pid": 15364,
+  "old_birth": 1795017764.5915363,
+  "reason": "GoOffline ACK did not change live mode; normal idle-client shutdown and offline-preference restart",
+  "account_in_game": false
+}

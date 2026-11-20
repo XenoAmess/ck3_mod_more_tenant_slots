@@ -1,0 +1,42 @@
+{
+  "schema": "codex.task_bus.v1",
+  "ok": true,
+  "task": {
+    "git": {
+      "branch": "master",
+      "dirty_entries": 0,
+      "head": "442508b53f14e5aa649b2f77d8bcd96557491480"
+    },
+    "last_sequence": 3531,
+    "next_step": "",
+    "pid": 21592,
+    "repo": "D:\\workspace\\ck3_eternal_recurrence",
+    "resources": [],
+    "schema": "codex.task_bus.v1",
+    "state": "done",
+    "summary": "GUI-only original process closed",
+    "task_id": "xapo-pc-20260924rtuf-f11af23c08--potential-output--R0020",
+    "updated_at_utc": "2026-11-20T19:49:18.601490+00:00"
+  },
+  "event": {
+    "schema": "codex.task_bus.v1",
+    "sequence": 3531,
+    "event_id": "8c35d3d62e0044c6968423d2e2030eae",
+    "timestamp_utc": "2026-11-20T19:49:18.602376+00:00",
+    "kind": "completed",
+    "task_id": "xapo-pc-20260924rtuf-f11af23c08--potential-output--R0020",
+    "to": [
+      "*"
+    ],
+    "state": "done",
+    "summary": "GUI-only original process closed",
+    "next_step": "",
+    "resources": [],
+    "repo": "D:\\workspace\\ck3_eternal_recurrence",
+    "git": {
+      "branch": "master",
+      "dirty_entries": 0,
+      "head": "442508b53f14e5aa649b2f77d8bcd96557491480"
+    }
+  }
+}

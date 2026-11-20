@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-11-20T19:16:57.439707+00:00",
+  "normal_shutdown_returncode": 0,
+  "steam_stopped_before_write": true,
+  "user": "76561198273714027",
+  "changed_fields": [
+    "WantsOfflineMode",
+    "SkipOfflineModeWarning"
+  ],
+  "before_sha256": "1ec77db3034f356c2955d1256a36e8413e801c301f1c8303c2054c08720ffe1e",
+  "after_sha256": "c5accce186dfa99e3b4fd7310266f208f2f9e1452219a8ee5d2d15f723f1ac44",
+  "runtime_proof": false
+}

@@ -36,7 +36,7 @@
 
 本地实测 ZIP：`artifacts/potential-output-entry-20261120/tested-build-a07/mod_potential_output.zip`，65392 字节，SHA-256 `0ab19f41a1c379562508205902bd7164fd12d38ee712d34045f705df7725359d`。23 份运行文件与实测冻结包一致。
 
-这是仓库 0.1.1 的施工和自测交付，尚未更新 Steam 工坊；已发布的 0.1.0 及其描述、图片、缓存验收仍是独立历史版本。
+验收完成后已发布 0.1.1 到 Steam 工坊，五张新版截图和正文图片已更新，R0020 缓存菜单加载与正常退出通过；见 [正式发布记录](workshop/potential-output/publication-0.1.1.md)。原 0.1.0 的描述、图片和验收保留历史版本范围。
 
 ## 兼容边界
 

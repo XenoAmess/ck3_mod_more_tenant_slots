@@ -1,5 +1,7 @@
 # 潜在产出：实现与验收记录
 
+本报告保留 0.1.0 首发验收。当前 0.1.1 的独立圆形入口已完成实机验收及工坊发布，见 [新版验收](potential-output-entry-0.1.1-report.md) 和 [新版发布记录](workshop/potential-output/publication-0.1.1.md)。
+
 更新：2026-11-20。独立产品 `mod_potential_output/`，版本 0.1.0。**已完成本地实现、静态验证、简中实机验收及 Workshop 正式发布。** [工坊条目 3842767123](https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123)、[发布回执与范围](workshop/potential-output/publication-0.1.0.md)。使用方式见[玩家说明](potential-output-usage.md)，原版定义见[研究报告](potential-output-definition.md)。
 
 ## 最终行为与依据

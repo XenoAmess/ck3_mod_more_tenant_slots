@@ -1,0 +1,95 @@
+{
+  "gallery": 5,
+  "thumbnail": 1,
+  "inline": 5,
+  "images": [
+    {
+      "name": "01-entry.png",
+      "url": "https://images.steamusercontent.com/ugc/10777703613371571823/83F17C40285513FADB0B081DF1A569E6465DC501/",
+      "bytes": 154718,
+      "sha256": "8d133913071eb64612d877b060230fb5874dbe2d1a6dd68fd08f3162d061b4e0",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/01-entry.png",
+      "exact": true
+    },
+    {
+      "name": "02-tooltip.png",
+      "url": "https://images.steamusercontent.com/ugc/9683710719034342028/F4F96E72F055197E5B3242369271976D9D8DA262/",
+      "bytes": 120883,
+      "sha256": "a14abea3fbcc4cb7f093ab2d1351ab9dda666be334f76b8bc7472dfc36e780c8",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/02-tooltip.png",
+      "exact": true
+    },
+    {
+      "name": "03-collapsed.png",
+      "url": "https://images.steamusercontent.com/ugc/16707220663261794164/D16F60CD826B352EACC8795708A923DF70499024/",
+      "bytes": 45178,
+      "sha256": "fd8d3f9b2b66146a56f730b076b83e2ebd0e12e0b8725ea244d21234bc6a2c8f",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/03-collapsed.png",
+      "exact": true
+    },
+    {
+      "name": "04-filter-map.jpg",
+      "url": "https://images.steamusercontent.com/ugc/11845650495903803019/0FE67FB37CEDD9221035A3C07FD2F0790CD9670D/",
+      "bytes": 672428,
+      "sha256": "d8277233c6c32739a8ed965a309796b9601aaddd53d3ed6bc73894a342789e41",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/04-filter-map.jpg",
+      "exact": true
+    },
+    {
+      "name": "05-county-icons.jpg",
+      "url": "https://images.steamusercontent.com/ugc/15132593986753401200/0E0B8B7FFF77B3B07FC0A80DF9FC1DF5DDD6B5A4/",
+      "bytes": 768310,
+      "sha256": "1127bfd263b71cb692f423dc1b878a24eaa22cb05fbdf7abb2bb68c516c46549",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/05-county-icons.jpg",
+      "exact": true
+    },
+    {
+      "name": "thumbnail.jpg",
+      "url": "https://images.steamusercontent.com/ugc/11011147585952455921/0FE67FB37CEDD9221035A3C07FD2F0790CD9670D/",
+      "bytes": 672428,
+      "sha256": "d8277233c6c32739a8ed965a309796b9601aaddd53d3ed6bc73894a342789e41",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/04-filter-map.jpg",
+      "exact": true
+    },
+    {
+      "name": "inline-01-entry.png",
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/01-entry.png",
+      "bytes": 154718,
+      "sha256": "8d133913071eb64612d877b060230fb5874dbe2d1a6dd68fd08f3162d061b4e0",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/01-entry.png",
+      "exact": true
+    },
+    {
+      "name": "inline-02-tooltip.png",
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/02-tooltip.png",
+      "bytes": 120883,
+      "sha256": "a14abea3fbcc4cb7f093ab2d1351ab9dda666be334f76b8bc7472dfc36e780c8",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/02-tooltip.png",
+      "exact": true
+    },
+    {
+      "name": "inline-03-collapsed.png",
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/03-collapsed.png",
+      "bytes": 45178,
+      "sha256": "fd8d3f9b2b66146a56f730b076b83e2ebd0e12e0b8725ea244d21234bc6a2c8f",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/03-collapsed.png",
+      "exact": true
+    },
+    {
+      "name": "inline-04-filter-map.jpg",
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/04-filter-map.jpg",
+      "bytes": 672428,
+      "sha256": "d8277233c6c32739a8ed965a309796b9601aaddd53d3ed6bc73894a342789e41",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/04-filter-map.jpg",
+      "exact": true
+    },
+    {
+      "name": "inline-05-county-icons.jpg",
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/05-county-icons.jpg",
+      "bytes": 768310,
+      "sha256": "1127bfd263b71cb692f423dc1b878a24eaa22cb05fbdf7abb2bb68c516c46549",
+      "expected_path": "docs/media/potential-output-entry-0.1.1/05-county-icons.jpg",
+      "exact": true
+    }
+  ]
+}
