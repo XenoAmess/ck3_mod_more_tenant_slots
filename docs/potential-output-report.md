@@ -50,6 +50,8 @@ R0011 从冻结正式构建冷启动，没有热改 profile 或诊断控件。�
 
 离线测试使用显式 `XAPO_FRAMEWORK_DIR`、`XAPO_GAME_DIR`，运行 `-m unittest discover -s dev_tools -p test_potential_output.py`。安装识别、解析、可逆投影、日志分组、构建和受管生命周期复用框架；商品清单、筛选与产品证据留本仓库。可复用的 GUI 上下文、布局与刷新时序发现归框架知识文档，不搬运产品源码、私有存档或第三方素材，不外推本产品通过结论。
 
+框架富化已正常提交推送：[c82e82ebe / GUI 经验](https://github.com/XenoAmess/ck3_eternal_recurrence/blob/c82e82ebeac09d32196debb62b2deca1530763ba/docs/grammar/pitfalls.md#gui-上下文地图评分刷新与布局动画2026-11-20ck3-1210)。仅修改知识文档，经差异、编码及证据边界检查；实机原件仍绑定运行时冻结的旧框架提交，后续框架更新不追认其资格。
+
 ## 历史失败边界
 
 | 记录 | 保留的失败事实 |
