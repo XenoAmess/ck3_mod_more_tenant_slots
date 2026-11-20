@@ -1,0 +1,10 @@
+0.1.1 — 独立圆形入口 / Independent round map entry
+
+• 原生视角栏旁新增绿色资源圆形按钮，带 MOD 角标，悬停“潜在产出（XA MOD）”。
+• 单击直接进入，连续退出后再次进入正常；不覆盖原生视角栏文件或同名类型。
+• 收起面板保留窄标题条，可展开、可退出，保持当前筛选。
+• 潜力口径、35 种商品、数量与深浅色规则保持不变；原有三份地图/活动 GUI 覆盖仍需考虑兼容。
+• 更新五张真实游戏截图及正文内嵌图片。
+• CK3 1.21.0.3 Florin 简中旧存档：22 项实机验收、普通宴会规划和正常退出通过。
+
+Adds an independent round MOD entry with one-click opening and a compact collapsed filter header. Updates real gameplay screenshots. Tested on CK3 1.21.0.3 Florin.

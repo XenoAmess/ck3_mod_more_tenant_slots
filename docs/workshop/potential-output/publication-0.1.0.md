@@ -3,7 +3,7 @@
 2026-11-20（上海），独立产品 `mod_potential_output/` 已发布至 [Steam 创意工坊：潜在产出 / Potential Output (XA)](https://steamcommunity.com/sharedfiles/filedetails/?id=3842767123)。条目 ID 为 `3842767123`；与 MTS、POD 产品分别登记，没有更新其他产品。
 
 - 原生首次创建、四张附加预览图上传并公开、中文标题修正均返回 EResult 1；没有新工坊协议确认请求。
-- [说明 BBCode](description.bbcode)和[完整更新日志](change-notes-0.1.0.txt)已上库。公开标题、2953 字符说明、17 行更新日志与仓库按换行规范化后逐字一致。标签为 `Interface`、`Utilities`、`1.21 'Florin'`。
+- [说明 BBCode](description-0.1.0.bbcode)和[完整更新日志](change-notes-0.1.0.txt)已上库。公开标题、2953 字符说明、17 行更新日志与仓库按换行规范化后逐字一致。标签为 `Interface`、`Utilities`、`1.21 'Florin'`。
 - 四张截图来自最终 R0011 的真实游戏画面，仅裁剪游戏客户区并转换 JPEG；[来源与转换记录](media/provenance.json)保留原图 hash。Steam 图集四张及封面下载字节一致。正文四张图使用固定提交的公开地址；匿名 Chrome 实际加载四张 1800×980 图片，并直接审阅图文穿插结果。
 - 首次标题误为 `???? / Potential Output (XA)`。原因是 PowerShell 管道在工具收到参数前破坏了 Python 中文字面量。已用 Unicode 转义更新同一条目，匿名 API 和浏览器均确认 `潜在产出 / Potential Output (XA)`；原创建回执及发布 tag 保留，工作树文本冻结单另记修复。正文与更新日志从 UTF-8 文件读取，未出现同类损坏。
 

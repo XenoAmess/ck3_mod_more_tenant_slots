@@ -1,53 +1,52 @@
 [h1]潜在产出 · Potential Output (XA)[/h1]
-想找适合发展某种商品的伯爵领？这个独立 Mod 为 CK3 增加「潜在产出」地图视角，把各县[b]可以生产的商品[/b]集中展示，并用商品面板筛选地图。
+想找适合发展某种商品的伯爵领？这个独立 Mod 为 CK3 增加「潜在产出」地图视角，展示每个县[b]可以生产的商品[/b]，包含尚未开发、尚未投产的资源。
 
-[b]潜在产出包含尚未开发、尚未投产的资源。[/b]地图读取原版伯爵领潜力清单；当前没有生产某种商品，不代表这里没有它的潜力。
+[h2]0.1.1：独立圆形入口，单击进入[/h2]
+地图右下角，原生「＋」下方新增绿色资源圆形按钮，带 MOD 角标。它独立注册，不改变原生视角栏的按钮位置，原生「＋」仍可正常展开。
+[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/01-entry.png[/img]
 
-[h2]先看哪里有发展潜力[/h2]
-默认全选原版县潜力表中的 35 种商品。缩小地图看资源潜力的分布，放大后查看县首府上的商品图标和种类数。下图为本 Mod 的真实游戏画面。
-[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/01-overview.jpg[/img]
+悬停显示[b]潜在产出（XA MOD）[/b]。点击一次即可进入，退出后再次点击也能直接进入。
+[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/02-tooltip.png[/img]
 
-[h2]每个伯爵领可以生产什么[/h2]
-近距离会显示该县的潜力商品及匹配种类数。全选时可以概览全部潜力；商品较密集的地区可继续放大，或筛掉暂时不关注的商品。仅能加工得到、没有县资源潜力的 9 种商品不会混入筛选清单。
-[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/02-county-goods.jpg[/img]
+[h2]收起面板，继续看地图[/h2]
+减号将筛选面板收成窄标题条。点击标题条左侧圆形图标或右下角 MOD 圆形入口，重新展开并保留当前筛选。完整面板与标题条的叉号均可退出，恢复此前的地图模式。
+[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/03-collapsed.png[/img]
 
-[h2]只找你需要的产物[/h2]
+[h2]只展示需要的潜在产物[/h2]
 [list]
 [*]点击商品图标：独立开启或关闭该商品。
-[*]点击分类名称：切换整组商品。
-[*]「全选」恢复所有商品，「清空」显示无匹配。
-[*]减号收起面板；右下角「潜在产出」按钮重新展开，保留当前筛选。
+[*]点击分类名称：开启或关闭整组商品。
+[*]「全选」恢复全部商品；「清空」显示无匹配。
+[*]多选展示各商品的并集，不要求每个县拥有全部所选商品。
 [/list]
-例如只选择谷物，具有谷物潜力的县显示绿色与数字 1，没有谷物潜力的县显示灰色与数字 0。
-[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/03-single-grain.jpg[/img]
+[b]数字 = 该县潜力商品集合与已选商品集合的交集大小。[/b]
+灰色表示没有匹配，匹配种类越多，绿色越深。下图同时选择谷物与粟，可以看到 0、1、2 种潜力对应的不同颜色。
+[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/04-filter-map.jpg[/img]
 
-[h2]颜色越深，匹配的潜力种类越多[/h2]
-[b]数字 = 该县可以生产的商品 ∩ 当前勾选商品的种类数。[/b]
-灰色表示没有匹配，匹配种类越多绿色越深。下图同时选择谷物与粟，因此可以看到 0、1、2 三种结果。多选展示各商品的并集，不要求每个县同时拥有全部所选商品。
-[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/04-multiple-goods.jpg[/img]
+[h2]放大查看伯爵领的潜力[/h2]
+近景显示县名、匹配种类数和商品图标。默认全选原版县潜力表中的 35 种商品；仅靠加工获得的 9 种商品不混入潜力清单。
+[img]https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/93960dfea8e6c77a0aab6c7e181488119dccc1d0/docs/media/potential-output-entry-0.1.1/05-county-icons.jpg[/img]
 
-[b]这些数字表示潜力种类数，不表示矿藏储量、月产量、当前产量或建筑槽位。[/b]
+[b]潜在产出包含未开发资源。数字不是储量、月产量、现有产量或建筑槽位数。[/b]
 
 [h2]使用方法[/h2]
 [list]
-[*]订阅后，在 CK3 启动器的播放集中启用「Potential Output (XA)」。
-[*]进入游戏，点击地图右下角「潜在产出」，再点击「显示地图」。
-[*]用面板筛选商品，放大地图查看图标；点击叉号退出并恢复之前的地图视角。
+[*]订阅后，在 CK3 启动器播放集中启用「Potential Output (XA)」。
+[*]进入新游戏或旧存档，点击右下角带 MOD 角标的圆形按钮。
+[*]用面板筛选，放大看图标；叉号退出。每次重新进入默认全选，收起面板则保留筛选。
 [/list]
-每次重新进入视角默认全选。旧存档可直接使用，不需要新开战役。
 
 [h2]版本与兼容[/h2]
 [list]
-[*]版本 0.1.0；实测 CK3 1.21.0（Florin）。本 Mod 独立运行，无需 More Tenets Slots 或 POD。
-[*]该视角暂时使用活动规划地图，请先退出其他活动规划。它不会实际举办展示活动，也不收取活动费用；关闭视角后恢复正常地图。
-[*]普通活动规划地图会共用本 Mod 的灰绿评分配色。
-[*]覆盖 map_icon_layer.gui、window_activity_planner.gui、window_activity_list.gui；同样修改这些文件的 Mod 需要合并补丁。大地图转换、多人及全部 DLC 组合未逐项验收。
-[*]截图与实机验收使用简体中文；附带其他语言文本，但其他语言仅检查文件格式与键覆盖。
+[*]版本 0.1.1；实测 CK3 1.21.0.3 Florin。独立运行，无需 More Tenets Slots 或 POD。
+[*]入口不覆盖原生视角栏；Mod 原有的 map_icon_layer.gui、window_activity_planner.gui、window_activity_list.gui 三份覆盖仍存在，同样修改它们的 Mod 可能需要合并补丁。改动 HUD 布局的 Mod 也可能与按钮位置重叠。
+[*]视角暂时使用活动规划地图，请先退出其他活动规划。展示用活动禁止实际举办，不收取活动费用；普通活动规划仍可正常使用，其评分地图会共用灰绿配色。
+[*]截图与实机验收使用简体中文；其他八种语言仅检查格式、编码与键覆盖。大地图转换、多人、所有分辨率及 DLC 组合未逐项验收。
 [/list]
 
 [h2]English[/h2]
-Adds a county potential-goods view with 35 selectable goods, category toggles, select all and clear. Includes undeveloped resources. County labels and shading count the selected goods that the county can potentially produce: zero is gray, more matching kinds are darker green. This is not current production or resource quantity.
+Shows each county's potential goods, including undeveloped resources. Filter 35 goods individually or by category. Gray means zero matches; more matching kinds are darker green. These counts are not production rates or resource quantities.
 
-Open “Potential Output” at the lower right, then “Show map”. Zoom in for goods icons; close the view to restore your previous map. Existing saves are supported. Tested on CK3 1.21.0 Florin in Simplified Chinese. The view temporarily uses the activity planner; overlapping GUI mods need a compatibility patch. Ordinary activity score maps share the gray-green palette.
+Version 0.1.1 adds an independent green round MOD button below the native map-mode “+”. Click once to open. Hover: Potential Output (XA MOD). Collapse keeps a compact header and your filters; close restores the previous map mode. Existing saves supported. Tested on CK3 1.21.0.3 Florin in Simplified Chinese. The three existing map/activity GUI overrides still require compatibility review with overlapping mods.
 
 [url=https://github.com/XenoAmess/ck3_mod_more_tenant_slots/tree/master/mod_potential_output]源码 / Source[/url] · [url=https://github.com/XenoAmess/ck3_mod_more_tenant_slots/blob/master/docs/potential-output-usage.md]使用与兼容说明 / Usage[/url]

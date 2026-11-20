@@ -1,0 +1,11 @@
+{
+  "schema": "xapo-publication-text-freeze-v1",
+  "version": "0.1.1",
+  "title": "潜在产出 / Potential Output (XA)",
+  "item_id": "3842767123",
+  "image_commit": "93960dfea8e6c77a0aab6c7e181488119dccc1d0",
+  "image_count": 5,
+  "description_sha256": "007bc03957a1f4e6fb3c9c3141fe9122e35c4810d12b637eac1a5ca1870fd56f",
+  "description_utf8_bytes": 4670,
+  "change_note_sha256": "f39c1f818b66d4e11b12fbb43e804162a5abd0d9bec12adf6b23ea7d9c5ba75b"
+}
