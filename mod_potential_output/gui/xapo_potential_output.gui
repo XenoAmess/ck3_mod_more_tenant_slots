@@ -8,20 +8,20 @@ window = {
     }
     parentanchor = right|vcenter
     widgetanchor = left|vcenter
-    position = { 38 0 }
-    size = { 40 40 }
-    visible = "[And4( IsInGame, GetPlayer.IsValid, Not( IsPauseMenuShown ), Or( CanChangeMapMode, GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) ) )]"
+    position = { 0 38 }
+    size = { 32 32 }
+    visible = "[And4( IsInGame, GetPlayer.IsValid, And( Not( IsPauseMenuShown ), Not( IsGameViewOpen( 'barbershop' ) ) ), Or( CanChangeMapMode, GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) ) )]"
     alwaystransparent = yes
     xapo_mapmode_entry = {}
 }
 types XapoPotentialOutput {
     type xapo_mapmode_entry = widget {
-        size = { 40 40 }
+        size = { 32 32 }
 
     button_round = {
         name = "xapo_open_map"
         visible = "[Not( GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) )]"
-        size = { 40 40 }
+        size = { 32 32 }
         allow_outside = yes
         tooltip = "xapo_mapmode_tooltip"
         using = tooltip_nw
@@ -102,22 +102,22 @@ types XapoPotentialOutput {
         onclick = "[GetVariableSystem.Clear( 'mapmodes_expand' )]"
         onclick = "[OpenGameViewData( 'activity_list_detail_host_window', GetActivityType( 'activity_xapo_potential_output' ).Self )]"
         button_icon = {
-            size = { 26 26 }
+            size = { 22 22 }
             parentanchor = center
             alwaystransparent = yes
             texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
             color = { 0.45 0.9 0.75 1 }
         }
         widget = {
-            size = { 28 14 }
+            size = { 24 16 }
             parentanchor = top|right
-            position = { 7 -4 }
+            position = { 2 -3 }
             alwaystransparent = yes
             background = { using = Background_Area_Dark }
             text_single = {
                 size = { 100% 100% }
                 text = "xapo_mod_badge"
-                fontsize = 10
+                fontsize = 12
                 align = center
                 alwaystransparent = yes
             }
@@ -126,13 +126,13 @@ types XapoPotentialOutput {
     button_round = {
         name = "xapo_reopen_filter"
         visible = "[GetVariableSystem.HasValue( 'xapo_view_active', 'yes' )]"
-        size = { 40 40 }
+        size = { 32 32 }
         down = yes
         tooltip = "xapo_mapmode_tooltip"
         using = tooltip_nw
         onclick = "[GetVariableSystem.Clear( 'xapo_panel_collapsed' )]"
         button_icon = {
-            size = { 26 26 }
+            size = { 22 22 }
             parentanchor = center
             alwaystransparent = yes
             texture = "gfx/interface/icons/flat_icons/map_modes/production.dds"
@@ -140,7 +140,7 @@ types XapoPotentialOutput {
         }
         text_single = {
             text = "xapo_mod_badge"
-            fontsize = 10
+            fontsize = 12
             parentanchor = top|right
             alwaystransparent = yes
         }

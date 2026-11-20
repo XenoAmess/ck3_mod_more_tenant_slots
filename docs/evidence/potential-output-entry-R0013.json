@@ -1,0 +1,42 @@
+{
+  "schema": "xapo-entry-failed-attempt-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0013",
+  "source_commit": "62281f6bb3a09b231bbf56dad4b9cde2972dcf42",
+  "game": "1.21.0.3/26785313",
+  "status": "business-incomplete",
+  "actual_original_exit": {
+    "at_utc": "2026-11-20T08:37:30.642777+00:00",
+    "pid": 30840,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "closure_pass": true,
+  "normal_gui_quit_reviewed": true,
+  "observations": [
+    "Original save loaded; native map-mode group unchanged.",
+    "The original row ends next to the right edge; a button appended to its right is out of the client bounds.",
+    "One new product GUI diagnostic: fontsize_min must be positive and less than fontsize=10.",
+    "No potential-entry or filter acceptance claimed."
+  ],
+  "error_log": {
+    "path": "artifacts\\potential-output-20261119\\userdirs\\gui-7b0f303586a24ce194f1ced6e4fe1399\\profile\\logs\\error.log",
+    "bytes": 1175,
+    "sha256": "e0e4ded6d0afcf2c2a3ef16b2623d4fe970830a1c0ce0335967e9e3d2bffbfce"
+  },
+  "review_images": [
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083159415277-capture.png",
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083313680080-click.png",
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083339809401-click.png",
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083422491107-click.png",
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083517550185-capture.png",
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083639744994-key.png",
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083700747273-click.png",
+    "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0013\\review\\083723123127-click.png"
+  ],
+  "fix_plan": "Move the additive circle into the free row below the native end, reduce to native32 size and use fontsize12; use new frozen source/run."
+}
