@@ -1,0 +1,75 @@
+{
+  "schema": "xapo-publication-text-freeze-v1",
+  "title": "???? / Potential Output (XA)",
+  "description": {
+    "path": "docs/workshop/potential-output/description.bbcode",
+    "bytes": 4743,
+    "sha256": "849f0a989b117a41b8deb85f0665aec115b6d10a5523fb72dc5674e02518550a",
+    "normalized_sha256": "504d5de5cb8aa87c6d301a42f00f1cdaac965f651433deab3b4fa9b3f924a2e5"
+  },
+  "change_notes": {
+    "path": "docs/workshop/potential-output/change-notes-0.1.0.txt",
+    "bytes": 1283,
+    "sha256": "d80b3997f20d6bc3996d853b953315eba6d9ebf21e05c88ef012abeb9b591aca",
+    "normalized_sha256": "fc96904ae211d4af522503c4687c8ab2058fea2b7d4d26e8c5761ca0bb588b8d"
+  },
+  "bbcode_balanced": true,
+  "image_count": 4,
+  "image_commit": "484e05d5c32763f2ab6eaeeab3f42de55bd2848f",
+  "public_image_checks": [
+    {
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/01-overview.jpg",
+      "final_url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/01-overview.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "cors": "*",
+      "bytes": 567629,
+      "sha256": "5ecdfb29988dae4313dfe147c90d4c865f2d1b85cebf98f757f315a8bdb01b8b",
+      "size": [
+        1800,
+        980
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/02-county-goods.jpg",
+      "final_url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/02-county-goods.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "cors": "*",
+      "bytes": 825519,
+      "sha256": "d5ad2760ec668e994a0a077afc91ecca2801d46670d2f3d223a8018aab5d398b",
+      "size": [
+        1800,
+        980
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/03-single-grain.jpg",
+      "final_url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/03-single-grain.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "cors": "*",
+      "bytes": 701380,
+      "sha256": "927d28262730d46b257e5893b6964e5cfd651f944ff2cc822d57f833c6ee18a2",
+      "size": [
+        1800,
+        980
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/04-multiple-goods.jpg",
+      "final_url": "https://raw.githubusercontent.com/XenoAmess/ck3_mod_more_tenant_slots/484e05d5c32763f2ab6eaeeab3f42de55bd2848f/docs/workshop/potential-output/media/04-multiple-goods.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "cors": "*",
+      "bytes": 703157,
+      "sha256": "421deeb5067f69a4d5206faf6d00c870234ddfd8ed2eba40da0d6be53b725dd8",
+      "size": [
+        1800,
+        980
+      ]
+    }
+  ],
+  "release_tests": "8 product tests and 4 real-Git release identity tests pass; the first new test run failed because its mocked validate skipped framework path registration, corrected in the test setup; no runtime product changed",
+  "ownership": "Product copy/media/receipts remain here; existing native preview, text, cache and offline contracts reused without generic code changes."
+}

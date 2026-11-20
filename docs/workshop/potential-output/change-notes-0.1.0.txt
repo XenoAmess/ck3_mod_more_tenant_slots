@@ -1,0 +1,17 @@
+潜在产出 0.1.0 — 首次发布
+
+- 增加伯爵领潜在产出地图视角，包含尚未开发资源，使用原版潜力商品清单。
+- 支持 35 种潜力商品的单项、分类、全选与清空过滤。
+- 地图数字和灰绿深浅色显示所选商品与县潜力清单的交集种类数；不表示储量或月产量。
+- 支持近距离商品图标、面板收起与展开，以及关闭后恢复原地图视角。
+- 简中实机验证筛选、着色、旧存档加载及原版活动规划回归；其他语言仅做格式与键覆盖检查。
+- 工坊说明配有本版本的真实使用截图，图片穿插于对应功能段落，并提供图片栏预览。
+
+Potential Output 0.1.0 — Initial release
+
+- Adds a county view of potential trade goods, including undeveloped resources.
+- Filters 35 potential goods individually or by category, with select all and clear.
+- Labels and gray-green shading count matching potential kinds, not quantities or monthly output.
+- Zoom in for goods icons, collapse the panel and close the view to restore the previous map.
+- Verified on CK3 1.21.0 Florin in Simplified Chinese, including an existing save and ordinary activity-planner regression.
+- Includes actual gameplay screenshots in the description and Workshop gallery.

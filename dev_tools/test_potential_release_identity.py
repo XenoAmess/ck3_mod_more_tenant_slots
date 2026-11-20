@@ -75,4 +75,5 @@ if __name__ == "__main__":
     parser.add_argument("--framework", type=Path, required=True)
     args, remaining = parser.parse_known_args()
     FRAMEWORK = args.framework.resolve()
+    builder.framework_tools(FRAMEWORK)
     unittest.main(argv=[__file__, *remaining])
