@@ -1,0 +1,41 @@
+{
+  "schema": "xapo-entry-attempt-v1",
+  "run_id": "pc-20260924rtuf-f11af23c08--potential-output--R0015",
+  "source_commit": "daa072ff51058491ad270b6c5898c7d89fc3ff7d",
+  "status": "partial-not-accepted-layout",
+  "original_process": {
+    "at_utc": "2026-11-20T10:05:21.116614+00:00",
+    "pid": 31552,
+    "returncode": 0,
+    "actual_original_popen_wait": true,
+    "window_close_requested": false,
+    "error": null,
+    "process_pass": true,
+    "normal_gui_quit": null,
+    "business_pass": false
+  },
+  "screen_released": true,
+  "normal_gui_quit_reviewed": true,
+  "actual_observations": [
+    "Explicit fontsize_min8 fixes the product font diagnostics.",
+    "The circle appears near the right sidebar rather than the native map mode group; attachto was not a verified geometric-parent contract.",
+    "Hover shows the requested Chinese Potential Output (XA MOD) title and potential explanation.",
+    "A single click automatically confirms the host introduction and opens the gray/green potential map.",
+    "Collapse leaves a compact header; its round expand button restores the filter panel.",
+    "Exit closes the potential planner and restores the political map mode; exact prior camera/zoom was not established."
+  ],
+  "error_log": {
+    "bytes": 1005,
+    "sha256": "1d49d15864a4b7e59ae649dae4a89969d36b71955ce36bf446258dcf9872f2c1",
+    "product_errors_observed": 0,
+    "remaining": "One pre-existing Generated Map Objects diagnostic"
+  },
+  "review_images": {
+    "093803043317-hover.png": "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0015\\review\\093803043317-hover.png",
+    "094112654164-capture.png": "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0015\\review\\094112654164-capture.png",
+    "094447914571-click.png": "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0015\\review\\094447914571-click.png",
+    "094702646752-click.png": "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0015\\review\\094702646752-click.png",
+    "094915972841-click.png": "artifacts\\potential-output-entry-20261120\\live\\pc-20260924rtuf-f11af23c08--potential-output--R0015\\review\\094915972841-click.png"
+  },
+  "next": "Remove attachto and use the same bottom-right UI anchor as the native HUD without modifying it; retest final layout and filters."
+}

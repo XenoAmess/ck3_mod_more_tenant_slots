@@ -258,14 +258,11 @@ def panel(goods: list[str], basic: set[str], categories: list[tuple[str, list[st
 window = {{
     name = "xapo_map_launcher"
     layer = middle
-    attachto = {{
-        widgetid = "map_mode_houses_button"
-        inherit_visibility = no
-    }}
-    parentanchor = right|vcenter
-    widgetanchor = left|vcenter
-    position = {{ -32 38 }}
+    parentanchor = bottom|right
+    widgetanchor = bottom|right
+    position = {{ -10 -44 }}
     size = {{ 32 32 }}
+    movable = no
     visible = "[And4( IsInGame, GetPlayer.IsValid, And( Not( IsPauseMenuShown ), Not( IsGameViewOpen( 'barbershop' ) ) ), Or( CanChangeMapMode, GetVariableSystem.HasValue( 'xapo_view_active', 'yes' ) ) )]"
     alwaystransparent = yes
     xapo_mapmode_entry = {{}}

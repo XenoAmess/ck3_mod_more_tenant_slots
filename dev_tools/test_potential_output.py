@@ -236,7 +236,8 @@ class PotentialOutputTests(unittest.TestCase):
                 self.assertFalse(set(declared) & {'map_modes', 'flowcontainer_additional_mapmodes', 'icon_button_mapmode'})
         launcher = named_block(self.gui, 'window', 'xapo_map_launcher')
         body = self.gui[launcher.start:launcher.end]
-        self.assertIn('widgetid = "map_mode_houses_button"', body)
+        self.assertNotIn('attachto', body)
+        self.assertIn('parentanchor = bottom|right', body)
         self.assertIn('xapo_mapmode_entry = {}', body)
         self.assertNotIn('button_standard', body)
         self.assertEqual(self.files['gui/scripted_widgets/xapo_potential_output.txt'].decode('utf-8-sig').strip(),
