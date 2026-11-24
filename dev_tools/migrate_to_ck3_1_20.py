@@ -12,7 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT / "more_tenets_slots_xa_dev"
 CONTRACT = ROOT / "dev_tools/ck3_1_21_0_sources.json"
-HEADER = "# GENERATED FILE - CK3 1.21.0 native GUI with MTS scrollable tenet grids\n"
+HEADER = "# GENERATED FILE - CK3 1.21.0.3 native GUI with MTS scrollable tenet grids\n"
 
 
 def framework_tools(framework: Path) -> None:
@@ -74,12 +74,18 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
         return [(action, action.replace(before, after, 1))]
     patches = [scroll_grid(native, "flowcontainer", "doctrines_grid_core_tenets", 250),
                scroll_grid(native, "flowcontainer", "doctrines_compact_grid_core_tenets", 130)]
-    # Prepare only the player's selected rite, before the unchanged native open.
+    # Execute queues a game command. Opening in the same onclick chain clones
+    # the unprepared source: the 100 tenet slots can index a 32-doctrine draft.
+    # Wait for every metadata doctrine to become observable before opening.
     from ck3_text_projection import named_block
     opening = "[OpenGameViewData( 'rite_creation', FaithWindow.GetSelectedRite )]"
     prepare = "[GetScriptedGui('mts_prepare_selector_gui').Execute( " \
         "GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', " \
         "FaithWindow.GetSelectedRite.MakeScope ).End )]"
+    ready = "GetScriptedGui('mts_selector_ready_gui').IsShown( " \
+        "GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', " \
+        "FaithWindow.GetSelectedRite.MakeScope ).End )"
+    pending = "GetVariableSystem.Exists( 'mts_edit_rite_pending' )"
     # New rites use the native default-draft factory, which fills available
     # doctrine groups. Editing clones the existing rite, so only that path
     # needs to prepare compatibility metadata on the source itself.
@@ -89,9 +95,22 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
         line = re.search(r'(?m)^([ \t]*)onclick = "' + re.escape(opening) + r'"$', before)
         if line is None:
             raise ValueError(f"native rite opening action changed: {name}")
-        after = before.replace(line.group(), line.group(1) + 'onclick = "' + prepare +
-                               '"\n' + line.group(), 1)
+        indent = line.group(1)
+        after = before.replace(line.group(),
+            indent + 'onclick = "' + prepare + '"\n' +
+            indent + 'onclick = "[GetVariableSystem.Set( \'mts_edit_rite_pending\', \'yes\' )]"\n\n' +
+            indent + 'state = {\n' +
+            indent + '\tname = "mts_open_prepared_rite"\n' +
+            indent + '\ttrigger_when = "[And3( ' + pending + ', FaithWindow.CanEditRite, ' + ready + ' )]"\n' +
+            indent + '\ton_start = "[GetVariableSystem.Clear( \'mts_edit_rite_pending\' )]"\n' +
+            indent + '\ton_start = "' + opening + '"\n' +
+            indent + '}', 1)
         patches.append((before, after))
+    # A cancelled request must not open an editor when the faith window is
+    # opened later. This is a local GUI flag, never a saved character variable.
+    hide = 'name = _hide\n\t\tposition = { -60 0 }'
+    patches.append((hide, hide +
+        '\n\t\ton_start = "[GetVariableSystem.Clear( \'mts_edit_rite_pending\' )]"'))
     return patches
 
 

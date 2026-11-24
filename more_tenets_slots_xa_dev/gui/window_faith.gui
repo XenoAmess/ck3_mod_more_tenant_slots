@@ -1,4 +1,4 @@
-﻿# GENERATED FILE - CK3 1.21.0 native GUI with MTS scrollable tenet grids
+﻿# GENERATED FILE - CK3 1.21.0.3 native GUI with MTS scrollable tenet grids
 ######################################################
 ################### FAITH WINDOW #####################
 ######################################################
@@ -42,6 +42,7 @@ window = {
 	state = {
 		name = _hide
 		position = { -60 0 }
+		on_start = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
 		on_start = "[GetVariableSystem.Clear( 'hide_bottom_left_HUD' )]"
 
 		using = Animation_FadeOut_Quick
@@ -1335,7 +1336,14 @@ window = {
 						minimumsize = { 0 @rite_button_height }
 
 						onclick = "[GetScriptedGui('mts_prepare_selector_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', FaithWindow.GetSelectedRite.MakeScope ).End )]"
-						onclick = "[OpenGameViewData( 'rite_creation', FaithWindow.GetSelectedRite )]"
+						onclick = "[GetVariableSystem.Set( 'mts_edit_rite_pending', 'yes' )]"
+
+						state = {
+							name = "mts_open_prepared_rite"
+							trigger_when = "[And3( GetVariableSystem.Exists( 'mts_edit_rite_pending' ), FaithWindow.CanEditRite, GetScriptedGui('mts_selector_ready_gui').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', FaithWindow.GetSelectedRite.MakeScope ).End ) )]"
+							on_start = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
+							on_start = "[OpenGameViewData( 'rite_creation', FaithWindow.GetSelectedRite )]"
+						}
 
 						text = "RITE_CREATION_VIEW_BUTTON_EDIT"
 						tooltip = "RITE_CREATION_VIEW_BUTTON_EDIT_TT"

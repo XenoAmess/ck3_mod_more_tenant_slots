@@ -1,5 +1,7 @@
 # 礼仪编辑闪退调查
 
+**最新结果见[2026-11-24 根因与候选修复报告](rite-edit-root-cause-2026-11-24.md)。** 本文保留各阶段当时的结论与边界。
+
 仅调查 More Tenets Slots(XA)。用户明确要求自行排查，使用最新 CK3 且只启用本产品；不再等待报告者补充复现步骤。
 
 本机 CK3 为 1.21.0.3 / build26785313，EXE SHA256 `859f0d380098adcb130eb9d453458222749fcdf6d46126ad0ed99d78f9a0aa28`。初次场 `pc-20260924rtuf-f11af23c08--more-tenets-slots--R0004` 使用提交 `d46380c7d32994975cdbaceea76846fcf0cd8511` 的正式 48 文件，框架 `a1b66b91b66ea02c0b50016c8bf795afcefd5d13`。简体中文、Steam 离线、独立 userdir、仅本产品，无 fixture；复用 v12 创建礼仪的验收存档，并非新开局。

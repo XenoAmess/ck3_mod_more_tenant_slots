@@ -9,3 +9,13 @@ mts_prepare_selector_gui = {
         }
     }
 }
+
+mts_selector_ready_gui = {
+    scope = character
+    saved_scopes = { mts_rite }
+    is_shown = {
+        is_ai = no
+        exists = scope:mts_rite
+        scope:mts_rite = { mts_selector_ready_trigger = yes }
+    }
+}

@@ -1,4 +1,4 @@
-﻿# GENERATED FILE - CK3 1.21.0 native GUI with MTS scrollable tenet grids
+﻿# GENERATED FILE - CK3 1.21.0.3 native GUI with MTS scrollable tenet grids
 on_rite_updated = {
 	events = {
 	}

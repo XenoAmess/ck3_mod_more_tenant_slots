@@ -1,4 +1,4 @@
-"""Generate inert doctrine metadata for CK3 1.20's shared selector index.
+"""Generate inert doctrine metadata for CK3's shared selector index.
 
 These are doctrines, never core tenets. Empty native tenet slots remain empty.
 """
@@ -52,10 +52,23 @@ def generated_files() -> dict[str, str]:
         }
     }
 }
+
+mts_selector_ready_gui = {
+    scope = character
+    saved_scopes = { mts_rite }
+    is_shown = {
+        is_ai = no
+        exists = scope:mts_rite
+        scope:mts_rite = { mts_selector_ready_trigger = yes }
+    }
+}
 """
     internal = "".join(f"\t\tthis = doctrine:mts_selector_doctrine_{slot:03}\n"
                        for slot in range(1, COUNT + 1))
+    ready = "".join(f"\trite_has_doctrine = mts_selector_doctrine_{slot:03}\n"
+                    for slot in range(1, COUNT + 1))
     files["common/scripted_triggers/mts_selector.txt"] = HEADER + (
+        "mts_selector_ready_trigger = {\n" + ready + "}\n\n"
         "mts_selector_internal_doctrine_trigger = {\n\tOR = {\n" + internal + "\t}\n}\n\n"
         "mts_selector_only_metadata_update_trigger = {\n"
         "\tOR = {\n"

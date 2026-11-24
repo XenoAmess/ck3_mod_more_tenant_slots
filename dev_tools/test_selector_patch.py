@@ -2,12 +2,47 @@
 
 import argparse
 from pathlib import Path
+import re
 import unittest
 
 from migrate_to_ck3_1_20 import changes, framework_tools
 
 
 class SelectorProjection(unittest.TestCase):
+    def test_edit_open_waits_for_metadata_instead_of_racing_the_queued_command(self):
+        from ck3_text_projection import named_block
+        native = (GAME / "game/gui/window_faith.gui").read_text(encoding="utf-8-sig")
+        projected = native
+        for before, after in changes(native, "gui/window_faith.gui"):
+            projected = projected.replace(before, after, 1)
+        span = named_block(projected, "button_standard", "edit_rite")
+        edit = projected[span.start:span.end]
+        clicks = re.findall(r'onclick = "([^"]+)"', edit)
+        self.assertEqual(len(clicks), 2)
+        self.assertIn("mts_prepare_selector_gui", clicks[0])
+        self.assertIn("mts_edit_rite_pending", clicks[1])
+        self.assertTrue(all("OpenGameViewData" not in click for click in clicks))
+        state = named_block(edit, "state", "mts_open_prepared_rite")
+        waiting = edit[state.start:state.end]
+        self.assertIn("mts_selector_ready_gui", waiting)
+        self.assertIn("FaithWindow.CanEditRite", waiting)
+        self.assertLess(waiting.index("GetVariableSystem.Clear"), waiting.index("OpenGameViewData"))
+        self.assertIn("name = _hide\n\t\tposition = { -60 0 }\n\t\ton_start = "
+                      "\"[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]\"", projected)
+
+    def test_readiness_requires_every_metadata_doctrine(self):
+        from ck3_text_projection import blocks
+        from selector_padding import COUNT, generated_files
+        files = generated_files()
+        source = files["common/scripted_triggers/mts_selector.txt"]
+        ready = next(b for b in blocks(source) if b.key == "mts_selector_ready_trigger")
+        required = re.findall(r"rite_has_doctrine\s*=\s*(\w+)", source[ready.start:ready.end])
+        self.assertEqual(len(required), COUNT)
+        self.assertEqual(set(required), {f"mts_selector_doctrine_{n:03}" for n in range(1, COUNT + 1)})
+        self.assertNotIn("OR", source[ready.start:ready.end])
+        gui = files["common/scripted_guis/mts_selector.txt"]
+        self.assertIn("scope:mts_rite = { mts_selector_ready_trigger = yes }", gui)
+
     def test_opening_a_new_rite_keeps_the_native_source_rite_unchanged(self):
         from ck3_text_projection import named_block
         native = (GAME / "game/gui/window_faith.gui").read_text(encoding="utf-8-sig")

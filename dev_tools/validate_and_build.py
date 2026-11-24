@@ -17,7 +17,7 @@ from selector_padding import LANGUAGES, generated_files
 
 PRODUCT = "more_tenets_slots_xa_dev"
 WORKSHOP_ID = "3182367229"
-PRODUCT_VERSION = "12"
+PRODUCT_VERSION = "13"
 RELEASE_FILES = (
     "descriptor.mod", "thumbnail.png",
     "common/defines/more_tenets_slots.txt",

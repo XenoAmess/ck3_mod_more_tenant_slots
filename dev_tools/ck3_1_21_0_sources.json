@@ -1,7 +1,7 @@
 {
-  "version": "1.21.0",
-  "steam_build": "26757580",
-  "exe_sha256": "bb3fef106240e95ecdb6f1532982e89e9432c92a99d33db623521572f06e6f79",
+  "version": "1.21.0.3",
+  "steam_build": "26785313",
+  "exe_sha256": "859f0d380098adcb130eb9d453458222749fcdf6d46126ad0ed99d78f9a0aa28",
   "sources": {
     "gui/window_faith.gui": {
       "sha256": "4ad2ae309f16a575cc8bf50e3d8766d6957b9f9b5fd549eaf443714b1eb49a61",
@@ -12,8 +12,8 @@
       "normalized_sha256": "9d6e281dfba3bf159d4f1a1f333379b9c30919d6f2ff6b861dbfd40a318c7577"
     },
     "common/defines/00_defines.txt": {
-      "sha256": "a28c9eccaa3990691190f3073eac7a272679995062739fb90de2b156ec2af753",
-      "normalized_sha256": "d3a75eaad9c38ca1c44c1c24035344b000fdfc2ff682e3460d4c8dbd8a2bdfeb"
+      "sha256": "e30fad840bb6f0e73e7eec4363ec6d554058eba76214adc68e4440d272371cae",
+      "normalized_sha256": "78a484c545fe8b123c55cd5db387b8bd2215659c5bef8dca830a871017053acf"
     },
     "common/script_values/pam_values.txt": {
       "sha256": "cc8d6b7653762213c0891caa8f8a7c867b0fb92634eaa911c9a24ef7ffaf3cf6",
