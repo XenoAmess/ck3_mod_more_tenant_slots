@@ -27,8 +27,13 @@ class SelectorProjection(unittest.TestCase):
         self.assertIn("mts_selector_ready_gui", waiting)
         self.assertIn("FaithWindow.CanEditRite", waiting)
         self.assertLess(waiting.index("GetVariableSystem.Clear"), waiting.index("OpenGameViewData"))
-        self.assertIn("name = _hide\n\t\tposition = { -60 0 }\n\t\ton_start = "
-                      "\"[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]\"", projected)
+        hide = projected.index("name = _hide\n\t\tposition = { -60 0 }")
+        hide_state = projected[hide:projected.index("\n\t}", hide)]
+        self.assertIn("mts_cleanup_edit_blanks_gui", hide_state)
+        self.assertIn("MakeScopeBool( GetVariableSystem.Exists( 'mts_edit_rite_pending' ) )",
+                      hide_state)
+        self.assertLess(hide_state.index("mts_cleanup_edit_blanks_gui"),
+                        hide_state.index("GetVariableSystem.Clear"))
 
     def test_switching_rites_cancels_pending_edit_before_changing_selection(self):
         native = (GAME / "game/gui/window_faith.gui").read_text(encoding="utf-8-sig")

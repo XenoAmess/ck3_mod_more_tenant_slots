@@ -195,3 +195,14 @@ ordinary doctrine and final slot selection, representative leaders, and
 a cold reload. A save or forced interruption while the editor is open
 also requires validation because the source temporarily carries the
 internal keys. No workshop release is recorded.
+
+R0018 loaded the 49-file candidate alone. Robert selected Divine Liturgy
+in slot 100, replaced Apostolic Succession with Peace of God and changed
+the gender doctrine to Male Dominated. Native confirmation charged exactly
+1040 piety (94817 to 93777). The paused save contained four intended
+cores and zero internal core fillers, with no rite_edit error in the
+captured log. Output SHA256 was
+`2619dfb8096d31c4a888a34ef4e1ebac9d88d35ac1a10800bfcdb8bef30701fb`.
+The editor still rendered the filler icon and tooltip. The follow-up
+projection presents those rows as empty controls and scopes pending
+cleanup to the pending request while preserving the normal edit cleanup.

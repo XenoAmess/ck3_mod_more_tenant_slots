@@ -27,7 +27,7 @@ window = {
 	state = {
 		name = _hide
 		using = Animation_FadeOut_Quick
-		on_start = "[GetScriptedGui('mts_cleanup_edit_blanks_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', RiteCreationWindow.GetRite.MakeScope ).End )]"
+		on_start = "[GetScriptedGui('mts_cleanup_edit_blanks_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', RiteCreationWindow.GetRite.MakeScope ).AddScope( 'mts_should_cleanup', MakeScopeBool( RiteCreationWindow.IsEditing ) ).End )]"
 	}
 
 	vbox = {
@@ -214,7 +214,18 @@ window = {
 												using = Color_Orange
 											}
 
+											widget = {
+												size = { 130 200 }
+												visible = "[And( TenetType.IsValid, Not( TenetType.IsVisible ) )]"
+												alwaystransparent = yes
+												highlight_icon = {
+													size = { 130 200 }
+													texture = "[Faith.GetTenetBackgroundIcon( Rite.Self, TenetType.Self )]"
+												}
+												button_plus = { position = { 35 70 } size = { 60 60 } }
+											}
 											widget_tenet_item = {
+												visible = "[Or( Not( TenetType.IsValid ), TenetType.IsVisible )]"
 												datacontext = "[TenetItem.GetTenet]"
 												datacontext = "[TenetItem.GetFaith]"
 												datacontext = "[TenetItem.GetRite]"
@@ -231,12 +242,12 @@ window = {
 												}
 												blockoverride "popularity_visibility"
 												{
-													visible = "[TenetType.IsVisible]"
+													visible = "[TenetType.IsValid]"
 												}
 
 												blockoverride "divergence_change" {
 													hbox = {
-														visible = "[TenetType.IsVisible]"
+														visible = "[TenetType.IsValid]"
 														layoutpolicy_horizontal = expanding
 
 														text_single = {
@@ -249,7 +260,7 @@ window = {
 
 												blockoverride "input_info_text_bottom"
 												{
-													visible = "[TenetType.IsVisible]"
+													visible = "[TenetType.IsValid]"
 													text = "RITE_CREATION_VIEW_TENET_CLICK_TO_CHANGE"
 													tooltip = "[RiteCreationWindow.GetTenetCostTooltip( TenetType.Self )]"
 												}
@@ -260,7 +271,7 @@ window = {
 														parentanchor = bottom|hcenter
 														layoutpolicy_horizontal = expanding
 														position = { 0 7 }
-														visible = "[TenetType.IsVisible]"
+														visible = "[TenetType.IsValid]"
 														text = "RITE_CREATION_VIEW_TENET_DIVERGENCE_AND_COST_SHORT"
 														tooltip = "RITE_CREATION_VIEW_TENET_DIVERGENCE_AND_COST_TT"
 													}

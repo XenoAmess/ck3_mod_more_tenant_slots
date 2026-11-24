@@ -57,14 +57,15 @@ def scroll_grid(native: str, key: str, name: str, height: int,
     return original, replacement
 
 
-def cleanup_edit_blanks(rite: str) -> str:
+def cleanup_edit_blanks(rite: str, condition: str = "'(bool)yes'") -> str:
     return ("[GetScriptedGui('mts_cleanup_edit_blanks_gui').Execute( "
             "GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', "
-            f"{rite}.MakeScope ).End )]")
+            f"{rite}.MakeScope ).AddScope( 'mts_should_cleanup', "
+            f"MakeScopeBool( {condition} ) ).End )]")
 
 
 def cancel_pending_edit(indent: str) -> str:
-    cleanup = cleanup_edit_blanks("FaithWindow.GetSelectedRite")
+    cleanup = cleanup_edit_blanks("FaithWindow.GetSelectedRite", PENDING_EDIT)
     return (f'\n{indent}onclick = "{cleanup}"'
             f"\n{indent}onclick = \"[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]\"")
 
@@ -72,9 +73,28 @@ def cancel_pending_edit(indent: str) -> str:
 def changes(native: str, relative: str) -> list[tuple[str, str]]:
     if relative == "gui/window_rite_creation.gui":
         grid, scroll = scroll_grid(native, "hbox", "tenets_grid", 300, creation=True)
-        scroll = scroll.replace("[TenetType.IsValid]", "[TenetType.IsVisible]")
+        visible_card = "[Or( Not( TenetType.IsValid ), TenetType.IsVisible )]"
+        card = "widget_tenet_item = {"
+        indent_match = re.search(r"(?m)^([ \t]+)" + re.escape(card), scroll)
+        if indent_match is None or scroll.count(card) != 1:
+            raise ValueError("native edit tenet card is ambiguous")
+        indent = indent_match[1]
+        empty_card = (
+            f'widget = {{\n{indent}\tsize = {{ 130 200 }}'
+            f'\n{indent}\tvisible = "[And( TenetType.IsValid, Not( TenetType.IsVisible ) )]"'
+            f'\n{indent}\talwaystransparent = yes'
+            f'\n{indent}\thighlight_icon = {{'
+            f'\n{indent}\t\tsize = {{ 130 200 }}'
+            f'\n{indent}\t\ttexture = "[Faith.GetTenetBackgroundIcon( Rite.Self, TenetType.Self )]"'
+            f'\n{indent}\t}}'
+            f'\n{indent}\tbutton_plus = {{ position = {{ 35 70 }} size = {{ 60 60 }} }}'
+            f'\n{indent}}}'
+        )
+        scroll = scroll.replace(
+            card, empty_card + f'\n{indent}{card}\n{indent}\tvisible = "{visible_card}"', 1
+        )
         hide = "name = _hide\n\t\tusing = Animation_FadeOut_Quick"
-        cleanup = cleanup_edit_blanks("RiteCreationWindow.GetRite")
+        cleanup = cleanup_edit_blanks("RiteCreationWindow.GetRite", "RiteCreationWindow.IsEditing")
         return [(grid, scroll), (hide, hide + f'\n\t\ton_start = "{cleanup}"')]
     if relative == "common/on_action/religion_on_actions.txt":
         from ck3_text_projection import blocks
@@ -152,7 +172,8 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
     # A cancelled request must not open an editor when the faith window is
     # opened later. This is a local GUI flag, never a saved character variable.
     hide = 'name = _hide\n\t\tposition = { -60 0 }'
-    patches.append((hide, hide +
+    cleanup = cleanup_edit_blanks("FaithWindow.GetSelectedRite", PENDING_EDIT)
+    patches.append((hide, hide + f'\n\t\ton_start = "{cleanup}"' +
         '\n\t\ton_start = "[GetVariableSystem.Clear( \'mts_edit_rite_pending\' )]"'))
     return patches
 
