@@ -12,6 +12,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT / "more_tenets_slots_xa_dev"
 CONTRACT = ROOT / "dev_tools/ck3_1_21_0_sources.json"
+EDIT_BLANK_FILTER = "NOT = { mts_is_edit_blank_trigger = yes }"
+PENDING_EDIT = "GetVariableSystem.Exists( 'mts_edit_rite_pending' )"
 HEADER = "# GENERATED FILE - CK3 1.21.0.3 native GUI with MTS scrollable tenet grids\n"
 
 
@@ -55,9 +57,25 @@ def scroll_grid(native: str, key: str, name: str, height: int,
     return original, replacement
 
 
+def cleanup_edit_blanks(rite: str) -> str:
+    return ("[GetScriptedGui('mts_cleanup_edit_blanks_gui').Execute( "
+            "GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', "
+            f"{rite}.MakeScope ).End )]")
+
+
+def cancel_pending_edit(indent: str) -> str:
+    cleanup = cleanup_edit_blanks("FaithWindow.GetSelectedRite")
+    return (f'\n{indent}onclick = "{cleanup}"'
+            f"\n{indent}onclick = \"[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]\"")
+
+
 def changes(native: str, relative: str) -> list[tuple[str, str]]:
     if relative == "gui/window_rite_creation.gui":
-        return [scroll_grid(native, "hbox", "tenets_grid", 300, creation=True)]
+        grid, scroll = scroll_grid(native, "hbox", "tenets_grid", 300, creation=True)
+        scroll = scroll.replace("[TenetType.IsValid]", "[TenetType.IsVisible]")
+        hide = "name = _hide\n\t\tusing = Animation_FadeOut_Quick"
+        cleanup = cleanup_edit_blanks("RiteCreationWindow.GetRite")
+        return [(grid, scroll), (hide, hide + f'\n\t\ton_start = "{cleanup}"')]
     if relative == "common/on_action/religion_on_actions.txt":
         from ck3_text_projection import blocks
         actions = [b for b in blocks(native) if b.key == "on_rite_updated"]
@@ -67,8 +85,24 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
         effect = next(b for b in blocks(action) if b.key == "effect")
         before = action[effect.start:effect.end]
         body = action[effect.opening + 1:effect.end - 1]
+        from selector_padding import EDIT_TENET_LISTS
+        for name in EDIT_TENET_LISTS:
+            body = body.replace(
+                f"any_in_list = {{ list = {name} count >= 1 }}",
+                f"any_in_list = {{ list = {name} count >= 1 {EDIT_BLANK_FILTER} }}",
+            )
+            body = re.sub(
+                r"(every_in_list = \{\n([ \t]*)list = " + name + r")(?=\n)",
+                r"\1\n\2limit = { " + EDIT_BLANK_FILTER + " }",
+                body,
+            )
         nested = "\n".join("\t" + line if line else line for line in body.split("\n"))
-        after = ("effect = {\n\t\tif = {\n\t\t\tlimit = {\n"
+        after = ("effect = {\n"
+                 "\t\tif = {\n"
+                 "\t\t\tlimit = { exists = scope:consume_rite_edit_token }\n"
+                 "\t\t\tmts_remove_edit_blanks_effect = yes\n"
+                 "\t\t}\n"
+                 "\t\tif = {\n\t\t\tlimit = {\n"
                  "\t\t\t\tNOT = { mts_selector_only_metadata_update_trigger = yes }\n"
                  "\t\t\t}\n" + nested + "}\n\t}")
         return [(action, action.replace(before, after, 1))]
@@ -85,7 +119,6 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
     ready = "GetScriptedGui('mts_selector_ready_gui').IsShown( " \
         "GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', " \
         "FaithWindow.GetSelectedRite.MakeScope ).End )"
-    pending = "GetVariableSystem.Exists( 'mts_edit_rite_pending' )"
     # New rites use the native default-draft factory, which fills available
     # doctrine groups. Editing clones the existing rite, so only that path
     # needs to prepare compatibility metadata on the source itself.
@@ -101,7 +134,7 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
             indent + 'onclick = "[GetVariableSystem.Set( \'mts_edit_rite_pending\', \'yes\' )]"\n\n' +
             indent + 'state = {\n' +
             indent + '\tname = "mts_open_prepared_rite"\n' +
-            indent + '\ttrigger_when = "[And3( ' + pending + ', FaithWindow.CanEditRite, ' + ready + ' )]"\n' +
+            indent + '\ttrigger_when = "[And3( ' + PENDING_EDIT + ', FaithWindow.CanEditRite, ' + ready + ' )]"\n' +
             indent + '\ton_start = "[GetVariableSystem.Clear( \'mts_edit_rite_pending\' )]"\n' +
             indent + '\ton_start = "' + opening + '"\n' +
             indent + '}', 1)
@@ -115,8 +148,7 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
     if not selections:
         raise ValueError("native rite selection actions are missing")
     for match in selections:
-        clear = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
-        patches.append((match[0], f'\n{match[1]}onclick = "{clear}"{match[0]}'))
+        patches.append((match[0], cancel_pending_edit(match[1]) + match[0]))
     # A cancelled request must not open an editor when the faith window is
     # opened later. This is a local GUI flag, never a saved character variable.
     hide = 'name = _hide\n\t\tposition = { -60 0 }'

@@ -166,3 +166,32 @@ These MTS-specific controls isolate the remaining failure to editing a
 draft with vacant slots under the tested conditions and preserve all
 previous results. The fixture sources, images, logs and saves remain in
 the local artifact directory.
+
+## 11. Temporary-slot candidate and its release boundary
+
+The R0013 scope probe proved that the editor's exposed rite scope targets
+the source rite. The probe key remained in a save after cancelling the
+draft. R0014 proved the draft retains its filled slots after the source
+is restored. A real confirm then removed the old core, and a second
+manual cleanup left only the three intended cores in the physical save.
+The automatic equivalent in R0015 also saved three correct cores, but
+made the no-change confirmation button available.
+
+R0016 kept the source filled only during editing. The unchanged draft
+showed the native blocker, a cancelled edit saved the original three
+cores, and confirmed replacement cost 325 piety and saved the intended
+three cores. Advancing the date exposed notifications for artificial
+changes. R0017 exercised a filter for these queued changes. It preserved
+the correct replacement through 1066.10.20. Both date-advancing fixture
+runs had UI formatter diagnostics; these must be considered in the live
+review. All five processes exited normally. Fixtures and their local
+observations remain outside the formal inventory.
+
+The next product candidate adopts the bounded prepare/close sequence,
+zero-cost keys and notification filtering through the existing generated
+projections. Its 49-file allowlist and five projection tests pass.
+Full validation must cover the invisible-key variant, cancel and reopen,
+ordinary doctrine and final slot selection, representative leaders, and
+a cold reload. A save or forced interruption while the editor is open
+also requires validation because the source temporarily carries the
+internal keys. No workshop release is recorded.

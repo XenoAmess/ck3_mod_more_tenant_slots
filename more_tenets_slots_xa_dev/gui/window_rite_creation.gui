@@ -27,6 +27,7 @@ window = {
 	state = {
 		name = _hide
 		using = Animation_FadeOut_Quick
+		on_start = "[GetScriptedGui('mts_cleanup_edit_blanks_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'mts_rite', RiteCreationWindow.GetRite.MakeScope ).End )]"
 	}
 
 	vbox = {
@@ -230,12 +231,12 @@ window = {
 												}
 												blockoverride "popularity_visibility"
 												{
-													visible = "[TenetType.IsValid]"
+													visible = "[TenetType.IsVisible]"
 												}
 
 												blockoverride "divergence_change" {
 													hbox = {
-														visible = "[TenetType.IsValid]"
+														visible = "[TenetType.IsVisible]"
 														layoutpolicy_horizontal = expanding
 
 														text_single = {
@@ -248,7 +249,7 @@ window = {
 
 												blockoverride "input_info_text_bottom"
 												{
-													visible = "[TenetType.IsValid]"
+													visible = "[TenetType.IsVisible]"
 													text = "RITE_CREATION_VIEW_TENET_CLICK_TO_CHANGE"
 													tooltip = "[RiteCreationWindow.GetTenetCostTooltip( TenetType.Self )]"
 												}
@@ -259,7 +260,7 @@ window = {
 														parentanchor = bottom|hcenter
 														layoutpolicy_horizontal = expanding
 														position = { 0 7 }
-														visible = "[TenetType.IsValid]"
+														visible = "[TenetType.IsVisible]"
 														text = "RITE_CREATION_VIEW_TENET_DIVERGENCE_AND_COST_SHORT"
 														tooltip = "RITE_CREATION_VIEW_TENET_DIVERGENCE_AND_COST_TT"
 													}

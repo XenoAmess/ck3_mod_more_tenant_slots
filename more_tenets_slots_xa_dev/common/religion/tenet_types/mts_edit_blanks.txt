@@ -1,0 +1,901 @@
+﻿# GENERATED FILE - MTS native selector index compatibility
+tenet_mts_edit_blank_001 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_002 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_003 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_004 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_005 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_006 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_007 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_008 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_009 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_010 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_011 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_012 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_013 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_014 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_015 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_016 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_017 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_018 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_019 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_020 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_021 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_022 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_023 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_024 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_025 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_026 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_027 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_028 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_029 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_030 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_031 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_032 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_033 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_034 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_035 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_036 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_037 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_038 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_039 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_040 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_041 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_042 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_043 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_044 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_045 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_046 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_047 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_048 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_049 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_050 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_051 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_052 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_053 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_054 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_055 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_056 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_057 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_058 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_059 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_060 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_061 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_062 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_063 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_064 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_065 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_066 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_067 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_068 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_069 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_070 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_071 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_072 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_073 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_074 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_075 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_076 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_077 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_078 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_079 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_080 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_081 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_082 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_083 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_084 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_085 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_086 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_087 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_088 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_089 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_090 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_091 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_092 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_093 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_094 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_095 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_096 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_097 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_098 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_099 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}
+tenet_mts_edit_blank_100 = {
+	icon = { reference = tenet_peace_of_god }
+	visible = no
+	piety_cost = { value = 0 }
+	divergence_multiplier = 0
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+}

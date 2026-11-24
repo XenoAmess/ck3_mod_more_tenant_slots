@@ -211,10 +211,13 @@ mts_selector_only_metadata_update_trigger = {
 	OR = {
 		any_in_list = { list = added_doctrines count >= 1 }
 		any_in_list = { list = removed_doctrines count >= 1 }
+		any_in_list = { list = added_tenets count >= 1 }
+		any_in_list = { list = removed_tenets count >= 1 }
+		any_in_list = { list = changed_tenet_status count >= 1 }
 	}
-	NOT = { any_in_list = { list = added_tenets count >= 1 } }
-	NOT = { any_in_list = { list = removed_tenets count >= 1 } }
-	NOT = { any_in_list = { list = changed_tenet_status count >= 1 } }
+	NOT = { any_in_list = { list = added_tenets NOT = { mts_is_edit_blank_trigger = yes } } }
+	NOT = { any_in_list = { list = removed_tenets NOT = { mts_is_edit_blank_trigger = yes } } }
+	NOT = { any_in_list = { list = changed_tenet_status NOT = { mts_is_edit_blank_trigger = yes } } }
 	NOT = {
 		any_in_list = {
 			list = added_doctrines
@@ -226,5 +229,110 @@ mts_selector_only_metadata_update_trigger = {
 			list = removed_doctrines
 			NOT = { mts_selector_internal_doctrine_trigger = yes }
 		}
+	}
+}
+
+mts_is_edit_blank_trigger = {
+	OR = {
+		this = tenet:tenet_mts_edit_blank_001
+		this = tenet:tenet_mts_edit_blank_002
+		this = tenet:tenet_mts_edit_blank_003
+		this = tenet:tenet_mts_edit_blank_004
+		this = tenet:tenet_mts_edit_blank_005
+		this = tenet:tenet_mts_edit_blank_006
+		this = tenet:tenet_mts_edit_blank_007
+		this = tenet:tenet_mts_edit_blank_008
+		this = tenet:tenet_mts_edit_blank_009
+		this = tenet:tenet_mts_edit_blank_010
+		this = tenet:tenet_mts_edit_blank_011
+		this = tenet:tenet_mts_edit_blank_012
+		this = tenet:tenet_mts_edit_blank_013
+		this = tenet:tenet_mts_edit_blank_014
+		this = tenet:tenet_mts_edit_blank_015
+		this = tenet:tenet_mts_edit_blank_016
+		this = tenet:tenet_mts_edit_blank_017
+		this = tenet:tenet_mts_edit_blank_018
+		this = tenet:tenet_mts_edit_blank_019
+		this = tenet:tenet_mts_edit_blank_020
+		this = tenet:tenet_mts_edit_blank_021
+		this = tenet:tenet_mts_edit_blank_022
+		this = tenet:tenet_mts_edit_blank_023
+		this = tenet:tenet_mts_edit_blank_024
+		this = tenet:tenet_mts_edit_blank_025
+		this = tenet:tenet_mts_edit_blank_026
+		this = tenet:tenet_mts_edit_blank_027
+		this = tenet:tenet_mts_edit_blank_028
+		this = tenet:tenet_mts_edit_blank_029
+		this = tenet:tenet_mts_edit_blank_030
+		this = tenet:tenet_mts_edit_blank_031
+		this = tenet:tenet_mts_edit_blank_032
+		this = tenet:tenet_mts_edit_blank_033
+		this = tenet:tenet_mts_edit_blank_034
+		this = tenet:tenet_mts_edit_blank_035
+		this = tenet:tenet_mts_edit_blank_036
+		this = tenet:tenet_mts_edit_blank_037
+		this = tenet:tenet_mts_edit_blank_038
+		this = tenet:tenet_mts_edit_blank_039
+		this = tenet:tenet_mts_edit_blank_040
+		this = tenet:tenet_mts_edit_blank_041
+		this = tenet:tenet_mts_edit_blank_042
+		this = tenet:tenet_mts_edit_blank_043
+		this = tenet:tenet_mts_edit_blank_044
+		this = tenet:tenet_mts_edit_blank_045
+		this = tenet:tenet_mts_edit_blank_046
+		this = tenet:tenet_mts_edit_blank_047
+		this = tenet:tenet_mts_edit_blank_048
+		this = tenet:tenet_mts_edit_blank_049
+		this = tenet:tenet_mts_edit_blank_050
+		this = tenet:tenet_mts_edit_blank_051
+		this = tenet:tenet_mts_edit_blank_052
+		this = tenet:tenet_mts_edit_blank_053
+		this = tenet:tenet_mts_edit_blank_054
+		this = tenet:tenet_mts_edit_blank_055
+		this = tenet:tenet_mts_edit_blank_056
+		this = tenet:tenet_mts_edit_blank_057
+		this = tenet:tenet_mts_edit_blank_058
+		this = tenet:tenet_mts_edit_blank_059
+		this = tenet:tenet_mts_edit_blank_060
+		this = tenet:tenet_mts_edit_blank_061
+		this = tenet:tenet_mts_edit_blank_062
+		this = tenet:tenet_mts_edit_blank_063
+		this = tenet:tenet_mts_edit_blank_064
+		this = tenet:tenet_mts_edit_blank_065
+		this = tenet:tenet_mts_edit_blank_066
+		this = tenet:tenet_mts_edit_blank_067
+		this = tenet:tenet_mts_edit_blank_068
+		this = tenet:tenet_mts_edit_blank_069
+		this = tenet:tenet_mts_edit_blank_070
+		this = tenet:tenet_mts_edit_blank_071
+		this = tenet:tenet_mts_edit_blank_072
+		this = tenet:tenet_mts_edit_blank_073
+		this = tenet:tenet_mts_edit_blank_074
+		this = tenet:tenet_mts_edit_blank_075
+		this = tenet:tenet_mts_edit_blank_076
+		this = tenet:tenet_mts_edit_blank_077
+		this = tenet:tenet_mts_edit_blank_078
+		this = tenet:tenet_mts_edit_blank_079
+		this = tenet:tenet_mts_edit_blank_080
+		this = tenet:tenet_mts_edit_blank_081
+		this = tenet:tenet_mts_edit_blank_082
+		this = tenet:tenet_mts_edit_blank_083
+		this = tenet:tenet_mts_edit_blank_084
+		this = tenet:tenet_mts_edit_blank_085
+		this = tenet:tenet_mts_edit_blank_086
+		this = tenet:tenet_mts_edit_blank_087
+		this = tenet:tenet_mts_edit_blank_088
+		this = tenet:tenet_mts_edit_blank_089
+		this = tenet:tenet_mts_edit_blank_090
+		this = tenet:tenet_mts_edit_blank_091
+		this = tenet:tenet_mts_edit_blank_092
+		this = tenet:tenet_mts_edit_blank_093
+		this = tenet:tenet_mts_edit_blank_094
+		this = tenet:tenet_mts_edit_blank_095
+		this = tenet:tenet_mts_edit_blank_096
+		this = tenet:tenet_mts_edit_blank_097
+		this = tenet:tenet_mts_edit_blank_098
+		this = tenet:tenet_mts_edit_blank_099
+		this = tenet:tenet_mts_edit_blank_100
 	}
 }

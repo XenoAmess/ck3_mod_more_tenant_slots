@@ -58,7 +58,10 @@ class SelectorProjection(unittest.TestCase):
         self.assertEqual(set(required), {f"mts_selector_doctrine_{n:03}" for n in range(1, COUNT + 1)})
         self.assertNotIn("OR", source[ready.start:ready.end])
         gui = files["common/scripted_guis/mts_selector.txt"]
-        self.assertIn("scope:mts_rite = { mts_selector_ready_trigger = yes }", gui)
+        ready_gui = next(b for b in blocks(gui) if b.key == "mts_selector_ready_gui")
+        guard = gui[ready_gui.start:ready_gui.end]
+        self.assertIn("mts_selector_ready_trigger = yes", guard)
+        self.assertIn(f"any_rite_tenet = {{ count >= {COUNT} }}", guard)
 
     def test_opening_a_new_rite_keeps_the_native_source_rite_unchanged(self):
         from ck3_text_projection import named_block
@@ -77,6 +80,7 @@ class SelectorProjection(unittest.TestCase):
 
     def test_metadata_filter_wraps_and_preserves_the_entire_native_effect(self):
         from ck3_text_projection import blocks
+        from migrate_to_ck3_1_20 import EDIT_BLANK_FILTER
         native = (GAME / "game/common/on_action/religion_on_actions.txt").read_text(encoding="utf-8-sig")
         patches = changes(native, "common/on_action/religion_on_actions.txt")
         self.assertEqual(len(patches), 1)
@@ -84,7 +88,13 @@ class SelectorProjection(unittest.TestCase):
         effect = next(b for b in blocks(before) if b.key == "effect")
         body = before[effect.opening + 1:effect.end - 1]
         nested = "\n".join("\t" + line if line else line for line in body.split("\n"))
-        self.assertIn(nested, after)
+        restored = re.sub(r"(?m)^([ \t]*)limit = \{ " +
+                          re.escape(EDIT_BLANK_FILTER) + r" \}\n", "", after)
+        restored = restored.replace(" " + EDIT_BLANK_FILTER, "")
+        self.assertIn(nested, restored)
+        self.assertIn("exists = scope:consume_rite_edit_token", after)
+        self.assertIn("mts_remove_edit_blanks_effect = yes", after)
+        self.assertIn(EDIT_BLANK_FILTER, after)
         self.assertEqual(after.count("mts_selector_only_metadata_update_trigger = yes"), 1)
         self.assertIn("send_interface_message", after)
         self.assertIn("head_of_rite", after)

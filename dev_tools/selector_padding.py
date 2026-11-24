@@ -14,10 +14,57 @@ LANGUAGES = ("english", "french", "german", "japanese", "korean", "polish",
              "russian", "simp_chinese", "spanish")
 
 
+EDIT_TENET_LISTS = ("added_tenets", "removed_tenets", "changed_tenet_status")
+
+
+def edit_padding() -> tuple[str, str, str, list[str]]:
+    """Give the native EditRite reader a valid key for each vacant draft slot."""
+    keys = [f"tenet_mts_edit_blank_{slot:03}" for slot in range(1, COUNT + 1)]
+    definitions = HEADER + "".join(
+        f"{key} = {{\n"
+        "\ticon = { reference = tenet_peace_of_god }\n"
+        "\tvisible = no\n"
+        "\tpiety_cost = { value = 0 }\n"
+        "\tdivergence_multiplier = 0\n"
+        "\tis_shown = { always = no }\n"
+        "\tcan_pick = { always = no }\n"
+        "\tcan_pick_as_personal_tenet = { always = no }\n"
+        "}\n"
+        for key in keys
+    )
+    fill = "".join(
+        "\tif = {\n"
+        f"\t\tlimit = {{ NOT = {{ any_rite_tenet = {{ count >= {COUNT} }} }} "
+        f"NOT = {{ rite_has_tenet = {key} }} }}\n"
+        f"\t\tadd_rite_tenet = tenet:{key}\n"
+        "\t}\n"
+        for key in keys
+    )
+    cleanup = "".join(
+        f"\tif = {{ limit = {{ rite_has_tenet = {key} }} "
+        f"remove_rite_tenet = tenet:{key} }}\n"
+        for key in keys
+    )
+    effects = (
+        "\nmts_fill_edit_blanks_effect = {\n" + fill + "}\n"
+        "\nmts_remove_edit_blanks_effect = {\n" + cleanup + "}\n"
+    )
+    triggers = (
+        "\nmts_is_edit_blank_trigger = {\n\tOR = {\n"
+        + "".join(f"\t\tthis = tenet:{key}\n" for key in keys)
+        + "\t}\n}\n"
+    )
+    localization = [
+        f' {key}_{suffix}:0 ""\n' for key in keys for suffix in ("name", "desc")
+    ]
+    return definitions, effects, triggers, localization
+
+
 def generated_files() -> dict[str, str]:
     files = {}
     effects = []
-    localization = []
+    definitions, edit_effects, edit_triggers, localization = edit_padding()
+    files["common/religion/tenet_types/mts_edit_blanks.txt"] = definitions
     for shard in range(10):
         groups, doctrines = [], []
         for slot in range(shard * 10 + 1, shard * 10 + 11):
@@ -41,14 +88,17 @@ def generated_files() -> dict[str, str]:
         files[f"common/religion/doctrine_types/mts_selector_{shard:02}.txt"] = (
             HEADER + "\n".join(doctrines))
     files["common/scripted_effects/mts_selector.txt"] = (
-        HEADER + "mts_prepare_selector_rite_effect = {\n" + "".join(effects) + "}\n")
+        HEADER + "mts_prepare_selector_rite_effect = {\n" + "".join(effects) + "}\n" + edit_effects)
     files["common/scripted_guis/mts_selector.txt"] = HEADER + """mts_prepare_selector_gui = {
     scope = character
     saved_scopes = { mts_rite }
     effect = {
         if = {
             limit = { is_ai = no exists = scope:mts_rite }
-            scope:mts_rite = { mts_prepare_selector_rite_effect = yes }
+            scope:mts_rite = {
+                mts_prepare_selector_rite_effect = yes
+                mts_fill_edit_blanks_effect = yes
+            }
         }
     }
 }
@@ -59,7 +109,27 @@ mts_selector_ready_gui = {
     is_shown = {
         is_ai = no
         exists = scope:mts_rite
-        scope:mts_rite = { mts_selector_ready_trigger = yes }
+        scope:mts_rite = {
+            mts_selector_ready_trigger = yes
+            any_rite_tenet = { count >= 100 }
+        }
+    }
+}
+
+mts_cleanup_edit_blanks_gui = {
+    scope = character
+    saved_scopes = { mts_rite }
+    effect = {
+        if = {
+            limit = {
+                is_ai = no
+                exists = scope:mts_rite
+                scope:mts_rite = {
+                    any_rite_tenet = { mts_is_edit_blank_trigger = yes }
+                }
+            }
+            scope:mts_rite = { mts_remove_edit_blanks_effect = yes }
+        }
     }
 }
 """
@@ -74,14 +144,16 @@ mts_selector_ready_gui = {
         "\tOR = {\n"
         "\t\tany_in_list = { list = added_doctrines count >= 1 }\n"
         "\t\tany_in_list = { list = removed_doctrines count >= 1 }\n"
+        + "".join(f"\t\tany_in_list = {{ list = {name} count >= 1 }}\n"
+                  for name in EDIT_TENET_LISTS) +
         "\t}\n"
-        "\tNOT = { any_in_list = { list = added_tenets count >= 1 } }\n"
-        "\tNOT = { any_in_list = { list = removed_tenets count >= 1 } }\n"
-        "\tNOT = { any_in_list = { list = changed_tenet_status count >= 1 } }\n"
+        + "".join(f"\tNOT = {{ any_in_list = {{ list = {name} "
+                  "NOT = { mts_is_edit_blank_trigger = yes } } }\n"
+                  for name in EDIT_TENET_LISTS) +
         "\tNOT = {\n\t\tany_in_list = {\n\t\t\tlist = added_doctrines\n"
         "\t\t\tNOT = { mts_selector_internal_doctrine_trigger = yes }\n\t\t}\n\t}\n"
         "\tNOT = {\n\t\tany_in_list = {\n\t\t\tlist = removed_doctrines\n"
-        "\t\t\tNOT = { mts_selector_internal_doctrine_trigger = yes }\n\t\t}\n\t}\n}\n")
+        "\t\t\tNOT = { mts_selector_internal_doctrine_trigger = yes }\n\t\t}\n\t}\n}\n" + edit_triggers)
     for language in LANGUAGES:
         files[f"localization/{language}/religion/mts_selector_l_{language}.yml"] = (
             f"l_{language}:\n" + HEADER + "".join(localization))
@@ -100,4 +172,4 @@ def generate_padding(mod: Path, check: bool = False) -> dict:
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(content)
     return {"doctrine_count": COUNT, "group_count": COUNT,
-            "tenet_placeholders": 0, "files": len(files), "live_verified": False}
+            "temporary_edit_tenets": COUNT, "files": len(files), "live_verified": False}

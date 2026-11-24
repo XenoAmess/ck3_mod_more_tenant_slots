@@ -401,3 +401,509 @@ mts_prepare_selector_rite_effect = {
 		change_rite_doctrine = mts_selector_doctrine_100
 	}
 }
+
+mts_fill_edit_blanks_effect = {
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_001 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_001
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_002 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_002
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_003 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_003
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_004 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_004
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_005 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_005
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_006 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_006
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_007 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_007
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_008 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_008
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_009 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_009
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_010 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_010
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_011 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_011
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_012 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_012
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_013 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_013
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_014 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_014
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_015 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_015
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_016 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_016
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_017 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_017
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_018 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_018
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_019 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_019
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_020 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_020
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_021 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_021
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_022 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_022
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_023 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_023
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_024 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_024
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_025 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_025
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_026 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_026
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_027 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_027
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_028 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_028
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_029 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_029
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_030 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_030
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_031 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_031
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_032 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_032
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_033 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_033
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_034 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_034
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_035 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_035
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_036 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_036
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_037 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_037
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_038 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_038
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_039 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_039
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_040 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_040
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_041 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_041
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_042 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_042
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_043 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_043
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_044 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_044
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_045 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_045
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_046 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_046
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_047 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_047
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_048 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_048
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_049 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_049
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_050 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_050
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_051 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_051
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_052 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_052
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_053 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_053
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_054 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_054
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_055 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_055
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_056 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_056
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_057 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_057
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_058 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_058
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_059 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_059
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_060 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_060
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_061 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_061
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_062 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_062
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_063 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_063
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_064 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_064
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_065 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_065
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_066 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_066
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_067 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_067
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_068 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_068
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_069 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_069
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_070 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_070
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_071 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_071
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_072 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_072
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_073 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_073
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_074 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_074
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_075 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_075
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_076 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_076
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_077 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_077
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_078 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_078
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_079 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_079
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_080 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_080
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_081 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_081
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_082 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_082
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_083 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_083
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_084 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_084
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_085 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_085
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_086 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_086
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_087 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_087
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_088 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_088
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_089 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_089
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_090 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_090
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_091 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_091
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_092 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_092
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_093 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_093
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_094 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_094
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_095 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_095
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_096 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_096
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_097 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_097
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_098 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_098
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_099 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_099
+	}
+	if = {
+		limit = { NOT = { any_rite_tenet = { count >= 100 } } NOT = { rite_has_tenet = tenet_mts_edit_blank_100 } }
+		add_rite_tenet = tenet:tenet_mts_edit_blank_100
+	}
+}
+
+mts_remove_edit_blanks_effect = {
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_001 } remove_rite_tenet = tenet:tenet_mts_edit_blank_001 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_002 } remove_rite_tenet = tenet:tenet_mts_edit_blank_002 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_003 } remove_rite_tenet = tenet:tenet_mts_edit_blank_003 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_004 } remove_rite_tenet = tenet:tenet_mts_edit_blank_004 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_005 } remove_rite_tenet = tenet:tenet_mts_edit_blank_005 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_006 } remove_rite_tenet = tenet:tenet_mts_edit_blank_006 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_007 } remove_rite_tenet = tenet:tenet_mts_edit_blank_007 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_008 } remove_rite_tenet = tenet:tenet_mts_edit_blank_008 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_009 } remove_rite_tenet = tenet:tenet_mts_edit_blank_009 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_010 } remove_rite_tenet = tenet:tenet_mts_edit_blank_010 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_011 } remove_rite_tenet = tenet:tenet_mts_edit_blank_011 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_012 } remove_rite_tenet = tenet:tenet_mts_edit_blank_012 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_013 } remove_rite_tenet = tenet:tenet_mts_edit_blank_013 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_014 } remove_rite_tenet = tenet:tenet_mts_edit_blank_014 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_015 } remove_rite_tenet = tenet:tenet_mts_edit_blank_015 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_016 } remove_rite_tenet = tenet:tenet_mts_edit_blank_016 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_017 } remove_rite_tenet = tenet:tenet_mts_edit_blank_017 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_018 } remove_rite_tenet = tenet:tenet_mts_edit_blank_018 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_019 } remove_rite_tenet = tenet:tenet_mts_edit_blank_019 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_020 } remove_rite_tenet = tenet:tenet_mts_edit_blank_020 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_021 } remove_rite_tenet = tenet:tenet_mts_edit_blank_021 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_022 } remove_rite_tenet = tenet:tenet_mts_edit_blank_022 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_023 } remove_rite_tenet = tenet:tenet_mts_edit_blank_023 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_024 } remove_rite_tenet = tenet:tenet_mts_edit_blank_024 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_025 } remove_rite_tenet = tenet:tenet_mts_edit_blank_025 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_026 } remove_rite_tenet = tenet:tenet_mts_edit_blank_026 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_027 } remove_rite_tenet = tenet:tenet_mts_edit_blank_027 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_028 } remove_rite_tenet = tenet:tenet_mts_edit_blank_028 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_029 } remove_rite_tenet = tenet:tenet_mts_edit_blank_029 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_030 } remove_rite_tenet = tenet:tenet_mts_edit_blank_030 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_031 } remove_rite_tenet = tenet:tenet_mts_edit_blank_031 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_032 } remove_rite_tenet = tenet:tenet_mts_edit_blank_032 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_033 } remove_rite_tenet = tenet:tenet_mts_edit_blank_033 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_034 } remove_rite_tenet = tenet:tenet_mts_edit_blank_034 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_035 } remove_rite_tenet = tenet:tenet_mts_edit_blank_035 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_036 } remove_rite_tenet = tenet:tenet_mts_edit_blank_036 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_037 } remove_rite_tenet = tenet:tenet_mts_edit_blank_037 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_038 } remove_rite_tenet = tenet:tenet_mts_edit_blank_038 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_039 } remove_rite_tenet = tenet:tenet_mts_edit_blank_039 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_040 } remove_rite_tenet = tenet:tenet_mts_edit_blank_040 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_041 } remove_rite_tenet = tenet:tenet_mts_edit_blank_041 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_042 } remove_rite_tenet = tenet:tenet_mts_edit_blank_042 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_043 } remove_rite_tenet = tenet:tenet_mts_edit_blank_043 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_044 } remove_rite_tenet = tenet:tenet_mts_edit_blank_044 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_045 } remove_rite_tenet = tenet:tenet_mts_edit_blank_045 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_046 } remove_rite_tenet = tenet:tenet_mts_edit_blank_046 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_047 } remove_rite_tenet = tenet:tenet_mts_edit_blank_047 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_048 } remove_rite_tenet = tenet:tenet_mts_edit_blank_048 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_049 } remove_rite_tenet = tenet:tenet_mts_edit_blank_049 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_050 } remove_rite_tenet = tenet:tenet_mts_edit_blank_050 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_051 } remove_rite_tenet = tenet:tenet_mts_edit_blank_051 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_052 } remove_rite_tenet = tenet:tenet_mts_edit_blank_052 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_053 } remove_rite_tenet = tenet:tenet_mts_edit_blank_053 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_054 } remove_rite_tenet = tenet:tenet_mts_edit_blank_054 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_055 } remove_rite_tenet = tenet:tenet_mts_edit_blank_055 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_056 } remove_rite_tenet = tenet:tenet_mts_edit_blank_056 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_057 } remove_rite_tenet = tenet:tenet_mts_edit_blank_057 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_058 } remove_rite_tenet = tenet:tenet_mts_edit_blank_058 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_059 } remove_rite_tenet = tenet:tenet_mts_edit_blank_059 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_060 } remove_rite_tenet = tenet:tenet_mts_edit_blank_060 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_061 } remove_rite_tenet = tenet:tenet_mts_edit_blank_061 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_062 } remove_rite_tenet = tenet:tenet_mts_edit_blank_062 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_063 } remove_rite_tenet = tenet:tenet_mts_edit_blank_063 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_064 } remove_rite_tenet = tenet:tenet_mts_edit_blank_064 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_065 } remove_rite_tenet = tenet:tenet_mts_edit_blank_065 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_066 } remove_rite_tenet = tenet:tenet_mts_edit_blank_066 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_067 } remove_rite_tenet = tenet:tenet_mts_edit_blank_067 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_068 } remove_rite_tenet = tenet:tenet_mts_edit_blank_068 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_069 } remove_rite_tenet = tenet:tenet_mts_edit_blank_069 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_070 } remove_rite_tenet = tenet:tenet_mts_edit_blank_070 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_071 } remove_rite_tenet = tenet:tenet_mts_edit_blank_071 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_072 } remove_rite_tenet = tenet:tenet_mts_edit_blank_072 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_073 } remove_rite_tenet = tenet:tenet_mts_edit_blank_073 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_074 } remove_rite_tenet = tenet:tenet_mts_edit_blank_074 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_075 } remove_rite_tenet = tenet:tenet_mts_edit_blank_075 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_076 } remove_rite_tenet = tenet:tenet_mts_edit_blank_076 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_077 } remove_rite_tenet = tenet:tenet_mts_edit_blank_077 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_078 } remove_rite_tenet = tenet:tenet_mts_edit_blank_078 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_079 } remove_rite_tenet = tenet:tenet_mts_edit_blank_079 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_080 } remove_rite_tenet = tenet:tenet_mts_edit_blank_080 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_081 } remove_rite_tenet = tenet:tenet_mts_edit_blank_081 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_082 } remove_rite_tenet = tenet:tenet_mts_edit_blank_082 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_083 } remove_rite_tenet = tenet:tenet_mts_edit_blank_083 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_084 } remove_rite_tenet = tenet:tenet_mts_edit_blank_084 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_085 } remove_rite_tenet = tenet:tenet_mts_edit_blank_085 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_086 } remove_rite_tenet = tenet:tenet_mts_edit_blank_086 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_087 } remove_rite_tenet = tenet:tenet_mts_edit_blank_087 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_088 } remove_rite_tenet = tenet:tenet_mts_edit_blank_088 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_089 } remove_rite_tenet = tenet:tenet_mts_edit_blank_089 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_090 } remove_rite_tenet = tenet:tenet_mts_edit_blank_090 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_091 } remove_rite_tenet = tenet:tenet_mts_edit_blank_091 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_092 } remove_rite_tenet = tenet:tenet_mts_edit_blank_092 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_093 } remove_rite_tenet = tenet:tenet_mts_edit_blank_093 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_094 } remove_rite_tenet = tenet:tenet_mts_edit_blank_094 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_095 } remove_rite_tenet = tenet:tenet_mts_edit_blank_095 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_096 } remove_rite_tenet = tenet:tenet_mts_edit_blank_096 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_097 } remove_rite_tenet = tenet:tenet_mts_edit_blank_097 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_098 } remove_rite_tenet = tenet:tenet_mts_edit_blank_098 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_099 } remove_rite_tenet = tenet:tenet_mts_edit_blank_099 }
+	if = { limit = { rite_has_tenet = tenet_mts_edit_blank_100 } remove_rite_tenet = tenet:tenet_mts_edit_blank_100 }
+}

@@ -5,7 +5,10 @@ mts_prepare_selector_gui = {
     effect = {
         if = {
             limit = { is_ai = no exists = scope:mts_rite }
-            scope:mts_rite = { mts_prepare_selector_rite_effect = yes }
+            scope:mts_rite = {
+                mts_prepare_selector_rite_effect = yes
+                mts_fill_edit_blanks_effect = yes
+            }
         }
     }
 }
@@ -16,6 +19,26 @@ mts_selector_ready_gui = {
     is_shown = {
         is_ai = no
         exists = scope:mts_rite
-        scope:mts_rite = { mts_selector_ready_trigger = yes }
+        scope:mts_rite = {
+            mts_selector_ready_trigger = yes
+            any_rite_tenet = { count >= 100 }
+        }
+    }
+}
+
+mts_cleanup_edit_blanks_gui = {
+    scope = character
+    saved_scopes = { mts_rite }
+    effect = {
+        if = {
+            limit = {
+                is_ai = no
+                exists = scope:mts_rite
+                scope:mts_rite = {
+                    any_rite_tenet = { mts_is_edit_blank_trigger = yes }
+                }
+            }
+            scope:mts_rite = { mts_remove_edit_blanks_effect = yes }
+        }
     }
 }

@@ -5,6 +5,10 @@ on_rite_updated = {
 
 	effect = {
 		if = {
+			limit = { exists = scope:consume_rite_edit_token }
+			mts_remove_edit_blanks_effect = yes
+		}
+		if = {
 			limit = {
 				NOT = { mts_selector_only_metadata_update_trigger = yes }
 			}
@@ -37,9 +41,10 @@ on_rite_updated = {
 
 				# The message icon slot must never be left unset, hence the fall-through to the rite itself
 				if = {
-					limit = { any_in_list = { list = added_tenets count >= 1 } }
+					limit = { any_in_list = { list = added_tenets count >= 1 NOT = { mts_is_edit_blank_trigger = yes } } }
 					every_in_list = {
 						list = added_tenets
+						limit = { NOT = { mts_is_edit_blank_trigger = yes } }
 						save_scope_as = rite_change_icon
 					}
 				}
@@ -51,9 +56,10 @@ on_rite_updated = {
 					}
 				}
 				else_if = {
-					limit = { any_in_list = { list = removed_tenets count >= 1 } }
+					limit = { any_in_list = { list = removed_tenets count >= 1 NOT = { mts_is_edit_blank_trigger = yes } } }
 					every_in_list = {
 						list = removed_tenets
+						limit = { NOT = { mts_is_edit_blank_trigger = yes } }
 						save_scope_as = rite_change_icon
 					}
 				}
@@ -65,9 +71,10 @@ on_rite_updated = {
 					}
 				}
 				else_if = {
-					limit = { any_in_list = { list = changed_tenet_status count >= 1 } }
+					limit = { any_in_list = { list = changed_tenet_status count >= 1 NOT = { mts_is_edit_blank_trigger = yes } } }
 					every_in_list = {
 						list = changed_tenet_status
+						limit = { NOT = { mts_is_edit_blank_trigger = yes } }
 						save_scope_as = rite_change_icon
 					}
 				}
@@ -101,14 +108,17 @@ on_rite_updated = {
 							}
 							every_in_list = {
 								list = removed_tenets
+								limit = { NOT = { mts_is_edit_blank_trigger = yes } }
 								root = { remove_rite_tenet = prev }
 							}
 							every_in_list = {
 								list = added_tenets
+								limit = { NOT = { mts_is_edit_blank_trigger = yes } }
 								root = { add_rite_tenet = prev }
 							}
 							every_in_list = {
 								list = changed_tenet_status
+								limit = { NOT = { mts_is_edit_blank_trigger = yes } }
 								save_temporary_scope_as = tenet
 								root = {
 									if = {
