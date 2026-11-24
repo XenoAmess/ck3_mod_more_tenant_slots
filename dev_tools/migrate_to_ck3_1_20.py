@@ -106,6 +106,17 @@ def changes(native: str, relative: str) -> list[tuple[str, str]]:
             indent + '\ton_start = "' + opening + '"\n' +
             indent + '}', 1)
         patches.append((before, after))
+    # Switching rites cancels the request before the selected scope changes.
+    # The queued preparation still applies to the original rite.
+    selection = re.compile(
+        r'\n([ \t]*)(onclick = "\[FaithWindow\.SetSelectedRite\( .*? \)\]")'
+    )
+    selections = list(selection.finditer(native))
+    if not selections:
+        raise ValueError("native rite selection actions are missing")
+    for match in selections:
+        clear = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
+        patches.append((match[0], f'\n{match[1]}onclick = "{clear}"{match[0]}'))
     # A cancelled request must not open an editor when the faith window is
     # opened later. This is a local GUI flag, never a saved character variable.
     hide = 'name = _hide\n\t\tposition = { -60 0 }'

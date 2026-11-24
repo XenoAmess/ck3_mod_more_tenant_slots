@@ -303,6 +303,7 @@ window = {
 								parentanchor = center
 								size = { 40 40 }
 
+								onclick = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
 								onclick = "[FaithWindow.SetSelectedRite( Faith.GetMainRite.Self )]"
 								onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
 
@@ -2087,6 +2088,7 @@ types FaithWindow
 						datacontext = "[HolySite.GetController.GetRite]"
 						size = { 50 50 }
 
+						onclick = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
 						onclick = "[FaithWindow.SetSelectedRite( Rite.Self )]"
 						onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
 					}
@@ -4353,6 +4355,7 @@ types FaithWindow
 												using = Background_Area
 											}
 
+											onclick = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
 											onclick = "[FaithWindow.SetSelectedRite( Rite.Self )]"
 											onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
 
@@ -4988,6 +4991,7 @@ types FaithWindow
 													alpha = 0.2
 												}
 
+												onclick = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
 												onclick = "[FaithWindow.SetSelectedRite( Rite.Self )]"
 												onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
 
@@ -5256,6 +5260,7 @@ types FaithWindow
 						button = {
 							size = { 40 40 }
 
+							onclick = "[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]"
 							onclick = "[FaithWindow.SetSelectedRite( Faith.GetMainRite.Self )]"
 							onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
 

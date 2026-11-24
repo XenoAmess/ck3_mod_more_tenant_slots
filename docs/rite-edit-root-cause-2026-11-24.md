@@ -92,3 +92,21 @@ R0008 运行目录 ID 为 `pc-20260924rtuf-f11af23c08--more-tenets-slots--R0008`
 归属决定：具体时序修复、产品回归和本报告归 MTS 项目。通用的显式 DLC 排除受管准备能力已富化到框架提交 `7aa155ad7`（41 项离线 GUI 测试及生产模块类型检查通过）。本次方法补充框架已有 ScriptedGui 排队刷新知识：使用可观察的完整就绪条件，不把固定等待时间或“未闪退”作为事务屏障。本次外部诊断脚本仍为精确构建的定位实验，暂不上收为正式 observer，因为缺少主线程资格；没有新增可用于业务判定的通用读取能力。产品源码、第三方素材、私有存档和转储不搬入框架。
 
 通用方法已另行提交并推送框架 `6a610ebc472e75b637753c3daa62191b0dac2546`，补充[语法与引擎坑](https://github.com/XenoAmess/ck3_eternal_recurrence/blob/6a610ebc472e75b637753c3daa62191b0dac2546/docs/grammar/pitfalls.md)，并记录当日与当周进度；该文档包未新增游戏运行或运行时资格。R0009 公共 `verify` 实际退出 2 / `INCOMPLETE`，进程与闭场为 true，完整业务、发布及 Native 资格为 false；此结果保持原样。
+
+## 8. Follow-up: cancel pending edit when selecting another rite
+
+The readiness check uses the currently selected rite. Previously a pending
+request could therefore open a different rite if the user changed selection
+before the GUI state consumed the request and the new rite was already ready.
+All five native rite-selection buttons in the projected faith GUI now clear the
+local flag before changing the selection. A preparation command already queued
+for the original rite can still finish on that rite.
+
+The exact-build reversible projection, five selector checks, nine-language
+validation and 48-file release allowlist passed. This product-specific change
+belongs in MTS. The selection-switch path has static coverage. Live confirmation,
+piety deduction, old-tenet removal, the rite_edit parse error, and save/cold-load
+remain open. The native removal effect takes an explicit tenet, so an automatic
+cleanup would require evidence identifying the intended old key even when the
+native edit delta is incomplete. The existing R0009 receipt remains limited to
+opening, choosing and cancelling. No candidate was published.

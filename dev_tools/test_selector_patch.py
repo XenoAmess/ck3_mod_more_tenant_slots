@@ -30,6 +30,23 @@ class SelectorProjection(unittest.TestCase):
         self.assertIn("name = _hide\n\t\tposition = { -60 0 }\n\t\ton_start = "
                       "\"[GetVariableSystem.Clear( 'mts_edit_rite_pending' )]\"", projected)
 
+    def test_switching_rites_cancels_pending_edit_before_changing_selection(self):
+        native = (GAME / "game/gui/window_faith.gui").read_text(encoding="utf-8-sig")
+        projected = native
+        for before, after in changes(native, "gui/window_faith.gui"):
+            projected = projected.replace(before, after, 1)
+        selection = r'(?m)^([ \t]*)onclick = "\[FaithWindow\.SetSelectedRite[^\n]+'
+        native_actions = list(re.finditer(selection, native))
+        actions = list(re.finditer(selection, projected))
+        self.assertTrue(native_actions)
+        self.assertEqual([m[0] for m in native_actions], [m[0] for m in actions])
+        for action in actions:
+            preceding = projected[:action.start()].splitlines()[-1]
+            self.assertEqual(
+                preceding,
+                action[1] + 'onclick = "[GetVariableSystem.Clear( \'mts_edit_rite_pending\' )]"',
+            )
+
     def test_readiness_requires_every_metadata_doctrine(self):
         from ck3_text_projection import blocks
         from selector_padding import COUNT, generated_files
