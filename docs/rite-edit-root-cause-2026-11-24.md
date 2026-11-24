@@ -134,3 +134,35 @@ The edit reached confirmation, payment and a physical save. Replacement
 failed. Cold load and other governments were not tested in this run.
 This reproduces the release blocker with the timing fix loaded. The
 three-slot control remains a diagnostic and the candidate remains unpublished.
+
+## 10. Sparse versus full draft controls
+
+R0011 used the same pinned Robert input as R0010, with a local diagnostic
+fixture setting the native cap and council mirror to four. With the fourth
+slot empty, replacing Apostolic Succession with Peace of God charged 325
+piety, logged one rite_edit parse error and left both as core in
+`mts-cap4-mixed.ck3` (SHA256
+`300d90abeb3f7302a6e63f6aa8dbcaf8d2875ed50cbd13e05ce9d68417765ca1`).
+After reloading the original input in the same process, the same replacement
+plus Divine Liturgy in the fourth slot charged 650 piety. The old core was
+removed, the save contained the four intended keys, and the rite_edit error
+count stayed at one. `mts-cap4-full.ck3` SHA256 is
+`fb557761eab8706e22668b5ef33174474efa83ff2698fcbd73432ca0174d7fc4`.
+Both operations stayed on the same paused date.
+
+R0012 retained the 100-slot cap and used an isolated fixture to add 97
+distinct zero-cost diagnostic tenets to rite 150 before opening the editor.
+Replacing the same first core charged 325 piety with no rite_edit parse
+error. The output contained Peace of God, Philanthropia, Communion and all
+97 diagnostic placeholders, with Apostolic Succession absent.
+`mts-full-a09.ck3` SHA256 is
+`bcbec194c4abeecfee910d8e5333b1373b12135c9413f55e998bc3f592ef2174`.
+The stripped-down fixture produced missing texture and localization
+diagnostics. The placeholder keys remained in the physical save, so the
+fixture cannot serve as the release fix.
+
+Both original processes exited with return code 0 via the game menu.
+These MTS-specific controls isolate the remaining failure to editing a
+draft with vacant slots under the tested conditions and preserve all
+previous results. The fixture sources, images, logs and saves remain in
+the local artifact directory.
