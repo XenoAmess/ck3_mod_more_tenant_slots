@@ -95,6 +95,7 @@ def generated_files() -> dict[str, str]:
     effect = {
         if = {
             limit = { is_ai = no exists = scope:mts_rite }
+            set_variable = { name = mts_rite_edit_source value = scope:mts_rite }
             scope:mts_rite = {
                 mts_prepare_selector_rite_effect = yes
                 mts_fill_edit_blanks_effect = yes
@@ -125,11 +126,36 @@ mts_cleanup_edit_blanks_gui = {
                 is_ai = no
                 exists = scope:mts_rite
                 scope:mts_should_cleanup = yes
-                scope:mts_rite = {
-                    any_rite_tenet = { mts_is_edit_blank_trigger = yes }
-                }
             }
             scope:mts_rite = { mts_remove_edit_blanks_effect = yes }
+            if = {
+                limit = { exists = var:mts_rite_edit_source scope:mts_rite = var:mts_rite_edit_source }
+                remove_variable = mts_rite_edit_source
+            }
+        }
+    }
+}
+
+mts_recover_edit_blanks_gui = {
+    scope = character
+    is_shown = {
+        is_ai = no
+        OR = {
+            has_variable = mts_rite_edit_source
+            rite ?= { any_rite_tenet = { mts_is_edit_blank_trigger = yes } }
+        }
+    }
+    effect = {
+        if = {
+            limit = { is_ai = no }
+            if = {
+                limit = { has_variable = mts_rite_edit_source }
+                var:mts_rite_edit_source ?= { mts_remove_edit_blanks_effect = yes }
+                remove_variable = mts_rite_edit_source
+            }
+            else = {
+                rite ?= { mts_remove_edit_blanks_effect = yes }
+            }
         }
     }
 }

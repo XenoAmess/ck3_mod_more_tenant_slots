@@ -71,6 +71,19 @@ def cancel_pending_edit(indent: str) -> str:
 
 
 def changes(native: str, relative: str) -> list[tuple[str, str]]:
+    if relative == "gui/hud.gui":
+        anchor = 'name = "meta_info"\n\tvisible = "[IsDefaultGUIMode]"'
+        scope = "GuiScope.SetRoot( GetPlayer.MakeScope ).End"
+        recovery = (
+            '\n\tstate = {\n\t\tname = "mts_recover_interrupted_rite_edit"'
+            '\n\t\ttrigger_when = "[And3( Not( IsGameViewOpen( \'rite_creation\' ) ), '
+            f"Not( {PENDING_EDIT} ), "
+            f"GetScriptedGui('mts_recover_edit_blanks_gui').IsShown( {scope} ) )]"
+            '"'
+            f'\n\t\ton_start = "[GetScriptedGui(\'mts_recover_edit_blanks_gui\').Execute( {scope} )]"'
+            '\n\t}'
+        )
+        return [(anchor, anchor + recovery)]
     if relative == "gui/window_rite_creation.gui":
         grid, scroll = scroll_grid(native, "hbox", "tenets_grid", 300, creation=True)
         visible_card = "[Or( Not( TenetType.IsValid ), TenetType.IsVisible )]"
@@ -195,7 +208,7 @@ def generate(framework: Path, game: Path, check: bool = False) -> dict:
     results = {}
     from selector_padding import generate_padding
     results["selector_padding"] = generate_padding(MOD, check)
-    for relative in ("gui/window_faith.gui", "gui/window_rite_creation.gui",
+    for relative in ("gui/window_faith.gui", "gui/window_rite_creation.gui", "gui/hud.gui",
                      "common/on_action/religion_on_actions.txt"):
         native = (game / "game" / relative).read_text(encoding="utf-8-sig")
         patches = changes(native, relative)

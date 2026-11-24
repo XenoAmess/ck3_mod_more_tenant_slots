@@ -22,7 +22,7 @@ RELEASE_FILES = (
     "descriptor.mod", "thumbnail.png",
     "common/defines/more_tenets_slots.txt",
     "common/script_values/zz_mts_core_tenets_cap.txt",
-    "gui/window_faith.gui", "gui/window_rite_creation.gui",
+    "gui/window_faith.gui", "gui/window_rite_creation.gui", "gui/hud.gui",
     "common/on_action/zz_mts_selector_on_action.txt",
 ) + tuple(f"localization/{language}/religion/MTS_religion_confucianism_l_{language}.yml"
           for language in LANGUAGES) + tuple(sorted(generated_files()))

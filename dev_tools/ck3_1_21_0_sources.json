@@ -42,6 +42,10 @@
     "common/religion/doctrine_category_types/00_doctrine_category_types.txt": {
       "sha256": "fa6778f16254e5402c93a66d929002361e6de7ca77682527e57ace62e82ba507",
       "normalized_sha256": "21a1a9a6d82493b614de7adf6cdf4fe15e692b0625c4647ca87060135bf691d0"
+    },
+    "gui/hud.gui": {
+      "sha256": "35bb7ceffe17222a7de8796cec5a676349e2294de406df261f623ce48d112f01",
+      "normalized_sha256": "17619bead9d8bf612a09c41199af39340e2bf7ed1d1057c6e7234600be30cc0d"
     }
   }
 }

@@ -206,3 +206,24 @@ captured log. Output SHA256 was
 The editor still rendered the filler icon and tooltip. The follow-up
 projection presents those rows as empty controls and scopes pending
 cleanup to the pending request while preserving the normal edit cleanup.
+
+R0019 cold-loaded R0018's save in an independent process with no warm
+cache. It retained Robert's four cores and 93777 piety. A debug-only actor
+switch selected Pope Alexander II. His Roman rite opened with an actionable
+plus in slot 100. Native popularity conditions still blocked the selected
+low-popularity tenet. After cancelling, a new save retained the original
+three cores and the original ordinary doctrine. After a labelled 10000 piety
+setup, the native Roman rite gender change charged 2190 (11000 to 8810),
+physically saved Equal and retained three real cores without internal ones.
+The captured error log had the same two baseline diagnostics. The process
+advanced to 1066.10.7 and exited normally.
+
+A console save with the editor deliberately left open reproduced the
+interruption hazard on the actual product. The save contained 97 internal
+cores and three real Roman rite cores, SHA256
+`c24e91128c0293b39a234ed974f32411c21312ead908f00aea1a45a936e7169f`.
+The candidate now records the prepared rite on its player and uses a
+guarded idle HUD state to clear interrupted edits on the exact recorded
+rite. For older candidate saves it can recover the current player's rite.
+This adds one reversible HUD projection to the allowlist. That recovery
+requires a new cold run against the actual interrupted input.

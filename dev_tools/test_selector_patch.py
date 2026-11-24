@@ -83,6 +83,20 @@ class SelectorProjection(unittest.TestCase):
         edit = named_block(projected, "button_standard", "edit_rite")
         self.assertIn("mts_prepare_selector_gui", projected[edit.start:edit.end])
 
+    def test_hud_recovery_runs_only_outside_pending_and_open_edits(self):
+        from selector_padding import generated_files
+        native = (GAME / "game/gui/hud.gui").read_text(encoding="utf-8-sig")
+        [(before, after)] = changes(native, "gui/hud.gui")
+        self.assertEqual(native.count(before), 1)
+        self.assertIn("Not( IsGameViewOpen( 'rite_creation' ) )", after)
+        self.assertIn("Not( GetVariableSystem.Exists( 'mts_edit_rite_pending' ) )", after)
+        self.assertIn("mts_recover_edit_blanks_gui').IsShown", after)
+        self.assertIn("mts_recover_edit_blanks_gui').Execute", after)
+        gui = generated_files()["common/scripted_guis/mts_selector.txt"]
+        self.assertIn("name = mts_rite_edit_source value = scope:mts_rite", gui)
+        self.assertIn("var:mts_rite_edit_source ?= { mts_remove_edit_blanks_effect = yes }",
+                      gui)
+
     def test_metadata_filter_wraps_and_preserves_the_entire_native_effect(self):
         from ck3_text_projection import blocks
         from migrate_to_ck3_1_20 import EDIT_BLANK_FILTER
