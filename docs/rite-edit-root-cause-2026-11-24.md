@@ -110,3 +110,27 @@ remain open. The native removal effect takes an explicit tenet, so an automatic
 cleanup would require evidence identifying the intended old key even when the
 native edit delta is incomplete. The existing R0009 receipt remains limited to
 opening, choosing and cancelling. No candidate was published.
+
+## 9. R0010 live confirmation reproduces the remaining failure
+
+`confirm-a07` used candidate `3cebfe65b81e8c0bf9d1acd0e666ef3ce7aad118`,
+CK3 1.21.0.3, Simplified Chinese, Steam offline and only MTS. Robert loaded
+the pinned 1066.9.26 save and edited rite 150. Replacing Apostolic Succession
+with Peace of God showed a draft containing Peace of God in slot one.
+Native confirmation charged the quoted 325 piety (94817 to 94492) at the same
+paused date. The resulting save contained both tenets as core, alongside
+Philanthropia and Communion. It retained the 100 compatibility doctrines.
+The original input copy retained its three core tenets and pinned digest.
+
+- Output `mts-confirm-a07.ck3`: 12836613 bytes, SHA256 `db9fdb5d355fbd7e79b3667f63c0b915f1a17d880365d98d0622a399de8a7ea4`.
+- `error.log`: 1320 bytes, SHA256 `6436ebb28b67c0ed4a6d71fe918784c0bb36cca651523593b798cbc36961304a`. One
+  `rite_edit` key-reference error occurred, alongside the known map and
+  on_action diagnostics. See local `observation-confirm-a07.json`.
+- Native menu quit at 09:09:06 UTC, original Popen return code 0, no WM_CLOSE.
+  The keeper ended and the screen lease released. Public verify returned
+  2 / INCOMPLETE, with process and closure true and business false.
+
+The edit reached confirmation, payment and a physical save. Replacement
+failed. Cold load and other governments were not tested in this run.
+This reproduces the release blocker with the timing fix loaded. The
+three-slot control remains a diagnostic and the candidate remains unpublished.
