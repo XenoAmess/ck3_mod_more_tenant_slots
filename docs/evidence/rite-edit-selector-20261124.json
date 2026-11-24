@@ -1,0 +1,156 @@
+{
+  "schema": "mts-selector-timing-investigation-v1",
+  "recorded_at_utc": "2026-11-24T02:15:25.462319+00:00",
+  "game": {
+    "version": "1.21.0.3",
+    "steam_build": "26785313",
+    "exe_sha256": "859f0d380098adcb130eb9d453458222749fcdf6d46126ad0ed99d78f9a0aa28"
+  },
+  "candidate_commit": "286b708bc89a124602e0af7e0dd70ae1c4103a72",
+  "runtime_framework_commit": "7aa155ad76006a13a643568ff8e3761c47f927b3",
+  "configuration": {
+    "product_only": true,
+    "fixture_mounted": false,
+    "language": "simp_chinese",
+    "dlc_descriptors_explicitly_disabled": 31,
+    "date_advanced": false
+  },
+  "baseline": {
+    "run_id": "pc-20260924rtuf-f11af23c08--more-tenets-slots--R0008",
+    "attempt": "short-a05",
+    "started_at_utc": "2026-11-23T18:02:09.183880+00:00",
+    "exit": {
+      "at_utc": "2026-11-23T18:55:19.954507+00:00",
+      "pid": 4668,
+      "returncode": 0,
+      "actual_original_popen_wait": true,
+      "window_close_requested": false,
+      "error": null,
+      "process_pass": true,
+      "normal_gui_quit": null,
+      "business_pass": false
+    },
+    "keeper_failure": null,
+    "lease_released": true,
+    "samples": [
+      {
+        "path": "artifacts/rite-crash-20261123/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0008/review/selector-184723885898.json",
+        "bytes": 1728,
+        "sha256": "beb8e31852e89aa5c20a774482551c7be05ce457302baad9ea0fb2930c1cdedd",
+        "at_utc": "2026-11-23T18:47:23.885876+00:00",
+        "source_rite_id": 151,
+        "slot": 96,
+        "count": 32,
+        "capacity": 141,
+        "metadata_count": 0
+      },
+      {
+        "path": "artifacts/rite-crash-20261123/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0008/review/selector-184945925867.json",
+        "bytes": 5129,
+        "sha256": "4f25152f6647d65fcc36f701550b86cceb6aa55ebbeb2df6a44009c9dc60e769",
+        "at_utc": "2026-11-23T18:49:45.925843+00:00",
+        "source_rite_id": 151,
+        "slot": 96,
+        "count": 132,
+        "capacity": 141,
+        "metadata_count": 100
+      }
+    ]
+  },
+  "candidate": {
+    "run_id": "pc-20260924rtuf-f11af23c08--more-tenets-slots--R0009",
+    "attempt": "wait-fix-a06",
+    "started_at_utc": "2026-11-24T00:57:32.659127+00:00",
+    "exit": {
+      "at_utc": "2026-11-24T01:45:51.234426+00:00",
+      "pid": 6184,
+      "returncode": 0,
+      "actual_original_popen_wait": true,
+      "window_close_requested": false,
+      "error": null,
+      "process_pass": true,
+      "normal_gui_quit": null,
+      "business_pass": false
+    },
+    "keeper_failure": null,
+    "lease_released": true,
+    "samples": [
+      {
+        "path": "artifacts/rite-crash-20261123/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0009/review/selector-011837867413.json",
+        "bytes": 5129,
+        "sha256": "d1086a9bc0d8505803c276efbbf8d53603cfeaeaa891c5f52cf8d87ece0277a8",
+        "at_utc": "2026-11-24T01:18:37.867378+00:00",
+        "source_rite_id": 150,
+        "slot": -1,
+        "count": 132,
+        "capacity": 141,
+        "metadata_count": 100
+      },
+      {
+        "path": "artifacts/rite-crash-20261123/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0009/review/selector-012526245638.json",
+        "bytes": 5129,
+        "sha256": "7af6c9361310427e54b5913f67dcd46070c67ec2c850a935ce3f993ac24e4cd0",
+        "at_utc": "2026-11-24T01:25:26.245611+00:00",
+        "source_rite_id": 150,
+        "slot": 99,
+        "count": 132,
+        "capacity": 141,
+        "metadata_count": 100
+      },
+      {
+        "path": "artifacts/rite-crash-20261123/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0009/review/selector-012857486059.json",
+        "bytes": 5129,
+        "sha256": "12af3e71ce2f9892759bbcc492948949e18e8f7c8730424521b51862c0bb4e6c",
+        "at_utc": "2026-11-24T01:28:57.486027+00:00",
+        "source_rite_id": 150,
+        "slot": 10,
+        "count": 132,
+        "capacity": 141,
+        "metadata_count": 100
+      },
+      {
+        "path": "artifacts/rite-crash-20261123/live/pc-20260924rtuf-f11af23c08--more-tenets-slots--R0009/review/selector-014052496536.json",
+        "bytes": 5129,
+        "sha256": "42581327a224fa240cb0b3f213509e3a3bcabe7a1fafc910be49cf84bc7b2afe",
+        "at_utc": "2026-11-24T01:40:52.496505+00:00",
+        "source_rite_id": 150,
+        "slot": 10,
+        "count": 132,
+        "capacity": 141,
+        "metadata_count": 100
+      }
+    ]
+  },
+  "candidate_pre_edit_save": {
+    "bytes": 11676264,
+    "sha256": "7d82108a21969a748c4710591d0e4e93c180b5eac0d621bf54c0b03386dc97b2",
+    "rite_id": 150,
+    "metadata_count": 0
+  },
+  "diagnostic_method": "Bounded external ReadProcessMemory of exact-build owner chain and typed doctrine keys; two identical complete samples; no writes, injection or native calls.",
+  "observed": [
+    "first single-click edit opens with all 100 metadata keys",
+    "slot 99 selector opens and native Asceticism selection displays 375 cost",
+    "ordinary gender doctrine offers Male/Equal/Female and Equal selection displays total 825 cost",
+    "cancel and reopen discards draft selections and retains complete metadata",
+    "normal menu exit 0, no WM_CLOSE, keeper and lease closed"
+  ],
+  "qualification": {
+    "selector_first_open_finite_regression_observed": true,
+    "main_thread_qualified_observer": false,
+    "full_case_business_pass": false,
+    "confirmed_edit": false,
+    "cold_reload": false,
+    "all_governments": false,
+    "workshop_published": false
+  },
+  "remaining": [
+    "100-slot rite_edit parser failure and old-core retention remain independently unresolved",
+    "full confirmation/save/cold-load and government matrix remain pending"
+  ],
+  "static_report": {
+    "path": "artifacts/rite-crash-20261123/static-286b708.json",
+    "bytes": 15004,
+    "sha256": "dece98486fe9b150667fabcfd5919a98abe6418415991449b87a4430f9b57de6"
+  }
+}
