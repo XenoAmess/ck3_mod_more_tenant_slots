@@ -1,0 +1,11 @@
+Version 13 | CK3 1.21.0.3 (Florin)
+
+- Fixes the crash when opening the rite tenet selector before all slot data is ready.
+- Fixes replacing a core tenet in a rite with empty slots. The old tenet is removed correctly, and the game applies the displayed piety cost.
+- Empty slots remain available up to slot 100. Temporary editor data is cleared on cancel or confirmation, and recovered after loading an interrupted edit.
+
+版本 13 | CK3 1.21.0.3（Florin）
+
+- 修复槽位数据尚未就绪时打开礼仪信条选择器导致的闪退。
+- 修复有空槽的礼仪替换核心信条时旧信条残留的问题，按游戏显示的价格扣除虔诚。
+- 保留第 100 槽。取消或确认后会清理编辑器临时数据，载入编辑中断的存档时也会恢复。
