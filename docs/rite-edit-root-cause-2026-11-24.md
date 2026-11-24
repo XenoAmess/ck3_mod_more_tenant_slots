@@ -227,3 +227,24 @@ guarded idle HUD state to clear interrupted edits on the exact recorded
 rite. For older candidate saves it can recover the current player's rite.
 This adds one reversible HUD projection to the allowlist. That recovery
 requires a new cold run against the actual interrupted input.
+
+R0020 cold-loaded that exact interrupted input with the final 50-file
+product alone. On reaching the paused map, without opening the faith
+window or advancing the date, a normal menu save contained the three real
+Roman cores, the Equal doctrine and zero temporary cores. The Apulian
+rite retained its four real cores. The input remained unchanged. Output
+SHA256 was `ad7e302a58e1bddbb57d154f8ac4d415678c7df400581709e2b2eaac45f7b6a0`.
+
+R0021 loaded the original Robert save with the same product. Native
+confirmation stayed disabled for an unchanged draft. Replacing Apostolic
+Succession with Peace of God charged the quoted 325 piety
+(94817 to 94492). The new menu save contained Peace of God,
+Philanthropia and Communion, with zero temporary cores. Its SHA256 was
+`2c7b3ce50b1d6dd06b0649fcd627109d44ffe30bacbe5097e485341a3ddc4b3b`.
+Both processes exited with original return code 0. No `rite_edit` parse
+error appeared in either recorded log. The final date advance still
+produced text formatter diagnostics. The run did not establish positive
+rendering of a genuine rite-change toast.
+
+The verified product was published to the existing item. See the
+[v13 Workshop publication record](workshop/publication-v13.md).
